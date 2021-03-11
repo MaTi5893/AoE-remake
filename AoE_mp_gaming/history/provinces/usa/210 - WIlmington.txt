@@ -1,13 +1,3 @@
-owner = THC
-controller = THC
-add_core = THC
+add_core = THC
 trade_goods = cotton
 life_rating = 35
-
-railroad = 1
-1861.1.1 = {
-	controller = CSA
-	owner = CSA
-	add_core = CSA
-}
-1861.1.1 = { railroad = 3 }
