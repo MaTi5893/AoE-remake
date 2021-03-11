@@ -1,0 +1,48 @@
+dreadnought = {
+	icon = 12
+	naval_icon = 9
+	
+	type = naval
+	sprite = Manowar
+	unit_type = big_ship
+	capital = yes
+	active = no
+	floating_flag = yes
+	can_build_overseas = no
+	colonial_points = 35
+	
+	#Core Abilities
+	priority = 60
+	max_strength = 100
+	default_organisation = 45
+	maximum_speed = 6
+	weighted_value = 100.0
+
+
+	#Building Costs
+	build_time = 360
+	build_cost = {
+		clipper_convoy = 50
+		artillery = 30
+		canned_food = 20
+	}
+	min_port_level = 6
+	limit_per_port = 1
+	supply_consumption_score = 60
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		clipper_convoy = 3
+		artillery = 0.8
+		canned_food = 1
+		ammunition = 0.8
+		luxury_clothes = 0.05
+		tobacco = 2
+	}
+	
+	#Naval Abilties
+	hull = 40
+	gun_power = 35
+	fire_range = 0.75
+	evasion = 0
+}

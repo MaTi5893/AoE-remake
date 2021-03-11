@@ -1,0 +1,60 @@
+capital = 1236
+civilized = yes   primary_culture = panjabi
+culture = telegu
+culture = marathi
+culture = rajput
+culture = gujarati
+religion = sunni
+civilized = no
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_order
+literacy = 0.01  non_state_culture_literacy = 0.01  #literacy = 0.03
+prestige = 10
+
+ruling_party = "Durbar Faction"
+upper_house = {
+	fascist = 0
+	liberal = 0
+	conservative = 0
+	reactionary = 100
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+set_country_flag = unciv
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0
+
+oob = "MUG_oob.txt"
+civilized = no
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = jefferson_method
+political_parties = underground_parties
+
+wage_reform = low_minimum_wage #silghtly influential church
+work_hours = no_work_hour_limit #irrelevant gentry
+safety_regulations = no_safety #very influential nobility
+unemployment_subsidies = no_subsidies #irrelevant burghers
+pensions = trinket_pensions #marginally relevant army
+health_care = low_health_care #slightly influential bureaucracy
+
+school_reforms = no_schools
+
+# Technologies
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+piston_steam_engine = 1
+
+# Inventions
+asia_balance = yes

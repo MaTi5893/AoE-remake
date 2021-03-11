@@ -1,0 +1,48 @@
+monitor = {
+	icon = 10
+	naval_icon = 7
+	
+	type = naval
+	sprite = Manowar
+	unit_type = big_ship
+	floating_flag = yes
+	active = no
+	colonial_points = 10
+
+
+	#Core Abilities
+	priority = 30
+	max_strength = 100
+	default_organisation = 35
+	maximum_speed = 14
+	weighted_value = 10.0
+
+	#Building Costs
+	build_time = 360
+	build_cost = {
+		clipper_convoy = 25
+		artillery = 15
+		canned_food = 12
+		explosives = 5
+	}
+	min_port_level = 3
+	limit_per_port = -1
+	supply_consumption_score = 3
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		clipper_convoy = 1.5
+		artillery = 0.3
+		explosives = 0.1
+		canned_food = 0.8
+		ammunition = 0.3
+	}
+	
+	#Naval Abilties
+	hull = 20
+	gun_power = 12
+	fire_range = 0.65
+	evasion = 0.3
+	torpedo_attack = 0
+}
+

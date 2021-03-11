@@ -1,0 +1,466 @@
+#aesthetics
+classicism_n_early_romanticism = {
+	area = aesthetics
+	year = 1600
+	cost = 3600
+
+	prestige = 0.05
+	ai_chance = {
+		factor = 1.01
+	}
+}
+
+romanticism = {
+	area = aesthetics
+	year = 1700
+	cost = 7200
+	
+	prestige = 0.05
+
+
+	ai_chance = {
+		factor = 1.05
+	}
+}
+
+realism = {
+	area = aesthetics
+	year = 1700
+	cost = 10800
+
+	prestige = 0.05
+	ai_chance = {
+		factor = 1.05
+	}
+}
+impressionism = {
+	area = aesthetics
+	year = 1720
+	cost = 14400
+
+	prestige = 0.05
+	ai_chance = {
+		factor = 1.05
+	}
+}
+expressionism = {
+	area = aesthetics
+	year = 1740
+	cost = 18000
+
+	prestige = 0.075
+	ai_chance = {
+		factor = 1.05
+	}
+}
+mass_culture_n_the_avant_garde = {
+	area = aesthetics
+	year = 1755
+	cost = 21600
+
+	prestige = 0.075
+	ai_chance = {
+		factor = 1.01
+	}
+}
+aesthetics_7 = {
+	area = aesthetics
+	year = 1770
+	cost = 25200
+
+	prestige = 0.075
+	ai_chance = {
+		factor = 1.05
+	}
+}
+aesthetics_8 = {
+	area = aesthetics
+	year = 1790
+	cost = 30200
+
+	prestige = 0.075
+	ai_chance = {
+		factor = 1.01
+	}
+}
+
+#philosophy
+late_enlightenment_philosophy = {
+	area = philosophy
+	year = 1600
+	cost = 3600
+
+
+	increase_research = 0.25
+	
+	ai_chance = {
+		factor = 90
+	}
+}
+idealism = {
+	area = philosophy
+	year = 1705
+	cost = 7200
+
+	increase_research = 0.25
+	ai_chance = {
+		factor = 90
+	}
+}
+
+empiricism = {
+	area = philosophy
+	year = 1715
+	cost = 10800
+	
+	increase_research = 0.50
+	ai_chance = {
+		factor = 90
+	}
+}
+analytic_philosophy = {
+	area = philosophy
+	year = 1740
+	cost = 14400
+
+	increase_research = 0.50
+	ai_chance = {
+		factor = 90
+	}
+}
+phenomenology_n_hermeneutic = {
+	area = philosophy
+	year = 1760
+	cost = 18000
+
+	increase_research = 1.0
+	ai_chance = {
+		factor = 90
+	}
+}
+anti__rationalism = {
+	area = philosophy
+	year = 1775
+	cost = 21600
+
+	increase_research = 1.0
+	ai_chance = {
+		factor = 100
+	}
+}
+philosophy_7 = {
+	area = philosophy
+	year = 1790
+	cost = 25200
+
+	increase_research = 1.0
+	ai_chance = {
+		factor = 90
+	}
+}
+philosophy_8 = {
+	area = philosophy
+	year = 1800
+	cost = 30200
+
+	increase_research = 1.0
+	ai_chance = {
+		factor = 100
+	}
+}
+
+
+#social_thought
+malthusian_thought = {
+	area = social_thought
+	year = 1700
+	cost = 3600
+
+	colonial_migration = 0.1
+	education_efficiency = 0.05
+	
+	ai_chance = {
+		factor = 1.5
+	}
+}
+positivism = {
+	area = social_thought
+	year = 1700
+	cost = 7200
+	colonial_migration = 0.1
+	education_efficiency = 0.05
+	ai_chance = {
+		factor = 1.8
+	}
+
+}
+functionalism = {
+	area = social_thought
+	year = 1700
+	cost = 10800
+
+	colonial_migration = 0.1
+	education_efficiency = 0.05
+	ai_chance = {
+		factor = 1.5
+	}
+
+}
+biologism = {
+	area = social_thought
+	year = 1720
+	cost = 14400
+
+	colonial_migration = 0.15
+	education_efficiency = 0.05
+	ai_chance = {
+		factor = 2
+	}
+
+}
+social_science = {
+	area = social_thought
+	year = 1740
+	cost = 18000
+
+	colonial_migration = 0.05
+	education_efficiency = 0.1
+	
+	ai_chance = {
+		factor = 1.05
+	}
+
+}
+social_alienation = {
+	area = social_thought
+	year = 1755
+	cost = 21600
+	
+	colonial_migration = 0.05
+	education_efficiency = 0.1
+	ai_chance = {
+		factor = 1.05
+	}
+
+}
+social_thought_7 = {
+	area = social_thought
+	year = 1770
+	cost = 25200
+
+	colonial_migration = 0.05
+	education_efficiency = 0.1
+	
+	ai_chance = {
+		factor = 1.05
+	}
+
+}
+social_thought_8 = {
+	area = social_thought
+	year = 1790
+	cost = 30200
+	
+	colonial_migration = 0.05
+	education_efficiency = 0.1
+	ai_chance = {
+		factor = 1.05
+	}
+
+}
+
+
+#political_thought
+enlightenment_thought = {
+	area = political_thought
+	year = 1650
+	cost = 3600
+
+	max_national_focus = 1
+	
+	ai_chance = {
+		factor = 11
+	}
+}
+ideological_thought = {
+	area = political_thought
+	year = 1700
+	cost = 7200
+
+	max_national_focus = 1 
+	
+	ai_chance = {
+		factor = 15
+	}
+}
+state_n_government = {
+	area = political_thought
+	year = 1715
+	cost = 10800
+
+	max_national_focus = 1 
+	ai_chance = {
+		factor = 25
+	}
+}
+nationalism_n_imperialism = {
+	area = political_thought
+	year = 1730
+	cost = 14400
+
+	max_national_focus = 1
+	#colonial_life_rating = -10 
+	cb_creation_speed = 0.1
+	
+	ai_chance = {
+		factor = 25
+	}
+}
+revolution_n_counterrevolution = {
+	area = political_thought
+	year = 1745
+	cost = 18000
+
+	max_national_focus = 1
+	diplomatic_points = 0.25
+	ai_chance = {
+		factor = 35
+	}
+}
+mass_politics = {
+	area = political_thought
+	year = 1765
+	cost = 21600
+
+	max_national_focus = 1 
+	ai_chance = {
+		factor = 2
+	}
+}
+political_thought_7 = {
+	area = political_thought
+	year = 1780
+	cost = 25200
+
+	max_national_focus = 1
+	diplomatic_points = 0.25
+	ai_chance = {
+		factor = 35
+	}
+}
+political_thought_8 = {
+	area = political_thought
+	year = 1800
+	cost = 30200
+
+	max_national_focus = 1 
+	ai_chance = {
+		factor = 2
+	}
+}
+
+
+#psychology
+introspectionism = {
+	area = psychology
+	year = 1700
+	cost = 3600
+
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+
+}
+associationism = {
+	area = psychology
+	year = 1700
+	cost = 7200
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+}
+phenomenalism = {
+	area = psychology
+	year = 1700
+	cost = 10800
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+}
+experimental_psychology = {
+	area = psychology
+	year = 1720
+	cost = 14400
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+}
+psychoanalysis = {
+	area = psychology
+	year = 1740
+	cost = 18000
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+
+}
+behaviorism = {
+	area = psychology
+	year = 1755
+	cost = 21600
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+}
+psychology_7 = {
+	area = psychology
+	year = 1770
+	cost = 25200
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+
+}
+
+psychology_8 = {
+	area = psychology
+	year = 1790
+	cost = 30200
+
+	regular_experience_level = 5
+	reinforce_rate = 0.05
+	
+	ai_chance = {
+		factor = 1.01
+	}
+}
+
+

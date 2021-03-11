@@ -1,0 +1,48 @@
+
+
+#========================= H E A D E R =========================
+
+capital = 749
+primary_culture = north_italian
+culture = south_italian
+religion = catholic
+government = absolute_monarchy
+plurality = 10
+nationalvalue = nv_equality
+literacy = 0.5
+civilized = yes 
+prestige = 1
+schools = culture_tech_school
+oob = "GOD.txt"
+
+
+#========================= H O U S E - O F - L O R D S =========================
+
+ruling_party = "Nobility Faction"
+upper_house = {
+fascist = 0
+reactionary = 40
+conservative = 60
+socialist = 0
+communist = 0
+liberal = 0
+anarcho_liberal = 0
+}
+slavery = yes_slavery
+vote_franschise = none_voting
+upper_house_composition = party_appointed
+voting_system = first_past_the_post
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+political_parties = underground_parties
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+health_care = no_health_care
+school_reforms = no_schools
+
+
+

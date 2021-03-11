@@ -1,0 +1,43 @@
+tank = {	# Heavy Artillery
+	icon = 20
+	
+	type = land
+	sprite = Artillery
+	active = no
+	unit_type = support
+	floating_flag = yes
+	
+	
+	#Core Abilities
+	priority = 50
+	max_strength = 3
+	default_organisation = 35
+	maximum_speed = 2.0
+	weighted_value = 12.0
+
+
+	#Building Costs
+	build_time = 120
+	build_cost = {
+		artillery = 20
+		canned_food = 15
+	}
+	
+	supply_consumption = 2.0
+	supply_cost = {
+		artillery = 0.6 #0.008
+		canned_food = 0.1 #0.004
+		luxury_clothes = 0.03
+	}
+	
+
+	#Land Abilties
+	reconnaissance = 0
+	attack = 1.5
+	defence = 3
+	discipline = 1
+	support = 1.5
+	maneuver = 2
+	siege = 0.2
+	
+}
