@@ -6,7 +6,7 @@
 proletarian_dictatorship = {	#Revolutionary Republic
 	#which ideology of parties.
 	communist = yes
-	liberal = yes
+	#liberal = yes
 	socialist = yes
 	
 	election = yes
@@ -68,7 +68,7 @@ fascist_dictatorship = {		#Revolutionary Monarchy
 	#which ideology of parties.
 	#fascist = yes
     reactionary = yes
-	liberal = yes
+
 	
 	election = no
 	appoint_ruling_party = yes
@@ -113,10 +113,9 @@ prussian_constitutionalism = {
 
 elective_monarchy_oligarchy = {
 	liberal = yes
-	#socialist = yes
+	socialist = yes
 	conservative = yes
 	reactionary = yes
-	#communist = yes
 	
 	
 	election = yes
@@ -223,8 +222,7 @@ merchant_republic = {
 	liberal = yes
 	conservative = yes
 	reactionary = yes
-	#anarcho_liberal = yes
-	#socialist = yes
+	
 	election = yes
 	appoint_ruling_party = no
 	flagType = republic
@@ -234,8 +232,7 @@ trade_monarchy = {
 	liberal = yes
 	conservative = yes
 	reactionary = yes
-	#anarcho_liberal = yes
-	#socialist = yes
+	
 	election = yes
 	appoint_ruling_party = yes
 	flagType = monarchy

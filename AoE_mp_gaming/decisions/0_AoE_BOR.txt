@@ -1,0 +1,335 @@
+political_decisions = {
+
+	rights_of_man = {
+		picture = rights_of_man
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = rights_of_man }
+			exists = yes
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					year = 1789
+					pop_militancy = 4
+				}
+				government = proletarian_dictatorship
+				
+				political_thought_8 = 1
+			}
+			has_country_flag = edict_of_tolerance
+		}
+		
+		effect = {
+			random_pop = {
+				militancy = -2
+			}
+			set_country_flag = rights_of_man
+			add_country_modifier = {
+				name = rights_of_man
+				duration = -1
+			}
+		}
+	}
+	
+	edict_of_tolerance = {
+		picture = tolerance_edict
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = edict_of_tolerance }
+			exists = yes
+		}
+		allow = {
+			pop_militancy = 4
+			political_thought_7 = 1
+		}
+		effect = {
+			set_country_flag = edict_of_tolerance
+			add_country_modifier = {
+				name = freedom_of_religion
+				duration = -1
+			}
+			any_pop = {
+				limit = {
+					religion = protestant 
+				}
+				militancy = -2
+			}
+			any_pop = {
+				limit = {
+					religion = catholic 
+				}
+				militancy = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	establish_ecole_militire = {
+		picture = fra_soldier
+		potential = {
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
+			is_greater_power = yes
+			NOT = { has_country_flag = established_ecole_militire }
+			exists = yes
+		}
+		allow = {
+			bolt_action_rifles = 1
+			military_spending = 1
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			add_country_modifier = {
+				name = ecole_militire
+				duration = -1
+			}
+			set_country_flag = established_ecole_militire 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	louis_dream = {
+		picture = louis_dream
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = louis_dream }
+			exists = yes
+			NOT = { government = proletarian_dictatorship }
+			NOT = { government = fascist_dictatorship }
+			NOR = { government = democracy }
+		}
+		allow = {
+			owns = 387
+			owns = 394
+			owns = 397
+			OR = {
+				AND = {
+					has_country_modifier = louis_grande
+					ideological_thought = 1
+				}
+				AND = {
+					mass_politics = 1
+					war_policy = jingoism
+				}
+			}
+			NOT = { has_country_modifier = no_more_war }
+			NOT = { has_country_modifier = peasant_turmoil }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 15
+			set_country_flag = louis_dream
+			398 = {
+				add_core = THIS
+			}
+			397 = {
+				add_core = THIS
+			}
+			394 = {
+				add_core = THIS
+			}
+			393 = {
+				add_core = THIS
+			}
+			393 = {	add_core = THIS }
+			388 = {	add_core = THIS }
+			389 = {	add_core = THIS }
+			387 = {	add_core = THIS }
+			390 = {	add_core = THIS }
+			random_country = {
+				limit = {
+					tag = LOR
+					in_sphere = THIS
+					ai = yes
+				}
+				THIS = {
+					create_vassal = LOR
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
+	natural_borders_of_fr = {
+		picture = louis_dream
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = natural_borders_of_fr }
+			exists = yes
+			OR = {
+				government = proletarian_dictatorship
+				government = fascist_dictatorship
+			}
+		}
+		allow = {	
+			mass_politics = 1
+			war_policy = jingoism
+			NOT = { has_country_modifier = no_more_war }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 25
+			set_country_flag = natural_borders_of_fr
+			LOR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			LIG = { all_core = { add_core = THIS } }
+			BEL = { all_core = { add_core = THIS } }
+			571 = { add_core = THIS }
+			573 = { add_core = THIS }
+			572 = { add_core = THIS }
+			574 = { add_core = THIS }
+			575 = { add_core = THIS }
+			576 = { add_core = THIS }
+			577 = { add_core = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
+	southern_border = {
+		picture = southern_borders
+		potential = {
+			OR = {
+				tag = BOR
+				tag = FRA
+			}
+			NOT = { has_country_flag = claimed_south_border }
+			exists = yes
+		}
+		allow = {
+			SAR_466 = {
+				owner = {
+					OR = {
+						AND = {
+							NOT = { in_sphere = THIS }
+							NOT = {
+								relation = {
+									who = THIS
+									value = 0
+								}
+							}
+						}
+						tag = BOR
+						tag = FRA
+					}
+				}
+			}
+			war_policy = jingoism
+			ideological_thought = 1
+		}
+		effect = {
+			set_country_flag = claimed_south_border
+			badboy = 6
+			add_core = 472
+			add_core = 465
+			add_core = 466
+			#
+		}
+	}
+	
+	annex_lor = {
+		picture = lorraine
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = annex_lor }
+			exists = yes
+		}
+		allow = {
+			mass_politics = 1
+			LOR = { in_sphere = THIS }
+		}
+		effect = {
+			inherit = LOR
+			LOR = { all_core = { add_core = THIS } }
+			badboy = 5
+			set_country_flag = annex_lor
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	secure_fr_na = {
+		picture = french_NA
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = secured_fr_na }
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			OR = {
+				any_neighbor_country = {
+					capital_scope = {
+						continent = north_america
+					}
+					civilized = no
+				}
+				FCA = {
+					vassal_of = THIS
+					exists = yes
+					any_neighbor_country = {
+						capital_scope = {
+							continent = north_america
+						}
+						civilized = no
+					}
+				}
+				ULA = {
+					vassal_of = THIS
+					exists = yes
+					any_neighbor_country = {
+						capital_scope = {
+							continent = north_america
+						}
+						civilized = no
+					}
+				}
+			}
+		}
+		effect = {
+			any_country = {
+				limit = {
+					civilized = no
+					OR = {
+						neighbour = THIS
+						neighbour = ULA
+						neighbour = FCA
+					}
+					in_sphere = THIS
+					capital_scope = { continent = north_america }
+					NOT = { tag = CHE }
+					NOT = { tag = IQS }
+					NOT = { tag = CRK }
+					war = no
+					ai = yes
+				}
+				random_list = {
+					60 = { annex_to = THIS }
+					40 = { country_event = 171119 }
+				}
+			}
+		}
+	}
+}

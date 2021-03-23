@@ -1,0 +1,398 @@
+political_decisions = {
+	become_USA = {
+		picture = become_usa
+		potential = {
+			tag = THC
+			NOT = { exists = USA }
+			exists = yes
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+		}
+
+		effect = {
+			prestige = 20
+			all_core = { add_core = USA }
+			all_core = { remove_core = THIS }
+			change_tag = USA
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_florida = {
+
+		picture = florida_map
+		potential = {
+			tag = USA
+			NOT = {
+				has_country_flag = claim_florida_usa
+			}
+			exists = yes
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			set_country_flag = claim_florida_usa
+			FLO = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_louisiana = {
+		picture = new_france_louisiana
+		potential = {
+			tag = USA
+			NOT = {
+				has_country_flag = claim_louisiana_usa
+			}
+			exists = yes
+		}
+		allow = {
+			war = no
+			political_thought_7 = 1
+			NOT = { 
+				OR = {
+					alliance_with = FRA
+					alliance_with = ULA
+				}
+			}
+			war_policy = jingoism
+			is_greater_power = yes
+			#military_score = ULA
+		}
+		effect = {
+			set_country_flag = claim_louisiana_usa
+			ULA = {
+				all_core = {
+					add_core = USA
+				}
+			}
+			badboy = 25
+		}
+	}
+	
+	claim_canada = {
+		picture = canada_map
+		potential = {
+			tag = USA
+			NOT = {
+				has_country_flag = claim_canada
+			}
+			exists = yes
+		}
+		allow = {
+			war = no
+			political_thought_7 = 1
+			NOT = { 
+				alliance_with = FCA
+			}
+			war_policy = jingoism
+			is_greater_power = yes
+			military_score = 150
+			OR = {
+				government = absolute_monarchy
+				AND = {
+					ruling_party_ideology = reactionary
+					OR = {
+						government = democracy
+						government = federal_democracy
+					}
+					NOT = {
+						OR = {
+						upper_house_composition  = party_appointed
+						upper_house_composition  = appointed
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = claim_canada
+			FCA = {
+				all_core = {
+					add_core = USA
+				}
+			}
+			QUE = {
+				all_core = {
+					add_core = USA
+				}
+			}
+			badboy = 30
+		}
+	}
+	
+	war_on_natives = {
+		picture = native_lands
+		potential = {
+			OR = {
+				tag = THC
+				tag = USA
+				tag = ULA
+			}
+			NOT = { has_country_flag = war_on_natives }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				machine_guns = 1
+				AND = {
+					war_policy = jingoism
+					is_vassal = yes
+					year = 1732
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			#2556 = { add_core = THIS }
+			216 = { add_core = THIS }
+			221 = { add_core = THIS }
+			225 = { add_core = THIS }
+			#2627 = { add_core = THIS }
+			227 = { add_core = THIS }
+			228 = { add_core = THIS }
+			235 = { add_core = THIS }
+			240 = { add_core = THIS }
+			236 = { add_core = THIS }
+			237 = { add_core = THIS }
+			238 = { add_core = THIS }
+			239 = { add_core = THIS }
+			140 = { add_core = THIS }
+			#3405 = { add_core = THIS }
+			#3401 = { add_core = THIS }
+			any_country = {
+				limit = {
+					government = tribal_democracy
+					alliance_with = THIS
+				}
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+			set_country_flag = war_on_natives
+			badboy = 20
+		}
+	}
+	
+	hamiltons_tresury_reforms = {
+		picture = tresury_reforms
+		potential = {
+			OR = {
+				tag = USA
+				tag = THC
+			}
+			NOT = { has_country_flag = hamiltons_tresury_reforms }
+			exists = yes
+		}
+		allow = {
+			war = no
+			trade_policy = protectionism
+			mutual_funds = 1
+		}
+		effect = {
+			add_country_modifier = { 
+				name = most_perfect_economy_system
+				duration = -1
+			}
+			set_country_flag = hamiltons_tresury_reforms
+		}
+	}
+	
+	enact_the_bill_of_rights = {
+		picture = bill_of_rights
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = bill_of_rights }
+			exists = yes
+		}
+		allow = {
+			war = no
+			militancy = 4
+			citizenship_policy = full_citizenship
+		}
+		effect = {
+			add_country_modifier = { 
+				name = freedom_of_religion
+				duration = -1
+			}
+			set_country_flag = bill_of_rights
+			any_pop = {
+				militancy = 3
+			}
+		}
+	}
+	
+	usa_navy = {
+		picture = merchant_navy
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = usa_navy }
+			exists = yes
+		}
+		
+		allow = {
+			blue_and_brown_water_schools = 1
+			steel_steamers = 1
+			money = 100000
+		}
+		
+		effect = {
+			set_country_flag = usa_navy
+			add_country_modifier = {
+				name = naval_school
+				duration = -1
+			}
+			add_country_modifier = {
+				name = lord_admiral
+				duration = -1
+			}
+			money = -100000
+		}
+	}
+	
+	build_the_white_house = {
+		picture = white_house
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = build_the_white_house }
+			has_country_flag = capital_chosen
+			exists = yes
+		}
+		allow = {
+			money = 20000
+			war = no
+		}
+		effect = {
+			set_country_flag = build_the_white_house
+			money = -20000
+			capital_scope = {
+				set_province_flag = white_house
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 3650
+				}
+				add_province_modifier = {
+					name = white_house
+					duration = -1
+				}
+			}
+			prestige = 20
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	burn_down_the_white_house = {
+		picture = white_house_boom
+		potential = {
+			NOT = { tag = USA }
+			USA = {
+				exists = yes
+				has_country_flag = build_the_white_house
+			}
+			exists = yes
+			USA = {
+				capital_scope = {
+					controlled_by = THIS
+				}
+			}
+			NOT = { has_global_flag = white_house_burned }
+		}
+		allow = {
+			USA = {
+				capital_scope = {
+					controlled_by = THIS
+				}
+			}
+		}
+		effect = {
+			set_global_flag = white_house_burned
+			country_event = 17860002
+			badboy = 7
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	the_bastion_of_liberty = {
+		picture = liberty
+		potential = {
+			OR = {
+				has_country_flag = new_world_nation
+				capital_scope = {
+					continent = north_america
+				}
+				capital_scope = {
+					continent = south_america
+				}
+			}
+			exists = yes
+			is_vassal = no
+			NOT = { has_global_flag = bastion_of_liberty }
+			NOT = { government = tribal_democracy }
+			NOT = {
+				OR = {
+					government = colonial_company
+					government = dominion
+				}
+			}
+		}
+		allow = {
+			OR = {
+				government = federal_democracy
+				government = democracy
+				government = hms_government
+			}
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
+			empiricism = 1
+			war = no
+			NOT = { war_policy = jingoism }
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			set_global_flag = bastion_of_liberty
+			add_country_modifier = {
+				name = the_safeheaven_for_liberalism
+				duration = 109050
+			}
+			prestige = 60
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	free_monies = {
+		potential = {
+			war = yes
+			ai = no
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			treasury = 2000000
+		}
+	}
+}

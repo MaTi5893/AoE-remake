@@ -1,0 +1,612 @@
+#Sphere of Influence
+#Asia
+PER = {
+	value = -50	#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+QNG = {
+	level = 0
+}
+
+BTL = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+BHT = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+BNB = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+BDN = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+#Middle East
+KWT = {
+	value = 150
+	level = 5
+	influence_value = 0
+}
+HAL = {
+	value = 150
+	level = 5
+	influence_value = 0
+}
+AZH = {
+	value = 150
+	level = 5
+	influence_value = 0
+}
+NEJ = {
+	value = 50
+}
+HDJ = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+
+NYE = {
+	value = 0
+	level = 1		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+
+BHR = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+
+QAT = {
+	value = 125		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+
+TUN = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+MOR = {
+	value = 100
+}
+
+#Europe
+GRE = {
+	value = -25		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+SER = {
+	value = 0		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+MOL = {
+	value = 75
+	level = 4
+	influence_value = 0
+}
+WAL = {
+	value = 45
+	level = 4
+	influence_value = 0
+}
+ATJ = {
+	value = 50		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+DLM = {
+	value = 50
+	level = 4
+	influence_value = 0
+}
+
+#Other GP's
+USA = { value = 0 }
+PRU = { value = 25 }
+SPA = { value = -25 }
+AUS = {
+	value = -125
+	truce_until = 1705.1.1
+}
+VEN = {
+	value = 25
+	truce_until = 1705.1.1
+}
+PLC = {
+	value = -200
+	level = 0
+	truce_until = 1704.1.1
+	influence_value = 0
+}
+RUS = { value = -100 }
+ENG = { value = -25 }
+BOR = { value = 35 }
+
+
+army = {
+	name = "Army of the Danube"
+	location = 810
+	regiment = {
+		name= "1. Sipahis"
+		type = hussar
+		home = 798
+	}
+
+	regiment = {
+		name= "2. Sipahis"
+		type = infantry
+		home = 799
+	}
+
+	regiment = {
+		name= "3. Sipahis"
+		type = infantry
+		home = 864
+	}
+
+	regiment = {
+		name= "1. Piyade Tümeni"
+		type = infantry
+		home = 871
+	}
+
+	regiment = {
+		name= "2. Piyade Tümeni"
+		type = infantry
+		home = 886
+	}
+
+	regiment = {
+		name= "3. Piyade Tümeni"
+		type = artillery
+		home = 880
+	}
+
+	regiment = {
+		name= "4. Piyade Tümeni"
+		type = artillery
+		home = 868
+	}
+
+	regiment = {
+		name= "1. Redif Izmir"
+		type = artillery
+		home = 806
+	}
+
+	regiment = {
+		name= "2. Redif Izmir"
+		type = artillery
+		home = 807
+	}
+
+	regiment = {
+		name= "3. Redif Izmir"
+		type = artillery
+		home = 807
+	}
+}
+	
+army = {
+	name = "Army of Anatolia"
+	location = 878
+	regiment = {
+		name= "5. Piyade Tümeni"
+		type = hussar
+		home = 882
+	}
+
+	regiment = {
+		name= "6. Piyade Tümeni"
+		type = infantry
+		home = 873
+	}
+
+	regiment = {
+		name= "7. Piyade Tümeni"
+		type = infantry
+		home = 869
+	}
+
+	regiment = {
+		name= "8. Piyade Tümeni"
+		type = infantry
+		home = 863
+	}
+
+	regiment = {
+		name= "1. Redif Kars"
+		type = infantry
+		home = 806
+	}
+
+	regiment = {
+		name= "2. Redif Kars"
+		type = artillery
+		home = 874
+	}
+
+	regiment = {
+		name= "3. Redif Kars"
+		type = artillery
+		home = 875
+	}
+
+	regiment = {
+		name= "1. Redif Trabzon"
+		type = artillery
+		home = 876
+	}
+
+	regiment = {
+		name= "2. Redif Trabzon"
+		type = artillery
+		home = 883
+	}
+
+	regiment = {
+		name= "3. Redif Trabzon"
+		type = artillery
+		home = 869
+	}
+
+}
+
+army = {
+	name = "Army of Silistria"
+	location = 818
+	regiment = {
+		name= "4. Sipahis"
+		type = hussar
+		home = 885
+	}
+
+	regiment = {
+		name= "5. Sipahis"
+		type = infantry
+		home = 878
+	}
+
+	regiment = {
+		name= "6. Sipahis"
+		type = infantry
+		home = 812
+	}
+
+	regiment = {
+		name= "9. Piyade Tümeni"
+		type = infantry
+		home = 870
+	}
+
+	regiment = {
+		name= "10. Piyade Tümeni"
+		type = infantry
+		home = 873
+	}
+
+	regiment = {
+		name= "11. Piyade Tümeni"
+		type = artillery
+		home = 878
+	}
+
+	regiment = {
+		name= "1. Redif Diyarbakir"
+		type = artillery
+		home = 925
+	}
+
+	regiment = {
+		name= "2. Redif Diyarbakir"
+		type = artillery
+		home = 809
+	}
+
+	regiment = {
+		name= "3. Redif Diyarbakir"
+		type = artillery
+		home = 814
+	}
+	
+	regiment = {
+		name= "3. Redif Diyarbakir"
+		type = artillery
+		home = 828
+	}
+
+}
+
+army = {
+	name = "Army of Arabia"
+	location = 1733
+	regiment = {
+		name= "12. Piyade Tümeni"
+		type = hussar
+		home = 893
+	}
+
+	regiment = {
+		name= "13. Piyade Tümeni"
+		type = infantry
+		home = 899
+	}
+
+	regiment = {
+		name= "14. Piyade Tümeni"
+		type = infantry
+		home = 926
+	}
+
+	regiment = {
+		name= "1. Redif Halab"
+		type = infantry
+		home = 890
+	}
+
+	regiment = {
+		name= "2. Redif Halab"
+		type = infantry
+		home = 879
+	}
+
+	regiment = {
+		name= "3. Redif Halab"
+		type = artillery
+		home = 923
+	}
+
+	regiment = {
+		name= "7. Sipahis"
+		type = artillery
+		home = 1733
+	}
+
+	regiment = {
+		name= "8. Sipahis"
+		type = artillery
+		home = 1731
+	}
+
+	regiment = {
+		name= "1. Askäris"
+		type = artillery
+		home = 1735
+	}
+
+	regiment = {
+		name= "2. Askäris"
+		type = artillery
+		home = 1734
+	}
+}
+
+navy = {
+	name = "Ottoman Navy"
+	location = 860
+	ship = {
+		name= "Masudiya"
+		type = manowar
+	}
+
+	ship = {
+		name= "Sadd al Bahri"
+		type = manowar
+	}
+
+	ship = {
+		name= "Ankay i Barhi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Taus i Barhi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Tevfik Nyuma"
+		type = manowar
+	}
+
+	ship = {
+		name= "Bisharet Nyuma"
+		type = manowar
+	}
+
+	ship = {
+		name= "Killid i Barhi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Heybetendaz"
+		type = manowar
+	}
+
+	ship = {
+		name= "Melek i Barhi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Sayyad i Barhi"
+		type = manowar
+	}
+
+	ship = {
+		name= "Gulbang i Nusret"
+		type = manowar
+	}
+
+	ship = {
+		name= "Jebel Andaz"
+		type = manowar
+	}
+
+	ship = {
+		name= "Iskenderiya"
+		type = frigate
+	}
+
+	ship = {
+		name= "Badere i Zaffar"
+		type = frigate
+	}
+
+	ship = {
+		name= "Mahubey Subham"
+		type = frigate
+	}
+
+	ship = {
+		name= "Metelin"
+		type = frigate
+	}
+
+	ship = {
+		name= "Denyuvet"
+		type = frigate
+	}
+
+	ship = {
+		name= "Rahbar i Alam"
+		type = frigate
+	}
+
+	ship = {
+		name= "Malbaik Nesuret"
+		type = frigate
+	}
+
+	ship = {
+		name= "Bedr i Zafar"
+		type = frigate
+	}
+
+	ship = {
+		name= "Meskeni Ghazi"
+		type = frigate
+	}
+
+	ship = {
+		name= "Fakim i Zafar"
+		type = frigate
+	}
+
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+
+leader = {
+	name = "Omer Vrioni"
+	type = land
+	date = 1820.1.1
+	background = rising_star
+	personality = skilled
+	prestige = 0.1
+	}
+
+leader = {
+	name = "Husrev Pasha"
+	type = sea
+	date = 1820.1.1
+	background = politician
+	personality = smart_p
+	prestige = 0.15
+	}
+
+leader = {
+	name = "Resid Mehmed Pasha"
+	date = 1809.1.1
+	type = land
+	personality = inefficient
+	background = elderly
+	prestige = 0.2
+}
+
+leader = {
+	name = "Wojciech Chrzanowski"
+	date = 1836.1.1
+	type = land
+	personality = romantic
+	background = cartographer
+	prestige = 0.1
+}
+
+leader = {
+	name = "Abdi Pasha"
+	date = 1836.1.1
+	type = land
+	personality = merciless
+	background = old_school
+	prestige = 0.0
+}
+
+leader = {
+	name = "Hafiz Osman Pasha"
+	date = 1836.1.1
+	type = land
+	personality = inept
+	background = yesman
+	prestige = 0.0
+}
+
+leader = {
+	name = "Namik Pasha"
+	date = 1836.1.1
+	type = land
+	personality = expert
+	background = diplomat
+	prestige = 0.0
+}
+
+leader = {
+	name = "Abdülkerim Pasha"
+	date = 1836.1.1
+	type = land
+	personality = active_p
+	background = war_college
+	prestige = 0.0
+}
+
+leader = {
+	name = "Yaver Pasha"
+	date = 1836.1.1
+	type = sea
+	personality = diplomatic
+	background = gifted_administrator
+	prestige = 0.1
+}

@@ -1,0 +1,566 @@
+country_event = {
+	id = 1740001
+	title = "Frederick II Hohenzollern"
+	desc = "EVTDESC1740001"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		year = 1740
+		NOT = { government = democracy }
+		NOT = { government = presidential_dictatorship }
+	}
+	
+	mean_time_to_happen = {
+		days = 24
+	}
+	
+	option = {
+		name = "Goose-step hither King in Prussia!"
+		add_country_modifier = {
+			name = frederick_grosse
+			duration = -1
+		}
+		define_general = {
+			name = "Frederick II Hohenzollern"
+			personality = implacable
+			background = genius
+		}
+	}
+}
+country_event = {
+	id = 1740002
+	title = "Death of Frederick II Hohenzollern"
+	desc = "EVTDESC1740002"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = frederick_grosse
+		OR = {
+			year = 1786
+			government = democracy
+			government = presidential_dictatorship
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = {
+		name = "A great monarch he was..."
+		remove_country_modifier = frederick_grosse
+	}
+}
+#country_event = {
+#	id = 1740003
+#	title = "Crown of Bohemia"
+#	desc = "EVTDESC1740003"
+#	picture = fredrick_grosse
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "Great!"
+#		AUS = {
+#			any_owned = {
+#				limit = {
+#					OR = {
+#						region = AUS_625
+#						region = AUS_626
+#					}
+#				}
+#				secede_province = BOH
+#			}
+#			war = {
+#				target = BOH
+#				attacker_goal = { casus_belli = acquire_all_cores }
+#				defender_goal = { casus_belli = acquire_all_cores }
+#				call_ally = no
+#			}
+#		}
+#		BOH = {
+#			government = absolute_monarchy
+#			political_reform = none_voting
+#		}
+#		PRU = {
+#			create_vassal = BOH
+#		}
+#	}
+#}
+country_event = {
+	id = 1740004
+	title = "East Frisian ruler passes away"
+	desc = "EVTDESC1740004"
+	picture = throne
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		year = 1743
+		EFR = {
+			ai = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "A pen is mighter then a sword after all!"
+		inherit = EFR
+		prestige = 5
+	}
+}
+country_event = {
+	id = 1740005
+	title = "Frederick land reforms"
+	desc = "EVTDESC1740005"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		has_country_modifier = frederick_grosse
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "A much needed change"
+		add_country_modifier = {
+			name = land_reform_pru
+			duration = 3700
+		}
+	}
+}
+country_event = {
+	id = 1740006
+	title = "Influx of Protestant Migrants"
+	desc = "EVTDESC1740006"
+	picture = throne
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		has_country_flag = encouraged_protestant_migration
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Houndreds of new souls, welcome to our realm!"
+		PRU_578 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					militancy = 7
+					NOT = { has_pop_culture = south_italian }
+				}
+				
+				move_pop = 549
+			}
+		}
+		PRU_575 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					militancy = 7
+				} 
+				move_pop = 550
+			}
+		}
+		PRU_570 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 551 
+			}
+		}
+		BAV_599 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 552
+			}
+		}
+		BAV_595 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 553 
+			}
+		}
+		AUS_625 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 679 
+			}
+		}
+		AUS_626 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 680 
+			}
+		}
+		PRU_554 = { 
+			any_pop = {
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 681 
+			}
+		}
+	}
+}
+country_event = {
+	id = 1740007
+	title = "Influx of Protestant Migrants"
+	desc = "EVTDESC1740006"
+	picture = migrants
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		has_country_flag = encouraged_protestant_migration
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	option = {
+		name = "Houndreds of new souls, welcome to our realm!"
+		PRU_578 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					militancy = 7
+					NOT = { has_pop_culture = south_italian }
+				}
+				
+				move_pop = 549
+			}
+		}
+		PRU_575 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					militancy = 7
+				} 
+				move_pop = 550
+			}
+		}
+		PRU_570 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 551 
+			}
+		}
+		BAV_599 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 552
+			}
+		}
+		BAV_595 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 553 
+			}
+		}
+		AUS_625 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 679 
+			}
+		}
+		AUS_626 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 680 
+			}
+		}
+		PRU_554 = { 
+			any_pop = {
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 681 
+			}
+		}
+	}
+}
+country_event = {
+	id = 1740008
+	title = "Influx of Protestant Migrants"
+	desc = "EVTDESC1740006"
+	picture = migrants
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		has_country_flag = encouraged_protestant_migration
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = "Houndreds of new souls, welcome to our realm!"
+		PRU_578 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					militancy = 7
+					NOT = { has_pop_culture = south_italian }
+				}
+				
+				move_pop = 549
+			}
+		}
+		PRU_575 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					militancy = 7
+				} 
+				move_pop = 550
+			}
+		}
+		PRU_570 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 551 
+			}
+		}
+		BAV_599 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 552
+			}
+		}
+		BAV_595 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 553 
+			}
+		}
+		AUS_625 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 679 
+			}
+		}
+		AUS_626 = { 
+			any_pop = { 
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 680 
+			}
+		}
+		PRU_554 = { 
+			any_pop = {
+				limit = { 
+					has_pop_religion = protestant
+					NOT = { has_pop_culture = south_italian }
+					NOT = { has_pop_culture = north_italian }
+					militancy = 7
+				} 
+				move_pop = 681 
+			}
+		}
+	}
+}
+country_event = {
+	id = 1740009
+	title = "The Prussian Union"
+	desc = "EVTDESC1740009"
+	picture = prussian_glory
+	is_triggered_only = yes
+
+	option = {
+		name = "Long live the king in Prussia!"
+		set_country_flag = pru_exists
+		DPR = {
+			all_core = {
+				add_core = PRU
+				remove_core = DPR
+			}
+		}
+		inherit = DPR
+		BRN = {
+			all_core = {
+				add_core = PRU
+				remove_core = THIS
+			}
+		}
+		change_tag = PRU
+		government = absolute_monarchy
+		prestige = 20
+	}
+}
+province_event = {
+	id = 1740010
+	title = "A fine Soldier"
+	desc = "EVTDESC1740010"
+	
+	trigger = {
+		owner = {
+			tag = PRU
+			NOT = { military_score = 100 }
+		}
+		OR = {
+			country_units_in_province = THIS
+			any_pop = {
+				unemployment = 0.08
+			}
+		}
+		controlled_by_rebels = no
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 0.2
+			owner = {
+				NOT = { military_score = 10 }
+			}
+		}
+		modifier = {
+			factor = 0.4
+			owner = {
+				NOT = { military_score = 20 }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			owner = {
+				NOT = { military_score = 30 }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			owner = {
+				NOT = { military_score = 40 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				NOT = { military_score = 50 }
+			}
+		}
+	}
+	
+	option = {
+		name = "Abduct and force him into army service!"
+		random_pop = {
+			limit = {
+				OR = {
+					pop_type = labourers
+					pop_type = tribesmen
+					pop_type = zzz_dummy
+					pop_type = farmers
+					pop_type = artisans
+				}
+			}
+			pop_type = soldiers
+		}
+		random_pop = {
+			consciousness = 2
+			militancy = 1
+		}
+	}
+	
+	option = {
+		name = "Leave him alone"
+	}
+}

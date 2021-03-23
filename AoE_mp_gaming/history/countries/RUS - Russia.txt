@@ -6,14 +6,14 @@ religion = orthodox
 government = tsardom
 plurality = 0.05
 nationalvalue = nv_autocracy
-literacy = 0.01  non_state_culture_literacy = 0.01  #literacy = 0.04
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  #literacy = 0.01  non_state_culture_literacy = 0.01
+literacy = 0.15
+#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
 
 set_country_flag = serfdom_not_abolished
 
 #GreaterPowers = prestige
-prestige = 180
+prestige = 40
 
 # Political reforms
 slavery = no_slavery
@@ -47,7 +47,7 @@ colonial_policy = settlement
 
 set_country_flag = orthodox_country
 
-ruling_party = "Tsar's Faction"
+ruling_party = "Tsarskaya fraktsiya"
 upper_house = {
 	fascist = 0
 	liberal = 19

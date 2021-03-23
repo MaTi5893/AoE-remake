@@ -1,0 +1,744 @@
+country_event = {
+	id = 19000
+	title = "Estates General on taxation" #Estates general
+	desc = "EVTDESC19000"
+	picture = estates_general
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA19000
+		prestige = 15
+		set_country_flag = neglecting_the_third_estate
+		country_event = 19001
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = EVTOPTB19000
+		prestige = 5
+		set_country_flag = neglecting_the_third_estate
+		PAP = {
+			relation = { who = BOR value = 30 }
+		}
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		country_event = 19001
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = EVTOPTC19000
+		prestige = -40
+		add_country_modifier = {
+			name = poor_tax_laws
+			duration = 3650
+		}
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		country_event = 19001
+		ai_chance = { factor = 0 }
+		political_reform = bankruptcy
+	}
+}
+country_event = {
+	id = 19001
+	title = "Estates general on conscription laws" #Estates general
+	desc = "EVTDESC19000"
+	picture = estates_general
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA19000
+		prestige = 15
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		country_event = 19002
+		set_country_flag = neglecting_the_third_estate
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = EVTOPTB19000
+		prestige = 5
+		PAP = {
+			relation = { who = BOR value = 30 }
+		}
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		set_country_flag = neglecting_the_third_estate
+		country_event = 19002
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = EVTOPTC19000
+		add_country_modifier = {
+			name = poor_conscript_laws
+			duration = 3650
+		}
+		political_reform = two_year_draft
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		prestige = -40
+		ai_chance = { factor = 0 }
+		country_event = 19002
+	}
+}
+country_event = {
+	id = 19002
+	title = "Estate general on our Monarchy" #Estates general
+	desc = "EVTDESC19002"
+	picture = estates_general
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA19000
+		prestige = 15
+		set_country_flag = neglecting_the_third_estate
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = EVTOPTB19000
+		prestige = 5
+		set_country_flag = neglecting_the_third_estate
+		PAP = {
+			relation = { who = BOR value = 30 }
+		}
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = EVTOPTC19000
+		prestige = -60
+		government = prussian_constitutionalism
+		political_reform = jefferson_method
+		political_reform = appointed
+		political_reform = landed_voting
+		political_reform = harassment
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 2 
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		add_country_modifier = {
+			name = peasant_in_government
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 19003
+	title = "Third estate satisfied" #Estates general
+	desc = "EVTDESC19003"
+	picture = peasant
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = poor_tax_laws
+		has_country_modifier = poor_conscript_laws
+		has_country_modifier = peasant_in_government
+		tag = BOR
+	}
+	
+	mean_time_to_happen = {
+		months = 1 
+	}
+	
+	option = {
+		name = "I'm glad they're happy..."
+		remove_country_modifier = peasant_turmoil
+		clr_country_flag = clergy_and_nobility_domination
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = -1
+			consciousness = 2
+		}
+	}
+}
+country_event = {
+	id = 19004
+	title = "Paris proclamation" #Estates general
+	desc = "EVTDESC19003"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = poor_tax_laws
+		has_country_modifier = poor_conscript_laws
+		tag = BOR
+	}
+	
+	mean_time_to_happen = {
+		months = 1 
+	}
+	
+	option = {
+		name = "I'll allow these reforms..."
+		prestige = -60
+		government = hms_government
+		political_reform = jefferson_method
+		political_reform = appointed
+		political_reform = wealth_voting
+		political_reform = harassment
+		add_country_modifier = {
+			name = peasant_in_government
+			duration = 3650
+		}
+		any_pop = { 
+			limit = { 
+				type = aristocrats
+			}
+			militancy = 4
+			consciousness = 4
+		}
+		any_pop = { 
+			limit = { 
+				type = clergymen
+			}
+			militancy = 4
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = -2 
+			consciousness = -4
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = "Never will I allow dirty peasants to have a voice in MY state!"
+		any_pop = {
+			limit = { 
+				strata = poor
+			}
+			militancy = 6 
+			consciousness = 3
+		}
+	}
+}
+#####louis XIV####
+country_event = {
+	id = 171107
+	title = "The Sun King"
+	desc = "EVTDESC171107"
+	picture = louis_xiv
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOR
+		year = 1700
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Le monde? Le monde est a moi."
+		prestige = 5
+		add_country_modifier = {
+			name = louis_grande
+			duration = -1
+		}
+		add_country_modifier = {
+			name = clergy_and_nobility_domination
+			duration = -1
+		}
+		set_country_flag = clergy_and_nobility_domination
+	}
+}
+country_event = {
+	id = 171108
+	title = "Death of Louis XIV"
+	desc = "EVTDESC171108"
+	picture = louis_xiv_ded
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOR
+		year = 1715
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}
+	
+	option = {
+		name = "Le monde? Le monde est a moi."
+		prestige = 5
+		remove_country_modifier = louis_grande
+	}
+}
+#####
+country_event = {
+	id = 171109
+	title = "France and the third estate"
+	desc = "EVTDESC171109"
+	picture = peasants
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOR
+		government = absolute_monarchy
+		OR = {
+			average_militancy = 4
+			has_recently_lost_war = yes
+		}
+		OR = {
+			blockade = 0.85
+			poor_tax = 0.85
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}
+	
+	option = {
+		name = "Let them eat cake or something..."
+		prestige = 5
+		add_country_modifier = {
+			name = peasant_turmoil
+			duration = -1
+		}
+	}
+}
+#####India#####
+country_event = {
+	id = 171115
+	title = "Cost of War"
+	desc = "EVTDESC171115"
+	picture = deliberation
+	
+	trigger = {
+		tag = MUG
+		owns = 1305
+		owns = 1261
+		has_recently_lost_war = yes
+		NOT = {
+			war_with = BOR
+		}
+		NOT = {
+			war_with = FRA
+		}
+		NOT = { has_global_flag = disabled_railroad_wars }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Approach the French"
+		425 = {
+			owner = {
+				country_event = 171116
+			}
+		}
+	}
+	
+	option = {
+		name = "We can get money through other means"
+		prestige = -10
+		any_pop = {
+			militancy = 4
+		}
+	}
+}
+country_event = {
+	id = 171116
+	title = "Mughals offer to sell land"
+	desc = "EVTDESC171116"
+	picture = deliberation
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'd be foulish not to accept... heh.."
+		1305 = {
+			secede_province = THIS
+		}
+		1261 = {
+			secede_province = THIS
+		}
+		money = -20000
+		MUG = {
+			money = 20000
+		}
+		ai_chance = { factor = 1 }	
+	}
+
+	option = {
+		name = "They're not worth our time"
+		prestige = -10
+	}
+}
+
+country_event = {
+	id = 171117
+	title = "National Awakening"
+	desc = "The Norman culture shall not disappear!"
+	picture = deliberation
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NRM
+		exists = yes
+	}
+	
+	option = {
+		name = "Surprise, we're back, where them thrones at?"
+		415 = {
+			add_province_modifier = { 
+				name = normans_back
+				duration = 3000
+			}
+		}
+		416 = {
+			add_province_modifier = { 
+				name = normans_back
+				duration = 3000
+			}
+		}
+		417 = {
+			add_province_modifier = { 
+				name = normans_back
+				duration = 3000
+			}
+		}
+		418 = {
+			add_province_modifier = { 
+				name = normans_back
+				duration = 3000
+			}
+		}
+		prestige = 20
+		ai_chance = { factor = 1 }	
+	}
+}
+
+country_event = {
+	id = 171118
+	title = "Colonial Administration Split of 1717"
+	desc = "EVENTDESC171118"
+	picture = deliberation
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FCA
+		exists = FCA
+		year = 1717
+	}
+	
+	option = {
+		name = "This is for the better"
+		any_owned = {
+			limit = {
+				is_core = ULA
+			}
+			remove_core = FCA
+			secede_province = ULA
+		}
+		add_country_modifier = {
+			name = mercantilism
+			duration = 1825
+		}
+		BOR = {
+			create_vassal = ULA
+		}
+		ULA = {
+			government = colonial_company
+			add_country_modifier = {
+				name = immigration_boom
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = mercantilism
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = total_reform
+				duration = 1825
+			}
+			treasury = 25000
+		}
+		prestige = 20
+		ai_chance = { factor = 1 }	
+	}
+	
+	option = {
+		name = "We can govern the area ourselves!"
+		any_owned = {
+			limit = {
+				is_core = ULA
+			}
+			remove_core = ULA
+		}
+		BOR = {
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		capital_scope = {
+			any_pop = {
+				militancy = 5
+			}
+		}
+		prestige = 5
+		badboy = 10
+		ai_chance = { factor = 0 }	
+	}
+	
+	option = {
+		name = "New lands await our conquest!"
+		any_owned = {
+			limit = {
+				is_core = ULA
+			}
+			remove_core = FCA
+			secede_province = ULA
+		}
+		BOR = {
+			create_vassal = ULA
+		}
+		ULA = {
+			government = colonial_company
+			add_country_modifier = {
+				name = small_immigration_boom
+				duration = 1825
+			}
+			treasury = 25000
+		}
+		change_tag_no_core_switch = ULA
+		prestige = 20
+		ai_chance = { factor = 0 }	
+	}
+}
+country_event = {
+	id = 171119
+	title = "$FROMCOUNTRY$'s Expansion!"
+	desc = "France estabished protectorate over our neighbors"
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = "Worrisome"
+		FROM = {
+			diplomatinc_influence = {
+			who = THIS
+			value = -200
+			}
+		}
+		relation = {
+			who = FROM
+			value = -100
+		}
+	}
+}
+
+#This is for venice bc for some reason it doesnt work when in the venice file#
+country_event = {
+	id = 712342
+	title = "$FROMCOUNTRY$ cedes Milan!"
+	desc = "EVTDESC712342"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_vassal = LOM
+	}
+	
+	option = {
+		name = "Excellent"
+		prestige = 25
+	}
+}

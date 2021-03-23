@@ -1,0 +1,128 @@
+###Hre###
+country_event = {
+	id = 800000
+	title = "$FROMCOUNTRY$ joins the Empire!"
+	desc = ""
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "Great!"
+		prestige = 15
+	}
+}
+country_event = {
+	id = 800001
+	title = "$FROMCOUNTRY$ leaves the Empire!"
+	desc = ""
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "They will be back, begging at my feet."
+		prestige = -15
+	}
+}
+country_event = {
+	id = 800002
+	title = "Ruina Imperii..."
+	desc = "EVTDESC800002"
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dark times are ahead of us"
+		prestige = -150
+		NNN = {
+			all_core = {
+				remove_core = NNN
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = hre_member
+			}
+			clr_country_flag = hre_member
+		}
+		clr_country_flag = hre_emperor
+		set_global_flag = hre_dismantled
+	}
+}
+country_event = {
+	id = 800003
+	title = "Emperor enforces military access"
+	desc = "Emperor enforced military access through are lands"
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "War again?"
+		FROM = {
+			military_access = THIS
+		}
+	}
+}
+country_event = {
+	id = 800004
+	title = "Emperor enforces military access"
+	desc = "Emperor cancelled military access through are lands"
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "finally"
+		FROM = {
+			end_military_access = THIS
+		}
+	}
+}
+country_event = {
+	id = 800005
+	title = "Imperial war"
+	desc = "We'll demand mill access of every HRE state"
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "War again?"
+		any_country = {
+			limit = {
+				has_country_flag = hre_member
+				ai = yes
+			}
+			country_event = 800003
+			relation = {
+				who = THIS
+				value = -5
+			}
+		}
+	}
+}
+country_event = {
+	id = 800006
+	title = "Emperorship lost"
+	desc = "We lost the emperorship to $FROMCOUNTRY$!"
+	picture = hre_prince
+	is_triggered_only = yes
+	
+	option = {
+		name = "What a humiliation!"
+		FROM = {
+			country_event = 800007
+		}
+		clr_country_flag = hre_emperor
+	}
+}
+country_event = {
+	id = 800007
+	title = "New Holy Roman Emperor"
+	desc = "We are the new Emperor of the Holy Roman Empire"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Amazing!"
+		set_country_flag = hre_emperor
+		prestige = 20
+	}
+}

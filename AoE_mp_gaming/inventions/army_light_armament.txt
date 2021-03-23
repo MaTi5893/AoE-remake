@@ -1,0 +1,517 @@
+#flintlock_rifles - Matchlock Rifles
+matchlock_rifle_armament = {
+	limit = { flintlock_rifles = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			invention = small_arms_production
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = matchlock_rifle_armament }
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		dragoon = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		hussar = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		cavalry = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+		irregular = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+	}
+}
+
+#muzzle_loaded_rifles - Flintlock Rifles
+flintlock_rifle_armament = {
+	limit = { 
+		muzzle_loaded_rifles = 1 
+		invention = matchlock_rifle_armament
+	}
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = flintlock_rifle_armament }
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 1
+			default_organisation = 5
+			supply_consumption = 0.15
+		}
+		# guard = {
+			# attack = 1
+			# supply_consumption = 0.10
+		# }
+		# plane = {
+			# attack = 1
+			# supply_consumption = 0.10
+		# }
+		engineer = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		# dragoon = {
+			# attack = 1
+			# supply_consumption = 0.10
+		# }
+		# hussar = {
+			# attack = 1
+			# supply_consumption = 0.10
+		# }
+		irregular = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+	}
+}
+
+horseback_flintlock = {
+	limit = { 
+		muzzle_loaded_rifles = 1 
+		invention = flintlock_rifle_armament
+	}
+	effect = {
+		dragoon = {
+			attack = 1
+			supply_consumption = 0.20
+		}
+		hussar = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+		cuirassier = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+	}
+}
+#breech_loaded_rifles - granadiers
+grenade = {
+	limit = { breech_loaded_rifles = 1 invention = flintlock_rifle_armament }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = grenade }
+		}
+	}
+	effect = {
+		activate_unit = plane
+		infantry = {
+			attack = 1
+			supply_consumption = 0.20
+		}
+		guard = {
+			attack = 1
+			supply_consumption = 0.25
+		}
+		plane = {
+			attack = 1
+			supply_consumption = 0.25
+		}
+		engineer = {
+			attack = 1
+			siege = 1
+			supply_consumption = 0.25
+		}
+	}
+}
+elite_troops = {
+	limit = { breech_loaded_rifles = 1 invention = grenade }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = elite_troops }
+		}
+	}
+	effect = {
+		# infantry = {
+			# attack = 1
+			# defence = 1
+			# supply_consumption = 0.20
+		# }
+		guard = {
+			
+			attack = 1
+			defence = 1
+			default_organisation = 0.5
+			supply_consumption = 0.20
+		}
+		plane = {
+			attack = 1
+			defence = 1
+			default_organisation = 0.5
+			supply_consumption = 0.20
+		}
+		# engineer = {
+			# attack = 1
+			# defence = 1
+			# siege = 1
+			# supply_consumption = 0.20
+		# }
+		dragoon = {
+			attack = 2
+			defence = 1
+			supply_consumption = 0.20
+		}
+		hussar = {
+			attack = 1
+			defence = 1
+			supply_consumption = 0.20
+		}
+		cuirassier = {
+			attack = 2
+			defence = 1
+			supply_consumption = 0.20
+		}
+	}
+}
+ 
+#machine_guns - Bayonet
+socket_bayonet = {
+	limit = { 
+		machine_guns = 1 
+		invention = breech_loaded_rifle_armament 
+	}
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = socket_bayonet }
+		}
+	}
+	effect = {
+		
+		guard = {
+			attack = 1
+			supply_consumption = 0.20
+		}
+		plane = {
+			attack = 1
+			supply_consumption = 0.20
+		}
+		engineer = {
+			attack = 1
+			supply_consumption = 0.20
+		}
+		cavalry = {
+			defence = -2
+		}
+		dragoon = {
+			defence = -1
+		}
+		hussar = {
+			defence = -1
+		}
+		cuirassier = {
+			defence = -1
+		}
+	}
+}
+
+# machine_gun_armament = {
+	# limit = { machine_guns = 1 invention = breech_loaded_rifle_armament }
+	# chance = {
+		# base = 5
+		# modifier = {
+			# factor = 2
+			# war = yes
+			# war_countries = { invention = machine_gun_armament }
+		# }
+	# }
+	# effect = {
+		# infantry = {
+			# defence = 4
+			# supply_consumption = 0.20
+		# }
+		# guard = {
+			# defence = 4
+			# supply_consumption = 0.20
+		# }
+		# plane = {
+			# defence = 4
+			# supply_consumption = 0.20
+		# }
+		# engineer = {
+			# defence = 4
+			# supply_consumption = 0.20
+		# }
+		# cuirassier = {
+			# defence = 1
+			# supply_consumption = 0.20
+		# }
+		# dragoon = {
+			# defence = 2
+			# supply_consumption = 0.20
+		# }
+		# hussar = {
+			# defence = 3
+			# supply_consumption = 0.20
+		# }
+		# cavalry = {
+			# defence = 1
+			# supply_consumption = 0.20
+		# }
+		# irregular = {
+			# defence = 1
+			# supply_consumption = 0.20
+		# }
+	# }
+# }
+# colonial_negotiations = {
+	# limit = { 
+		# year = 1740
+		# breech_loaded_rifles = 1
+		#  
+	# }
+	# news = no
+	# chance = {
+		# base = 0
+		# modifier = {
+			# factor = -75
+			# NOT = {
+				# OR = {
+					# continent = north_america
+					# continent = europe
+					# is_greater_power = yes
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 25
+			# machine_guns = 1
+		# }
+		# modifier = {
+			# factor = 25
+			# economic_responsibility = 1 
+		# }
+		# modifier = {
+			# factor = 25
+			# naval_logistics = 1 
+		# }
+		# modifier = {
+			# factor = 10
+			# any_greater_power = {
+				# invention = colonial_negotiations
+			# }
+		# }
+		# modifier = {
+			# factor = 10
+			# any_neighbor_country = {
+				# invention = colonial_negotiations
+			# }
+		# }
+	# }
+	# effect = {
+		# colonial_life_rating = -5
+	# }
+# }
+#bolt_action_rifles - Long Rifles
+muzzle_loaded_rifle_armament = {
+	limit = { bolt_action_rifles = 1 invention = elite_troops }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = muzzle_loaded_rifle_armament }
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		engineer = {
+			attack = 1
+			supply_consumption = 0.10
+		}
+		dragoon = {
+			attack = 1
+			supply_consumption = 0.10			
+		}
+		cavalry = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+		irregular = {
+			attack = 0.5
+			supply_consumption = 0.10
+		}
+	}
+}
+
+# bolt_action_rifle_armament = {
+	# limit = { bolt_action_rifles = 1 invention = machine_gun_armament }
+	# chance = {
+		# base = 5
+		# modifier = {
+			# factor = 2
+			# war = yes
+			# war_countries = { invention = bolt_action_rifle_armament }
+		# }
+	# }
+	# effect = {
+		# infantry = {
+			# attack = 4
+			# supply_consumption = 0.20
+		# }
+		# guard = {
+			# attack = 4
+			# supply_consumption = 0.20
+		# }
+		# plane = {
+			# attack = 4
+			# supply_consumption = 0.20
+		# }
+		# engineer = {
+			# attack = 1
+			# supply_consumption = 0.20
+		# }
+		# cuirassier = {
+			# attack = 1
+			# supply_consumption = 0.20
+		# }
+		# dragoon = {
+			# attack = 1
+			# supply_consumption = 0.20
+		# }
+		# hussar = {
+			# attack = 1
+			# supply_consumption = 0.20
+		# }
+		# cavalry = {
+			# attack = 0.5
+			# supply_consumption = 0.20
+		# }
+		# irregular = {
+			# attack = 0.5
+			# supply_consumption = 0.20
+		# }
+	# }
+# }
+
+#modern_divisional_structure - Carbines
+interwar_infantry = {
+	limit = { modern_divisional_structure = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			mass_politics = 1
+		}
+		modifier = {
+			factor = 2
+			modern_army_doctrine = 1
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 4
+			defence = 2
+			supply_consumption = 0.20
+		}
+		guard = {
+			attack = 4
+			defence = 2
+			supply_consumption = 0.20
+		}
+		plane = {
+			attack = 4
+			defence = 2
+			supply_consumption = 0.20
+		}
+		engineer = {
+			attack = 2
+			defence = 2
+			supply_consumption = 0.20
+		}
+		irregular = {
+			attack = 1
+			defence = 2
+			supply_consumption = 0.20
+		}
+	}
+}
+interwar_cavalry = {
+	limit = { modern_divisional_structure = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			electricity = 1
+		}
+		modifier = {
+			factor = 1
+			combustion_engine = 1
+		}
+	}
+	effect = {
+		cuirassier = {
+			attack = 2
+			defence = 2
+			reconnaissance = 2
+			supply_consumption = 0.20
+		}
+		dragoon = {
+			attack = 2
+			defence = 2
+			reconnaissance = 1
+			supply_consumption = 0.20
+		}
+		hussar = {
+			attack = 2
+			defence = 2
+			reconnaissance = 1
+			supply_consumption = 0.20
+		}
+		cavalry = {
+			attack = 1
+			defence = 2
+			reconnaissance = 2
+			supply_consumption = 0.20
+		}
+	}
+}
+rear_area_dumps = {
+	limit = { modern_divisional_structure = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			combustion_engine = 1
+		}
+		modifier = {
+			factor = 2
+			invention = time_studies
+		}
+	}
+	effect = {
+		army_base = {
+			supply_consumption = -0.30
+		}
+	}
+}

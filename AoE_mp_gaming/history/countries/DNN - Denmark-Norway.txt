@@ -7,8 +7,8 @@ religion = protestant
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = nv_order
-literacy = 0.01  non_state_culture_literacy = 0.01  #literacy = 0.8
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  #literacy = 0.02
+literacy = 0.8
+#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.02
 civilized = yes
 prestige = 40
 
@@ -32,7 +32,7 @@ pensions = no_pensions
 school_reforms = no_schools
 
 #New Reforms
-conscription = one_year_draft
+conscription = mandatory_service
 debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal

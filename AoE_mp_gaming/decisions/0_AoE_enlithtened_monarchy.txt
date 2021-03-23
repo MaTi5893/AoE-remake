@@ -1,0 +1,246 @@
+political_decisions = {	
+	the_enlightened_court = {
+		picture = enl_court
+		potential = {
+			government = absolute_monarchy
+			NOT = { has_country_modifier = establishing_an_advisory_body }
+			NOT = { has_country_modifier = totalitarian_system }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			mass_politics = 1
+			invention = secret_police
+			NOT = { num_of_revolts = 1 }
+			NOT = { has_country_modifier = law_changed_by_force }
+		}
+		
+		effect = {
+			plurality = -25
+			add_country_modifier = {
+				name = establishing_an_advisory_body
+				duration = -1
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 1095
+			}
+			any_pop = { limit = { pop_majority_ideology = communist } random_list = { 50 = { reduce_pop = 0.95 } 50 = { reduce_pop = 0.9 } } }
+			any_pop = { limit = { pop_majority_ideology = anarcho_liberal } reduce_pop = 0.98 }
+			any_pop = { limit = { pop_majority_ideology = socialist } reduce_pop = 0.98 }
+			any_pop = { 
+				limit = {
+					OR = {
+						social_movement = yes
+						political_movement = yes
+						}
+					} 
+				militancy = -7
+				random_list = { 50 = { reduce_pop = 0.99 } 50 = { reduce_pop = 0.98 } }
+			}
+			
+			any_pop = { limit = { type = officers } reduce_pop = 0.99 }
+			
+			any_pop = {
+				limit = {
+					OR = { type = soldiers type = officers }
+					NOT = { pop_majority_ideology = reactionary }
+					}
+					militancy = -9 ideology = { factor = 0.35 value = reactionary }
+				}
+			any_pop = { ideology = { factor = 0.01 value = reactionary } }
+			any_pop = {
+				scaled_consciousness = {
+					factor = -9
+					ideology = reactionary
+				}
+				scaled_militancy = {
+					factor = -9
+					ideology = reactionary
+				}
+				
+				scaled_consciousness = {
+					factor = 9
+					ideology = anarcho_liberal
+				}
+				scaled_militancy = {
+					factor = 9
+					ideology = anarcho_liberal
+				}
+				
+				scaled_consciousness = {
+					factor = 4
+					ideology = liberal
+				}
+				scaled_militancy = {
+					factor = 4
+					ideology = liberal
+				}
+				
+				scaled_consciousness = {
+					factor = 3
+					ideology = conservative
+				}
+				scaled_militancy = {
+					factor = 3
+					ideology = conservative
+				}
+				
+				scaled_consciousness = {
+					factor = 7
+					ideology = socialist
+				}
+				scaled_militancy = {
+					factor = 7
+					ideology = socialist
+				}
+				
+				scaled_consciousness = {
+					factor = 9
+					ideology = communist
+				}
+				scaled_militancy = {
+					factor = 9
+					ideology = communist
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	the_cult_of_an_enligthened_monarch = {
+		picture = enl_monarch
+		potential = {
+			OR = {
+				government = absolute_monarchy
+				government = proletarian_dictatorship
+			}
+			NOT = { has_country_modifier = cult_of_personality }
+			NOT = { has_country_modifier = totalitarian_system }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			mass_politics = 1
+			NOT = { num_of_revolts = 1 }
+			NOT = { has_country_modifier = law_changed_by_force }
+		}
+		
+		effect = {
+			plurality = -25
+			add_country_modifier = {
+				name = cult_of_personality
+				duration = -1
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 1216
+			}
+			any_pop = { limit = { agree_with_ruling_party = 0.40 } militancy = -3 consciousness = -6 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	ideological_indoctrination_communist = {
+		picture = indoctrinal_education_communist
+		potential = {
+			government = proletarian_dictatorship
+			NOT = { has_country_modifier = political_education }
+			NOT = { has_country_modifier = totalitarian_system }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			mass_politics = 1
+			NOT = { num_of_revolts = 1 }
+			NOT = { has_country_modifier = law_changed_by_force }
+			NOT = { school_reforms = no_schools }
+		}
+		
+		effect = {
+			plurality = -25
+			add_country_modifier = {
+				name = political_education
+				duration = -1
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 1216
+			}
+			any_pop = { ideology = { factor = 0.1 value = communist } }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	absolutist_indoctrination = {
+		picture = enl_education
+		potential = {
+			government = absolute_monarchy
+			NOT = { has_country_modifier = political_education }
+			NOT = { has_country_modifier = totalitarian_system }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			mass_politics = 1
+			NOT = { num_of_revolts = 1 }
+			NOT = { has_country_modifier = law_changed_by_force }
+			NOT = { school_reforms = no_schools }
+		}
+		
+		effect = {
+			plurality = -25
+			add_country_modifier = {
+				name = political_education
+				duration = -1
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 1095
+			}
+			any_pop = { ideology = { factor = 0.1 value = reactionary } }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	the_enlightened_regime = {
+		picture = enl_regime
+		potential = {
+			government = absolute_monarchy
+			NOT = { has_country_modifier = totalitarian_system }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			has_country_modifier = political_education
+			has_country_modifier = cult_of_personality
+			has_country_modifier = establishing_an_advisory_body
+			NOT = { num_of_revolts = 1 }
+			NOT = { has_country_modifier = law_changed_by_force }
+		}
+		
+		effect = {
+			plurality = -25
+			political_reform = totalitarianism
+			add_country_modifier = {
+				name = totalitarian_system
+				duration = -1
+			}
+			remove_country_modifier = political_education
+			remove_country_modifier = cult_of_personality
+			remove_country_modifier = establishing_an_advisory_body
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}
+	

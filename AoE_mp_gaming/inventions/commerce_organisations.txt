@@ -1,0 +1,302 @@
+#guild_based_production
+vintner = {
+	limit = {
+		guild_based_production = 1
+		OR = {
+			NOT = { 
+				has_country_flag = sunni_country 
+				has_country_flag = shiite_country 
+				has_country_flag = ibadi_country 
+			}
+			has_country_flag = secularized_muslim_society
+			has_country_flag = post_colonial_country
+		}
+	}
+	news = no
+	chance = {
+		base = 100
+	}
+	effect = {
+		activate_building = winery
+	}
+}
+furriers = {
+	limit = {
+		guild_based_production = 1
+	}
+	news = no
+	chance = {
+		base = 100
+	}
+	effect = {
+		activate_building = automobile_factory
+	}
+}
+
+#organized_factories
+work_classification = {
+	limit = { organized_factories = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = liberal
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+work_specialization = {
+	limit = { organized_factories = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = work_classification
+		}
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			trade_policy = free_trade
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+work_control_and_hierarchy = {
+	limit = { organized_factories = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = work_specialization
+		}
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			trade_policy = free_trade
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+#scientific_management
+sequence_planning = {
+	limit = { scientific_management = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = interventionism
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = conservative
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+inventory_planning = {
+	limit = { scientific_management = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			trade_policy = free_trade
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+quality_assurance_procedure = {
+	limit = { scientific_management = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 4
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+#time_saving_measures
+time_studies = {
+	limit = { time_saving_measures = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = state_capitalism
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = socialist
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+time_clock = {
+	limit = { time_saving_measures = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		factory_output = 0.025
+	}
+}
+lighting = {
+	limit = { time_saving_measures = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 4
+			electricity = 1
+		}
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+	}
+	effect = {
+		factory_output = 0.025
+	}
+}
+#management_strategy
+old_style_family_business = {
+	limit = { management_strategy = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = interventionism
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				average_consciousness = 3
+			}
+		}
+	}
+	effect = {
+		factory_input = -0.01
+	}
+}
+anynomous_investor_business = {
+	limit = { management_strategy = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			economic_policy = state_capitalism
+		}
+	}
+	effect = {
+		factory_input = -0.01 
+	}
+}
+marketized_smallholder_business = {
+	limit = { management_strategy = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			trade_policy = free_trade
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = liberal
+		}
+	}
+	effect = {
+		factory_input = -0.01
+	}
+}
+#organizational_development
+i_scientific_management = {
+	limit = { organizational_development = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+human_resource_development = {
+	limit = { organizational_development = 1 }
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			trade_unions = all_trade_unions
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}

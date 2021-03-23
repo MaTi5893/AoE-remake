@@ -1,0 +1,709 @@
+political_decisions = {
+	king_in_prussia = {
+		picture = prussia_king
+		potential = {
+			tag = BRN
+			NOT = { has_country_flag = claimed_pomerania }
+			
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				ideological_thought = 1
+				relation = {
+					who = AUS
+					value = 120
+				}
+				alliance_with = AUS
+			}
+			is_our_vassal = DPR
+		}
+		
+		effect = {
+			set_country_flag = claimed_pomerania
+			country_event = 1740009
+			PRU_546 = {
+				add_core = THIS 
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_silesia = {
+		picture = silesia_prussia
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = claimed_silesia }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			state_n_government = 1
+			war_policy = jingoism
+		}
+		
+		effect = {
+			set_country_flag = claimed_silesia
+			682 = {
+				add_core = THIS 
+			}
+			683 = {
+				add_core = THIS 
+			}
+			684 = {
+				add_core = THIS 
+			}
+			685 = {
+				add_core = THIS 
+			}
+			badboy = 10
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	encourage_protestant_migration = {
+		picture = migration
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = encouraged_protestant_migration }
+			exists = yes
+		}
+	
+		allow = {
+			war = no
+			idealism = 1
+			inorganic_chemistry = 1
+			ad_hoc_money_bill_printing = 1
+			high_pressure_steam_engine = 1
+		}
+		effect = {
+			set_country_flag = encouraged_protestant_migration
+			any_pop = { militancy = 2 }
+			#all_core = {
+			#	add_province_modifier = {
+			#		name = encouraging_protestant_migration
+			#		duration = 5475
+			#	}
+			#}
+			add_country_modifier = {
+				name = land_reform_pru
+				duration = 5475
+			}
+			PRU_578 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						militancy = 5
+						NOT = { has_pop_culture = south_italian }
+					}
+					
+					move_pop = 549
+				}
+			}
+			PRU_575 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						militancy = 5
+					} 
+					move_pop = 550
+				}
+			}
+			PRU_570 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 551 
+				}
+			}
+			BAV_599 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 552
+				}
+			}
+			BAV_595 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 553 
+				}
+			}
+			AUS_625 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 679 
+				}
+			}
+			AUS_626 = { 
+				any_pop = { 
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 680 
+				}
+			}
+			PRU_554 = { 
+				any_pop = {
+					limit = { 
+						has_pop_religion = protestant
+						NOT = { has_pop_culture = south_italian }
+						NOT = { has_pop_culture = north_italian }
+						militancy = 5
+					} 
+					move_pop = 681 
+				}
+			}
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	hold_prussian_herbstubung = {
+		picture = army_training
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = held_herbstubung }
+			exists = yes
+		}
+		
+		allow = {
+			deep_defense_system = 1
+			money = 10000
+			military_spending = 1
+		}
+		
+		effect = {
+			add_country_modifier = { name = prussian_herbstubung duration = -1}
+			money = -10000
+			set_country_flag = held_herbstubung
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	introduce_the_goose_step = {
+		picture = goose_step
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = introduced_the_goose_step }
+			exists = yes
+		}
+		
+		allow = {
+			point_defense_system = 1
+			breech_loaded_rifles = 1
+			military_spending = 1
+		}
+		
+		effect = {
+			add_country_modifier = { name = prussian_goose_step duration = 29200 }
+			set_country_flag = introduced_the_goose_step
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	regimental_cantons = {
+		picture = cantons
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = funded_regimental_cantons }
+			exists = yes
+		}
+		
+		allow = {
+			military_statistics = 1
+			army_decision_making = 1
+			military_spending = 1
+		}
+		
+		effect = {
+			add_country_modifier = { name = prussian_mobilization duration = -1}
+			set_country_flag = funded_regimental_cantons
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	prussian_academy_of_sciences = {
+		picture = academy
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = funded_prussian_academy }
+			exists = yes
+		}
+		
+		allow = {
+			realism = 1
+		}
+		effect = {
+			add_country_modifier = { name = berlin_academy_of_sciences duration = -1}
+			set_country_flag = funded_prussian_academy
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	prussia_united = {
+		picture = west_prussia
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = prussia_is_united }
+			exists = yes
+		}
+		allow = {
+			war = no
+			owns = 696
+			owns = 693
+			owns = 690
+			owns = 691
+			owns = 694
+			owns = 692		
+		}
+		effect = {
+			set_country_flag = prussia_is_united
+			prestige = 20
+			696 = {
+				add_core = THIS
+			}
+			693 = {
+				add_core = THIS
+			}
+			690 = {
+				add_core = THIS
+			}
+			691 = {
+				add_core = THIS
+			}
+			694 = {
+				add_core = THIS
+			}
+			692 = {
+				add_core = THIS
+			}
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	prussian_saxony = {
+		picture = saxony
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = prussian_saxony }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			war_policy = jingoism
+			military_score = 100
+		}
+		
+		effect = {
+			set_country_flag = prussian_saxony
+			687 = {
+				add_core = THIS 
+			}
+			556 = {
+				add_core = THIS 
+			}
+			554 = {
+				add_core = THIS 
+			}
+			687 = { add_core = THIS }
+			badboy = 5
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	begin_retablissement = {
+		picture = prussia_king
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = retablissement }
+			exists = yes
+		}
+		
+		allow = {
+			monetary_system_7 = 1
+			limited_access_roads = 1
+			aeronautics = 1
+			has_country_modifier = frederick_grosse
+		}
+		
+		effect = {
+			add_country_modifier = { name = retablissement duration = 7300 }
+			tech_school = prussian_tech_school
+			prestige = 5
+			set_country_flag = retablissement
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	silesia_heartland = {
+		picture = silesia_prussia
+		potential = {
+			PRU_682 = {
+				owned_by = THIS
+			}
+			NOT = { has_global_flag = ruhr_boom_has_happened }
+			exists = yes
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					market_structure = 1
+					organized_factories = 1
+					early_railroad = 1
+				}
+				tech_school = prussian_tech_school
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 682 #Ost-Rhineland
+					state_scope = {
+						NOT = { has_building = steel_factory }
+					}
+				}
+				
+				owner = { 
+					capital = 682
+					build_factory_in_capital_state = steel_factory
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 549 #Berlin
+					owned_by = PRU
+				}
+				owner = { capital = 549 }
+			}
+			random_owned = {
+				limit = {
+					province_id = 706 #Warsaw
+					owned_by = PLC
+				}
+				owner = { capital = 706 }
+			}
+			random_owned = {
+				limit = {
+					province_id = 549 #Berlin
+					owned_by = GER
+					owner = { primary_culture = north_german }
+				}
+				owner = { capital = 549 }
+			}
+			random_owned = {
+				limit = {
+					province_id = 619 #Vienna
+					owned_by = HRE
+				}
+				owner = { capital = 619 }
+			}
+			add_country_modifier = {
+				name = silesia_boom
+				duration = 3650
+			}
+			add_country_modifier = {
+				name = global_baby_boom_small
+				duration = 720
+			}
+			any_owned = {
+				limit = {
+					region = PRU_682
+				}
+				add_province_modifier = {
+					name = silesia_boom_city
+					duration = 720
+				}
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = baby_boom
+					duration = 365
+				}
+			}
+			set_global_flag = ruhr_boom_has_happened
+		}
+		
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	renovate_berlin = {
+		picture = berlin
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = renovated_berlin }
+			exists = yes
+		}
+
+		allow = {
+			owns = 549 # Berlin
+			money = 30000
+			OR = {
+				expressionism = 1
+				AND = {
+					OR = {
+						work_hours = ten_hours
+						work_hours = eight_hours
+					}
+					NOT = {
+						OR = {
+							unemployment_subsidies = no_subsidies
+							unemployment_subsidies = trinket_subsidies
+						}
+					}
+				}
+			}
+		}
+	
+		effect = {
+			set_country_flag = renovated_berlin
+			money = -30000
+			549 = {
+				life_rating = 5	
+				infrastructure = 1
+				fort = 2
+				add_province_modifier = {
+					name = baby_boom
+					duration = 5475
+				}
+			}
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	expand_rhineland = {
+		picture = rhineland
+		potential = {
+			OR = { tag = PRU tag = BRN }
+			NOT = { has_country_flag = prussian_rhineland }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			military_score = 150
+			#owns = 3265
+			owns = 580
+			owns = 577
+			is_greater_power = yes
+		}
+		
+		effect = {
+			set_country_flag = prussian_rhineland
+			#PRU_575 = {
+			#	add_core = THIS 
+			#}
+			#PRU_578 = {
+			#	add_core = THIS 
+			#}
+			PRU_581 = {
+				add_core = THIS 
+			}
+			badboy = 15
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 15
+			}
+		}
+	}
+	
+#	bohemian_crown = {
+#		picture = bohemian_crown
+#		potential = {
+#			OR = { tag = PRU tag = BRN }
+#			NOT = { has_country_flag = bohemian_crown }
+#		}
+#		
+#		allow = {
+#			war = no
+#			military_score = 150
+#			NOT = { has_country_flag = hre_member }
+#			is_greater_power = yes
+#		}
+#		
+#		effect = {
+#			set_country_flag = bohemian_crown
+#			country_event = 1740003
+#			badboy = 15
+#		}
+#		
+#		ai_will_do = {
+#			factor = 1
+#			modifier = {
+#				factor = 0
+#				badboy = 15
+#			}
+#		}
+#	}
+	
+	form_brandenburg = {
+		picture = prussia_king
+		potential = {
+			tag = PRU
+			NOT = {
+				owns = 691
+				owns = 695
+			}
+			exists = yes
+		}
+		allow = {
+			exists = yes
+		}
+		effect = {
+			all_core = {
+				add_core = BRN
+				remove_core = PRU
+			}
+			580 = {
+				remove_core = BRN
+				add_core = LIP
+			}
+			577 = {
+				remove_core = BRN
+				secede_province = PAL
+			}
+			PRU_695 = {
+				add_core = DPR
+				remove_core = BRN
+			}
+			release = LIP
+			create_alliance = LIP
+			change_tag = BRN
+			prestige = -15
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	form_prussia = {
+		picture = prussia_king
+		potential = {
+			tag = BRN
+			has_country_flag = pru_exists
+			OR = {
+				owns = 691
+				owns = 695
+			}
+			exists = yes
+		}
+		allow = {
+			exists = yes
+		}
+		effect = {
+			all_core = {
+				add_core = PRU
+				remove_core = BRN
+			}
+			change_tag = PRU
+			prestige = 15
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	form_germany = {
+		news = yes
+		news_desc_long = "form_germany_NEWS_LONG"
+		news_desc_medium = "form_germany_NEWS_MEDIUM"
+		news_desc_short = "form_germany_NEWS_SHORT"
+		picture = prussia_king
+		potential = {
+			is_culture_group = germanic
+			NOT = {
+				exists = GER
+				tag = ISR
+				has_country_flag = hre_member
+				has_country_flag = hre_emperor
+			}
+			exists = yes
+		}
+		
+		allow = {
+			is_greater_power = yes
+			prestige = 45
+			war = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			change_tag = GER
+			add_accepted_culture = north_german
+			add_accepted_culture = south_german
+			any_country = {
+				limit = {
+					is_culture_group = germanic
+					in_sphere = THIS
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

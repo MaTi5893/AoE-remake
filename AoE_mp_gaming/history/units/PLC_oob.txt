@@ -1,0 +1,127 @@
+RUS = { value = 90 }
+AUS = { value = -50 }
+BRN = { value = -150 }
+TUR = {
+	value = -200
+	truce_until = 1704.1.1
+}
+BOR = { value = 35 }
+ENG = { value = 25 }
+NET = { value = 100 }
+HET = { value = -200 }
+SWE = { value = -200 }
+ZZH = { value = 150 }
+
+army = { 
+
+name = "1. Armia Korony Polskiej" location = 703
+
+regiment = { name = "1. brygada" type = infantry home = 712 } 
+regiment = { name = "2. brygada" type = infantry home = 699 } 
+regiment = { name = "3. brygada" type = infantry home = 705 } 
+regiment = { 
+	name = "4. brygada" 
+	type = dragoon
+	home = 696
+} 
+regiment = { name = "5. brygada" type = infantry home = 957 } 
+regiment = { name = "6. brygada" type = artillery home = 706 } 
+regiment = { name = "7. brygada" type = artillery home = 946 } 
+regiment = { name = "8. brygada" type = artillery home = 692 } 
+regiment = { name = "9. brygada" type = artillery home = 960 } 
+regiment = { name = "10. brygada" type = artillery home = 699 }
+}
+
+army = { 
+
+name = "2. Armia Ksiestwa Litewskiego" location = 360
+
+regiment = { name = "1. brygada" type = infantry home = 361 } 
+regiment = { name = "2. brygada" type = infantry home = 360 } 
+regiment = { name = "3. brygada" type = infantry home = 718 } 
+regiment = { 
+	name = "4. brygada" 
+	type = dragoon
+	home = 948
+} 
+regiment = { name = "5. brygada" type = infantry home = 945 } 
+regiment = { name = "6. brygada" type = artillery home = 949 } 
+regiment = { name = "7. brygada" type = artillery home = 940 } 
+regiment = { name = "8. brygada" type = artillery home = 937 } 
+regiment = { name = "9. brygada" type = artillery home = 955 } 
+regiment = { name = "10. brygada" type = artillery home = 956 }
+}
+
+leader = {
+	name = "August II Mocny"
+	date = "1699.1.1"
+        prestige = 0.500
+        picture ="augustus_the_stronk"
+	type = land
+	personality = scared
+	background = womanizer
+}
+leader = {
+	name = "Adam Mikolaj Sieniawski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = scared
+	background = womanizer
+}
+leader = {
+	name = "Stanislaw Chometowski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = scared
+	background = womanizer
+}
+leader = {
+	name = "Michal Serwacy Wisniwiecki"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = merciless
+	background = war_college
+}
+leader = {
+	name = "Grzegorz Antoni Oginski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = soldierly
+	background = armchair_general
+}
+leader = {
+	name = "Hiernim Augystyn Lubomirski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = unsound
+	background = aristocrat
+}
+leader = {
+	name = "Jozef Potocki"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = resolute
+	background = politician
+}
+leader = {
+	name = "Jan Kazimierz Sapiecha the Younger"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = coward
+	background = innovative_tactician
+}
+leader = {
+	name = "Jan Kazimierz Sapiecha the Elder"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = unruly
+	background = nationalist
+}

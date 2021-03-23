@@ -30526,30 +30526,30 @@
 
 # Siedlice
 711 = {
-    unit = {
-        x = 3159.000000
-        y = 1671.000000
-    }
-
     text_position = {
-        x = 3158.000000
-        y = 1668.000000
+        x = 3151.335000
+        y = 1666.200000
     }
 
     text_scale = 2.600000
-    building_construction = {
-        x = 3169.000000
-        y = 1665.000000
-    }
-
-    military_construction = {
-        x = 3160.000000
-        y = 1665.000000
+    unit = {
+        x = 3152.760000
+        y = 1661.830000
     }
 
     factory = {
         x = 3149.000000
         y = 1678.000000
+    }
+
+    building_construction = {
+        x = 3152.760000
+        y = 1649.385000
+    }
+
+    military_construction = {
+        x = 3160.000000
+        y = 1665.000000
     }
 
     building_position = {
@@ -30678,11 +30678,22 @@
 # Lublin
 715 = {
     text_position = {
-        x = 3165.000000
-        y = 1644.400024
+        x = 3170.333333
+        y = 1654.583333
     }
 
+    text_rotation = 5.119916
     text_scale = 2.999999
+    unit = {
+        x = 3170.583333
+        y = 1656.500000
+    }
+
+    factory = {
+        x = 3174.500000
+        y = 1646.250000
+    }
+
     building_construction = {
         x = 3171.000000
         y = 1656.000000
@@ -30691,11 +30702,6 @@
     military_construction = {
         x = 3164.000000
         y = 1640.000000
-    }
-
-    factory = {
-        x = 3156.000000
-        y = 1654.000000
     }
 
     building_position = {

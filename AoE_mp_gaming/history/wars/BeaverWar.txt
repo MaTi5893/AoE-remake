@@ -17,7 +17,7 @@ name = "The Beaver War"
 	# country - 3rd party
 	# state_province_id - target state capital
 	war_goal = {
-		casus_belli = conquest_low
+		casus_belli = annex_core_country
 		actor = IQS
 		receiver = MIA
 		#state_province_id = 165

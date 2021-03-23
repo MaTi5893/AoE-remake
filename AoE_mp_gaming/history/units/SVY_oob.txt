@@ -1,0 +1,97 @@
+FRA = { value = -150 }
+AUS = { value = 150 }
+SWI = { value = 200 truce_until = 1704.1.1 }
+
+leader = {
+	name = "Carlo Alberto"
+	date = 1831.1.1
+	type = land
+	personality = openminded
+	background = aristocrat
+	prestige = 0.5
+}
+
+leader = {
+	name = "Emanuele Pes"
+	date = 1820.1.1
+	type = land
+	personality = diplomatic
+	background = politician
+	prestige = 0.2
+}
+
+leader = {
+	name = "Eusebio Bava"
+	date = 1832.1.1
+	type = land
+	personality = cautious
+	background = war_college
+	prestige = 0.1
+}
+
+leader = {
+	name = "Ettore Gerbaix"
+	date = 1834.1.1
+	type = land
+	personality = scared
+	background = aristocrat
+	prestige = 0.0
+}
+
+leader = {
+	name = "Giuseppe Albini"
+	date = 1836.1.1
+	type = sea
+	personality = indifferent
+	background = war_college
+	prestige = 0.0
+}
+
+leader = {
+	name = "La Marmora-Masserano"
+	date = 1836.1.1
+	type = land
+	personality = mediocre
+	background = cavalry_school
+	prestige = 0.0
+}
+
+leader = {
+	name = "Agostino Chiodo"
+	date = 1836.1.1
+	type = land
+	personality = careful
+	background = engineer
+	prestige = 0.0
+}
+army = {
+	name = "Army of Savoia"
+	location = 720
+	regiment = {
+		name= "Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	regiment = {
+		name= "Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	regiment = {
+		name= "3nd Savoiard Artillery"
+		type = artillery
+		home = 472
+	}
+	
+	regiment = {
+		name= "4nd Savoiard Artillery"
+		type = artillery
+		home = 465
+	}
+	
+	regiment = {
+		name= "5nd Savoiard Artillery"
+		type = artillery
+		home = 466
+	}
+}
