@@ -1,0 +1,804 @@
+political_decisions = {
+	renovate_the_armada = {
+		picture = armada
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = renovated_the_armada }
+			exists = yes
+		}
+		allow = {
+			money = 20000000
+			steam_turbine_ships = 1
+			advanced_naval_design = 1
+		}
+		effect = {
+			set_country_flag = renovated_the_armada
+			add_country_modifier = {
+				name = renovated_armada
+				duration = -1
+			}
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	introduce_the_cadastre_tax_and_banks = {
+		picture = cadastre
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = introduced_the_cadastre_tax }
+			exists = yes
+		}
+		allow = {
+			central_bank_money_bill_printing = 1
+			money = 3000000
+		}
+		effect = {
+			set_country_flag = introduced_the_cadastre_tax
+			add_country_modifier = {
+				name = the_cadastre_tax_and_the_spanish_bank
+				duration = -1
+			}
+			money = -3000000
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	royal_academy_of_the_fine_arts = {
+		picture = academy
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = made_royal_academy }
+			exists = yes
+		}
+		allow = {
+			expressionism = 1
+		}
+		effect = {
+			set_country_flag = made_royal_academy
+			prestige = 20
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	expel_the_jesuits = {
+		picture = jesuits
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = expeled_the_jesuits }
+			exists = yes
+		}
+		allow = {
+			trade_policy = protectionism
+			NOT = {
+				OR = {
+					wage_reform = no_minimum_wage
+					wage_reform = trinket_wage
+				}
+			}
+			ruling_party_ideology = reactionary
+		}
+		effect = {
+			set_country_flag = expeled_the_jesuits
+			treasury = 100000
+			country_event = 114309
+			any_country = {
+				limit = {
+					exists = yes
+					vassal_of = THIS
+					government = colonial_company
+				}
+				country_event = 114309
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						wage_reform = low_minimum_wage
+					}
+					social_reform = acceptable_minimum_wage
+				}
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						wage_reform = acceptable_minimum_wage
+					}
+					social_reform = good_minimum_wage
+				}
+			}
+			PAP = {
+				relation = {
+					value = -150
+					who = THIS
+				}
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	royal_spanish_academy = {
+		picture = spanish_academy
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = made_royal_spanish_academy }
+			exists = yes
+		}
+		allow = {
+			army_nco_training = 1
+			military_directionism = 1
+		}
+		effect = {
+			set_country_flag = made_royal_spanish_academy
+			add_country_modifier = {
+				name = new_royal_spanish_academy
+				duration = -1
+			}
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	galicia_claim_leon = {
+		picture = armada
+		potential = {
+			tag = GLC
+			NOT = { has_country_flag = claimed_leon }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				is_vassal = no
+				is_secondary_power = yes
+			}
+		}
+		effect = {
+			475 = {
+				add_core = THIS
+			}
+			477 = {
+				add_core = THIS
+			}
+			482 = {
+				add_core = THIS
+			}
+			set_country_flag = claimed_leon
+			add_accepted_culture = spanish
+			badboy = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	galicia_claim_douro = {
+		picture = armada
+		potential = {
+			tag = GLC
+			NOT = { has_country_flag = claimed_douro }
+			exists = yes
+		}
+		allow = {
+			owns = 475
+			owns = 477
+			owns = 482
+		}
+		effect = {
+			518 = {
+				add_core = THIS
+			}
+			519 = {
+				add_core = THIS
+			}
+			520 = {
+				add_core = THIS
+			}
+			522 = {
+				add_core = THIS
+			}
+			set_country_flag = claimed_douro
+			add_accepted_culture = portuguese
+			badboy = 5
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	navarra_claim_logrono = {
+		picture = armada
+		potential = {
+			tag = BSQ
+			NOT = { has_country_flag = claimed_logrono }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				is_vassal = no
+					AND = {
+						owns = 460
+						owns = 492
+						owns = 493
+					}
+			}
+		}
+		effect = {
+			494 = {
+				add_core = THIS
+			}
+			set_country_flag = claimed_logrono
+			prestige = 5
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	nueva_planta_decrees = {
+		picture = nueva_planta
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = nueva_planta_decrees }
+			exists = yes
+			ARN = {
+				exists = yes
+				ai = yes
+			}
+		}
+		allow = {
+			ARN = {
+				vassal_of = THIS
+			}
+			ideological_thought = 1
+			NOT = { safety_regulations = no_safety }
+		}
+		effect = {
+			ARN = {
+				all_core = {
+					add_core = THIS
+					remove_core = ARN
+				}
+			}
+			inherit = ARN
+			set_country_flag = nueva_planta_decrees
+			prestige = 25
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	aragonese_italy = {
+		picture = merchant_navy
+		potential = {
+			tag  = ARN
+			is_vassal = no
+			NOT = { has_country_flag = aragon_sicily }
+			owns = 503
+			exists = yes
+		}
+		allow = {
+			war = no
+			is_vassal = no
+		}
+		effect = {
+			SIC_754 = {
+				add_core = THIS
+			}
+			SIC_753 = {
+				add_core = THIS
+			}
+			SIC_763 = {
+				add_core = THIS
+			}
+			SAR_765 = {
+				add_core = THIS
+			}
+			set_country_flag = aragon_sicily
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	aragonese_provence = {
+		picture = merchant_navy
+		potential = {
+			tag  = ARN
+			has_country_flag = aragon_sicily
+			NOT = { has_country_flag = aragon_provence }
+			exists = yes
+		}
+		allow = {
+			all_core = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			prestige = 15
+			badboy = 10
+			FRA_467 = {
+				add_core = THIS
+			}
+			set_country_flag = aragon_provence
+		}
+		ai_will_do = {					
+			factor = 0
+		}
+	}
+	
+	aragonese_athens = {
+		picture = aegean
+		potential = {
+			tag  = ARN
+			has_country_flag = aragon_sicily
+			has_country_flag = aragon_provence
+			NOT = { has_country_flag = aragon_greece }
+			exists = yes
+		}
+		allow = {
+			all_core = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			prestige = 15
+			badboy = 10
+			GRE_837 = {
+				add_core = THIS
+			}
+			EGY_843 = {
+				add_core = THIS
+			}
+			set_country_flag = aragon_greece
+		}
+		ai_will_do = {					
+			factor = 0
+		}
+	}
+	
+	aragonese_andorra = {
+		picture = french_catalonia
+		potential = {
+			tag  = ARN
+			has_country_flag = aragon_sicily
+			NOT = { has_country_flag = aragon_andorra }
+			exists = yes
+		}
+		allow = {
+			owns = 762
+		}
+		effect = {
+			prestige = 5
+			badboy = 5.5
+			3252 = {
+				add_core = THIS
+			}
+			set_country_flag = aragon_andorra
+		}
+		ai_will_do = {					
+			factor = 0
+		}
+	}
+	
+	create_iberia = {
+		potential = {
+			is_culture_group = iberian
+			NOT = { tag = SPC }
+			487 = { is_core = SPA }
+			NOT = {
+				exists = IBR
+				has_global_flag = created_iberia
+			}
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+			is_greater_power = yes
+			mass_politics = 1
+			SPA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			POR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+						owner = {
+							vassal_of = THIS
+							war = no
+						}
+					}
+				}
+			}
+			517 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = created_iberia
+			prestige = 10
+			all_core = { add_core = IBR }
+			SPA = {
+				all_core = { add_core = IBR }
+			}
+			POR = {
+				all_core = { add_core = IBR }
+			}
+			random_country = {
+				limit = {
+					tag = PBZ
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = PBZ
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VNS
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = VNS
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VNG
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = VNG
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VOP
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = VOP
+				}
+			}
+			random_country = {
+				limit = {
+					tag = FLO
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = FLO
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VLP
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					create_vassal = VLP
+				}
+			}
+			517 = { add_core = IBR }
+			add_accepted_culture = portuguese
+			add_accepted_culture = galician
+			add_accepted_culture = spanish
+			add_accepted_culture = catalan
+			add_accepted_culture = aragonese
+			add_accepted_culture = basque
+			change_tag = IBR
+			any_country = {
+				limit = {
+					tag = SPA
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = SPA }
+			}
+			random_country = {
+				limit = {
+					tag = SPA
+					exists = yes
+					ai = no
+				}
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					tag = POR
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = POR }
+			}
+			random_country = {
+				limit = {
+					tag = POR
+					exists = yes
+					ai = no
+				}
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					tag = CAT
+					exists = yes
+					CAT = {
+						OR = {
+							vassal_of = THIS
+							is_vassal = no
+						}
+					}
+					ai = yes
+				}
+				THIS = { inherit = CAT }
+			}
+			random_country = {
+				limit = {
+					tag = CAT
+					exists = yes
+					CAT = {
+						OR = {
+							vassal_of = THIS
+							is_vassal = no
+						}
+					}
+					ai = no
+				}
+				country_event = 98650
+			}
+			random_country = {
+				limit = {
+					tag = BSQ
+					exists = yes
+					BSQ = {
+						OR = {
+							vassal_of = THIS
+							is_vassal = no
+						}
+					}
+					ai = yes
+				}
+				THIS = { inherit = BSQ }
+			}
+			random_country = {
+				limit = {
+					tag = BSQ
+					exists = yes
+					BSQ = {
+						OR = {
+							vassal_of = THIS
+							is_vassal = no
+						}
+					}
+					ai = no
+				}
+				country_event = 98650
+			}
+			any_country = {
+				limit = {
+					NOT = { is_culture_group = iberian }
+					in_sphere = THIS
+				}
+				any_owned = {
+					limit = { is_core = IBR }
+					secede_province = THIS
+				}
+			}
+			any_pop = {
+				limit = { is_culture_group = iberian }
+				militancy = -4
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	enact_new_constitution_spc = {
+		picture = 1812_constitution
+		potential = {
+			tag = SPC
+			NOT = { has_country_flag = enacted_new_constitution_spc }
+			exists = yes
+		}
+		
+		allow = {
+			war = no
+			prestige = 50
+			is_greater_power = yes
+			plurality = 20
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist
+			}
+			political_thought_8 = 1
+		}
+		
+		effect = {
+			set_country_flag = enacted_new_constitution_spc
+			random_owned = {
+				limit = {
+					OR = {
+						owner = { political_parties = underground_parties }
+						owner = { political_parties = harassment }
+					}
+				}
+				owner = {
+					political_reform = gerrymandering
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { press_rights = free_press } }
+				}
+				owner = {
+					political_reform = free_press
+				}
+			}
+			random_owned = {
+				limit = {
+					OR = {
+						owner = { vote_franschise = none_voting }
+						owner = { vote_franschise = landed_voting }
+						owner = { vote_franschise = wealth_weighted_voting }
+					}
+				}
+				owner = {
+					political_reform = wealth_voting
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { upper_house_composition = population_equal_weight } }
+				}
+				owner = {
+					political_reform = population_equal_weight
+				}
+			}
+			VNS = {
+				all_core = {
+					add_core = THIS
+					remove_core = VNS
+				}
+			}
+			VNG = {
+				all_core = {
+					add_core = THIS
+					remove_core = VNS
+				}
+			}
+			FLO = {
+				all_core = {
+					add_core = THIS
+					remove_core = VNS
+				}
+			}
+			VOP = {
+				all_core = {
+					add_core = THIS
+					remove_core = VNS
+				}
+			}
+			VLP = {
+				all_core = {
+					add_core = THIS
+					remove_core = VNS
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VNS
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					inherit = VNS
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VNG
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					inherit = VNG
+				}
+			}
+			random_country = {
+				limit = {
+					tag = FLO
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					inherit = FLO
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VOP
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					inherit = VOP
+				}
+			}
+			random_country = {
+				limit = {
+					tag = VLP
+					exists = yes
+					#ai = yes
+					is_vassal = yes
+				}
+				THIS = {
+					inherit = VLP
+				}
+			}
+		}
+	}
+}

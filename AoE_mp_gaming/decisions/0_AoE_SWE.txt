@@ -69,10 +69,6 @@ political_decisions = {
 					truce_with = RUS
 					year = 1720
 				}
-				AND = {
-					is_greater_power = yes
-					year = 1715
-				}
 			}
 			owns = 349
 			owns = 350
@@ -117,6 +113,18 @@ political_decisions = {
 			add_country_modifier = {
 				name =  swedish_caroleans
 				duration = 7300
+			}
+			322 = {
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = hussar value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
 			}
 		}
 		
@@ -353,75 +361,60 @@ political_decisions = {
 				naval_base = 1
 				fort = 2
 			}
+			add_accepted_culture = latvian
+			add_accepted_culture = estonian
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
-	expand_livonia = {
+	expand_livonia = { #deluge 2.0
 		picture = baltic
 		potential = {
 			owns = 322
-			322 = { is_capital = yes }
-			NOT = { has_country_flag = expand_livonia }
-			owns = 349
-			owns = 350
-			owns = 351
-			owns = 352
-			owns = 353
-			owns = 994
-			owns = 354
-			owns = 996
-			owns = 355
-			exists = yes
-		}
-		allow = {
-			war = no
-			government = absolute_monarchy
-			military_score = 75
-			war_policy = jingoism
-		}
-		effect = {
-			badboy = 7
-			set_country_flag = expand_livonia
-			RUS_354 = {
-				add_core = THIS
-			}
-			364 = {
-				add_core = THIS
-			}
-			365 = {
-				add_core = THIS
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	conquer_danzig = {
-		picture = danzig
-		potential = {
-			owns = 322
-			322 = { is_capital = yes }
+			primary_culture = swedish
 			NOT = { has_country_flag = conquer_danzig }
-			owns = 349
-			owns = 350
-			owns = 351
-			owns = 352
-			owns = 353
 			owns = 994
-			owns = 354
-			owns = 996
-			owns = 355
 			exists = yes
 		}
 		allow = {
-			war = no
-			government = absolute_monarchy
-			military_score = 125
+			#government = absolute_monarchy
 			war_policy = jingoism
+			is_greater_power = yes
+			546 = { owned_by = THIS }
+			OR = {
+				AND = {
+					690 = { owned_by = THIS }
+					365 = { owned_by = THIS }
+					KUR = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					KUR = {
+						all_core = {
+							controlled_by = THIS
+						}
+					}
+					360 = {
+						controlled_by = THIS
+					}
+					690 = {
+						controlled_by = THIS
+					}
+					706 = {
+						controlled_by = THIS
+					}
+				}
+			}
 		}
 		effect = {
 			badboy = 10
@@ -432,14 +425,106 @@ political_decisions = {
 			PRU_695 = {
 				add_core = THIS
 			}
-			696 = {
+			679 = {
 				add_core = THIS
+			}
+			680 = {
+				add_core = THIS
+			}
+			708 = {
+				add_core = THIS
+			}
+			709 = {
+				add_core = THIS
+			}
+			707 = {
+				add_core = THIS
+			}
+			362 = {
+				add_core = THIS
+			}
+			364 = {
+				add_core = THIS
+			}
+			365 = {
+				add_core = THIS
+			}
+			356 = {
+				add_core = THIS
+			}
+			KUR = { all_core = { add_core = THIS } }
+			random_country = {
+				limit = {
+					tag = KUR
+					in_sphere = THIS
+				}
+				annex_to = THIS
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	
+	renew_the_kedainiai_treaty = {
+		potential = {
+			primary_culture = swedish
+			NOT = { has_country_flag = renewed_the_kedainiai_treaty }
+			owns = 365
+		}
+		allow = {
+			is_greater_power = yes
+			war_policy = jingoism
+			all_core = { owned_by = THIS }
+			LIT = {
+				OR = {
+				exists = no
+					AND = {
+						exists = yes
+						vassal_of = THIS
+					}
+				}
+			}
+			PLC = {
+				OR = {
+					exists = no
+					AND = {
+						exists = yes
+						NOT = {
+							any_owned_province = {
+								is_core = LIT
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_accepted_culture = lithuanian
+			LIT = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			random_country = {
+				limit = {
+					exists = yes
+					tag = LIT
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					exists = yes
+					tag = PLC
+				}
+				change_tag = POL
+			}
+			set_country_flag = renewed_the_kedainiai_treaty
+		}
+	}
+	
 	
 #	claim_trongheim = {
 #		picture = army_training

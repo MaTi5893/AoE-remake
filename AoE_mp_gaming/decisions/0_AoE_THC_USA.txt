@@ -159,22 +159,21 @@ political_decisions = {
 			nationalism_n_imperialism = 1
 		}
 		effect = {
-			#2556 = { add_core = THIS }
-			216 = { add_core = THIS }
-			221 = { add_core = THIS }
-			225 = { add_core = THIS }
-			#2627 = { add_core = THIS }
-			227 = { add_core = THIS }
-			228 = { add_core = THIS }
-			235 = { add_core = THIS }
-			240 = { add_core = THIS }
-			236 = { add_core = THIS }
-			237 = { add_core = THIS }
-			238 = { add_core = THIS }
-			239 = { add_core = THIS }
+			201 = { add_core = THIS }
+			2556 = { add_core = THIS }
 			140 = { add_core = THIS }
-			#3405 = { add_core = THIS }
-			#3401 = { add_core = THIS }
+			USA_196 = { add_core = THIS }
+			USA_194 = { add_core = THIS }
+			USA_188 = { add_core = THIS }
+			USA_185 = { add_core = THIS }
+			USA_218 = { add_core = THIS }
+			USA_196 = { add_core = THIS }
+			USA_170 = { add_core = THIS }
+			USA_162 = { add_core = THIS }
+			USA_176 = { add_core = THIS }
+			USA_178 = { add_core = THIS }
+			USA_223 = { add_core = THIS }
+			USA_232 = { add_core = THIS }
 			any_country = {
 				limit = {
 					government = tribal_democracy
@@ -237,7 +236,127 @@ political_decisions = {
 			}
 		}
 	}
-	
+	create_the_continental_army = {
+		picture = army_training
+		potential = {
+			OR = {
+				tag = THC
+				tag = USA
+			}
+			NOT = { has_country_flag = created_the_continental_army }
+		}
+		allow = {
+			OR = {
+			ENL = {
+				war_with = THIS
+			}
+			GBR = {
+				war_with = THIS
+			}
+			GBJ = {
+				war_with = THIS
+			}
+			ENG = {
+				war_with = THIS
+			}
+			is_vassal = no
+			}
+			capital_scope = {
+				controlled_by = THIS
+			}
+		}
+		effect = {
+			set_country_flag = created_the_continental_army
+			define_general = {
+				name = "Benedict Arnold"
+				personality = steadfast
+				background = generals_aide
+			}
+			define_general = {
+				name = "Thaddeus Kosciuszko"
+				personality = gutsy
+				background = school_of_defense
+			}
+			define_general = {
+				name = "Anthony Wayne"
+				personality = competent
+				background = war_college
+			}
+			define_general = {
+				name = "Horatio Gates"
+				personality = careless
+				background = adventurer
+			}
+			define_general = {
+				name = "Nathaneal Greene"
+				personality = aggressive
+				background = generals_aide
+			}
+			define_general = {
+				name = "Benjamin Lincoln"
+				personality = skilled
+				background = cartographer
+			}
+			define_general = {
+				name = "Charles Lee"
+				personality = coward
+				background = amateur
+			}
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+			any_pop = {
+				limit = {
+					type = soldier
+				}
+				militancy = -4
+			}
+			prestige = 20
+		}
+	}
+	the_articles_of_confederation = {
+		picture = constitution
+		potential = {
+			OR = {
+				tag = THC
+				tag = USA
+			}
+			NOT = { has_country_flag = the_articles_of_confederation }
+		}
+		allow = {
+			OR = {
+			ENL = {
+				war_with = THIS
+			}
+			GBR = {
+				war_with = THIS
+			}
+			GBJ = {
+				war_with = THIS
+			}
+			ENG = {
+				war_with = THIS
+			}
+				is_vassal = no
+			}
+		}
+		effect = {
+			any_pop = {
+				militancy = -4
+				consciousness = -4
+			}
+			prestige = 15
+		}
+	}
 	usa_navy = {
 		picture = merchant_navy
 		potential = {

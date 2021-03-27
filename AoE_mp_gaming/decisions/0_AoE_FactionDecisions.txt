@@ -233,4 +233,104 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	mobilize_the_nobility = {
+		picture = army_training
+		potential = {
+			NOT = { safety_regulations = good_safety }
+			OR = {
+				government = trade_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = tsardom
+				government = archduchy
+				government = elective_monarchy_oligarchy
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			NOT = {
+				has_country_modifier = law_changed_by_force
+			}
+			OR = {
+				social_policy = colonial_spending_policy
+				safety_regulations = no_safety
+				safety_regulations = trinket_safety
+				government = elective_monarchy_oligarchy
+			}
+		}
+		allow = {
+			war = yes
+			OR = {
+				safety_regulations = no_safety
+				safety_regulations = trinket_safety
+				safety_regulations = low_safety
+			}
+			capital_scope = { controlled_by = THIS }
+			money = 100000
+		}
+		effect = {
+			#money = -100000
+			any_pop = {
+				militancy = 5
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 5475
+			}
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+	}
+	create_the_national_guard = {
+		picture = switch_to_liberty
+		potential = {
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			NOT = {
+				has_country_modifier = law_changed_by_force
+			}
+		}
+		allow = {
+			war = yes
+			capital_scope = { controlled_by = THIS }
+			social_policy = welafre_state
+			money = 100000
+		}
+		effect = {
+			treasury = -100000
+			any_pop = {
+				militancy = 5
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 5475
+			}
+			capital_scope = {
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = cavalry value = current }
+			}
+		}
+	}
 }

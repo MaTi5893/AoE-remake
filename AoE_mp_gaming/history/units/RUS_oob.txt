@@ -87,7 +87,6 @@ PLC = { value = 90 }
 army = {
 	name = "2-i Armeiskii Korpus"
 	location = 1011
-	leader = "Peter I Romanov"
 	
 	regiment = {
 		name= "5.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
@@ -97,7 +96,7 @@ army = {
 	
 	regiment = {
 		name= "5.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
-		type = cuirassier
+		type = artillery
 		home = 1012
 	}
 
@@ -117,6 +116,36 @@ army = {
 		name= "5.3-ya Artilleriiskii Diviziya"
 		type = artillery
 		home = 1034
+	}
+	
+	regiment = {
+		name= "5.3-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 998
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1008
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1018
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 999
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1003
 	}
 }
 

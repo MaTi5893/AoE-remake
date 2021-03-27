@@ -52,8 +52,23 @@ regiment = { name = "9. brygada" type = artillery home = 955 }
 regiment = { name = "10. brygada" type = artillery home = 956 }
 }
 
+army = { 
+
+name = "Winged Hussars Corps" location = 701
+
+regiment = { name = "1. brygada" type = dragoon home = 701 } 
+regiment = { name = "2. brygada" type = dragoon home = 714 } 
+regiment = { name = "3. brygada" type = dragoon home = 703 } 
+regiment = { 
+	name = "4. brygada" 
+	type = dragoon
+	home = 711
+} 
+regiment = { name = "5. brygada" type = dragoon home = 702 }
+}
+
 leader = {
-	name = "August II Mocny"
+	name = "Augustus II Von Wettin"
 	date = "1699.1.1"
         prestige = 0.500
         picture ="augustus_the_stronk"

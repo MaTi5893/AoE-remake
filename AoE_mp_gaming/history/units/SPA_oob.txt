@@ -1,0 +1,729 @@
+#Sphere of Influence
+#Europe
+POR = {
+	value = -50		
+	level = 1		
+	influence_value = 0
+}
+JER = {
+	value = 50		
+	level = 5		
+	influence_value = 0
+}
+ARN = {
+	value = 100		
+	level = 5		
+	influence_value = 0
+}
+#North America
+VNS = {
+	value = 75		
+	level = 5		
+	influence_value = 0
+}
+VNG = {
+	value = 100		
+	level = 5		
+	influence_value = 0
+}
+FLO = {
+	value = 100		
+	level = 5		
+	influence_value = 0
+}	
+
+#South America
+VOP = {
+	value = 100		
+	level = 5		
+	influence_value = 0
+}
+VLP = {
+	value = 200		
+	level = 5		
+	influence_value = 100
+}
+BOL = {
+	value = 100		
+	level = 2		
+	influence_value = 0
+}
+CHL = {
+	value = 100		
+	level = 2		
+	influence_value = 0
+}
+PRG = {
+	value = 100		
+	level = 2		
+	influence_value = 0
+}
+CLM = {
+	value = 100		
+	level = 2		
+	influence_value = 0
+}
+BRZ = {
+	value = 100		
+	level = 2		
+	influence_value = 0
+}
+URU = {
+	value = 75		
+	level = 2		
+	influence_value = 0
+}
+
+#Africa
+MOR = {
+	value = 100		
+	level = 3		
+	influence_value = 25
+}
+EGY = {
+	value = 0		
+	level = 2		
+	influence_value = 0
+}
+ASH = {
+	value = 50
+}
+BEN = {
+	value = 50
+}
+DAH = {
+	value = 30
+}
+OYO = {
+	value = 30
+}
+ARO = {
+	value = 40
+}
+CLA = {
+	value = 50
+}
+WRI = {
+	value = 30
+}
+KON = {
+	value = 40
+}
+LOA = {
+	value = 30
+}
+GBU = {
+	value = 50
+}
+TOO = {
+	value = 50
+}
+WOL = {
+	value = 50
+}
+
+#Asia
+QNG ={
+	value = -10
+	level = 0
+	influence_value = 0
+}
+SUL = {
+	value = 100		
+	level = 3		
+	influence_value = 0
+}
+
+#Other GP's
+ENG = { value = -75 }
+FRA = { value = 125 }
+AUS = { value = 0 }
+USA = { value = -25 }
+PRU = { value = 0 }
+TUR = { value = 25 }
+RUS = { value = 0 }
+MUG = { value = -25 }
+
+
+#Army
+army = {
+	name = "Ejército Cristino del Centro"
+	location = 487
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 487
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = infantry
+		home = 489
+	}
+
+	regiment = {
+		name= "3. Guardia Real"
+		type = infantry
+		home = 481
+	}
+
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 487
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = cuirassier
+		home = 489
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 488
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 474
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 475
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 487
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 509
+	}
+}
+
+army = {
+	name = "Ejército Cristino del Centro"
+	location = 510
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 510
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = infantry
+		home = 509
+	}
+
+	regiment = {
+		name= "3. Guardia Real"
+		type = infantry
+		home = 516
+	}
+
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 513
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = cuirassier
+		home = 515
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 503
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 497
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 495
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 474
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 513
+	}
+}
+
+army = {
+	name = "Ejército Cristino del Centro"
+	location = 498
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 512
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = infantry
+		home = 514
+	}
+
+	regiment = {
+		name= "3. Guardia Real"
+		type = infantry
+		home = 2209
+	}
+
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 1456
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = cuirassier
+		home = 1455
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 1457
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 1463
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 1455
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 1463
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 1457
+	}
+}
+army = {
+	name = "Ejército Cristino del Centro"
+	location = 754
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 2567
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = infantry
+		home = 754
+	}
+
+	regiment = {
+		name= "3. Guardia Real"
+		type = infantry
+		home = 753
+	}
+
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 757
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = cuirassier
+		home = 755
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 761
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 756
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 758
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 760
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 759
+	}
+}
+army = {
+	name = "Ejército Cristino del Centro"
+	location = 388
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 398
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = infantry
+		home = 397
+	}
+
+	regiment = {
+		name= "3. Guardia Real"
+		type = infantry
+		home = 722
+	}
+
+	regiment = {
+		name= "1. Granaderos del Rey"
+		type = infantry
+		home = 723
+	}
+
+	regiment = {
+		name= "2. Granaderos del Rey"
+		type = cuirassier
+		home = 726
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 766
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 765
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 762
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 764
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 763
+	}
+}
+army = {
+	name = "Ejército del Norte"
+	location = 387
+	
+	regiment = {
+		name= "4. Brigada de Infantería 'San Jorge'"
+		type = infantry
+		home = 498
+	}
+
+	regiment = {
+		name= "1. Brigada de Artillería"
+		type = infantry
+		home = 476
+	}
+	
+	regiment = {
+		name= "5. Brigada de Infantería"
+		type = infantry
+		home = 482
+	}
+	
+	regiment = {
+		name= "6. Brigada de Infantería 'La Granja'"
+		type = infantry
+		home = 483
+	}
+
+	regiment = {
+		name= "7. Brigada de Infantería"
+		type = cuirassier
+		home = 390
+	}
+		regiment = {
+		name= "2. Granaderos del Rey"
+		type = artillery
+		home = 489
+	}
+
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 389
+	}
+	
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 388
+	}
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 393
+	}
+	regiment = {
+		name= "3. Granaderos del Rey"
+		type = artillery
+		home = 394
+	}
+}
+
+navy = {
+	name = "Armada de Cuba"
+	location = 2212
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name= "1a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3a Flotilla de Transporte"
+		type = clipper_transport
+	}
+}
+
+navy = {
+	name = "Armada de Filipinas"
+	location = 1455
+	
+	ship = {
+		name = "Alerta"
+		type = manowar
+	}
+	
+	ship = {
+		name = "San Fernando"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Legazpi"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Victoria"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Nuestra Señora del Patrocinio"
+		type = frigate
+	}
+	
+	ship = {
+		name= "1a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3a Flotilla de Transporte"
+		type = clipper_transport
+	}
+}
+
+navy = {
+	name = "Armada Real Española"
+	location = 506
+	ship = {
+		name= "San Raimundo"
+		type = manowar
+	}
+
+	ship = {
+		name= "Héroe"
+		type = manowar
+	}
+
+	ship = {
+		name= "San Pablo"
+		type = manowar
+	}
+
+	ship = {
+		name= "Ceres"
+		type = frigate
+	}
+
+	ship = {
+		name= "Gloria"
+		type = frigate
+	}
+
+	ship = {
+		name= "Nuestra Señora de Asunción"
+		type = frigate
+	}
+
+	ship = {
+		name= "Nuestra Señora de Atocha"
+		type = frigate
+	}
+
+	ship = {
+		name= "Santa Sabina"
+		type = frigate
+	}
+
+	ship = {
+		name= "1a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2a Flotilla de Transporte"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3a Flotilla de Transporte"
+		type = clipper_transport
+	}
+}
+
+leader = {
+	name = "Francisco Serrano"
+	date = 1833.1.1
+	type = land
+	personality = expert
+	background = war_college
+	prestige = 0.0
+}
+
+leader = {
+	name = "Leopoldo O'Donnell"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = rising_star
+	prestige = 0.0
+}
+
+leader = {
+	name = "Narváez"
+	date = 1836.1.1
+	type = land
+	personality = efficient
+	background = powerful_friends
+	prestige = 0.0
+}
+
+leader = {
+	name = "Gerónimo Valdés"
+	date = 1836.1.1
+	type = land
+	personality = competent
+	background = generals_aide
+	prestige = 0.0
+}
+
+leader = {
+	name = "Van Halen"
+	date = 1823.1.1
+	type = land
+	personality = merciless
+	background = adventurer
+	prestige = 0.1
+}
+
+leader = {
+	name = "José Ramón Rodil"
+	date = 1824.1.1
+	type = land
+	personality = merciless
+	background = adventurer
+	prestige = 0.1
+}

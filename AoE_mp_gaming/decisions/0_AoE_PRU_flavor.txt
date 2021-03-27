@@ -652,6 +652,37 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	dispute_spanish_succession_pru = {
+		picture = crown
+		potential = {
+			has_global_flag = spanish_succesion_crisis
+			tag = PRU
+			NOT = { has_country_flag = disputed_spanish_succession }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_country = {
+				limit = {
+					primary_culture = spanish
+					OR = {
+						tag = SPA
+						tag = SPC
+					}
+					exists = yes
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			add_core = 381
+			badboy = 2
+			set_country_flag = disputed_spanish_succession
+		}
+	}
+	
 	form_germany = {
 		news = yes
 		news_desc_long = "form_germany_NEWS_LONG"

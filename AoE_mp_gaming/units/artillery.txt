@@ -20,15 +20,14 @@ artillery = {
 	build_cost = {
 		artillery = 10
 		canned_food = 10
-		explosives = 10
+		liquor = 10
+		wine = 10
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
 		artillery = 0.1 #0.008
 		canned_food = 0.06 #0.004
-		luxury_clothes = 0.01
-		explosives = 0.15
 	}
 	
 

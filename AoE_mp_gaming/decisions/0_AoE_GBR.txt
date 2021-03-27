@@ -319,4 +319,89 @@ political_decisions = {
 			}
 		}
 	}
+	
+	dispute_spanish_succession_gbr = {
+		picture = crown
+		potential = {
+			has_global_flag = spanish_succesion_crisis
+			primary_culture = british
+			NOT = { has_country_flag = disputed_spanish_succession }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_country = {
+				limit = {
+					primary_culture = spanish
+					OR = {
+						tag = SPA
+						tag = SPC
+					}
+					exists = yes
+				}
+				THIS = {
+				relation = {
+					who = THIS
+					value = -100
+				}
+				}
+			}
+			random_country = {
+				limit = {
+					tag = THIS
+					exists = SPA
+				}
+				THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+				}
+			}
+			random_country = {
+				limit = {
+					tag = THIS
+					exists = SPA
+				}
+				THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+				}
+			}
+			random_country = {
+				limit = {
+					tag = THIS
+					exists = SPC
+				}
+				THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+				}
+			}
+			random_country = {
+				limit = {
+					tag = THIS
+					exists = SPC
+				}
+				THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+				}
+			}
+			add_core = 517
+			badboy = 2
+			set_country_flag = disputed_spanish_succession
+		}
+	}
 }

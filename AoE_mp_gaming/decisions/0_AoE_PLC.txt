@@ -2,8 +2,7 @@ political_decisions = {
 	may_constitution = {
 		picture = 3rd_may_constitution
 		potential = {
-			tag = PLC
-			civilized = yes
+			primary_culture = polish
 			government = elective_monarchy_oligarchy
 			NOT = { has_country_flag = enacted_3rd_may_constitution }
 			exists = yes
@@ -84,7 +83,6 @@ political_decisions = {
 					political_reform = debtors_prisons
 				}
 			}
-			inherit = KUR
 			
 			random_owned = {
 				limit = {
@@ -108,7 +106,7 @@ political_decisions = {
 	revise_the_treaty_of_andrusovo = {
 		picture = revise_andrusovo
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			NOT = { has_country_flag = revise_the_treaty_of_andrusovo }
 			exists = yes
 		}
@@ -119,16 +117,8 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = revise_the_treaty_of_andrusovo
-			963 = { add_core = PLC }
-			962 = { add_core = PLC }
-			1016 = { add_core = PLC }
-			943 = { add_core = PLC }
-			958 = { add_core = PLC }
-			1007 = { add_core = PLC }
-			961 = { add_core = PLC }
-			974 = { add_core = PLC }
-			972 = { add_core = PLC }
-			971 = { add_core = PLC }
+			RUS_943 = { add_core = PLC }	
+			RUS_958 = { add_core = PLC }
 			badboy = 15
 		
 			relation = {
@@ -142,7 +132,7 @@ political_decisions = {
 	vassalize_ducal_prussia = {
 		picture = ducal_prussia
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			NOT = { has_country_flag = vassalize_ducal_prussia }
 			exists = yes
 		}
@@ -164,7 +154,7 @@ political_decisions = {
 	move_capital_to_warsaw = {
 		picture = warsaw
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			NOT = { capital = 706 }
 			owns = 706
 			exists = yes
@@ -191,27 +181,23 @@ political_decisions = {
 	second_union_of_hadiach = {
 		picture = plr
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			NOT = { has_country_flag = second_union_of_hadiach }
 			exists = yes
 		}
 		allow = {
-			OR = {
-				NOT = { government = elective_monarchy_oligarchy }
-				has_country_modifier = noble_democracy
-			}
 			owns = 958
 			political_thought_7 = 1
 			average_militancy = 4
 			PLC = {
-				any_core = { owned_by = THIS }
+				all_core = { owned_by = THIS }
 			}
 		}
 		effect = {
 			set_country_flag = second_union_of_hadiach
+			RUS_958 = { add_core = PLC }
 			all_core = {
 				add_core = PLR
-				remove_core = RUS
 				remove_core = PLC
 			}
 			change_tag = PLR
@@ -224,11 +210,49 @@ political_decisions = {
 		ai_will_do = { factor = 1 }	
 	}
 	
+	duchy_of_courland = {
+		picture = baltic
+		potential = {
+			is_greater_power = yes
+			KUR = {
+				ai = no
+				exists = yes
+				neighbour = THIS
+			}
+		}
+		allow = {
+			KUR = {
+				OR = {
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+			}
+			mass_politics = 1
+		}
+		effect = {
+			random_country = {
+				limit = {
+					tag = THIS
+					is_our_vassal = KUR
+				}
+				inherit = KUR
+				KUR = { all_core = { add_core = THIS } }
+			}
+			random_country = {
+				limit = {
+					tag = THIS
+					NOT = { is_our_vassal = KUR }
+					KUR = { in_sphere = THIS }
+				}
+				create_vassal = KUR
+			}
+			prestige = 5
+		}
+	}
 	abolish_folwark_system = {
 		picture = folwark
 		potential = {
-			tag = PLC
-			NOT = { has_country_flag = second_union_of_hadiach }
+			primary_culture = polish
 			has_country_modifier = folwark_serf_economy
 			exists = yes
 		}
@@ -265,7 +289,7 @@ political_decisions = {
 	recover_inflanty = {
 		picture = livonia_plc
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			NOT = { has_country_flag = recover_inflanty }
 			exists = yes
 		}
@@ -432,7 +456,7 @@ political_decisions = {
 	enact_vivente_rege = {
 		picture = crown
 		potential = {
-			tag = PLC
+			primary_culture = polish
 			government = elective_monarchy_oligarchy
 			exists = yes
 			NOT = { has_country_modifier = vivente_rege }
