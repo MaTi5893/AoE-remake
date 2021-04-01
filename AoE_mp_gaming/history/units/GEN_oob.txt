@@ -1,0 +1,86 @@
+
+army = {
+	name = "Esercito Genovese"
+	location = 724
+	regiment = {
+		name= "Genoan Infantry"
+		type = infantry
+		home = 724
+	}
+	regiment = {
+		name= "Genoan Artillery"
+		type = artillery
+		home = 725
+	}
+	regiment = {
+		name= "2nd Genoan Infantry"
+		type = infantry
+		home = 740
+	}
+}
+
+
+navy = {
+	name = "Marina Genovese"
+	location = 724
+	ship = {
+		name= "Diavolo"
+		type = manowar
+	}
+	ship = {
+		name= "Doppio"
+		type = manowar
+	}
+	ship = {
+		name= "Cioccolata"
+		type = manowar
+	}
+	ship = {
+		name= "Secco"
+		type = manowar
+	}
+	ship = {
+		name= "Fregata 1"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 2"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 3"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 4"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 5"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 6"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 7"
+		type = frigate
+	}
+	ship = {
+		name= "Trasporto 1"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Trasporto 2"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Trasporto 3"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Trasporto 4"
+		type = clipper_transport
+	}
+}

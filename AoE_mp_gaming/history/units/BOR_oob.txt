@@ -87,25 +87,37 @@ DNN = { value = -100 }
 
 leader = {
 	name = "James FitzJames"
-	date = 1836.1.1
+	date = 1692.1.1
 	type = land
+	picture = bor_james_berwick
 	personality = confident
-	background = professor
+	background = school_of_defense
 	prestige = 0.1
 }
 
 leader = {
 	name = "Claude Louis Hector de Villars"
-	date = 1830.1.1
+	date = 1671.1.1
 	type = land
-	personality = heroic
-	background = natural_born_leader
-	prestige = 0.3
+	picture = bor_claude_villars
+	personality = audacious
+	background = cavalry_school
+	prestige = 0.4
 }
 
 leader = {
 	name = "Louis Joseph de Bourbon"
-	date = 1811.1.1
+	date = 1672.1.1
+	type = land
+	picture = bor_louis_vendome
+	personality = unflinching
+	background = school_of_the_bayonet
+	prestige = 0.5
+}
+
+leader = {
+	name = "François-Louis Rousselet"
+	date = 1661.1.1
 	type = sea
 	personality = au_fait
 	background = aristocrat
@@ -114,16 +126,16 @@ leader = {
 
 leader = {
 	name = "Louis-François de Boufflers"
-	date = 1823.1.1
+	date = 1663.1.1
 	type = land
-	personality = incapable
-	background = aristocrat
+	personality = resolute
+	background = cavalry_school
 	prestige = 0.2
 }
 
 leader = {
 	name = "François de Neufville"
-	date = 1823.1.1
+	date = 1693.1.1
 	type = land
 	personality = relentless
 	background = elderly

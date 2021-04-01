@@ -1,0 +1,40 @@
+
+army = {
+	name = "Army of Scotland"
+	location = 272
+	regiment = {
+		name= "Scottish Infantry"
+		type = infantry
+		home = 269
+	}
+	regiment = {
+		name= "Scottish Artillery"
+		type = artillery
+		home = 270
+	}
+	regiment = {
+		name= "2nd Scottish Artillery"
+		type = artillery
+		home = 268
+	}
+	regiment = {
+		name= "2nd Scottish Infantry"
+		type = infantry
+		home = 271
+	}
+	regiment = {
+		name= "3rd Scottish Infantry"
+		type = infantry
+		home = 266
+	}
+	regiment = {
+		name= "4th Scottish Infantry"
+		type = infantry
+		home = 267
+	}
+	regiment = {
+		name= "3rd Scottish Artillery"
+		type = artillery
+		home = 1724
+	}
+}

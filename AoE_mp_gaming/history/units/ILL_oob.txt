@@ -1,0 +1,19 @@
+army = {
+	name = "Illonois Army"
+	location = 146
+	regiment = {
+		name= "1th Regiment of Irregulars"
+		type = irregular
+		home = 165
+	}
+	regiment = {
+		name= "2th Regiment of Irregulars"
+		type = irregular
+		home = 146
+	}
+	regiment = {
+		name= "3th Regiment of Irregulars"
+		type = irregular
+		home = 166
+	}
+}

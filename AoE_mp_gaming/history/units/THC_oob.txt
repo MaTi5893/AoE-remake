@@ -1,0 +1,28 @@
+army = {
+	name = "United Colonies Army"
+	location = 220
+	regiment = {
+		name= "4th Regiment of Infantry"
+		type = infantry
+		home = 243
+	}
+
+	regiment = {
+		name= "5th Regiment of Infantry"
+		type = infantry
+		home = 232
+	}
+
+	regiment = {
+		name= "6th Regiment of Infantry"
+		type = infantry
+		home = 235
+	}
+
+	regiment = {
+		name= "2nd Regiment of Artillery"
+		type = artillery
+		home = 234
+	}
+
+}

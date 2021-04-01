@@ -1,0 +1,24 @@
+MIA = { value = -25 }
+FOX = { value = -25 }
+ILL = { value = -25 }
+ABB = { value = -5 }
+OTT = { value = -5 }
+PWT = { value = -5 }
+FCA = { value = -5 }
+THC = { value = -5 }
+ENG = { value = -5 }
+BOR = { value = -5 }
+army = {
+	name = "Sioux Tribe Army"
+	location = 157
+	regiment = {
+		name= "1th Regiment of Irregulars"
+		type = irregular
+		home = 154
+	}
+	regiment = {
+		name= "2th Regiment of Irregulars"
+		type = irregular
+		home = 157
+	}
+}

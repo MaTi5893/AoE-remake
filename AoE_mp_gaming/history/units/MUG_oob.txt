@@ -1,0 +1,202 @@
+#Europe
+SWE = {
+	value = -100
+}
+
+ENG = {
+	value = -100
+}
+
+FRA = {
+	value = -100
+}
+SPA = {
+	value = -100
+}
+TUR = {
+	value = -100
+}
+RUS = {
+	value = -200
+}
+#Asia
+QNG = {
+	value = -200
+}
+PER = {
+	value = -200
+}
+MAH = {
+	value = -200
+}
+army = {
+	name = "The Bengal Army"
+	location = 1256
+	regiment = {
+		name= "3rd Queen Alexandra's Own Gurkha"
+		type = infantry
+		home = 1238
+	}
+	regiment = {
+		name= "1st Bengal Native Infantry"
+		type = irregular
+		home = 1256
+	}
+
+	regiment = {
+		name= "2nd Bengal Native Infantry"
+		type = irregular
+		home = 1256
+	}
+
+	regiment = {
+		name= "3rd Bengal Native Infantry"
+		type = irregular
+		home = 1249
+	}
+
+	regiment = {
+		name= "Governor General's Bodyinfantry"
+		type = cavalry
+		home = 1257
+	}
+
+	regiment = {
+		name= "1st Bengal Light Cavalry"
+		type = cavalry
+		home = 1251
+	}
+
+	regiment = {
+		name= "4th Bengal Native Infantry"
+		type = irregular
+		home = 1255
+	}
+
+	regiment = {
+		name= "1st Bengal Native Artillery"
+		type = infantry
+		home = 1252
+	}
+
+	regiment = {
+		name= "2nd Bengal Native Artillery"
+		type = infantry
+		home = 1254
+	}
+
+	regiment = {
+		name= "3rd Bengal Native Artillery"
+		type = infantry
+		home = 1254
+	}
+
+}
+
+army = {
+	name = "The Bombay Army"
+	location = 1306
+	regiment = {
+		name= "1st Corps Mayne's Horse"
+		type = cavalry
+		home = 1239
+	}
+	regiment = {
+		name= "1st Bombay Native Grenadiers"
+		type = infantry	
+		home = 1297
+	}
+	
+	regiment = {
+		name = "3rd Bombay Native Infantry"
+		type = irregular
+		home = 1296
+	}
+
+	regiment = {
+		name= "4th Bombay Native Infantry"
+		type = irregular
+		home = 1291
+	}
+
+	regiment = {
+		name= "5th Bombay Native Infantry"
+		type = irregular
+		home = 1299
+	}
+
+	regiment = {
+		name= "1st Bombay Native Artillery"
+		type = infantry
+		home = 1316
+	}
+
+	regiment = {
+		name= "2nd Bombay Native Artillery"
+		type = infantry
+		home = 1302
+	}
+
+	regiment = {
+		name= "3rd Bombay Native Artillery"
+		type = infantry
+		home = 1317
+	}
+	
+	regiment = {
+		name= "2nd King Edward VII's Own Gurkha"
+		type = infantry
+		home = 1296
+	}
+}
+
+army = {
+	name = "The Madras Army"
+	location = 1304
+	regiment = {
+		name= "1st Madras Light Cavalry"
+		type = cavalry
+		home = 1304
+	}
+	regiment = {
+		name= "1st Madras Native Infantry"
+		type = irregular	
+		home = 1261
+	}
+	
+	regiment = {
+		name = "2nd Madras Native Infantry"
+		type = irregular
+		home = 1309
+	}
+
+	regiment = {
+		name= "3rd Madras Native Infantry"
+		type = irregular
+		home = 1311
+	}
+
+	regiment = {
+		name= "1st King George V's Gurkhas"
+		type = infantry
+		home = 1296
+	}
+
+	regiment = {
+		name= "1st Madras Native Artillery"
+		type = infantry
+		home = 1310
+	}
+
+	regiment = {
+		name= "2nd Madras Native Artillery"
+		type = infantry
+		home = 1308
+	}
+
+	regiment = {
+		name= "3rd Madras Native Artillery"
+		type = infantry
+		home = 1305
+	}
+}

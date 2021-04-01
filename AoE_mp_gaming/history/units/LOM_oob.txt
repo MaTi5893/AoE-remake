@@ -1,0 +1,20 @@
+
+army = {
+	name = "Army of Lombardia"
+	location = 726
+	regiment = {
+		name= "Milanese Infantry"
+		type = infantry
+		home = 726
+	}
+	regiment = {
+		name= "Milanese Artillery"
+		type = artillery
+		home = 722
+	}
+	regiment = {
+		name= "2nd Milanese Infantry"
+		type = infantry
+		home = 723
+	}
+}
