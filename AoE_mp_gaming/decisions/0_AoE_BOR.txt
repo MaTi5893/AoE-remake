@@ -97,74 +97,6 @@ political_decisions = {
 		}
 	}
 	
-	louis_dream = {
-		picture = louis_dream
-		potential = {
-			tag = BOR
-			NOT = { has_country_flag = louis_dream }
-			exists = yes
-			NOT = { government = proletarian_dictatorship }
-			NOT = { government = fascist_dictatorship }
-			NOR = { government = democracy }
-		}
-		allow = {
-			owns = 387
-			owns = 394
-			owns = 397
-			OR = {
-				AND = {
-					has_country_modifier = louis_grande
-					ideological_thought = 1
-				}
-				AND = {
-					mass_politics = 1
-					war_policy = jingoism
-				}
-			}
-			NOT = { has_country_modifier = no_more_war }
-			NOT = { has_country_modifier = peasant_turmoil }
-			has_recently_lost_war = no
-		}
-		effect = {
-			badboy = 15
-			set_country_flag = louis_dream
-			398 = {
-				add_core = THIS
-			}
-			397 = {
-				add_core = THIS
-			}
-			394 = {
-				add_core = THIS
-			}
-			393 = {
-				add_core = THIS
-			}
-			393 = {	add_core = THIS }
-			388 = {	add_core = THIS }
-			389 = {	add_core = THIS }
-			387 = {	add_core = THIS }
-			390 = {	add_core = THIS }
-			random_country = {
-				limit = {
-					tag = LOR
-					in_sphere = THIS
-					ai = yes
-				}
-				THIS = {
-					create_vassal = LOR
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 5
-			}
-		}
-	}
-	
 	natural_borders_of_fr = {
 		picture = louis_dream
 		potential = {
@@ -329,6 +261,80 @@ political_decisions = {
 					60 = { annex_to = THIS }
 					40 = { country_event = 171119 }
 				}
+			}
+		}
+	}
+	
+	louis_dream = {
+		#picture = louis_dream
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = louis_dream }
+			#exists = yes
+			OR = {
+				#government = trade_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				#government = tsardom
+				#government = archduchy
+				#government = elective_monarchy_oligarchy
+			}
+		}
+		allow = {
+			owns = 387
+			owns = 394
+			owns = 397
+			OR = {
+				AND = {
+					has_country_modifier = louis_grande
+					ideological_thought = 1
+				}
+				AND = {
+					mass_politics = 1
+					war_policy = jingoism
+				}
+			}
+			NOT = { has_country_modifier = no_more_war }
+			NOT = { has_country_modifier = peasant_turmoil }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 15
+			set_country_flag = louis_dream
+			398 = {
+				add_core = THIS
+			}
+			397 = {
+				add_core = THIS
+			}
+			394 = {
+				add_core = THIS
+			}
+			393 = {
+				add_core = THIS
+			}
+			393 = {	add_core = THIS }
+			388 = {	add_core = THIS }
+			389 = {	add_core = THIS }
+			387 = {	add_core = THIS }
+			390 = {	add_core = THIS }
+			random_country = {
+				limit = {
+					tag = LOR
+					in_sphere = THIS
+					ai = yes
+				}
+				THIS = {
+					create_vassal = LOR
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
 			}
 		}
 	}

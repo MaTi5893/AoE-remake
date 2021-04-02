@@ -15,7 +15,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			AUS_950 = {
+			AUS_647 = {
 				add_core = SIE
 			}
 			set_country_flag = transylvania_full_duchy
@@ -260,45 +260,21 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			is_sphere_leader_of = SAT
+			relation = {
+				who = JAP
+				value = 150
+			}
 			money = 25000
 		}
 		effect = {
-			SAT = {
-				1661 = {
-					secede_province = THIS
-					remove_core = TKG
-				}
+			1661 = {
+				secede_province = THIS
+				remove_core = JAP
 			}
 			treasury = -25000
 			set_global_flag = japan_not_isolated
-			diplomatic_influence = {
-				who = CHO
-				value = 150
-			}
-			diplomatic_influence = {
-				who = TOS
-				value = 150
-			}
-			diplomatic_influence = {
-				who = JAP
-				value = 100
-			}
-			diplomatic_influence = {
-				who = KAG
-				value = 100
-			}
-			diplomatic_influence = {
-				who = TKG
-				value = 50
-			}
-			diplomatic_influence = {
-				who = YZW
-				value = 50
-			}
-			diplomatic_influence = {
-				who = SEN
-				value = 50
+			JAP = {
+				research_points = 250
 			}
 		}
 		ai_will_do = {
@@ -373,7 +349,7 @@ political_decisions = {
 			RUS_349 = {
 				add_core = THIS
 			}
-			add_accepted_culture = east_german
+			#add_accepted_culture = east_german
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -399,9 +375,6 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = push_forward
-			3323 = {
-				add_core = THIS
-			}
 			708 = {
 				add_core = THIS
 			}
@@ -520,25 +493,14 @@ political_decisions = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
+			is_vassal = no
 		}
 		effect = {
-			RUS_968 = {
-				add_core = THIS
-			}
-			RUS_955 = {
-				add_core = THIS
-			}
-			1016 = {
-				add_core = THIS
-			}
-			961 = {
-				add_core = THIS
-			}
-			962 = {
-				add_core = THIS
-			}
-			963 = {
-				add_core = THIS
+			RUS_958 = { add_core = THIS }
+			RUS_955 = { add_core = THIS }
+			relation = {
+				who = POL
+				value = -50
 			}
 			set_country_flag = kingdom_lithuania
 			add_accepted_culture = ukrainian
@@ -569,6 +531,10 @@ political_decisions = {
 			RUS_354 = {
 				add_core = THIS
 			}
+			RUS_943 = {
+				add_core = THIS
+			}
+			
 			set_country_flag = empire_lithuania
 			prestige = 35
 			add_accepted_culture = latvian
@@ -638,21 +604,15 @@ political_decisions = {
 			exists = yes
 			OR = {
 				AND = {
-				owns = 1196
-				owns = 1206
+				owns = 1182
+				owns = 1192
 				}
 				AND = {
-				owns = 1206
-				owns = 686
-				}
-				AND = {
+				owns = 1150
 				owns = 1196
-				owns = 686
 				}
 			}
-			NOT = {
-				owns = 1205
-			}
+			1205 = { empty = yes }
 		}
 		allow = {
 			AND = {
@@ -662,92 +622,14 @@ political_decisions = {
 			}
 		}
 		effect = {
-			THIS = {
-				1205 = {
-					secede_province = THIS
-				}
+			1205 = {
+				secede_province = THIS
 			}
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
-	
-	baikit_desert = {
-		picture = conquest_of_the_desert
-		potential = {
-			exists = yes
-			OR = {
-				AND = {
-				owns = 1196
-				owns = 2702
-				}
-				AND = {
-				owns = 1192
-				owns = 2702
-				}
-				AND = {
-				owns = 1192
-				owns = 1196
-				}
+			1204 = {
+				secede_province = THIS
 			}
-			NOT = {
-				owns = 2656
-			}
-		}
-		allow = {
-			AND = {
-				owns = 1192
-				owns = 1196
-				owns = 2702
-			}
-		}
-		effect = {
-			THIS = {
-				2656 = {
-					secede_province = THIS
-				}
-			}
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
-	
-	novopetrovskoye_desert = {
-		picture = conquest_of_the_desert
-		potential = {
-			exists = yes
-			OR = {
-				AND = {
-				owns = 2656
-				owns = 1205
-				}
-				AND = {
-				owns = 1183
-				owns = 1205
-				}
-				AND = {
-				owns = 1183
-				owns = 2656
-				}
-			}
-			NOT = {
-				owns = 1194
-			}
-		}
-		allow = {
-			AND = {
-				owns = 1183
-				owns = 2656
-				owns = 1205
-			}
-		}
-		effect = {
-			THIS = {
-				1194 = {
-					secede_province = THIS
-				}
+			1194 = {
+				secede_province = THIS
 			}
 		}
 		ai_will_do = {					
@@ -1011,9 +893,6 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = conquered_montenegro
-			3335 = {
-				add_core = THIS
-			}
 			800 = {
 				add_core = THIS
 			}

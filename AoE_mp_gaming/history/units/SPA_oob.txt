@@ -527,7 +527,7 @@ army = {
 
 navy = {
 	name = "Armada de Cuba"
-	location = 2212
+	location = 512
 	
 	ship = {
 		name = "Santiago"
@@ -542,6 +542,230 @@ navy = {
 	ship = {
 		name = "Centinela"
 		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+		ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Santiago"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Hespérides"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Centinela"
+		type = manowar
+	}
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+		ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Isla de Cuba"
+		type = frigate
+	}
+	
+	ship = {
+		name = "Cristóbal Colón"
+		type = frigate
 	}
 	
 	ship = {
@@ -568,35 +792,20 @@ navy = {
 		name= "3a Flotilla de Transporte"
 		type = clipper_transport
 	}
-}
+	
+	ship = {
+		name= "1a Flotilla de Transporte"
+		type = clipper_transport
+	}
 
-navy = {
-	name = "Armada de Filipinas"
-	location = 1455
-	
 	ship = {
-		name = "Alerta"
-		type = manowar
+		name= "2a Flotilla de Transporte"
+		type = clipper_transport
 	}
-	
+
 	ship = {
-		name = "San Fernando"
-		type = manowar
-	}
-	
-	ship = {
-		name = "Legazpi"
-		type = manowar
-	}
-	
-	ship = {
-		name = "Victoria"
-		type = frigate
-	}
-	
-	ship = {
-		name = "Nuestra Señora del Patrocinio"
-		type = frigate
+		name= "3a Flotilla de Transporte"
+		type = clipper_transport
 	}
 	
 	ship = {
@@ -613,67 +822,12 @@ navy = {
 		name= "3a Flotilla de Transporte"
 		type = clipper_transport
 	}
-}
-
-navy = {
-	name = "Armada Real Española"
-	location = 506
-	ship = {
-		name= "San Raimundo"
-		type = manowar
-	}
-
-	ship = {
-		name= "Héroe"
-		type = manowar
-	}
-
-	ship = {
-		name= "San Pablo"
-		type = manowar
-	}
-
-	ship = {
-		name= "Ceres"
-		type = frigate
-	}
-
-	ship = {
-		name= "Gloria"
-		type = frigate
-	}
-
-	ship = {
-		name= "Nuestra Señora de Asunción"
-		type = frigate
-	}
-
-	ship = {
-		name= "Nuestra Señora de Atocha"
-		type = frigate
-	}
-
-	ship = {
-		name= "Santa Sabina"
-		type = frigate
-	}
-
-	ship = {
-		name= "1a Flotilla de Transporte"
-		type = clipper_transport
-	}
-
-	ship = {
-		name= "2a Flotilla de Transporte"
-		type = clipper_transport
-	}
-
+	
 	ship = {
 		name= "3a Flotilla de Transporte"
 		type = clipper_transport
 	}
 }
-
 leader = {
 	name = "Francisco Serrano"
 	date = 1833.1.1

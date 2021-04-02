@@ -60,6 +60,15 @@ country_event = {
 		FROM = {
 			military_access = THIS
 		}
+		any_country = {
+			limit = {
+				OR = {
+				war_with = FROM
+				alliance_with = FROM
+				}
+			}
+			military_access = THIS
+		}
 	}
 }
 country_event = {
@@ -72,6 +81,15 @@ country_event = {
 	option = {
 		name = "finally"
 		FROM = {
+			end_military_access = THIS
+		}
+		any_country = {
+			limit = {
+				OR = {
+				war_with = FROM
+				alliance_with = FROM
+				}
+			}
 			end_military_access = THIS
 		}
 	}

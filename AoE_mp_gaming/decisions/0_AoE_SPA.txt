@@ -37,7 +37,7 @@ political_decisions = {
 		}
 		allow = {
 			central_bank_money_bill_printing = 1
-			money = 3000000
+			money = 300000
 		}
 		effect = {
 			set_country_flag = introduced_the_cadastre_tax
@@ -45,7 +45,7 @@ political_decisions = {
 				name = the_cadastre_tax_and_the_spanish_bank
 				duration = -1
 			}
-			money = -3000000
+			treasury = -300000
 		}
 		ai_will_do = {					
 		factor = 1
@@ -187,6 +187,57 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	centralise_spanish_empire = {
+		potential = {
+			primary_culture = spanish
+			NOT = { has_country_flag = centralised_spanish_empire }
+		}
+		allow = {
+			mass_politics = 1
+			is_greater_power = yes
+			BEL = { 
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			NAP = { 
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			SRD = { 
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			SYC = { 
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			517 = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = ITA
+				}
+				add_core = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = BEL
+				}
+				add_core = THIS
+			}
+			add_accepted_culture = flemish
+			add_accepted_culture = walloon
+			add_accepted_culture = south_italian
 		}
 	}
 	

@@ -85,7 +85,10 @@ political_decisions = {
 					OR = {
 						owned_by = THIS
 						owner = {
+							OR = {
 							in_sphere = THIS
+							tag = SPA
+							}
 						}
 					}
 				}
@@ -146,6 +149,7 @@ political_decisions = {
 						owned_by = THIS
 						owner = {
 							in_sphere = THIS
+							tag = SPA
 						}
 					}
 				}

@@ -65,6 +65,18 @@ PLC = {
 	influence_value = 0
 }
 
+BAV = {
+	value = 75
+	level = 5
+	influence_value = 0
+}
+
+MOD = {
+	value = 75
+	level = 3
+	influence_value = 0
+}
+
 MOD = {
 	value = 75
 	level = 3
@@ -142,6 +154,41 @@ leader = {
 	prestige = 0.2
 }
 
+leader = {
+	name = "Jacques Bazin"
+	date = 1823.1.1
+	type = land
+	personality = spirited
+	background = debutante
+	prestige = 0.2
+}
+
+leader = {
+	name = "Henry d'Harcourt"
+	date = 1823.1.1
+	type = land
+	personality = spirited
+	background = debutante
+	prestige = 0.4
+}
+
+leader = {
+	name = "Ferdinand de Marsin"
+	date = 1823.1.1
+	type = land
+	personality = impulsive
+	background = bureaucrat_speed
+	prestige = 0.1
+}
+
+leader = {
+	name = "Anne Jules de Noailles"
+	date = 1823.1.1
+	type = land
+	personality = harsh
+	background = hated
+	prestige = 0.1
+}
 army = {
 	name = "Garde Royale"
 	location = 425

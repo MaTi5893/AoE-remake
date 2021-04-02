@@ -745,22 +745,11 @@ country_event = {
 	id = 15730042
 	title = "Targowica Confederation"
 	desc = "EVTDESC15730042"
-	picture = glos
-	fire_only_once = yes
-	
-	trigger = {
-		tag = PLC
-		has_country_flag = enacted_3rd_may_constitution
-		exists = yes
-	}
-	
-	mean_time_to_happen = {
-		months = 5
-	}
+	picture = veto
+	is_triggered_only = yes
 	
 	option = {
-		name = "They wish to ruin our country! I Refuse to do that!"
-		set_country_flag = refused_targowica
+		name = "Worrisome."
 		RUS = {
 			casus_belli = {
 				target = THIS
@@ -768,17 +757,20 @@ country_event = {
 				months = 12
 			}
 		}
+		sphere_owner = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -101
+			}
+		}
 		add_country_modifier = {
 			name = targowica
-			duration = 7300
+			duration = 5475
 		}
-	}
-	
-	option = {
-		name = "They are right..."
-		government = elective_monarchy_oligarchy
-		election = yes
-		prestige = -50
 	}
 }
 #

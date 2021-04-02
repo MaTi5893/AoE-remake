@@ -249,6 +249,30 @@ political_decisions = {
 			prestige = 5
 		}
 	}
+	
+	refute_the_partitions = {
+		picture = polish_partitions
+		potential = {
+			primary_culture = polish
+			has_global_flag = polish_partition
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = targowica
+			}
+			has_recently_lost_war = no
+			OR = {
+				is_greater_power = yes
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			prestige = 25
+			clr_global_flag = polish_partition
+		}
+	}
 	abolish_folwark_system = {
 		picture = folwark
 		potential = {

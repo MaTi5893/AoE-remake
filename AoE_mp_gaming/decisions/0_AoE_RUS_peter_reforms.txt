@@ -18,21 +18,6 @@ political_decisions = {
 			government = absolute_monarchy
 			add_accepted_culture = byelorussian
 			add_accepted_culture = ukrainian
-			any_country = {
-				limit = {
-					vassal_of = THIS
-					exists = yes
-					ai = yes
-					OR = {
-						tag = HET
-						tag = ZZH
-						tag = DON
-						tag = KMK
-						tag = BSK
-					}
-				}
-				annex_to = THIS
-			}
 			prestige = 25
 		}
 		ai_will_do = {					
@@ -174,32 +159,25 @@ political_decisions = {
 		allow = {
 			is_greater_power = yes
 			war_policy  = jingoism
-			owns = 1047
-			CRI = {
-				OR = {
-					all_core = {
-						owned_by = THIS
-					}
-					all_core = {
-						controlled_by = THIS
-					}
+			OR = {
+				AND = {
+				owns = 1047
+				CRI = {
 					exists = no
 				}
-				owns = 972
+				}
+				mass_politics = 1
 			}
 		}
 		effect = {
 			set_country_flag = claimed_crimea_south_ukrine
-			RUS_964 = { add_core = RUS }
-			RUS_973 = { add_core = RUS }
-			RUS_1048 = { add_core = RUS }
-			RUS_1052 = { add_core = RUS }
-			RUS_1090 = { add_core = RUS }
-			1048 = { add_core = RUS }
-			970 = { add_core = RUS }
-			677 = { add_core = RUS }
-			968 = { add_core = RUS }
-			badboy = 15
+			CRI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			RUS_676 = { add_core = THIS }
+			badboy = 10
 		}
 		ai_will_do = { factor = 1 }	
 	}
@@ -324,22 +302,10 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = claimed_ruthenia
-			356	= { add_core = RUS }
-			945	= { add_core = RUS }
-			944	= { add_core = RUS }
-			949 = { add_core = RUS }
-			RUS_947	= { add_core = RUS }
-			RUS_718	= { add_core = RUS }
-			RUS_958	= { add_core = RUS }
-			961	= { add_core = RUS }
-			954 = { add_core = RUS }
-			947 = { add_core = RUS }
-			939 = { add_core = RUS }
-			3337 = { add_core = RUS }
-			RUS_360	= { limit = { NOT = { province_id = 362 } } add_core = RUS }
-			RUS_707	= { add_core = RUS }
-			RUS_940 = { add_core = RUS }
-			RUS_959 = { add_core = RUS }
+			RUS_958 = { add_core = THIS }
+			RUS_955 = { add_core = THIS }
+			RUS_707 = { add_core = THIS }
+			RUS_718 = { add_core = THIS }
 			badboy = 22
 		}
 		ai_will_do = { factor = 1 }	
@@ -418,36 +384,36 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	vaccination_cat = {
-		picture = ill_hand
-		potential = {
-			tag = RUS
-			NOT = {
-				has_country_flag = vaccination_cat
-			}
-			exists = yes
-		}
-		allow = {
-			OR = {
-				chemistry_and_electricity_7 = 1
-				AND = {
-					ai = yes
-					year = 1775	
-				}
-			}
-			has_country_modifier = catharine_the_great
-		}
-		effect = {
-			add_country_modifier = {
-				name = russian_vaccination
-				duration = 3650
-			}
-			set_country_flag = vaccination_cat
-		}
-		ai_will_do = {					
-		factor = 1
-		}
-	}
+	#vaccination_cat = {
+	#	picture = ill_hand
+	#	potential = {
+	#		tag = RUS
+	#		NOT = {
+	#			has_country_flag = vaccination_cat
+	#		}
+	#		exists = yes
+	#	}
+	#	allow = {
+	#		OR = {
+	#			chemistry_and_electricity_7 = 1
+	#			AND = {
+	#				ai = yes
+	#				year = 1775	
+	#			}
+	#		}
+	#		has_country_modifier = catharine_the_great
+	#	}
+	#	effect = {
+	#		add_country_modifier = {
+	#			name = russian_vaccination
+	#			duration = 3650
+	#		}
+	#		set_country_flag = vaccination_cat
+	#	}
+	#	ai_will_do = {					
+	#	factor = 1
+	#	}
+	#}
 	
 	catharine_the_greats_reforms = {
 		picture = catherine_the_great
@@ -478,10 +444,10 @@ political_decisions = {
 			}
 		}
 		effect = {
-			#add_country_modifier = {
-			#	name =
-			#	duration = -1
-			#}
+			add_country_modifier = {
+				name = russian_vaccination
+				duration = 3650
+			}
 			inherit = HET
 			inherit = ZZH
 			research_points = 30
@@ -499,15 +465,13 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			state_n_government = 1
-			military_score = 150
-			neighbour = PER
+			is_greater_power = yes
+			OR = {
+				owns = 1053
+				neighbour = PER
+			}
 		}
 		effect = {
-			PER = {
-				release_vassal = KAK
-				release_vassal = KKH
-			}
 			prestige = 10
 			set_country_flag = manifesto_on_caucasus
 			country_event = 170013

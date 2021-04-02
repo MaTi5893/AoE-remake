@@ -3,7 +3,7 @@ civilized = yes
 primary_culture = ukrainian
 culture = cossack
 religion = orthodox
-government = absolute_monarchy
+government = democracy
 plurality = 0.02
 nationalvalue = nv_liberty
 literacy = 0.15
@@ -12,7 +12,7 @@ civilized = yes
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
+vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
@@ -25,7 +25,7 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions
+pensions = good_pensions
 school_reforms = no_schools
 
 

@@ -9,11 +9,28 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			is_secondary_power = yes
+			OR = {
+				AND = {
+				is_secondary_power = yes
+				ai = yes
+				}
+				AND = {
+				owns = 562
+				owns = 563
+				owns = 561
+				}
+			}
 		}
 		effect = {
 			set_country_flag = formed_thuringia
+			all_core = {
+				add_core = THU
+				remove_core = THIS
+			}
 			change_tag = THU
+			add_core = 561
+			add_core = 562
+			add_core = 563
 			prestige = 25
 		}
 		ai_will_do = { factor = 1 }
@@ -29,13 +46,27 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			AND = {
+			OR = {
+				AND = {
 				is_secondary_power = yes
-				prestige = 25
+				ai = yes
+				}
+				AND = {
+				owns = 581
+				owns = 534
+				owns = 580
+				}
 			}
 		}
 		effect = {
 			set_country_flag = formed_westphalia
+			PRU_581 = {
+				add_core = THIS
+			}
+			all_core = {
+				add_core = WES
+				remove_core = THIS
+			}
 			change_tag = WES
 			prestige = 25
 		}
@@ -53,13 +84,25 @@ political_decisions = {
 			NOT = { tag = LOR }
 		}
 		allow = {
-			AND = {
+			OR = {
+				AND = {
+					owns = 572
+					owns = 576
+					owns = 571
+				}
 				is_secondary_power = yes
 				prestige = 25
 			}
 		}
 		effect = {
 			set_country_flag = formed_rheinland
+			PRU_572 = {
+				add_core = THIS
+			}
+			all_core = {
+				add_core = RHI
+				remove_core = THIS
+			}
 			change_tag = RHI
 			prestige = 25
 		}
@@ -80,18 +123,22 @@ political_decisions = {
 			OR = {
 				AND = {
 					is_secondary_power = yes
-					NOT = {
-						tag = BAV
-					}
 				}
 				AND = {
-					tag = BAV
-					prestige = 120
+					owns = 586
+					owns = 589
+					owns = 593
 				}
 			}
 		}
 		effect = {
 			set_country_flag = formed_swabia
+			BAD_586 = { add_core = THIS }
+			WUR_589 = { add_core = THIS }
+			all_core = {
+				add_core = SGF
+				remove_core = THIS
+			}
 			change_tag = SGF
 			prestige = 15
 		}
@@ -230,5 +277,30 @@ political_decisions = {
 			}
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	declare_the_kingdom_of_bavaria = {
+		picture = crown
+		potential = {
+			tag = BAV
+			NOT = { has_country_flag = declared_the_kingdom_of_bavaria }
+		}
+		allow = {
+			OR = {
+			is_greater_power = yes
+			ruling_party_ideology = communist
+			}
+			war_policy = jingoism
+		}
+		effect = {
+			add_core = 592
+			add_core = 598
+			add_core = 597
+			add_core = 614
+			add_core = 612
+			add_core = 613
+			add_core = 615
+			add_core = 735
+		}
 	}
 }
