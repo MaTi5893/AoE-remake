@@ -234,21 +234,21 @@ navy = {
 }
 
 leader = {
-	name = "Crown Prince Frederik"
-	picture = net_gen_prinsfrederik
-	date = 1836.1.1
+	name = "Henry de Nassau"
+	picture = net_hendrik_nassau
+	date = 1688.1.1
 	type = land
-	personality = active_p
-	background = drillmaster
+	personality = audacious
+	background = school_of_defense
 	prestige = 0.1	
 }
 leader = {
-	name = "Hendrik Duycker"
-	picture = net_gen_duycker
-	date = 1827.1.1
+	name = "Arnold van Keppel"
+	picture = net_arnold_keppel
+	date = 1697.1.1
 	type = land
-	personality = mediocre
-	background = old_school
+	personality = chivalrous
+	background = cavalry_school
 	prestige = 0.1
 }
 leader = {
