@@ -3,25 +3,25 @@
 #Tblisi (232000/58000 POPS) #circassian-orthodox = Ossetian
 1090 = {
 	bureaucrats = {
-		culture = russian
+		culture = georgian
 		religion = orthodox
 		size = 100
 	}
 
 	clergymen = {
-		culture = russian
+		culture = georgian
 		religion = orthodox
 		size = 25
 	}
 
 	artisans = {
-		culture = russian
+		culture = georgian
 		religion = orthodox
 		size = 25
 	}
 
 	soldiers = {
-		culture = russian
+		culture = georgian
 		religion = orthodox
 		size = 250
 	}
@@ -69,31 +69,31 @@
 	}
 
 	aristocrats = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 25
 	}
 
 	clergymen = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 25
 	}
 
 	artisans = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 150
 	}
 
 	soldiers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 25
 	}
 
 	farmers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 2775
 	}
@@ -203,31 +203,31 @@
 	}
 
 	aristocrats = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 100
 	}
 
 	clergymen = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 50
 	}
 
 	artisans = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 300
 	}
 
 	soldiers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 50
 	}
 
 	farmers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 5500
 	}
@@ -463,65 +463,92 @@
 	}
 
 	aristocrats = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 150
 	}
 
 	clergymen = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 75
 	}
 
 	artisans = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 450
 	}
 
 	soldiers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 100
 	}
 
 	farmers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = orthodox
 		size = 8225
 	}
 
 	aristocrats = {
-		culture = north_caucasian
+		culture = circassian
 		religion = sunni
 		size = 100
 	}
 
 	clergymen = {
-		culture = north_caucasian
+		culture = circassian
 		religion = sunni
 		size = 50
 	}
 
 	artisans = {
-		culture = north_caucasian
+		culture = circassian
 		religion = sunni
 		size = 250
 	}
 
 	soldiers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = sunni
 		size = 50
 	}
 
 	farmers = {
-		culture = north_caucasian
+		culture = circassian
 		religion = sunni
 		size = 4550
 	}
 }
+#Svaneti
+2640 = {
+	aristocrats = {
+		culture = georgian
+		religion = orthodox
+		size = 10
+	}
+	
+	clergymen = {
+		culture = georgian
+		religion = orthodox
+		size = 25
+	}
+
+	artisans = {
+		culture = georgian
+		religion = orthodox
+		size = 100
+	}
+
+	farmers = {
+		culture = georgian
+		religion = orthodox
+		size = 2550
+	}
+}
+
 #Kars Region (76000) #see Turkey.txt for balance of region  
 #under the rule of Ottoman Empire in 1836  
 #Batum (76000/19000 POPS) #now part of Georgia
