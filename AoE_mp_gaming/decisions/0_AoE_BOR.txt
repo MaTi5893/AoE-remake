@@ -262,6 +262,7 @@ political_decisions = {
 					40 = { country_event = 171119 }
 				}
 			}
+			set_country_flag = secured_fr_na
 		}
 	}
 	
@@ -336,6 +337,144 @@ political_decisions = {
 				factor = 0
 				badboy = 5
 			}
+		}
+	}
+	
+	form_franco_spanish_union_diplo = {
+		picture = bourbon
+		potential = {
+			OR = {
+			tag = BOR
+			tag = SPC
+			}
+			NOT = { exists = FSU }
+			exists = SPC
+			exists = BOR
+			NOT = { has_global_flag = france_lost_succ }
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+		}
+		allow = {
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			is_greater_power = yes
+			state_n_government = 1
+			BOR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			SPC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			war = no
+		}
+		effect = {
+			all_core = {
+				add_core = FSU
+				remove_core = THIS
+			}
+			random_country = {
+				limit = {
+					tag = BOR
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = french
+				}
+			}
+			random_country = {
+				limit = {
+					tag = SPC
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = spanish
+				}
+			}
+			change_tag = FSU
+			prestige = 25
+		}
+	}
+	
+	form_franco_spanish_union_war = {
+		picture = bourbon
+		potential = {
+			OR = {
+			tag = BOR
+			tag = SPC
+			}
+			NOT = { exists = FSU }
+			exists = SPC
+			exists = BOR
+			NOT = { has_global_flag = FSU }
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			NOT = { has_country_flag = unified_by_force }
+		}
+		allow = {
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			is_greater_power = yes
+			state_n_government = 1
+			war = no
+		}
+		effect = {
+			random_owned = {
+				owner = {
+					limit = {
+						tag = BOR
+					}
+					casus_belli = {
+						target = SPC
+						type = unify_bourbon_empire
+						months = 12
+					}
+				}
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						tag = SPC
+					}
+					casus_belli = {
+						target = BOR
+						type = unify_bourbon_empire
+						months = 12
+					}
+				}
+			}
+			set_country_flag = unified_by_force
 		}
 	}
 }

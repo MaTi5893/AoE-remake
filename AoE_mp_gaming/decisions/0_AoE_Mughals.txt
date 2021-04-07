@@ -1,0 +1,119 @@
+political_decisions = {
+	assert_mughal_supremacy = {
+		picture = peacock_throne
+		potential = {
+			tag = MUG
+			NOT = { has_country_flag = asserted_mughal_supremacy }
+			exists = yes
+		}
+		allow = {
+			year = 1710
+			NOT = { has_country_modifier = decentralized_rule }
+			NOT = { has_country_modifier = political_chaos }
+			OR = {
+				owns = 1236
+				1236 = {
+					owner = {
+						in_sphere = THIS
+					}
+				}
+			}
+			OR = {
+				owns = 1251
+				1251 = {
+					owner = {
+						in_sphere = THIS
+					}
+				}
+			}
+			OR = {
+				owns = 1297
+				1297 = {
+					owner = {
+						in_sphere = THIS
+					}
+				}
+			}
+			OR = {
+				owns = 1283
+				1283 = {
+					owner = {
+						in_sphere = THIS
+					}
+				}
+			}
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = asserted_mughal_supremacy
+			HND = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			1251 = {
+				owner = {
+					limit = {
+						NOT = { tag = THIS }
+					}
+					annex_to = THIS
+				}
+			}
+			1236 = {
+				owner = {
+					limit = {
+						NOT = { tag = THIS }
+					}
+					annex_to = THIS
+				}
+			}
+			1297 = {
+				owner = {
+					limit = {
+						NOT = { tag = THIS }
+					}
+					annex_to = THIS
+				}
+			}
+			1283 = {
+				owner = {
+					limit = {
+						NOT = { tag = THIS }
+					}
+					annex_to = THIS
+				}
+			}
+			prestige = 50
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	#indochina_conquest = {
+	#	potential = {
+	#		tag = MUG
+	#		NOT = { has_country_flag = indochina_conquest }
+	#		exists = yes
+	#	}
+	#	allow = {
+	#		HND = {
+	#			all_core = {
+	#				owned_by = THIS
+	#			}
+	#		}
+	#		war_policy = jingoism
+	#	}
+	#	effect = {
+	#		any_country = {
+	#			any_owned = {
+	#				limit = {
+	#					continent = indochina
+	#				}
+	#				add_core = THIS
+	#			}
+	#		}
+	#		prestige = 15
+	#		badboy = 25
+	#	}
+	#	ai_will_do = { factor = 1 }
+	#}
+}

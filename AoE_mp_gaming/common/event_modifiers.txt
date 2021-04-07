@@ -4301,7 +4301,7 @@ swedish_caroleans = {
 	icon = 15
 }
 riksdaler = {
-	administrative_efficiency_modifier = 0.10
+	administrative_efficiency_modifier = 0.025
 	tax_efficiency = 0.2
 	loan_interest = -0.5
 }
@@ -4332,14 +4332,14 @@ commodity_act = {
 }
 great_partition = {
 	farm_rgo_eff = 0.05
-	factory_output = 0.1
+	factory_output = 0.05
 	loan_interest = 0.25
 	icon = 17
 }
 ###Russia###
 improved_administration = {
 	administrative_efficiency_modifier = 0.10
-	tax_efficiency = 0.1
+	tax_efficiency = 0.05
 	icon = 5
 }
 table_of_ranks = {
@@ -4378,10 +4378,10 @@ catharine_the_great = {
 	icon = 13
 }
 nakaz = {
-	administrative_efficiency_modifier = 0.10
+	administrative_efficiency_modifier = 0.05
 	war_exhaustion = -0.1
 	ruling_party_support = 0.05
-	tax_efficiency = 0.1
+	tax_efficiency = 0.05
 	icon = 5
 }
 petes_conscription = {
@@ -4413,7 +4413,7 @@ maria_theresa = {
 }
 codex_theresianus = {
 	administrative_efficiency_modifier = 0.3
-	tax_efficiency = 0.1
+	tax_efficiency = 0.05
 	global_pop_militancy_modifier = -0.03
 	icon = 5
 }
@@ -4429,21 +4429,22 @@ josephism = {
 }
 theresian_military_academy = {
 	army_tech_research_bonus = 0.05
-	land_organisation = 0.1
-	supply_consumption = -0.1
-	org_regain = 0.2
+	land_organisation = 0.05
+	supply_consumption = 0.1
+	org_regain = 0.05
 	land_unit_start_experience = 5
 	icon = 15
 }
 ost_land_company = {
 	tariff_efficiency_modifier = 0.4
+	tax_efficiency = 0.025
 	icon = 15
 }
 #####Bourbon France####
 ecole_militire = {
 	army_tech_research_bonus = 0.05
-	land_organisation = 0.1
-	supply_consumption = -0.1
+	land_organisation = 0.05
+	supply_consumption = 0.1
 	org_regain = 0.2
 	land_unit_start_experience = 5
 	icon = 15
@@ -4499,8 +4500,7 @@ encolsure = {
 	icon = 17
 }
 british_general_staff = {
-	org_regain = 0.25
-	mobilisation_economy_impact = -0.25
+	mobilisation_economy_impact = 0.35
 	land_unit_start_experience = 10
 	supply_consumption = -0.05
 	leadership_modifier = 0.05
@@ -5138,8 +5138,8 @@ berlin_academy_of_sciences = {
 	icon = 9
 }
 retablissement = {
-	education_efficiency_modifier = 0.75
-	administrative_efficiency_modifier = 0.3
+	education_efficiency_modifier = 0.15
+	administrative_efficiency_modifier = 0.15
 	land_organisation = 0.05
 	land_unit_start_experience = 1
 	mobilisation_size = 0.01
@@ -5171,13 +5171,12 @@ frederick_grosse = {
 ###Spain refrom bonuses###
 renovated_armada = {
 	prestige = 0.01
-	navy_tech_research_bonus = 0.05
 	naval_unit_start_experience = 10
-	naval_organisation = 0.15
+	naval_organisation = 0.05
 	icon = 15
 }
 the_cadastre_tax_and_the_spanish_bank = {
-	tax_efficiency = 0.15
+	tax_efficiency = 0.05
 	icon = 9
 }
 royal_academy_of_the_fine_arts = {
@@ -5188,11 +5187,11 @@ royal_academy_of_the_fine_arts = {
 }
 new_royal_spanish_academy = {
 	army_tech_research_bonus = 0.05
-	land_organisation = 0.1
-	supply_consumption = -0.1
-	org_regain = 0.2
+	land_organisation = 0.025
+	supply_consumption = 0.05
+	org_regain = 0.05
 	land_unit_start_experience = 5
-	max_military_spending = 0.10
+	min_military_spending = 0.10
 	icon = 15
 }
 ###Ottoman reforms and debuffs###
@@ -5200,7 +5199,6 @@ janisseries_angry = {
 	min_military_spending = 0.45
 	max_military_spending = 0.10
 	army_tech_research_bonus = -0.05
-	global_assimilation_rate = -0.05
 	ruling_party_support = -0.05 
 	land_organisation = -0.05
 	icon = 18
@@ -5209,9 +5207,8 @@ janisseries_furious = {
 	min_military_spending = 0.45
 	max_military_spending = 0.10
 	army_tech_research_bonus = -0.15
-	global_assimilation_rate = -0.15
 	ruling_party_support = -0.05 
-	land_organisation = -0.15
+	land_organisation = -0.1
 	icon = 18
 }
 imperial_navy_engieering_school = {
@@ -5221,7 +5218,7 @@ imperial_navy_engieering_school = {
 }
 prussian_military_advisors = {
 	land_organisation = 0.05
-	army_tech_research_bonus = 0.05
+	army_tech_research_bonus = 0.25
 	land_unit_start_experience = 5
 	icon = 17
 }
@@ -5234,19 +5231,19 @@ nizam_i_djedid = {
 }
 #####Szlachta is a bitch#####
 szlachta_taxes = {
-	factory_throughput = -0.15
-	rgo_output = -0.15
+	factory_throughput = -0.05
+	rgo_output = -0.05
 	tax_efficiency = -0.025
 	loan_interest = 0.15
 	pop_militancy_modifier = 0.0002
 	icon = 18
 }
 szlachta_war_taxes = {
-	factory_throughput = -0.15
-	rgo_output = -0.15
-	tax_efficiency = -0.05
+	factory_throughput = -0.05
+	rgo_output = -0.05
+	tax_efficiency = -0.025
 	loan_interest = 0.15
-	land_organisation = 0.2
+	land_organisation = 0.05
 	icon = 18
 }
 policy_approved = {
@@ -5273,7 +5270,7 @@ polish_absolutism = {
 szlachta_pissed = {
 	factory_throughput = -0.05
 	rgo_output = -0.05
-	tax_efficiency = -0.1
+	tax_efficiency = -0.025
 	loan_interest = 0.25
 	pop_militancy_modifier = 0.002
 	non_accepted_pop_consciousness_modifier = 0.2
@@ -5283,7 +5280,7 @@ szlachta_pissed = {
 szlachta_opposition = {
 	factory_throughput = -0.15
 	rgo_output = -0.15
-	tax_efficiency = -0.15
+	tax_efficiency = -0.05
 	loan_interest = 0.5
 	land_organisation = -0.05
 	pop_militancy_modifier = 0.004
@@ -5300,6 +5297,7 @@ targowica = {
 folwark_serf_economy = {
 	rgo_output = 0.05
 	factory_throughput = -0.10
+	factory_cost = 1
 	tariff_efficiency_modifier = 0.05
 	tax_efficiency = -0.05
 	icon = 18
@@ -5310,22 +5308,22 @@ noble_democracy = {
 }
 #####British colonial policies on THC#####
 sugar_act_on_colonies = {
-	tax_efficiency = -0.05
+	tax_efficiency = -0.025
 	loan_interest = 0.2
 	icon = 12
 }
 stamp_act_on_colonies = {
-	tax_efficiency = -0.05
+	tax_efficiency = -0.025
 	loan_interest = 0.2
 	icon = 12
 }
 tea_act_on_colonies = {
-	tax_efficiency = -0.05
+	tax_efficiency = -0.025
 	loan_interest = 0.2
 	icon = 12
 }
 intoreable_act_on_colonies = {
-	tax_efficiency = -0.15
+	tax_efficiency = -0.05
 	loan_interest = 0.2
 	icon = 12
 }
@@ -6107,13 +6105,13 @@ not_dictatorship = {
 decentralized_rule = {
 	core_pop_militancy_modifier = 0.04
 	org_regain = -0.45
-	army_organisation = -0.5
-	admin_efficiency = -0.1
+	army_organisation = -0.035
+	admin_efficiency = -0.05
 	mobilisation_size = -0.02
 	icon = 3
 }
 decentralized_rule_efm = {
-	admin_efficiency = -0.1
+	admin_efficiency = -0.05
 	mobilisation_size = -0.01
 	icon = 3
 }
@@ -6127,7 +6125,7 @@ political_chaos = {
 ##
 inefficient_bureacracy = {
 	pop_consciousness_modifier = 0.2
-	pop_militancy_modifier = 0.2
+	pop_militancy_modifier = 0.02
 	immigrant_push = 0.75
 	farm_rgo_eff = -0.5
 	icon = 3
@@ -6137,7 +6135,7 @@ efficient_bureacracy = {
 	pop_consciousness_modifier = -0.2
 	pop_militancy_modifier = -0.2
 	immigrant_push = -0.75
-	farm_rgo_eff = 0.5
+	farm_rgo_eff = 0.05
 	icon = 3
 }
 
@@ -6237,7 +6235,7 @@ marquis_pombal = {
 	icon = 13
 }
 monopoly_companies_of_commerce = {
-	admin_efficiency = 0.1
+	admin_efficiency = 0.05
 	tax_efficiency = 0.05
 	icon = 11
 }
@@ -6724,7 +6722,7 @@ proffesional_general_staff = {
 	icon = 17
 }
 trade_sectors_monopoly = {
-	tariff_efficiency_modifier = 0.05
+	tax_efficiency = 0.05
 	icon = 9
 }
 church_goods_seized = {
@@ -6817,4 +6815,12 @@ colony_to_be_annexed = {
 thema_system = {
 	mobilisation_size = 0.03
 	icon = 15
+}
+janisseries_influence = {
+	min_military_spending = 0.1
+	army_tech_research_bonus = -0.15
+	supply_consumption = 0.1
+	land_organisation = 0.05
+	influence_modifier = -0.4
+	icon = 16
 }

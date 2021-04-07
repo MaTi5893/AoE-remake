@@ -2,7 +2,7 @@ capital = 1257
 civilized = yes   primary_culture = bengali
 religion = sunni
 civilized = no
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.1
@@ -50,6 +50,5 @@ border_policy = open_borders
 centralization = regionalism
 colonial_policy = settlement
 
-asia_balance = yes
-
+set_country_flag = NOT_colony
 set_country_flag = sunni_country

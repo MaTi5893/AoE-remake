@@ -56,6 +56,7 @@ restore_holy_roman_empire
 claim_emperorship
 dispute_succession_bor
 dispute_succession_aus
+unify_bourbon_empire
 place_in_the_sun
 place_in_the_sun_for_puppet
 colonial_competition
@@ -499,7 +500,6 @@ dispute_succession_bor = {
 			}
 			secede_province = BOR
 		}
-	
 	}
 	war_name = SUCCESSION_WAR_NAME
 }
@@ -546,9 +546,60 @@ dispute_succession_aus = {
 			}
 			secede_province = AUS
 		}
-	
+		set_global_flag = france_lost_succ
 	}
 	war_name = SUCCESSION_WAR_NAME
+}
+unify_bourbon_empire = {
+	sprite_index = 26
+	is_triggered_only = yes
+	constructing_cb = no
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 85
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			tag = BOR
+			tag = SPC
+		}
+		THIS = {
+			OR = {
+				tag = BOR
+				tag = SPC
+			}
+		}
+	}
+
+	po_remove_prestige = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event = 171120
+	}
 }
 # Conquest
 conquest = {
@@ -582,7 +633,7 @@ conquest = {
 				}
 			}
 		}
-		is_independant = yes
+		#is_independant = yes
 	}
 
 	badboy_factor = 2.2
@@ -680,7 +731,7 @@ add_to_sphere = {
 		NOT = { is_our_vassal = THIS }
 		this = { is_greater_power = yes }
 		is_greater_power = no
-		is_independant = yes
+		#is_independant = yes
 		part_of_sphere = no
 	}
 	
@@ -951,7 +1002,7 @@ acquire_state = {
 				}
 			}
 		}
-		is_independant = yes
+		#is_independant = yes
 	}
 	
 	allowed_states = {
@@ -1212,6 +1263,7 @@ acquire_all_cores = {
 		any_owned_province = { is_core = THIS }
 		any_owned_province = { NOT = { is_core = THIS } }
 		NOT = { has_country_modifier = neutrality }
+		ai = yes
 		THIS = {
 			NOT = {
 				has_country_modifier = neutrality
@@ -1596,7 +1648,7 @@ make_puppet = {
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 4 }
 		is_greater_power = no
-		is_vassal = no
+		#is_vassal = no
 	}
 	
 	# THIS - us

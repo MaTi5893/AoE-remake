@@ -1,0 +1,473 @@
+political_decisions = {
+	recruit_prussian_military_advisors = {
+		picture = army_training
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = recruited_prussian_military_advisors }
+			exists = yes
+		}
+		allow = {
+			relation = { who = PRU value = 100 }
+			money = 5000
+		}
+		effect = {
+			set_country_flag = recruited_prussian_military_advisors
+			PRU = {
+				country_event = 173605
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	tur_setup = {
+		potential = {
+			tag = TUR
+			NOT = {
+				has_country_modifier = janisseries_influence
+			}
+		}
+		allow = {
+			exists = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = janisseries_influence
+				duration = -1
+			}
+		}
+	}
+	recover_hungary = {
+		picture = tur_hungary
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = recovered_hungary }
+			exists = yes
+		}
+		allow = {
+			is_greater_power = yes
+			HUN = { all_core = { OR = { controlled_by = THIS owner = { vassal_of = THIS } owned_by = THIS } } }
+			
+		}
+		effect = {
+			set_country_flag = recovered_hungary
+			prestige = 40
+			AUS_623 = { add_core = THIS }
+			AUS_641 = { add_core = THIS }
+			AUS_654 = { add_core = THIS }
+			AUS_657 = { add_core = THIS }
+			AUS_771 = { add_core = THIS }
+			AUS_777 = { add_core = THIS }
+			badboy = 20
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+			release_vassal = SIE
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	recover_morea = {
+		picture = morea
+		potential = {
+			tag = TUR
+			NOT = {
+			has_country_flag = recovered_morea
+			}
+		}
+		allow = {
+			839 = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			prestige = 25
+			any_pop = {
+				militancy = -3
+			}
+			set_country_flag = recovered_morea
+		}
+	}
+	
+	create_imperial_navy_engieering_school = {
+		picture = merchant_navy
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = imperial_navy_engieering_school }
+			exists = yes
+		}
+		allow = {
+			high_sea_battle_fleet = 1
+		}
+		effect = {
+			set_country_flag = imperial_navy_engieering_school
+			add_country_modifier = {
+				name = imperial_navy_engieering_school
+				duration = -1
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	abolish_janisseries = {
+		picture = janisseries
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = abolished_janisseries }
+			exists = yes
+			has_country_modifier = janisseries_influence
+		}
+		allow = {
+			money = 1000000
+			is_greater_power = yes
+			pensions = low_pensions
+		}
+		effect = {
+			set_country_flag = abolished_janisseries
+			remove_country_modifier = janisseries_influence
+			any_pop = { militancy = 3 }
+			money = -1000000
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	nizam-i_djedid_reforms = {
+		picture = nizam-i_djedid
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = nizam-i_djedid_reforms }
+			exists = yes
+		}
+		allow = {
+			#modern_army_doctrine = 1
+			NOT = { has_country_modifier = janisseries_influence }
+		}
+		effect = {
+			set_country_flag = nizam-i_djedid_reforms
+			add_country_modifier = {
+				name = nizam_i_djedid
+				duration = -1
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	avenge_1683 = {
+		picture = vienna_fire
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = avenged_1683 }
+			exists = yes
+			controls = 619
+		}
+		allow = {
+			controls = 619
+		}
+		effect = {
+			set_country_flag = avenged_1683
+			country_event = 173603
+			badboy = 7
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	decide_foreign_policy = {
+		picture = rome
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = decided_foreign_policy }
+			exists = yes
+		}
+		allow = {
+			is_greater_power = yes
+			owns = 641
+			has_country_flag = recovered_hungary
+		}
+		
+		effect = {
+			set_country_flag = decided_foreign_policy
+			country_event = 173618
+		}
+	}
+	
+	conquest_of_rome = {
+		picture = rome
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = conquest_of_rome }
+			exists = yes
+			has_country_flag = tur_west_focus
+		}
+		allow = {
+			619 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+			owns = 736
+			owns = 729
+			owns = 742
+			owns = 749
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = conquest_of_rome
+			AUS_736 = { add_core = THIS }
+			AUS_729 = { add_core = THIS }
+			PAP = { all_core = { add_core = THIS } }
+			prestige = 25
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	eastern_tributaries = {
+		picture = map_iraq
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = eastern_tributaries }
+			exists = yes
+			has_country_flag = tur_east_focus
+		}
+		allow = {
+			modern_army_doctrine = 1
+			#NOT = { has_country_flag = janisseries }
+			is_greater_power = yes
+			has_country_flag = recovered_hungary
+		}
+		effect = {
+			set_country_flag = eastern_tributaries
+			RUS_1102 = { add_core = THIS }
+			RUS_1098 = { add_core = THIS }
+			RUS_1090 = { add_core = THIS }
+			PER_1122 = { add_core = THIS }
+			1108 = { add_core = THIS }
+			1109 = { add_core = THIS }
+			1112 = { add_core = THIS }
+			1133 = { add_core = THIS }
+			badboy = 15
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	end_romanian_principalities = {
+		picture = map_moldavia
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = end_romanian_principalities }
+			exists = yes
+			WAL = {
+				exists = yes
+				ai = yes
+				vassal_of = THIS
+			}
+			SIE = {
+				#exists = yes
+				ai = yes
+			}
+			MOL = {
+				exists = yes
+				ai = yes
+				vassal_of = THIS
+			}
+			has_country_flag = tur_west_focus
+		}
+		allow = {
+			NOT = { has_country_modifier = janisseries_influence }
+			centralization = totalitarianism
+			WAL = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+			SIE = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+			MOL = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+		}
+		effect = {
+			set_country_flag = end_romanian_principalities
+			random_country = {
+				limit = {
+					tag = MOL
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = SIE
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = WAL
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	end_maghreb_vassals = {
+		picture = map_maghreb
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = end_maghreb_vassals }
+			has_country_flag = tur_west_focus
+			exists = yes
+			TUN = {
+				exists = yes
+				ai = yes
+				vassal_of = THIS
+			}
+			ALD = {
+				exists = yes
+				ai = yes
+				vassal_of = THIS
+			}
+		}
+		allow = {
+			modern_army_doctrine = 1
+			centralization = totalitarianism
+			NOT = { has_country_modifier = janisseries_influence }
+			TUN = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+			ALD = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+		}
+		effect = {
+			set_country_flag = end_maghreb_vassals
+			random_country = {
+				limit = {
+					tag = ALD
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = TUN
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	restablish_acech_dominion = {
+		picture = majapachit
+		potential = {
+			tag = TUR
+			exists = yes
+			ATJ = {
+				exists = yes
+				NOT = { vassal_of = THIS }
+			}
+			has_country_flag = tur_east_focus
+		}
+		allow = {
+			is_greater_power = yes
+			relation = {
+				who = ATJ
+				value = 100
+			}
+			ATJ = {
+				in_sphere = THIS
+			}
+		}
+		effect = {
+			ATJ = {
+				country_event = 173619
+			}
+		}
+	}
+	
+	integrate_acech = {
+		picture = majapachit
+		potential = {
+			tag = TUR
+			exists = yes
+			ATJ = {
+				exists = yes
+				vassal_of = THIS
+			}
+			has_country_flag = tur_east_focus
+		}
+		allow = {
+			is_greater_power = yes
+			relation = {
+				who = ATJ
+				value = 200
+			}
+			ATJ = {
+				in_sphere = THIS
+			}
+			NOT = { has_country_flag = janisseries_influence }
+		}
+		effect = {
+			ATJ = {
+				annex_to = THIS
+			}
+			badboy = 8
+		}
+	}
+	
+	move_capital_to_ankara = {
+		potential = {
+			tag = TUR
+			NOT = {
+				owns = 830
+				owns = 817
+			}
+			NOT = { capital = 876 }
+			owns = 876
+		}
+		allow = {
+			exists = yes
+			owns = 876
+		}
+		effect = {
+			capital = 876
+		}
+	}
+}

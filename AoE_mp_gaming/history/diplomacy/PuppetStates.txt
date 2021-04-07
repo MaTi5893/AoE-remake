@@ -21,14 +21,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Maratha - Thanjavur
-vassal = {  #substate
-	first = MAH
-	second = TNJ
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
 #Mughal - Jodhpur
 vassal = {  #substate
 	first = MUG
@@ -45,48 +37,10 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Russia - Don
-vassal = {  #substate
-	first = RUS
-	second = DON
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 #Brandenburg - Ducal Prussia
 vassal = {  #substate
 	first = BRN
 	second = DPR
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-#Morroco - SUS
-vassal = {  #substate
-	first = MOR
-	second = SUS
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Morroco - Tafilalt
-vassal = {  #substate
-	first = MOR
-	second = TAF
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Morroco - Fez
-vassal = {  #substate
-	first = MOR
-	second = FEZ
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#France - Basque
-vassal = {  #substate
-	first = BOR
-	second = BSQ
 	start_date = 1700.1.1
 	end_date = 2000.1.1
 }
@@ -99,14 +53,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Korea - Jaegaseung
-vassal = {  #substate
-	first = KOR
-	second = JGS
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
 #Bukhara - Bandakhshan
 vassal = {  #substate
 	first = BUK
@@ -115,13 +61,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Persia - Kakheti
-vassal = {  #substate
-	first = PER
-	second = KKH
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 
 #Papal State - Jesuits
 vassal = {  #substate
@@ -155,6 +94,19 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
+vassal = {  #substate
+	first = MUG
+	second = AFG
+	start_date = 1700.1.1
+	end_date = 2000.1.1
+}
+
+vassal = {  #substate
+	first = MUG
+	second = BNG
+	start_date = 1700.1.1
+	end_date = 2000.1.1
+}
 #Mughal - Ladakh
 vassal = {  #substate
 	first = MUG
@@ -187,34 +139,10 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Baban
-vassal = {  #substate
-	first = TUR
-	second = BNB
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Soran
-vassal = {  #substate
-	first = TUR
-	second = SRN
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
 #Fezzan
 vassal = {  #substate
 	first = TUR
 	second = FZN
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Imereti
-vassal = {  #substate
-	first = TUR
-	second = IMR
 	start_date = 1700.1.1
 	end_date = 2000.1.1
 }
@@ -287,33 +215,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Kalmykia
-
-vassal = {  #substate
-	first = RUS
-	second = KMK 
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Mingrelia
-
-vassal = {  #substate
-	first = TUR
-	second = MIG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Svaneti
-
-vassal = {  #substate
-	first = TUR
-	second = SVA
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
 #Abkhazia
 
 vassal = {  #substate
@@ -331,51 +232,11 @@ substate = {  #substate
 	end_date = 2000.1.1
 }
 
-#French Louisiana
-vassal = {  #substate
-	first = BOR
-	second = ULA
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 
 #AOG
 vassal = {  #substate
 	first = GER
 	second = AOG
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-#Mittelafrika
-vassal = {  #substate
-	first = GER
-	second = MIT
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-#Spain - Milan
-vassal = {  #substate
-	first = SPA
-	second = LOM
-	start_date = 1600.1.1
-	end_date = 1936.1.1
-}
-
-#Rajputana Agency
-vassal = {  #substate
-	first = ENL
-	second = RAJ
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-
-#Balochistan Agency
-vassal = {  #substate
-	first = ENL
-	second = BLC
 	start_date = 1815.1.1
 	end_date = 1936.1.1
 }
@@ -389,112 +250,12 @@ vassal = {  #substate
 }
 
 #FCA / NZL / AST / MRU / NEW / RHO / JAM
-vassal = {  #substate
-	first = BOR
-	second = FCA
-	start_date = 1600.1.1
-	end_date = 1936.1.1
-}
 
-vassal = {  #substate
-	first = ENL
-	second = AST
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-vassal = {  #substate
-	first = ENL
-	second = NZL
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-vassal = {  #substate
-	first = ENL
-	second = MRU
-	start_date = 1600.1.1
-	end_date = 1936.1.1
-}
-
-vassal = {  #substate
-	first = ENL
-	second = NEW
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-vassal = {  #substate
-	first = ENL
-	second = RHO
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
-#Prussia - Sigmaringen
-vassal = {
-	first = PRU
-	second = SGM
-	start_date = 1815.1.1
-	end_date = 1850.1.1
-}
 
 #Switzerland - NCT/VAL/THL/ASG/CSG/GSU/MLH/ROT
 vassal = {
 	first = SWI
 	second = NCT
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {
-	first = SWI
-	second = VAL
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {
-	first = SWI
-	second = THL
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-vassal = {
-	first = SWI
-	second = ASG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {
-	first = SWI
-	second = CSG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-vassal = {
-	first = SWI
-	second = GSU
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {
-	first = SWI
-	second = MLH
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-vassal = {
-	first = SWI
-	second = ROT
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-vassal = {
-	first = SWI
-	second = BSL
 	start_date = 1700.1.1
 	end_date = 2000.1.1
 }
@@ -521,13 +282,6 @@ vassal = {
 	end_date = 1936.1.1
 }
 
-#Liechenstein
-vassal = {
-	first = AUS
-	second = LIE
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
 
 
 #Bahrain - Qatar
@@ -706,20 +460,8 @@ vassal = {
 }
 
 #East India Company
-vassal = {  #substate
-	first = ENL
-	second = EIC
-	start_date = 1605.1.1
-	end_date = 1936.1.1
-}
 
 #Hudson Bay Company
-vassal = {  #substate
-	first = ENL
-	second = RPL
-	start_date = 1605.1.1
-	end_date = 1936.1.1
-}
 
 #Jamaica Colony
 vassal = {  #substate

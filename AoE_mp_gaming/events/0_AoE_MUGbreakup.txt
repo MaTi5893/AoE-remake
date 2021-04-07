@@ -1,0 +1,774 @@
+country_event = {
+	id = 17077
+	title = "Death of Aurangzeb"
+	desc = "EVTDESC17077"
+	
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		tag = MUG
+		year = 1707
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		set_global_flag = mughal_breakdown
+		name = "A great loss"
+		TRA = { all_core = { limit = { owned_by = THIS } secede_province = TRA } }
+		MAH = { all_core = { limit = { owned_by = THIS } secede_province = MAH } }
+		NAG = { all_core = { limit = { owned_by = THIS } secede_province = NAG } }
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			relation = {
+				who = MUG
+				value = -400
+			}
+			leave_alliance = MUG
+		}
+		release_vassal = NAG
+		release_vassal = SHI
+		release_vassal = KRN
+		release_vassal = MAH
+		release_vassal = LAD
+		release_vassal = ORI
+		release_vassal = JOD
+		release_vassal = MEW
+		release_vassal = BNG
+		release_vassal = AFG
+		BNG = { government = absolute_monarchy }
+		AFG = { government = absolute_monarchy }
+		all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
+		any_pop = { militancy = 15 }
+		add_country_modifier = {
+			name = decentralized_rule
+			duration = 6570
+		}
+		add_country_modifier = {
+			name = political_chaos
+			duration = 6570
+		}
+	}
+}
+#ENG_1264
+country_event = {
+	id = 1707712
+	title = "Rajputana secedes!"
+	desc = "EVTDESC1707712"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		JOD = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JOD
+			}
+		}
+		JAS = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JAS
+			}
+		}
+		BIK = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = BIK
+			}
+		}
+		MEW = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = MEW
+			}
+		}
+		JAI = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JAI
+			}
+		}
+		war = {
+			target = JOD
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		war = {
+			target = JAS
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		war = {
+			target = BIK
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		war = {
+			target = MEW
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		war = {
+			target = JAI
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		JOD = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JOD
+			}
+		}
+		JAS = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JAS
+			}
+		}
+		BIK = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = BIK
+			}
+		}
+		MEW = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = MEW
+			}
+		}
+		JAI = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				secede_province = JAI
+			}
+		}
+		relation = {
+			who = JOD
+			value = -100
+		}
+		relation = {
+			who = JAS
+			value = -100
+		}
+		relation = {
+			who = BIK
+			value = -100
+		}
+		relation = {
+			who = MEW
+			value = -100
+		}
+		relation = {
+			who = JAI
+			value = -100
+		}
+		prestige = -15
+	}
+}
+country_event = {
+	id = 170771
+	title = "Nawab of Bengal secedes!"
+	desc = "EVTDESC170771"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		BNG = { all_core = { limit = { owned_by = THIS } secede_province = BNG } }
+		BNG = {
+			1249 = { secede_province = BNG }
+			1248 = { secede_province = BNG }
+			1247 = { secede_province = BNG }
+			1250 = { secede_province = BNG }
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		war = {
+			target = BNG
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		BNG = { all_core = { limit = { owned_by = THIS } secede_province = BNG } }
+		BNG = {
+			1249 = { secede_province = BNG }
+			1248 = { secede_province = BNG }
+			1247 = { secede_province = BNG }
+			1250 = { secede_province = BNG }
+		}
+		relation = {
+			who = BNG
+			value = 100
+		}
+		prestige = -15
+	}
+}
+country_event = {
+	id = 170772
+	title = "Nawab of Karnatak secedes!"
+	desc = "EVTDESC170772"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		KRN = { all_core = { limit = { owned_by = THIS } secede_province = KRN } 
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		war = {
+			target = KRN
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		KRN = { all_core = { limit = { owned_by = THIS } secede_province = KRN } }
+		relation = {
+			who = KRN
+			value = 100
+		}
+		prestige = -15
+	}
+}
+country_event = {
+	id = 170773
+	title = "Sikh Confederacy secedes!"
+	desc = "EVTDESC170773"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		PNJ = { all_core = { limit = { owned_by = THIS } secede_province = PNJ } add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		AFG = { all_core = { limit = { owned_by = THIS } secede_province = AFG } add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		} 
+		war = {
+			target = PNJ
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		PNJ = { all_core = { limit = { owned_by = THIS } secede_province = PNJ } }
+		AFG = { all_core = { limit = { owned_by = THIS } secede_province = AFG } }
+		relation = {
+			who = PNJ
+			value = 100
+		}
+		prestige = -15
+	}
+}
+country_event = {
+	id = 170774
+	title = "Ouduh secedes!"
+	desc = "EVTDESC170774"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+		OR = {
+			year = 1717
+			has_recently_lost_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		BUN = { all_core = { limit = { owned_by = THIS } secede_province = BUN } add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		war = {
+			target = BUN
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		BUN = { all_core = { limit = { owned_by = THIS } secede_province = BUN } }
+		relation = {
+			who = BUN
+			value = 100
+		}
+		prestige = -15
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 170775
+	title = "Nizam's diminions secede!"
+	desc = "EVTDESC170775"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+		OR = {
+			year = 1717
+			has_recently_lost_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		HYD = { all_core = { limit = { owned_by = THIS } secede_province = HYD } add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		war = {
+			target = HYD
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		HYD = { all_core = { limit = { owned_by = THIS } secede_province = HYD } }
+		relation = {
+			who = HYD
+			value = 100
+		}
+		prestige = -15
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Nothing can stop the HYDERABAD EMPIRE"
+		HYD = { all_core = { limit = { owned_by = THIS } secede_province = HYD } }
+		change_tag = HYD
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 170776
+	title = "Newab of Sind secedes!"
+	desc = "EVTDESC170776"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+		OR = {
+			year = 1717
+			has_recently_lost_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		SIN = { all_core = { limit = { owned_by = THIS } secede_province = SIN } add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+		1222 = { secede_province = SIN }
+		war = {
+			target = SIN
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		SIN = { all_core = { limit = { owned_by = THIS } secede_province = SIN } }
+		relation = {
+			who = SIN
+			value = 100
+		}
+		prestige = -15
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 170777
+	title = "Return of the Chhatrapati"
+	desc = "EVTDESC170777"
+	fire_only_once = yes
+	picture = maratha_conquest
+	
+	trigger = {
+		tag = MAH
+		has_global_flag = mughal_breakdown
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		ENG_1291 = {
+			add_core = THIS
+		}
+		add_country_modifier = {
+			name = fanatic_army
+			duration = 7300
+		}
+		war = {
+			target = MUG
+			attacker_goal = { casus_belli = acquire_all_cores country = MAH }
+			defender_goal = { casus_belli = cut_down_to_size }
+			call_ally = no
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "We aren't ready yet."
+		ENG_1291 = {
+			add_core = THIS
+		}
+		prestige = -15
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 170778
+	title = "Collapse of the Mughals"
+	desc = "EVTDESC170778"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MAH
+		has_global_flag = mughal_breakdown
+		MUG = {
+			NOT = { is_greater_power = yes }
+			NOT = { owns = 1270 }
+			NOT = { owns = 1277 }
+			NOT = { owns = 1305 }
+			NOT = { owns = 1277 }
+			NOT = { owns = 1261 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "It's time for a new empire..."
+		add_country_modifier = {
+			name = fanatic_army
+			duration = 7300
+		}
+		MUG = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+	}
+}
+country_event = {
+	id = 170779
+	title = "Dissolution of our Empire"
+	desc = "EVTDESC170779"
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		tag = MUG
+		MUG = {
+			OR = {
+				AND = {
+					NOT = { is_greater_power = yes }
+					has_recently_lost_war = yes
+				}
+				AND = {
+					NOT = { owns = 1270 }
+					NOT = { owns = 1277 }
+					NOT = { owns = 1305 }
+					NOT = { owns = 1277 }
+					NOT = { owns = 1261 }
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "We will not rest until we rebuild it..."
+		all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
+	}
+}
+country_event = {
+	id = 175001
+	title = "Mughal dissolution"
+	desc = "EVTDESC175001"
+	picture = mughal_breakup
+	
+	fire_only_once = yes
+	trigger = {
+		tag = GBR
+		is_greater_power = yes
+		MUG = { 
+			NOT = {
+				is_greater_power = yes
+			}
+			owns = 1261
+			owns = 1305
+		}
+		NOT = { has_global_flag = disabled_railroad_wars }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "Prepare the ships!"
+		war = {
+			target = MUG
+			attacker_goal = { casus_belli = acquire_substate_region state_province_id = 1305 }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		ai_chance = { factor = 1 }	
+	}
+
+	option = {
+		name = "They're not worth our time"
+		prestige = -10
+	}
+}
+country_event = {
+	id = 175002
+	title = "The Indian Realms"
+	desc = "The time has come to seize their land!"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		revolution_n_counterrevolution = 1
+		exists = yes
+		NOT = { has_global_flag = india_for_grabs }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "Riches of india will be only ours soon enough."
+		set_global_flag = india_for_grabs
+		ai_chance = { factor = 1 }	
+	}
+}
+
+country_event = {
+	id = 175006
+	title = "Central India Secedes!"
+	desc = "EVTDESC175006"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+		year = 1767
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		GWA = { all_core = { limit = { owned_by = THIS } secede_province = GWA } }
+		war = {
+			target = GWA
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		BHO = { all_core = { limit = { owned_by = THIS } secede_province = BHO } }
+		war = {
+			target = BHO
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		IND = { all_core = { limit = { owned_by = THIS } secede_province = IND } }
+		war = {
+			target = IND
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		GWA = { all_core = { limit = { owned_by = THIS } secede_province = GWA } }
+		relation = {
+			who = GWA
+			value = 100
+		}
+		BHO = { all_core = { limit = { owned_by = THIS } secede_province = BHO } }
+		relation = {
+			who = BHO
+			value = 100
+		}
+		IND = { all_core = { limit = { owned_by = THIS } secede_province = IND } }
+		relation = {
+			who = IND
+			value = 100
+		}
+		prestige = -15
+	}
+}
+country_event = {
+	id = 175007
+	title = "Awadh Secedes!"
+	desc = "EVTDESC175007"
+	fire_only_once = yes
+	picture = mughal_breakup
+	
+	trigger = {
+		tag = MUG
+		has_global_flag = mughal_breakdown
+		year = 1762
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "It's time for WAR!"
+		AWA = { all_core = { limit = { owned_by = THIS } secede_province = AWA } }
+		war = {
+			target = AWA
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "We have more pressing issues."
+		AWA = { all_core = { limit = { owned_by = THIS } secede_province = AWA } }
+		relation = {
+			who = AWA
+			value = 100
+		}
+		prestige = -15
+	}
+}

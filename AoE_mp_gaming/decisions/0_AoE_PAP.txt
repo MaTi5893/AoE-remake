@@ -1,0 +1,171 @@
+political_decisions = { 
+
+###Kingdom of God###
+	form_god = {
+		picture = pope
+		news = yes
+		news_desc_long = "form_italy_NEWS_LONG"
+		news_desc_medium = "form_italy_NEWS_MEDIUM"
+		news_desc_short = "form_italy_NEWS_SHORT"
+		potential = {
+			tag = PAP
+			NOT = {
+				exists = ITA
+			}
+			exists = yes
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			ITA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 100
+			ITA = {
+				all_core = {
+					add_core = GOD
+				}
+			}
+			change_tag = GOD
+			capital = 749
+			add_accepted_culture = north_italian
+			add_accepted_culture = south_italian
+			any_country = {
+				limit = {
+					is_culture_group = italian
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	disband_the_jesuits = {
+		picture = jesuits
+		potential = {
+			tag = PAP
+			NOT = { has_country_flag = disbanded_the_jesuits }
+			exists = yes
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			year = 1770
+			part_of_sphere = yes
+		}
+		
+		effect = {
+			prestige = 5
+			any_country = {
+				limit = {
+					has_country_flag = catholic_country
+				}
+				relation = {
+					who = THIS
+					value = 25
+				}
+			}
+			any_pop = {
+				militancy = -3
+			}
+			random_country = {
+				limit = {
+					tag = JER
+					vassal_of = THIS
+					exists = yes
+				}
+				JER = {
+					annex_to = THIS
+				}
+			}
+			set_country_flag = disbanded_the_jesuits
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+#Claim Venice#
+	claim_venice = {
+		picture = venetian_ambition
+		potential = {
+		tag = GOD
+			NOT = { has_country_flag = god_wants_venice
+			}
+			exists = yes
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = god_wants_venice
+			badboy = 10
+			VEN = {
+				all_core = {
+				add_core = GOD
+				}
+			}
+			any_country = {
+				limit = {
+					tag = VEN
+					vassal_of = THIS
+					exists = yes
+				}
+				annex_to = THIS
+			}
+		}
+	}
+#treaty of ouchy#
+	treaty_of_ouchy = {
+	picture = latinempire
+	potential = {
+		tag = GOD
+		has_country_flag = latin_empire_claimed
+		NOT = { has_country_flag = treaty_of_ouchy }
+		exists = yes
+		has_recently_lost_wars = no
+	}
+		
+		allow = {
+			money = 100000
+			truce_with = TUR
+			TUR = {
+				NOT = { war_with = THIS }
+				is_disarmed = yes
+			}
+		}
+		effect = {
+			set_country_flag = treaty_of_ouchy
+			TUR = {
+				capital = 876
+				release = LTN
+				release = ISR
+				country_event = 96057
+			}
+			GOD = {
+				create_vassal = LTN
+				create_vassal = ISR
+			}
+			ISR = {
+				government = absolute_monarchy
+			}
+			LTN = {
+				government = absolute_monarchy
+			}
+		}
+	}
+}

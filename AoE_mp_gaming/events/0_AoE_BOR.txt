@@ -724,7 +724,67 @@ country_event = {
 		}
 	}
 }
-
+country_event = {
+	id = 171120
+	title = "Unification of Bourbon Empire!"
+	desc = "We united France and Spain"
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = "Wtf based?"
+		FROM = {
+			country_event = 171121
+		}
+	}
+}
+country_event = {
+	id = 171121
+	title = "Unification of Bourbon Empire!"
+	desc = "We united France and Spain"
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = "Wtf based?"
+			all_core = {
+				add_core = FSU
+				remove_core = THIS
+			}
+			random_country = {
+				limit = {
+					tag = BOR
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = french
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = SPC
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = spanish
+				}
+				annex_to = THIS
+			}
+			change_tag = FSU
+			prestige = 25
+	}
+}
 #This is for venice bc for some reason it doesnt work when in the venice file#
 country_event = {
 	id = 712342
