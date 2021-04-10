@@ -713,9 +713,9 @@ country_event = {
 	option = {
 		name = "Worrisome"
 		FROM = {
-			diplomatinc_influence = {
-			who = THIS
-			value = -200
+			diplomatic_influence = {
+				who = THIS
+				value = -200
 			}
 		}
 		relation = {

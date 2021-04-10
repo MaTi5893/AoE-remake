@@ -3,19 +3,4 @@ controller = VNS
 add_core = VNS
 trade_goods = cattle
 life_rating = 35
-1861.1.1 = {
-owner = THC
-controller = THC
-add_core = THC
-}
-1861.1.1 = {
-	controller = CSA
-	owner = CSA
-	add_core = CSA
-	state_building = {
-		level = 1
-		building = canned_food_factory
-		upgrade = yes
-	}
-}
-1861.1.1 = { railroad = 2 }
+

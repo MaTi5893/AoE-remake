@@ -31,64 +31,64 @@ MAH = {
 }
 army = {
 	name = "The Bengal Army"
-	location = 1256
+	location = 1236
 	regiment = {
 		name= "3rd Queen Alexandra's Own Gurkha"
 		type = infantry
-		home = 1238
+		home = 1240
 	}
 	regiment = {
 		name= "1st Bengal Native Infantry"
 		type = irregular
-		home = 1256
+		home = 1270
 	}
 
 	regiment = {
 		name= "2nd Bengal Native Infantry"
 		type = irregular
-		home = 1256
+		home = 1270
 	}
 
 	regiment = {
 		name= "3rd Bengal Native Infantry"
 		type = irregular
-		home = 1249
+		home = 1272
 	}
 
 	regiment = {
 		name= "Governor General's Bodyinfantry"
 		type = cavalry
-		home = 1257
+		home = 1276
 	}
 
 	regiment = {
 		name= "1st Bengal Light Cavalry"
 		type = cavalry
-		home = 1251
+		home = 1278
 	}
 
 	regiment = {
-		name= "4th Bengal Native Infantry"
-		type = irregular
-		home = 1255
+		name= "4th Bengal Native Cavalry"
+		type = cavalry
+		home = 1275
 	}
 
 	regiment = {
-		name= "1st Bengal Native Artillery"
-		type = infantry
+		name= "1st Bengal Native Cavalry"
+		type = cavalry
 		home = 1252
 	}
 
 	regiment = {
-		name= "2nd Bengal Native Artillery"
-		type = infantry
-		home = 1254
+		name= "2nd Bengal Native Cavalry"
+		type = cavalry
+		home = 1274
 	}
 
 	regiment = {
-		name= "3rd Bengal Native Artillery"
-		type = infantry
-		home = 1254
+		name= "3rd Bengal Native Cavalry"
+		type = cavalry
+		home = 1282
 	}
 
 }
@@ -133,19 +133,19 @@ army = {
 
 	regiment = {
 		name= "2nd Bombay Native Artillery"
-		type = infantry
+		type = cavalry
 		home = 1302
 	}
 
 	regiment = {
 		name= "3rd Bombay Native Artillery"
-		type = infantry
+		type = cavalry
 		home = 1317
 	}
 	
 	regiment = {
 		name= "2nd King Edward VII's Own Gurkha"
-		type = infantry
+		type = cavalry
 		home = 1296
 	}
 }

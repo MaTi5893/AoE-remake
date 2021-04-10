@@ -254,7 +254,10 @@ political_decisions = {
 				any_pop = {
 					literacy = 0.1
 				}
-				labourers = {
+				any_pop = {
+					limit = {
+						type = labourers
+					}
 					reduce_pop = 1.5
 				}
 			}	
