@@ -31,22 +31,14 @@ mountain_warfare = {
 		modifier = {
 			factor = 5
 			any_owned_province = {
-				OR = {
 					terrain = mountain
-					terrain = montane_tundra
-					terrain = montane_forest
-				}
-			}
+			
 		}
 		modifier = {
 			factor = -10
 			NOT = {
 				any_owned_province = {
-					OR = {
-						terrain = mountain
-						terrain = montane_tundra
-						terrain = montane_forest
-					}
+					terrain = mountain
 				}
 			}
 		}

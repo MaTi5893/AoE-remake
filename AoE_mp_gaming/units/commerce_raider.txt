@@ -34,12 +34,9 @@ commerce_raider = {
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		artillery = 0.1
-		canned_food = 0.16
-		coal = 0.25
-		ammunition = 0.1
-		explosives = 0.1
-		clipper_convoy = 1
+		clipper_convoy = 0.3  #origionally 12 steamers
+		artillery = 0.08      #6
+		#canned_food = 0.1     #1   total 19
 	}
 	
 	#Naval Abilties

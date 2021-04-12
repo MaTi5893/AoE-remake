@@ -32,12 +32,13 @@ dreadnought = {
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		clipper_convoy = 3
-		artillery = 0.8
-		canned_food = 1
-		ammunition = 0.8
-		luxury_clothes = 0.05
-		tobacco = 2
+		steamer_convoy = 4.0  #102
+		artillery = 0.15         #50
+		#canned_food = 0.5     #5
+		#telephones = 0.2      #3.2
+		#radio = 0.2           #3.2
+		#steel = 5	      #23.5
+		fuel = 1.75           #41.25 total 228.15
 	}
 	
 	#Naval Abilties

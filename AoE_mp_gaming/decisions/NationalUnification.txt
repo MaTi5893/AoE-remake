@@ -1,0 +1,123 @@
+political_decisions = {
+	reichsland_elsass = {
+		potential = {
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			owns = 410
+			owns = 409
+			owns = 412
+			NOT = {
+				has_global_flag = germany_has_renamed_elsass
+			}
+		}
+		
+		allow = {
+			prestige = 10
+		}
+		
+		effect = {
+			410 = {
+				change_province_name = "Kolmar"
+			}
+			409 = {
+				change_province_name = "Straﬂburg"
+				state_scope = {
+					change_region_name = "Elsaﬂ-Lothringen"
+				}
+			}
+			prestige = 5
+			set_global_flag = germany_has_renamed_elsass
+		}
+	}
+	
+	restore_alsace = {
+		potential = {
+			tag = FRA
+			has_global_flag = germany_has_renamed_elsass
+			owns = 410
+			owns = 409
+			owns = 412
+		}
+		
+		allow = {
+			prestige = 10
+		}
+		
+		effect = {
+			410 = {
+				change_province_name = "Colmar"
+			}
+			409 = {
+				change_province_name = "Strasbourg"
+				state_scope = {
+					change_region_name = "Alsace-Lorraine"
+				}
+			}
+			prestige = 10
+			clr_global_flag = germany_has_renamed_elsass
+		}
+	}
+	
+
+	unite_moldavia_wallachia = {
+		potential = {
+			OR = {
+				tag = WAL
+				tag = MOL
+			}
+			NOT = { exists = ROM }
+		}
+
+		allow = {
+			OR = {
+				state_n_government = 1
+				is_vassal = no
+			}
+			WAL = {
+				OR = {
+					in_sphere = THIS
+					vassal_of = THIS
+					all_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			MOL = {
+				OR = {
+					in_sphere = THIS
+					vassal_of = THIS
+					all_core = {
+						owned_by = THIS
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 10
+			change_tag = ROM
+			random_country = {
+				limit = {
+					tag = WAL
+					exists = yes
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = MOL
+					exists = yes
+				}
+				annex_to = THIS
+			}
+			capital = 664
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

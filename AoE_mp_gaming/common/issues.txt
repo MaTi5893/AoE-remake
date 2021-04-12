@@ -454,31 +454,36 @@ political_reforms = {
 			}
 		}
 	}
-	trade_unions = {
+	trade_unions = { #Executive power
 		next_step_only = yes
-		no_trade_unions = {
+		no_trade_unions = { #One man to rule
 			suppression_points_modifier = 0.1
+			ruling_party_support = 0.05
 			allow = {
 			    NOT = { has_country_flag = indian_campaign_target_flag }
 			}
 		}
-		state_controlled = {
+		state_controlled = { #Advisor Council
 			social_reform_desire = 0.1
 			global_immigrant_attract = 0.01
+			diplomatic_points_modifier = 0.1
 			allow = {
 			    NOT = { has_country_flag = indian_campaign_target_flag }
 			}
 		}
-		non_socialist = {
+		non_socialist = { #Delegated Ministers
 			social_reform_desire = 0.2
 			global_immigrant_attract = 0.02
+			issue_change_speed = -0.05
+			influence_modifier = 0.1
 			allow = {
 			    NOT = { has_country_flag = indian_campaign_target_flag }
 			}
 		}
-		all_trade_unions = {
+		all_trade_unions = { #Gabinet
 			social_reform_desire = 0.3
 			global_immigrant_attract = 0.03
+			mobilization_economy_impact = -0.05
 			allow = {
 			    NOT = { has_country_flag = indian_campaign_target_flag }
 			}

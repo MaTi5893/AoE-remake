@@ -142,9 +142,7 @@ flintlock_rifles = {
 	year = 1600
 	cost = 3600
 	unciv_military = yes
-	
 	activate_unit = infantry
-	combat_width = -1
 
 	ai_chance = {
 		factor = 2
@@ -156,8 +154,7 @@ muzzle_loaded_rifles = {
 	cost = 7200
 	unciv_military = yes
 	activate_unit = engineer
-	
-	combat_width = -2
+	combat_width = 2
 
 	ai_chance = {
 		factor = 4
@@ -169,10 +166,9 @@ breech_loaded_rifles = {
 	cost = 10800
 	
 	activate_unit = guard
-	
+	combat_width = 4
 	unciv_military = yes
 
-	#combat_width = -2
 	default_organisation = 5
 	
 	ai_chance = {
@@ -185,7 +181,7 @@ machine_guns = {
 	cost = 14400
 	unciv_military = yes
 	
-	combat_width = -2
+	combat_width = -6
 	#colonial_life_rating = -10 
 	ai_chance = {
 		factor = 6
@@ -199,7 +195,7 @@ bolt_action_rifles = {
 	unciv_military = yes
 	unit = 1
 	
-	# combat_width = -5
+	combat_width = -1
 	
 	ai_chance = {
 		factor = 3
@@ -212,7 +208,7 @@ modern_divisional_structure = {
 	unciv_military = yes
 
 	unit = 2
-	# combat_width = -5
+	combat_width = -1
 		infantry = {
 			attack = 1
 			supply_consumption = 0.25
@@ -301,7 +297,7 @@ bronze_muzzle_loaded_artillery = {
 	cost = 3600
 	unciv_military = yes
 	activate_unit = artillery
-	
+
 	ai_chance = {
 		factor = 4
 	}
@@ -684,7 +680,7 @@ great_war_experience = {
 }
 army_leadership_7 = {
 	area = army_leadership
-	year = 1790
+	year = 1795
 	cost = 25200
 	unciv_military = yes
 	morale = 0.25

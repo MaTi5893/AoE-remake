@@ -1085,10 +1085,6 @@ pre_planned_depot_systems = {
 	chance = {
 		base = 2
 		modifier = {
-			factor = 2
-			invention = sequence_planning
-		}
-		modifier = {
 			factor = 1
 			invention = distribution_channels
 		}

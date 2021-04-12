@@ -136,6 +136,30 @@ grenade = {
 		}
 	}
 }
+gas_attack_capability = {
+	limit = { army_doctrine_7 = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+			government = fascist_dictatorship
+			government = proletarian_dictatorship
+			}
+		}
+		modifier = {
+			factor = 2
+			army_leadership_7 = 1
+		}
+		modifier = {
+			factor = 25
+			has_country_flag = napoleon_general
+		}			
+	}
+	effect = {
+		gas_attack = yes
+	}
+}
 elite_troops = {
 	limit = { breech_loaded_rifles = 1 invention = grenade }
 	chance = {

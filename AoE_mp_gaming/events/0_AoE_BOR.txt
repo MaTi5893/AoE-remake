@@ -459,7 +459,7 @@ country_event = {
 #####
 country_event = {
 	id = 171109
-	title = "France and the third estate"
+	title = "France and the Third Estate"
 	desc = "EVTDESC171109"
 	picture = peasants
 	fire_only_once = yes
@@ -471,6 +471,7 @@ country_event = {
 			average_militancy = 4
 			has_recently_lost_war = yes
 		}
+		year = 1750
 		OR = {
 			blockade = 0.85
 			poor_tax = 0.85
