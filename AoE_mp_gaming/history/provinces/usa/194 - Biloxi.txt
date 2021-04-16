@@ -1,17 +1,8 @@
-owner = CHT
-controller = CHT
+owner = BOR
+controller = BOR
+add_core = FCA
+add_core = ULA
 add_core = CHT
 add_core = FLO
 trade_goods = cotton
 life_rating = 35
-1861.1.1 = {
-	controller = CSA
-	owner = CSA
-	add_core = CSA
-	state_building = {
-		level = 1
-		building = fabric_factory
-		upgrade = yes
-	}
-}
-1861.1.1 = { railroad = 3 }
