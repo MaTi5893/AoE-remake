@@ -1,0 +1,46 @@
+political_decisions = {
+
+###Majapahit###
+
+	claim_south_borneo = {
+		picture = borneo
+		potential = {
+			tag = MJA
+			NOT = {
+				has_country_flag = south_borneo_claimed
+			}
+			exists = yes
+		}
+		
+		allow = {
+			naval_decision_making = 1
+			state_n_government = 1
+		}
+		
+		effect = {
+			2637 = { 
+				add_core = THIS 
+			}	#ketapang
+			1427 = {
+				add_core = THIS 
+			}	#Kota Waringin
+			1426 = {
+				add_core = THIS 
+			}	#Pontianak
+			2665 = {
+				add_core = THIS 
+			}	#Sambas
+			1428 = {
+				add_core = THIS 
+			}	#Sintang
+			1423 = {
+				add_core = THIS
+			}	#Banjarmasin
+			1422 = {
+				add_core = THIS
+			}	#Muralave
+			badboy = 3
+			set_country_flag = south_borneo_claimed
+		}
+	}		
+}

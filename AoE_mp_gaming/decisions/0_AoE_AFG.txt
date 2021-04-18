@@ -1,0 +1,75 @@
+political_decisions = {
+	
+	form_hotak_empire = {
+		potential = {
+			tag = AFG
+			NOT = { HTK = { exists = yes } }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			military_score = 20
+			all_core = {
+				owned_by = THIS
+			}
+		}
+		effect = {
+			TUR_935 = {
+				add_core = THIS
+			}
+			934 = { add_core = THIS }
+			929 = { add_core = THIS }
+			926 = { add_core = THIS }
+			927 = { add_core = THIS }
+			892 = { add_core = THIS }
+			TUR_923 = {
+				add_core = THIS
+			}
+			all_core = {
+				add_core = HTK
+				remove_core = AFG
+			}
+			change_tag = HTK
+			prestige = 25
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	join_hotak_empire = {
+		potential = {
+			tag = AFG
+			HTK = { exists = yes war = no }
+			exists = yes
+		}
+		allow = {
+			war = no
+			OR = {
+				is_vassal = no
+				overlord = { tag = HTK }
+			}
+			OR = {
+				sphere_owner = { is_sphere_leader_of = HTK }
+				part_of_sphere = no
+			}
+			HTK = {
+				exists = yes
+				owns = 1215 
+				neighbour = THIS
+				war = no
+				is_vassal = no
+			}
+		}
+		effect = {
+			AFG = {
+				all_core = {
+					add_core = HTK
+				}
+			}
+			HTK = {
+				inherit = AFG
+			}
+			set_country_flag = claimed_iraq
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

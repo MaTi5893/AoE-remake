@@ -1,0 +1,899 @@
+country_event = {
+	id = 1821000
+	title = "The Seccession of Central America"
+	desc = "EVTDESC1821000"
+	fire_only_once = yes
+	allow_multiple_instances = yes
+	picture = traitor
+	
+	trigger = {
+		tag = MEX
+		owns = 2186
+	}
+	
+	mean_time_to_happen = {
+		months = 84
+		modifier = {
+			factor = 0.9
+			OR = {
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = conservative
+			}
+		}
+		
+		modifier = {
+			factor = 0.8
+			poor_tax = 0.9
+		}
+		modifier = {
+			factor = 0.7
+			militancy = 5
+		}
+		modifier = {
+			factor = 0.6
+			militancy = 4
+		}
+		modifier = {
+			factor = 0.5
+			militancy = 4
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.4
+			militancy = 5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.3
+			militancy = 6
+			war_exhaustion = 15
+		}
+	}
+	
+	option = {
+		name = "Death to United Central America!"
+		relation = { who = UCA value = -100 }
+        any_owned = {
+            limit = {
+                is_core = ELS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = HON
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = UCA
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = NIC
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = COS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -10
+                war = {
+                    target = UCA
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = UCA
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+        UCA = {
+            capital = 2628
+            government = democracy
+            political_reform = mandatory_service
+            political_reform = non_secret_ballots
+            political_reform = universal_weighted_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            set_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+			any_owned = {
+				remove_core = THIS
+			}
+        }
+
+        ##Debt Law
+        random_owned = {
+            limit = { owner = { debt_law = peonage } }
+            UCA = { political_reform = peonage }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = debtors_prisons } }
+            UCA = { political_reform = debtors_prisons }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            UCA = { political_reform = bankruptcy }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            UCA = { political_reform = bankruptcy }
+        }
+
+        ##Trade Unions
+        random_owned = {
+            limit = { owner = { trade_unions = state_controlled } }
+            UCA = { political_reform = state_controlled }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = non_socialist } }
+            UCA = { political_reform = non_socialist }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = all_trade_unions } }
+            UCA = { political_reform = all_trade_unions }
+        }
+
+
+        #Child labor
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_restricted } }
+            UCA = { social_reform = child_labor_restricted }
+        }
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_illegal } }
+            UCA = { social_reform = child_labor_illegal }
+        }
+
+        ##Health Care
+        random_owned = {
+            limit = { owner = { health_care = trinket_health_care } }
+            UCA = { social_reform = trinket_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = low_health_care } }
+            UCA = { social_reform = low_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = acceptable_health_care } }
+            UCA = { social_reform = acceptable_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = good_health_care } }
+            UCA = { social_reform = good_health_care }
+        }
+
+        ##Schools
+        random_owned = {
+            limit = { owner = { school_reforms = low_schools } }
+            UCA = { social_reform = low_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = acceptable_schools } }
+            UCA = { social_reform = acceptable_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = good_schools } }
+            UCA = { social_reform = good_schools }
+        }
+
+        ##Penal System
+        random_owned = {
+            limit = { owner = { penal_system = colonial_transportation } }
+            UCA = { social_reform = colonial_transportation }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = incarceration } }
+            UCA = { social_reform = incarceration }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = rehabilitation } }
+            UCA = { social_reform = rehabilitation }
+        }
+
+
+        ##Min Wage
+        random_owned = {
+            limit = { owner = { wage_reform = trinket_wage } }
+            UCA = { social_reform = trinket_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = low_minimum_wage } }
+            UCA = { social_reform = low_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = acceptable_minimum_wage } }
+            UCA = { social_reform = acceptable_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = good_minimum_wage } }
+            UCA = { social_reform = good_minimum_wage }
+        }
+
+        ##Work Hours
+        random_owned = {
+            limit = { owner = { work_hours = fourteen_hours } }
+            UCA = { social_reform = fourteen_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = twelve_hours } }
+            UCA = { social_reform = twelve_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = ten_hours } }
+            UCA = { social_reform = ten_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = eight_hours } }
+            UCA = { social_reform = eight_hours }
+        }
+
+        ##Safety Regulations
+        random_owned = {
+            limit = { owner = { safety_regulations = trinket_safety } }
+            UCA = { social_reform = trinket_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = low_safety } }
+            UCA = { social_reform = low_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = acceptable_safety } }
+            UCA = { social_reform = acceptable_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = good_safety } }
+            UCA = { social_reform = good_safety }
+        }
+
+        ##unemployment_subsidies
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = trinket_subsidies } }
+            UCA = { social_reform = trinket_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = low_subsidies } }
+            UCA = { social_reform = low_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
+            UCA = { social_reform = acceptable_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = good_subsidies } }
+            UCA = { social_reform = good_subsidies }
+        }
+
+        ##pensions
+        random_owned = {
+            limit = { owner = { pensions = trinket_pensions } }
+            UCA = { social_reform = trinket_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = low_pensions } }
+            UCA = { social_reform = low_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = acceptable_pensions } }
+            UCA = { social_reform = acceptable_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = good_pensions } }
+            UCA = { social_reform = good_pensions }
+        }
+		set_country_flag = kill_UCA_go
+        ai_chance = {
+            factor = 95
+        }
+    }
+	
+	option = {
+        name = "Let them go."
+        set_country_flag = let_UCA_go
+        any_owned = {
+            limit = {
+                is_core = ELS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = HON
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = UCA
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = NIC
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = COS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+        relation = { who = UCA value = -100 }
+		UCA = {
+			any_owned = {
+				remove_core = THIS
+			}
+		}
+        prestige = -25
+        casus_belli = {
+            target = UCA
+            type = acquire_state
+            months = 60
+        }
+        casus_belli = {
+            target = UCA
+            type = cut_down_to_size
+            months = 60
+        }
+		ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+	}
+	
+	option = {
+		name = "Play Central America"
+		any_owned = {
+            limit = {
+                is_core = ELS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = HON
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = UCA
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = NIC
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = {
+                is_core = COS
+            }
+			add_core = UCA
+            secede_province = UCA
+        }
+		any_owned = {
+            limit = { is_core = THIS }
+            secede_province = UCA
+        }
+		UCA = {
+			any_owned = {
+				remove_core = THIS
+			}
+		}
+		relation = { who = UCA value = -100 }
+        any_owned = {
+            limit = { is_core = THIS }
+            remove_province_modifier = liberal_agitation
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -10
+                war = {
+                    target = UCA
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = UCA
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+        UCA = {
+            capital = 387
+            government = democracy
+            political_reform = mandatory_service
+            political_reform = non_secret_ballots
+            political_reform = universal_weighted_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            set_country_flag = constitutional_monarchy_gov
+            clr_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+        }
+
+        ##Debt Law
+		random_owned = {
+            limit = { owner = { debt_law = peonage } }
+            UCA = { political_reform = peonage }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = debtors_prisons } }
+            UCA = { political_reform = debtors_prisons }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            UCA = { political_reform = bankruptcy }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            UCA = { political_reform = bankruptcy }
+        }
+
+        ##Trade Unions
+        random_owned = {
+            limit = { owner = { trade_unions = state_controlled } }
+            UCA = { political_reform = state_controlled }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = non_socialist } }
+            UCA = { political_reform = non_socialist }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = all_trade_unions } }
+            UCA = { political_reform = all_trade_unions }
+        }
+
+
+        #Child labor
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_restricted } }
+            UCA = { social_reform = child_labor_restricted }
+        }
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_illegal } }
+            UCA = { social_reform = child_labor_illegal }
+        }
+
+        ##Health Care
+        random_owned = {
+            limit = { owner = { health_care = trinket_health_care } }
+            UCA = { social_reform = trinket_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = low_health_care } }
+            UCA = { social_reform = low_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = acceptable_health_care } }
+            UCA = { social_reform = acceptable_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = good_health_care } }
+            UCA = { social_reform = good_health_care }
+        }
+
+        ##Schools
+        random_owned = {
+            limit = { owner = { school_reforms = low_schools } }
+            UCA = { social_reform = low_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = acceptable_schools } }
+            UCA = { social_reform = acceptable_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = good_schools } }
+            UCA = { social_reform = good_schools }
+        }
+
+        ##Penal System
+        random_owned = {
+            limit = { owner = { penal_system = colonial_transportation } }
+            UCA = { social_reform = colonial_transportation }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = incarceration } }
+            UCA = { social_reform = incarceration }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = rehabilitation } }
+            UCA = { social_reform = rehabilitation }
+        }
+
+
+        ##Min Wage
+        random_owned = {
+            limit = { owner = { wage_reform = trinket_wage } }
+            UCA = { social_reform = trinket_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = low_minimum_wage } }
+            UCA = { social_reform = low_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = acceptable_minimum_wage } }
+            UCA = { social_reform = acceptable_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = good_minimum_wage } }
+            UCA = { social_reform = good_minimum_wage }
+        }
+
+        ##Work Hours
+        random_owned = {
+            limit = { owner = { work_hours = fourteen_hours } }
+            UCA = { social_reform = fourteen_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = twelve_hours } }
+            UCA = { social_reform = twelve_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = ten_hours } }
+            UCA = { social_reform = ten_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = eight_hours } }
+            UCA = { social_reform = eight_hours }
+        }
+
+        ##Safety Regulations
+        random_owned = {
+            limit = { owner = { safety_regulations = trinket_safety } }
+            UCA = { social_reform = trinket_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = low_safety } }
+            UCA = { social_reform = low_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = acceptable_safety } }
+            UCA = { social_reform = acceptable_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = good_safety } }
+            UCA = { social_reform = good_safety }
+        }
+
+        ##unemployment_subsidies
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = trinket_subsidies } }
+            UCA = { social_reform = trinket_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = low_subsidies } }
+            UCA = { social_reform = low_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
+            UCA = { social_reform = acceptable_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = good_subsidies } }
+            UCA = { social_reform = good_subsidies }
+        }
+
+        ##pensions
+        random_owned = {
+            limit = { owner = { pensions = trinket_pensions } }
+            UCA = { social_reform = trinket_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = low_pensions } }
+            UCA = { social_reform = low_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = acceptable_pensions } }
+            UCA = { social_reform = acceptable_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = good_pensions } }
+            UCA = { social_reform = good_pensions }
+        }
+		change_tag_no_core_switch = UCA
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+country_event = {
+	id = 1821001
+	title = "Calls For Absolutism"
+	desc = "EVTDESC1821001"
+	fire_only_once = yes
+	picture = mexico
+	
+	
+	trigger = {
+		tag = MEX
+		OR = {
+			government = trade_monarchy
+			government = hms_government
+			government = prussian_constitutionalism
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Seize to power for the king himself"
+		political_reform = none_voting
+		political_reform = appointed
+		any_pop = {
+			limit = {
+				pop_majority_ideology = liberal
+			}
+			militancy = 6
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = communist
+			}
+			militancy = 8
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "That would make us the same as Spanish!"
+		any_pop = {
+			limit = {
+				pop_majority_ideology = conservative
+			}
+			militancy = 6
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = reactionary
+			}
+			militancy = 8
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 1821002
+	title = "Imperial Conquests?"
+	desc = "EVTDESC1821002"
+	fire_only_once = yes
+	picture = mexico
+	
+	
+	trigger = {
+		tag = MEX
+		OR = {
+			government = trade_monarchy
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+		}
+		war = no
+		NOT = {
+			truce_with = SPA
+			truce_with = SPC
+		}
+		war_policy = jingoism
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "We must expand!"
+		any_owned = {
+			owner = {
+				limit = {
+					SPA = {
+						exists = yes
+					}
+				}
+				war = {
+					target = SPA
+					attacker_goal = { casus_belli = acquire_state state_province_id = 2209  }
+					defender_goal = { casus_belli = humiliate }
+					call_ally = no
+				}
+			}
+		}
+		any_owned = {
+			owner = {
+				limit = {
+					SPC = {
+						exists = yes
+					}
+				}
+				war = {
+					target = SPC
+					attacker_goal = { casus_belli = acquire_state state_province_id = 2209  }
+					defender_goal = { casus_belli = humiliate }
+					call_ally = no
+				}
+			}
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "We aren't ready."
+		prestige = -15
+		ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+	}
+}
+country_event = {
+	id = 1821003
+	title = "Philippiean conquests"
+	desc = "EVTDESC1821003"
+	picture = mexico
+	fire_only_once = yes
+	
+	
+	trigger = {
+		tag = MEX
+		war = no
+		war_policy = jingoism
+		SPA_1459 = {
+			owned_by = THIS
+		}
+		SPA_1463 = {
+			owned_by = THIS
+		}
+		SPA_1455 = {
+			owned_by = THIS
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Glorious our Empire is!"
+		SPA_1459 = {
+			add_core = THIS
+		}
+		SPA_1463 = {
+			add_core = THIS
+		}
+		SPA_1455 = {
+			add_core = THIS
+		}
+	}
+}

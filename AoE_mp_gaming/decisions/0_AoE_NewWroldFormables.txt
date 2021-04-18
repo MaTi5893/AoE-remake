@@ -42,6 +42,21 @@ political_decisions = {
 			all_core = { add_core = GCO }
 			all_core = { remove_core = THIS }
 			change_tag = GCO
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = GUA
+						is_core = NIC
+						is_core = ELS
+						is_core = HON
+						is_core = COS
+						is_core = PNM
+					}
+				}
+				add_core = UCA
+			}
+			release_vassal = UCA
+			release_vassal = UCA
 		}
 
 		ai_will_do = {
@@ -67,6 +82,8 @@ political_decisions = {
 			all_core = { add_core = LPL }
 			all_core = { remove_core = THIS }
 			change_tag = LPL
+			release_vassal = BOL
+			release_vassal = BOL
 		}
 
 		ai_will_do = {
@@ -92,6 +109,8 @@ political_decisions = {
 			all_core = { add_core = PEU }
 			all_core = { remove_core = THIS }
 			change_tag = PEU
+			release_vassal = CHL
+			release_vassal = CHL
 		}
 
 		ai_will_do = {

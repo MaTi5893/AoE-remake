@@ -80,6 +80,7 @@ political_decisions = {
 			inorganic_chemistry = 1
 			ad_hoc_money_bill_printing = 1
 			high_pressure_steam_engine = 1
+			NOT = { average_militancy = 2 }
 		}
 		effect = {
 			set_country_flag = encouraged_protestant_migration
@@ -90,97 +91,7 @@ political_decisions = {
 			#		duration = 5475
 			#	}
 			#}
-			add_country_modifier = {
-				name = land_reform_pru
-				duration = 5475
-			}
-			PRU_578 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						militancy = 5
-						NOT = { has_pop_culture = south_italian }
-					}
-					
-					move_pop = 549
-				}
-			}
-			PRU_575 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						militancy = 5
-					} 
-					move_pop = 550
-				}
-			}
-			PRU_570 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 551 
-				}
-			}
-			BAV_599 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 552
-				}
-			}
-			BAV_595 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 553 
-				}
-			}
-			AUS_625 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 679 
-				}
-			}
-			AUS_626 = { 
-				any_pop = { 
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 680 
-				}
-			}
-			PRU_554 = { 
-				any_pop = {
-					limit = { 
-						has_pop_religion = protestant
-						NOT = { has_pop_culture = south_italian }
-						NOT = { has_pop_culture = north_italian }
-						militancy = 5
-					} 
-					move_pop = 681 
-				}
-			}
+	
 		}
 		ai_will_do = {					
 		factor = 1

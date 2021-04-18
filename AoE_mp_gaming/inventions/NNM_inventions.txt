@@ -168,24 +168,14 @@ spirit_of_freedom = {
 
 the_dark_continent = {
 	limit = {
-		 
 		revolution_n_counterrevolution = 1
-		year = 1890
+		year = 1745
 	}
 	chance = {
 		base = 0
 		modifier = {
 			factor = -60
-			NOT = { year = 1890 }
-		}
-		modifier = {
-			factor = -100
-			NOT = { is_greater_power = yes }
-			is_our_vassal = CNG
-			OR = {
-				has_country_flag = congo_master
-				has_country_flag = historical_congo
-			}
+			NOT = { year = 1750 }
 		}
 		modifier = {
 			factor = 20

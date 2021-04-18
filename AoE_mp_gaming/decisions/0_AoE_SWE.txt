@@ -63,12 +63,13 @@ political_decisions = {
 		
 		allow = {
 			has_recently_lost_war = no
+			truce_with = RUS
 			OR = {
-				state_n_government = 1
-				AND = {
-					truce_with = RUS
-					year = 1720
-				}
+			year = 1720
+			state_n_government = 1
+			}
+			1008 = {
+				controlled_by = THIS
 			}
 			owns = 349
 			owns = 350

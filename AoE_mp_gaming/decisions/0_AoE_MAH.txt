@@ -1,0 +1,187 @@
+political_decisions = {
+	mughal_conquest = {
+		picture = west_india_mah
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = absolute_mughal_conquest }
+			exists = yes
+		}
+		allow = {
+			military_score = 50
+			OR = {
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+			nationalism_n_imperialism = 1
+			owns = 1291
+		}
+		effect = {
+			prestige = 30
+			badboy = 15
+			set_country_flag = absolute_mughal_conquest
+			NAG_1277 = {
+				add_core = THIS
+			}
+			ENG_1275 = {
+				add_core = THIS
+			}
+			1269 = {
+				add_core = THIS
+			}
+			1264 = {
+				add_core = THIS
+			}
+			1268 = {
+				add_core = THIS
+			}
+			1305 = {
+				add_core = THIS
+			}
+			1279 = {
+				add_core = THIS
+			}
+			ENG_1261 = {
+				add_core = THIS
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+#	abolish_mughal_supremacy = {
+#		picture = mughal_empire
+#		potential = {
+#			tag = MAH
+#			NOT = { has_country_flag = abolished_mughal_supremacy }
+#		}
+#		allow = {
+#			is_greater_power = yes
+#			OR = {
+#				pensions = acceptable_pensions
+#				pensions = good_pensions
+#			}
+#			MUG = {
+#				exists = no
+#			}
+#		}
+#		effect = {
+#			prestige = 30
+#			badboy = 15
+#			set_country_flag = abolished_mughal_supremacy
+#			any_owned = {
+#				limit = {
+#					is_core = MUG
+#				}
+#				add_core = THIS
+#				remove_core = MUG
+#			}
+#		}
+#		ai_will_do = { factor = 1 }
+#	}
+	
+	maratha_empire = {
+		picture = maratha_empire
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = claimed_maratha_empire }
+			exists = yes
+		}
+		allow = {
+			is_greater_power = yes
+			OR = {
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+			HYD_1283 = {
+				owned_by = THIS
+			}
+			ENG_1261 = {
+				owned_by = THIS
+			}
+			OR = {
+				AND = {
+					ENG_1251 = {
+						owned_by = THIS
+					}
+					ENG_1252 = {
+						owned_by = THIS
+					}
+				}
+				BNG = {
+					vassal_of = THIS
+				}
+			}
+			any_core = {
+				owned_by = THIS
+			}
+			MUG = {
+				exists = no
+			}
+		}
+		
+		effect = {
+			prestige = 30
+			badboy = 15
+			set_country_flag = claimed_maratha_empire
+			add_country_modifier = {
+				name = indian_raj
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	modernize_our_weaponary = {
+		picture = new_world_militia
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = modernize_our_weaponary }
+			exists = yes
+		}
+		allow = {
+			infiltration = 1
+			OR = {
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+			OR = {
+				relation = {
+					who = GBR
+					value = 100
+				}
+				relation = {
+					who = BOR
+					value = 100
+				}
+			}
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			years_of_research = 0.08
+		}
+	}
+	
+	government_reform_mah = {
+		picture = maratha_empire
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = government_reformed_mah }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+			OR = {
+				safety_regulations = acceptable_safety
+				safety_regulations = good_safety
+			}
+			money = 100000
+		}
+		effect = {
+			political_reform = unitary
+			set_country_flag = government_reformed_mah
+		}
+	}
+}

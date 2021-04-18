@@ -25,26 +25,26 @@ political_decisions = {
 			ai_will_do = { factor = 1 }
 		}
 		
-		renew_the_eighty_years_war = {
-			potential = {
-				tag = NET
-				OR = {
-					neighbour = SPA
-					neighbour = SPC
-				}
-				NOT = { has_country_flag = renewed_the_eighty_years_war }
-			}
-			allow = {
-				NOT = { truce_with = SPA }
-				NOT = { truce_with = SPC }
-				war = no
-				war_policy = jingoism
-			}
-			effect = {
-				war_exhaustion = 5
-				country_event = 1581052
-			}
-		}
+		#renew_the_eighty_years_war = {
+		#	potential = {
+		#		tag = NET
+		#		OR = {
+		#			neighbour = SPA
+		#			neighbour = SPC
+		#		}
+		#		NOT = { has_country_flag = renewed_the_eighty_years_war }
+		#	}
+		#	allow = {
+		#		NOT = { truce_with = SPA }
+		#		NOT = { truce_with = SPC }
+		#		war = no
+		#		war_policy = jingoism
+		#	}
+		#	effect = {
+		#		war_exhaustion = 5
+		#		country_event = 1581052
+		#	}
+		#}
 		unite_the_netherlands = {
 			picture = united_netherlands
 			potential = {

@@ -42,21 +42,21 @@ political_decisions = {
 				government = archduchy
 				government = elective_monarchy_oligarchy
 			}
-			tech_school = unciv_tech_school
 			NOT = { has_recently_lost_war = yes }
 			exists = yes
+			civilized = no
 		}
 		allow = {
 			wage_reform = no_minimum_wage
 			religious_policy = moralism
-			prestige = 500
+			prestige = 100
 		}
 		effect = {
 			set_country_flag = deified_ruler
-			prestige = 75
+			prestige = 25
 			add_country_modifier = {
 				name = deified_ruler
-				duration = -1
+				duration = 3650
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -129,6 +129,7 @@ political_decisions = {
 			NOT = { tag = TUR }
 			NOT = { tech_school = unciv_tech_school }
 			exists = yes
+			civilized = yes
 		}
 		allow = {
 			OR = {
@@ -153,6 +154,7 @@ political_decisions = {
 			}
 			NOT = { safety_regulations = good_safety }
 			exists = yes
+			civilized = yes
 		}
 		allow = {
 			NOT = { safety_regulations = good_safety }

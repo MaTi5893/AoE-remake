@@ -235,9 +235,9 @@ political_decisions = {
 			2538 = {
 				add_core = THIS
 			}
-			3309 = {
-				add_core = THIS
-			}
+			#3309 = {
+			#	add_core = THIS
+			#}
 			add_accepted_culture = slovene
 			add_accepted_culture = serb
 			set_country_flag = greater_illyria
@@ -615,11 +615,9 @@ political_decisions = {
 			1205 = { empty = yes }
 		}
 		allow = {
-			AND = {
-				owns = 1196
-				owns = 1206
-				owns = 686
-			}
+			war = no
+			owns = 1196
+			owns = 1206 
 		}
 		effect = {
 			1205 = {

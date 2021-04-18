@@ -25,7 +25,7 @@ LEDGER_HEADER_COUNTRYCOMPARE;National Comparison;Comparaison nationale;Nationale
 LEDGER_COUNTRY_TOTAL_POP;Total pop.;Popul. tot.;Gesamtbevölk.;;Pob. total;;;;;;;;;
 LEDGER_COUNTRY_PROVCOUNT;Provinces;Provinces;Provinzen;;Provincias;;;;;;;;;
 LEDGER_COUNTRY_FACTORYCOUNT;Factories;Usines;Fabriken;;Fábricas;;;;;;;;;
-LEDGER_COUNTRY_LITERACY;Development;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
+LEDGER_COUNTRY_LITERACY;Literacy;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
 LEDGER_COUNTRY_LEADERSHIP;Leadership;Commandement;Anführerschaft;;Liderazgo;;;;;;;;;
 LEDGER_COUNTRY_DIVISIONS;Brigades;Régiments;Divisionen;;Brigadas;;;;;;;;;
 LEDGER_COUNTRY_SHIPS;Ships;Navires;Schiffe;;Barcos;;;;;;;;;
@@ -705,7 +705,7 @@ INDUSTRIAL_SCORE;Industry: §Y$VAL$§W;Industriel : §Y$VAL$§W;Industrie: §Y$VAL$§W
 BE_POPULATION;Population:;Population :;Bevölkerung:;;Población:;;;;;;;;;
 BE_PROVINCES;Provinces:;Provinces :;Provinzen:;;Provincias:;;;;;;;;;
 BE_FACTORIES;Factories:;Usines :;Fabriken:;;Fábricas:;;;;;;;;;
-BE_LITERACY;Development:;Alphabétisation :;Alphabetisierung:;;Alfabetización:;;;;;;;;;
+BE_LITERACY;Literacy:;Alphabétisation :;Alphabetisierung:;;Alfabetización:;;;;;;;;;
 BE_NAVY;Warships:;Navires de guerre :;Kriegsschiffe:;;Buques de guerra:;;;;;;;;;
 BE_ARMY;Brigades:;Régiments :;Regimenter:;;Brigadas:;;;;;;;;;
 BE_GOV;Government:;Gouvernement;Regierung:;;Gobierno:;;;;;;;;;
@@ -9659,7 +9659,7 @@ POP_FILTER_SELECT_ALL;Select All;Tout sélectionner;Alle auswählen;;Seleccionar t
 POP_FILTER_DESELECT_ALL;Deselect All;Tout désélectionner;Alle abwählen;;Anular toda selección;;;;;;;;;
 PV_POP_NAME;Name;Nom;Name;;Nombre;;;;;;;;;
 PV_POP_TYPE;Type;Type;Typ;;Tipo;;;;;;;;;
-PV_POP_LITERACY;Development;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
+PV_POP_LITERACY;Literacy;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
 PV_POP_change;Ch;Ch;V?;Ch;;;;;;;;;;
 PV_POP_RR;RR;RR;RR;;RR;;;;;;;;;
 PV_POP_LUX;Lu;Lu;Lu;;Lu;;;;;;;;;
@@ -9687,7 +9687,7 @@ REMOVE_NO_PROMOTION;No Pops will be promoted today.;Aucun POP ne sera promu aujo
 REMOVE_NO_DEMOTION;No Pops will be promoted today.;Aucun POP ne sera rétrograd?aujourd'hui.;Heute werden keine Bevs degradiert.;;Hoy no va a ascender ninguna POB.;;;;;;;;;
 CONCIOUSNESS;Consciousness;Conscience nationale;Bewusstsein;;Conciencia;;;;;;;;;
 UNEMPLOYMENT;Unemployment;Chômage;Arbeitslosigkeit;;Desempleo;;;;;;;;;
-LITERACY;Development;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
+LITERACY;Literacy;Alphabétisation;Alphabetisierung;;Alfabetización;;;;;;;;;
 MILITANCY;Militancy;Militantisme;Militanz;;Militancia;;;;;;;;;
 EMPLOYMENT;Employment;Emploi;Arbeit;;Empleo;;;;;;;;;
 EDUCATION_SPENDING;Education Spending;Dépenses éducatives;Bildungsausgaben;;Gastos en educación;;;;;;;;;
@@ -14626,7 +14626,7 @@ TB_BUDGET_DAILY_BALANCE;Daily balance: $PARAM$;Bilan quotidien : $PARAM$;Tagesbi
 TB_BUDGET_FUNDS;§Y$FUNDS$§W($INCOME$);§Y$FUNDS$§W($INCOME$);§Y$FUNDS$§W($INCOME$);;§Y$FUNDS$§W($INCOME$);;;;;;;;;
 TB_TECH_CURRENT;$PARAM$;$PARAM$;$PARAM$;;$PARAM$;;;;;;;;;
 TB_TECH_NO_CURRENT;§RNo research set§W;§RAucune recherche définie§W;§RKeine Forschung eingestellt§W;;§RSin investigación§W;;;;;;;;;
-TB_TECH_LITERACY;Development:;Alphabétisation :;Alphabetisierung:;;Alfabetización:;;;;;;;;;
+TB_TECH_LITERACY;Literacy:;Alphabétisation :;Alphabetisierung:;;Alfabetización:;;;;;;;;;
 TB_POLITICS_CAN_DO_REFORM;$PARAM$Reforms available;$PARAM$Réformes disponibles;Reformen verfügbar: $PARAM$ ;;$PARAM$Reformas disponibles;;;;;;;;;
 TB_POLITICS_CAN_DO_DECISION;$PARAM$Decision available;$PARAM$Décision disponible;Entscheidung verfügbar: $PARAM$;;$PARAM$Decisión disponible;;;;;;;;;
 TB_POPULATION_TOTAL;Population:;Population :;Bevölkerung:;;Población:;;;;;;;;;
@@ -14726,8 +14726,8 @@ MORE_THAN_MIL;Militancy above §Y$VAL$§W.\n;Militantisme supérieur ?§Y$VAL$§W;Mil
 NOT_MORE_THAN_MIL;Militancy below §Y$VAL$§W.\n;Militantisme inférieur ?§Y$VAL$§W;Militanz unter §Y$VAL$§W\n;;Militancia por debajo de §Y$VAL$§W.\n;;;;;;;;;
 UNEMPLOYMENT_HIGHER_THAN;Unemployment above §Y$VAL$§W%;Chômage supérieur ?§Y$VAL$§W%;Arbeitslosigkeit über §Y$VAL$§W;;Paro por encima del §Y$VAL$§W%;;;;;;;;;
 NOT_UNEMPLOYMENT_HIGHER_THAN;Unemployment below §Y$VAL$§W%;Chômage inférieur ?§Y$VAL$§W%;Arbeitslosigkeit unter §Y$VAL$§W;;Paro por debajo del §Y$VAL$§W%;;;;;;;;;
-LITERACY_HIGHER_THAN;Development above §Y$VAL$§W%\n;Alphabétisation supérieure ?§Y$VAL$§W%;Alphabetisierung über §Y$VAL$§W%\n;;Alfabetización por encima del §Y$VAL$§W%\n;;;;;;;;;
-NOT_LITERACY_HIGHER_THAN;Development below §Y$VAL$§W%\n;Alphabétisation inférieure ?§Y$VAL$§W%;Alphabetisierung unter §Y$VAL$§W%\n;;Alfabetización por debajo del §Y$VAL$§W%\n;;;;;;;;;
+LITERACY_HIGHER_THAN;Literacy above §Y$VAL$§W%\n;Alphabétisation supérieure ?§Y$VAL$§W%;Alphabetisierung über §Y$VAL$§W%\n;;Alfabetización por encima del §Y$VAL$§W%\n;;;;;;;;;
+NOT_LITERACY_HIGHER_THAN;Literacy below §Y$VAL$§W%\n;Alphabétisation inférieure ?§Y$VAL$§W%;Alphabetisierung unter §Y$VAL$§W%\n;;Alfabetización por debajo del §Y$VAL$§W%\n;;;;;;;;;
 MILITARY_SPENDING_OVER;Military Spending above §Y$VAL$§W%\n;Dépenses militaires supérieures ?§Y$VAL$§W%;Wehretat über §Y$VAL$§W%\n;;Gastos militares por encima del §Y$VAL$§W%\n;;;;;;;;;
 NOT_MILITARY_SPENDING_OVER;Military Spending below §Y$VAL$§W%\n;Dépenses militaires inférieures ?§Y$VAL$§W%;Wehretat unter §Y$VAL$§W%\n;;Gastos militares por debajo del §Y$VAL$§W%\n;;;;;;;;;
 EDUCATION_SPENDING_OVER;Education Spending above §Y$VAL$§W%\n;Dépenses éducatives supérieures ?§Y$VAL$§W%;Bildungsausgaben über §Y$VAL$§W%\n;;Gastos en educación por encima del §Y$VAL$§W%\n;;;;;;;;;

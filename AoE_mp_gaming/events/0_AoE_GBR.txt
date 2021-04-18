@@ -4,10 +4,7 @@ country_event = {
 	title = "Death of Queen Annie"
 	desc = "EVTDESC171400"
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
+		primary_culture = british
 		year = 1714
 		OR = {
 			government = absolute_monarchy
@@ -45,10 +42,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
+		primary_culture = british
 		year = 1714
 		has_country_flag = annie_is_ded
 		NOT = { year = 1760 }
@@ -82,10 +76,7 @@ country_event = {
 	title = "Coronation of King George I"
 	desc = "EVTDESC171401"
 	trigger = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
+		primary_culture = british
 		year = 1714
 		has_country_flag = annie_is_ded
 		NOT = { year = 1760 }
@@ -127,7 +118,7 @@ country_event = {
 		#government = absolute_monarchy
 		all_core = {
 			add_core = GBJ
-			remove_core = GBR
+			remove_core = THIS
 		}
 		change_tag = GBJ
 		add_country_modifier = {
@@ -137,6 +128,9 @@ country_event = {
 		set_variable = {
 			which = jacobite_provinces
 			value = 0
+		}
+		THIS = {
+		ruling_party_ideology  = reactionary
 		}
 		capital_scope = {
 			any_pop = {

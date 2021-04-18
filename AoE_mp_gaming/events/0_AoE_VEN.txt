@@ -1,0 +1,566 @@
+###Veneto-Turkish War###
+country_event = {
+	id = 175600
+	title = "Austrian Intervention"
+	desc = "Upon the Ottoman invasion of the recently reclaimed Peloponnese territory by the Venetians, the Austrians sought to take advantage of the situation to restore Hapsburg control over Serbia."
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUS
+		NOT = { has_global_flag = austria_int_venice }
+		VEN = {
+			war = yes
+		}
+		840 = { controlled_by = TUR }
+		#NOT = { has_global_flag = disabled_railroad_wars }
+	}
+
+	mean_time_to_happen = {
+	months = 2
+	}
+
+	immediate = {
+		set_global_flag = austria_int_venice 
+	}
+
+	option = {
+		name = "To Belgrade!"
+		casus_belli = {
+			target = TUR
+			type = acquire_state
+			state_province_id = 794
+			months = 80
+		}
+		war = {
+			target = TUR
+			attacker_goal = { 
+			casus_belli = acquire_state 
+			state_province_id = 794
+			}
+		}
+	}
+	
+	option = {
+		name = "Nah."
+		prestige = -10
+	}
+}
+
+	
+country_event = {
+	id = 175601
+	title = "Fall of Venice"
+	desc = "With the loss of the Peloponnese, the last attempt by the Venetian state to recover its lost influence over the Mediterranean has been lost."
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = VEN
+		NOT = { has_country_flag = lost_empire }
+		VEN = {
+		war = no
+		}
+		840 = { owned_by = TUR }
+	}
+
+	mean_time_to_happen = {
+	months = 2
+	}
+	
+	immediate = {
+		set_country_flag = lost_empire
+		}
+	
+	option = {
+		name = "Well..."
+		prestige = -20
+		GRE_826 = { remove_core = VEN }
+		TUR_855 = { remove_core = VEN }
+		GRE_837 = { remove_core = VEN }
+		TUR_833 = { remove_core = VEN }
+		EGY_843 = { remove_core = VEN }
+		AUS_768 = { remove_core = VEN }
+		AUS_780 = { remove_core = VEN }
+		set_country_flag = peloponnese_lost
+	}
+}
+
+
+###Venice's Expansion###
+
+country_event = {
+	id = 712340
+	title = "The Future of Venice"
+	desc = "EVTDESC712340"
+	major = yes
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Avanti a Italia!"
+		prestige = 10
+		set_country_flag = into_italy
+
+	}
+	
+	option = {
+		name = "Il Nostro Mare!"
+		prestige = 10
+		set_country_flag = our_sea
+	}
+}
+
+country_event = {
+	id = 712341
+	title = "Venice Demands Sovereignty Over Lombardy!"
+	desc = "EVTDESC712341"
+	major = no
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Surrender it, we must keep the peace"
+		prestige = -15
+		badboy = -3
+		VEN = { country_event = 712342 }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				VEN = {
+					brigades_compare = 0.6
+				}
+			}
+			modifier = {
+				factor = 4
+				VEN = {
+					brigades_compare = 0.75
+				}
+			}
+			modifier = {
+				factor = 10
+				VEN = {
+					brigades_compare = 1
+				}
+			}
+			modifier = {
+				factor = 3
+				any_pop = {
+					militancy = 3
+				}
+			}
+			modifier = {
+				factor = 5
+				any_pop = {
+					militancy = 5
+				}
+			}
+			
+			modifier = {
+				factor = 3
+				war = yes
+			}
+				
+		}
+	}
+		
+	option = {
+		name = "Lombardy is ours! Never an inch to the rats!"
+		VEN = { country_event = 712343 }
+		prestige = 5
+	
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_allies = 5
+			}
+			modifier = {
+				factor = 2
+				num_of_allies = 10
+			}
+			modifier = {
+				factor = 1
+				VEN = {
+					brigades_compare = 0.5
+				}
+			}
+			modifier = {
+				factor = 3
+				VEN = {
+					brigades_compare = 0.25
+				}
+			}
+			modifier = {
+				factor = 6
+				VEN = {
+					brigades_compare = 0.10
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					VEN = {
+						relation = {
+							who = THIS
+							value = -100
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 712343
+	title = "$FROMCOUNTRY$ refuses to cede Milan"
+	desc = "EVTDESC712343"
+	major = no
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We warned them!"
+		war = {
+			target = LOM
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "They caught our bluff..."
+		prestige = -40
+		any_pop = { consciousness = 3 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+country_event = {
+	id = 712344
+	title = "Corsican Nationalists Take Over!"
+	desc = "EVTDESC712344"
+	major = no
+	fire_only_once = yes
+	
+	immediate = {
+		473 = { secede_province = CRS }
+	}
+	
+	trigger = {
+		war = no
+		has_country_flag = ended_genoa
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	} 
+	
+	option = {
+		name = "Force them unto their knees!"
+		473 = { secede_province = VEN }
+		badboy = 4
+		prestige = -5
+		473 = { 
+			any_pop = { 
+				militancy = 7 
+			}
+		}
+	}
+	
+	option = {
+		name = "Find a compromise"
+		badboy = 1
+		create_vassal = CRS
+		473 = { 
+			any_pop = { 
+				militancy = 3
+				consciousness = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "Let them go"
+		badboy = -3
+		prestige = -5
+	}
+	
+	option = {
+		name = "Fuck this, Corsica time"
+		change_tag_no_core_switch = CRS
+	}
+}
+
+country_event = {
+	id = 712345
+	title = "Breaking Tensions With Genoa!"
+	desc = "EVTDESC712345"
+	major = no
+	fire_only_once = yes
+	
+	trigger = {
+		war = no
+		has_country_flag = expanded_west
+		owns = 766 #Sassari
+		owns = 765 #Cagliari
+		GEN = { owns = 473 } #corsica
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "In the name of our merchants, to arms!"
+		GEN = { 
+			war = {
+				target = VEN
+				attacker_goal = { 
+					casus_belli = acquire_state 
+					state_province_id = 765
+				}
+				defender_goal = {
+					casus_belli = war_reparations
+				}
+			}
+		}
+		prestige = -5
+	}
+		
+	option = {
+		name = "In the spite of the Genoese, to arms!"
+		GEN = { 
+			war = {
+				target = VEN
+				attacker_goal = { 
+					casus_belli = acquire_state 
+					state_province_id = 765
+				}
+				defender_goal = {
+					casus_belli = humiliate
+				}
+			}
+		}
+	}
+		
+	option = {
+		name = "In the ever growing expanse of Venice, to arms!"
+		GEN = { 
+			war = {
+				target = VEN
+				attacker_goal = { 
+					casus_belli = acquire_state 
+					state_province_id = 765
+				}
+				defender_goal = {
+					casus_belli = acquire_state 
+					state_province_id = 473
+				}
+			}
+		}
+		badboy = 3
+	}
+		
+	
+	option = {
+		name = "Fervently apologize for the 'incident'"
+		prestige = -20
+		badboy = 3
+		middle_strata = {
+			consciousness = 2
+			militancy = 2
+		}
+		rich_strata = {
+			consciousness = 2
+			militancy = 2
+		}
+	}
+}
+
+country_event = {
+	id = 712346
+	title = "Venice Demands Greek Holdings!"
+	major = yes
+	desc = "EVTDESC712346"
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Never! The snakes will not step foot on our shores!"
+		prestige = 10
+		VEN = { country_event = 712347 }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_allies = 5
+			}
+			modifier = {
+				factor = 2
+				num_of_allies = 10
+			}
+			modifier = {
+				factor = 1
+				VEN = {
+					brigades_compare = 0.5
+				}
+			}
+			modifier = {
+				factor = 3
+				VEN = {
+					brigades_compare = 0.25
+				}
+			}
+			modifier = {
+				factor = 5
+				VEN = {
+					brigades_compare = 0.10
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					VEN = {
+						relation = {
+							who = THIS
+							value = -100
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "We have... little choice.."
+		prestige = -35
+		any_pop = { 
+			consciousness = 2
+			militancy = 2
+		}
+		TUR = {
+            any_owned = {
+                limit = {
+                OR = {
+                    province_id = 839
+                    province_id = 841
+                    province_id = 842
+                    province_id = 827
+					province_id = 834
+					province_id = 838
+					province_id = 845
+					province_id = 843
+					province_id = 846
+					province_id = 847
+					province_id = 848
+					province_id = 859
+					province_id = 857
+					province_id = 856
+					province_id = 855
+					province_id = 2690
+					province_id = 826
+					province_id = 967
+					province_id = 840
+                }
+				}
+            secede_province = VEN
+            }
+        }
+		VEN = { country_event = 712348 }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				VEN = {
+					brigades_compare = 0.6
+				}
+			}
+			modifier = {
+				factor = 4
+				VEN = {
+					brigades_compare = 0.75
+				}
+			}
+			modifier = {
+				factor = 10
+				VEN = {
+					brigades_compare = 1
+				}
+			}
+			modifier = {
+				factor = 3
+				any_pop = {
+					militancy = 3
+				}
+			}
+			modifier = {
+				factor = 5
+				any_pop = {
+					militancy = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 712347
+	title = "The Ottomans Refuse!"
+	desc = "EVT712347"
+	major = no
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'll show them they made the wrong decision!"
+		war = {
+			target = TUR
+			attacker_goal = { casus_belli = acquire_all_cores }
+			defender_goal = { casus_belli = humiliate }
+			call_ally = yes
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Well that's embarrassing"
+		prestige = -30
+		
+		ai_chance = { factor = 0 }
+	}
+}
+	
+country_event = {
+	id = 712348
+	title = "The Ottomans Cave in!"
+	desc = "EVT712348"
+	major = no
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Render unto Veneto..."
+		prestige = 45
+	}
+}

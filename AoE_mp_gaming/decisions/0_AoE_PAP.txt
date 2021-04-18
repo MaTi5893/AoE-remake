@@ -137,7 +137,7 @@ political_decisions = {
 		has_country_flag = latin_empire_claimed
 		NOT = { has_country_flag = treaty_of_ouchy }
 		exists = yes
-		has_recently_lost_wars = no
+		has_recently_lost_war = no
 	}
 		
 		allow = {

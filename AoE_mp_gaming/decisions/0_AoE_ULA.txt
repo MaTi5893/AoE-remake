@@ -1,0 +1,277 @@
+political_decisions = {
+	native_equal_rights_act = {
+		picture = native_assimilation
+		potential = {
+			tag = ULA
+			NOT = {
+				has_country_flag = native_equal_rights
+			}
+			NOT = {
+				has_country_flag = native_assmiliation
+			}
+			exists = yes
+			is_vassal = no
+		}
+		allow = {
+			slavery = no_slavery
+			vote_franschise = universal_voting
+		}
+		effect = {
+			prestige = 50
+			set_country_flag = native_equal_rights
+			add_accepted_culture = native_american_minor
+			add_accepted_culture = cherokee
+			add_accepted_culture = dakota
+			add_country_modifier = {
+				name = freedom_of_religion
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	invite_french_officers = {
+		picture = fra_soldier
+		potential = {
+			tag = ULA
+			NOT = {
+				has_country_flag = french_officers
+			}
+			exists = yes
+		}
+		allow = {
+			money = 5000
+			OR = {
+				is_vassal = yes
+				relation = {
+					who = BOR
+					value = 120
+				}
+			}
+			military_statistics = 1
+		}
+		effect = {
+			set_country_flag = french_officers
+			BOR = {
+				country_event = 1679000
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	army_reform_ula = {
+		picture = army_training
+		potential = {
+			tag = ULA
+			NOT = {
+				has_country_flag = army_reform
+			}
+			exists = yes
+			is_vassal = no
+		}
+		allow = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			money = 60000
+			military_logistics = 1
+			bolt_action_rifles = 1
+		}
+		effect = {
+			set_country_flag = army_reform
+			money = -60000
+			add_country_modifier = {
+				name = army_reform_ula
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_fr_canada = {
+		picture = canada_map
+		potential = {
+			tag = ULA
+			NOT = {
+				has_country_flag = canada_claimed
+			}
+			exists = yes
+			is_vassal = no
+			FCA = {
+				exists = yes
+				vassal_of = BOR
+			}
+		}
+		allow = {
+			is_greater_power = yes
+			war_policy = jingoism
+			FCA = {
+				OR = {
+				vassal_of = BOR
+				exists = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = canada_claimed
+			add_casus_belli = {
+				target = BOR
+				type = release_puppet
+				months = 60
+			}
+			add_casus_belli = {
+				target = BOR
+				type = take_from_sphere
+				months = 60
+			}
+			FRA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 2.5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fund_new_orlean = {
+		picture = new_orlean
+		potential = {
+			owns = 139
+			primary_culture = french
+			exists = yes
+			NOT = {
+				has_country_flag = new_orlean
+			}
+		}
+		allow = {
+			139 = {
+				has_building = fort
+				has_building = naval_base
+			}
+			money = 100000
+		}
+		effect = {
+			set_country_flag = new_orlean
+			prestige = 15
+			money = -100000
+			139 = {
+				change_province_name = "Nouvelle-Orleans"
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 3650
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	native_assmiliation_act = {
+		picture = native_persecution
+		potential = {
+			tag = ULA
+			NOT = {
+				has_country_flag = native_assmiliation
+			}
+			exists = yes
+			NOT = {
+				has_country_flag = native_equal_rights
+			}
+		}
+		allow = {
+			war = no
+			mass_politics = 1
+			OR = {
+				citizens_rights = primary_culture_only
+				citizens_rights = culture_voting_only
+			}
+			citizenship_policy = limited_citizenship
+		}
+		effect = {
+			set_country_flag = native_assmiliation
+			any_owned = {
+				limit = {
+					is_core = ULA
+					owned_by = ULA
+					has_national_minority = yes
+				}
+				add_province_modifier = {
+					name = native_assimilation_act_policy
+					duration = 7300
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	for_god_and_people = {
+		picture = louisana_flag
+		potential = {
+			tag = ULA
+			exists = yes
+			NOT = {
+				has_country_flag = for_god_and_people
+			}
+			is_vassal = no
+		}
+		allow = {
+			is_greater_power = yes
+			war_policy = jingoism
+			OR = {
+				BOR = {
+					any_owned = {
+						NOT = { continent = north_america }
+					}
+				}
+				FRA = {
+					exists = yes
+					any_owned = {
+						NOT = { continent = north_america }
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = for_god_and_people
+			add_country_modifier = {
+				name = for_god_and_people
+				duration = -1
+			}
+			prestige = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	french_scholarship = {
+		picture = alexander_emancipating
+		potential = {
+			exists = yes
+			tag = ULA
+			NOT = {
+				has_country_flag = french_schoolarship
+			}
+		}
+		allow = {
+			biologism = 1
+		}
+		effect = {
+			set_country_flag = french_scholarship
+			add_country_modifier = {
+				name = reformed_scholarship
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

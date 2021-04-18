@@ -19,7 +19,6 @@
 mountain_warfare = {
 	limit = {
 		military_logistics = 1
-		 
 	}
 	news = no
 	chance = {
@@ -32,7 +31,7 @@ mountain_warfare = {
 			factor = 5
 			any_owned_province = {
 					terrain = mountain
-			
+			}
 		}
 		modifier = {
 			factor = -10

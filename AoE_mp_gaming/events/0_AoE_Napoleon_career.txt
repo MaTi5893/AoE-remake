@@ -49,6 +49,7 @@ country_event = {
 	trigger = {
 		has_country_flag = napoleon_general
 		government = proletarian_dictatorship
+		NOT = { primary_culture = french }
 		war_exhaustion = 35
 	}
 	

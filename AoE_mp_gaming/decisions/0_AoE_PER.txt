@@ -1,0 +1,322 @@
+political_decisions = {
+	claim_iraq = {
+		picture = map_iraq
+		potential = {
+			OR = {
+			tag = PER
+			tag = PRQ
+			tag = PRA
+			tag = PRZ
+			}
+			NOT = { has_country_flag = claimed_iraq }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			OR = {
+			AND = {
+			military_score = 50
+			is_greater_power = yes
+			}
+			owns = 926
+			}
+		}
+		effect = {
+			TUR_935 = {
+				add_core = THIS
+			}
+			934 = { add_core = THIS }
+			929 = { add_core = THIS }
+			926 = { add_core = THIS }
+			927 = { add_core = THIS }
+			892 = { add_core = THIS }
+			TUR_923 = {
+				add_core = THIS
+			}
+			badboy = 10
+			set_country_flag = claimed_iraq
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	indian_frontiers = {
+		picture = persia_map
+		potential = {
+			OR = {
+			tag = PER
+			tag = PRQ
+			tag = PRA
+			tag = PRZ
+			}
+			NOT = { has_country_flag = indian_frontiers }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			OR = {
+				military_score = 60
+				AND = {
+					AFG = { exists = no }
+					1236 = {
+						controlled_by = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			KAL_1221 = {
+				add_core = THIS
+			}
+			AFG_1209 = {
+				add_core = THIS
+			}
+			badboy = 10
+			set_country_flag = indian_frontiers
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	move_capital_to_teheran = {
+		picture = teheran
+		potential = {
+			OR = {
+			tag = PER
+			tag = PRQ
+			tag = PRA
+			tag = PRZ
+			}
+			NOT = { capital = 1121 }
+			owns = 1121
+			exists = yes
+		}
+		allow = {
+			OR = {
+				year = 1786
+				aesthetics_7 = 1
+			}
+		}
+		effect = {
+			capital = 1121
+			prestige = 25
+			1121 = {
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1825
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	quajar_army_reforms = {
+		picture = qajar
+		potential = {
+			tag = PRQ
+			NOT = { has_country_modifier = quajar_army_reforms }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				year = 1796
+				AND = {
+					army_doctrine_7 = 1
+					aeronautics = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = quajar_army_reforms
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	restore_afsharid_rule = {
+		picture = afsharid
+		potential = {
+			tag = KHR
+			has_country_flag = asfharid_ruler
+			exists = yes
+			NOT = { PRA = { exists = yes } }
+		}
+		allow = {
+			owns = 1127
+			owns = 1121
+		}
+		effect = {
+			PRZ = {
+				all_core = {
+					add_core = THIS 
+				}
+			}
+			PRQ = {
+				all_core = {
+					add_core = THIS 
+				}
+			}
+			PER = {
+				all_core = {
+					add_core = THIS 
+				}
+			}
+			change_tag = PRA
+			prestige = 80
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	persian_caucases = {
+		picture = map_caucases
+		potential = {
+			OR = {
+			tag = PER
+			tag = PRQ
+			tag = PRA
+			tag = PRZ
+			}
+			NOT = { has_country_flag = persian_caucases }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			is_greater_power = yes
+			OR = {
+				owns = 1090
+				KAK = { vassal_of = THIS }
+			}
+			OR = {
+				owns = 1093
+				KKH = { vassal_of = THIS }
+			}
+			owns = 2548
+			owns = 1100
+			owns = 1102
+			owns = 1052
+		}
+		effect = {	
+			random_owned = {
+				owner = {
+					limit = {
+						KAK = { vassal_of = THIS }
+					}
+					inherit = KAK
+				}
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						KKH = { vassal_of = THIS }
+					}
+					inherit = KKH
+				}
+			}
+			KAK = { all_core = { add_core = THIS } }
+			KKH = { all_core = { add_core = THIS } }
+			1053 = { add_core = THIS }
+			1052 = { add_core = THIS }
+			885 = { add_core = THIS }
+			badboy = 10
+			set_country_flag = persian_caucases
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	safavid_ambition = {
+		picture = safavid
+		potential = {
+			tag = PER
+			NOT = { has_country_flag = safavid_ambition }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			military_score = 80
+			is_greater_power = yes
+			owns = 926
+			owns = 923
+		}
+		effect = {
+			TUR_893 = {
+				add_core = THIS
+			}
+			904 = { add_core = THIS }
+			901 = { add_core = THIS }
+			#3294 = { add_core = THIS }
+			927 = { add_core = THIS }
+			892 = { add_core = THIS }
+			TUR_890 = {
+				add_core = THIS
+			}
+			badboy = 10
+			set_country_flag = safavid_ambition
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	asfharid_ambition = {
+		picture = afsharid
+		potential = {
+			tag = PRA
+			NOT = { has_country_flag = asfharid_ambition }
+			exists = yes
+		}
+		allow = {
+			war_policy = jingoism
+			military_score = 80
+			is_greater_power = yes
+			owns = 1218
+			owns = 1221
+			owns = 1213
+			1236 = {
+				owner = {
+					OR = {
+						AND = {
+							is_greater_power = no
+							is_secondary_power = no
+							overlord = {
+								is_greater_power = no
+								is_secondary_power = no
+							}
+							sphere_owner = {
+								is_greater_power = no
+								is_secondary_power = no
+							}
+						}
+						tag = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			SIN_1288 = {
+				add_core = THIS
+			}
+			PAN_1227 = {
+				add_core = THIS
+			}
+			AFG_1214 = {
+				add_core = THIS
+			}
+			RUS_1196 = {
+				add_core = THIS
+			}
+			#3278 = { add_core = THIS }
+			1164 = { add_core = THIS }
+			1163 = { add_core = THIS }
+			1162 = { add_core = THIS }
+			1165 = { add_core = THIS }
+			12 = { add_core = THIS }
+			1167 = { add_core = THIS }
+			2664 = { add_core = THIS }
+			1166 = { add_core = THIS }
+			1169 = { add_core = THIS }
+			1192 = { add_core = THIS }
+			1191 = { add_core = THIS }
+			badboy = 20
+			set_country_flag = asfharid_ambition
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

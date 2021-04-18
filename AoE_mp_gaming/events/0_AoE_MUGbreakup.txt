@@ -588,6 +588,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = MUG
+		war = no
 		MUG = {
 			OR = {
 				AND = {
@@ -610,44 +611,6 @@ country_event = {
 	option = {
 		name = "We will not rest until we rebuild it..."
 		all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
-	}
-}
-country_event = {
-	id = 175001
-	title = "Mughal dissolution"
-	desc = "EVTDESC175001"
-	picture = mughal_breakup
-	
-	fire_only_once = yes
-	trigger = {
-		tag = GBR
-		is_greater_power = yes
-		MUG = { 
-			NOT = {
-				is_greater_power = yes
-			}
-			owns = 1261
-			owns = 1305
-		}
-		NOT = { has_global_flag = disabled_railroad_wars }
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
-	option = {
-		name = "Prepare the ships!"
-		war = {
-			target = MUG
-			attacker_goal = { casus_belli = acquire_substate_region state_province_id = 1305 }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
-		}
-		ai_chance = { factor = 1 }	
-	}
-
-	option = {
-		name = "They're not worth our time"
-		prestige = -10
 	}
 }
 country_event = {

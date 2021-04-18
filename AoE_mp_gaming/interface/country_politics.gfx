@@ -237,17 +237,6 @@ spriteTypes = {
 		name = "GFX_politics_military_constructions"
 		texturefile = "gfx\\interface\\politics_military_constructions.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_politics_firearms_production"
-		texturefile = "gfx\\interface\\politics_firearms_production.dds"
-	}
-	
-	#spriteType = {
-	#	name = "GFX_politics_guild_reform"
-	#	texturefile = "gfx\\interface\\politics_guild_reform.dds"
-	#}
-	
 	spriteType = {
 		name = "GFX_politics_officer_training"
 		texturefile = "gfx\\interface\\politics_officer_training.dds"
@@ -260,17 +249,6 @@ spriteTypes = {
 		name = "GFX_politics_foreign_naval_units"
 		texturefile = "gfx\\interface\\politics_foreign_naval_units.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_politics_foreign_artillery"
-		texturefile = "gfx\\interface\\politics_foreign_artillery.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_politics_naval_supplies_reform"
-		texturefile = "gfx\\interface\\politics_naval_supplies_reform.dds"
-	}
-	
 	spriteType = {
 		name = "GFX_politics_naval_training"
 		texturefile = "gfx\\interface\\politics_naval_training.dds"
@@ -295,17 +273,6 @@ spriteTypes = {
 		name = "GFX_politics_education_reform"
 		texturefile = "gfx\\interface\\politics_education_reform.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_politics_research_reform"
-		texturefile = "gfx\\interface\\politics_research_reform.dds"
-	}
-
-	spriteType = {
-		name = "GFX_politics_monetary_reform"
-		texturefile = "gfx\\interface\\politics_monetary_reform.dds"
-	}
-	
 	spriteType = {
 		name = "GFX_politics_transportation_system"
 		texturefile = "gfx\\interface\\politics_transportation_system.dds"
@@ -344,6 +311,7 @@ spriteTypes = {
 		size = { x = 371 y = 25 }
 		effectFile = "gfx\\FX\\progress.fx"
 	}
+	
 	
 	spriteType = {
 		name = "GFX_politics_reform_selected"

@@ -1,0 +1,48 @@
+political_decisions = {
+
+	unite_switzerland = {
+		picture = Swissflag1
+		potential = {
+			tag = SWI
+		NOT = { has_country_flag = united_swiss }
+		exists = yes
+		}
+		
+		allow = {
+			OR = {
+				is_greater_power = yes
+				government = proletarian_dictatorship
+				AND = {
+				year = 1780
+				political_thought_7 = 1
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = united_swiss
+			any_country = {
+				limit = { exists = yes 
+				OR = {
+					tag = ASG
+					tag = CSG
+					tag = VAL
+					tag = THL
+					tag = GSU
+					tag = BSL
+					tag = NCT
+					tag = MLH
+					tag = ROT
+					} 
+				vassal_of = THIS
+				}
+			annex_to = THIS
+			}
+
+		}
+		
+			ai_will_do = {
+					factor = 1
+				}
+	}
+}

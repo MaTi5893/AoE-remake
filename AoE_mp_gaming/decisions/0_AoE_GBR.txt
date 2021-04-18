@@ -12,10 +12,11 @@ political_decisions = {
 				}
 			}
 			exists = yes
+			NOT = { war_with = SCO }
 		}
 		
 		allow = {
-			war = no
+			#war = no
 			owns = 300
 			OR = {
 				ideological_thought = 1
@@ -111,9 +112,11 @@ political_decisions = {
 			BNG = { exists = yes }
 			BNG = { vassal_of = THIS }
 			exists = yes
+			mass_politics = 1
 		}
 		allow = {
-			nationalism_n_imperialism = 1
+			war = no
+			mass_politics = 1
 			BNG = { vassal_of = THIS }
 		}
 		effect = {
@@ -140,6 +143,7 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
+			war = no
 			compound_steam_engines = 1
 			semi_automatization = 1
 			hot_blast = 1
@@ -274,6 +278,7 @@ political_decisions = {
 				}
 			}
 			political_thought_7 = 1
+			war = no
 			average_militancy = 4
 		}
 		effect = {
@@ -290,6 +295,30 @@ political_decisions = {
 		}
 	}
 	
+	britannia_rules_the_waves = {
+		potential = {
+			primary_culture = british
+			NOT = { has_country_flag = britannia_rules_the_waves }
+		}
+		allow = {
+			is_greater_power = yes
+			war = no
+			owns = 517
+			OR = {
+				NOT = {
+					any_greater_power = {
+						military_score = THIS
+					}
+				}
+				total_sunk_by_us = 100
+			}
+			total_amount_of_ships = 200
+		}
+		effect = {
+			set_country_flag = britannia_rules_the_waves
+			prestige = 15
+		}
+	}
 	dispute_spanish_succession_gbr = {
 		picture = crown
 		potential = {
@@ -333,32 +362,6 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = THIS
-					exists = SPA
-				}
-				THIS = {
-				casus_belli = {
-					target = SPA
-					type = place_in_the_sun
-					months = 12
-				}
-				}
-			}
-			random_country = {
-				limit = {
-					tag = THIS
-					exists = SPC
-				}
-				THIS = {
-				casus_belli = {
-					target = SPC
-					type = place_in_the_sun
-					months = 12
-				}
-				}
-			}
-			random_country = {
-				limit = {
-					tag = THIS
 					exists = SPC
 				}
 				THIS = {
@@ -372,6 +375,40 @@ political_decisions = {
 			add_core = 517
 			badboy = 2
 			set_country_flag = disputed_spanish_succession
+		}
+	}
+	
+	the_leviathan = {
+		potential = {
+			tag = GBJ
+			NOT = {
+				has_country_modifier = jacobite_absolutism
+			}
+		}
+		allow = {
+			war = no
+			ruling_party_ideology = reactionary
+			upper_house_composition = party_appointed
+			trade_unions = no_trade_unions
+			NOT = { average_militancy = 3 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = jacobite_absolutism
+				duration = -1
+			}
+			prestige = 15
+			political_reform = none_voting
+			government = absolute_monarchy
+			plurality = -25
+			political_reform = totalitarianism
+			add_country_modifier = {
+				name = totalitarian_system
+				duration = -1
+			}
+			any_pop = {
+				militancy = 4
+			}
 		}
 	}
 }
