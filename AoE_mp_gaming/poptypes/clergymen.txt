@@ -41,7 +41,7 @@ luxury_needs = {
 	automobiles = 1
 	wine = 5
 	aeroplanes = 0.4
-	radio = 1.0
+	#radio = 1.0
 	fuel = 0.2
 }
 
@@ -969,7 +969,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { literacy = 0.30 }
+			NOT = { literacy = 0.40 }
 		}
 		modifier = {
 			factor = 1.2

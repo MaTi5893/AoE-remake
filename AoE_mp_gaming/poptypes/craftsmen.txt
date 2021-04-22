@@ -31,7 +31,7 @@ luxury_needs = {
 	paper = 2
 	telephones = 0.75
 	automobiles = 0.75
-	radio = 1.0
+	#radio = 1.0
 	fuel = 0.1
 	tobacco = 0.95
 	#dye = 0.5
@@ -1221,7 +1221,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { literacy = 0.30 }
+			NOT = { literacy = 0.40 }
 		}
 		modifier = {
 			factor = 1.2

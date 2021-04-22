@@ -160,6 +160,20 @@ gas_attack_capability = {
 		gas_attack = yes
 	}
 }
+gas_defense_capability = {
+	limit = { army_doctrine_7 = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			war = yes
+			war_countries = { invention = gas_attack_capability }
+		}		
+	}
+	effect = {
+		gas_defence = yes
+	}
+}
 elite_troops = {
 	limit = { breech_loaded_rifles = 1 invention = grenade }
 	chance = {

@@ -6,10 +6,7 @@ political_decisions = {
 			NOT = { DLH = { exists = yes } }
 			NOT = { tag = MUG }
 			NOT = { has_country_flag = founded_new_empire }
-			OR = {
 			has_country_flag = sunni_country
-			religion = sunni
-			}
 			exists = yes
 		}
 		allow = {

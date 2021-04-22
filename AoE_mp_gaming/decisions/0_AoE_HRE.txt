@@ -194,7 +194,10 @@ political_decisions = {
 			}
 		}
 		allow = {
+			OR = {
 			war = yes
+			num_of_revolts = 1
+			}
 		}
 		effect = {
 			any_country = {

@@ -1471,8 +1471,8 @@ country_event = {
 		name = "He will achieve great things!"
 		define_general = {
 			name = "Prince Frederick, Duke of York"
-			personality = resolute
-			background = implacable
+			personality = implacable
+			background = school_of_defense
 		}
 		set_country_flag = duke_of_york
 	}

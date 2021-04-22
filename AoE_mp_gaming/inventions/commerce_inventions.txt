@@ -1322,27 +1322,27 @@ friedrich_hayek = {
 	}
 }
 #freedom_of_trade
-spice_trading = {
-	news = no
-	limit = {
-		freedom_of_trade = 1 
-
-	}
-	chance = {
-		base = 4
-		modifier = {
-			factor = 2
-			colonial_nation = yes
-		}
-		modifier = {
-			factor = 2
-			organized_factories = 1
-		}
-	}
-	effect = {
-		activate_building = telephone_factory
-	}
-}
+#spice_trading = {
+#	news = no
+#	limit = {
+#		freedom_of_trade = 1 
+#
+#	}
+#	chance = {
+#		base = 4
+#		modifier = {
+#			factor = 2
+#			colonial_nation = yes
+#		}
+#		modifier = {
+#			factor = 2
+#			organized_factories = 1
+#		}
+#	}
+#	effect = {
+#		activate_building = telephone_factory
+#	}
+#}
 
 #market_structure - Patent
 patent = {
@@ -1702,34 +1702,34 @@ autarky = {
 		loan_interest = -0.005
 	}
 }
-import_substitution_industrialization = {
-	limit = {
-		government_interventionism = 1
-		 
-	}
-	news = no
-	chance = {
-		base = 0
-		modifier = {
-			factor = 4
-			economic_policy = planned_economy
-		}
-		modifier = {
-			factor = 3
-			economic_policy = state_capitalism
-		}
-		modifier = {
-			factor = 2
-			economic_policy = interventionism
-		}
-		modifier = {
-			factor = 1
-			trade_policy = protectionism
-		}
-	}
-	effect = {
-		activate_building = synthetic_oil_factory
-	}
-}
+#import_substitution_industrialization = {
+#	limit = {
+#		government_interventionism = 1
+#		 
+#	}
+#	news = no
+#	chance = {
+#		base = 0
+#		modifier = {
+#			factor = 4
+#			economic_policy = planned_economy
+#		}
+#		modifier = {
+#			factor = 3
+#			economic_policy = state_capitalism
+#		}
+#		modifier = {
+#			factor = 2
+#			economic_policy = interventionism
+#		}
+#		modifier = {
+#			factor = 1
+#			trade_policy = protectionism
+#		}
+#	}
+#	effect = {
+#		activate_building = synthetic_oil_factory
+#	}
+#}
 
 
