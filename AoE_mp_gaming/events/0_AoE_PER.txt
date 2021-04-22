@@ -55,15 +55,9 @@ country_event = {
 			1220 = { add_core = HTK }
             secede_province = HTK
         }
-		PER_1148 = { add_core = HTK }
-		1204 = { add_core = HTK }
-		686 = { add_core = HTK }
-		1115 = { add_core = HTK }
-		PER_1140 = { add_core = HTK }
-		PER_1142 = { add_core = HTK }
-		PER_1136 = { add_core = HTK }
-		PER_1127 = { add_core = HTK }
-		PER_1121 = { add_core = HTK }
+		all_core = {
+			add_core = HTK
+		}
         any_pop = {
             limit = { is_primary_culture = yes }
             militancy = -6
@@ -374,7 +368,7 @@ country_event = {
 		define_general = {
 			name = "Nader Shah"
 			personality = merciless
-			background = genius
+			background = hated
 		}
 		all_core = {
 			add_core = PRA

@@ -46,7 +46,7 @@ luxury_needs = {
 	telephones = 20
 	automobiles = 20
 	aeroplanes = 5
-	radio = 20
+	#radio = 20
 	fuel = 20
 	#ammunition = 1 
 	#small_arms = 1 
@@ -891,7 +891,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { literacy = 0.30 }
+			NOT = { literacy = 0.40 }
 		}
 		modifier = {
 			factor = 1.2

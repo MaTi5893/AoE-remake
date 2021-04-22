@@ -1007,35 +1007,6 @@ country_event = {
 }
 
 #Totalitarian modifiers in a non totalitarian regime
-country_event = {
-	id = 6016809
-	title = "EVTNAME6016809"
-	desc = "EVTDESC6016809"
-	picture = "greatpowers"
-		
-	trigger = {
-		NOT = { government = fascist_dictatorship }
-		NOT = { government = proletarian_dictatorship }
-		NOT = { government = absolute_monarchy }
-		OR = {
-			has_country_modifier = totalitarian_system
-			has_country_modifier = political_education
-			has_country_modifier = cult_of_personality
-			has_country_modifier = the_terror
-		}
-	}
-
-	mean_time_to_happen = { days = 1 }
-	
-	option = {
-		name = "EVT6016809PTA"
-			remove_country_modifier = totalitarian_system
-			remove_country_modifier = political_education
-			remove_country_modifier = cult_of_personality
-			remove_country_modifier = the_terror
-			political_reform = unitary
-	}
-}
 
 #Cleaning after international zones
 country_event = {

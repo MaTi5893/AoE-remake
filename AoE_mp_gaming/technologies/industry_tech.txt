@@ -467,8 +467,8 @@ basic_chemistry = {
 	year = 1600
 	cost = 3600
 
-#	activate_building = fertilizer_factory
-	activate_building = steamer_shipyard
+	activate_building = fertilizer_factory
+#	activate_building = steamer_shipyard
 	pop_growth = 0.0001
 	
 	ai_chance = {

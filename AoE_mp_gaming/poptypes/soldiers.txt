@@ -58,7 +58,7 @@ luxury_needs = {
 	paper = 0.75
 	telephones = 0.75
 	automobiles = 0.75
-	radio = 0.75
+	#radio = 0.75
 	oil = 0.1
 	coffee = 0.75
 	tobacco = 0.95
@@ -482,7 +482,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { literacy = 0.30 }
+			NOT = { literacy = 0.40 }
 		}
 		modifier = {
 			factor = 1.2

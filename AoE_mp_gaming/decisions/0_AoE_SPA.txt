@@ -203,11 +203,8 @@ political_decisions = {
 					owned_by = THIS
 				}
 			}
-			NAP = { 
-				all_core = {
-					owned_by = THIS
-				}
-			}
+			owns = 754
+			owns = 753
 			SRD = { 
 				all_core = {
 					owned_by = THIS
@@ -236,8 +233,9 @@ political_decisions = {
 				add_core = THIS
 			}
 			add_accepted_culture = flemish
-			add_accepted_culture = walloon
+			add_accepted_culture = wallonian
 			add_accepted_culture = south_italian
+			political_reform = unitary
 		}
 	}
 	

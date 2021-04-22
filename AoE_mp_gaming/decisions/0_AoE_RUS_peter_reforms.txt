@@ -421,8 +421,9 @@ political_decisions = {
 			tag = RUS
 			OR = {
 				has_country_modifier = catharine_the_great
-				NOT = {	year = 1764 }
+				year = 1764
 			}
+			NOT = { has_country_flag = catharine_the_great_reforms }
 		}
 		allow = {
 			ruling_party_ideology = reactionary
@@ -452,6 +453,38 @@ political_decisions = {
 			inherit = ZZH
 			research_points = 30
 			tech_school = pogonya_za_zapadom
+			set_country_flag = catharine_the_great_reforms
+		}
+	}
+	
+	enforce_peace_tur = {
+		picture = crimea
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = enforced_peace_tur }
+			NOT = { year = 1703 }
+		}
+		allow = {
+			war_with = TUR
+			979 = {
+				controlled_by = THIS
+				province_control_days = 365
+			}
+			1047 = {
+				controlled_by = THIS
+				province_control_days = 365
+			}
+			973 = {
+				controlled_by = THIS
+				province_control_days = 200
+			}
+		}
+		effect = {
+			prestige = 15
+			end_war = TUR
+			979 = { secede_province = THIS }
+			1047 = { secede_province = THIS }
+			set_country_flag = enforce_peace_tur
 		}
 	}
 	manifesto_on_caucasus = {
