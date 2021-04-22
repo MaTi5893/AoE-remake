@@ -1,9 +1,8 @@
 capital = 1127
-civilized = yes   primary_culture = persian
+primary_culture = persian
 culture = azerbaijani
 culture = hazara
 religion = shiite
-civilized = no
 government = absolute_monarchy
 prestige = 10
 plurality = 0.0
@@ -61,6 +60,15 @@ govt_flag = {
 	government = absolute_monarchy
 	flag = theocracy
 }
+
+foreign_training = yes_foreign_training
+foreign_weapons = yes_foreign_weapons
+foreign_officers = yes_foreign_officers
+military_constructions = yes_military_constructions
+finance_reform = yes_finance_reform
+admin_reform = yes_admin_reform
+education_reform = yes_education_reform
+western_science = yes_western_science
 
 # Technologies
 post_napoleonic_thought = 1
