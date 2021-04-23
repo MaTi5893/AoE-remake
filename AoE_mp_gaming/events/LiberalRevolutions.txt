@@ -1,399 +1,418 @@
-# An Age of Liberalism
-country_event = {
-	id = 10001
-	title = "EVTNAME10001"
-	desc = "EVTDESC10001"
-	picture = "Administration"
-	
-	trigger = {
-		civilized = yes
-		literacy = 0.3
-		year = 1840
-		NOT = {
-			OR = {
-				has_country_flag = liberal_revolution_in_progress
-				has_country_flag = liberal_revolution_fired
-				has_country_flag = had_liberal_revolution
-			}
-			is_ideology_enabled = socialist
-			vote_franschise = universal_weighted_voting
-			vote_franschise = universal_voting
-		}
-		NOT = {
-			has_global_flag = liberal_revolution_should_now_fire
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 96
-		modifier = {
-			factor = 0.1
-			has_global_flag = liberal_revolution_somewhere
-			NOT = { is_culture_group = scandinavian }
-		}
-		modifier = {
-			factor = 0.5
-			has_global_flag = liberal_revolution_somewhere
-			is_culture_group = scandinavian
-		}
-		modifier = {
-			factor = 0.5
-			any_neighbor_country = {
-				has_country_flag = liberal_revolution_in_progress
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { literacy = 0.3 }
-		}
-		modifier = {
-			factor = 0.8
-			year = 1841
-		}
-		modifier = {
-			factor = 0.8
-			year = 1842
-		}
-		modifier = {
-			factor = 0.8
-			year = 1843
-		}
-		modifier = {
-			factor = 0.5
-			nationalvalue = nv_liberty
-		}
-		modifier = {
-			factor = 0.75
-			nationalvalue = nv_equality
-		}
-		modifier = {
-			factor = 1.25
-			nationalvalue = nv_order
-		}
-		modifier = {
-			factor = 1.5
-			nationalvalue = nv_might
-		}	
-	}
-	
-	option = {
-		name = "EVTOPTA10001"
-		add_country_modifier = {
-			name = global_liberal_agitation
-			duration = -1
-		}
-		any_pop = {
-			limit = {
-				location = { is_colonial = no }
-			}
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 4
-			}
-		}
-		set_global_flag = liberal_revolution_somewhere
-		set_country_flag = liberal_revolution_in_progress
-	}
-}
-
-
-#Springtime of Nations
-country_event = {
-	id = 10000
-	title = "EVTNAME10000"
-	desc = "EVTDESC10000"
-	picture = "Revolution"
-	
-	trigger = {
-		has_country_flag = liberal_revolution_in_progress
-		OR = {
-			liberal = 15
-			average_militancy = 2
-		}
-		NOT = {
-			vote_franschise = universal_weighted_voting
-			vote_franschise = universal_voting
-		}
-		year = 1847
-	}
-
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.04
-			has_global_flag = liberal_revolutions_should_now_fire
-		}
-		modifier = {
-			factor = 0.1
-			year = 1848
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { liberal = 10 }
-		}
-		modifier = {
-			factor = 0.9
-			liberal = 10
-		}
-		modifier = {
-			factor = 0.9
-			liberal = 15
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 2 }
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			political_reform_want = 0.07
-		}
-		modifier = {
-			factor = 0.9
-			political_reform_want = 0.09
-		}
-		modifier = {
-			factor = 0.9
-			political_reform_want = 0.11
-		}
-		modifier = {
-			factor = 0.9
-			political_reform_want = 0.13
-		}
-		modifier = {
-			factor = 0.9
-			political_reform_want = 0.15
-		}
-		modifier = {
-			factor = 0.9
-			num_of_revolts = 1
-		}
-		modifier = {
-			factor = 0.8
-			num_of_revolts = 5
-		}
-		modifier = {
-			factor = 0.8
-			num_of_revolts = 10
-		}
-		modifier = {
-			factor = 0.4
-			num_of_revolts = 15
-		}
-		modifier = {
-			factor = 1.1
-			prestige = 40
-		}
-		modifier = {
-			factor = 1.1
-			prestige = 50
-		}
-		modifier = {
-			factor = 1.1
-			has_country_modifier = anti_jacobin_tract
-		}
-		modifier = {
-			factor = 1.1
-			not = {
-				political_reform_want = 0.05
-			}
-		}
-	}
-	option = {
-		name = "EVTOPTA10000"
-		remove_country_modifier = global_liberal_agitation
-		add_country_modifier = {
-			name = springtime_of_nations
-			duration = 365
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					has_province_modifier = liberal_agitation
-					liberal = 20
-					average_consciousness = 4
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = 9
-				}
-			}
-		}
-		set_global_flag = liberal_revolutions_should_now_fire
-		clr_country_flag = liberal_revolution_in_progress
-		set_country_flag = liberal_revolution_fired
-	}
-}
-
-
-#End of The Liberal Revolution
-country_event = {
-	title = "EVTNAME10050"
-	desc = "EVTDESC10050"
-	picture = "Riot"
-	
-	id = 10051
-	
-	trigger = {
-		OR = {
-			has_country_flag = liberal_revolution_in_progress
-			has_country_flag = liberal_revolution_fired
-		}
-		OR = {
-			vote_franschise = universal_weighted_voting
-			vote_franschise = universal_voting
-		}
-		NOT = { num_of_revolts = 1 }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 1.5
-			vote_franschise = universal_weighted_voting
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { public_meetings = yes_meeting }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { press_rights = free_press }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				OR = {
-					political_parties = gerrymandering
-					political_parties = non_secret_ballots
-					political_parties = secret_ballots
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			vote_franschise = universal_voting
-			public_meetings = yes_meeting
-			press_rights = free_press
-			OR = {
-				political_parties = gerrymandering
-				political_parties = non_secret_ballots
-				political_parties = secret_ballots
-			}
-		}		
-	}
-	
-	option = {
-		name = "EVTOPTA10050"
-		any_owned = {
-			limit = { is_colonial = no }
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -6
-				}
-				scaled_consciousness = {
-					ideology = liberal
-					factor = -4
-				}
-				scaled_militancy = {
-					ideology = conservative
-					factor = -6
-				}
-				scaled_consciousness = {
-					ideology = conservative
-					factor = -4
-				}
-			}
-			remove_province_modifier = liberal_agitation
-		}
-		any_neighbor_country = {
-			limit = {
-				NOT = {
-					vote_franschise = universal_weighted_voting
-					vote_franschise = universal_voting
-				}
-			}
-			scaled_militancy = {
-				ideology = liberal
-				factor = 3
-			}
-		}								
-		remove_country_modifier = global_liberal_agitation
-		remove_country_modifier = springtime_of_nations
-		clr_country_flag = liberal_revolution_in_progress
-		clr_country_flag = liberal_revolution_fired
-		set_country_flag = had_liberal_revolution
-		prestige = 5
-	}
-}
-	
-	
-#End of The Liberal Revolution Part 2
-country_event = {
-	title = "EVTNAME10050"
-	desc = "EVTDESC10050"
-	picture = "Riot"
-	
-	id = 10050
-	
-	trigger = {
-		has_country_flag = liberal_revolution_fired
-		NOT = { has_country_flag = had_liberal_revolution }
-		NOT = { has_country_modifier = springtime_of_nations }
-		NOT = { num_of_revolts = 1 }
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "EVTOPTA10050"
-		any_owned = {
-			limit = {
-				is_colonial = no
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -6
-				}
-				scaled_militancy = {
-					ideology = conservative
-					factor = -6
-				}
-				scaled_consciousness = {
-					ideology = conservative
-					factor = -4
-				}
-			}
-			remove_province_modifier = liberal_agitation
-		}
-		remove_country_modifier = global_liberal_agitation
-		clr_country_flag = liberal_revolution_fired
-		clr_country_flag = liberal_revolution_in_progress
-		set_country_flag = had_liberal_revolution
-		prestige = 25
-	}
-}
+## An Age of Liberalism
+#country_event = {
+#	id = 10001
+#	title = "EVTNAME10001"
+#	desc = "EVTDESC10001"
+#	picture = "Administration"
+#	
+#	trigger = {
+#		civilized = yes
+#		capital_scope = { continent = europe }
+#		NOT = { tag = ENG }
+#		NOT = { tag = RUS }
+#		NOT = { tag = FIN }
+#		NOT = { tag = SWE }
+#		NOT = { tag = NOR }
+#		NOT = { tag = TUR }
+#		NOT = { tag = UBD }
+#		OR = {
+#			tag = AUS
+#			tag = NCT
+#			tag = KUK
+#			tag = SIC
+#			tag = MOL
+#			tag = WAL
+#			tag = SER
+#			literacy = 0.3
+#		}
+#		year = 1840
+#		NOT = {
+#			OR = {
+#				has_country_flag = liberal_revolution_in_progress
+#				has_country_flag = liberal_revolution_fired
+#				has_country_flag = had_liberal_revolution
+#			}
+#			is_ideology_enabled = socialist
+#			vote_franschise = universal_weighted_voting
+#			vote_franschise = universal_voting
+#			government = democracy
+#		}
+#		NOT = {
+#			OR = {
+#				has_global_flag = liberal_revolution_should_now_fire
+#				has_country_flag = isolationist
+#			}
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 96
+#		modifier = {
+#			factor = 0.1
+#			has_global_flag = liberal_revolution_somewhere
+#			NOT = { is_culture_group = scandinavian }
+#		}
+#		modifier = {
+#			factor = 0.5
+#			has_global_flag = liberal_revolution_somewhere
+#			is_culture_group = scandinavian
+#		}
+#		modifier = {
+#			factor = 0.5
+#			any_neighbor_country = { has_country_flag = liberal_revolution_in_progress }
+#		}
+#		modifier = {
+#			factor = 2
+#			NOT = { literacy = 0.3 }
+#		}
+#		modifier = {
+#			factor = 0.8
+#			year = 1841
+#		}
+#		modifier = {
+#			factor = 0.8
+#			year = 1842
+#		}
+#		modifier = {
+#			factor = 0.8
+#			year = 1843
+#		}
+#		modifier = {
+#			factor = 0.5
+#			nationalvalue = nv_liberty
+#		}
+#		modifier = {
+#			factor = 0.75
+#			nationalvalue = nv_equality
+#		}
+#		modifier = {
+#			factor = 1.25
+#			nationalvalue = nv_order
+#		}
+#		modifier = {
+#			factor = 1.5
+#			nationalvalue = nv_autocracy
+#		}	
+#	}
+#	
+#	option = {
+#		name = "EVTOPTA10001"
+#		add_country_modifier = {
+#			name = global_liberal_agitation
+#			duration = -1
+#		}
+#		any_pop = {
+#			limit = {
+#				location = { is_colonial = no }
+#			}
+#			ideology = {
+#				value = liberal
+#				factor = 0.05
+#			}
+#			scaled_consciousness = {
+#				ideology = liberal
+#				factor = 4
+#			}
+#		}
+#		set_global_flag = liberal_revolution_somewhere
+#		set_country_flag = liberal_revolution_in_progress
+#	}
+#}
+#
+#
+##Springtime of Nations
+#country_event = {
+#	id = 10000
+#	title = "EVTNAME10000"
+#	desc = "EVTDESC10000"
+#	picture = "Revolution"
+#	
+#	trigger = {
+#		has_country_flag = liberal_revolution_in_progress
+#		OR = {
+#			liberal = 15
+#			average_militancy = 2
+#		}
+#		NOT = {
+#			OR = {
+#				vote_franschise = universal_weighted_voting
+#				vote_franschise = universal_voting
+#			}
+#		}
+#		year = 1847
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 120
+#		modifier = {
+#			factor = 0.04
+#			has_global_flag = liberal_revolutions_should_now_fire
+#		}
+#		modifier = {
+#			factor = 0.1
+#			year = 1848
+#		}
+#		modifier = {
+#			factor = 1.5
+#			NOT = { liberal = 10 }
+#		}
+#		modifier = {
+#			factor = 0.9
+#			liberal = 10
+#		}
+#		modifier = {
+#			factor = 0.9
+#			liberal = 15
+#		}
+#		modifier = {
+#			factor = 0.9
+#			average_consciousness = 4
+#		}
+#		modifier = {
+#			factor = 0.9
+#			average_consciousness = 5
+#		}
+#		modifier = {
+#			factor = 1.5
+#			NOT = { average_militancy = 2 }
+#		}
+#		modifier = {
+#			factor = 0.9
+#			average_militancy = 4
+#		}
+#		modifier = {
+#			factor = 0.9
+#			political_reform_want = 0.07
+#		}
+#		modifier = {
+#			factor = 0.9
+#			political_reform_want = 0.09
+#		}
+#		modifier = {
+#			factor = 0.9
+#			political_reform_want = 0.11
+#		}
+#		modifier = {
+#			factor = 0.9
+#			political_reform_want = 0.13
+#		}
+#		modifier = {
+#			factor = 0.9
+#			political_reform_want = 0.15
+#		}
+#		modifier = {
+#			factor = 0.9
+#			num_of_revolts = 1
+#		}
+#		modifier = {
+#			factor = 0.8
+#			num_of_revolts = 5
+#		}
+#		modifier = {
+#			factor = 0.8
+#			num_of_revolts = 10
+#		}
+#		modifier = {
+#			factor = 0.4
+#			num_of_revolts = 15
+#		}
+#		modifier = {
+#			factor = 1.1
+#			prestige = 40
+#		}
+#		modifier = {
+#			factor = 1.1
+#			prestige = 50
+#		}
+#		modifier = {
+#			factor = 1.1
+#			has_country_modifier = anti_jacobin_tract
+#		}
+#		modifier = {
+#			factor = 1.1
+#			not = { political_reform_want = 0.05 }
+#		}
+#	}
+#	option = {
+#		name = "EVTOPTA10000"
+#		remove_country_modifier = global_liberal_agitation
+#		add_country_modifier = {
+#			name = springtime_of_nations
+#			duration = 365
+#		}
+#		any_owned = {
+#			limit = {
+#				OR = {
+#					has_province_modifier = liberal_agitation
+#					liberal = 20
+#					average_consciousness = 4
+#				}
+#			}
+#			any_pop = {
+#				scaled_militancy = {
+#					ideology = liberal
+#					factor = 9
+#				}
+#			}
+#		}
+#		set_global_flag = liberal_revolutions_should_now_fire
+#		clr_country_flag = liberal_revolution_in_progress
+#		set_country_flag = liberal_revolution_fired
+#	}
+#}
+#
+#
+##End of The Liberal Revolution
+#country_event = {
+#	title = "EVTNAME10050"
+#	desc = "EVTDESC10050"
+#	picture = "Riot"
+#	
+#	id = 10051
+#	
+#	trigger = {
+#		OR = {
+#			has_country_flag = liberal_revolution_in_progress
+#			has_country_flag = liberal_revolution_fired
+#		}
+#		OR = {
+#			vote_franschise = universal_weighted_voting
+#			vote_franschise = universal_voting
+#		}
+#		NOT = { num_of_revolts = 1 }
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 12
+#		modifier = {
+#			factor = 1.5
+#			vote_franschise = universal_weighted_voting
+#		}
+#		modifier = {
+#			factor = 1.5
+#			NOT = { public_meetings = yes_meeting }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			NOT = { press_rights = free_press }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			NOT = {
+#				OR = {
+#					political_parties = gerrymandering
+#					political_parties = non_secret_ballots
+#					political_parties = secret_ballots
+#				}
+#			}
+#		}
+#		modifier = {
+#			factor = 0.1
+#			vote_franschise = universal_voting
+#			public_meetings = yes_meeting
+#			press_rights = free_press
+#			OR = {
+#				political_parties = gerrymandering
+#				political_parties = non_secret_ballots
+#				political_parties = secret_ballots
+#			}
+#		}		
+#	}
+#	
+#	option = {
+#		name = "EVTOPTA10050"
+#		any_owned = {
+#			limit = { is_colonial = no }
+#			any_pop = {
+#				scaled_militancy = {
+#					ideology = liberal
+#					factor = -6
+#				}
+#				scaled_consciousness = {
+#					ideology = liberal
+#					factor = -4
+#				}
+#				scaled_militancy = {
+#					ideology = conservative
+#					factor = -6
+#				}
+#				scaled_consciousness = {
+#					ideology = conservative
+#					factor = -4
+#				}
+#			}
+#			remove_province_modifier = liberal_agitation
+#		}
+#		any_neighbor_country = {
+#			limit = {
+#				NOT = {
+#					vote_franschise = universal_weighted_voting
+#					vote_franschise = universal_voting
+#				}
+#			}
+#			scaled_militancy = {
+#				ideology = liberal
+#				factor = 3
+#			}
+#		}								
+#		remove_country_modifier = global_liberal_agitation
+#		remove_country_modifier = springtime_of_nations
+#		clr_country_flag = liberal_revolution_in_progress
+#		clr_country_flag = liberal_revolution_fired
+#		set_country_flag = had_liberal_revolution
+#		prestige = 5
+#	}
+#}
+#	
+#	
+##End of The Liberal Revolution Part 2
+#country_event = {
+#	title = "EVTNAME10050"
+#	desc = "EVTDESC10050"
+#	picture = "Riot"
+#	
+#	id = 10050
+#	
+#	trigger = {
+#		has_country_flag = liberal_revolution_fired
+#		NOT = { has_country_flag = had_liberal_revolution }
+#		NOT = { has_country_modifier = springtime_of_nations }
+#		NOT = { num_of_revolts = 1 }
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#	
+#	option = {
+#		name = "EVTOPTA10050"
+#		any_owned = {
+#			limit = {
+#				is_colonial = no
+#			}
+#			any_pop = {
+#				scaled_militancy = {
+#					ideology = liberal
+#					factor = -6
+#				}
+#				scaled_militancy = {
+#					ideology = conservative
+#					factor = -6
+#				}
+#				scaled_consciousness = {
+#					ideology = conservative
+#					factor = -4
+#				}
+#			}
+#			remove_province_modifier = liberal_agitation
+#		}
+#		remove_country_modifier = global_liberal_agitation
+#		clr_country_flag = liberal_revolution_fired
+#		clr_country_flag = liberal_revolution_in_progress
+#		set_country_flag = had_liberal_revolution
+#		prestige = 15
+#	}
+#}
 
 # Potato Blight (Sets up 10105)
 country_event = {
@@ -404,29 +423,47 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		NOT = { inorganic_chemistry = 1 }
+		OR = {
+			NOT = { inorganic_chemistry = 1 }
+			AND = {
+				war_exhaustion = 25 
+				OR = {
+					has_country_modifier = great_war2
+					has_country_modifier = great_war3
+				}
+			}
+		}
 		any_owned_province = {
-			is_colonial = no
-			trade_goods = grain
+			total_pops = 30000
+			OR = {
+				trade_goods = grain
+				trade_goods = fruit
+				trade_goods = cattle
+			}
+			NOT = { terrain = desert }
+			NOT = { terrain = semidesert }
+			NOT = { terrain = arctic }
+			NOT = { terrain = montane_tundra }
+			NOT = { terrain = himalayan_mountains }
+			NOT = { terrain = boreal }
 			NOT = { has_province_modifier = potato_blight }
 			NOT = { has_province_modifier = irish_potato_blight }
-			NOT = { poor_strata_everyday_needs = 0.5 }
+			OR = {
+				continent = europe
+				continent = north_america
+				continent = south_america
+				year = 1900
+			}
 		}			
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 300
 		modifier = {
-			factor = 0.8
-			any_owned_province = {
-				is_colonial = no
-				trade_goods = grain
-				NOT = { has_province_modifier = potato_blight }
-				NOT = { has_province_modifier = irish_potato_blight }
-				NOT = { poor_strata_everyday_needs = 0.5 }
-				any_neighbor_province = {
-					has_province_modifier = potato_blight
-				}
+			factor = 0.7
+			OR = {
+				any_owned_province = { has_province_modifier = potato_blight }
+				any_neighbor_country = { any_owned_province = { any_neighbor_province = { has_province_modifier = potato_blight } } }
 			}
 		}
 		modifier = {
@@ -436,6 +473,14 @@ country_event = {
 		modifier = {
 			factor = 0.9
 			NOT = { poor_strata_life_needs = 0.8 }
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { poor_strata_life_needs = 0.5 }
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { unemployment_by_type = { type = farmers value = 0.5 } }
 		}
 		modifier = {
 			factor = 1.5
@@ -448,22 +493,23 @@ country_event = {
 		prestige = -2
 		random_owned = {
 			limit = {
-				is_colonial = no
-				trade_goods = grain
+				total_pops = 30000
+				OR = {
+					trade_goods = grain
+					trade_goods = fruit
+					trade_goods = cattle
+				}
+				NOT = { terrain = desert }
+				NOT = { terrain = semidesert }
+				NOT = { terrain = arctic }
+				NOT = { terrain = montane_tundra }
+				NOT = { terrain = himalayan_mountains }
+				NOT = { terrain = boreal }
 				NOT = { has_province_modifier = potato_blight }
 				NOT = { has_province_modifier = irish_potato_blight }
-				NOT = { poor_strata_everyday_needs = 0.5 }
 			}
-			add_province_modifier = {
-				name = potato_blight
-				duration = 180
-			}
-			state_scope = {
-				any_pop = { consciousness = 3 }
-			}
-		}
-		ai_chance = {
-			factor = 100
+			add_province_modifier = { name = potato_blight duration = 180 }
+			state_scope = { any_pop = { consciousness = 3 } }
 		}
 	}
 
@@ -472,22 +518,41 @@ country_event = {
 		random_state = {
 			limit = {
 				any_owned_province = {
-					is_colonial = no
-					trade_goods = grain
+					total_pops = 30000
+					OR = {
+						trade_goods = grain
+						trade_goods = fruit
+						trade_goods = cattle
+					}
+					NOT = { terrain = desert }
+					NOT = { terrain = semidesert }
+					NOT = { terrain = arctic }
+					NOT = { terrain = montane_tundra }
+					NOT = { terrain = himalayan_mountains }
+					NOT = { terrain = boreal }
 					NOT = { has_province_modifier = potato_blight }
 					NOT = { has_province_modifier = irish_potato_blight }
-					NOT = { poor_strata_everyday_needs = 0.5 }
 				}
 			}
 			any_owned = {
-				add_province_modifier = {
-					name = potato_blight
-					duration = 365
+				limit = {
+					total_pops = 30000
+					OR = {
+						trade_goods = grain
+						trade_goods = fruit
+						trade_goods = cattle
+					}
+					NOT = { terrain = desert }
+					NOT = { terrain = semidesert }
+					NOT = { terrain = arctic }
+					NOT = { terrain = montane_tundra }
+					NOT = { terrain = himalayan_mountains }
+					NOT = { terrain = boreal }
+					NOT = { has_province_modifier = potato_blight }
+					NOT = { has_province_modifier = irish_potato_blight }
 				}
+				add_province_modifier = { name = potato_blight duration = 365 } 
 			}
-		}
-		ai_chance = {
-			factor = 0
 		}
 	}
 }
@@ -1384,39 +1449,7 @@ country_event = {
 		}
 		any_state = {
 			is_colonial = no
-			OR = {
-				has_building = machine_parts_factory
-				has_building = clipper_shipyard
-				has_building = steel_factory
-				has_building = small_arms_factory
-				has_building = artillery_factory
-				has_building = explosives_factory
-				has_building = ammunition_factory
-				has_building = canned_food_factory
-				has_building = paper_mill
-				has_building = lumber_mill
-				has_building = fabric_factory
-				has_building = cement_factory
-				has_building = glass_factory
-				has_building = fertilizer_factory
-				has_building = furniture_factory
-				has_building = regular_clothes_factory
-				has_building = liquor_distillery
-				has_building = winery
-				has_building = wool_mill
-				has_building = fish_cannery
-				has_building = bakery
-				has_building = stables
-				has_building = rum_distillery
-				has_building = gunpowder_factory
-				has_building = bronze_artillery_factory
-				has_building = iron_artillery_factory
-				has_building = fruit_cannery
-				has_building = bronze_factory
-				has_building = early_small_arms_factory
-				has_building = late_small_arms_factory
-				has_building = newspaper
-			}
+			has_building = factory
 			NOT = { poor_strata_everyday_needs = 0.9 }
 			any_owned_province = {
 				controlled_by = THIS
@@ -1443,39 +1476,7 @@ country_event = {
 			factor = 0.8
 			any_state = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				NOT = { poor_strata_life_needs = 1.0 }			
 				any_owned_province = {
 					controlled_by = THIS
@@ -1487,39 +1488,7 @@ country_event = {
 			factor = 0.8
 			any_state = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				NOT = { poor_strata_everyday_needs = 0.7 }			
 				any_owned_province = {
 					controlled_by = THIS
@@ -1531,39 +1500,7 @@ country_event = {
 			factor = 0.8
 			any_state = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				NOT = { poor_strata_everyday_needs = 0.5 }			
 				any_owned_province = {
 					controlled_by = THIS
@@ -1575,39 +1512,7 @@ country_event = {
 			factor = 0.9
 			any_state = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				average_militancy = 2			
 				any_owned_province = {
 					controlled_by = THIS
@@ -1626,8 +1531,8 @@ country_event = {
 			factor = 1.5
 			OR = {
 				nationalvalue = nv_order
-				nationalvalue = nv_might
-			}
+				nationalvalue = nv_autocracy
+				}
 		}
 	}
 	option = {
@@ -1639,39 +1544,7 @@ country_event = {
 		random_state = {
 			limit = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				NOT = { poor_strata_everyday_needs = 0.9 }
 				any_owned_province = {
 					controlled_by = THIS
@@ -1737,39 +1610,7 @@ country_event = {
 		random_state = {
 			limit = {
 				is_colonial = no
-				OR = {
-					has_building = machine_parts_factory
-					has_building = clipper_shipyard
-					has_building = steel_factory
-					has_building = small_arms_factory
-					has_building = artillery_factory
-					has_building = explosives_factory
-					has_building = ammunition_factory
-					has_building = canned_food_factory
-					has_building = paper_mill
-					has_building = lumber_mill
-					has_building = fabric_factory
-					has_building = cement_factory
-					has_building = glass_factory
-					has_building = fertilizer_factory
-					has_building = furniture_factory
-					has_building = regular_clothes_factory
-					has_building = liquor_distillery
-					has_building = winery
-					has_building = wool_mill
-					has_building = fish_cannery
-					has_building = bakery
-					has_building = stables
-					has_building = rum_distillery
-					has_building = gunpowder_factory
-					has_building = bronze_artillery_factory
-					has_building = iron_artillery_factory
-					has_building = fruit_cannery
-					has_building = bronze_factory
-					has_building = early_small_arms_factory
-					has_building = late_small_arms_factory
-					has_building = newspaper
-				}
+				has_building = factory
 				NOT = { poor_strata_everyday_needs = 0.9 }
 				any_owned_province = {
 					controlled_by = THIS
@@ -1831,9 +1672,9 @@ country_event = {
 
 # Pan-Nationalist Uprising
 country_event = {
+	id = 10155
 	title = "EVTNAME10155"
 	desc = "EVTDESC10155"
-	id = 10155
 	picture = "nationalists"
 
 	trigger = {
@@ -1901,7 +1742,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10155.A"
+		name = "EVT10155OPTA"
 		random_state = {
 			limit = {
 				is_colonial = no
@@ -2242,7 +2083,18 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { nationalvalue = nv_might }
+			OR = {
+			owner = { nationalvalue = nv_order }
+			owner = { nationalvalue = nv_autocracy }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = { is_culture_group = french }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { is_culture_group = germanic }
 		}
 	}
 	option = {
@@ -2570,7 +2422,7 @@ province_event = {
 			owner = {
 				OR = {
 					nationalvalue = nv_order
-					nationalvalue = nv_might
+					nationalvalue = nv_autocracy
 				}
 			}
 		}
@@ -2693,9 +2545,9 @@ province_event = {
 
 # Fighting in the Streets
 country_event = {
+	id = 10205
 	title = "EVTNAME10205"
 	desc = "EVTDESC10205"
-	id = 10205
 	picture = "streetriot"
 
 	trigger = {
@@ -2772,13 +2624,13 @@ country_event = {
 			factor = 1.25
 			OR = {
 				nationalvalue = nv_order
-				nationalvalue = nv_might
-			}
+				nationalvalue = nv_autocracy
+				}
 		}
 	}
 
 	option = {
-		name = "10205.A"
+		name = "EVT10205OPTA"
 		random_owned = {
 			limit = {
 				controlled_by = THIS
@@ -2811,7 +2663,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10205.B"
+		name = "EVT10205OPTB"
 		random_owned = {
 			limit = {
 				controlled_by = THIS
@@ -2844,7 +2696,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10205.C"
+		name = "EVT10205OPTC"
 		random_owned = {
 			limit = {
 				controlled_by = THIS
@@ -2953,10 +2805,7 @@ province_event = {
 		modifier = {
 			factor = 1.5
 			owner = {
-				OR = {
 					nationalvalue = nv_order
-					nationalvalue = nv_might
-				}
 			}
 		}
 	}
@@ -2980,9 +2829,9 @@ province_event = {
 
 # Inspired Nationalists
 country_event = {
+	id = 10215
 	title = "EVTNAME10215"
 	desc = "EVTDESC10215"
-	id = 10215
 	picture = "nationalists"
 
 	trigger = {
@@ -3065,7 +2914,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10215.A"
+		name = "EVT10215OPTA"
 		random_state = {
 			limit = {
 				any_owned_province = {
@@ -3115,9 +2964,10 @@ country_event = {
 
 # Nationalist Uprising
 province_event = {
+	id = 10216
 	title = "EVTNAME10216"
 	desc = "EVTDESC10216"
-	id = 10216
+	picture = "nationalists"
 
 	trigger = {
 		owner = {
@@ -3216,7 +3066,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "10216.A"
+		name = "EVT10216OPTA"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -3275,7 +3125,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "10216.B"
+		name = "EVT10216OPTB"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -3484,7 +3334,10 @@ province_event = {
 		modifier = {
 			factor = 0.75
 			owner = {
-				nationalvalue = nv_might
+				OR = {
+				nationalvalue = nv_autocracy				
+				nationalvalue = nv_order
+				}
 			}
 		}
 	}
@@ -3520,6 +3373,7 @@ country_event = {
 	news_desc_short = "EVTDESC10221_NEWS_SHORT"
 	major = yes
 	picture = "unite"
+
 	fire_only_once = yes
 
 	trigger = {
@@ -3550,7 +3404,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10221.A"
+		name = "EVT10221OPTA"
 		prestige = 5
 		political_reform = universal_voting
 		political_reform = secret_ballots
@@ -3599,7 +3453,7 @@ country_event = {
 	}
 
 	option = {
-		name = "10221.B"
+		name = "EVT10221OPTB"
 		political_reform = no_meeting
 		random_owned = {
 			limit = {
@@ -3629,398 +3483,304 @@ country_event = {
 	}
 }
 
+#Hungarian revolution
 
-# Hungarian Revolution events
+# Dutch Constitutional Reform
 country_event = {
-	id = 10225
-	title = "EVTNAME10225" #Hungarian Revolution of $YEAR$
-	desc = "EVTDESC10225"
+	id = 10228
+	title = "EVTNAME10228"
+	desc = "EVTDESC10228"
 	news = yes
-	news_desc_long = "EVTDESC10225_NEWS_LONG"
-	news_desc_medium = "EVTDESC10225_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC10225_NEWS_SHORT"
-	picture = "Rebellion"
-	
-	fire_only_once = yes
+	news_desc_long = "EVTDESC10228_NEWS_LONG"
+	news_desc_medium = "EVTDESC10228_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC10228_NEWS_SHORT"
+	picture = "danishgovernment"
 
 	trigger = {
-		tag = AUS
-		owns = 641
+		tag = NET
+		exists = BEL
 		OR = {
-			641 = { controlled_by = AUS }
-			641 = { controlled_by = REB }
+			government = absolute_monarchy
+			government = prussian_constitutionalism
 		}
 		OR = {
+			has_country_flag = liberal_revolution_in_progress
 			has_country_modifier = springtime_of_nations
-			AND = {
-				641 = { controlled_by = REB }
-				has_country_flag = liberal_revolution_in_progress
-			}
-		}	
-		NOT = {
-			HUN = { involved_in_crisis = yes }
-			exists = HUN
-			has_global_flag = hungarian_revolution_occurred
+		}
+		any_owned_province = {
+			is_core = NET
+			controlled_by = REB
 		}
 	}
 
 	mean_time_to_happen = {
 		months = 1
-	}
-
-	immediate = {
-		set_global_flag = hungarian_revolution_occurred
+		modifier = {
+			factor = 0.1
+			capital_scope = { controlled_by = REB }
+		}
 	}
 
 	option = {
-		name = "10225.A"
-		any_owned = {
-			limit = { region = AUS_771 }
-			remove_core = HUN
+		name = "EVT10228OPTA"
+		prestige = -10
+		add_country_modifier = {
+			name = thorbecke_reforms
+			duration = 7300
 		}
-		any_owned = {
+		random_owned = {
 			limit = {
-				is_core = HUN
-				NOT = { is_core = CRO }
+				owner = { government = prussian_constitutionalism }
 			}
-			secede_province = HUN
+			owner = {
+				political_reform = universal_weighted_voting
+				political_reform = yes_meeting
+				political_reform = free_press
+			}
 		}
-		relation = { who = HUN value = -100 }
+		random_owned = {
+			limit = {
+				owner = { government = absolute_monarchy }
+			}
+			owner = {
+				government = prussian_constitutionalism
+				political_reform = landed_voting
+				political_reform = yes_meeting
+				political_reform = free_press
+			}
+		}
+		ruling_party_ideology = liberal
+		random_owned = {
+			limit = {
+				province_id = 375
+				controlled_by = REB
+			}
+			change_controller = NET
+		}
 		any_owned = {
-			limit = { is_core = AUS }
+			limit = { is_colonial = no }
 			remove_province_modifier = liberal_agitation
-		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -6
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						national_provinces_occupied = .25
-						any_greater_power = { war_with = THIS }
-					}
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = -8
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -6
 				}
 			}
-			owner = {
-				prestige = -10
-				war = {
-					target = HUN
-					attacker_goal = {
-						casus_belli = annex_core_country
-					}
-					call_ally = yes
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = {
-						national_provinces_occupied = .25
-						any_greater_power = { war_with = THIS }
-					}
-				}
-			}
-			owner = {
-				prestige = 20
-				war = {
-					target = HUN
-					attacker_goal = {
-						casus_belli = annex_core_country
-					}
-				}
-			}
-		}
-		ai_chance = {
-			factor = 95
-		}
+		}			
 	}
 
 	option = {
-		name = "10225.B"
-		set_country_flag = austria_let_hungary_go
-		any_owned = {
+		name = "EVT10228OPTB"
+		prestige = -5
+		ruling_party_ideology = liberal
+		political_reform = yes_meeting
+		political_reform = free_press
+		random_owned = {
 			limit = {
-				is_core = HUN
-				NOT = { is_core = CRO }
+				province_id = 375
+				controlled_by = REB
 			}
-			secede_province = HUN
-		}
-		relation = { who = HUN value = -100 }
-		prestige = -25
-		casus_belli = {
-			target = HUN
-			type = acquire_state
-			months = 60
-		}
-		casus_belli = {
-			target = HUN
-			type = cut_down_to_size
-			months = 60
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = romanian
-				location = { is_core = ROM }
-			}
-			militancy = 8
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = polish
-				location = { is_core = POL }
-			}
-			militancy = 8
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-				location = { is_core = ITA }
-			}
-			militancy = 8
+			change_controller = NET
 		}
 		any_owned = {
-			limit = {
-				OR = {
-					is_core = POL
-					is_core = ROM
-					is_core = ITA
-				}
-			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_greater_power = { war_with = THIS }
-			}
-			modifier = {
-				factor = 2
-				national_provinces_occupied = 0.25
-			}
-			modifier = {
-				factor = 0
-				war = no
-				NOT = { revolt_percentage = 0.25 }
-			}
-		}
-	}
-
-	option = {
-		name = "10225.C"
-		any_owned = {
-			limit = {
-				is_core = HUN
-				NOT = { is_core = CRO }
-			}
-			secede_province = HUN
-		}
-		relation = { who = HUN value = -100 }
-		any_owned = {
-			limit = { is_core = AUS }
+			limit = { is_colonial = no }
 			remove_province_modifier = liberal_agitation
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = -4
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -8
+				}
+				scaled_consciousness = {
+					ideology = liberal
+					factor = 4
+				}
+			}
 		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -6
-		}
+	}
+
+	option = {
+		name = "EVT10228OPTC"
+		prestige = 5
 		random_owned = {
 			limit = {
-				owner = {
-					OR = {
-						national_provinces_occupied = .25
-						any_greater_power = { war_with = THIS }
-					}
-				}
+				province_id = 375
+				controlled_by = REB
 			}
-			owner = {
-				prestige = -10
-				war = {
-					target = HUN
-					attacker_goal = {
-						casus_belli = annex_core_country
-					}
-					call_ally = yes
-				}
-			}
+			change_controller = NET
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = {
-						national_provinces_occupied = .25
-						any_greater_power = { war_with = THIS }
-					}
+		any_owned = {
+			limit = { is_colonial = no }
+			remove_province_modifier = liberal_agitation
+			any_pop = {
+				scaled_militancy = {
+					ideology = conservative
+					factor = -3
 				}
 			}
-			owner = {
-				prestige = 10
-				war = {
-					target = HUN
-					attacker_goal = {
-						casus_belli = annex_core_country
-					}
-				}
-			}
-		}
-		change_tag_no_core_switch = HUN
-		ai_chance = {
-			factor = 0
 		}
 	}
 }
 
+# Prussian Constitutional Reform
 country_event = {
-	id = 10226
-	title = "EVTNAME10226" #Freedom At Last!
-	desc = "EVTDESC10226"
-	picture = "unite"
-
+	id = 10229
+	title = "EVTNAME10229" #The $COUNTRY_ADJ$ Uprising
+	desc = "EVTDESC10229"
+	news = yes
+	news_desc_long = "EVTDESC10229_NEWS_LONG"
+	news_desc_medium = "EVTDESC10229_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC10229_NEWS_SHORT"
+	picture = "danishgovernment"
+	major = yes
 	fire_only_once = yes
+
 	trigger = {
-		tag = HUN
-		war = no
-		AUS = {
-			exists = yes
-			truce_with = THIS
-			NOT = { has_country_flag = austria_let_hungary_go }
+		OR = {
+			tag = PRU
+			tag = NGF
+			tag = GER
 		}
-		has_global_flag = hungarian_revolution_occurred
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+		}
+		OR = {
+			vote_franschise = none_voting
+			vote_franschise = landed_voting
+			vote_franschise = wealth_weighted_voting
+			vote_franschise = wealth_voting
+			political_parties = underground_parties
+			political_parties = harassment
+		}
+		OR = {
+			any_owned_province = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			revolt_percentage = 0.50
+		}
+		NOT = { has_country_flag = march_revolution }
 	}
 
 	mean_time_to_happen = {
 		days = 7
+		modifier = {
+			factor = 0.1
+			capital_scope = { controlled_by_rebels = yes }
+		}
 	}
 
 	option = {
-		name = "10226.A"
-		AUS_771 = { add_core = HUN }
-		prestige = 10
-		AUS = { country_event = 10227 }
-		clr_global_flag = hungarian_revolution_occurred
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -8
-			consciousness = -3
+		name = "EVT10229OPTA"
+		set_country_flag = march_revolution
+		prestige = -10
+		upper_house = {
+			ideology = conservative
+			value = 0.5
 		}
-		any_pop = {
+		random_owned = {
 			limit = {
-				is_primary_culture = no
-				NOT = { is_culture_group = germanic }
+				owner = { NOT = { vote_franschise = universal_voting } }
 			}
-			militancy = 4
-			consciousness = 3
+			owner = {
+				political_reform = universal_weighted_voting
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = { NOT = { political_parties = gerrymandering } }
+			}
+			owner = { political_reform = gerrymandering }
+		}		
+		random_owned = {
+			limit = {
+				owner = { NOT = { upper_house_composition = appointed } }
+			}
+			owner = { political_reform = appointed }
+		}
+		random_owned = {
+			limit = {
+				owner = { government = absolute_monarchy }
+			}
+			owner = { government = prussian_constitutionalism }
+		}
+		election = yes		
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by = REB
+			}
+			change_controller = THIS
 		}
 		any_owned = {
-			limit = {
-				OR = {
-					is_core = SLV
-					is_core = ROM
-					is_core = SER
-					is_core = CRO
+			limit = { is_colonial = no }
+			any_pop = {
+				militancy = -2
+				scaled_militancy = {
+					ideology = liberal
+					factor = -8
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -6
+				}
+				scaled_consciousness = {
+					ideology = liberal
+					factor = -4
 				}
 			}
-			remove_province_modifier = nationalist_agitation
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
+			remove_province_modifier = liberal_agitation
+		}						
+		remove_country_modifier = global_liberal_agitation
+		remove_country_modifier = springtime_of_nations
+		clr_country_flag = liberal_revolution_in_progress
+		clr_country_flag = liberal_revolution_fired
+		set_country_flag = had_liberal_revolution
+		ai_chance = { factor = 100 }
 	}
-}
-
-country_event = {
-	id = 10227
-	title = "EVTNAME10227" #The Hungarian Question
-	desc = "EVTDESC10227"
-	picture = "administration"
-
-	is_triggered_only = yes
 
 	option = {
-		name = "10227.A"
-		diplomatic_influence = {
-			who = HUN
-			value = -100
+		name = "EVT10229OPTB"
+		set_country_flag = march_revolution
+		political_reform = no_meeting
+		upper_house = {
+			ideology = reactionary
+			value = 0.3
 		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			militancy = -6
-		}
-		any_pop = {
+		random_owned = {
 			limit = {
-				has_pop_culture = romanian
-				location = { is_core = ROM }
+				is_capital = yes
+				controlled_by = REB
 			}
-			militancy = 6
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = polish
-				location = { is_core = POL }
-			}
-			militancy = 6
-		}
-		ai_chance = {
-			factor = 75
-		}
-	}
-	
-	option = {
-		name = "10227.B"
-		set_country_flag = austria_let_hungary_go
-		prestige = -25
-		badboy = -2
-		relation = {
-			who = HUN
-			value = 100
-		}
-		diplomatic_influence = {
-			who = HUN
-			value = 100
-		}
-		any_pop = {
-			limit = { is_primary_culture = yes }
-			scaled_militancy = {
-				issue = jingoism
-				factor = 6
-			}
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = romanian
-				location = { is_core = ROM }
-			}
-			militancy = 8
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = polish
-				location = { is_core = POL }
-			}
-			militancy = 8
-		}
+			change_controller = THIS
+		}		
 		any_owned = {
-			limit = {
-				OR = {
-					is_core = POL
-					is_core = ROM
+			limit = { is_colonial = no }
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = -4
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -8
+				}
+				scaled_consciousness = {
+					ideology = liberal
+					factor = 4
 				}
 			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
+			remove_province_modifier = liberal_agitation
 		}
-		ai_chance = {
-			factor = 25
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -4076,7 +3836,7 @@ country_event = {
 			factor = 1.25
 			OR = {
 				nationalvalue = nv_order
-				nationalvalue = nv_might
+				nationalvalue = nv_autocracy				
 			}
 		}
 	}
@@ -4558,6 +4318,7 @@ country_event = {
 			OR = {
 				vote_franschise = universal_weighted_voting
 				vote_franschise = universal_voting
+				has_country_flag = isolationist
 			}
 		}
 		civilized = yes
@@ -4616,10 +4377,10 @@ country_event = {
 			factor = 1.25
 			OR = {
 				nationalvalue = nv_order
-				nationalvalue = nv_might
+				nationalvalue = nv_autocracy
+				}
 			}
 		}
-	}
 	
 	option = {
 		name = "EVTOPTA10330"
