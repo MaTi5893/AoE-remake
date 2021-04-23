@@ -91,7 +91,7 @@ country_event = { #10225 Hungarian rebellion
 			war = {
 				target = HUN
 				attacker_goal = { casus_belli = make_puppet }
-				defender_goal = { casus_belli = cut_down_to_size }
+				defender_goal = { casus_belli = annex_core_country }
 				call_ally = no
 			}
 		}
