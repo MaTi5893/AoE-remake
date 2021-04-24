@@ -1,0 +1,44 @@
+# Blood & Iron Mine
+province_event = {
+	id = 12120
+	title = "EVTNAME12120"
+	desc = "EVTDESC12120"
+		
+	trigger = {
+		produces = iron
+		NOT = { has_province_modifier = blood_and_iron_mine }
+	}
+	
+	mean_time_to_happen = {
+		months = 900
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			civilized = no
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = no
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA12120"
+		add_province_modifier = {
+			name = blood_and_iron_mine
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB12120"
+		labourers = {
+			militancy = -1
+		}
+	}
+}
