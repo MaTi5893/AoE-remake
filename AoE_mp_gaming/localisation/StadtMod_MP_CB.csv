@@ -15,9 +15,17 @@ take_capital_setup;Take Capital region $STATE$ of $RECIPIENT$;;;;;;;;;;;;;x
 take_capital_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
 demand_concession_capital;Demand Capital Concession;;;;;;;;;;;;;
 demand_concession_capital_short;Demand $STATE$;;;;;;;;;;;;;
-demand_concession_capital_desc;Force an §Yuncivilized country§W to secede their capital to form a colonial concession.;;;;;;;;;;;;;
+demand_concession_capital_desc;Force an uncivilized country to secede their capital to form a colonial concession.;;;;;;;;;;;;;
 demand_concession_capital_setup;Demand that $RECIPIENT$ secede their capital to form a colonial concession.;;;;;;;;;;;;;
 war_reparations;Reparations;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,;;;;;;;;;;;;;;;;;;;;;
 war_reparations_desc;Demands war reparations;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,;;;;;;;;;;;;;;;;;;;;;
 war_reparations_short;Demand Reparations;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,;;;;;;;;;;;;;;;;;;;;;
 war_reparations_setup;Demands war reparations from the target country;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,;;;;;;;;
+place_in_the_sun_for_puppet;Expand Colonial Subject;;;;;;;;;;;;;
+place_in_the_sun_for_puppet_short;Demand $STATE$;;;;;;;;;;;;;
+place_in_the_sun_for_puppet_desc;Acquire an enemy colonial state for our puppet.;;;;;;;;;;;;;
+place_in_the_sun_for_puppet_setup;Demand that $RECIPIENT$ secede their colonial state to our puppet.;;;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet;Demand Concession for Colonial Subject;;;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet_short;Demand $STATE$;;;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet_desc;Force an uncivilized country to give a colonial concession to our puppet.;;;;;;;;;;;;;
+demand_concession_casus_belli_for_puppet_setup;Demand that $RECIPIENT$ give a colonial concession to our puppet.;;;;;;;;;;;;;

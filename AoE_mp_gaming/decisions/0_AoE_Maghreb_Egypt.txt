@@ -4,22 +4,13 @@ political_decisions = {
 		picture = crown
 		potential = {
 			tag = MOR
-			FEZ = { vassal_of = THIS }
-			TAF = { vassal_of = THIS }
+			TIM = { vassal_of = THIS }
 			SUS = { vassal_of = THIS }
 		}
 		allow = {
-			FEZ = { vassal_of = THIS }
-			TAF = { vassal_of = THIS }
+			TIM = { vassal_of = THIS }
 			SUS = { vassal_of = THIS }
-			OR = {
-			NOT = { tech_school = unciv_tech_school }
-			mass_politics = 1
-				AND = {
-					is_greater_power = yes
-					nationalism_n_imperialism = 1s
-				}
-			}
+			civilized = yes
 		}
 		effect = {
 			any_country = {
@@ -40,6 +31,7 @@ political_decisions = {
 				tag = FEZ
 				tag = TAF
 				tag = SUS
+				tag = TIM
 			}
 			NOT = { has_country_flag = conquest_morocco }
 		}
@@ -75,6 +67,7 @@ political_decisions = {
 				tag = FEZ
 				tag = TAF
 				tag = SUS
+				tag = TIM
 			}
 		}
 		allow = {
@@ -110,7 +103,6 @@ political_decisions = {
 				owns = 526
 				owns =  503
 			}
-			is_greater_power = yes
 		}
 		effect = {
 			prestige = 40
