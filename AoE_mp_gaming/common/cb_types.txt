@@ -1534,7 +1534,7 @@ place_in_the_sun = {
 	is_triggered_only = yes
 	months = 12
 
-	badboy_factor = 2
+	badboy_factor = 1.1
 	prestige_factor = 2
 	peace_cost_factor = 0.9
 	penalty_factor = 1
@@ -1588,7 +1588,7 @@ place_in_the_sun_for_puppet = {
 	is_triggered_only = yes
 	months = 12
 
-	badboy_factor = 2
+	badboy_factor = 1.1
 	prestige_factor = 2
 	peace_cost_factor = 0.9
 	penalty_factor = 1
