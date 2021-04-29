@@ -513,7 +513,7 @@ diplomacy = {
 
 	LIBERATE_STATE_RELATION_INCREASE = 50,
 	DISHONORED_CALLALLY_PRESTIGE_PENALTY = -3,
-	BASE_TRUCE_MONTHS = 60,
+	BASE_TRUCE_MONTHS = 0,
 	MAX_INFLUENCE = 100,
 	WARSUBSIDIES_PERCENT = 0.20, -- How many percent of imports you are going to pay each day(mil. constructions and mil. maintainence)
 	NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.50, -- Bonus to neighbouring countries when influencing
@@ -671,7 +671,7 @@ pops = {
 																-- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
 	
 	POP_TO_LEADERSHIP = 0.0001, -- how much leadership every 1000 officers gives each day.
-	ARTISAN_MIN_PRODUCTIVITY = 2, -- Minimum efficieny of an artisan
+	ARTISAN_MIN_PRODUCTIVITY = 5, -- Minimum efficieny of an artisan
 	SLAVE_GROWTH_DIVISOR = 1, -- Slaves have N times lower growth
 	
 	MIL_HIT_FROM_CONQUEST = 4, -- how much militancy grows in a province if taken without being core.
