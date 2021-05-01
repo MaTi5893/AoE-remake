@@ -250,8 +250,8 @@ political_decisions = {
 				government = elective_monarchy_oligarchy
 			}
 			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
+			rank = 20
+			ai = no
 			}
 			NOT = {
 				has_country_modifier = law_changed_by_force
@@ -304,8 +304,8 @@ political_decisions = {
 				government = proletarian_dictatorship
 			}
 			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
+			rank = 20
+			ai = no
 			}
 			NOT = {
 				has_country_modifier = law_changed_by_force
