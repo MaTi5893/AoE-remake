@@ -6,7 +6,7 @@ province_event = {
 	id = 1100
 
 	trigger = {
-		year = 1836
+		year = 1700
 		or = {
 			province_id = 1				# Sitka
 			province_id = 2				# Yakutat
@@ -358,7 +358,7 @@ province_event = {
 	id = 1105
 
 	trigger = {
-		year = 1836
+		year = 1700
 		or = {
 			province_id = 2084			# Angra Pequeña
 			province_id = 2091			# Mossel Bay
