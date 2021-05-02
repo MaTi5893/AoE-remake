@@ -2,11 +2,15 @@ political_decisions = {
 	
 	form_delhi_sultanate = {
 		potential = {
-			is_culture_group = south_asian
+			#is_culture_group = south_asian
 			NOT = { DLH = { exists = yes } }
 			NOT = { tag = MUG }
 			NOT = { has_country_flag = founded_new_empire }
-			has_country_flag = sunni_country
+			OR = {
+			tag = BNG
+			tag = HYD
+			tag = DEC
+			}
 			exists = yes
 		}
 		allow = {
