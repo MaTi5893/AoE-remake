@@ -1,0 +1,46 @@
+country_event = {
+	id = 500059
+	title = "EVTNAME500059" #Infamy too high
+	desc = "EVTDESC500059"
+	picture = "bad_badboy"
+	
+	trigger = {
+		ai = no
+		badboy = 1.3
+		NOT = {
+			OR = {
+				has_country_modifier = kinda_bad_badboy 
+				has_country_modifier = bad_badboy 
+			}
+		}
+	}
+		
+	mean_time_to_happen = { days = 2 }
+
+	immediate = {
+		add_country_modifier = {
+			name = kinda_bad_badboy
+			duration = 1825
+			}
+		any_greater_power = {
+		casus_belli = {
+			target = THIS
+			type = humiliate
+			months = 60
+			}
+		casus_belli = {
+			target = THIS
+			type = free_peoples
+			months = 12
+			}
+		relation = {
+			who = THIS
+			value = -100
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPT500059A"
+	}
+}
