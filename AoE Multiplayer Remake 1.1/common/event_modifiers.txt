@@ -1620,6 +1620,12 @@ local_nitroglycerin_and_machine_tools = {
 	icon = 13
 }
 
+local_nitroglycerin = {
+	mine_RGO_eff = 0.5
+	mine_RGO_size = 0.5
+	icon = 13
+}
+
 local_distribution_channels_und_electricity = {
 	farm_RGO_eff = 0.5
 	mine_RGO_eff = 0.5
