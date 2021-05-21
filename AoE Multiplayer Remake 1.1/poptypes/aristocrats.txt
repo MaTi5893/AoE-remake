@@ -931,6 +931,10 @@ ideologies = {
 			factor = 1.1
 			poor_strata_militancy = 8
 		}
+		modifier = {
+			factor = 2.0
+			social_policy = no_state_interference
+		}
 	}
 
 	conservative = {

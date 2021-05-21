@@ -259,6 +259,72 @@ army = {
 }
 
 army = {
+	name = "2st Corps"
+	location = 278
+	regiment = {
+		name= "Light Brigade"
+		type = hussar
+		home = 302
+	}
+
+	regiment = {
+		name= "Royal Dragoons"
+		type = artillery
+		home = 297
+	}
+
+	regiment = {
+		name= "Heavy Brigade"
+		type = artillery
+		home = 299
+	}
+
+	regiment = {
+		name= "1.1st Division"
+		type = artillery
+		home = 298
+	}
+
+	regiment = {
+		name= "2.1st Division"
+		type = artillery
+		home = 264
+	}
+
+	regiment = {
+		name= "3.1st Division"
+		type = artillery
+		home = 274
+	}
+
+	regiment = {
+		name= "1.2nd Division"
+		type = infantry
+		home = 285
+	}
+
+	regiment = {
+		name= "2.2nd Division"
+		type = infantry
+		home = 278
+	}
+
+	regiment = {
+		name= "3.2nd Division"
+		type = infantry
+		home = 280
+	}
+	
+	regiment = {
+		name= "3.3rd Division"
+		type = infantry
+		home = 277
+	}
+
+}
+
+
+army = {
 	name = "3rd Division"
 	location = 273
 	regiment = {

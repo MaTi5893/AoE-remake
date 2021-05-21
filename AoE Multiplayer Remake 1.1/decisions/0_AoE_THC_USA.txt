@@ -13,10 +13,11 @@ political_decisions = {
 		}
 
 		effect = {
-			prestige = 20
+			prestige = 12
 			all_core = { add_core = USA }
 			all_core = { remove_core = THIS }
 			change_tag = USA
+			remove_accepted_culture = british
 		}
 
 		ai_will_do = {
@@ -321,7 +322,7 @@ political_decisions = {
 				}
 				militancy = -4
 			}
-			prestige = 20
+			prestige = 12
 		}
 	}
 	the_articles_of_confederation = {

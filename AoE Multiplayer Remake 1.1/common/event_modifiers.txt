@@ -381,7 +381,7 @@ corrupt_army = {
 
 fanatic_army = {
 	land_organisation = 0.15
-	war_exhaustion = -5
+	war_exhaustion = -0.05
 	org_regain = 0.2
 	land_unit_start_experience = 5
 	mobilisation_size = 0.04
@@ -6891,4 +6891,7 @@ bad_badboy = {
 	research_points_modifier = -0.3
 	cb_generation_speed_modifier = -0.3
 	icon = 8
+}
+estates_help_plead_cooldown = {
+	icon = 15
 }

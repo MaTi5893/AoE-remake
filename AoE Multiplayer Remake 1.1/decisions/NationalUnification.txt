@@ -120,4 +120,15 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	form_germany = {
+		potential = {
+			is_culture_group = germanic
+			GER = { exist = no }
+			NOT = { has_country_flag = hre_member }
+		}
+		allow = {
+			is_greater_power = yes
+		}
+	}
 }

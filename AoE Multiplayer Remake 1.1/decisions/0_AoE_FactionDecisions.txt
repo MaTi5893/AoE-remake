@@ -335,4 +335,34 @@ political_decisions = {
 			}
 		}
 	}
+	estate_war_support = {
+		picture = tresury_reforms
+		potential = {
+			exists = yes
+			ai = no
+		}
+		allow = {
+			exists = yes
+			NOT = {
+				has_country_modifier = estates_help_plead_cooldown
+			}
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			any_pop = {
+				militancy = 0.5
+			}
+			small_arms = 110,46
+			artillery = 92,5
+			canned_food = 184,1
+			wine = 92,5
+			liquier = 92,5
+			luxury_clothes = 9,21
+			add_country_modifier = {
+				name = estates_help_plead_cooldown
+				duration = 1825
+			}
+		}
+	}
 }

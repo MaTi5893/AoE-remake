@@ -50,6 +50,7 @@ political_decisions = {
 				factor = 0
 				AUS = {
 					NOT = { war_exhaustion = 5 }
+					war = yes
 				}
 			}
 		}
