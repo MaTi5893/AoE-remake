@@ -1,24 +1,8 @@
 owner = MUN
 controller = MUN
 add_core = MUN
+add_core = GER
+add_core = WES
 add_core = NNN
 trade_goods = coal
 life_rating = 40
-1861.1.1 = {
-	state_building = {
-		level = 1
-		building = steel_factory
-		upgrade = yes
-	}
-	state_building = {
-		level = 1
-		building = explosives_factory
-		upgrade = yes
-	}
-	state_building = {
-		level = 1
-		building = ammunition_factory
-		upgrade = yes
-	}
-}
-1861.1.1 = { railroad = 3 }
