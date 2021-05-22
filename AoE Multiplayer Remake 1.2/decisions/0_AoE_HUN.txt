@@ -43,8 +43,9 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 3
-				year = 1704
+				factor = 0
+				NOT = { year = 1704 }
+				AUS = { war = no }
 			}
 			modifier = {
 				factor = 0
