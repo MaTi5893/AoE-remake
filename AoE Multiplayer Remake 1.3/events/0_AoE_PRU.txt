@@ -1,0 +1,380 @@
+country_event = {
+	id = 1740001
+	title = "Frederick II Hohenzollern"
+	desc = "EVTDESC1740001"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		year = 1740
+		NOT = { government = democracy }
+		NOT = { government = presidential_dictatorship }
+	}
+	
+	mean_time_to_happen = {
+		days = 24
+	}
+	
+	option = {
+		name = "Goose-step hither King in Prussia!"
+		add_country_modifier = {
+			name = frederick_grosse
+			duration = -1
+		}
+		define_general = {
+			name = "Frederick II Hohenzollern"
+			personality = implacable
+			background = cursed_luck
+		}
+	}
+}
+country_event = {
+	id = 1740002
+	title = "Death of Frederick II Hohenzollern"
+	desc = "EVTDESC1740002"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = frederick_grosse
+		OR = {
+			year = 1786
+			government = democracy
+			government = presidential_dictatorship
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = {
+		name = "A great monarch he was..."
+		remove_country_modifier = frederick_grosse
+	}
+}
+country_event = {
+	id = 1740004
+	title = "East Frisian ruler passes away"
+	desc = "EVTDESC1740004"
+	picture = throne
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		year = 1743
+		EFR = {
+			ai = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "A pen is mighter then a sword after all!"
+		inherit = EFR
+		prestige = 5
+	}
+}
+country_event = {
+	id = 1740005
+	title = "Frederick land reforms"
+	desc = "EVTDESC1740005"
+	picture = fredrick_grosse
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = PRU tag = BRN }
+		has_country_modifier = frederick_grosse
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "A much needed change"
+		add_country_modifier = {
+			name = land_reform_pru
+			duration = 3700
+		}
+	}
+}
+country_event = {
+	id = 1740009
+	title = "The Prussian Union"
+	desc = "EVTDESC1740009"
+	picture = prussian_glory
+	is_triggered_only = yes
+
+	option = {
+		name = "Long live the king in Prussia!"
+		set_country_flag = pru_exists
+		DPR = {
+			all_core = {
+				add_core = PRU
+				remove_core = DPR
+			}
+		}
+		inherit = DPR
+		BRN = {
+			all_core = {
+				add_core = PRU
+				remove_core = THIS
+			}
+		}
+		change_tag = PRU
+		government = absolute_monarchy
+		prestige = 20
+	}
+}
+province_event = {
+	id = 1740010
+	title = "A fine Soldier"
+	desc = "EVTDESC1740010"
+	
+	trigger = {
+		owner = {
+			tag = PRU
+			NOT = { military_score = 100 }
+		}
+		OR = {
+			country_units_in_province = THIS
+			any_pop = {
+				unemployment = 0.08
+			}
+		}
+		controlled_by_rebels = no
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.2
+			owner = {
+				NOT = { military_score = 10 }
+			}
+		}
+		modifier = {
+			factor = 0.4
+			owner = {
+				NOT = { military_score = 20 }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			owner = {
+				NOT = { military_score = 30 }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			owner = {
+				NOT = { military_score = 40 }
+			}
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				NOT = { military_score = 50 }
+			}
+		}
+	}
+	
+	option = {
+		name = "Abduct and force him into army service!"
+		random_pop = {
+			limit = {
+				OR = {
+					pop_type = labourers
+					#pop_type = tribesmen
+					#pop_type = zzz_dummy
+					pop_type = farmers
+					pop_type = artisans
+				}
+			}
+			pop_type = soldiers
+		}
+		random_pop = {
+			consciousness = 2
+			militancy = 1
+		}
+	}
+	
+	option = {
+		name = "Leave him alone"
+	}
+}
+country_event = {
+	id = 1740011
+	title = "A Fine Maid"
+	desc = "EVTDESC1740011"
+	picture = fredrick_and_maria
+	is_triggered_only = yes
+	
+	option = {
+		name = "Will you mary me?"
+		AUS = { country_event = 1740012 }
+	}
+}
+country_event = {
+	id = 1740012
+	title = "Will you marry me?"
+	desc = "EVTDESC1740012"
+	picture = fredrick_and_maria
+	is_triggered_only = yes
+	
+	option = {
+		name = "Yes, I'll be your wholsome little chungus"
+		country_event = 1740013
+		set_global_flag = metally_prussia
+	}
+	
+	option = {
+		name = "No"
+		PRU = { prestige = -5 }
+	}
+}
+country_event = {
+	id = 1740013
+	title = "The Marriage of Frederick and Maria"
+	desc = "EVTDESC1740013"
+	major = yes
+	news = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		PRU = { prestige = 5 }
+		AUS = { prestige = 5 }
+	}
+	option = {
+		name = "An Honor to both nations!"
+	}
+}
+
+country_event = {
+	id = 1740014
+	title = "Maria and Frederick's Divorce"
+	desc = "EVTDESC1740014"
+	major = yes
+	news = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "It was nice while it lasted..."
+		prestige = -5
+	}
+}
+country_event = {
+	id = 1740015
+	title = "Army With A State"
+	desc = "Our mil buffs have changed"
+	picture = prussian_army
+	
+	trigger = {
+		has_country_flag = soldier_king_reforms
+		exists = yes
+		OR = {
+			AND = {
+				military_score = 500
+				military_spending = 1
+			}
+			NOT = { number_of_states = 8 }
+		}
+		
+		NOT = { has_country_modifier = army_with_a_state }
+		NOT = { has_country_modifier = army_with_a_state3 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Ok"
+		add_country_modifier = {
+			name = army_with_a_state
+			duration = -1
+		}
+		remove_country_modifier = army_with_a_state3
+		remove_country_modifier = army_with_a_state2
+	}
+}
+country_event = {
+	id = 1740016
+	title = "Army With A State"
+	desc = "Our mil buffs have changed"
+	picture = prussian_army
+
+	trigger = {
+		has_country_flag = soldier_king_reforms
+		exists = yes
+		OR = {
+			AND = {
+				military_score = 400
+				NOT = { military_score = 500 }
+				military_spending = 1
+			}
+			AND = {
+				NOT = { number_of_states = 14 }
+				number_of_states = 8
+			}
+		}
+		NOT = { has_country_modifier = army_with_a_state2 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Ok"
+		add_country_modifier = {
+			name = army_with_a_state2
+			duration = -1
+		}
+		remove_country_modifier = army_with_a_state3
+		remove_country_modifier = army_with_a_state1
+	}
+}
+country_event = {
+	id = 1740017
+	title = "Army With A State"
+	desc = "Our mil buffs have changed"
+	picture = prussian_army
+
+	trigger = {
+		has_country_flag = soldier_king_reforms
+		exists = yes
+		OR = {
+			AND = {
+				NOT = { number_of_states = 16 }
+				number_of_states = 14
+			}
+			AND = {
+				military_score = 200
+				NOT = { military_score = 400 }
+				military_spending = 1
+			}
+		}
+		NOT = { has_country_modifier = army_with_a_state }
+		NOT = { has_country_modifier = army_with_a_state3 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Ok"
+		add_country_modifier = {
+			name = army_with_a_state3
+			duration = -1
+		}
+		remove_country_modifier = army_with_a_state
+		remove_country_modifier = army_with_a_state2
+	}
+}

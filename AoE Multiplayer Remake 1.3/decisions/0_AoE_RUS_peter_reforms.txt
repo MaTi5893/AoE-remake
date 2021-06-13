@@ -1,0 +1,643 @@
+political_decisions = {
+	declere_russian_empire = {
+		picture = rus_empire
+		potential = {
+			tag = RUS
+			government = tsardom
+			exists = yes
+		}
+		allow = {
+			idealism = 1
+			war = no
+			owns = 994
+			#owns = 354
+			owns = 1047
+			owns = 350
+		}
+		effect = {
+			government = absolute_monarchy
+			add_accepted_culture = byelorussian
+			add_accepted_culture = ukrainian
+			prestige = 25
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
+	peter_the_greats_reforms = {
+		picture = rus_empire
+		potential = {
+			tag = RUS
+			NOT = { has_country_modifier = improved_administration }
+			OR = {
+				NOT = { year = 1701 }
+				has_country_modifier = peter_the_great
+			}
+		}
+		allow = {
+			government = absolute_monarchy
+			is_greater_power = yes
+			ruling_party_ideology = reactionary
+		}
+		effect = {
+			add_country_modifier = {
+				name = improved_administration
+				duration = -1
+			}
+			add_country_modifier = {
+				name = petes_conscription
+				duration = -1
+			}
+			research_points = 50
+			remove_country_modifier = streltsi_rebellion
+			tech_school = pogonya_za_zapadom
+			any_pop = {
+				militancy = 2
+			}
+		}
+	}
+	construct_st_petersburg = {
+		picture = petersburg
+		potential = {
+			tag = RUS
+			NOT = { capital = 994 }
+			994 = {
+				NOT = { has_province_modifier = st_petersburg_construction }
+			}
+			NOT = { has_country_flag = begun_construction_sp }
+		}
+
+		allow = {
+			owns = 994 # St.Petersburg	
+		}
+	
+		effect = {
+			994 = {
+				life_rating = 5
+				change_province_name = "St.Petersburg"
+			}
+			country_event = 1700251
+			prestige = 5
+			set_country_flag = begun_construction_sp
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_the_baltics = {
+		picture = baltic_russia
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = claimed_baltics }
+			exists = yes
+		}
+	
+		allow = {
+			war = no
+			OR = {
+			owns = 1047
+			owns = 994
+			}
+		}
+	
+		effect = {
+			set_country_flag = claimed_baltics
+			RUS_349 = {
+				add_core = THIS 
+			}
+			994 = {
+				add_core = THIS
+			}
+			354 = {
+				add_core = THIS
+			}
+			355 = {
+				add_core = THIS
+			}
+			996 = {
+				add_core = THIS
+			}
+			339 = {
+				add_core = THIS
+			}
+			352 = { add_core = THIS }
+			351 = { add_core = THIS }
+			add_core = 3251
+			badboy = 15
+			random_owned = {
+				limit = {
+					owner = {
+						SWE = { exists = yes war = yes }
+					}
+				}
+				owner = {
+					war = {
+						target = SWE
+						attacker_goal = { casus_belli = acquire_all_cores country = RUS }
+						defender_goal = { casus_belli = cut_down_to_size }
+						call_ally = no
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0		
+			#	NOT = { year = 1701 }
+			#}
+		}
+	}
+	
+	claim_crimea_south_ukrine = {
+		picture = crimea
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = claimed_crimea_south_ukrine }
+			exists = yes
+		}
+		allow = {
+			is_greater_power = yes
+			war_policy  = jingoism
+			OR = {
+				AND = {
+				owns = 1047
+				CRI = {
+					exists = no
+				}
+				}
+				mass_politics = 1
+			}
+		}
+		effect = {
+			set_country_flag = claimed_crimea_south_ukrine
+			CRI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			RUS_676 = { add_core = THIS }
+			badboy = 10
+		}
+		ai_will_do = { factor = 1 }	
+	}
+	enact_the_table_of_ranks = {
+		picture = table_of_ranks
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = enacted_the_table_of_ranks
+			}
+			exists = yes
+		}
+		allow = {
+			NOT = {
+				OR = {
+					safety_regulations = no_safety
+					safety_regulations = trinket_safety
+				}
+			}
+			OR = {
+				pensions = low_pensions
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+			war = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = table_of_ranks
+				duration = -1
+			}
+			set_country_flag = enacted_the_table_of_ranks
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	enact_nakaz = {
+		picture = nakaz
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = enacted_nakaz
+			}
+			exists = yes
+		}
+		allow = {
+			has_country_modifier = catharine_the_great
+			NOT = {
+				OR = {
+					safety_regulations = no_safety
+					safety_regulations = trinket_safety
+				}
+			}
+			NOT = {
+				OR = {
+					health_care = no_health_care
+					health_care = trinket_health_care
+				}
+			}
+			OR = {
+				upper_house_composition = party_appointed
+				upper_house_composition = appointed
+			}
+			government = absolute_monarchy
+			ruling_party_ideology = reactionary
+			war = no
+		}
+		effect = {
+			political_reform = party_appointed
+			political_reform = unitary
+			add_country_modifier = {
+				name = nakaz
+				duration = -1
+			}
+			set_country_flag = enacted_nakaz
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	claim_ruthenia = {
+		picture = ruthenia
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = claimed_ruthenia }
+			exists = yes
+			owns = 718
+		}
+		allow = {
+			is_greater_power = yes
+			war_policy  = jingoism
+			OR = {
+				AND = {
+					owns = 718
+					owns = 958
+					owns = 360
+				}
+				AND = {
+					year = 1790
+					ai = yes
+				}
+			}
+			OR = {
+				POL = {
+					NOT = { is_greater_power = yes }
+					exists = yes
+				}
+				PLC = {
+					NOT = { is_greater_power = yes }
+					exists = yes
+				}
+				AND = {
+					POL = { NOT = { exists = yes } }
+					PLC = { NOT = { exists = yes } }
+				}
+				AND = {
+					year = 1790
+					ai = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = claimed_ruthenia
+			RUS_958 = { add_core = THIS }
+			RUS_955 = { add_core = THIS }
+			RUS_707 = { add_core = THIS }
+			RUS_718 = { add_core = THIS }
+			badboy = 22
+		}
+		ai_will_do = { factor = 1 }	
+	}
+	conquer_east_prussia = {
+		picture = ducal_prussia
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = conquer_east_prussia }
+			exists = yes
+			owns = 695
+		}
+		allow = {
+			owns = 994
+			owns = 695
+			is_greater_power = yes
+			war_policy = jingoism
+			NOT = {
+				PRU = {
+					is_greater_power = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = conquer_east_prussia
+			any_owned = {
+				limit = {
+					region = PRU_695
+				}
+				add_province_modifier = {
+					name = population_resettlement
+					duration = 7300
+				}
+			}
+			695 = { add_core = RUS }
+			697 = { add_core = RUS }
+			698 = { add_core = RUS }
+			badboy = 5
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	invite_germans_to_southern_border = {
+		picture = migration
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = volga_germs }
+			exists = yes
+		}
+		allow = {
+			#money = 30000
+			synthetic_polymers = 1
+			#mass_politics = 1
+			NOT = { CRI = { exists = yes } }
+			owns = 968
+			owns = 970
+			owns = 973
+		}
+		effect = {
+			set_country_flag = volga_germs
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = HET
+						region = RUS_977
+						region = RUS_979
+						region = RUS_1041
+						region = RUS_1037
+					}
+				}
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 7300
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	#vaccination_cat = {
+	#	picture = ill_hand
+	#	potential = {
+	#		tag = RUS
+	#		NOT = {
+	#			has_country_flag = vaccination_cat
+	#		}
+	#		exists = yes
+	#	}
+	#	allow = {
+	#		OR = {
+	#			chemistry_and_electricity_7 = 1
+	#			AND = {
+	#				ai = yes
+	#				year = 1775	
+	#			}
+	#		}
+	#		has_country_modifier = catharine_the_great
+	#	}
+	#	effect = {
+	#		add_country_modifier = {
+	#			name = russian_vaccination
+	#			duration = 3650
+	#		}
+	#		set_country_flag = vaccination_cat
+	#	}
+	#	ai_will_do = {					
+	#	factor = 1
+	#	}
+	#}
+	
+	catharine_the_greats_reforms = {
+		picture = catherine_the_great
+		potential = {
+			tag = RUS
+			OR = {
+				has_country_modifier = catharine_the_great
+				year = 1764
+			}
+			NOT = { has_country_flag = catharine_the_great_reforms }
+		}
+		allow = {
+			ruling_party_ideology = reactionary
+			has_country_modifier = catharine_the_great
+			owns = 944
+			owns = 718
+			owns = 960
+			HET = {
+				OR = {
+					vassal_of = THIS
+					all_core = { owned_by = THIS }
+				}
+			}
+			ZZH = {
+				OR = {
+					vassal_of = THIS
+					all_core = { owned_by = THIS }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = russian_vaccination
+				duration = 3650
+			}
+			inherit = HET
+			inherit = ZZH
+			research_points = 30
+			tech_school = pogonya_za_zapadom
+			set_country_flag = catharine_the_great_reforms
+		}
+	}
+	
+	enforce_peace_tur = {
+		picture = crimea
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = enforced_peace_tur }
+			NOT = { year = 1703 }
+		}
+		allow = {
+			war_with = TUR
+			979 = {
+				controlled_by = THIS
+				province_control_days = 365
+			}
+			1047 = {
+				controlled_by = THIS
+				province_control_days = 365
+			}
+			973 = {
+				controlled_by = THIS
+				province_control_days = 200
+			}
+		}
+		effect = {
+			prestige = 15
+			end_war = TUR
+			979 = { secede_province = THIS }
+			1047 = { secede_province = THIS }
+			set_country_flag = enforce_peace_tur
+		}
+	}
+	manifesto_on_caucasus = {
+		picture = unite_caucasus
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = manifesto_on_caucasus
+			}
+			has_country_flag = caspian_expedition_fail
+			exists = yes
+		}
+		allow = {
+			is_greater_power = yes
+			OR = {
+				owns = 1053
+				neighbour = PER
+			}
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = manifesto_on_caucasus
+			country_event = 170013
+			1053 = {
+				add_core = RUS
+			}
+			1052 = {
+				add_core = RUS
+			}
+			1103 = {
+				add_core = RUS
+			}
+			1102 = {
+				add_core = RUS
+			}
+			1107 = {
+				add_core = RUS
+			}
+			1113 = {
+				add_core = RUS
+			}
+			1114 = {
+				add_core = RUS
+			}
+			1115 = {
+				add_core = RUS
+			}
+		}
+	}
+	settle_south_borders = {
+		picture = cossacks
+		potential = {
+			tag = RUS
+			has_country_flag = claimed_crimea_south_ukraine
+			NOT = {
+				has_country_flag = settle_south_borders
+			}
+			exists = yes
+		}
+		allow = {
+			RUS_964 = { owned_by  = RUS }
+			RUS_968 = { owned_by  = RUS }
+			RUS_973 = { owned_by  = RUS }
+			1048 =  { owned_by  = RUS }
+			money = 5000000
+			war = no
+		}
+		effect = {
+			treasury = -500000
+			set_country_flag = settle_south_borders
+			973 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			975 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			976 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			965 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			979 = {
+				add_province_modifier = {
+						name = settle_the_south_border
+						duration = 3500
+				}
+			}
+			1047 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			1048 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			974 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			964 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			1046 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			968 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			970 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+			971 = {
+				add_province_modifier = {
+					name = settle_the_south_border
+					duration = 3500
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,65 @@
+political_decisions = {
+	scandi_pop_buff = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			SWE = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = finnish
+							has_pop_culture = swedish
+						}
+					}
+					reduce_pop = 1.9
+				}
+			}
+			DNN = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = danish
+							has_pop_culture = norwegian
+						}
+					}
+					reduce_pop = 2.6
+				}
+			}
+		}
+	}
+	
+	rus_nerf_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			RUS = {
+				add_country_modifier = {
+					name = streltsi_rebellion
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	free_monies = {
+		potential = {
+			ai = no
+			NOT = { has_country_flag = free_monies }
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			treasury = 250000
+			set_country_flag = free_monies
+		}
+	}
+}

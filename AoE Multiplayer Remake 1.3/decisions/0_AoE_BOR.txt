@@ -1,0 +1,538 @@
+political_decisions = {
+
+	rights_of_man = {
+		picture = rights_of_man
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = rights_of_man }
+			exists = yes
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					is_ideology_enabled = communist
+					pop_militancy = 4
+				}
+				government = proletarian_dictatorship
+				
+				nationalism_n_imperialism = 1
+			}
+			has_country_flag = edict_of_tolerance
+		}
+		
+		effect = {
+			any_pop = {
+				militancy = -2
+			}
+			set_country_flag = rights_of_man
+			add_country_modifier = {
+				name = rights_of_man
+				duration = -1
+			}
+		}
+	}
+	
+	edict_of_tolerance = {
+		picture = tolerance_edict
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = edict_of_tolerance }
+			exists = yes
+			is_ideology_enabled = socialist
+		}
+		allow = {
+			average_militancy = 4
+		}
+		effect = {
+			set_country_flag = edict_of_tolerance
+			add_country_modifier = {
+				name = freedom_of_religion
+				duration = -1
+			}
+			any_pop = {
+				limit = {
+					religion = protestant 
+				}
+				militancy = -2
+			}
+			any_pop = {
+				limit = {
+					religion = catholic 
+				}
+				militancy = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	establish_ecole_militire = {
+		picture = fra_soldier
+		potential = {
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
+			is_greater_power = yes
+			NOT = { has_country_flag = established_ecole_militire }
+			exists = yes
+		}
+		allow = {
+			bolt_action_rifles = 1
+			military_spending = 1
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			add_country_modifier = {
+				name = ecole_militire
+				duration = -1
+			}
+			set_country_flag = established_ecole_militire 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	natural_borders_of_fr = {
+		picture = louis_dream
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = natural_borders_of_fr }
+			exists = yes
+			OR = {
+				government = proletarian_dictatorship
+				government = fascist_dictatorship
+			}
+		}
+		allow = {
+			war_policy = jingoism
+			NOT = { has_country_modifier = no_more_war }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 15
+			set_country_flag = natural_borders_of_fr
+			LOR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			LIG = { all_core = { add_core = THIS } }
+			BEL = { all_core = { add_core = THIS } }
+			571 = { add_core = THIS }
+			573 = { add_core = THIS }
+			572 = { add_core = THIS }
+			574 = { add_core = THIS }
+			575 = { add_core = THIS }
+			576 = { add_core = THIS }
+			577 = { add_core = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
+	napoleonic_coup = {
+		picture = napoleon_legacy
+		potential = {
+			primary_culture = french
+			has_country_flag = napoleon_general
+			government = proletarian_dictatorship
+			NOT = { government = fascist_dictatorship }
+			NOT = { has_country_flag = napoleonic_coup }
+		}
+		allow = { 
+			war = no
+			invention = gas_attack_capability
+		}
+		effect = {
+			set_country_flag = napoleonic_coup
+			event = 189980
+		}
+	}
+	napoleonic_conquest = {
+		picture = napoleon
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = natural_borders_of_fr }
+			exists = yes
+			government = fascist_dictatorship
+			has_country_modifier = napoleon_bonaparte
+		}
+		allow = {	
+			mass_politics = 1
+			war_policy = jingoism
+			NOT = { has_country_modifier = no_more_war }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 20
+			set_country_flag = natural_borders_of_fr
+			LOR = { all_core = { add_core = THIS } }
+			LIG = { all_core = { add_core = THIS } }
+			NET = { all_core = { add_core = THIS } }
+			BEL = { all_core = { add_core = THIS } }
+			571 = { add_core = THIS }
+			573 = { add_core = THIS }
+			572 = { add_core = THIS }
+			574 = { add_core = THIS }
+			575 = { add_core = THIS }
+			576 = { add_core = THIS }
+			577 = { add_core = THIS }
+			add_core = 609
+			add_core = 472
+			add_core = 465
+			add_core = 466
+			SPA_498 = { add_core = THIS }
+			SAR_720 = { add_core = THIS }
+			HAN_534 = { add_core = THIS }
+			HAM_528 = { add_core = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
+	annex_lor = {
+		picture = lorraine
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = annex_lor }
+			exists = yes
+		}
+		allow = {
+			state_n_government = 1
+			LOR = { in_sphere = THIS }
+			war = no
+		}
+		effect = {
+			inherit = LOR
+			LOR = { all_core = { add_core = THIS remove_core = NNN } }
+			badboy = 5
+			set_country_flag = annex_lor
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	secure_fr_na = {
+		picture = french_NA
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = secured_fr_na }
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			invention = the_dark_continent
+			OR = {
+				any_neighbor_country = {
+					capital_scope = {
+						continent = north_america
+					}
+					civilized = no
+				}
+				FCA = {
+					vassal_of = THIS
+					exists = yes
+					any_neighbor_country = {
+						capital_scope = {
+							continent = north_america
+						}
+						civilized = no
+					}
+				}
+				ULA = {
+					vassal_of = THIS
+					exists = yes
+					any_neighbor_country = {
+						capital_scope = {
+							continent = north_america
+						}
+						civilized = no
+					}
+				}
+			}
+		}
+		effect = {
+			any_country = {
+				limit = {
+					civilized = no
+					OR = {
+						neighbour = THIS
+						neighbour = ULA
+						neighbour = FCA
+					}
+					in_sphere = THIS
+					capital_scope = { continent = north_america }
+					NOT = { tag = CHE }
+					NOT = { tag = IQS }
+					NOT = { tag = CRK }
+					war = no
+					ai = yes
+				}
+				random_list = {
+					15 = { annex_to = THIS }
+					85 = { country_event = 171119 }
+				}
+			}
+			set_country_flag = secured_fr_na
+		}
+	}
+	
+	louis_dream = {
+		#picture = louis_dream
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = louis_dream }
+			#exists = yes
+			OR = {
+				#government = trade_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				#government = tsardom
+				#government = archduchy
+				#government = elective_monarchy_oligarchy
+			}
+		}
+		allow = {
+			owns = 387
+			owns = 394
+			owns = 397
+			OR = {
+				AND = {
+					has_country_modifier = louis_grande
+					ideological_thought = 1
+				}
+				AND = {
+					nationalism_n_imperialism = 1
+					war_policy = jingoism
+				}
+			}
+			NOT = { has_country_modifier = no_more_war }
+			NOT = { has_country_modifier = peasant_turmoil }
+			has_recently_lost_war = no
+		}
+		effect = {
+			badboy = 15
+			set_country_flag = louis_dream
+			398 = {
+				add_core = THIS
+			}
+			397 = {
+				add_core = THIS
+			}
+			394 = {
+				add_core = THIS
+			}
+			393 = {
+				add_core = THIS
+			}
+			393 = {	add_core = THIS }
+			388 = {	add_core = THIS }
+			389 = {	add_core = THIS }
+			387 = {	add_core = THIS }
+			390 = {	add_core = THIS }
+			random_country = {
+				limit = {
+					tag = LOR
+					in_sphere = THIS
+					ai = yes
+				}
+				THIS = {
+					create_vassal = LOR
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
+	form_franco_spanish_union_diplo = {
+		picture = bourbon
+		potential = {
+			OR = {
+			tag = BOR
+			tag = SPC
+			}
+			NOT = { exists = FSU }
+			exists = SPC
+			exists = BOR
+			NOT = { has_global_flag = france_lost_succ }
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+		}
+		allow = {
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			is_greater_power = yes
+			state_n_government = 1
+			BOR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			SPC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			war = no
+		}
+		effect = {
+			all_core = {
+				add_core = FSU
+				remove_core = THIS
+			}
+			random_country = {
+				limit = {
+					tag = BOR
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = french
+				}
+			}
+			random_country = {
+				limit = {
+					tag = SPC
+					NOT = { tag = THIS }
+				}
+				all_core = {
+					add_core = FSU
+				}
+				THIS = {
+					add_accepted_culture = spanish
+				}
+			}
+			change_tag = FSU
+			prestige = 25
+		}
+	}
+	
+	form_franco_spanish_union_war = {
+		picture = bourbon
+		potential = {
+			OR = {
+			tag = BOR
+			tag = SPC
+			}
+			NOT = { exists = FSU }
+			exists = SPC
+			exists = BOR
+			NOT = { has_global_flag = FSU }
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			NOT = { has_country_flag = unified_by_force }
+		}
+		allow = {
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+			is_greater_power = yes
+			state_n_government = 1
+			war = no
+		}
+		effect = {
+			random_owned = {
+				owner = {
+					limit = {
+						tag = BOR
+					}
+					casus_belli = {
+						target = SPC
+						type = unify_bourbon_empire
+						months = 12
+					}
+				}
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						tag = SPC
+					}
+					casus_belli = {
+						target = BOR
+						type = unify_bourbon_empire
+						months = 12
+					}
+				}
+			}
+			set_country_flag = unified_by_force
+		}
+	}
+	
+	french_constitution = {
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = french_const_made }
+			OR = {
+				AND = {
+					has_country_modifier = poor_tax_laws
+					has_country_modifier = poor_conscript_laws
+					has_country_modifier = peasant_in_government
+				}
+				government = hms_government
+			}
+		}
+		allow = {
+			exists = yes
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					culture = french
+				}
+				militancy = -6
+				counciousness = -3
+			}
+			prestige = 15
+			set_country_flag = french_const_made
+			add_country_modifier = {
+				name = new_constitution
+				duration = 365
+			}
+		}
+	}
+}

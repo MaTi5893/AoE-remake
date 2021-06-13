@@ -1,0 +1,387 @@
+political_decisions = {
+	seize_church_propety = {
+		picture = church
+		potential = {
+			NOT = { government = theocracy }
+			OR = {
+				wage_reform = acceptable_minimum_wage
+				wage_reform = good_minimum_wage
+			}
+			NOT = { has_country_modifier = law_changed_by_force }
+			exists = yes
+		}
+		allow = {
+			wage_reform = good_minimum_wage
+			NOT = { religious_policy = moralism }
+		}
+		effect = {
+			add_country_modifier = {
+				name = church_goods_seized
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 5475
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	deify_ruler = {
+		picture = saint_ruler
+		potential = {
+			NOT = { has_country_flag = deified_ruler }
+			#NOT = { government = theocracy }
+			wage_reform = no_minimum_wage
+			capital_scope = { NOT = { continent = europe } }
+			OR = {
+				government = trade_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = tsardom
+				government = archduchy
+				government = elective_monarchy_oligarchy
+			}
+			NOT = { has_recently_lost_war = yes }
+			exists = yes
+			civilized = no
+		}
+		allow = {
+			wage_reform = no_minimum_wage
+			religious_policy = moralism
+			prestige = 100
+		}
+		effect = {
+			set_country_flag = deified_ruler
+			prestige = 25
+			add_country_modifier = {
+				name = deified_ruler
+				duration = 3650
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	establish_proffesional_officer_core = {
+		picture = army_training
+		potential = {
+			NOT = { has_country_flag = officer_core }
+			deep_defense_system = 1
+			OR = {
+				pensions = low_pensions
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+			OR = {
+				AND = {
+					OR = {
+						safety_regulations = acceptable_safety
+						safety_regulations = good_safety
+					}
+					OR = {
+						government = trade_monarchy
+						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = tsardom
+						government = archduchy
+						government = elective_monarchy_oligarchy
+					}
+				}
+				AND = {
+					NOT = {	government = trade_monarchy }
+					NOT = {	government = hms_government }
+					NOT = {	government = prussian_constitutionalism }
+					NOT = {	government = absolute_monarchy }
+					NOT = {	government = tsardom }
+					NOT = {	government = archduchy }
+				}
+			}
+			NOT = { tech_school = unciv_tech_school }
+			exists = yes
+		}
+		allow = {
+			deep_defense_system = 1
+			OR = {
+				pensions = acceptable_pensions
+				pensions = good_pensions
+			}
+		}
+		effect = {
+			set_country_flag = officer_core
+			add_country_modifier = {
+				name = proffesional_general_staff
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	adopt_proper_administration = {
+		picture = administration
+		potential = {
+			NOT = { has_country_flag = adopted_proper_administration }
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+			centralization = regionalism
+			NOT = { tag = RUS }
+			NOT = { tag = AUS }
+			NOT = { tag = TUR }
+			NOT = { tech_school = unciv_tech_school }
+			exists = yes
+			civilized = yes
+		}
+		allow = {
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+			NOT = { tech_school = unciv_tech_school }
+		}
+		effect = {
+			set_country_flag = adopted_proper_administration
+			political_reform = unitary
+		}
+		ai_will_do = { factor = 1 }
+	}
+	restablish_aristocratic_titles = {
+		picture = crown
+		potential = {
+			NOT = { has_country_flag = restablished_aristocratic_titles }
+			OR = {
+				government = merchant_republic
+				government = democracy
+			}
+			NOT = { safety_regulations = good_safety }
+			exists = yes
+			civilized = yes
+		}
+		allow = {
+			NOT = { safety_regulations = good_safety }
+		}
+		effect = {
+			set_country_flag = restablished_aristocratic_titles
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = trinket_safety
+					}
+				}
+				owner = {
+					social_reform = no_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = low_safety
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = acceptable_safety
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = good_safety
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	seize_trade_rights = {
+		picture = tresury_reforms
+		potential = {
+			NOT = { has_country_flag = seized_trade_rights }
+			vote_franschise = none_voting
+			OR = {
+				unemployment_subsidies = no_subsidies
+				unemployment_subsidies = low_subsidies
+				unemployment_subsidies = trinket_subsidies
+			}
+			exists = yes
+		}
+		allow = {
+			OR = {
+				trade_policy = protectionism
+				trade_policy = mercantilism
+			}
+			OR = {
+				unemployment_subsidies = no_subsidies
+				unemployment_subsidies = trinket_subsidies
+			}
+		}
+		effect = {
+			set_country_flag = seized_trade_rights
+			add_country_modifier = {
+				name = trade_sectors_monopoly
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	mobilize_the_nobility = {
+		picture = army_training
+		potential = {
+			NOT = { safety_regulations = good_safety }
+			OR = {
+				government = trade_monarchy
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = tsardom
+				government = archduchy
+				government = elective_monarchy_oligarchy
+			}
+			OR = {
+			rank = 20
+			ai = no
+			}
+			NOT = {
+				has_country_modifier = law_changed_by_force
+			}
+			OR = {
+				social_policy = colonial_spending_policy
+				safety_regulations = no_safety
+				safety_regulations = trinket_safety
+				government = elective_monarchy_oligarchy
+			}
+		}
+		allow = {
+			war = yes
+			OR = {
+				safety_regulations = no_safety
+				safety_regulations = trinket_safety
+				safety_regulations = low_safety
+			}
+			capital_scope = { controlled_by = THIS }
+			money = 100000
+		}
+		effect = {
+			#money = -100000
+			any_pop = {
+				militancy = 5
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 5475
+			}
+			capital_scope = {
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = infantry value = current }
+				sub_unit = { type = cavalry value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+	}
+	create_the_national_guard = {
+		picture = switch_to_liberty
+		potential = {
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+			}
+			OR = {
+			rank = 20
+			ai = no
+			}
+			NOT = {
+				has_country_modifier = law_changed_by_force
+			}
+		}
+		allow = {
+			war = yes
+			capital_scope = { controlled_by = THIS }
+			social_policy = welfare_state
+			money = 100000
+		}
+		effect = {
+			treasury = -100000
+			any_pop = {
+				militancy = 5
+			}
+			add_country_modifier = {
+				name = law_changed_by_force
+				duration = 5475
+			}
+			capital_scope = {
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = plane value = current }
+				sub_unit = { type = cavalry value = current }
+			}
+		}
+	}
+	estate_war_support = {
+		picture = tresury_reforms
+		potential = {
+			exists = yes
+			ai = no
+		}
+		allow = {
+			exists = yes
+			NOT = {
+				has_country_modifier = estates_help_plead_cooldown
+			}
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			any_pop = {
+				militancy = 0.5
+			}
+			small_arms = 110,46
+			artillery = 92,5
+			canned_food = 184,1
+			wine = 92,5
+			liquier = 92,5
+			luxury_clothes = 9,21
+			add_country_modifier = {
+				name = estates_help_plead_cooldown
+				duration = 1825
+			}
+		}
+	}
+	change_faction_influence = {
+		picture = crown
+		alert = no
+		potential = {
+			exists = yes
+			ai = no
+			NOT = { has_country_modifier = change_faction_influence_cooldown }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			country_event = 170211
+			add_country_modifier = {
+				name = change_faction_influence_cooldown
+				duration = 3650
+			}
+		}
+	}
+}
