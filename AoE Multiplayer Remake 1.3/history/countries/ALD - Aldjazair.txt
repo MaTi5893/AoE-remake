@@ -1,5 +1,5 @@
 capital = 1707
-civilized = yes   primary_culture = maghrebi
+primary_culture = maghrebi
 culture = berber
 culture = tuareg
 religion = sunni
@@ -51,7 +51,12 @@ upper_house = {
 
 set_country_flag = sunni_country
 
-
+foreign_training = yes_foreign_training
+foreign_weapons = yes_foreign_weapons
+foreign_officers = yes_foreign_officers
+military_constructions = yes_military_constructions
+admin_reform = yes_admin_reform
+education_reform = yes_education_reform
 
 # Technologies
 post_napoleonic_thought = 1
