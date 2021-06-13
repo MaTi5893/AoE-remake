@@ -62,14 +62,14 @@ govt_flag = {
 	flag = theocracy
 }
 
+foreign_officers = yes_foreign_officers
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
-foreign_officers = yes_foreign_officers
 military_constructions = yes_military_constructions
-finance_reform = yes_finance_reform
 admin_reform = yes_admin_reform
 education_reform = yes_education_reform
-western_science = yes_western_science
+industrial_construction = yes_western_science
+finance_reform = yes_finance_reform
 
 # Technologies
 post_napoleonic_thought = 1

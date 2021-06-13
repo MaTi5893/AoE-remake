@@ -1,5 +1,5 @@
 capital = 143
-civilized = yes   primary_culture = native_american_minor
+primary_culture = native_american_minor
 religion = protestant
 government = tribal_democracy
 plurality = 0.05
@@ -17,6 +17,7 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
+
 civilized = no
 slavery = yes_slavery
 upper_house_composition = state_equal_weight
@@ -49,6 +50,9 @@ set_country_flag = protestant_country
 set_country_flag = unciv
 set_country_flag = new_world_nation
 
+foreign_weapons = yes_foreign_weapons
+
+# Technologies
 flintlock_rifles = 1
 enlightenment_thought = 1
 
