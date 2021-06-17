@@ -3,7 +3,7 @@ country_event = {
 	id = 777700 # France
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		FRA = {	ai = no }
 		tag = FRA
@@ -33,7 +33,7 @@ country_event = {
 	id = 777701 # Spain
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		SPA = {	ai = no }
 		tag = SPA
@@ -63,7 +63,7 @@ country_event = {
 	id = 777702 # Portugal
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		POR = {	ai = no }
 		tag = POR
@@ -93,7 +93,7 @@ country_event = {
 	id = 777703 # Belgium
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		BEL = {	ai = no }
 		tag = BEL
@@ -123,7 +123,7 @@ country_event = {
 	id = 777704 # Netherlands
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		NET = {	ai = no }
 		tag = NET
@@ -153,7 +153,7 @@ country_event = {
 	id = 777705 # United Kingdom
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		ENG = {	ai = no }
 		tag = ENG
@@ -183,7 +183,7 @@ country_event = {
 	id = 777706 # Switzerland
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		SWI = {	ai = no }
 		tag = SWI
@@ -213,7 +213,7 @@ country_event = {
 	id = 777707 # Sweden
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		SWE = {	ai = no }
 		tag = SWE
@@ -243,7 +243,7 @@ country_event = {
 	id = 777708 # Serbia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		SER = {	ai = no }
 		tag = SER
@@ -273,7 +273,7 @@ country_event = {
 	id = 777709 # Wallachia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		WAL = {	ai = no }
 		tag = WAL
@@ -303,7 +303,7 @@ country_event = {
 	id = 777710 # Moldavia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		MOL = {	ai = no }
 		tag = MOL
@@ -333,7 +333,7 @@ country_event = {
 	id = 777711 # Greece
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		GRE = {	ai = no }
 		tag = GRE
@@ -363,7 +363,7 @@ country_event = {
 	id = 777712 # Ottomans
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		TUR = {	ai = no }
 		tag = TUR
@@ -393,7 +393,7 @@ country_event = {
 	id = 777713 # Egypt
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		EGY = {	ai = no }
 		tag = EGY
@@ -423,7 +423,7 @@ country_event = {
 	id = 777714 # Persia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		PER = {	ai = no }
 		tag = PER
@@ -453,7 +453,7 @@ country_event = {
 	id = 777715 # Russia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		RUS = {	ai = no }
 		tag = RUS
@@ -483,7 +483,7 @@ country_event = {
 	id = 777716 # Brazil
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		BRZ = {	ai = no }
 		tag = BRZ
@@ -513,7 +513,7 @@ country_event = {
 	id = 777717 # Colombia
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		CLM = {	ai = no }
 		tag = CLM
@@ -543,7 +543,7 @@ country_event = {
 	id = 777718 # Haiti
 
 	trigger = {
-		year = 1836
+		year = 1700
 		NOT = { year = 1880 }
 		HAI = {	ai = no }
 		tag = HAI
@@ -561,6 +561,126 @@ country_event = {
 	option = {
 		name = "EVTOPTA1100"
 		2214 = { 
+			trade_goods = precious_metal
+			clr_province_flag = farm
+			set_province_flag = mine
+		}
+	}
+}
+
+country_event = {
+	
+	id = 777719 # Sweden
+
+	trigger = {
+		year = 1700
+		NOT = { year = 1880 }
+		SWE = {	ai = no }
+		tag = SWE
+		3251 = { NOT = { trade_goods = precious_metal } }
+	}
+
+	mean_time_to_happen =  {
+		days = 1
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		3251 = { 
+			trade_goods = precious_metal
+			clr_province_flag = farm
+			set_province_flag = mine
+		}
+	}
+}
+
+country_event = {
+	
+	id = 777720 # PLC
+
+	trigger = {
+		year = 1700
+		NOT = { year = 1880 }
+		PLC = {	ai = no }
+		tag = PLC
+		693 = { NOT = { trade_goods = precious_metal } }
+	}
+
+	mean_time_to_happen =  {
+		days = 1
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		693 = { 
+			trade_goods = precious_metal
+			clr_province_flag = farm
+			set_province_flag = mine
+		}
+	}
+}
+
+country_event = {
+	
+	id = 777721 # Prussia
+
+	trigger = {
+		year = 1700
+		NOT = { year = 1880 }
+		PRU = {	ai = no }
+		tag = PRU
+		695 = { NOT = { trade_goods = precious_metal } }
+	}
+
+	mean_time_to_happen =  {
+		days = 1
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		695 = { 
+			trade_goods = precious_metal
+			clr_province_flag = farm
+			set_province_flag = mine
+		}
+	}
+}
+
+country_event = {
+	
+	id = 777722 # Ottos
+
+	trigger = {
+		year = 1700
+		NOT = { year = 1880 }
+		TUR = {	ai = no }
+		tag = TUR
+		968 = { NOT = { trade_goods = precious_metal } }
+	}
+
+	mean_time_to_happen =  {
+		days = 1
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		968 = { 
 			trade_goods = precious_metal
 			clr_province_flag = farm
 			set_province_flag = mine

@@ -152,11 +152,11 @@ political_decisions = {
 			OR = {
 				AND = {
 					is_vassal = no
+					is_greater_power = yes
 				}
 				AND = {
 					war_policy = jingoism
-					is_vassal = yes
-					year = 1732
+					nationalism_n_imperialism = 1
 				}
 			}
 			state_n_government = 1
@@ -200,7 +200,7 @@ political_decisions = {
 				tag = USA
 				tag = THC
 			}
-			NOT = { has_country_flag = hamiltons_tresury_reforms }
+			NOT = { has_country_modifier = most_perfect_economy_system }
 			exists = yes
 		}
 		allow = {
@@ -216,7 +216,6 @@ political_decisions = {
 				name = most_perfect_economy_system
 				duration = -1
 			}
-			set_country_flag = hamiltons_tresury_reforms
 		}
 	}
 	
@@ -359,6 +358,16 @@ political_decisions = {
 			any_pop = {
 				militancy = -4
 				consciousness = -4
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						owns = 223
+					}
+				}
+				owner = {
+					capital = 223
+				}
 			}
 			set_country_flag = the_articles_of_confederation
 			prestige = 6

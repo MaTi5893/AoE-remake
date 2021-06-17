@@ -3,6 +3,14 @@
 #
 # Effects are fully scriptable here.
 
+
+ai_boost_mil = {
+	trigger = { 
+		ai = yes
+	}
+	core_pop_militancy_modifier = -0.2
+}
+
 holy_roman_emperor = {
 	trigger = {
 		has_country_flag = hre_emperor
@@ -17,117 +25,12 @@ holy_roman_emperor = {
 	icon = 9
 }
 
-britannia_rules_the_waves = {
-	trigger = {
-		is_greater_power = yes
-		OR = {
-			total_sunk_by_us = 100
-			NOT = {
-				any_greater_power = {
-					military_score = THIS
-				}
-			}
-		}
-		total_amount_of_ships = 200
-		has_country_flag = britannia_rules_the_waves
-	}
-	naval_organisation = 0.1
-	navy_tech_research_bonus = 0.05
-	naval_unit_start_expirience = 0.3
-	supply_consumption = 0.1
-	icon = 15
-}
-
-traditionalist_society = {
-	trigger = {
-		owns = 1008
-		government = tsardom
-		OR = {
-		month = 1
-		year = 1701
-		}
-	}
-	industry_tech_research_bonus = -0.1
-	navy_tech_research_bonus = -0.35
-	commerce_tech_research_bonus = -0.1
-	army_tech_research_bonus = -0.1
-	culture_tech_research_bonus = -0.1
-}
-army_with_a_state = {
-	trigger = {
-		has_country_flag = soldier_king_reforms
-		exists = yes
-		OR = {
-			AND = {
-				military_score = 500
-				military_spending = 1
-			}
-			NOT = { number_of_states = 8 }
-		}
-	}
-	mobilization_economy_impact = -0.10
-	land_unit_start_experience = 10
-	org_regain = 0.25
-	land_organisation = 0.2
-	supply_consumption = -0.1
-	mobilisation_size = 0.05
-	icon = 15
-}
-army_with_a_state2 = {
-	trigger = {
-		has_country_flag = soldier_king_reforms
-		exists = yes
-		OR = {
-			AND = {
-				military_score = 400
-				NOT = { military_score = 500 }
-				military_spending = 1
-			}
-			AND = {
-				NOT = { number_of_states = 14 }
-				number_of_states = 8
-			}
-		}
-	}
-	mobilization_economy_impact = -0.05
-	land_unit_start_experience = 5
-	org_regain = 0.15
-	land_organisation = 0.1
-	supply_consumption = -0.1
-	mobilisation_size = 0.025
-	icon = 15
-}
-army_with_a_state3 = {
-	trigger = {
-		has_country_flag = soldier_king_reforms
-		exists = yes
-		OR = {
-			AND = {
-				NOT = { number_of_states = 16 }
-				number_of_states = 14
-			}
-			AND = {
-				military_score = 200
-				NOT = { military_score = 400 }
-				military_spending = 1
-			}
-		}
-	}
-	land_unit_start_experience = 5
-	org_regain = 0.1
-	land_organisation = 0.05
-	supply_consumption = -0.1
-	icon = 15
-}
-
-desperate_nation  = {
+desperate_nation = {
 	trigger = {
 		NOT = {
 			OR = { 
-				#is_culture_group = germanic
 				total_pops = 25000 #25 thousand POPs/100 thousand population	
 			}
-
 		}
 	}
 	global_population_growth = 0.01
@@ -137,7 +40,7 @@ desperate_nation  = {
 	tax_efficiency = 0.50 #50% boost
 	icon = 6
 }
-microscopic_nation  = {
+microscopic_nation = {
 	trigger = {
 		total_pops = 25000 #25 thousand POPs/100 thousand population
 		NOT = {
@@ -155,7 +58,7 @@ microscopic_nation  = {
 	tax_efficiency = 0.40 #40% boost
 	icon = 6
 }
-tiny_nation  = {
+tiny_nation = {
 	trigger = {
 		total_pops = 125000 #125 thousand POPs/500 thousand population
 		NOT = {
@@ -175,7 +78,7 @@ tiny_nation  = {
 	icon = 6
 }
 
-small_nation  = {
+small_nation = {
 	trigger = {
 		total_pops = 1250000 #1.25 million POPs/5 Million population
 		NOT = { 
@@ -194,7 +97,7 @@ small_nation  = {
 	icon = 6
 }
 
-medium_nation  = {
+medium_nation = {
 	trigger = {
 		total_pops = 3750000 #3.75 million POPs/15 Million population
 		NOT = { 
@@ -216,7 +119,7 @@ medium_nation  = {
 	icon = 6
 }
 
-average_nation  = {
+average_nation = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -231,7 +134,7 @@ average_nation  = {
 	icon = 6
 }
 
-large_nation  = {
+large_nation = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -248,7 +151,7 @@ large_nation  = {
 	icon = 6
 }
 
-empire  = {
+empire = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -273,7 +176,7 @@ empire  = {
 	icon = 6
 }
 
-medium_empire  = {
+medium_empire = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -299,7 +202,7 @@ medium_empire  = {
 	icon = 6
 }
 
-large_empire  = {
+large_empire = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -325,7 +228,7 @@ large_empire  = {
 	icon = 6
 }
 
-insane_empire  = {
+insane_empire = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -342,7 +245,7 @@ insane_empire  = {
 	icon = 6
 }
 
-insane_empire2  = {
+insane_empire2 = {
 	trigger = {
 		year = 1730
 		civilized = yes
@@ -376,9 +279,9 @@ ai_boost = {
 	tax_efficiency = 0.05 #5% increase
 	education_efficiency_modifier = 1.0 #100% boost
  	loan_interest = -0.03 #3% less interest on debts
+	core_pop_militancy_modifier = -0.2
 	icon = 9
 }
-
 gorkha_kingdom = {
 	trigger = {
 		is_culture_group = central_asian
@@ -500,7 +403,7 @@ own_panama_canal = {
 	prestige = 0.02
 }
 
-save_the_nation0.5  = {
+save_the_nation0.5 = {
 	trigger = {
 		revanchism = 0.05
 		NOT = { revanchism = 0.10 } 
@@ -514,7 +417,7 @@ save_the_nation0.5  = {
 	icon = 9
 }
 
-save_the_nation1  = {
+save_the_nation1 = {
 	trigger = {
 		revanchism = 0.10
 		NOT = { revanchism = 0.15 } 
@@ -528,7 +431,7 @@ save_the_nation1  = {
 	icon = 9
 }
 
-save_the_nation1.5  = {
+save_the_nation1.5 = {
 	trigger = {
 		revanchism = 0.15
 		NOT = { revanchism = 0.20 } 
@@ -544,7 +447,7 @@ save_the_nation1.5  = {
 	icon = 9
 }
 
-save_the_nation2  = {
+save_the_nation2 = {
 	trigger = {
 		revanchism = 0.20
 		NOT = { revanchism = 0.25 } 
@@ -560,7 +463,7 @@ save_the_nation2  = {
 	icon = 9
 }
 
-save_the_nation2.5  = {
+save_the_nation2.5 = {
 	trigger = {
 		revanchism = 0.25
 		NOT = { revanchism = 0.30 } 
@@ -576,7 +479,7 @@ save_the_nation2.5  = {
 	icon = 9
 }
 
-save_the_nation3  = {
+save_the_nation3 = {
 	trigger = {
 		revanchism = 0.30
 		NOT = { revanchism = 0.35 } 
@@ -592,7 +495,7 @@ save_the_nation3  = {
 	icon = 9
 }
 
-save_the_nation3.5  = {
+save_the_nation3.5 = {
 	trigger = {
 		revanchism = 0.35
 		NOT = { revanchism = 0.40 } 
@@ -608,7 +511,7 @@ save_the_nation3.5  = {
 	icon = 9
 }
 
-save_the_nation4  = {
+save_the_nation4 = {
 	trigger = {
 		revanchism = 0.40
 		NOT = { revanchism = 0.45 } 
@@ -624,7 +527,7 @@ save_the_nation4  = {
 	icon = 9
 }
 
-save_the_nation4.5  = {
+save_the_nation4.5 = {
 	trigger = {
 		revanchism = 0.45
 		NOT = { revanchism = 0.50 }
@@ -641,7 +544,7 @@ save_the_nation4.5  = {
 	icon = 9
 }
 
-save_the_nation5  = {
+save_the_nation5 = {
 	trigger = {
 		revanchism = 0.50
 	}
@@ -655,4 +558,22 @@ save_the_nation5  = {
 	mobilization_impact = 1
 	mobilization_economy_impact = -0.66
 	icon = 9
+}
+
+britannia_rules_the_waves = {
+	trigger = {
+		is_greater_power = yes
+		NOT = {
+			any_greater_power = {
+				military_score = THIS
+			}
+		}
+		total_amount_of_ships = 200
+		has_country_flag = britannia_rules_the_waves
+	}
+	naval_organisation = 0.1
+	navy_tech_research_bonus = 0.05
+	naval_unit_start_expirience = 0.3
+	supply_consumption = 0.1
+	icon = 15
 }

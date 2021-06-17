@@ -113,8 +113,9 @@ country_event = {
 	
 	trigger = {
 		tag = USA
-		NOT = { government = dominion }
+		NOT = { government = colonial_company }
 		war = no
+		has_country_flag = the_articles_of_confederation
 	}
 	
 	mean_time_to_happen = {

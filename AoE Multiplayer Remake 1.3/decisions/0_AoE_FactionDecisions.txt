@@ -369,6 +369,7 @@ political_decisions = {
 		picture = crown
 		alert = no
 		potential = {
+			civilized = yes
 			exists = yes
 			ai = no
 			NOT = { has_country_modifier = change_faction_influence_cooldown }
