@@ -101,6 +101,7 @@ political_decisions = {
 	
 	land_to_thc = {
 		potential = {
+			primary_culture = british
 			any_owned_province = {
 				is_core = THC
 			}
@@ -113,12 +114,14 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			any_owned = {
-				limit = {
-					is_core = THC
-					owned_by = THIS
+			THIS = {
+				any_owned = {
+					limit = {
+						is_core = THC
+						owned_by = THIS
+					}
+					secede_province = THC
 				}
-				secede_province = THC
 			}
 		}
 	}
