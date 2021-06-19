@@ -1,0 +1,75 @@
+political_decisions = {
+	mongol_manchukuo = {
+		picture = outer_manchuria_map
+		potential = {
+			tag = MGL
+			exists = yes
+			NOT = {
+				has_country_flag = east_mongolia
+			}
+		}
+		allow = {
+			NOT = {
+				OR = {
+					exists = MCK
+					accepted_culture = manchu
+				}
+			}
+			MCK = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			add_accepted_culture = manchu
+			prestige = 10
+			badboy = 5
+			set_country_flag = east_mongolia
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
+	form_yuan = {
+		picture = chinese_capital_pic
+		potential = {
+			exists = yes
+			government = khanate
+			NOT = {
+				exists = CHI
+			}
+			OR = {
+				neighbour = QNG
+				owns = 1616
+			}
+		}
+		allow = {
+			government = khanate
+			is_vassal = no
+			owns = 1616
+			owns = 1468
+			owns = 2207
+			owns = 1532
+		}
+		effect = {
+			government = absolute_monarchy
+			QNG = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			all_core = {
+				add_core = CHI
+				remove_core = THIS
+			}
+			change_tag = CHI
+			capital = 1616
+			prestige = 80
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+}

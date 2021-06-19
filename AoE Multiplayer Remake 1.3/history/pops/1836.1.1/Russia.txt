@@ -6402,6 +6402,19 @@
 #under the rule of Russia in 1836
 #Tomsk (814000/203500 POPS)
 1063 = {
+	
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 750
+    }
+
+    farmers = {
+        culture = gypsy
+        religion = orthodox
+        size = 150
+    }
+
     aristocrats = {
         culture = russian
         religion = orthodox
@@ -6441,7 +6454,7 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 186250
+        size = 26250
     }
 
     clergymen = {
@@ -6465,11 +6478,23 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 2775
+        size = 162775
+    }
+
+     farmers = {
+        culture = siberian
+        religion = tengri
+        size = 700
     }
 }
 #Omsk (223500/55878 POPS)
 1064 = {
+     artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 500
+    }
+
     aristocrats = {
         culture = russian
         religion = orthodox
@@ -6485,7 +6510,7 @@
     artisans = {
         culture = russian
         religion = orthodox
-        size = 2800
+        size = 22800
     }
 
     soldiers = {
@@ -6495,9 +6520,9 @@
     }
 
     farmers = {
-        culture = russian
-        religion = orthodox
-        size = 51325
+        culture = tatar
+        religion = sunni
+        size = 41325
     }
 }
 #Slavgorod (60000/15000 POPS)
@@ -6523,62 +6548,68 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 11175
+        size = 4175
     }
 
     clergymen = {
         culture = tatar
-        religion = sunni
+        religion = tengri
         size = 50
     }
 
     artisans = {
         culture = tatar
-        religion = sunni
+        religion = tengri
         size = 150
     }
 
     soldiers = {
         culture = tatar
-        religion = sunni
-        size = 25
+         religion = tengri
+        size = 250
     }
 
     farmers = {
         culture = tatar
-        religion = sunni
-        size = 2775
+        religion = tengri
+        size = 10775
+    }
+
+    farmers = {
+        culture = siberian
+        religion = tengri
+        size = 1330
     }
 }
 #Barnaul (116000/29000 POPS)
 1067 = {
     aristocrats = {
-        culture = russian
-        religion = orthodox
-        size = 100
+         culture = tatar
+        religion = tengri
+        size = 500
     }
 
     clergymen = {
-        culture = russian
-        religion = orthodox
+       culture = tatar
+        religion = tengri
         size = 250
     }
 
     artisans = {
-        culture = russian
-        religion = orthodox
+        culture = tatar
+        religion = tengri
         size = 1300
     }
 
     soldiers = {
-        culture = russian
-        religion = orthodox
-        size = 250
+        culture = tatar
+        religion = tengri
+        size = 1250
     }
 
     farmers = {
-        culture = russian
-        religion = orthodox
+        culture = tatar
+        religion = tengri
         size = 24100
     }
 
@@ -6603,7 +6634,7 @@
     soldiers = {
         culture = tatar
         religion = sunni
-        size = 25
+        size = 525
     }
 
     farmers = {
@@ -6615,56 +6646,56 @@
 #Ulala (36000/9000 POPS)
 1068 = {
     clergymen = {
-        culture = russian
-        religion = orthodox
+       culture = tatar
+        religion = tengri
         size = 50
     }
 
     artisans = {
-        culture = russian
-        religion = orthodox
+       culture = tatar
+        religion = tengri
         size = 150
     }
 
     soldiers = {
-        culture = russian
-        religion = orthodox
-        size = 25
+       culture = tatar
+        religion = tengri
+        size = 525
     }
 
     farmers = {
-        culture = russian
-        religion = orthodox
+        culture = tatar
+        religion = tengri
         size = 2775
     }
 
     aristocrats = {
         culture = tatar
-        religion = animist
+        religion = tengri
         size = 100
     }
 
     clergymen = {
-        culture = tatar
-        religion = animist
+       culture = tatar
+        religion = tengri
         size = 50
     }
 
     artisans = {
         culture = tatar
-        religion = animist
+        religion = tengri
         size = 300
     }
 
     soldiers = {
-        culture = tatar
-        religion = animist
-        size = 75
+      culture = tatar
+        religion = tengri
+        size = 575
     }
 
     farmers = {
-        culture = tatar
-        religion = animist
+       culture = tatar
+        religion = tengri
         size = 5475
     }
 }
@@ -8956,66 +8987,66 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 45750
+        size = 9750
     }
 
     aristocrats = {
-        culture = tatar
-        religion = animist
+       culture = tatar
+        religion = tengri
         size = 75
     }
 
     clergymen = {
         culture = tatar
-        religion = animist
+        religion = tengri
         size = 50
     }
 
     artisans = {
-        culture = tatar
-        religion = animist
+      culture = tatar
+        religion = tengri
         size = 300
     }
 
     soldiers = {
-        culture = tatar
-        religion = animist
-        size = 50
+      culture = tatar
+        religion = tengri
+        size = 2050
     }
 
     farmers = {
-        culture = tatar
-        religion = animist
-        size = 5525
+       culture = tatar
+        religion = tengri
+        size = 45525
     }
 
     aristocrats = {
-        culture = siberian
-        religion = animist
+         culture = siberian
+        religion = tengri
         size = 10
     }
 
     clergymen = {
         culture = siberian
-        religion = animist
+        religion = tengri
         size = 10
     }
 
     artisans = {
         culture = siberian
-        religion = animist
+        religion = tengri
         size = 25
     }
 
     soldiers = {
-        culture = siberian
-        religion = animist
+         culture = siberian
+        religion = tengri
         size = 5
     }
 
     farmers = {
-        culture = siberian
-        religion = animist
+       culture = siberian
+        religion = tengri
         size = 450
     }
 }
