@@ -47,7 +47,7 @@
     soldiers = {
         culture = finnish
         religion = protestant
-        size = 0
+        size = 1
     }
 
     soldiers = {
@@ -337,7 +337,7 @@
     soldiers = {
         culture = russian
         religion = orthodox
-        size = 0
+        size = 1
     }
 
     soldiers = {
@@ -417,7 +417,7 @@
     soldiers = {
         culture = swedish
         religion = protestant
-        size = 0
+        size = 1
     }
 
     soldiers = {
@@ -547,7 +547,7 @@
     soldiers = {
         culture = finnish
         religion = orthodox
-        size = 0
+        size = 1
     }
 
     soldiers = {
@@ -788,12 +788,6 @@
         culture = swedish
         religion = protestant
         size = 1
-    }
-
-    soldiers = {
-        culture = swedish
-        religion = protestant
-        size = 0
     }
 
     soldiers = {
@@ -1087,12 +1081,6 @@
     soldiers = {
         culture = swedish
         religion = protestant
-        size = 0
-    }
-
-    soldiers = {
-        culture = swedish
-        religion = protestant
         size = 1
     }
 
@@ -1157,12 +1145,6 @@
     soldiers = {
         culture = swedish
         religion = protestant
-        size = 0
-    }
-
-    soldiers = {
-        culture = swedish
-        religion = protestant
         size = 2
     }
 
@@ -1175,22 +1157,9 @@
     soldiers = {
         culture = finnish
         religion = protestant
-        size = 0
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
-        size = 0
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
         size = 1
     }
 }
-#Joensuu
 3254 = {
     clergymen = {
         culture = finnish
@@ -1213,24 +1182,12 @@
     farmers = {
         culture = finnish
         religion = protestant
-        size = 26755
+        size = 2675
     }
 
     soldiers = {
         culture = finnish
         religion = protestant
         size = 3
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
-        size = 15
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
-        size = 270
     }
 }
