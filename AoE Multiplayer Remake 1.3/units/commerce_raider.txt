@@ -1,4 +1,4 @@
-commerce_raider = {
+commerce_raider = { #Steamboat
 	icon = 8
 	naval_icon = 5
 	
@@ -40,8 +40,8 @@ commerce_raider = {
 	}
 	
 	#Naval Abilties
-	hull = 6
-	gun_power = 5
+	hull = 24
+	gun_power = 16
 	fire_range = 0.6
 	evasion = 0.25
 	torpedo_attack = 0
