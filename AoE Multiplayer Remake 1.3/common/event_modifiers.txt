@@ -6909,3 +6909,8 @@ army_with_a_state3 = {
 	supply_consumption = -0.1
 	icon = 15
 }
+
+healthy_merchant_guilds = {
+	local_artisan_throughput = 0.25
+	local_artisan_output = 0.25
+}

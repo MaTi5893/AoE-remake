@@ -1033,8 +1033,8 @@ east_slavic = {
 						   Nebogatov Nikolaevich Pavlov Putyatin Rozhestvensky Skobelev Sukhoi 
 						   Tukhachevsky Yegorov Vorontsov Zhauryd }
         }
-	ukrainian = {
-		color = {160 160 60}
+	ukrainian = { #ruthenian
+		color = { 124  183  151 }
 			first_names = { Alexei Andrei Anton Arkadiy Borys Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev 
 							 Mikhail Mykola Nikita  Oleksandr Pavel Petro Roman Semyon Sergiy Valeriy 
 							 Viktor Volodimir Vladislav Yuriy }
@@ -2592,7 +2592,7 @@ native_american = {
 american_cultures = {
 	leader = european
 	yankee = {
-		color = {65 65 129}
+		color = {205 102 102}
 		first_names = { Adam Alexander William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses 
 				Joseph Charles Russell Benjamin Robert Christopher Richard Chester Lafayette Nathaniel Francis James Donald Cyrus Ambrose
 				Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph Obama

@@ -188,13 +188,7 @@ province_event = {
 		name = "Abduct and force him into army service!"
 		random_pop = {
 			limit = {
-				OR = {
-					pop_type = labourers
-					#pop_type = tribesmen
-					#pop_type = zzz_dummy
-					pop_type = farmers
-					pop_type = artisans
-				}
+				pop_type = artisans
 			}
 			pop_type = soldiers
 		}

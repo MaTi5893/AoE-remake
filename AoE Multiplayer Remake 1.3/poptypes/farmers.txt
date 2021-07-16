@@ -42,6 +42,10 @@ country_migration_target =
 	factor = 1
 
 	modifier = {
+		factor = 0.55
+		NOT = { year = 1730 }
+	}
+	modifier = {
 		factor = 0.9
 		unemployment = 0.05
 	}

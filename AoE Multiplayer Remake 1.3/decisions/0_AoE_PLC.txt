@@ -272,7 +272,6 @@ political_decisions = {
 			change_tag = PLR
 			PLR = {
 				add_accepted_culture = ukrainian
-				add_accepted_culture = byelorussian
 			}
 			prestige = 15
 		}
@@ -376,9 +375,12 @@ political_decisions = {
 					political_reform = peonage
 				}
 			}
-			add_country_modifier = {
-				name = mercantilism
-				duration = 365
+			any_owned = {
+				limit = {
+					is_core = THIS
+					life_rating = 33
+				}
+				life_rating = 2
 			}
 		}
 	}

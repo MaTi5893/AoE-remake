@@ -379,9 +379,49 @@ political_decisions = {
 		}
 		effect = {
 			country_event = 170211
-			add_country_modifier = {
-				name = change_faction_influence_cooldown
-				duration = 3650
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = no_trade_unions
+					}
+				}
+				add_country_modifier = {
+					name = change_faction_influence_cooldown
+					duration = 5475
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = state_controlled
+					}
+				}
+				add_country_modifier = {
+					name = change_faction_influence_cooldown
+					duration = 3650
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = non_socialist
+					}
+				}
+				add_country_modifier = {
+					name = change_faction_influence_cooldown
+					duration = 2737
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = all_trade_unions
+					}
+				}
+				add_country_modifier = {
+					name = change_faction_influence_cooldown
+					duration = 1825
+				}
 			}
 		}
 	}

@@ -6,6 +6,7 @@ guard = {
 	active = no
 	unit_type = infantry
 	floating_flag = no
+	primary_culture = yes
 
 	#Core Abilities
 	priority = 18
@@ -34,9 +35,9 @@ guard = {
 
 	#Land Abilties
 	reconnaissance = 0
-	attack = 5
-	defence = 7
-	discipline = 1.2
+	attack = 3
+	defence = 5.4
+	discipline = 1.25
 	support = 0.0
 	maneuver = 2
 }

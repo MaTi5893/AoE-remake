@@ -7243,6 +7243,7 @@ noble_rebels = {
 	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
 	will_rise = {
 		factor = 0.5
+		
 		modifier = {
 			war = yes
 			factor = 0.5
@@ -7285,6 +7286,10 @@ noble_rebels = {
 		modifier = {
 			safety_regulations = good_safety
 			factor = -2.75
+		}
+		modifier = {
+			safety_regulations = no_safety
+			factor = 0
 		}
 		modifier = {
 			OR = {

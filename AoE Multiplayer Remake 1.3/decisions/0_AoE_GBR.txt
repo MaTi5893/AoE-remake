@@ -250,7 +250,7 @@ political_decisions = {
 		allow = {
 			ENG_1305 = {
 				OR = {
-					owned_by = GBR
+					owned_by = THIS
 					owner = {
 						vassal_of = THIS
 					}
@@ -258,7 +258,7 @@ political_decisions = {
 			}
 			ENG_1261 = {
 				OR = {
-					owned_by = GBR
+					owned_by = THIS
 					owner = {
 						vassal_of = THIS
 					}
@@ -266,7 +266,7 @@ political_decisions = {
 			}
 			ENG_1251 = {
 				OR = {
-					owned_by = GBR
+					owned_by = THIS
 					owner = {
 						vassal_of = THIS
 					}
@@ -274,7 +274,7 @@ political_decisions = {
 			}
 			ENG_1252 = {
 				OR = {
-					owned_by = GBR
+					owned_by = THIS
 					owner = {
 						vassal_of = THIS
 					}

@@ -2456,3 +2456,59 @@ country_event = {
 		remove_country_modifier = change_faction_influence_cooldown
 	}
 }
+province_event = {
+	id = 170214
+	title = "Merchant Rights Spread"
+	desc = ""
+	trigger = {
+		owner = {
+			OR = {
+				unemployment_subsidies = good_subsidies
+				OR = {
+					AND = {
+					government = trade_monarchy
+					NOT = { unemployment_subsidies = no_subsidies }
+					}
+					AND = {
+					government = merchant_republic
+					NOT = { unemployment_subsidies = no_subsidies }
+					}
+				}
+			}
+		}
+		OR = {
+			is_capital = yes
+			any_neighbor_province = {
+				has_province_modifier = healthy_merchant_guilds
+			}
+		}
+		NOT = { has_province_modifier = healthy_merchant_guilds }
+	}
+
+	mean_time_to_happen = {
+		months = 900
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			civilized = no
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = no
+		}
+	}
+
+	effect = {
+		state_scope = {
+			add_province_modifier = {
+				name = healthy_merchant_guilds
+				duration = -1
+			}
+		}
+	}
+}

@@ -88,8 +88,11 @@ political_decisions = {
 		picture = passarowitz
 		potential = {
 			tag = AUS
+			OR = {
 			HUN = {
 				vassal_of = AUS
+			}
+			owns = 641
 			}
 			NOT = { has_country_flag = down_the_danube_aus }	
 		}

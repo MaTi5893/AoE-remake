@@ -125,7 +125,6 @@ infrastructure = {
 }
 
 
-
 ##########################################################################
 # Global Static Modifiers
 ##########################################################################
@@ -194,7 +193,7 @@ civ_nation = {
 }
 
 unciv_nation = {
-	mobilisation_size = -0.01
+	#mobilisation_size = -0.01
 	diplomatic_points_modifier = -0.05
 	cb_generation_speed_modifier = 0.6
 	badboy = -0.05
