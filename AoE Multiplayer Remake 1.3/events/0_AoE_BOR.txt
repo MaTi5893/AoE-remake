@@ -339,7 +339,7 @@ country_event = {
 }
 country_event = {
 	id = 19004
-	title = "Paris proclamation" #Estates general
+	title = "Tennis Court Oath" #Estates general
 	desc = "EVTDESC19003"
 	major = yes
 	fire_only_once = yes
@@ -409,16 +409,7 @@ country_event = {
 	title = "The Sun King"
 	desc = "EVTDESC171107"
 	picture = louis_xiv
-	fire_only_once = yes
-	
-	trigger = {
-		tag = BOR
-		year = 1700
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "Le monde? Le monde est a moi."
@@ -471,7 +462,7 @@ country_event = {
 			average_militancy = 4
 			has_recently_lost_war = yes
 		}
-		year = 1750
+		is_ideology_enabled = communist
 		OR = {
 			blockade = 0.85
 			poor_tax = 0.85
@@ -784,6 +775,254 @@ country_event = {
 			}
 			change_tag = FSU
 			prestige = 25
+	}
+}
+country_event = {
+	id = 171122
+	title = "The Storming of the Bastille"
+	desc = "EVTDESC171122"
+	fire_only_once = yes
+	major = yes
+	news = yes
+	trigger = {
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
+		NOT = { government = proletarian_dictatorship }
+		NOT = { government = democracy }
+		OR = {
+			AND = {
+				NOT = { has_country_flag = third_estate_satisfied }
+				has_country_flag = neglecting_the_third_estate
+			}
+			year = 1789
+		}
+		has_country_modifier = peasant_turmoil
+	}
+	mean_time_to_happen = {
+		months = 4
+	}
+	option = {
+		name = "Vive la Revolution!"
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		all_core = {
+			add_core = FRA
+			remove_core = THIS
+		}
+		change_tag = FRA
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
+}
+country_event = {
+	id = 171123
+	title = "King's Trail"
+	desc = "EVTDESC171123"
+	picture = kings_trail
+	is_triggered_only = yes
+	news = yes
+	
+	option = {
+		name = "361 votes for and 360 against execution"
+		any_country = {
+			limit = {
+			    OR = {
+				      government = absolute_monarchy
+					  government = prussian_constitutionalism
+					  government = hms_government
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+		}
+		any_pop = {
+			militancy = -5
+			consciousness = 2
+		}
+		prestige = 15
+		badboy = 5
+	}
+	
+	option = {
+		name = "360 votes for and 361 against execution"
+		any_pop = {
+			militancy = 3
+			consciousness = 3
+		}
+	}
+}
+country_event = {
+	id = 171124
+	title = "The Landing of Charles Edward Stuart"
+	desc = "EVTDESC171124"
+	picture = jacobites
+	is_triggered_only = yes
+	news = yes
+	
+	option = {
+		name = "Damn him!"
+		any_owned = {
+			limit = {
+				is_core = SCO
+			}
+			add_province_modifier = {
+				name = jacobite_pretender
+				duration = 365
+			}
+		}
+		war_exhaustion = 5
+		any_pop = {
+			limit = {
+				culture = scottish
+			}
+			militancy = 8
+		}
+	}
+}
+
+country_event = {
+	id = 171125
+	title = "The Continental Blockade"
+	desc = "EVTDESC171125"
+	picture = continental_blockade
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn Them!"
+		random_owned = {
+			limit = {
+				is_core = THIS
+				NOT = [ has_province_modifier = suffering_from_continental_blockade }
+			}
+			add_province_modifier = {
+				name = suffering_from_continental_blockade
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = 171126
+	title = "$FROMCOUNTRY$ Joins The Continental Blockade"
+	desc = "EVTDESC171126"
+	picture = continental_blockade
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn Them!"
+		random_owned = {
+			limit = {
+				is_core = THIS
+				NOT = [ has_province_modifier = suffering_from_continental_blockade }
+			}
+			add_province_modifier = {
+				name = suffering_from_continental_blockade
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = 171127
+	title = "End of the Continental Blockade"
+	desc = "EVTDESC171127"
+	picture = continental_blockade
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		any_owned = {
+			limit = {
+				has_province_modifier = suffering_from_continental_blockade
+			}
+			remove_province_modifer = suffering_from_continental_blockade
+		}
+		prestige = 25
+		relation = {
+			who = FROM
+			value = 50
+		}
+	}
+}
+country_event = {
+	id = 171128
+	title = "$FROMCOUNTRY$ Leaves The Continental Blockade"
+	desc = "EVTDESC171128"
+	picture = continental_blockade
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		random_owned = {
+			limit = {
+				has_province_modifier = suffering_from_continental_blockade
+			}
+			remove_province_modifer = suffering_from_continental_blockade
+		}
+	}
+}
+country_event = {
+	id = 171129
+	title = "Continental blocakde cleanup"
+	desc = "STAY CALM"
+	picture = continental_blockade
+	
+	trigger = {
+		any_owned_province = {
+			has_country_modifier = suffering_from_continental_blockade
+		}
+		NOT = { primary_culture = british }
+	}
+	
+	option = {
+		name = "ok"
+		any_owned = {
+			limit = {
+				has_province_modifier = suffering_from_continental_blockade
+			}
+			remove_province_modifer = suffering_from_continental_blockade
+		}
 	}
 }
 #This is for venice bc for some reason it doesnt work when in the venice file#

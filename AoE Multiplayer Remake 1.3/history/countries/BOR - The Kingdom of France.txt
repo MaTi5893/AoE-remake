@@ -38,11 +38,6 @@ health_care = low_health_care #slightly influential bureaucracy
 
 school_reforms = no_schools
 
-govt_flag = {
-	government = fascist_dictatorship
-	flag = colonial_company
-}
-
 #New Reforms
 conscription = one_year_draft
 debt_law = serfdom
@@ -111,10 +106,11 @@ oob = "BOR_oob.txt"
 
 schools = culture_tech_school
 decision = lorraine_rename
+decision = bor_louis_setup
 
 govt_flag = {
-	government = absolute_monarchy
-	flag = theocracy
+	government = hms_government
+	flag = colonial_company
 }
 
 

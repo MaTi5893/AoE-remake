@@ -8,15 +8,12 @@ political_decisions = {
 				BOR = { government = proletarian_dictatorship }
 				BOR = { government = fascist_dictatorship }
 			}
-			has_country_modifier = peasant_turmoil
+			is_ideology_enabled = communist
 			exists = yes
 			NOT = { has_country_flag = estates_general_summoned }
 		}
 		allow = {
-			OR = {
-				political_thought_7 = 1
-				year = 1789
-			}
+			has_country_modifier = peasant_turmoil
 			OR = {
 			militancy = 6
 			ai = yes

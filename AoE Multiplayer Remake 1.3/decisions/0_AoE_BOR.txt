@@ -504,6 +504,7 @@ political_decisions = {
 	}
 	
 	french_constitution = {
+		picture = french_constitution
 		potential = {
 			tag = BOR
 			NOT = { has_country_flag = french_const_made }
@@ -533,6 +534,269 @@ political_decisions = {
 				name = new_constitution
 				duration = 365
 			}
+		}
+	}
+	
+	fate_of_the_king = {
+		picture = revolutionary_enemies_pic
+		potential = {
+			primary_culture = french
+			government = proletarian_dictatorship
+			NOT = { has_country_flag = fate_of_the_king_decided }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			country_event = 171123
+			set_country_flag = fate_of_the_king_decided
+		}
+	}
+	
+	support_jacobite_pretenders = {
+		picture = edward_stuart
+		potential = {
+			NOT = { exists = GBJ }
+			exists = GBR
+			NOT = { has_country_flag = supported_jacobite_pretenders }
+			year = 1715
+		}
+		allow = {
+			war_with = GBR
+		}
+		effect = {
+			GBR = { country_event = 171124 }
+			set_country_flag = supported_jacobite_pretenders
+		}
+	}
+	
+	begin_continental_blockade = {
+		picture = dreams_of_empire
+		potential = {
+			primary_culture = french
+			government = proletarian_dictatorship
+			OR = {
+				war_with = GBJ
+				war_with = ENG
+				war_with = GBR
+			}
+			NOT = { has_global_flag = begun_continental_blockade }
+		}
+		allow = {
+			OR = {
+				war_with = GBJ
+				war_with = ENG
+				war_with = GBR
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					exists = GBR
+					tag = GBR
+				}
+				country_event = 171125
+			}
+			random_country = {
+				limit = {
+					exists = GBJ
+					tag = GBJ
+				}
+				country_event = 171125
+			}
+			random_country = {
+				limit = {
+					exists = ENG
+					tag = ENG
+				}
+				country_event = 171125
+			}
+			prestige = 5
+			set_global_flag = begun_continental_blockade
+		}
+	}
+	
+	join_continental_blockade = {
+		picture = dreams_of_empire
+		potential = {
+			capital_scope = {
+				continent = europe
+			}
+			OR = {
+				sphere_owner = {
+					primary_culture = french
+				}
+				AND = {
+				OR = {
+					war_with = GBJ
+					war_with = ENG
+					war_with = GBR
+				}
+				}
+			}
+			has_global_flag = begun_continental_blockade
+			NOT = { has_country_flag = joined_continental_blockade }
+		}
+		allow = {
+			OR = {
+				OR = {
+					war_with = GBJ
+					war_with = ENG
+					war_with = GBR
+				}
+				AND = {
+					OR = {
+						alliance_with = FRA
+						alliance_with = BOR
+					}
+					is_greater_power = yes
+				}
+				sphere_owner = {
+					primary_culture = french
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					exists = GBR
+					tag = GBR
+				}
+				country_event = 171126
+			}
+			random_country = {
+				limit = {
+					exists = GBJ
+					tag = GBJ
+				}
+				country_event = 171126
+			}
+			random_country = {
+				limit = {
+					exists = ENG
+					tag = ENG
+				}
+				country_event = 171126
+			}
+			set_country_flag = joined_continental_blockade 
+		}
+	}
+	
+	leave_continental_blockade = {
+		picture = dreams_of_empire
+		potential = {
+			NOT = { primary_culture = french }
+			OR = {
+				sphere_owner = {
+					primary_culture = french
+				}
+				AND = {
+				OR = {
+					war_with = GBJ
+					war_with = ENG
+					war_with = GBR
+				}
+				}
+			}
+			has_global_flag = begun_continental_blockade
+			has_country_flag = joined_continental_blockade
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_country = {
+				limit = {
+					exists = GBR
+					tag = GBR
+				}
+				country_event = 171128
+			}
+			random_country = {
+				limit = {
+					exists = GBJ
+					tag = GBJ
+				}
+				country_event = 171128
+			}
+			random_country = {
+				limit = {
+					exists = ENG
+					tag = ENG
+				}
+				country_event = 171128
+			}
+			random_country = {
+				limit = {
+					exists = BOR
+					tag = BOR
+				}
+				rleation = {
+					who = THIS
+					relation = -150
+				}
+				casus_belli = {
+					target = THIS
+					type = humiliate
+					months = 12
+				}
+			}
+			random_country = {
+				limit = {
+					exists = FRA
+					tag = FRA
+				}
+				rleation = {
+					who = THIS
+					relation = -150
+				}
+				casus_belli = {
+					target = THIS
+					type = humiliate
+					months = 12
+				}
+			}
+			clr_country_flag = joined_continental_blockade 
+		}
+	}
+	
+	end_continental_blockade = {
+		picture = dreams_of_empire
+		potential = {
+			primary_culture = french
+			OR = {
+				war_with = GBR
+				war_with = ENG
+				war_with = GBR
+			}
+			has_global_flag = begun_continental_blockade
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_country = {
+				limit = {
+					exists = GBR
+					tag = GBR
+				}
+				country_event = 171127
+			}
+			random_country = {
+				limit = {
+					exists = GBJ
+					tag = GBJ
+				}
+				country_event = 171127
+			}
+			random_country = {
+				limit = {
+					exists = ENG
+					tag = ENG
+				}
+				country_event = 171127
+			}
+			clr_global_flag = begin_continental_blockade
 		}
 	}
 }

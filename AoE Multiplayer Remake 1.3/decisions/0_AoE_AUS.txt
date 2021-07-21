@@ -328,4 +328,50 @@ political_decisions = {
 			}
 		}
 	}
+	issue_pragmatic_sanction = {
+		picture = austria_coa
+		potential = {
+			tag = AUS
+			NOT = {
+				has_country_modifier = maria_theresa
+			}
+			NOT = { has_country_flag = issued_pragmatic_sanction }
+			NOT = { has_country_flag = maria_ded }
+			year = 1713
+			exists = yes
+		}
+		allow = {
+			year = 1713
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = issued_pragmatic_sanction
+			country_event = 174503
+		}
+	}
+	create_glm = {
+		picture = galicia
+		potential = {
+			tag = AUS
+			NOT = { has_country_flag = created_glm }
+			owns = 702
+			owns = 703
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+		effect = {
+			AUS_702 = { add_core = GLM }
+			AUS_662 = { add_core = GLM }
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 711
+					}
+				}
+				RUS_710 = { add_core = GLM }
+			}
+		}
+	}
 }

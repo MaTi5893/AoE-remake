@@ -53,14 +53,15 @@ country_event = {
 	}
 	
 	option = {
-		name = "We'll search for another candidate..."
+		name = "Aproach The King of Hannover"
+		country_event = 171401
 		ai_chance = {
 			factor = 1
 		}
 	}
 	
 	option = {
-		name = "God save the King!"
+		name = "Aproach a Stuart Candidate"
 		country_event = 171402
 		ai_chance = {
 			factor = 0
@@ -75,15 +76,9 @@ country_event = {
 	id = 171401
 	title = "Coronation of King George I"
 	desc = "EVTDESC171401"
-	trigger = {
-		primary_culture = british
-		year = 1714
-		has_country_flag = annie_is_ded
-		NOT = { year = 1760 }
-	}
+	is_triggered_only = yes
 	
 	major = yes
-	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 1
@@ -1589,3 +1584,56 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 171012
+	title = "The Storming of the Tower of London"
+	desc = "EVTDESC171012"
+	major = yes
+	news = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "For Wilkes and Liberty!"
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
+}
+	

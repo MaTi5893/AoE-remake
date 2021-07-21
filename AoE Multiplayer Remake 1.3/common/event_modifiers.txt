@@ -4469,21 +4469,18 @@ louis_grande = {
 	icon = 13
 }
 peasant_turmoil = {
-	ruling_party_support = -0.15
-	core_pop_militancy_modifier = 0.001
-	tax_efficiency = -0.05
-	import_cost = -0.25
+	ruling_party_support = -0.35
 	loan_interest = 0.35
 	icon = 18
 }
 poor_tax_laws = {
 	admin_efficiency = 0.05
-	tax_efficiency = -0.1
+	tax_efficiency = -0.05
 	icon = 10
 }
 poor_conscript_laws = {
 	mobilisation_economy_impact = -0.05
-	mobilisation_size = -0.3
+	mobilisation_size = -0.05
 	icon = 16
 }
 peasant_in_government = {
@@ -4519,6 +4516,9 @@ fief_and_drum = {
 	land_organisation = 0.10
 	supply_consumption = -0.1
 	icon = 15
+}
+jacobite_pretender = {
+	icon = 14
 }
 ###+RGO_education###
 
@@ -6913,4 +6913,16 @@ army_with_a_state3 = {
 healthy_merchant_guilds = {
 	local_artisan_throughput = 0.25
 	local_artisan_output = 0.25
+}
+
+suffering_from_continental_blockade = {
+	import_cost = 0.02
+	tariff_efficiency_modifier = -0.02
+	icon = 8
+}
+
+hussein_pasha = {
+	pop_militancy_modifier = -0.06
+	admin_efficiency = 0.05
+	icon = 13
 }

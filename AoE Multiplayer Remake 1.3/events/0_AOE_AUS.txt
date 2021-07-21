@@ -100,114 +100,6 @@ country_event = { #10225 Hungarian rebellion
 		}
 	}
 }
-country_event = { #55555 Rakoczi decides
-	id = 55555
-	title = "EVTNAME55555" #Rakoczi decides 
-	desc = "EVTDESC55555"
-	picture = "rakoczi"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT55555OPT"
-		release_vassal = SIE
-		leave_alliance = AUS
-		create_alliance = HUN
-		any_country = {
-			limit = {
-				war_with = SIE
-			}
-			end_war = SIE
-			create_alliance = SIE
-			relation = {
-				who = SIE
-				value = 200
-			}
-		}
-		AUS = {
-			casus_belli = {
-				target = SIE
-				type = make_puppet
-				months = 120
-			}
-		}
-		HUN = {
-			define_general = {
-				name = "Francis II Rakoczi"
-				personality = persistant
-				background = cavalry_school
-			}
-			create_vassal = SIE
-		}
-		relation = {
-			who = AUS
-			value = -200
-		}
-		relation = {
-			who = HUN
-			value = 200
-		}
-		SIE = {
-			ammunition = 100
-			small_arms = 100
-			canned_food = 500
-			wool = 200
-			steel = 50
-			fabric = 50
-			luxury_clothes = 30
-			any_pop = {
-				limit = {
-					OR = {
-						AND = {
-							consciousness = 0.5
-							militancy = 2
-							has_pop_culture = vlach
-							strata = poor
-						}
-						AND = {
-							militancy = 2
-							NOT = { has_pop_culture = vlach	}
-							NOT = { has_pop_culture = south_german }
-							strata = poor
-						}
-					}
-				}
-				pop_type = soldiers
-			}
-		}
-		HUN = {
-			661 = { secede_province = SIE }
-			654 = { secede_province = SIE }
-			656 = { secede_province = SIE }
-			659 = { secede_province = SIE }
-		}
-		ai_chance = {
-			factor = 90
-		}
-	}
-	option = {
-		name = "EVT55555OPT.2"
-		relation = {
-			who = AUS
-			value = 100
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = vlach 
-			}
-			militancy = 4
-		}
-		set_country_flag = rakoczi_decide
-		define_general = {
-				name = "Francis II Rakoczi"
-				personality = persistant
-				background = cavalry_school
-		}
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
 ####Maria theresa#####
 country_event = {
 	id = 174500
@@ -235,6 +127,38 @@ country_event = {
 		add_country_modifier = {
 			name = maria_theresa
 			duration = -1
+		}
+		set_global_flag = austrian_succession_crisis
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = hre_emperor
+					NOT = { has_country_flag = issued_pragmatic_sanction }
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						has_country_flag = hre_member
+					}
+					casus_belli = {
+						target = AUS
+						type = claim_emperorship
+						months = 12
+					}
+					relation = {
+						who = AUS
+						value = -220
+					}
+				}
+				BOR = {
+					casus_belli = {
+						target = AUS
+						type = dismantle_hre
+						months = 12
+					}	
+				}
+			}
 		}
 	}
 }
@@ -287,6 +211,100 @@ country_event = {
 		add_country_modifier = {
 			name = ost_land_company
 			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 174503
+	title = "The Pragmatic Sanction of $YEAR$"
+	desc = "EVTDESC174503"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our possesions must be secure!"
+		any_country = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+					tag = PRU
+					tag = BAV
+				}
+			}
+			country_event = 174507
+		}
+	}
+}
+country_event = {
+	id = 174507
+	title = "The Pragmatic Sanction of $YEAR$"
+	desc = "EVTDESC174507"
+	picture = treaty_signing
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sign it."
+		FROM = { country_event = 174505	}
+		prestige = -2
+		set_country_flag = accepted_sanction
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 5
+				in_sphere = AUS
+				NOT = {
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 6
+				alliance_with = AUS
+				NOT = {
+					tag = GBR
+				}
+			}
+			modifier = {
+				factor = 5
+				relation = { who = AUS value = 70 }
+				NOT = {
+					tag = GBR
+				}
+			}
+			modifier = {
+				factor = 5
+				has_country_flag = hre_member
+				NOT = {
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 6
+				OR = {
+					tag = PLC
+					tag = RUS
+				}
+			}
+		}
+	}
+	option = {
+		name = "We will not accept such stupid document!"
+		FROM = { country_event = 174506	}
+		prestige = 2
+		set_country_flag = refused_sanction
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				war_with = AUS
+			}
+			modifier = {
+				factor = 5
+				NOT = { relation = { who = AUS value = 0 } }
+			}
 		}
 	}
 }

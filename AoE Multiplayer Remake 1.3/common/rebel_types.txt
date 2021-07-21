@@ -6619,27 +6619,27 @@ jacobite_rebels = {
 	
 	# <this is the government in the country> = <this is what the rebels want>
 	government = {
-		proletarian_dictatorship = hms_government
-		presidential_dictatorship = hms_government
-		bourgeois_dictatorship = hms_government
-		fascist_dictatorship = hms_government
-		absolute_monarchy = hms_government
-		prussian_constitutionalism = hms_government
-		hms_government = hms_government
-		french_bourbon = hms_government
-		dominion = hms_government
-		democracy = hms_government
+		proletarian_dictatorship = prussian_constitutionalism
+		presidential_dictatorship = prussian_constitutionalism
+		bourgeois_dictatorship = prussian_constitutionalism
+		fascist_dictatorship = prussian_constitutionalism
+		absolute_monarchy = prussian_constitutionalism
+		prussian_constitutionalism = prussian_constitutionalism
+		hms_government = prussian_constitutionalism
+		french_bourbon = prussian_constitutionalism
+		dominion = prussian_constitutionalism
+		democracy = prussian_constitutionalism
 		theocracy = theocracy
-		colonial_company = hms_government
+		colonial_company = prussian_constitutionalism
 		
-		archduchy = hms_government
-		elective_monarchy_oligarchy = hms_government
-		federal_democracy = hms_government
-		tribal_democracy = hms_government 
-		tsardom = hms_government
-		merchant_republic = hms_government
-		trade_monarchy = hms_government
-		khanate = hms_government
+		archduchy = prussian_constitutionalism
+		elective_monarchy_oligarchy = prussian_constitutionalism
+		federal_democracy = prussian_constitutionalism
+		tribal_democracy = prussian_constitutionalism 
+		tsardom = prussian_constitutionalism
+		merchant_republic = prussian_constitutionalism
+		trade_monarchy = prussian_constitutionalism
+		khanate = prussian_constitutionalism
 	}
 	
 	
@@ -6680,6 +6680,10 @@ jacobite_rebels = {
 			war_exhaustion = 8
 			factor = 0.95
 		}
+		modifier = {
+			has_country_flag = france_sent_pretender
+			factor = 3
+		}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -6698,6 +6702,22 @@ jacobite_rebels = {
 			location = {
 				has_province_modifier = jacobite_sympathies
 			}
+		}
+		modifier = {
+			factor = 99
+			location = {
+				has_province_modifier = jacobite_pretender
+			}
+		}
+		modifier = {
+			factor = 99
+			location = {
+				has_province_modifier = jacobite_pretender
+			}
+		}
+		modifier = {
+			factor = 3
+			culture = scottish
 		}
 		modifier = {
 			factor = 0
@@ -6721,17 +6741,10 @@ jacobite_rebels = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				culture = basque
-				culture = catalan
-			}
-		}
-		modifier = {
-			factor = 0
 			NOT = {
 				OR = {
 					pop_majority_ideology = conservative
-					pop_majority_ideology = anarcho_liberal
+					pop_majority_ideology = reactionary
 				}
 			}
 		}
@@ -6747,10 +6760,6 @@ jacobite_rebels = {
 		modifier = {
 			factor = 0
 			country = { has_global_flag = jacobites_pacified }
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_pop_religion = protestant }
 		}
 		modifier = {
 			factor = 0
@@ -6840,17 +6849,8 @@ jacobite_rebels = {
 				add_core = GBJ
 			}
 		}
-		clr_country_flag = theocratic_government
-		clr_country_flag = communist_gov
-		clr_country_flag = absolute_monarchy_gov
-		clr_country_flag = semi_constitutional_monarchy_gov
-		clr_country_flag = constitutional_monarchy_gov
-		clr_country_flag = democracy_gov
-		clr_country_flag = presidential_dictatorship_gov
-		clr_country_flag = fascist_gov
-		clr_country_flag = anarcho_liberal_gov
 		change_tag = GBJ
-		ruling_party_ideology = liberal
+		ruling_party_ideology = conservative
 		political_reform = wealth_voting
 		political_reform = state_equal_weight
 		political_reform = yes_meeting

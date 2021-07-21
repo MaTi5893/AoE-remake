@@ -273,7 +273,6 @@ restore_austrian_empire = {
                 region = AUS_652
                 region = AUS_657
             }
-			NOT = { is_core = PLC }
 			NOT = { is_core = VEN }
         }
     }
@@ -414,8 +413,14 @@ dismantle_hre = {
 			NOT = { tag = NNN }
 			civilized = yes
 			is_greater_power = yes
+			OR = {
+				ruling_party_ideology = communist
+				AND = {
+					tag = BOR
+					has_global_flag = austrian_succession_crisis
+				}
+			}
 		}
-		is_ideology_enabled = communist
 		NOT = { has_country_modifier = neutrality }
 		NOT = { in_sphere = THIS }
 		THIS = { NOT = { has_country_modifier = neutrality } }
@@ -3093,7 +3098,6 @@ great_war_penalty_cb = {
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
 
-	po_disarmament = yes
 	po_reparations = yes
 
 	war_name = WAR_NAME

@@ -425,4 +425,59 @@ political_decisions = {
 			}
 		}
 	}
+	enact_promotion_law_change = {
+		picture = switch_to_culture_tech
+		potential = {
+			civilized = yes
+			exists = yes
+			promotion_laws = privlage_benefits
+			NOT = { has_country_flag = nepotism_allowed }
+			NOT =  { wage_reform = no_minimum_wage }
+			NOT =  { safety_regulations = no_safety }
+			NOT =  { safety_regulations = trinket_safety }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = nepotism_allowed
+			any_pop = {
+				limit = {
+					strata = rich
+				}
+				consciousness = 3
+			}
+			prestige = 5
+		}
+	}
+	
+	enact_promotion_law_change_two = {
+		picture = switch_to_culture_tech
+		potential = {
+			civilized = yes
+			exists = yes
+			promotion_laws = nepotism
+			NOT = { has_country_flag = skill_and_merit_allowed }
+			NOT =  { wage_reform = no_minimum_wage }
+			NOT =  { safety_regulations = no_safety }
+			NOT =  { safety_regulations = trinket_safety }
+			OR = {
+				health_care = acceptable_health_care
+				health_care = good_health_care
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = skill_and_merit_allowed
+			any_pop = {
+				limit = {
+					strata = rich
+				}
+				consciousness = 3
+			}
+			prestige = 5
+		}
+	}
 }

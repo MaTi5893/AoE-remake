@@ -76,7 +76,6 @@ josephism;Josephism;;;;;;;;;;;;;
 theresian_military_academy;Theresian Military Academy;;;;;;;;;;;;;
 ost_land_company;Ost-Land Company;;;;;;;;;;;;;
 louis_grande;Louis XIV Bourbon;;;;;;;;;;;;;
-peasant_turmoil:Peasant Turmoil;;;;;;;;;;;;;
 poor_tax_laws;Poor Tax Laws;;;;;;;;;;;;;
 poor_conscript_laws;Low Conscription;;;;;;;;;;;;;
 peasant_in_government;Peasants in the Governments;;;;;;;;;;;;;
@@ -176,13 +175,18 @@ western_medicine;Imported Western Medicine;x
 order_of_the_dragon;Order of the Dragon;x
 streltsi_rebellion;Streltsi Revolt;x
 streltsi_rebellion_desc;Russia suffered a big revolt of Streltsi in 1699, majorly demaging it's military;x
-army_with_a_state1;Army With a State 1;x
+army_with_a_state1;§GArmy With a State I§;x
 army_with_a_state1_desc;With less then 8 states owned by us, we may more effectivly manage our military;x
-army_with_a_state2;Army With a State 2;x
+army_with_a_state2;Army With a State II;x
 army_with_a_state2_desc;With less then 14, but more then 8 states owned by us, we may medioricly manage our military;x
-army_with_a_state3;Army With a State 3;x
-army_with_a_state3_desc;With less then 16, but more then 14 states owned by us, we may medioricly manage our military;x
+army_with_a_state3;§RArmy With a State III§;x
+army_with_a_state3_desc;With less then 16, but more then 14 states owned by us, we may Barely manage our military;x
 soldier_king_reforms;Reforms of the Soldier-King;x
 soldier_king_reforms_desc;This modifier triggers "Army with a State" modifiers which grant us bonuses scaling down depending on the amount of owned states or mil score \n §G(1-8 - Highest ) or military score - 500§ \n §Y(8-14 - Mediocare ) or military_score - 400§ \n §B(14-16 Lowest ) military score = 200§;x
 holy_roman_emperor;§YHoly Roman Emperor§;x
 traditionalist_society;Traditionalist Society;x
+jacobite_pretender;Jacobite Pretender Rising;x
+janisseries_influence;§RThe Janissaries§;;;;;;;;;;;;;
+janisseries_influence_descAs the standing army and loyal servants of the Sultan, the Janissaries and other palace troops traditionally expected to be paid a salary bonus upon the accession of each new ruler. Breaking this tradition could cause riots and instability.;x
+hussein_pasha;Amcazade Köprülü Hüseyin Pasha;x
+hussein_pasha_desc;The grand vizier of the Ottoman Empire under Mustafa II from September 1697 until September 1702. Amcazade Koprulu Huseyin Pasha was close to ordinary Ottoman Muslim subjects being a member of the Mevlevi Order. He was known to be concerned with the needs of the common people as well as those of the military and bureaucratic classes.;x
