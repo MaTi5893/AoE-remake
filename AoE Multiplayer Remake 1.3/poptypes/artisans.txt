@@ -51,8 +51,16 @@ country_migration_target =
 	factor = 1
 	
 	modifier = {
-		factor = 0.55
+		factor = 0.45
 		NOT = { year = 1730 }
+	}
+	modifier = {
+		factor = 0.5
+		NOT = { year = 1760 }
+	}
+	modifier = {
+		factor = 0.60
+		NOT = { year = 1790 }
 	}
 	modifier = {
 		factor = 0.9

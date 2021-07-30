@@ -44,9 +44,9 @@ leader = {
 
 	type = land
 
-	personality = daring
+	personality = defence_minus_1.1
 
-	background = adventurer
+	background = attack_3.2
 
 	prestige = 0.3
 	}
@@ -60,8 +60,8 @@ leader = {
 
 	type = land
 
-	personality = au_fait
-	background = aristocrat
+	personality = defence_minus_2.2
+	background = attack_3.1
 	prestige = 0.2
 }
 	
@@ -74,8 +74,8 @@ leader = {
 
 	type = land
 
-	personality = defiant
-	background = eccentric_genius
+	personality = defence_2.1
+	background = attack_2.3
 	prestige = 0.4
 }
 
@@ -89,8 +89,8 @@ leader = {
 
 	type = land
 
-	personality = chivalrous
-	background = disgraced
+	personality = defence_minus_2.1
+	background = attack_1.3
 
 	prestige = 0.3
 }
@@ -104,9 +104,9 @@ leader = {
 
 	type = land
 
-	personality = heroic
+	personality = defence_1.3
 
-	background = nationalist
+	background = attack_minus_1.2
 	prestige = 0.3
 }
 	
@@ -119,8 +119,8 @@ leader = {
 	date = 1836.1.1
 	type = land
 
-	personality = resolute
-	background = school_of_the_bayonet
+	personality = defence_0.1
+	background = attack_2.4
 	prestige = 0.3
 }
 
@@ -132,21 +132,8 @@ leader = {
 	date = 1836.1.1
 	type = land
 
-	personality = calm
-	background = school_of_firepower
-	prestige = 0.3
-}
-
-leader = {
-
-	name = "Anton Frederik Tscherning"
-
-	picture = european_general_12
-	date = 1836.1.1
-	type = land
-
-	personality = unruly
-	background = gifted_administrator
+	personality = defence_0.1
+	background = attack_1.7
 	prestige = 0.3
 }
 
@@ -159,8 +146,8 @@ leader = {
 
 	type = sea
 
-	personality = merciless
-	background = drillmaster
+	personality = defence_1.1
+	background = attack_2.5
 	prestige = 0.3
 }
 
@@ -174,8 +161,8 @@ leader = {
 
 	type = sea
 
-	personality = imperious
-	background = adventurer
+	personality = defence_0.1
+	background = attack_1.2
 	prestige = 0.3
 }
 
@@ -189,8 +176,8 @@ leader = {
 
 	type = sea
 
-	personality = vicious
-	background = aristocrat
+	personality = defence_0.1
+	background = attack_minus_1.1
 	prestige = 0.3
 }
 

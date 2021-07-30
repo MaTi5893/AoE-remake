@@ -534,8 +534,8 @@ leader = {
 	name = "Omer Vrioni"
 	type = land
 	date = 1820.1.1
-	background = rising_star
-	personality = skilled
+	background = defence_0.4
+	personality = attack_1.2
 	prestige = 0.1
 	}
 
@@ -543,8 +543,8 @@ leader = {
 	name = "Husrev Pasha"
 	type = sea
 	date = 1820.1.1
-	background = politician
-	personality = smart_p
+	background = defence_0.3
+	personality = attack_0.2
 	prestige = 0.15
 	}
 
@@ -552,8 +552,8 @@ leader = {
 	name = " Amcazade Koprulu Huseyin Pasha"
 	date = 1809.1.1
 	type = land
-	personality = inefficient
-	background = elderly
+	personality = defence_minus_1.2
+	background = attack_minus_1.5
 	prestige = 0.2
 }
 
@@ -561,8 +561,8 @@ leader = {
 	name = "Elmas Mehmed Pasha"
 	date = 1836.1.1
 	type = land
-	personality = romantic
-	background = cartographer
+	personality = defence_0.1
+	background = attack_0.7
 	prestige = 0.1
 }
 
@@ -570,8 +570,8 @@ leader = {
 	name = "Abdi Pasha"
 	date = 1836.1.1
 	type = land
-	personality = merciless
-	background = old_school
+	personality = defence_0.3
+	background = attack_3.1
 	prestige = 0.0
 }
 
@@ -579,8 +579,8 @@ leader = {
 	name = "Hafiz Osman Pasha"
 	date = 1836.1.1
 	type = land
-	personality = inept
-	background = yesman
+	personality = defence_0.2
+	background = attack_minus_1.2
 	prestige = 0.0
 }
 
@@ -588,17 +588,17 @@ leader = {
 	name = "Namik Pasha"
 	date = 1836.1.1
 	type = land
-	personality = expert
-	background = diplomat
+	personality = defence_1.2
+	background = attack_1.1
 	prestige = 0.0
 }
 
 leader = {
-	name = "AbdÃ¼lkerim Pasha"
+	name = "Abdülkerim Pasha"
 	date = 1836.1.1
 	type = land
-	personality = active_p
-	background = war_college
+	personality = defence_0.1
+	background = attack_2.3
 	prestige = 0.0
 }
 
@@ -606,7 +606,7 @@ leader = {
 	name = "Yaver Pasha"
 	date = 1836.1.1
 	type = sea
-	personality = diplomatic
-	background = gifted_administrator
+	personality = defence_0.7
+	background = attack_0.3
 	prestige = 0.1
 }

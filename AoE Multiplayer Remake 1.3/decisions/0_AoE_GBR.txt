@@ -1,7 +1,7 @@
 political_decisions = {
 
 	unite_great_britain = {
-		picture = union_act
+		picture = become_gb
 		potential = {
 			tag = ENL
 			NOT = { exists = GBR }
@@ -106,9 +106,10 @@ political_decisions = {
 				is_core = THC
 			}
 			OR = {
-			THC = { is_our_vassal = yes }
-			THC = { is_our_substate = yes }
+				is_our_vassal = THC
+				is_our_substate = THC
 			}
+			exists = THC
 		}
 		allow = {
 			war = no
@@ -400,6 +401,7 @@ political_decisions = {
 	}
 	
 	the_leviathan = {
+		picture = union_act
 		potential = {
 			tag = GBJ
 			NOT = {
@@ -409,7 +411,6 @@ political_decisions = {
 		allow = {
 			war = no
 			ruling_party_ideology = reactionary
-			upper_house_composition = party_appointed
 			trade_unions = no_trade_unions
 			NOT = { average_militancy = 3 }
 		}

@@ -20,24 +20,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	tur_setup = {
-		potential = {
-			tag = TUR
-			NOT = {
-				has_country_modifier = janisseries_influence
-			}
-		}
-		allow = {
-			exists = yes
-		}
-		effect = {
-			add_country_modifier = {
-				name = janisseries_influence
-				duration = -1
-			}
-		}
-	}
+
 	recover_hungary = {
 		picture = tur_hungary
 		potential = {
@@ -127,7 +110,10 @@ political_decisions = {
 		}
 		allow = {
 			is_greater_power = yes
+			OR = {
 			pensions = low_pensions
+			has_global_flag = greek_plan_success
+			}
 		}
 		effect = {
 			set_country_flag = abolished_janisseries
@@ -136,6 +122,67 @@ political_decisions = {
 		}
 		ai_will_do = {					
 			factor = 1
+		}
+	}
+	
+	annex_crimea = {
+		picture = crimea
+		potential = {
+			tag = TUR
+			exists = CRI
+			is_our_vassal = CRI
+		}
+		allow = {
+			state_n_government = 1
+			war = no
+			OR = {
+				CRI = { owns = 1047 }
+				TUR = { owns = 1047 }
+			}
+		}
+		effect = {
+			inherit = CRI
+			CRI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+		}
+	}
+	
+	the_cossack_subjects = {
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = the_cossack_subjects }
+		}
+		allow = {
+			ZZH = {
+				OR = {
+					all_core = {
+						controlled_by = THIS
+					}
+					any_owned_province = {
+						controlled_by = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					exists = ZZH
+					tag = ZZH
+				}
+				annex_to = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = ZZH
+				}
+				add_core = THIS
+			}
+			add_accepted_culture = cossack
+			set_country_flag = the_cossack_subjects
 		}
 	}
 	

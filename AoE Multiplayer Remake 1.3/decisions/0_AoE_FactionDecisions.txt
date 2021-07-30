@@ -359,9 +359,31 @@ political_decisions = {
 			wine = 92,5
 			liquier = 92,5
 			luxury_clothes = 9,21
-			add_country_modifier = {
-				name = estates_help_plead_cooldown
-				duration = 1825
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { trade_unions = all_trade_unions }
+					}
+				}
+				owner = {
+					add_country_modifier = {
+						name = estates_help_plead_cooldown
+						duration = 1825
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = all_trade_unions
+					}
+				}
+				owner = {
+					add_country_modifier = {
+						name = estates_help_plead_cooldown
+						duration = 1095
+					}
+				}
 			}
 		}
 	}
@@ -385,9 +407,11 @@ political_decisions = {
 						trade_unions = no_trade_unions
 					}
 				}
+				owner = {
 				add_country_modifier = {
 					name = change_faction_influence_cooldown
 					duration = 5475
+				}
 				}
 			}
 			random_owned = {
@@ -396,9 +420,11 @@ political_decisions = {
 						trade_unions = state_controlled
 					}
 				}
+				owner = {
 				add_country_modifier = {
 					name = change_faction_influence_cooldown
 					duration = 3650
+				}
 				}
 			}
 			random_owned = {
@@ -407,9 +433,11 @@ political_decisions = {
 						trade_unions = non_socialist
 					}
 				}
+				owner = {
 				add_country_modifier = {
 					name = change_faction_influence_cooldown
 					duration = 2737
+				}
 				}
 			}
 			random_owned = {
@@ -418,9 +446,11 @@ political_decisions = {
 						trade_unions = all_trade_unions
 					}
 				}
+				owner = {
 				add_country_modifier = {
 					name = change_faction_influence_cooldown
 					duration = 1825
+				}
 				}
 			}
 		}
@@ -438,6 +468,16 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			OR = {
+				NOT = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+					government = tsardom
+					government = trade_monarchy
+				}
+				nationalism_n_imperialism = 1
+			}
 		}
 		effect = {
 			set_country_flag = nepotism_allowed
@@ -468,6 +508,16 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			OR = {
+				NOT = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+					government = tsardom
+					government = trade_monarchy
+				}
+				revolution_n_counterrevolution = 1
+			}
 		}
 		effect = {
 			set_country_flag = skill_and_merit_allowed

@@ -50,8 +50,8 @@ leader = {
 	picture = eng_adm_cochrane
 	date = 1832.1.1
 	type = sea
-	personality = charismatic
-	background = adventurer
+	personality = defence_0.1
+	background = attack_2.1
 	prestige = 0.4
 }
 
@@ -60,8 +60,8 @@ leader = {
 	picture = eng_adm_codrington
 	date = 1836.1.1
 	type = sea
-	personality = daring
-	background = expert_raider
+	personality = defence_0.5
+	background = attack_5.1
 	prestige = 0.3
 }
 
@@ -70,8 +70,8 @@ leader = {
 	picture = eng_adm_cockburn
 	date = 1812.1.1
 	type = sea
-	personality = earnest
-	background = old_school
+	personality = defence_2.1
+	background = attack_1.1
 	prestige = 0.3
 }
 
@@ -80,8 +80,8 @@ leader = {
 	picture = eng_adm_parker
 	date = 1830.1.1
 	type = land
-	personality = calm
-	background = exranker
+	personality = defence_minus_1.3
+	background = attack_minus_1.2
 }
 
 leader = {
@@ -89,8 +89,8 @@ leader = {
 	picture = eng_john_church
 	date = 1825.1.1
 	type = land
-	personality = implacable
-	background = natral_talent
+	personality = defence_3.3
+	background = attack_5.1
 	prestige = 0.1
 }
 
@@ -99,8 +99,8 @@ leader = {
 	picture = european_general_34
 	date = 1810.1.1
 	type = land
-	personality = heroic
-	background = school_of_defense
+	personality = defence_3.2
+	background = attack_0.2
 	prestige = 0.8
 }
 
@@ -109,8 +109,8 @@ leader = {
 	picture = eng_gen_goughhugh
 	date = 1830.1.1
 	type = land
-	personality = dauntless
-	background = school_of_the_bayonet
+	personality = defence_0.4
+	background = attack_2.1
 	prestige = 0.1
 }
 
@@ -119,8 +119,8 @@ leader = {
 	picture = eng_gen_seaton
 	date = 1825.1.1
 	type = land
-	personality = doughty
-	background = school_of_offense
+	personality = defence_0.2
+	background = attack_1.6
 	prestige = 0.2
 }
 
@@ -129,8 +129,8 @@ leader = {
 	picture = eng_gen_smith
 	date = 1814.1.1
 	type = land
-	personality = efficient
-	background = gifted_administrator
+	personality = defence_0.3
+	background = attack_2.1
 	prestige = 0.1
 }
 
@@ -139,8 +139,8 @@ leader = {
 	picture = eng_gen_hardinge
 	date = 1830.1.1
 	type = land
-	personality = tactful
-	background = gifted_administrator
+	personality = defence_0.2
+	background = attack_0.1
 	prestige = 0.1
 }
 
@@ -149,8 +149,8 @@ leader = {
 	picture = eng_gen_raglan
 	date = 1836.1.1
 	type = land
-	personality = mediocre
-	background = aristocrat
+	personality = defence_1.5
+	background = attack_minus_2.5
 	prestige = 0.0
 }
 
@@ -158,8 +158,8 @@ leader = {
 	name = "Whitworth-Aylmer"
 	date = 1825.1.1
 	type = land
-	personality = reserved
-	background = generals_aide
+	personality = defence_1.3
+	background = attack_minus_1.2
 	prestige = 0.1
 }
 
@@ -167,8 +167,8 @@ leader = {
 	name = "John Fox Burgoyne"
 	date = 1836.1.1
 	type = land
-	personality = able
-	background = engineer
+	personality = defence_minus_1.2
+	background = attack_0.2
 	prestige = 0.0
 }
 
@@ -178,8 +178,8 @@ leader = {
 	name = "Sir George Brown"
 	date = 1836.1.1
 	type = land
-	personality = harsh
-	background = cavalry_school
+	personality = defence_0.1
+	background = attack_3.2
 	prestige = 0.0
 }
 
@@ -187,8 +187,8 @@ leader = {
 	name = "James Dundas"
 	date = 1836.1.1
 	type = sea
-	personality = cautious
-	background = elderly
+	personality = defence_2.2
+	background = attack_minus_3.1
 	prestige = 0.0
 }
 

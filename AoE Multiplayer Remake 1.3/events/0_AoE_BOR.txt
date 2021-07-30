@@ -457,7 +457,7 @@ country_event = {
 	
 	trigger = {
 		tag = BOR
-		government = absolute_monarchy
+		#government = absolute_monarchy
 		OR = {
 			average_militancy = 4
 			has_recently_lost_war = yes
@@ -991,7 +991,7 @@ country_event = {
 	desc = "EVTDESC171128"
 	picture = continental_blockade
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Good"
 		random_owned = {
@@ -1023,6 +1023,122 @@ country_event = {
 			}
 			remove_province_modifer = suffering_from_continental_blockade
 		}
+	}
+}
+#Missisiippi trade company
+country_event = {
+	id = 171130
+	title = "The Mississippi Trade Company"
+	desc = "EVTDESC171130"
+	picture = new_world
+	fire_only_once = yes
+	trigger = {
+		tag = BOR
+		year = 1717
+		NOT = { has_country_modifier = missisiippi_trade_company }
+	}
+	
+	option = {
+		name = "This sounds like Easy Money!"
+		add_country_modifier = {
+			name = missisiippi_trade_company
+			duration = 3650
+		}
+		set_country_flag = missisiippi_trade_company_created
+	}
+}
+country_event = {
+	id = 171131
+	title = "Expansion in North America"
+	desc = "EVTDESC171131"
+	picture = new_world
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = missisiippi_trade_company
+		NOT = { has_country_modifier = missisiippi_trade_company }
+		NOT = { has_country_flag = failed_company }
+		OR = {
+		owns = 184
+		184 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 172
+		172 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 173
+		173 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 140
+		140 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 193
+		193 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 189
+		189 = { owner = { in_sphere = THIS } }
+		}
+	}
+	
+	option = {
+		name = "Thank goodness"
+		add_country_modifier = {
+			name = missisiippi_trade_company
+			duration = -1
+		}
+		set_country_flag = succesfull_company
+	}
+}
+country_event = {
+	id = 171132
+	title = "Mississippi Trade Company Folds"
+	desc = "EVTDESC171132"
+	picture = new_world
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = missisiippi_trade_company
+		NOT = { has_country_modifier = missisiippi_trade_company }
+		NOT = {
+			has_country_flag = succesfull_company
+		}
+		NOT = {
+		OR = {
+		owns = 184
+		184 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 172
+		172 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 173
+		173 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 140
+		140 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 193
+		193 = { owner = { in_sphere = THIS } }
+		}
+		OR = {
+		owns = 189
+		189 = { owner = { in_sphere = THIS } }
+		}
+		}
+	}
+	
+	option = {
+		name = "Hope we can avoid bankruptcy..."
+		prestige = -25
+		any_pop = {
+			militancy = 3
+		}
+		set_country_flag = failed_company
 	}
 }
 #This is for venice bc for some reason it doesnt work when in the venice file#

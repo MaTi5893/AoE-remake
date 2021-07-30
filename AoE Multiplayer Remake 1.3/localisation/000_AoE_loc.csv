@@ -139,7 +139,7 @@ movement_acceptable_health_care;Movement to Increase Bureaucrats Power;Mouvement
 movement_good_health_care;Movement to Increase Bureaucrats Power;Mouvement de couverture santãƒ» universelle;Universelle Krankenversorgung-Bewegung;;;;;;;;;;;
 conservative_focus_short;§YTraditionalist§! loyalty;Loyautãƒ» ï½§Yconservatriceï½§!;ï½§YKonservativeï½§! Loyalitãƒ»t;;;;;;;;;;;
 liberal_focus_short;§YParliamentarian§! loyalty;Loyautãƒ» ï½§Ylibãƒ»raleï½§!;ï½§YLiberaleï½§! Loyalitãƒ»t;;;;;;;;;;;
-conservative_focus;Party loyalty towards §Ytraditionalist§! ;Loyautãƒ» envers le parti ï½§Yconservateurï½§! ;Parteiloyalitãƒ»t gegenãƒ»ber ï½§Yconservativeï½§! ;;;;;;;;;;;
+conservative_focus;Party loyalty towards §YTraditionalist§! ;Loyautãƒ» envers le parti ï½§Yconservateurï½§! ;Parteiloyalitãƒ»t gegenãƒ»ber ï½§Yconservativeï½§! ;;;;;;;;;;;
 liberal_focus;Party loyalty towards §YParliamentarian§! ;Loyautãƒ» envers le parti ï½§Ylibãƒ»ralï½§! ;Parteiloyalitãƒ»t gegenãƒ»ber ï½§Yliberalï½§! ;;;;;;;;;;;
 MODIFIER_EDUCATION_EFFICIENCY;Education Speed;Efficacit? de l'ãƒ»ducation;Bildungseffizienz;;;;;;;;;;;
 EDU_EFF_TECH;Education Speed Modifier;Efficacit??ucative;Bildungseff.;;Efi. educativa;;;;;;;;;
@@ -273,13 +273,13 @@ natral_talent;Naturally Talented;;;;;;;;;;;;;
 mercantilism_1;Mercantilism;;;;;;;;;;;;;
 trade_unions;Executive Power;;;;;;;;;;;;;
 no_trade_unions;One Man To Rule;;;;;;;;;;;;;
-no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 15 years§\n;x
+no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 15 years§!\n;x
 state_controlled;Advisor Council;;;;;;;;;;;;;
-state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 10 years§\n;x
+state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 10 years.§W\n;x
 non_socialist;Delegated Ministers;;;;;;;;;;;;;
-non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 7.5 years§\n;x
+non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 7.5 years.§W\n;x
 all_trade_unions;Obligatory Cabinet;;;;;;;;;;;;;
-all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the execitive powers.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 5 years§\n;x
+all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the execitive powers.\n§YThis reform reduces your Change Estate Influence Decision Cooldown to 5 years and Plead Estates For War Support Cooldown to 3 years.§W\n;x
 MAY_GAS_ATTACK;Unlocks Napoleonic Warfare;;;;;;;;;;;;;
 MAY_GAS_DEFEND;Can defend against Napoleonic Warfare;;;;;;;;;;;;;
 gas_attack;Napoleonic Warfare;;;;;;;;;;;;;
@@ -291,16 +291,14 @@ military_vaccination;Military Vaccine Stations;;;;;;;;;;;;;
 military_vaccination_desc;The Military Uses a Vaccine Station;;;;;;;;;;;;;
 public_vaccination;Public Vaccine Stations;;;;;;;;;;;;;
 public_vaccination_desc;Public Vaccine Stations are available in most of our major citys;;;;;;;;;;;;;
-EVTNAME10001;Age of Enlightenment;x
 ukrainian;Ruthenian;x
 promotion_laws;Promotion Laws;x
 privlage_benefits;Privilege Benefit Based;x
 privlage_benefits_desc;The Rich Class and Prominent Families can use existing laws to justify taking over government positions over competent individuals;x
 nepotism;Nepotism;x
-nepotism_desc;A handfull of most influential families are in controll of our most important government positions.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential and Church Influence beyond Very Influential. This Process can be speed up if you're a republic.§\n;x
+nepotism_desc;A handfull of most influential families are in controll of our most important government positions.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential and Church Influence beyond Very Influential. This Process can be speed up if you're a republic.§W\n;;;;;;;;;;;;;
 skill_and_merit_based;Based on Skill and Merit;x
-skill_and_merit_based_desc;Individuals are given government positions based on their accomplishments, not titles.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential, Church Influence beyond Very Influential and increase Beaurocratic Influence above Slightly Influential. This Process can be speed up if you're a republic§\n;x
-EVTDESC10001;The Enlightenment emerged out of a European intellectual and scholarly movement known as Renaissance humanism and was also preceded by the Scientific Revolution and the work of Francis Bacon, among others. Some date the beginning of the Enlightenment to Rene Descartes' 1637 philosophy of Cogito, ergo sum ("I think, therefore I am"), while others cite the publication of Isaac Newton's Principia Mathematica (1687) as the culmination of the Scientific Revolution and the beginning of the Enlightenment. French historians traditionally date its beginning with the death of Louis XIV of France in 1715 until the 1789 outbreak of the French Revolution. The Enlightenment included a range of ideas centered on the pursuit of happiness, sovereignty of reason and the evidence of the senses as the primary sources of knowledge and advanced ideals such as liberty, progress, toleration, fraternity, constitutional government and separation of church and state.;x
+skill_and_merit_based_desc;Individuals are given government positions based on their accomplishments, not titles.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential, Church Influence beyond Very Influential and increase Beaurocratic Influence above Slightly Influential. This Process can be speed up if you're a republic.§W\n;;;;;;;;;;;;;
 social_reforms;Estate Influence & Law;x
 jacobite_rebels;Jacobite Pretender Rebels;x
 jacobite_rebels_name;Jacobite Pretender Rebels;x
@@ -308,3 +306,6 @@ jacobite_rebels_army;Jacobite Pretender Army;x
 WORLD_WARS_ENABLE_DESC;Continental wars can now become Coalition wars;;;;;;;;;;;;;x
 WORLD_WARS_ENABLED_DESC;Continental wars are enabled;;;;;;;;;;;;;x
 WORLD_WARS_DISABLED_DESC;Continental wars are NOT enabled;;;;;;;;;;;;;x
+military_science;Military Science & Cavalry;x
+totalitarianism;Despotism;x
+totalitarianism_desc;Our whole state is controlled by a single person.;x

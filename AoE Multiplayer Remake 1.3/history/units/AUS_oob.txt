@@ -506,8 +506,8 @@ leader = {
 	date = 1695.1.1
 	type = land
 	picture = aus_eugene_sav
-	personality = implacable
-	background = cavalry_school
+	personality = defence_3.1
+	background = attack_5.1
 	prestige = 0.3
 }
 
@@ -515,8 +515,8 @@ leader = {
 	name = "Louis of Baden"
 	date = 1700.1.1
 	type = land
-	personality = defiant
-	background = natural_born_leader
+	personality = defence_3.1
+	background = attack_1.5
 	prestige = 0.1
 }
 
@@ -524,8 +524,8 @@ leader = {
 	name = "Count Starhemberg"
 	date = 1700.1.1
 	type = land
-	personality = active_p
-	background = aristocrat
+	personality = defence_1.1
+	background = attack_1.1
 	prestige = 0.1
 }
 
@@ -533,17 +533,17 @@ leader = {
 	name = "Hermann von Hess"
 	date = 1700.1.1
 	type = land
-	personality = aggressive
-	background = generals_aide
+	personality = attack_2.1
+	background = defence_0.7
 	prestige = 0.1
 }
 
 leader = {
-	name = "dâ€™Aspre und Hoobreuck"
+	name = "d’Aspre und Hoobreuck"
 	date = 1700.1.1
 	type = land
-	personality = bold
-	background = drillmaster
+	personality = defence_0.3
+	background = attack_0.7
 	prestige = 0.1
 }
 
@@ -551,8 +551,8 @@ leader = {
 	name = "Alfred von Windischgraetz"
 	date = 1700.1.1
 	type = land
-	personality = arrogant
-	background = butcher
+	personality = defence_0.1
+	background = attack_minus_1.14
 	prestige = 0.3
 }
 
@@ -560,15 +560,15 @@ leader = {
 	name = "Erzherzog Albrecht"
 	date = 1700.1.1
 	type = land
-	personality = active_p
-	background = aristocrat
+	personality = defence_minus_1.1
+	background = attack_1.1
 }
 
 leader = {
 	name = "Paolucci delle Roncole"
 	date = 1700.1.1
 	type = sea
-	personality = competent
-	background = aristocrat
+	personality = defence_0.3
+	background = attack_2.1
 	prestige = 0.1
 }

@@ -192,7 +192,7 @@ vassal = {  #substate
 substate = {  #substate
 	first = ENL
 	second = THC 
-	start_date = 1700.1.1
+	start_date = 1700.1.2
 	end_date = 2000.1.1
 }
 
@@ -258,7 +258,12 @@ vassal = {  #substate
 }
 
 #FCA / NZL / AST / MRU / NEW / RHO / JAM
-
+vassal = {  #substate
+	first = BOR
+	second = FCA
+	start_date = 1700.1.2
+	end_date = 1763.1.1
+}
 
 #Switzerland - NCT/VAL/THL/ASG/CSG/GSU/MLH/ROT
 vassal = {

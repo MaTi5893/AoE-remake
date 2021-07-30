@@ -3,15 +3,7 @@ country_event = {
 	title = "The Grand Embassy"
 	desc = "EVTDESC170000"
 	picture = peter_the_great
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		year = 1700
-	}
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "It's time to reform this backwards state"
@@ -856,16 +848,13 @@ country_event = {
 
 country_event = {
 	id = 170018
-	title = "EVTNAME170018"
+	title = "The Treaty of Kyakhta"
 	desc = "EVTDESC170018"
-	picture = lutsk_agreements
+	picture = dzung_war
 	fire_only_once = yes
 	
 	trigger = {
 		tag = RUS
-		NOT = {
-			has_country_flag = treaty_of_kyakhta
-		}
 		year = 1727
 	}
 	
@@ -874,8 +863,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT170018OPT1"
-		set_country_flag = treaty_of_kyakhta
+		name = "Send a linient treaty"
 		1067 = {
 			add_core = RUS
 		}
@@ -885,6 +873,7 @@ country_event = {
 		1068 = {
 			add_core = RUS
 		}
+		add_core = 1077
 		prestige = 5
 		relation = {
 			who = QNG
@@ -895,8 +884,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT170018OPT2"
-		set_country_flag = treaty_of_kyakhta
+		name = "Claim Some Qing Lands"
 		1067 = {
 			add_core = RUS
 		}
@@ -912,7 +900,49 @@ country_event = {
 		2697 = {
 			add_core = RUS
 		}
+		add_core = 2698
+		add_core = 1068
+		add_core = 1077
 		badboy = 5
+		relation = {
+			who = QNG
+			value = -100
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 5
+				QNG = {
+					war_exhaustion = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = "Add in Manchuria as well!"
+		1067 = {
+			add_core = RUS
+		}
+		2674 = {
+			add_core = RUS
+		}
+		1469 = {
+			add_core = RUS
+		}
+		1081 = {
+			add_core = RUS
+		}
+		2697 = {
+			add_core = RUS
+		}
+		add_core = 1077
+		CHI_1082 = {
+			add_core = RUS
+		}
+		CHI_1553 = {
+			add_core = RUS
+		}
+		badboy = 15
 		relation = {
 			who = QNG
 			value = -100
@@ -1156,7 +1186,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT170023OPTA"
+		name = "Pay them as much as they need"
 		treasury = -50000
 		set_global_flag = st_petersburg_construction
 		random_list = {
@@ -1174,7 +1204,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT170023OPTB"
+		name = "Pay them a decent amount"
 		treasury = -40000
 		set_global_flag = st_petersburg_construction
 		random_list = {
@@ -1192,7 +1222,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT170023OPTC"
+		name = "Pay them for necessery costs only"
 		treasury = -30000
 		set_global_flag = st_petersburg_construction
 		random_list = {
@@ -1210,7 +1240,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT170023OPTD"
+		name = "Pay only for the basics"
 		treasury = -27500
 		set_global_flag = st_petersburg_construction
 		random_list = {
@@ -1228,7 +1258,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT170023OPTE"
+		name = "Pay the bare minimum"
 		treasury = -25000
 		set_global_flag = st_petersburg_construction
 		random_list = {
@@ -1358,6 +1388,219 @@ country_event = {
 			sub_unit = { type = frigate value = current }
 			sub_unit = { type = frigate value = current }
 			sub_unit = { type = frigate value = current }
+		}
+	}
+}
+country_event = {
+	id = 170029
+	title = "The State takes control of the Russian Church"
+	desc = "EVTDESC170029"
+	picture = "orthodox_priests"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = absolute_monarchy
+	}
+	
+	mean_time_to_happen = {
+		months = 20
+	}
+	
+	option = {
+		name = "Abolish the Patriarchate"
+		any_pop = {
+			limit = {
+				has_pop_religion = orthodox
+			}
+			militancy = 2
+		}
+		social_reform = acceptable_minimum_wage
+	}
+	
+	option = {
+		name = "Leave the Patriarchate alone"
+		any_pop = {
+			limit = {
+				has_pop_religion = orthodox
+			}
+			militancy = -2
+		}
+	}
+}
+country_event = {
+	id = 170030
+	title = "Greek plan succedes!"
+	desc = ""
+	is_triggered_only = yes
+	news = yes
+	major = yes
+	
+	option = {
+		name = "We got metapartitioned"
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = VEN
+					is_core = CRO
+					is_core = ALB
+					is_core = CYP
+					province_id = 847
+					province_id = 848
+					state_id = TUR_884
+					province_id = 800
+					province_id = 846
+				}
+				#owner = { exists = VEN }
+			}
+			secede_province = VEN
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = BOS
+					AND = {
+					is_core = SER
+					NOT = { is_core = BUL }
+					}
+					AND = {
+					is_core = MON
+					NOT = { province_id = 800 }
+					}
+					is_core = HUN
+					is_core = AUS
+				}
+				#owner = { exists = AUS }
+			}
+			secede_province = AUS
+		}
+		BYZ = {
+			add_core = 860
+			add_core = 858
+			add_core = 828
+			add_core = 859
+		}
+		BUL = {
+			all_core = {
+				add_core = BYZ
+			}
+		}
+		GRE = {
+			all_core = {
+				add_core = BYZ
+			}
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = BYZ
+					is_core = RUS
+					is_core = BUL
+					is_core = GRE
+					is_core = GEO
+					is_core = WAL
+					is_core = MOL
+					province_id = 882
+					province_id = 884
+					province_id = 886
+				}
+			}
+			secede_province = RUS
+		}
+		RUS = {
+			release_vassal = BYZ
+			BYZ = {
+				government = colonial_company
+				set_country_flag = NOT_colony
+			}
+			#release_vassal = BYZ
+			random_owned = {
+				limit = {
+					owner = {
+						exists = WAL
+					}
+				}
+				owner = {
+					inherit = WAL
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = MOL
+					}
+				}
+				owner = {
+					inherit = MOL
+				}
+			}
+			any_owned = {
+				limit = {
+				is_core = ROM
+				is_core = THIS
+				}
+				remove_core = ROM
+			}
+			release_vassal = ROM
+			ROM = {
+				government = colonial_company
+				set_country_flag = NOT_colony
+			}
+		}
+		set_global_flag = greek_plan_success
+	}
+}
+country_event = {
+	id = 170031
+	title = "The Kurland Succession of 1726"
+	desc = "EVTDESC170031"
+	picture = "courland"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		exists = KUR
+		neighbour = KUR
+		year = 1726
+	}
+	
+	option = {
+		name = "Prepare to grab Kurland"
+		prestige = 5
+		relation = {
+			who = PLC
+			value = -100
+		}
+		relation = {
+			who = KUR
+			value = -100
+		}
+		diplomatic_influence = {
+			who = PLC
+			value = -200
+		}
+		casus_belli = {
+			type = minor_conquest
+			target = KUR
+			months = 12
+		}
+		casus_belli = {
+			type = humiliate
+			target = PLC
+			months = 12
+		}
+	}
+	
+	option = {
+		name = "Ignore this petty matter"
+		prestige = -5
+		relation = {
+			who = PLC
+			value = 100
+		}
+		relation = {
+			who = KUR
+			value = 100
 		}
 	}
 }

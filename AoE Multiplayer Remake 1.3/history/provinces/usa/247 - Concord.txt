@@ -1,6 +1,8 @@
-owner = THC
-controller = THC
+owner = ENL
+controller = ENL
+
 add_core = THC
+colonial = 2
 add_core = ABB
 add_core = NEN
 trade_goods = timber
@@ -9,4 +11,11 @@ state_building = {
 	level = 1
 	building = fabric_factory
 	upgrade = yes
+}
+
+1700.01.02 = {
+owner = THC
+controller = THC
+add_core = THC
+colonial = 0
 }

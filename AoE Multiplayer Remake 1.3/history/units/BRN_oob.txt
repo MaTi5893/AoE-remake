@@ -332,8 +332,8 @@ leader = {
 	picture = european_admiral_2
 	type = sea
 	date = 1700.1.1
-	background = gifted_administrator
-	personality = soldierly
+	background = defence_minus_0.3
+	personality = attack_1.2
 	prestige = 0.1
 	}
 	
@@ -342,8 +342,8 @@ leader = {
 	picture = pru_fredric_i
 	type = land
 	date = 1700.1.1
-	background = war_college
-	personality = au_fait
+	background = defence_0.1
+	personality = attack_4.1
 	prestige = 0.75
 	}
 	
@@ -351,9 +351,9 @@ leader = {
 	name = "Leopold I von Anhalt-Dessau"
 	picture = pru_anhalt_dessau
 	type = land
-	date = 1810.1.1
-	background = natral_talent
-	personality = merciless
+	date = 1699.1.1
+	background = defence_3.1
+	personality = attack_4.1
 	prestige = 0.5
 	}	
 	
@@ -361,9 +361,9 @@ leader = {
 	name = "Eduard Vogel von Falckenstein"
 	picture = european_general_27
 	type = land
-	date = 1826.1.1
-	background = cartographer
-	personality = audacious
+	date = 1700.1.1
+	background = defence_2.4
+	personality = attack_2.1
 	prestige = 0.3
 	}
 	
@@ -372,8 +372,8 @@ leader = {
 	picture = pru_gen_boyen
 	date = 1813.1.1
 	type = land
-	personality = openminded
-	background = gifted_administrator
+	personality = defence_0.1
+	background = attack_0.1
 	prestige = 0.5
 }
 
@@ -382,9 +382,9 @@ leader = {
 	picture = pru_gen_prinzaugust
 	date = 1814.1.1
 	type = land
-	personality = resourceful
-	background = womanizer
-	prestige = 0.8
+	personality = defence_0.1
+	background = attack_0.1
+	prestige = 0.4
 }
 
 leader = {
@@ -392,7 +392,7 @@ leader = {
 	picture = pru_gen_prinzkarl
 	date = 1824.1.1
 	type = land
-	personality = indifferent
-	background = armchair_general
-	prestige = 0.8
+	personality = defence_minus_1.2
+	background = attack_1.4
+	prestige = 0.4
 }

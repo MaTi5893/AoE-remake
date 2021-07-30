@@ -49,6 +49,7 @@ political_decisions = {
 				duration = -1
 			}
 			research_points = 50
+			political_reform = open_borders
 			remove_country_modifier = streltsi_rebellion
 			tech_school = pogonya_za_zapadom
 			any_pop = {
@@ -167,7 +168,7 @@ political_decisions = {
 					exists = no
 				}
 				}
-				mass_politics = 1
+				nationalism_n_imperialism = 1
 			}
 		}
 		effect = {
@@ -637,6 +638,74 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	propose_the_greek_plan = {
+		picture = latinempire
+		potential = {
+			tag = RUS
+			NOT = { government = tsardom }
+			has_country_modifier = catharine_the_great
+			is_greater_power = yes
+			NOT = { has_country_flag = proposed_the_greek_plan }
+		}
+		allow = {
+			war = no
+			OR = {
+				alliance_with = AUS
+				AUS = { exists = no }
+				AUS = { ai = yes }
+			}
+			OR = {
+				alliance_with = VEN
+				VEN = { exists = no }
+				VEN = { ai = yes }
+			}
+			OR = {
+				alliance_with = ITA
+				ITA = { exists = no }
+				ITA = { ai = yes }
+			}
+			owns = 967
+			owns = 968
+			owns = 678
+			owns = 1049
+			owns = 1051
+		}
+		effect = {
+			set_country_flag = proposed_the_greek_plan
+			casus_belli = {
+				target = TUR
+				type = greek_plan_cb
+				months = 12
+			}
+			badboy = 20
+			random_country = {
+				limit = {
+					tag = AUS
+					alliance_with = THIS
+				}
+				badboy = 20
+			}
+			random_country = {
+				limit = {
+					tag = VEN
+					alliance_with = THIS
+				}
+				badboy = 15
+			}
+			random_country = {
+				limit = {
+					tag = ITA
+					alliance_with = THIS
+				}
+				badboy = 15
+			}
+			relation = {
+				who = TUR
+				value = -100
+			}
 		}
 	}
 }

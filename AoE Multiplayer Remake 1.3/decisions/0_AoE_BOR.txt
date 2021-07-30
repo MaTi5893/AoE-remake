@@ -155,7 +155,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = napoleonic_coup
-			event = 189980
+			country_event = 189980
 		}
 	}
 	napoleonic_conquest = {
@@ -556,6 +556,7 @@ political_decisions = {
 	support_jacobite_pretenders = {
 		picture = edward_stuart
 		potential = {
+			tag = BOR
 			NOT = { exists = GBJ }
 			exists = GBR
 			NOT = { has_country_flag = supported_jacobite_pretenders }
@@ -731,7 +732,7 @@ political_decisions = {
 					exists = BOR
 					tag = BOR
 				}
-				rleation = {
+				relation = {
 					who = THIS
 					relation = -150
 				}
@@ -746,7 +747,7 @@ political_decisions = {
 					exists = FRA
 					tag = FRA
 				}
-				rleation = {
+				relation = {
 					who = THIS
 					relation = -150
 				}

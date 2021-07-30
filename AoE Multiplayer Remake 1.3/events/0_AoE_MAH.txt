@@ -1,0 +1,68 @@
+country_event = {
+	id = 165700
+	title = "Tarabai"
+	desc = "EVTDESC165700"
+	is_triggered_only = yes
+	picture = tarabai
+	
+	option = {
+		name = "Intresting"
+		add_country_modifier = {
+			name = tarabai
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 165701
+	title = "Issue of Leadership"
+	desc = "EVTDESC165701"
+	fire_only_once = yes
+	picture = tarabai
+	
+	trigger = {
+		is_vassal = no
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "Let Tarabai Stay"
+		add_country_modifier = {
+			name = tarabai
+			duration = -1
+		}
+		prestige = -15
+		any_pop = {
+			militancy = 3
+		}
+	}
+	
+	option = {
+		name = "A Women cannot lead us!"
+		prestige = 15
+		any_pop = {
+			militancy = -3
+		}
+	}
+}
+
+country_event = {
+	id = 165702
+	title = "Death of Tarabai"
+	desc = "EVTDESC165702"
+	fire_only_once = yes
+	picture = tarabai
+	
+	trigger = {
+		has_country_modifier = tarabai
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "May she rest in peace"
+		remove_country_modifier = tarabai
+	}
+}

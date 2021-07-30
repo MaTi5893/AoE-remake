@@ -1575,7 +1575,7 @@ country_event = {
 		owns = 300
 	}
 	option = {
-		name = "Amazing, lady and gentelmens"
+		name = "Amazing, ladies and gentelmens"
 		300 = {
 			add_province_modifier = {
 				name = antiquaries_of_london
@@ -1590,7 +1590,13 @@ country_event = {
 	desc = "EVTDESC171012"
 	major = yes
 	news = yes
-	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = arrested_wilkes
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
 	
 	option = {
 		name = "For Wilkes and Liberty!"
@@ -1636,4 +1642,104 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 171013
+	title = "Captain Jenkin's Ear"
+	desc = "EVTDESC171013"
+	picture = desant
+	fire_only_once = yes
 	
+	trigger = {
+		year = 1731
+		OR = {
+		tag = GBR
+		tag = GBJ
+		}
+	}
+	option = {
+		name = "Use it as an excuse for War"
+		random_owned = {
+			limit = {
+				owner = {
+					SPA = { exists = yes }
+				}
+			}
+			owner = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+				relation = {
+					who = SPA
+					value = -50
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					SPC = { exists = yes }
+				}
+			}
+			owner = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+				relation = {
+					who = SPA
+					value = -50
+				}
+			}
+		}
+		prestige = 15
+	}
+	option = {
+		name = "Try not to severe our relation too much"
+		prestige = -1
+	}
+}
+##Wilkes stuff
+country_event = {
+	id = 171014
+	title = "John Wilkes"
+	desc = "EVTDESC171014"
+	picture = wilkes
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = british
+		tag = GBJ
+		has_country_modifier = jacobite_absolutism
+		NOT = { government = proletarian_dictatorship }
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.9
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.7
+			average_militancy = 4
+		}
+	}
+	
+	option = {
+		name = "Arrest him!"
+		prestige = 5
+		set_country_flag = arrested_wilkes
+	}
+	
+	option = {
+		name = "Leave him be"
+		prestige = -15
+	}
+}

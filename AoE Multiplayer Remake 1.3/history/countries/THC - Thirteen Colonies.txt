@@ -38,7 +38,6 @@ colonial_policy = settlement
 
 set_country_flag = new_world_nation
 set_country_flag = dynamic_colony
-
 ruling_party = "Nobility Faction"
 upper_house = {
 	fascist = 0
@@ -75,3 +74,7 @@ late_enlightenment_philosophy = 1
 enlightenment_thought = 1
 piston_steam_engine = 1
 mechanical_production = 1
+
+1700.01.02 = {
+decision = thc_setup
+}

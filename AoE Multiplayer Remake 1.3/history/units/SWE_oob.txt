@@ -2,8 +2,8 @@ leader = {
 	name = "Carl Gustav Rehnskiold"
 	date = 1834.1.1
 	type = sea
-	personality = disciplined
-	background = adventurer
+	personality = defence_minus_1.1
+	background = attack_0.1
 	prestige = 0.1
 }
 
@@ -12,8 +12,8 @@ leader = {
 	date = 1700.1.1
 	picture = swe_gen_charles
 	type = land
-	personality = daring
-	background = natral_talent
+	personality = defence_minus_1.4
+	background = attack_5.1
 	prestige = 0.8
 }
 
@@ -21,8 +21,8 @@ leader = {
 	name = "Adam Ludwig Lewenhaupt"
 	date = 1687.1.1
 	type = land
-	personality = soldierly
-	background = old_school
+	personality = defence_minus_2.3
+	background = attack_2.2
 	prestige = 0.3
 }
 
@@ -30,8 +30,8 @@ leader = {
 	name = "Arvid Axel Mardefelt"
 	date = 1678.1.1
 	type = land
-	personality = unruly
-	background = generals_aide
+	personality = defence_1.2
+	background = attack_minus_1.1
 	prestige = 0.2
 }
 
@@ -39,8 +39,8 @@ leader = {
 	name = "Carl Gustaf Armfeldt"
 	date = 1674.1.1
 	type = sea
-	personality = able
-	background = adventurer
+	personality = defence_0.3
+	background = attack_2.4
 	prestige = 0.1
 }
 
@@ -48,16 +48,16 @@ leader = {
 	name = "Johan August Meijerfeldt"
 	date = 1694.1.1
 	type = land
-	personality = chivalrous
-	background = bureaucrat_speed
+	personality = defence_0.2
+	background = attack_2.1
 	prestige = 0.1
 }
 leader = {
 	name = "Wolmar Anton von Schlippenbach"
 	date = 1684.1.1
 	type = land
-	personality = defiant
-	background = hated
+	personality = defence_4.1
+	background = attack_1.2
 	prestige = 0.1
 }
 
@@ -65,8 +65,8 @@ leader = {
 	name = "Otto Velingk"
 	date = 1694.1.1
 	type = land
-	personality = diplomatic
-	background = toady
+	personality = defence_minus_1.1
+	background = attack_0.3
 	prestige = 0.2
 }
 
@@ -74,8 +74,8 @@ leader = {
 	name = "Hans Wachtmeister"
 	date = 1677.1.1
 	type = land
-	personality = imperious
-	background = exranker
+	personality = defence_0.3
+	background = attack_0.1
 	prestige = 0.1
 }
 
@@ -83,24 +83,24 @@ leader = {
 	name = "Carl Gustav Creutz"
 	date = 1687.1.1
 	type = land
-	personality = brilliant
-	background = engineer
+	personality = defence_2.2
+	background = attack_1.2
 	prestige = 0.1
 }
 leader = {
 	name = "Carl Nieroth"
 	date = 1677.1.1
 	type = land
-	personality = clever
-	background = war_college
+	personality = defence_2.1
+	background = attack_2.2
 	prestige = 0.1
 }
 leader = {
 	name = "Georg Reinhold Patkul"
 	date = 1677.1.1
 	type = land
-	personality = imperious
-	background = exranker
+	personality = defence_minus_1.2
+	background = attack_1.2
 	prestige = 0.1
 }
 

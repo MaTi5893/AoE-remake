@@ -239,8 +239,8 @@ leader = {
 	picture = european_general_55
 	type = land
 	date = 1825.8.20
-	background = aristocrat
-	personality = soldierly
+	background = defence_0.2
+	personality = attack_1.2
 	prestige = 0.1
 	}
 	
@@ -249,8 +249,8 @@ leader = {
 	picture = european_admiral_5
 	type = sea
 	date = 1820.12.14
-	background = generals_aide
-	personality = stout
+	background = defence_2.1
+	personality = attack_0.1
 	prestige = 0.05
 	}
 
@@ -258,8 +258,8 @@ leader = {
 	name = "Nunes Vidigal"
 	date = 1808.1.1
 	type = land
-	personality = aggressive
-	background = hated
+	personality = defence_0.1
+	background = attack_2.1
 	prestige = 0.2
 }
 
@@ -267,8 +267,8 @@ leader = {
 	name = "Luís Barreto"
 	date = 1824.1.1
 	type = land
-	personality = resolute
-	background = gifted_administrator
+	personality = defence_2.4
+	background = attack_0.3
 	prestige = 0.2
 }
 
@@ -276,8 +276,8 @@ leader = {
 	name = "Vicente de Mesquita"
 	date = 1808.1.1
 	type = land
-	personality = dauntless
-	background = madman
+	personality = defence_0.3
+	background = attack_minus_1.1
 	prestige = 0.0
 }
 

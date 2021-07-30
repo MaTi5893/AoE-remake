@@ -983,10 +983,31 @@ age_of_reason = {
 		}
 	}
 	effect = {
-		education_efficiency = 0.4
+		shared_prestige = 20
 	}
 }
-
+state_funded_universities = {
+	limit = { biologism = 1 }
+	news = yes
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 2
+			analytic_philosophy = 1
+		}		
+		modifier = {
+			factor = 1
+			invention = philosophy_of_language
+		}
+	}
+	effect = {
+		education_efficiency = 0.2
+	}
+}
 #social_science - Science of Man
 sociology = {
 	limit = { social_science = 1 }
@@ -1019,6 +1040,28 @@ social_psychology = {
 		}
 	}
 	core_pop_consciousness_modifier = 0.01
+}
+clergy_educatation_exclusion = {
+	limit = { social_science = 1 }
+	news = yes
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 2
+			analytic_philosophy = 1
+		}		
+		modifier = {
+			factor = 1
+			invention = philosophy_of_language
+		}
+	}
+	effect = {
+		education_efficiency = 0.2
+	}
 }
 political_science = {
 	limit = { social_science = 1 }
@@ -1610,49 +1653,71 @@ expansionism = {
 		plurality = -0.05
 	}
 }
-mission_to_civilize = {
-	limit = { 
-		year = 1860 
-		state_n_government = 1
+
+the_dark_continent = {
+	limit = {
+		revolution_n_counterrevolution = 1
 		
 	}
 	news = no
 	chance = {
-		base = 0
+		base = 1
 		modifier = {
-			factor = -75
-			NOT = { year = 1860 }
+			factor = 2
+			is_greater_power = yes
 		}
 		modifier = {
-			factor = 25
-			nationalism_n_imperialism = 1
-		}
-		modifier = {
-			factor = 25
-			market_regulations = 1
-		}
-		modifier = {
-			factor = 25
-			naval_statistics = 1
-		}
-		modifier = {
-			factor = 10
-			any_greater_power = {
-				invention = mission_to_civilize
-			}
-		}
-		modifier = {
-			factor = 10
-			any_neighbor_country = {
-				invention = mission_to_civilize
-			}
+			factor = 2
+			is_secondary_power = yes
 		}
 	}
 	effect = {
-		colonial_prestige = 0.1
-		diplomatic_points = 0.2
+		life_rating = -5
 	}
 }
+#mission_to_civilize = {
+#	limit = { 
+#		year = 1860 
+#		state_n_government = 1
+#		
+#	}
+#	news = no
+#	chance = {
+#		base = 0
+#		modifier = {
+#			factor = -75
+#			NOT = { year = 1860 }
+#		}
+#		modifier = {
+#			factor = 25
+#			nationalism_n_imperialism = 1
+#		}
+#		modifier = {
+#			factor = 25
+#			market_regulations = 1
+#		}
+#		modifier = {
+#			factor = 25
+#			naval_statistics = 1
+#		}
+#		modifier = {
+#			factor = 10
+#			any_greater_power = {
+#				invention = mission_to_civilize
+#			}
+#		}
+#		modifier = {
+#			factor = 10
+#			any_neighbor_country = {
+#				invention = mission_to_civilize
+#			}
+#		}
+#	}
+#	effect = {
+#		colonial_prestige = 0.1
+#		diplomatic_points = 0.2
+#	}
+#}
 separatism = {
 	limit = {
 		nationalism_n_imperialism = 1
@@ -2060,7 +2125,24 @@ abolitionism = {
 		set_country_flag = abolitionism_activated
 	}
 }
-
+colonial_fortresses = {
+	limit = { political_thought_8 = 1 }
+	news = yes
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+	}
+	effect = {
+		life_rating = -5
+	}
+}
 declaration_of_the_rights_of_man = {
 	limit = { political_thought_8 = 1 }
 	news = yes

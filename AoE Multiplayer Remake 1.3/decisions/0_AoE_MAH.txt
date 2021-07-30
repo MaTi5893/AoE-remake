@@ -138,11 +138,7 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			infiltration = 1
-			OR = {
-				pensions = acceptable_pensions
-				pensions = good_pensions
-			}
+			military_reforms = foreign_weapons_two
 			OR = {
 				relation = {
 					who = GBR
@@ -181,6 +177,8 @@ political_decisions = {
 		}
 		effect = {
 			political_reform = unitary
+			add_accepted_culture = oriya
+			add_accepted_culture = telegu
 			set_country_flag = government_reformed_mah
 		}
 	}

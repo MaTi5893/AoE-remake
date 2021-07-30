@@ -248,7 +248,6 @@ country_event = {
 	
 	option = {
 		name = "Sign it."
-		FROM = { country_event = 174505	}
 		prestige = -2
 		set_country_flag = accepted_sanction
 		ai_chance = {

@@ -45,10 +45,66 @@ political_decisions = {
 					name = streltsi_rebellion
 					duration = 7300
 				}
+				country_event = 170000
+			}
+		}
+	}
+
+	tur_setup = {
+		potential = {
+			tag = TUR
+			NOT = {
+				has_country_modifier = janisseries_influence
+			}
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = janisseries_influence
+				duration = -1
+			}
+			add_country_modifier = {
+				name = hussein_pasha
+				duration = -1
 			}
 		}
 	}
 	
+	thc_setup = {
+		potential = {
+			tag = ENL
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = THC
+				}
+				any_pop = {
+				reduce_pop = 0.6
+				}
+			}
+		}
+	}
+	
+	mah_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			country_event = 165700
+		}
+	}
+
 	bor_louis_setup = {
 		potential = {
 			always = no

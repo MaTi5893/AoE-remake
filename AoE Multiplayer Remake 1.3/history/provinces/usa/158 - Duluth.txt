@@ -1,9 +1,14 @@
 owner = BOR
 controller = BOR
 add_core = FCA
+colonial = 2
 trade_goods = iron
 life_rating = 35
-colony = 2
 1861.1.1 = {
 	colony = 0
 	}
+1700.01.02 = {
+owner = FCA
+controller = FCA
+colonial = 0
+}

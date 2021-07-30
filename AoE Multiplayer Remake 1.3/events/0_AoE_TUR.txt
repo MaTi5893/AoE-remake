@@ -29,7 +29,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "Recompensate their losses"
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Recompensate their losses partially"
 		treasury = -1500
 		middle_strata = {
 			militancy = 1.5
@@ -68,9 +74,15 @@ country_event = {
 	mean_time_to_happen = {
 		months = 2
 	}
-	
+
 	option = {
-		name = "Pay them off"
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Pay them off partially"
 		treasury = -1000
 		middle_strata = {
 			militancy = 1.5
@@ -112,7 +124,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "Pay them off"
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Pay them off partially"
 		treasury = -10000
 	}
 	
@@ -640,5 +658,26 @@ country_event = {
 	
 	option = {
 		name = "Now i cannot claim to be ignorant"
+	}
+}
+country_event = {
+	id = 173621
+	title = "EVTNAME173621"
+	desc = "EVTDESC173621"
+	picture = grand_vizier
+	fire_only_once = yes
+	trigger = {
+		tag = TUR
+		exists = yes
+		year = 1702
+	}
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "May Allah be kind to his soul"
+		remove_country_modifier = hussein_pasha
+		prestige = -5
 	}
 }

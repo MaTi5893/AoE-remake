@@ -6922,7 +6922,26 @@ suffering_from_continental_blockade = {
 }
 
 hussein_pasha = {
-	pop_militancy_modifier = -0.06
-	admin_efficiency = 0.05
+	global_pop_militancy_modifier = -0.06
+	administrative_efficiency_modifier = 0.05
+	research_points = 2
 	icon = 13
+}
+
+new_schools_of_thought = {
+	core_pop_militancy_modifier = 0.06
+	core_pop_consciousness_modifier = 0.1
+	icon = 8
+}
+
+tarabai = {
+	administrative_efficiency_modifier = 0.05
+	core_pop_militancy_modifier = -0.03
+	research_points_on_conquer = 0.1
+	tax_efficiency = 0.1
+	icon = 13
+}
+missisiippi_trade_company = {
+	tax_efficiency = 0.075
+	tariff_efficiency_modifier = 0.075
 }
