@@ -113,6 +113,7 @@ political_decisions = {
 			is_ideology_enabled = socialist
 		}
 		allow = {
+			part_of_sphere = no
 			OR = {
 				AND = {
 					upper_house = {
@@ -128,16 +129,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			badboy = -4
-			years_of_research = 0.1
-			upper_strata = {
-				militancy = -2
-				consciousness = 1
-			}
-			middle_strata = {
-				militancy = -2
-				consciousness = 1
-			}
+			country_event = 15730064
 			set_country_flag = great_sejm
 		}
 	}

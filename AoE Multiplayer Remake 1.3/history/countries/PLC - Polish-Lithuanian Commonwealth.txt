@@ -23,7 +23,7 @@ political_parties = harassment
 
 # Social Reforms
 wage_reform = no_minimum_wage #very influential church
-work_hours = twelve_hours #slightly influential gentry
+work_hours = no_work_hour_limit #slightly influential gentry
 safety_regulations = no_safety #very influential nobility
 unemployment_subsidies = no_subsidies #irrelevant burghers
 pensions = no_pensions #irrelevant army
@@ -67,6 +67,11 @@ oob = "PLC_oob.txt"
 
 consciousness = 3
 nonstate_consciousness = 1
+
+govt_flag = {
+	government = proletarian_dictatorship
+	flag = theocracy
+}
 
 #tech
 post_napoleonic_thought = 1

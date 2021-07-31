@@ -604,6 +604,14 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
+		modifier = {
 			factor = 0.9
 			political_reform_want = 0.02
 		}
@@ -749,6 +757,14 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
 		months = 20
 		modifier = {
 			factor = 1.2
@@ -971,6 +987,14 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 20
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
 		modifier = {
 			factor = 1.2
 			has_country_modifier = anti_jacobin_tract
@@ -1234,6 +1258,14 @@ country_event = {
 			has_country_modifier = anti_jacobin_tract
 		}
 		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
+		modifier = {
 			factor = 0.9
 			political_reform_want = 0.05
 		}
@@ -1488,6 +1520,14 @@ country_event = {
 		modifier = {
 			factor = 1.2
 			has_country_modifier = anti_jacobin_tract
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
 		}
 		modifier = {
 			factor = 0.8
@@ -1790,6 +1830,14 @@ country_event = {
 			average_consciousness = 4
 		}
 		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
+		modifier = {
 			factor = 1.5
 			NOT = { liberal = 5 }
 		}
@@ -1986,6 +2034,14 @@ province_event = {
 			any_neighbor_province = {
 				controlled_by = REB
 			}
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
 		}
 		modifier = {
 			factor = 0.5
@@ -2377,6 +2433,14 @@ province_event = {
 			reactionary = 5
 		}
 		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
+		}
+		modifier = {
 			factor = 1.5
 			conservative = 30
 		}
@@ -2560,6 +2624,14 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			has_country_modifier = springtime_of_nations
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
 		}
 		modifier = {
 			factor = 0.8
@@ -2748,6 +2820,14 @@ province_event = {
 			any_neighbor_province = {
 				controlled_by = REB
 			}
+		}
+		modifier = {
+			factor = 2
+			has_country_flag = traditionalist_path
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = absolutist_path
 		}
 		modifier = {
 			factor = 0.8

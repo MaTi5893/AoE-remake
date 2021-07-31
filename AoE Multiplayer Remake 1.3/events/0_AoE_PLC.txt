@@ -1345,3 +1345,175 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 15730063
+	title = "The Black Procession"
+	desc = "EVTDESC15730063"
+	picture = sejm
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+
+	trigger = {
+		primary_culture = polish
+		exists = yes
+		has_country_flag = great_sejm
+		#year = 1765
+	}
+	
+	option = {
+		name = "We will consider their propositions."
+		any_pop = {
+			militancy = -3
+		}
+		social_reform = eight_hours
+		social_reform = good_subsidies
+		prestige = 15
+	}
+	
+	option = {
+		name = "REVOLUTIONAIRES!"
+		any_pop = {
+			militancy = 3
+		}
+		prestige = -15
+		set_country_flag = refused_black_procession
+	}
+}
+country_event = {
+	id = 15730064
+	title = "The Great Sejm"
+	desc = "EVTDESC15730064"
+	picture = sejm
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will reform and strengthen the position of the king."
+		badboy = -4
+		years_of_research = 0.1
+		upper_strata = {
+			militancy = -2
+			consciousness = 1
+		}
+		middle_strata = {
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				OR = {
+				pop_majority_ideology = liberal
+				pop_majority_ideology = reactionary
+				pop_majority_ideology = socialist
+				}
+			}
+			militancy = -2
+			consciousness = -1
+		}
+	}
+	
+	option = {
+		name = "The king is a fool, consider that in the reforms!"
+		badboy = -4
+		years_of_research = 0.1
+		upper_strata = {
+			militancy = -2
+			consciousness = 1
+		}
+		middle_strata = {
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = conservative
+			}
+			militancy = -2
+			consciousness = -1
+		}
+		government = democracy
+		prestige = -15
+	}
+}
+country_event = {
+	id = 15730065
+	title = "Royale Castle's Coup!"
+	desc = "EVTDESC15730065"
+	major = yes
+	news = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+
+	trigger = {
+		primary_culture = polish
+		exists = yes
+		has_country_flag = refused_black_procession
+		is_ideology_enabled = communist
+		#year = 1765
+	}
+	
+	option = {
+		name = "Jeszcze Polska nie zginela!"
+				random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
+}
