@@ -5288,7 +5288,7 @@ folwark_serf_economy = {
 	factory_cost = 3
 	tariff_efficiency_modifier = 0.05
 	tax_efficiency = -0.05
-	icon = 18
+	icon = 12
 }
 noble_democracy = {
 	global_pop_consciousness_modifier = -0.003
@@ -6807,7 +6807,7 @@ thema_system = {
 janisseries_influence = {
 	min_military_spending = 0.1
 	army_tech_research_bonus = -0.15
-	supply_consumption = 0.1
+	#supply_consumption = 0.1
 	land_organisation = 0.05
 	influence_modifier = -0.4
 	icon = 16
@@ -6872,10 +6872,10 @@ bad_badboy = {
 	icon = 8
 }
 estates_help_plead_cooldown = {
-	icon = 15
+	icon = 8
 }
 change_faction_influence_cooldown = {
-	icon = 15
+	icon = 8
 }
 streltsi_rebellion = {
 	army_tech_research_bonus = -0.05
@@ -6913,6 +6913,7 @@ army_with_a_state3 = {
 healthy_merchant_guilds = {
 	local_artisan_throughput = 0.25
 	local_artisan_output = 0.25
+	icon = 11
 }
 
 suffering_from_continental_blockade = {
@@ -6944,4 +6945,11 @@ tarabai = {
 missisiippi_trade_company = {
 	tax_efficiency = 0.075
 	tariff_efficiency_modifier = 0.075
+	icon = 13
+}
+magnate_oligarchy = {
+	rich_vote = 2
+	political_reform_desire = 0.1
+	icon = 18
+	
 }

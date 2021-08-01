@@ -274,38 +274,38 @@ political_decisions = {
 			set_country_flag = created_the_continental_army
 			define_general = {
 				name = "Benedict Arnold"
-				personality = steadfast
-				background = generals_aide
+				personality = defence_2.2
+				background = attack_2.1
 			}
 			define_general = {
 				name = "Thaddeus Kosciuszko"
-				personality = gutsy
-				background = school_of_defense
+				personality = defence_4.1
+				background = attack_3.1
 			}
 			define_general = {
 				name = "Anthony Wayne"
-				personality = competent
-				background = war_college
+				personality = defence_3.1
+				background = attack_3.1
 			}
 			define_general = {
 				name = "Horatio Gates"
-				personality = careless
-				background = adventurer
+				personality = defence_2.1
+				background = attack_3.1
 			}
 			define_general = {
 				name = "Nathaneal Greene"
-				personality = aggressive
-				background = generals_aide
+				personality = defence_minus_1.1
+				background = attack_4.1
 			}
 			define_general = {
 				name = "Benjamin Lincoln"
-				personality = skilled
-				background = cartographer
+				personality = defence_2.1
+				background = attack_minus_2.1
 			}
 			define_general = {
 				name = "Charles Lee"
-				personality = coward
-				background = amateur
+				personality = defence_minus_1.1
+				background = attack_0.1
 			}
 			capital_scope = {
 				sub_unit = { type = infantry value = current }

@@ -29,8 +29,8 @@ country_event = {
 		define_general = {
 			name = "Napoleon Bonaparte"
 			picture = fra_gen_napoleon
-			personality = implacable
-			background = genius
+			personality = defence_5.1
+			background = attack_5.1
 		}
 		ai_chance = {
 			factor = 1
@@ -67,8 +67,8 @@ country_event = {
 				}
 				define_general = {
 					name = "Napoleon Bonaparte"
-					personality = implacable
-					background = cursed_luck
+					personality = defence_5.1
+					background = attack_5.1
 				}
 			}
 		}
@@ -94,8 +94,8 @@ country_event = {
 				}
 				define_general = {
 					name = "Napoleon Bonaparte"
-					personality = implacable
-					background = cursed_luck
+					personality = defence_5.1
+					background = attack_5.1
 				}
 			}
 		}
@@ -204,7 +204,7 @@ country_event = {
 				}
 				define_general = {
 					name = "Napoleon Bonaparte"
-					personality = implacable
+					personality = defence_5.1
 					background = genius
 				}
 			}
@@ -240,7 +240,7 @@ country_event = {
 				}
 				define_general = {
 					name = "Napoleon Bonaparte"
-					personality = implacable
+					personality = defence_5.1
 					background = genius
 				}
 			}

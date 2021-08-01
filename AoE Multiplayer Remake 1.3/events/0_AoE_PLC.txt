@@ -182,10 +182,16 @@ country_event = {
 
 	trigger = {
 		government = elective_monarchy_oligarchy
-		average_militancy = 8
 		war = yes
-		war_exhaustion = 15
-		has_country_modifier = szlachta_war_taxes
+		SAX = {
+			vassal_of = THIS
+		}
+		706 = {
+			country_units_in_province = SAX
+		}
+		703 = {
+			country_units_in_province = SAX
+		}
 		part_of_sphere = yes
 		NOT = { has_country_modifier = noble_democracy }
 		NOT = { has_global_flag = plc_civil_war }
@@ -821,31 +827,31 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-country_event = {
-	id = 15730043
-	title = "Polish Folwark System"
-	desc = "EVTDESC15730043"
-	picture = peasants
-	fire_only_once = yes
-	
-	trigger = {
-		tag = PLC
-		year = 1700
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "It isn't that bad...."
-		add_country_modifier = {
-			name = folwark_serf_economy
-			duration = -1
-		}
-		set_country_flag = serfdom_not_abolished
-	}
-}
+#country_event = {
+#	id = 15730043
+#	title = "Polish Folwark System"
+#	desc = "EVTDESC15730043"
+#	picture = peasants
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = PLC
+#		year = 1700
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#	
+#	option = {
+#		name = "It isn't that bad...."
+#		add_country_modifier = {
+#			name = folwark_serf_economy
+#			duration = -1
+#		}
+#		set_country_flag = serfdom_not_abolished
+#	}
+#}
 country_event = {
 	id = 15730045
 	title = "Noble Corruption"

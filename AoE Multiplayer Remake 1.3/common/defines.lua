@@ -148,8 +148,8 @@ military = {
 	COMBATLOSS_WAR_EXHAUSTION = 3, -- base war exhastion in combat
 	LEADER_MAX_RANDOM_PRESTIGE = 0.05, -- max percent of prestige, when randomizing stats for leaders.
 	LEADER_AGE_DEATH_FACTOR = 4, -- higher value means leaders live longer
-	LEADER_PRESTIGE_TO_MORALE_FACTOR = 1.6, -- f.ex. 100% of prestige = +20% morale
-	LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 1.7, -- f.ex. 100% of prestige = +20 max org
+	LEADER_PRESTIGE_TO_MORALE_FACTOR = 1, -- f.ex. 100% of prestige = +20% morale
+	LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 1.2, -- f.ex. 100% of prestige = +20 max org
 	LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.05, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
 	LEADER_PRESTIGE_LAND_GAIN =0.4, -- extra speed gain on prestige for land combat
 	LEADER_PRESTIGE_NAVAL_GAIN =0.4, -- extra speed gain on prestige for naval combat

@@ -117,6 +117,24 @@ political_decisions = {
 		}
 	}
 	
+	plc_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = folwark_serf_economy
+				duration = -1
+			}
+			add_country_modifier = {
+				name = magnate_oligarchy
+				duration = -1
+			}
+		}
+	}
 	free_monies = {
 		potential = {
 			ai = no

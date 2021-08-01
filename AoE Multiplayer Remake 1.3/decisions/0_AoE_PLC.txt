@@ -130,6 +130,7 @@ political_decisions = {
 		}
 		effect = {
 			country_event = 15730064
+			remove_country_modifier = magnate_oligarchy
 			set_country_flag = great_sejm
 		}
 	}
@@ -342,10 +343,20 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			compound_steam_engines = 1
-			semi_automatization = 1
-			hot_blast = 1
-			early_railroad = 1
+			OR = {
+				AND = {
+					compound_steam_engines = 1
+					semi_automatization = 1
+					hot_blast = 1
+					early_railroad = 1
+				}
+				AND = {
+					owns = 354
+					owns = 695
+					owns = 690
+					owns = 968
+				}
+			}
 		}
 		effect = {
 			remove_country_modifier = folwark_serf_economy

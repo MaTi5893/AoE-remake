@@ -8,30 +8,14 @@ political_decisions = {
 		war = no
 		}
 		allow = {
-			OR = {
-				AND = {
-					war = no
-					overlord = {
-						NOT = { 
-							relation = {
-								who = THIS
-								value = 0
-							}
-							truce_with = THIS
-						}
+			war = no
+			overlord = {
+				NOT = { 
+					relation = {
+						who = THIS
+						value = -50
 					}
-				}
-				AND = {
-					year = 1790
-					ai = yes
-					overlord = {
-						capital_scope = {
-							OR = {
-								controlled_by_rebels = yes
-								controlled_by = FRA
-							}
-						}
-					}
+					truce_with = THIS
 				}
 			}
 		}

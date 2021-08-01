@@ -549,12 +549,12 @@ clipper_shipyard = {
 	template = factory_template
 	input_goods = {         
 		fabric = 70		#162
-		timber = 90		#81
+		timber = 85		#81
 		steel = 20		#94		total input+maint = 346.825
 	}
 	output_goods = clipper_convoy 
 	is_coastal = yes
-	value = 10			#370
+	value = 15			#370
 	bonus = {
 		trigger = { has_building = fabric_factory }
 		value = 0.1
@@ -767,7 +767,7 @@ lumber_mill = {
 	}
 	output_goods = lumber 
 	
-	value = 110			#110
+	value = 75			#110
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -1287,13 +1287,13 @@ artisan_artillery = {
 
 artisan_clipper = {       
 	input_goods = {         
-		fabric = 30		#54
-		timber = 60		#54
+		fabric = 25		#54
+		timber = 54		#54
 		steel = 10		#47		total input+maint = 155
 	}
 	output_goods = clipper_convoy 
 	is_coastal = yes
-	value = 5			#175
+	value = 10			#175
 	
 	owner = {
 		poptype = artisan 
@@ -1404,7 +1404,7 @@ artisan_ammunition = {
 		iron = 3.7		#12.95	total input+maint = 24.95
 	}
 	output_goods = ammunition 
-	value = 4			#30
+	value = 6			#30
 	
 	owner = {
 		poptype = artisan 
@@ -1481,7 +1481,7 @@ artisan_lumber = {
 	}
 	output_goods = lumber 
 	
-	value = 110			#110
+	value = 130			#110
 	
 	owner = {
 		poptype = artisan 

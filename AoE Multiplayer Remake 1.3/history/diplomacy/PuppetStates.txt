@@ -79,7 +79,7 @@ vassal = {  #substate
 }
 
 #Russia - Hetmanate
-vassal = {  #substate
+substate = {  #substate
 	first = RUS
 	second = HET
 	start_date = 1700.1.1
@@ -87,7 +87,7 @@ vassal = {  #substate
 }
 
 #Russia - Zaporozhie
-vassal = {  #substate
+substate = {  #substate
 	first = RUS
 	second = ZZH
 	start_date = 1700.1.1
