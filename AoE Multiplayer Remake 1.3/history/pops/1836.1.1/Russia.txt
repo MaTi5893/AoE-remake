@@ -940,6 +940,109 @@
         size = 100
     }
 }
+3257 = {
+    aristocrats = {
+        culture = ukrainian
+        religion = orthodox
+        size = 125
+    }
+
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 75
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 500
+    }
+
+    soldiers = {
+        culture = cossack
+        religion = orthodox
+        size = 3150
+    }
+
+    farmers = {
+        culture = cossack
+        religion = orthodox
+        size = 3000
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 2370
+    }
+
+    aristocrats = {
+        culture = russian
+        religion = orthodox
+        size = 150
+    }
+
+    clergymen = {
+        culture = russian
+        religion = orthodox
+        size = 75
+    }
+
+    artisans = {
+        culture = russian
+        religion = orthodox
+        size = 400
+    }
+
+    artisans = {
+        culture = cossack
+        religion = orthodox
+        size = 1200
+    }
+
+    soldiers = {
+        culture = russian
+        religion = orthodox
+        size = 100
+    }
+
+    farmers = {
+        culture = tatar
+        religion = sunni
+        size = 3100
+    }
+
+    aristocrats = {
+        culture = oirat
+        religion = gelugpa
+        size = 100
+    }
+
+    clergymen = {
+        culture = oirat
+        religion = gelugpa
+        size = 50
+    }
+
+    artisans = {
+        culture = oirat
+        religion = gelugpa
+        size = 250
+    }
+
+    soldiers = {
+        culture = oirat
+        religion = gelugpa
+        size = 50
+    }
+
+    farmers = {
+        culture = oirat
+        religion = gelugpa
+        size = 1550
+    }
+}
 #Archangelsk Region (219300)
 #under the rule of Russia in 1836
 #Archangel (138000/34500 POPS)
@@ -5108,6 +5211,73 @@
         culture = circassian
         religion = sunni
         size = 18175
+    }
+}
+3255 = {
+    aristocrats = {
+        culture = ukrainian
+        religion = orthodox
+        size = 200
+    }
+
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 150
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 400
+    }
+
+    soldiers = {
+        culture = cossack
+        religion = orthodox
+        size = 300
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 625
+    }
+
+    soldiers = {
+        culture = tatar
+        religion = sunni
+        size = 3570
+    }
+
+    farmers = {
+        culture = tatar
+        religion = sunni
+        size = 16210
+    }
+
+    clergymen = {
+        culture = pontic
+        religion = orthodox
+        size = 25
+    }
+
+    artisans = {
+        culture = pontic
+        religion = orthodox
+        size = 350
+    }
+
+    soldiers = {
+        culture = pontic
+        religion = orthodox
+        size = 25
+    }
+
+    farmers = {
+        culture = pontic
+        religion = orthodox
+        size = 600
     }
 }
 #Dagestan Region (324000)
