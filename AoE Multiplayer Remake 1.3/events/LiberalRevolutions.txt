@@ -302,7 +302,7 @@ country_event = {
 	id = 10051
 	
 	trigger = {
-		has_global_flag = discovered_enlightenment
+		has_country_flag = discovered_enlightenment_ctr
 		OR = {
 		is_ideology_enabled = socialist
 		NOT = { has_country_modifier = new_schools_of_thought }
@@ -401,9 +401,9 @@ country_event = {
 	id = 10050
 	
 	trigger = {
-		has_country_flag = liberal_revolution_fired
+		has_country_flag = discovered_enlightenment_ctr
 		NOT = { has_country_flag = had_liberal_revolution }
-		NOT = { has_country_modifier = springtime_of_nations }
+		NOT = { has_country_modifier = new_schools_of_thought }
 		NOT = { num_of_revolts = 1 }
 	}
 

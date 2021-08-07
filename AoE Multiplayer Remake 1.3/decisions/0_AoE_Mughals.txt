@@ -51,38 +51,6 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			1251 = {
-				owner = {
-					limit = {
-						NOT = { tag = THIS }
-					}
-					annex_to = THIS
-				}
-			}
-			1236 = {
-				owner = {
-					limit = {
-						NOT = { tag = THIS }
-					}
-					annex_to = THIS
-				}
-			}
-			1297 = {
-				owner = {
-					limit = {
-						NOT = { tag = THIS }
-					}
-					annex_to = THIS
-				}
-			}
-			1283 = {
-				owner = {
-					limit = {
-						NOT = { tag = THIS }
-					}
-					annex_to = THIS
-				}
-			}
 			prestige = 50
 		}
 		ai_will_do = { factor = 1 }

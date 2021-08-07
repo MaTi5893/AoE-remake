@@ -6948,8 +6948,23 @@ missisiippi_trade_company = {
 	icon = 13
 }
 magnate_oligarchy = {
-	rich_vote = 2
+	rich_vote = 0.5
 	political_reform_desire = 0.1
-	icon = 18
-	
+	icon = 18	
+}
+horde_society = {
+	mobilisation_size = 0.2
+	mobilisation_economy_impact = -0.5
+	cb_generation_speed_modifier = 0.2
+	supply_consumption = -0.15
+	tax_efficiency = 0.25
+	army_tech_research_bonus = -0.9
+	navy_tech_research_bonus = -0.9
+	commerce_tech_research_bonus = -0.9
+	culture_tech_research_bonus = -0.9
+	industry_tech_research_bonus = -0.9
+	icon = 7
+}
+immunity_from_influenza = {
+	icon = 7
 }

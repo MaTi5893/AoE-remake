@@ -1,6 +1,7 @@
 capital = 1600  
 primary_culture = oirat
 culture = mongol
+culture = tatar
 religion = gelugpa
 civilized = no
 government = khanate
@@ -59,6 +60,7 @@ military_constructions = yes_military_constructions
 admin_reform = yes_admin_reform
 education_reform = yes_education_reform
 industrial_construction = yes_western_science
+decision = horde_setup
 
 # Technologies
 post_napoleonic_thought = 1
@@ -80,6 +82,8 @@ basic_chemistry = 1
 # Inventions
 test_irregular = yes
 dragoon_activation = yes
+cuirassier_activation = yes
+cav_upgrade_i = yes
 
 # Starting Consciousness
 consciousness = 2

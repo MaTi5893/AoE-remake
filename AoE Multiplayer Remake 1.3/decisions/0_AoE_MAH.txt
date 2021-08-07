@@ -16,7 +16,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 30
-			badboy = 15
+			badboy = 7.5
 			set_country_flag = absolute_mughal_conquest
 			NAG_1277 = {
 				add_core = THIS
@@ -119,7 +119,6 @@ political_decisions = {
 		
 		effect = {
 			prestige = 30
-			badboy = 15
 			set_country_flag = claimed_maratha_empire
 			add_country_modifier = {
 				name = indian_raj
@@ -151,8 +150,9 @@ political_decisions = {
 			money = 50000
 		}
 		effect = {
+			set_country_flag = modernize_our_weaponary
 			money = -50000
-			years_of_research = 0.08
+			years_of_research = 0.15
 		}
 	}
 	
