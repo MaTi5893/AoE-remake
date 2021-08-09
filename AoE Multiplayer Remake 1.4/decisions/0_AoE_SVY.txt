@@ -106,7 +106,7 @@ political_decisions = {
 			tag = SVY
 			tag = SAR
 			}
-			NOT = { has_country_flag = kingdom_title+troll }
+			NOT = { has_country_flag = kingdom_title_troll }
 		}
 
 		allow = {
