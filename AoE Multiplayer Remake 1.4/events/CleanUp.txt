@@ -372,13 +372,14 @@ country_event = {
 		government = oligarchic_republic
 		civilized = yes
 		NOT = { vote_franschise = none_voting }
-		NOT = { vote_franschise = landed }
+		NOT = { vote_franschise = landed_voting }
 		NOT = { vote_franschise = wealth_weighted_voting }
 		NOT = { vote_franschise = wealth_voting }
 		NOT = { political_parties = underground_parties }
 		NOT = { upper_house_composition = party_appointed }
 		NOT = { has_country_modifier = not_dictatorship }
 		NOT = { has_country_modifier = revolutionary_spirit }
+		NOT = { has_country_modifier = mercantile_society }
 	}
 	
 	mean_time_to_happen = {
@@ -558,6 +559,7 @@ country_event = {
 		      government = democracy
 			  government = federal_democracy
 			  government = tribal_democracy
+			  government = oligarchic_republic
 		}
 		vote_franschise = none_voting		
 		OR = {
@@ -605,7 +607,10 @@ country_event = {
 	picture = "communist_crowd"
 	
 	trigger = {
+		OR = { 
 		government = democracy
+		government = oligarchic_republic
+		}
 		vote_franschise = none_voting
 		ruling_party_ideology = anarcho_liberal
 		civilized = yes

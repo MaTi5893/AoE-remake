@@ -427,6 +427,7 @@ political_decisions = {
 				}
 				THIS = {
 					add_accepted_culture = french
+					inherit = BOR
 				}
 			}
 			random_country = {
@@ -439,6 +440,7 @@ political_decisions = {
 				}
 				THIS = {
 					add_accepted_culture = spanish
+					inherit = SPC
 				}
 			}
 			change_tag = FSU
@@ -575,7 +577,10 @@ political_decisions = {
 		picture = dreams_of_empire
 		potential = {
 			primary_culture = french
+			OR = {
 			government = proletarian_dictatorship
+			government = fascist_dictatorship
+			}
 			OR = {
 				war_with = GBJ
 				war_with = ENG
@@ -644,6 +649,13 @@ political_decisions = {
 					war_with = GBJ
 					war_with = ENG
 					war_with = GBR
+				}
+				NOT = {
+					OR = {
+						truce_with = GBJ
+						truce_with = ENG
+						truce_with = GBR
+					}
 				}
 				AND = {
 					OR = {
