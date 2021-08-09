@@ -1,0 +1,86 @@
+capital = 729
+civilized = yes   primary_culture = north_italian
+#culture = friulian
+#culture = ladin
+religion = catholic
+government = oligarchic_republic
+plurality = 0.1
+nationalvalue = nv_productivity
+literacy = 0.4
+civilized = yes
+prestige = 21
+
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = landed_voting
+public_meetings = yes_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
+political_parties = non_secret_ballots
+
+# Social Reforms
+wage_reform = low_minimum_wage #silghtly influential church
+work_hours = twelve_hours #slightly influential gentry
+safety_regulations = good_safety #irrelevant nobility
+unemployment_subsidies = good_subsidies #very influential burghers
+pensions = low_pensions #slightly influential army
+health_care = no_health_care #irrelevant bureaucracy
+
+school_reforms = no_schools
+
+
+
+#New Reforms
+conscription = two_year_draft
+debt_law = serfdom
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+border_policy = open_borders
+centralization = unitary
+colonial_policy = no_colonies 
+
+set_country_flag = catholic_country
+
+ruling_party = "Collegio"
+upper_house = {
+	fascist = 0
+	liberal = 30
+	conservative = 60
+	reactionary = 10
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+decision = merchant_republic_setup
+#tech
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+military_staff_system = 1
+army_command_principle = 1
+post_nelsonian_thought = 1
+clipper_design = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+malthusian_thought = 1
+enlightenment_thought = 1
+introspectionism = 1
+private_banks = 1
+no_standard = 1
+early_classical_theory_and_critique = 1
+freedom_of_trade = 1
+guild_based_production = 1
+piston_steam_engine = 1
+mechanical_production = 1
+mechanized_mining = 1
+basic_chemistry = 1
+
+
+oob = "VEN_oob.txt"

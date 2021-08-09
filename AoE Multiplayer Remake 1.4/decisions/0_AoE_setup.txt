@@ -1,0 +1,181 @@
+political_decisions = {
+	scandi_pop_buff = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			SWE = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = finnish
+							has_pop_culture = swedish
+						}
+					}
+					reduce_pop = 1.7
+				}
+			}
+			DNN = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = danish
+							has_pop_culture = norwegian
+						}
+					}
+					reduce_pop = 2.6
+				}
+			}
+		}
+	}
+	
+	rus_nerf_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			RUS = {
+				add_country_modifier = {
+					name = streltsi_rebellion
+					duration = 7300
+				}
+				country_event = 170000
+			}
+		}
+	}
+
+	tur_setup = {
+		potential = {
+			tag = TUR
+			NOT = {
+				has_country_modifier = janisseries_influence
+			}
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = janisseries_influence
+				duration = -1
+			}
+			add_country_modifier = {
+				name = hussein_pasha
+				duration = -1
+			}
+		}
+	}
+	
+	thc_setup = {
+		potential = {
+			tag = ENL
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = THC
+				}
+				any_pop = {
+				reduce_pop = 0.6
+				}
+			}
+		}
+	}
+	
+	mah_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			country_event = 165700
+		}
+	}
+
+	bor_louis_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			country_event = 171107
+		}
+	}
+	
+	plc_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = folwark_serf_economy
+				duration = -1
+			}
+			add_country_modifier = {
+				name = magnate_oligarchy
+				duration = -1
+			}
+		}
+	}
+	free_monies = {
+		potential = {
+			ai = no
+			NOT = { has_country_flag = free_monies }
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			treasury = 250000
+			set_country_flag = free_monies
+		}
+	}
+	
+	horde_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = horde_society
+				duration = -1
+			}
+		}
+	}
+	
+	merchant_republic_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercantile_society
+				duration = -1
+			}
+		}
+	}
+}

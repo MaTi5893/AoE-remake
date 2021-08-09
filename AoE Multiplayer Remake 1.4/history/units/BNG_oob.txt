@@ -1,0 +1,57 @@
+army = {
+	name = "Bengali Army"
+	location = 1253
+	regiment = {
+		name= "1. Bengali infantry unit"
+		type = infantry
+		home = 1251
+	}
+	regiment = {
+		name= "2. Bengali infantry unit"
+		type = infantry
+		home = 1253
+	}
+	regiment = {
+		name= "3. Bengali infantry unit"
+		type = infantry
+		home = 1256
+	}
+	regiment = {
+		name= "4. Bengali infantry unit"
+		type = infantry
+		home = 1261
+	}
+	regiment = {
+		name= "5. Bengali infantry unit"
+		type = infantry
+		home = 1249
+	}
+	regiment = {
+		name= "1. Bengali artillery unit"
+		type = artillery
+		home = 1250
+	}
+	regiment = {
+		name= "2. Bengali artillery unit"
+		type = artillery
+		home = 1248
+	}
+	regiment = {
+		name= "1. Bengali cuirassier unit"
+		type = cuirassier
+		home = 1255
+	}
+	regiment = {
+		name= "2. Bengali cuirassier unit"
+		type = cuirassier
+		home = 1254
+	}
+}
+leader = {
+	name = "Murshid Quli Nasiri"
+	date = 1700.1.1
+	type = land
+	personality = defence_3.2
+	background = attack_2.2
+	prestige = 0.3
+}
