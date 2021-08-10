@@ -3,7 +3,7 @@ political_decisions = {
 		picture = rus_empire
 		potential = {
 			tag = RUS
-			government = absolute_monarchy
+			NOT = { has_country_flag = declered_russian_empire }
 			exists = yes
 		}
 		allow = {
@@ -15,7 +15,7 @@ political_decisions = {
 			owns = 350
 		}
 		effect = {
-			government = absolute_monarchy
+			set_country_flag = declered_russian_empire
 			add_accepted_culture = ukrainian
 			prestige = 25
 		}

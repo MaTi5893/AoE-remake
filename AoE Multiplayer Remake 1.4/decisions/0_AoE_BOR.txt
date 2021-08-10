@@ -651,11 +651,9 @@ political_decisions = {
 					war_with = GBR
 				}
 				NOT = {
-					OR = {
-						truce_with = GBJ
-						truce_with = ENG
-						truce_with = GBR
-					}
+					truce_with = GBJ
+					truce_with = ENG
+					truce_with = GBR
 				}
 				AND = {
 					OR = {

@@ -291,7 +291,6 @@ country_event = {
 	}
 	option = {
 		name = "We will not accept such stupid document!"
-		FROM = { country_event = 174506	}
 		prestige = 2
 		set_country_flag = refused_sanction
 		ai_chance = {

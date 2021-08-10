@@ -381,12 +381,11 @@ country_event = {
 			NOT = {
 				is_greater_power = yes
 			}
-			ai = yes
+			#ai = yes
 		}
 		RUS = {
 			is_greater_power = yes
 		}
-		year = 1760
 	}
 	
 	mean_time_to_happen = {
@@ -397,14 +396,14 @@ country_event = {
 		name = "Bribe them"
 		diplomatic_influence = {
 			who = PLC
-			value = 100
+			value = 50
 		}
 		treasury = -50000
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = "We don't need that to control them"
+		name = "We don't need that to control the Commonwealth"
 		RUS = {
 			diplomatic_influence = {
 				who = PLC
@@ -414,7 +413,7 @@ country_event = {
 		RUS = {
 			relation = {
 				who = PLC
-				value = -5
+				value = 5
 			}
 		}
 		ai_chance = { factor = 0 }

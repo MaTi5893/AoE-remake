@@ -43,12 +43,12 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
-			state_n_government = 1
-			owns = 682
-			AND = {
-				tag = PRU
-				all_core = { owned_by = THIS }
-			}
+				state_n_government = 1
+				owns = 682
+				AND = {
+					tag = PRU
+					all_core = { owned_by = THIS }
+				}
 			}
 			war_policy = jingoism
 		}
@@ -323,8 +323,7 @@ political_decisions = {
 					state_scope = {
 						NOT = { has_building = steel_factory }
 					}
-				}
-				
+				}			
 				owner = { 
 					capital = 682
 					build_factory_in_capital_state = steel_factory
@@ -355,7 +354,14 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					province_id = 619 #Vienna
-					owned_by = HRE
+					owned_by = AUS
+				}
+				owner = { capital = 619 }
+			}
+			random_owned = {
+				limit = {
+					province_id = 619 #Vienna
+					owned_by = NNN
 				}
 				owner = { capital = 619 }
 			}
