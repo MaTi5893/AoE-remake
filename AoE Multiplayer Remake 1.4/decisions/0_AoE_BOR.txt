@@ -528,7 +528,7 @@ political_decisions = {
 					culture = french
 				}
 				militancy = -6
-				counciousness = -3
+				consciousness = -3
 			}
 			prestige = 15
 			set_country_flag = french_const_made
@@ -744,7 +744,7 @@ political_decisions = {
 				}
 				relation = {
 					who = THIS
-					relation = -150
+					value = -150
 				}
 				casus_belli = {
 					target = THIS
@@ -759,7 +759,7 @@ political_decisions = {
 				}
 				relation = {
 					who = THIS
-					relation = -150
+					value = -150
 				}
 				casus_belli = {
 					target = THIS
@@ -778,7 +778,6 @@ political_decisions = {
 			OR = {
 				war_with = GBR
 				war_with = ENG
-				war_with = GBR
 			}
 			has_global_flag = begun_continental_blockade
 		}
