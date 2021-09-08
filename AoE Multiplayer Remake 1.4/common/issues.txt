@@ -159,7 +159,7 @@ party_issues = {
 			war_exhaustion_effect = 0.5
 			is_jingoism = yes
 			cb_generation_speed_modifier = 0.3
-			#mobilization_impact = 4
+			mobilization_impact = 4
 			org_regain = 0.5
 			reinforce_speed = 0.5
 		}
@@ -167,7 +167,7 @@ party_issues = {
 			max_military_spending = 1.0
 			war_exhaustion_effect = 0.7
 			cb_generation_speed_modifier = 0.2
-			#mobilization_impact = 3
+			mobilization_impact = 3
 			org_regain = 0.25
 			reinforce_speed = 0.25
 		}
@@ -176,7 +176,7 @@ party_issues = {
 			supply_consumption = -0.25
 			war_exhaustion_effect = 1.2
 			cb_generation_speed_modifier = -0.2
-			#mobilization_impact = 2
+			mobilization_impact = 2
 			org_regain = -0.25
 			reinforce_speed = -0.25
 		}
@@ -185,7 +185,7 @@ party_issues = {
 			supply_consumption = -0.5
 			war_exhaustion_effect = 1.5
 			cb_generation_speed_modifier = -0.4
-			#mobilization_impact = 1
+			mobilization_impact = 1
 			org_regain = -0.5
 			reinforce_speed = -0.5
 			core_pop_consciousness_modifier = -0.1
@@ -200,7 +200,7 @@ party_issues = {
 		colonial_spending_policy = { #Colonial Subjects
 			max_social_spending = 0.01
 			cb_generation_speed_modifier = 0.1
-			mobilisation_size = 0.1
+			mobilisation_size = 0.01
 			non_accepted_pop_consciousness_modifier = -0.05
 		}
 		no_position_set = {

@@ -2497,6 +2497,12 @@ abdulmejid_i_reforms = {
 	icon = 17
 }
 
+tulip_period = {
+	research_points = 1
+	education_efficiency_modifier = 0.1
+	core_pop_militancy_modifier = -0.03
+	icon = 15
+}
 ### Total War System ###
 great_war = {
 	war_exhaustion = -3.0
@@ -4306,7 +4312,7 @@ swedish_caroleans = {
 	mobilisation_economy_impact = -0.25
 	land_unit_start_experience = 10
 	supply_consumption = -0.05
-	mobilisation_size = 0.1
+	mobilisation_size = 0.01
 	icon = 15
 }
 riksdaler = {
@@ -4396,7 +4402,7 @@ nakaz = {
 petes_conscription = {
 	mobilisation_economy_impact = -0.15
 	supply_consumption = -0.15
-	mobilisation_size = 0.05
+	mobilisation_size = 0.01
 	min_military_spending = 0.1
 	icon = 15
 }
@@ -5417,9 +5423,8 @@ mercantile_society = {
 	icon = 17
 }
 stadtholderless_period = {
-	education_efficiency_modifier = -0.1
-	army_organisation = 0.05
-	diplomatic_points_modifier = 0.1
+	tariff_efficiency_modifier = -0.05
+	diplomatic_points_modifier = -0.1
 	global_pop_consciousness_modifier = 0.006
 	icon = 6
 }
@@ -6881,6 +6886,7 @@ streltsi_rebellion = {
 	supply_consumption = 0.1
 	land_organisation = -0.05
 	org_regain = -0.1
+	mobilisation_size = -0.03
 	icon = 16
 }
 army_with_a_state = {

@@ -79,7 +79,72 @@ army = {
 	}
 }
 army = {
-	name = "Amsterdam Garnizoen"
+	name = "Utrecht Garnizoen"
+	location = 377
+	
+	regiment = {
+		name = "5e Infanterie Brigade"
+		type = artillery
+		home = 385
+	}
+	
+	regiment = {
+		name = "6e Infanterie Brigade"
+		type = artillery
+		home = 383
+	}
+
+	regiment = {
+		name = "7e Infanterie Brigade"
+		type = artillery
+		home = 386
+	}
+	
+	regiment = {
+		name = "7e Infanterie Brigade"
+		type = artillery
+		home = 384
+	}
+	
+	regiment = {
+		name = "7e Infanterie Brigade"
+		type = artillery
+		home = 380
+	}
+	
+	regiment = {
+		name= "1e Infanterie Brigade"
+		type = infantry
+		home = 383
+	}
+	
+	regiment = {
+		name= "1e Cavalerie Brigade"
+		type = infantry
+		home = 382
+	}
+
+	regiment = {
+		name= "2e Cavalerie Brigade"
+		type = infantry
+		home = 380
+	}
+
+	regiment = {
+		name= "1e Artillerie Brigade"
+		type = infantry
+		home = 379
+	}
+	
+	regiment = {
+		name = "2e Artillerie Brigade"
+		type = hussar
+		home = 386
+	}
+}
+
+army = {
+	name = "Leeuwarden Garnizoen"
 	location = 385
 	
 	regiment = {
@@ -91,17 +156,27 @@ army = {
 	regiment = {
 		name = "6e Infanterie Brigade"
 		type = artillery
-		home = 383
+		home = 382
 	}
 
 	regiment = {
 		name = "7e Infanterie Brigade"
-		type = engineer
+		type = artillery
 		home = 384
 	}
-
+	
+	regiment = {
+		name = "7e Infanterie Brigade"
+		type = artillery
+		home = 380
+	}
+	
+	regiment = {
+		name = "7e Infanterie Brigade"
+		type = artillery
+		home = 385
+	}
 }
-
 army = {
 	name = "K.N.I.L."
 	location = 1413

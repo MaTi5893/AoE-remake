@@ -86,13 +86,29 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			high_sea_battle_fleet = 1
+			money = 50000
+			has_country_modifier = nizam_i_djedid
 		}
 		effect = {
 			set_country_flag = imperial_navy_engieering_school
-			add_country_modifier = {
-				name = imperial_navy_engieering_school
-				duration = -1
+			random_owned = { 
+				limit = { owner = { ai = yes } }
+				owner = {
+					activate_technology = battleship_column_doctrine
+					activate_technology = raider_group_doctrine 
+					activate_technology = steamers
+					activate_technology = iron_steamers
+					political_reform = mandatory_service
+					treasury = -50000
+				}
+			}
+			random_owned = { 
+				limit = { owner = { ai = no } }
+				owner = {
+					activate_technology = battleship_column_doctrine
+					activate_technology = steamers
+					treasury = -75000
+				}
 			}
 		}
 		ai_will_do = {					
@@ -206,6 +222,8 @@ political_decisions = {
 			add_accepted_culture = mashriqi
 			add_accepted_culture = albanian
 			add_accepted_culture = bosniak 
+			add_accepted_culture = bulgarian
+			years_of_research = 0.5
 		}
 		ai_will_do = {					
 			factor = 1
@@ -287,6 +305,31 @@ political_decisions = {
 		}
 	}
 	
+	begin_tulip_period = {
+		picture = tulip_era
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = begun_tulip_period }
+		}
+		allow = {
+			war = no
+			OR = {
+				state_n_government = 1
+				AND = {
+				is_greater_power = yes
+				owns = 840
+				owns = 972
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tulip_period
+				duration = 5475
+			}
+			years_of_research = 0.4
+		}
+	}
 	eastern_tributaries = {
 		picture = map_iraq
 		potential = {

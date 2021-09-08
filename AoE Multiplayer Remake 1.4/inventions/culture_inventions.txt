@@ -1672,7 +1672,7 @@ the_dark_continent = {
 		}
 	}
 	effect = {
-		life_rating = -5
+		colonial_life_rating = -5
 	}
 }
 #mission_to_civilize = {
@@ -2126,7 +2126,7 @@ abolitionism = {
 	}
 }
 colonial_fortresses = {
-	limit = { political_thought_8 = 1 }
+	limit = { political_thought_7 = 1 }
 	news = yes
 	chance = {
 		base = 2
@@ -2140,7 +2140,7 @@ colonial_fortresses = {
 		}
 	}
 	effect = {
-		life_rating = -5
+		colonial_life_rating = -5
 	}
 }
 declaration_of_the_rights_of_man = {

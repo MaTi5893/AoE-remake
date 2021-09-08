@@ -50,7 +50,7 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				AUS = {
-					NOT = { war_exhaustion = 5 }
+					NOT = { war_exhaustion = 35 }
 					war = yes
 				}
 			}

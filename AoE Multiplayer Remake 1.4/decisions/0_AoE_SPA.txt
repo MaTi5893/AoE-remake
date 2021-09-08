@@ -782,13 +782,13 @@ political_decisions = {
 			war = no
 			prestige = 50
 			is_greater_power = yes
-			plurality = 20
+			government = hms_government
 			OR = {
 				ruling_party_ideology = liberal
 				ruling_party_ideology = socialist
 				ruling_party_ideology = communist
 			}
-			political_thought_8 = 1
+			revolution_n_counterrevolution = 1
 		}
 		
 		effect = {
@@ -832,36 +832,19 @@ political_decisions = {
 					political_reform = population_equal_weight
 				}
 			}
-			VNS = {
-				all_core = {
-					add_core = THIS
-					remove_core = VNS
-				}
-			}
-			VNG = {
-				all_core = {
-					add_core = THIS
-					remove_core = VNS
-				}
-			}
 			FLO = {
 				all_core = {
 					add_core = THIS
 					remove_core = VNS
 				}
 			}
-			VOP = {
-				all_core = {
-					add_core = THIS
-					remove_core = VNS
-				}
+			SPA_2209 = {
+				add_core = THIS
 			}
-			VLP = {
-				all_core = {
-					add_core = THIS
-					remove_core = VNS
-				}
-			}
+			add_core = 2216
+			add_core = 2214
+			add_core = 2222
+			add_core = 2217
 			random_country = {
 				limit = {
 					tag = VNS

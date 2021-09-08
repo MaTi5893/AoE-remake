@@ -1,7 +1,8 @@
 capital = 375
 civilized = yes   primary_culture = dutch
 culture = flemish
-#culture = frisian
+culture = british
+culture = scottish
 culture = boer
 religion = protestant
 government = oligarchic_republic
@@ -40,7 +41,7 @@ penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
-centralization = regionalism
+centralization = unitary
 colonial_policy = exploitation
 
 set_country_flag = protestant_country
@@ -58,8 +59,6 @@ upper_house = {
 
 decision = literacy_NET
 decision = merchant_republic_setup
-decision = net_setup
-
 govt_flag = {
 	government = absolute_monarchy
 	flag = democracy

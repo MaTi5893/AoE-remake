@@ -62,6 +62,7 @@ claim_emperorship
 dispute_succession_bor
 dispute_succession_aus
 unify_bourbon_empire
+restore_anglo_dutch_union
 greek_plan_cb
 place_in_the_sun
 place_in_the_sun_for_puppet
@@ -372,7 +373,7 @@ restore_spanish_empire = {
 	war_name = WAR_SPANISH_EMPIRE_NAME
 	
 	on_add = {
-		badboy = 7
+		badboy = 4
 		move_issue_percentage = {
 			from = jingoism
 			to = pro_military
@@ -888,6 +889,51 @@ unify_bourbon_empire = {
 	
 	on_po_accepted = {
 		country_event = 171120
+	}
+}
+restore_anglo_dutch_union = {
+	sprite_index = 26
+	is_triggered_only = yes
+	constructing_cb = no
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 85
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 60
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		primary_culture = british
+		THIS = {
+			tag = NET
+		}
+	}
+
+	po_remove_prestige = yes
+	
+	war_name = UNIFICATION_HUMILIATE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event = 1581052
 	}
 }
 greek_plan_cb = {

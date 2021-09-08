@@ -100,6 +100,7 @@ political_decisions = {
 			OR = {
 			war = no
 			war_with = SWE
+			war_with = SCA
 			}
 			OR = {
 			owns = 1047
@@ -131,21 +132,6 @@ political_decisions = {
 			351 = { add_core = THIS }
 			add_core = 3251
 			badboy = 15
-			random_owned = {
-				limit = {
-					owner = {
-						SWE = { exists = yes war = yes }
-					}
-				}
-				owner = {
-					war = {
-						target = SWE
-						attacker_goal = { casus_belli = acquire_all_cores country = RUS }
-						defender_goal = { casus_belli = cut_down_to_size }
-						call_ally = no
-					}
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -454,7 +440,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = russian_vaccination
-				duration = 3650
+				duration = 365
 			}
 			inherit = HET
 			inherit = ZZH
@@ -463,37 +449,7 @@ political_decisions = {
 			set_country_flag = catharine_the_great_reforms
 		}
 	}
-	
-	enforce_peace_tur = {
-		picture = crimea
-		potential = {
-			tag = RUS
-			NOT = { has_country_flag = enforced_peace_tur }
-			NOT = { year = 1703 }
-		}
-		allow = {
-			war_with = TUR
-			979 = {
-				controlled_by = THIS
-				province_control_days = 365
-			}
-			1047 = {
-				controlled_by = THIS
-				province_control_days = 365
-			}
-			973 = {
-				controlled_by = THIS
-				province_control_days = 200
-			}
-		}
-		effect = {
-			prestige = 15
-			end_war = TUR
-			979 = { secede_province = THIS }
-			1047 = { secede_province = THIS }
-			set_country_flag = enforce_peace_tur
-		}
-	}
+
 	manifesto_on_caucasus = {
 		picture = unite_caucasus
 		potential = {
@@ -565,79 +521,79 @@ political_decisions = {
 			973 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			975 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			976 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			965 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			979 = {
 				add_province_modifier = {
 						name = settle_the_south_border
-						duration = 3500
+						duration = 125
 				}
 			}
 			1047 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			1048 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			974 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			964 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			1046 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			968 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			970 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 			971 = {
 				add_province_modifier = {
 					name = settle_the_south_border
-					duration = 3500
+					duration = 125
 				}
 			}
 		}

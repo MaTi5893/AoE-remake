@@ -3,7 +3,7 @@ political_decisions = {
 		end_the_admirality = {
 			picture = merchant_navy
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				has_country_modifier = admiraliteiten
 				exists = yes
 			}
@@ -27,7 +27,7 @@ political_decisions = {
 		
 		#renew_the_eighty_years_war = {
 		#	potential = {
-		#		tag = NET
+		#		primary_culture = dutch
 		#		OR = {
 		#			neighbour = SPA
 		#			neighbour = SPC
@@ -46,14 +46,11 @@ political_decisions = {
 		#	}
 		#}
 		unite_the_netherlands = {
-			picture = united_netherlands
+			picture = map_netherlands
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				NOT = { has_country_flag = united_the_netherlands }
 				exists = yes
-				BEL_387 = {
-					owned_by = THIS
-				}
 			}
 			allow = {
 				OR = {
@@ -102,7 +99,7 @@ political_decisions = {
 		claim_artois_net = {
 			picture = FRA_rename_artois
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				has_country_flag = unite_the_netherlands
 				NOT = { has_country_flag = claimed_artois }
 				exists = yes
@@ -142,7 +139,7 @@ political_decisions = {
 		dutch_banks = {
 			picture = tresury_reforms
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				NOT = { has_country_flag = dutch_banks }
 				exists = yes
 			}
@@ -164,7 +161,7 @@ political_decisions = {
 		embrace_a_heraditary_monarch_system = {
 			picture = crown
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				NOT = { has_country_flag = embraced_a_heraditary_monarch_system }
 				OR ={
 					government = oligarchic_republic
@@ -202,42 +199,9 @@ political_decisions = {
 			ai_will_do = { factor = 1 }
 		}
 		
-		reform_outdoor_relief = {
-			picture = poor_children
-			potential = {
-				tag = NET
-				NOT = { has_country_flag = reformed_outdoor_relief }
-				exists = yes
-			}
-			allow = {
-				OR = {
-					social_policy = welfare_state
-					social_policy = populist_welfare
-					AND = {
-						government = oligarchic_republic
-						militancy = 4
-						political_reform_want = 0.26
-					}
-				}
-				central_bank_money_bill_printing = 1
-			}
-			effect = {
-				set_country_flag = reformed_outdoor_relief
-				add_country_modifier = {
-					name = outdoor_relief
-					duration = -1
-				}
-				poor_strata = {
-					militancy = -3
-					consciousness = -2
-				}
-			}
-			ai_will_do = { factor = 1 }
-		}
-		
 		#demand_ny_colonys = {
 		#	potential = {
-		#		tag = NET
+		#		primary_culture = dutch
 		#		NOT = { has_country_flag = demand_ny_colonys }
 		#	}
 		#	allow = {
@@ -249,19 +213,53 @@ political_decisions = {
 		#	ai_will_do = { factor = 1 }
 		#}
 		
+		lunch_the_orangist_revolution = {
+			picture = william_iv
+			potential = {
+				primary_culture = dutch
+				NOT = { has_country_flag = lunched_the_orangist_revolution }
+				OR = {
+					has_country_modifier = stadtholderless_period
+					tag = ADU
+				}
+			}
+			allow = {
+				OR = {
+					AND = {
+						ruling_party_ideology = reactionary
+						nationalism_n_imperialism = 1
+					}
+					AND = {
+						is_greater_power = yes
+						ruling_party_ideology = reactionary
+						owns = 387
+						owns = 397
+					}
+				}
+			}
+			effect = {
+				set_country_flag = lunched_the_orangist_revolution
+				remove_country_modifier = stadtholderless_period
+				country_event = 158103
+				any_pop = {
+					militancy = 3
+					counciousness = 3
+				}
+			}
+		}
 		disband_patriots = {
 			picture = patriot_party
 			potential = {
-				tag = NET
+				primary_culture = dutch
 				NOT = { has_country_flag = patriots_disbanded }
 				NOT = { government = proletarian_dictatorship }
 				NOT = { government = fascist_dictatorship }
 				year = 1740
 				exists = yes
+				is_ideology_enabled = communist
 			}
 			allow = {
 				NOT = { average_militancy = 3 }
-				mass_politics = 1
 			}
 			effect = {
 				set_country_flag = patriots_disbanded
@@ -271,25 +269,6 @@ political_decisions = {
 					}
 					militancy = 4
 					consciousness = 4
-				}
-			}
-			ai_will_do = { factor = 1 }
-		}
-		nationalise_voc = {
-			picture = majapahit
-			potential = {
-				tag = NET
-				VOC = { vassal_of = THIS }	
-			}
-			allow = {
-				year = 1795
-			}
-			effect = {
-				inherit = VOC
-				VOC = {
-					all_core = {
-					remove_core = VOC
-					}
 				}
 			}
 			ai_will_do = { factor = 1 }

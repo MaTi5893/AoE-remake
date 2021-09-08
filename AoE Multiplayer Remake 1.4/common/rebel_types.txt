@@ -942,7 +942,7 @@ fascist_rebels = {
 # Communist Rebels (Jacobins)
 ###################################
 communist_rebels = {
-	icon = 7
+	icon = 3
 	
 	area = nation 					# Stays within the nation
 	break_alliance_on_win = no
@@ -6839,7 +6839,7 @@ jacobite_rebels = {
 
 
 peasant_rebels = {
-	icon = 7
+	icon = 14
 		
 	area = nation 					# Stays within the nation
 	break_alliance_on_win = no
@@ -7165,7 +7165,7 @@ peasant_rebels = {
 }
 
 noble_rebels = {
-	icon = 1
+	icon = 2
 		
 	area = nation 					# Stays within the nation
 	break_alliance_on_win = no
@@ -7312,6 +7312,10 @@ noble_rebels = {
 				strata = rich
 				militancy = 9
 			}
+		}
+		modifier = {
+			factor = -10
+			type = slaves
 		}
 	}
  
@@ -7512,6 +7516,183 @@ noble_rebels = {
             }
         }	
 		prestige = -15
+		plurality = -30
+	}
+}
+slave_rebels = {
+	icon = 12
+
+	area = all 					# Stays within the nation
+	break_alliance_on_win = no
+	
+	# <this is the government in the country> = <this is what the rebels want>
+	government = {
+		proletarian_dictatorship = proletarian_dictatorship
+		presidential_dictatorship = presidential_dictatorship
+		bourgeois_dictatorship = bourgeois_dictatorship
+		fascist_dictatorship = fascist_dictatorship
+		absolute_monarchy = absolute_monarchy
+		prussian_constitutionalism = prussian_constitutionalism
+		hms_government = hms_government
+		french_bourbon = french_bourbon
+		dominion = dominion
+		democracy = democracy
+		theocracy = theocracy
+		colonial_company = colonial_company
+		
+		#archduchy = archduchy
+		elective_monarchy_oligarchy = elective_monarchy_oligarchy
+		federal_democracy = federal_democracy
+		tribal_democracy = tribal_democracy 
+		
+		oligarchic_republic = oligarchic_republic
+		
+		khanate = khanate
+	}
+	
+	
+	defection = none				
+	independence = none				# Does not strive for independence
+	defect_delay = 18
+	
+	ideology = liberal
+	
+	allow_all_cultures = yes
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+	
+	resilient = yes
+	reinforcing = yes				
+	general = yes					
+	smart = yes
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	
+	occupation_mult = 1.1			# The amount of strength this rebel gains from taking provinces	
+
+	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
+	will_rise = {
+		factor = 1
+		modifier = {
+			war = yes
+			factor = 1
+		}
+		modifier = {
+			war_exhaustion = 4
+			factor = 1.1
+		}
+		modifier = {
+			war_exhaustion = 6
+			factor = 1.2
+		}
+		modifier = {
+			war_exhaustion = 8
+			factor = 1.3
+		}
+		modifier = {
+			war_exhaustion = 8
+			factor = 1.3
+		}
+		modifier = {
+			slavery = no_slavery
+			factor = -10
+		}
+		
+	}	
+	
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			NOT = { type = slaves }
+			factor = -10
+		}
+		modifier = {
+			factor = 2
+			type = slaves
+			any_pop = {
+				type = slaves
+				militancy = 3
+			}
+		}
+		modifier = {
+			factor = 4
+			type = slaves
+			any_pop = {
+				type = slaves
+				militancy = 6
+			}
+		}
+		modifier = {
+			factor = -10
+			location = {
+				NOT = { has_pop_type = slaves }
+			}
+		}
+	}
+ 
+ 	#This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+			NOT = { is_capital = yes }
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+			NOT = { is_capital = yes }
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 5.0
+			is_capital = yes
+		}
+	}
+	
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = { has_province_modifier = war_torn }
+ 	}
+	
+	siege_won_effect = {
+		add_province_modifier = {
+			name = war_torn
+			duration = 365
+		}
+		owner = { war_exhaustion = 2.5 }
+	}
+
+	# Country scope
+	demands_enforced_trigger = {
+		OR = {
+			capital_scope = {
+				controlled_by = REB
+				province_control_days = 90
+			}
+			NOT = {
+				any_owned_province = {
+					is_colonial = no
+					controlled_by = THIS
+				}
+			}
+		}
+	}
+	
+	demands_enforced_effect = {
+		political_reform = no_slavery
+		prestige = -40
 		plurality = -30
 	}
 }

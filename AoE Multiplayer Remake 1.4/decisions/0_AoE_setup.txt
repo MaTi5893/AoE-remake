@@ -164,6 +164,26 @@ political_decisions = {
 		}
 	}
 	
+	net_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			NET = {
+				any_pop = {
+					limit = {
+						has_pop_culture = dutch
+						type = soldiers
+					}
+					reduce_pop = 4
+				}
+			}
+		}
+	}
+	
 	merchant_republic_setup = {
 		potential = {
 			always = no
