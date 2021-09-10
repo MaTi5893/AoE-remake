@@ -107,7 +107,7 @@ political_decisions = {
 			}
 			OR = {
 				is_our_vassal = THC
-				is_our_substate = THC
+				THC = { substate_of = THIS }
 			}
 			exists = THC
 		}
@@ -367,11 +367,9 @@ political_decisions = {
 					}
 					exists = yes
 				}
-				THIS = {
 				relation = {
 					who = THIS
 					value = -100
-				}
 				}
 			}
 			casus_belli = {

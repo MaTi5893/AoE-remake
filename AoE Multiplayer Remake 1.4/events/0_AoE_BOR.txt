@@ -933,7 +933,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				is_core = THIS
-				NOT = [ has_province_modifier = suffering_from_continental_blockade }
+				NOT = { has_province_modifier = suffering_from_continental_blockade }
 			}
 			add_province_modifier = {
 				name = suffering_from_continental_blockade

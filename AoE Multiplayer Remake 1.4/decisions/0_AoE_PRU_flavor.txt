@@ -116,7 +116,7 @@ political_decisions = {
 				army_decision_making = 1
 				AND = {
 					military_score = 60
-					has_recently_lost_wars = no
+					has_recently_lost_war = no
 					military_spending = 1
 				}
 			}
@@ -257,7 +257,7 @@ political_decisions = {
 			OR = {
 				war = no
 				war_exhaustion = 35
-				has_recently_lost_wars = yes
+				has_recently_lost_war = yes
 			}
 			has_country_modifier = frederick_grosse
 		}
