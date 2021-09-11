@@ -6,21 +6,7 @@ colonial = 2
 trade_goods = grain
 life_rating = 35
 naval_base = 1
-1861.1.1 = {
-	controller = CSA
-	owner = CSA
-	add_core = CSA
-	state_building = {
-		level = 1
-		building = ammunition_factory
-		upgrade = yes
-	}
-}
-1861.1.1 = { 
-	railroad = 3 
-	naval_base = 1
-	fort = 1
-}
+
 1700.01.02 = {
 owner = FCA
 controller = FCA

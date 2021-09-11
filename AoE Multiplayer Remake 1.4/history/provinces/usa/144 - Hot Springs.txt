@@ -3,13 +3,3 @@ controller = CDD
 add_core = CDD
 trade_goods = grain
 life_rating = 35
-1861.1.1 = {
-	controller = CSA
-	owner = CSA
-	add_core = CSA
-	state_building = {
-		level = 1
-		building = lumber_mill
-		upgrade = yes
-	}
-}
