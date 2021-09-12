@@ -444,9 +444,8 @@ colonialmigration_chance =
 		}
 	}
 	modifier = {
-		factor = 10.0
+		factor = -100
 		state_scope = { is_colonial = yes }
-		unemployment = 0.01
 	}
 	group = {
 		modifier = {
