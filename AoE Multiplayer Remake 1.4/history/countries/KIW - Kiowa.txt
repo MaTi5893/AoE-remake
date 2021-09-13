@@ -1,11 +1,11 @@
 capital = 131
-civilized = yes   primary_culture = native_american_minor
+primary_culture = native_american_minor
 religion = animist
 government = tribal_democracy
 plurality = 0.05
 nationalvalue = nv_liberty
 literacy = 0.50
-civilized = yes
+civilized = no
 prestige = 6
 
 ruling_party = "Tribal Council"
@@ -18,7 +18,6 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-civilized = no
 slavery = yes_slavery
 upper_house_composition = state_equal_weight
 vote_franschise = universal_weighted_voting

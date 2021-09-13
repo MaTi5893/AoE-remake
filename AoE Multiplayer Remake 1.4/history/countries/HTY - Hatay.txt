@@ -1,5 +1,5 @@
 capital = 900
-civilized = yes   primary_culture = turkish
+primary_culture = turkish
 religion = sunni
 civilized = no
 government = absolute_monarchy
@@ -7,7 +7,6 @@ plurality = 0.05
 nationalvalue = nv_autocracy
 literacy = 0.03
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
-civilized = yes
 is_releasable_vassal = no
 
 # Political reforms
@@ -77,4 +76,3 @@ clipper_design = 1
 consciousness = 1
 nonstate_consciousness = 0
 
-civilized = no

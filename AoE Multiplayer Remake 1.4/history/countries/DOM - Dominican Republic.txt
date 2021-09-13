@@ -1,11 +1,11 @@
 capital = 2214
-civilized = yes   primary_culture = caribeno
+primary_culture = caribeno
 religion = catholic
 government = presidential_dictatorship
 plurality = 10
 nationalvalue = nv_order
 literacy = 0.1
-civilized = yes
+civilized = no
 
 # Political reforms
 slavery = no_slavery
@@ -49,7 +49,6 @@ upper_house = {
 	communist = 0
 }
 
-civilized = no
 set_country_flag = new_world_nation
 
 # Technologies

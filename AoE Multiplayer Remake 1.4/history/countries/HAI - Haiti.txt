@@ -1,6 +1,6 @@
 #cumzone
 capital = 2213
-civilized = yes   primary_culture = mulatto
+primary_culture = mulatto
 culture = afro_antillean
 religion = catholic
 government = presidential_dictatorship
@@ -8,7 +8,7 @@ plurality = 10
 nationalvalue = nv_autocracy
 literacy = 0.02
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.05
-civilized = yes
+civilized = no
 prestige = 0
 
 # Political reforms
@@ -55,7 +55,6 @@ upper_house = {
 	communist = 0
 }
 
-civilized = no
 
 # Technologies
 

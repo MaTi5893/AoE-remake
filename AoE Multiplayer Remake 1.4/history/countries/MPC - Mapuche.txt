@@ -1,14 +1,12 @@
 capital = 2329
-civilized = yes   primary_culture = patagonian
+primary_culture = patagonian
 religion = animist
-civilized = no
 civilized = no
 government = tribal_democracy
 plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.05
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.15
-civilized = yes
 prestige = 1
 
 # Political reforms
@@ -41,7 +39,6 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = animist_country
-civilized = no
 set_country_flag = new_world_nation
 
 ruling_party = "Nobility Faction"
