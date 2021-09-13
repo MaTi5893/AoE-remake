@@ -304,9 +304,10 @@ country_event = {
 	trigger = {
 		has_country_flag = discovered_enlightenment_ctr
 		OR = {
-		is_ideology_enabled = socialist
-		NOT = { has_country_modifier = new_schools_of_thought }
-		]
+			is_ideology_enabled = socialist
+			NOT = { has_country_modifier = new_schools_of_thought }
+		}
+		NOT = { has_country_flag = had_liberal_revolution }
 		NOT = { num_of_revolts = 1 }
 	}
 
@@ -382,7 +383,7 @@ country_event = {
 				ideology = liberal
 				factor = 3
 			}
-		}								
+		}
 		remove_country_modifier = new_schools_of_thought
 		remove_country_modifier = springtime_of_nations
 		clr_country_flag = liberal_revolution_in_progress
@@ -402,7 +403,8 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = discovered_enlightenment_ctr
-		NOT = { has_country_flag = had_liberal_revolution }
+		has_country_flag = had_liberal_revolution
+		NOT = { has_country_flag = had_liberal_revolution_pt2 }
 		NOT = { has_country_modifier = new_schools_of_thought }
 		NOT = { num_of_revolts = 1 }
 	}
@@ -436,7 +438,7 @@ country_event = {
 		remove_country_modifier = global_liberal_agitation
 		clr_country_flag = liberal_revolution_fired
 		clr_country_flag = liberal_revolution_in_progress
-		set_country_flag = had_liberal_revolution
+		set_country_flag = had_liberal_revolution_pt2
 		prestige = 15
 	}
 }
