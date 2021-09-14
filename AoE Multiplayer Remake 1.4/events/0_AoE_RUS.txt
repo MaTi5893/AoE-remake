@@ -743,7 +743,7 @@ country_event = {
 		set_country_flag = russian_bad_times
 		any_pop = {
 			limit = {
-				type = serfs
+				type = farmers
 			}
 			militancy = 2
 		}
@@ -1579,7 +1579,7 @@ country_event = {
 			value = -200
 		}
 		casus_belli = {
-			type = minor_conquest
+			type = conquest
 			target = KUR
 			months = 12
 		}

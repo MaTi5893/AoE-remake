@@ -185,17 +185,6 @@ country_event = {
             UCA = { political_reform = all_trade_unions }
         }
 
-
-        #Child labor
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_restricted } }
-            UCA = { social_reform = child_labor_restricted }
-        }
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_illegal } }
-            UCA = { social_reform = child_labor_illegal }
-        }
-
         ##Health Care
         random_owned = {
             limit = { owner = { health_care = trinket_health_care } }
@@ -556,17 +545,6 @@ country_event = {
             UCA = { political_reform = all_trade_unions }
         }
 
-
-        #Child labor
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_restricted } }
-            UCA = { social_reform = child_labor_restricted }
-        }
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_illegal } }
-            UCA = { social_reform = child_labor_illegal }
-        }
-
         ##Health Care
         random_owned = {
             limit = { owner = { health_care = trinket_health_care } }
@@ -785,7 +763,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
 		}
 		war = no
 		NOT = {

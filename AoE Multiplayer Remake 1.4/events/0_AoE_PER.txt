@@ -164,17 +164,6 @@ country_event = {
             HTK = { political_reform = all_trade_unions }
         }
 
-
-        #Child labor
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_restricted } }
-            HTK = { social_reform = child_labor_restricted }
-        }
-        random_owned = {
-            limit = { owner = { child_labor = child_labor_illegal } }
-            HTK = { social_reform = child_labor_illegal }
-        }
-
         ##Health Care
         random_owned = {
             limit = { owner = { health_care = trinket_health_care } }

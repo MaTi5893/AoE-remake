@@ -21,9 +21,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
-			government = absolute_monarchy
-			government = archduchy
 		}
 		OR = {
 			safety_regulations = acceptable_safety # Marginally
@@ -429,9 +426,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
-			government = absolute_monarchy
-			government = archduchy
 		}
 		OR = {
 			safety_regulations = acceptable_safety # Marginally
@@ -965,9 +959,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
-			government = absolute_monarchy
-			government = archduchy
 		}
 		OR = {
 			safety_regulations = acceptable_safety # Marginally
@@ -1238,9 +1229,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
-			government = absolute_monarchy
-			government = archduchy
 		}
 		NOT = { safety_regulations = no_safety } # Very
 		NOT = { pensions = no_pensions } # Irrelevent
@@ -1403,9 +1391,6 @@ country_event = {
 			government = absolute_monarchy
 			government = hms_government
 			government = prussian_constitutionalism
-			government = absolute_monarchy
-			government = absolute_monarchy
-			government = archduchy
 		}
 		NOT = { safety_regulations = no_safety } # Very
 		NOT = { health_care = no_health_care } # Irrelevent
@@ -2503,7 +2488,8 @@ province_event = {
 		}
 	}
 
-	effect = {
+	option = {
+		name = "Yum"
 		state_scope = {
 			add_province_modifier = {
 				name = healthy_merchant_guilds

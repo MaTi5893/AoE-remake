@@ -13,10 +13,8 @@ country_event = {
 			is_core = THIS
 				any_pop = {
 					limit = { 
-						AND = {
-							is_primary_culture = no
-							is_accepted_culture = no
-						}
+						is_primary_culture = no
+						is_accepted_culture = no
 						type = craftsmen
 					}
 					pop_type = farmers
@@ -42,10 +40,8 @@ country_event = {
 			is_core = THIS
 				any_pop = {
 					limit = { 
-						AND = {
-							is_primary_culture = no
-							is_accepted_culture = no
-						}
+						is_primary_culture = no
+						is_accepted_culture = no
 						type = farmers
 						unemployment = 0.99
 					}
