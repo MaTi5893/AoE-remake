@@ -109,9 +109,9 @@ silesia_boom;Silesia Population and Industry Boom;;;;;;;;;;;;;
 silesia_boom_city;Silesia Population and Industry Boom;;;;;;;;;;;;;
 frederick_grosse;Fredrick II Hohenzollern;;;;;;;;;;;;;
 folwark_serf_economy;§RFolwark & Serfdom Crisis§!;;;;;;;;;;;;;
-folwark_serf_economy_desc;Ever since the 1650s the economy of the Comonwealth has been stagnating due to war exhaustion. Many local estates have been destroyed in the 17th century cousing the pratical dissapearence of middle-class nobility and creation of multiple large estates called "Folwarks";x
+folwark_serf_economy_desc;Ever since the 1650s the economy of the Comonwealth has been stagnating due to war exhaustion. Many local estates have been destroyed in the 17th century cousing the pratical dissapearence of middle-class nobility and creation of multiple large estates called "Folwarks";;;;;;;;;;;;;
 noble_democracy;Golden Liberty;;;;;;;;;;;;;
-admiraliteiten:Admiraliteinten;;;;;;;;;;;;;
+admiraliteiten:Admiraliteinten;;;;;;;;;;;;;;
 stadtholderless_period;Stadtholderless Dictatorship;;;;;;;;;;;;;
 patriots_couse_trouble;Patriots cause Unrest;;;;;;;;;;;;;
 orangist_domination;Orangist Domination;;;;;;;;;;;;;
@@ -123,7 +123,7 @@ inefficient_bureacracy;Inefficient Bureacracy;;;;;;;;;;;;;
 efficient_bureacracy;Efficinet Bureacracy;;;;;;;;;;;;;
 illegitimate_heir;Illegitimate heir;;;;;;;;;;;;;
 hre_mendling;Holy Roman Laws Changed;;;;;;;;;;;;;
-reichsreform:Reichreform;;;;;;;;;;;;;
+reichsreform:Reichreform;;;;;;;;;;;;;;
 reichsregiment;Reichregiment;;;;;;;;;;;;;
 the_hofgericht;The Hofgericht;;;;;;;;;;;;;
 erbkaisertum;Erbkaisertum;;;;;;;;;;;;;
@@ -167,51 +167,51 @@ charles_emmanuel;Charles Emmanuel III di Savoia;;;;;;;;;;;;;
 savoyard_law_code;Savoyard Law Codified;;;;;;;;;;;;;
 leopold_ii;Leopold II Habsburg;;;;;;;;;;;;;
 spanish_succesion_crisis;Spanish Succession Crisis has started;;;;;;;;;;;;;
-naderi_coinage_system;Naderi Coinage System;x
-quajar_army_reforms;Qajar Army Reforms;x
-muhammad_ali;Muhammad Ali of Egypt;x
-fredrican_army_model;Fredrican Army Model;x
-encouraging_migration;Encouraging Settlements;x
-western_medicine;Imported Western Medicine;x
-order_of_the_dragon;Order of the Dragon;x
-streltsi_rebellion;Streltsi Revolt;x
-streltsi_rebellion_desc;Russia suffered a big revolt of Streltsi in 1699, majorly demaging it's military;x
-army_with_a_state1;§GArmy With a State I§;x
-army_with_a_state1_desc;With less then 8 states owned by us, we may more effectivly manage our military;x
-army_with_a_state2;Army With a State II;x
-army_with_a_state2_desc;With less then 14, but more then 8 states owned by us, we may medioricly manage our military;x
-army_with_a_state3;§RArmy With a State III§;x
-army_with_a_state3_desc;With less then 16, but more then 14 states owned by us, we may Barely manage our military;x
-soldier_king_reforms;Reforms of the Soldier-King;x
-soldier_king_reforms_desc;This modifier triggers "Army with a State" modifiers which grant us bonuses scaling down depending on the amount of owned states or mil score \n §G(1-8 - Highest ) or military score - 500§ \n §Y(8-14 - Mediocare ) or military_score - 400§ \n §B(14-16 Lowest ) military score = 200§;x
-holy_roman_emperor;§YHoly Roman Emperor§;x
-traditionalist_society;Traditionalist Society;x
-jacobite_pretender;Jacobite Pretender Rising;x
-janisseries_influence;§RThe Janissaries§W;x
-janisseries_influence_desc;As the standing army and loyal servants of the Sultan, the Janissaries and other palace troops traditionally expected to be paid a salary bonus upon the accession of each new ruler. Breaking this tradition could cause riots and instability.;x
-hussein_pasha;Amcazade Köprülü Hüseyin Pasha;x
-hussein_pasha_desc;The grand vizier of the Ottoman Empire under Mustafa II from September 1697 until September 1702. Amcazade Koprulu Huseyin Pasha was close to ordinary Ottoman Muslim subjects being a member of the Mevlevi Order. He was known to be concerned with the needs of the common people as well as those of the military and bureaucratic classes.;x
-estates_help_plead_cooldown;§RPlead Estates for War Support Cooldown§W;x
-estates_help_plead_cooldown_desc;§YThis Cooldown can be further reduced to 2 years if you select the "Obligatory Cabinet" Reform for Executive Power§!;x
-change_faction_influence_cooldown;§RChange Faction Influence Cooldown§W;x
-change_faction_influence_cooldown_desc;§YThis Cooldown can be further reduced by political reforms in the Executive Power section§!;x
-tarabai;Tarabai;x
-tarabai_desc;Tarabai was a Female General who succesfully ruled the Marathas in years 1700-1708 as a skilled military commander and administrator;x
-missisiippi_trade_company;§GMissisippi Trade Company§W;
-missisiippi_trade_company_desc;If by the end of this modifier we do not own or sphere the owner of the provinces: bayou goula, yazoo, memphis, st louis, kekinoga, detroit, the Company will Bankrupt;x
-new_schools_of_thought;New Schools of Thought;x
-new_schools_of_thought_desc;;x
-commision_of_national_education;Comission of National Education;x
-commision_of_national_education_desc;;x
-corps_of_cadets;Corps of Cadets;x
-corps_of_cadets_desc;;x
-magnate_oligarchy;§RMagnate Oligarchy§!;x
-magnate_oligarchy_desc;Following the Deluge and the economic stagnation of the Commonwealth, political problems followed. As much of the population and previous nobility now depended on the Magnates for their protection, in compensation the richest of the nobles demanded political support in the Sejm. Thus the politics of Commonwealth largely depended on whims and whises of few families;x
-horde_society;Horde Society;x
-horde_society_desc;Lack of clear laws and emphasis on war and conquest charactarise our state;x
-immunity_from_influenza;Immunity From Influenza;x
-mercantile_society;§GMercantile Society§!;x
-mercantile_society_desc;Our society is much more open minded, centered on profit and trade, as well as maintaining an impressive navy.;x
-immunity_from_influenza_desc;;x
-tulip_period;The Tulip Era;x
-tulip_period_desc;The tulip period, or tulip era is a period in Ottoman history from the Treaty of Passarowitz on 21 July 1718 to the Patrona Halil Revolt on 28 September 1730. This was a relatively peaceful period of economic and cultural growth, during which the Ottoman Empire began to orient itself towards Europe.;
+naderi_coinage_system;Naderi Coinage System;;;;;;;;;;;;;
+quajar_army_reforms;Qajar Army Reforms;;;;;;;;;;;;;
+muhammad_ali;Muhammad Ali of Egypt;;;;;;;;;;;;;
+fredrican_army_model;Fredrican Army Model;;;;;;;;;;;;;
+encouraging_migration;Encouraging Settlements;;;;;;;;;;;;;
+western_medicine;Imported Western Medicine;;;;;;;;;;;;;
+order_of_the_dragon;Order of the Dragon;;;;;;;;;;;;;
+streltsi_rebellion;Streltsi Revolt;;;;;;;;;;;;;
+streltsi_rebellion_desc;Russia suffered a big revolt of Streltsi in 1699, majorly demaging it's military;;;;;;;;;;;;;
+army_with_a_state1;§GArmy With a State I§;;;;;;;;;;;;;
+army_with_a_state1_desc;With less then 8 states owned by us, we may more effectivly manage our military;;;;;;;;;;;;;
+army_with_a_state2;Army With a State II;;;;;;;;;;;;;
+army_with_a_state2_desc;With less then 14, but more then 8 states owned by us, we may medioricly manage our military;;;;;;;;;;;;;
+army_with_a_state3;§RArmy With a State III§;;;;;;;;;;;;;
+army_with_a_state3_desc;With less then 16, but more then 14 states owned by us, we may Barely manage our military;;;;;;;;;;;;;
+soldier_king_reforms;Reforms of the Soldier-King;;;;;;;;;;;;;
+soldier_king_reforms_desc;This modifier triggers "Army with a State" modifiers which grant us bonuses scaling down depending on the amount of owned states or mil score \n §G(1-8 - Highest ) or military score - 500§ \n §Y(8-14 - Mediocare ) or military_score - 400§ \n §B(14-16 Lowest ) military score = 200§;;;;;;;;;;;;;
+holy_roman_emperor;§YHoly Roman Emperor§;;;;;;;;;;;;;
+traditionalist_society;Traditionalist Society;;;;;;;;;;;;;
+jacobite_pretender;Jacobite Pretender Rising;;;;;;;;;;;;;
+janisseries_influence;§RThe Janissaries§W;;;;;;;;;;;;;
+janisseries_influence_desc;As the standing army and loyal servants of the Sultan, the Janissaries and other palace troops traditionally expected to be paid a salary bonus upon the accession of each new ruler. Breaking this tradition could cause riots and instability.;;;;;;;;;;;;;
+hussein_pasha;Amcazade Köprülü Hüseyin Pasha;;;;;;;;;;;;;
+hussein_pasha_desc;The grand vizier of the Ottoman Empire under Mustafa II from September 1697 until September 1702. Amcazade Koprulu Huseyin Pasha was close to ordinary Ottoman Muslim subjects being a member of the Mevlevi Order. He was known to be concerned with the needs of the common people as well as those of the military and bureaucratic classes.;;;;;;;;;;;;;
+estates_help_plead_cooldown;§RPlead Estates for War Support Cooldown§W;;;;;;;;;;;;;
+estates_help_plead_cooldown_desc;§YThis Cooldown can be further reduced to 2 years if you select the "Obligatory Cabinet" Reform for Executive Power§!;;;;;;;;;;;;;
+change_faction_influence_cooldown;§RChange Faction Influence Cooldown§W;;;;;;;;;;;;;
+change_faction_influence_cooldown_desc;§YThis Cooldown can be further reduced by political reforms in the Executive Power section§!;;;;;;;;;;;;;
+tarabai;Tarabai;;;;;;;;;;;;;
+tarabai_desc;Tarabai was a Female General who succesfully ruled the Marathas in years 1700-1708 as a skilled military commander and administrator;;;;;;;;;;;;;
+missisiippi_trade_company;§GMissisippi Trade Company§W;;;;;;;;;;;;;
+missisiippi_trade_company_desc;If by the end of this modifier we do not own or sphere the owner of the provinces: bayou goula, yazoo, memphis, st louis, kekinoga, detroit, the Company will Bankrupt;;;;;;;;;;;;;
+new_schools_of_thought;New Schools of Thought;;;;;;;;;;;;;
+new_schools_of_thought_desc;;;;;;;;;;;;;;
+commision_of_national_education;Comission of National Education;;;;;;;;;;;;;
+commision_of_national_education_desc;;;;;;;;;;;;;;
+corps_of_cadets;Corps of Cadets;;;;;;;;;;;;;
+corps_of_cadets_desc;;;;;;;;;;;;;;
+magnate_oligarchy;§RMagnate Oligarchy§!;;;;;;;;;;;;;
+magnate_oligarchy_desc;Following the Deluge and the economic stagnation of the Commonwealth, political problems followed. As much of the population and previous nobility now depended on the Magnates for their protection, in compensation the richest of the nobles demanded political support in the Sejm. Thus the politics of Commonwealth largely depended on whims and whises of few families;;;;;;;;;;;;;
+horde_society;Horde Society;;;;;;;;;;;;;
+horde_society_desc;Lack of clear laws and emphasis on war and conquest charactarise our state;;;;;;;;;;;;;
+immunity_from_influenza;Immunity From Influenza;;;;;;;;;;;;;
+mercantile_society;§GMercantile Society§!;;;;;;;;;;;;;
+mercantile_society_desc;Our society is much more open minded, centered on profit and trade, as well as maintaining an impressive navy.;;;;;;;;;;;;;
+immunity_from_influenza_desc;;;;;;;;;;;;;;
+tulip_period;The Tulip Era;;;;;;;;;;;;;
+tulip_period_desc;The tulip period, or tulip era is a period in Ottoman history from the Treaty of Passarowitz on 21 July 1718 to the Patrona Halil Revolt on 28 September 1730. This was a relatively peaceful period of economic and cultural growth, during which the Ottoman Empire began to orient itself towards Europe.;;;;;;;;;;;;;

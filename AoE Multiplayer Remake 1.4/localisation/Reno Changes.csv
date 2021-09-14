@@ -1,36 +1,28 @@
-#############################################;;;;;;;;;;;;;;x
-#New Units;;;;;;;;;;;;;;x
-#############################################;;;;;;;;;;;;;;x
-infantry_offensive;Offensive Infantry;;;;;;;;;;;;;x
-infantry_defensive;Defensive Infantry;;;;;;;;;;;;;x
-artillery_offensive;Offensive Artillery;;;;;;;;;;;;;x
-artillery_defensive;Defensive Artillery;;;;;;;;;;;;;x
-#############################################;;;;;;;;;;;;;;x
-#Generic Political Parties;;;;;;;;;;;;;;x
-#############################################;;;;;;;;;;;;;;x
-generic_conservative;Generic Conservative;;;;;;;;;;;;;x
-generic_reactionary;Generic Reactionary;;;;;;;;;;;;;x
-generic_liberal;Generic Liberal;;;;;;;;;;;;;x
-generic_socialist;Generic Socialist;;;;;;;;;;;;;x
-generic_communist;Generic Communist;;;;;;;;;;;;;x
-generic_fascist;Generic Fascist;;;;;;;;;;;;;x
-#############################################;;;;;;;;;;;;;;x
-#Event and Decision Names;;;;;;;;;;;;;;x
-craftsmen_fix_cooldown;Craftsmen Fix Cooldown;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;;;;;;;;;;;
-craftsmen_fix_cooldown_desc;Craftsmen Fix Cooldown is 10 years.;;;;;;;;;;;;;x,,,,,,,,,,,,;;;;;;;;;;;
-EVTNAME9999901;Craftsmen Exploit Salvage (Part 1);;;;;;;;;;;;;;x
-EVTDESC9999901;This event converts all non-core/non-accepted craftsmen into farmers if they are on your cores. Part 2 will spawn in 3 days, be sure to select this option FIRST.;;;;;;;;;;;;;;x
-EVTNAME9999902;Craftsmen Exploit Salvage (Part 2);;;;;;;;;;;;;;x
-EVTDESC9999902;This event converts all 100% unemployed farmers into laborers.;;;;;;;;;;;;;;x
-EVT2600OPTA;Integrate Them.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVT2600OPTB;Reject Them.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVT2605OPTA;Hurrah!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-unciv_protection_on_title;1865 Protection ON (Unavailable after 1836);;;;;;;;;;;;;;x
-unciv_protection_on_desc;China and Japan specific decision that protects you until 1865 from acquire land CBs, but also blocks you from building them.USE AT YOUR OWN DISCRETION.;;;;;;;;;;;;;;x
-unciv_protection_off_title;1865 Protection OFF (Unavailable after 1836);;;;;;;;;;;;;;x
-unciv_protection_off_desc;China and Japan specific decision that turns off your protection from acquire land CBs, that you otherwise would have until 1865. USE AT YOUR OWN DISCRETION.;;;;;;;;;;;;;;x
-craftsmen_fix_title;Craftsmen Salvage Decision (10 year cooldown);;;;;;;;;;;;;;x
-craftsmen_fix_desc;This decision is intended to salvage your country after it has been craftsmen hijacked. It will revert all non-core/non-accepted craftsmen on your cores to farmers/labourers so that your core craftsmen will start working. (Think South Germans in Venetia hijacking.) BECAREFUL OF USE.;;;;;;;;;;;;;;x
-#############################################;;;;;;;;;;;;;;x
-double_down_in_the_balkans_title;Double Down in the Balkans;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-double_down_in_the_balkans_desc;For too long have the peoples of the Balkans thwarted our efforts of expansion. Let us focus all our attention to the re-education and assimilation of these barbaric peoples.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+#New Units;;;;;;;;;;;;;;
+infantry_offensive;Offensive Infantry;;;;;;;;;;;;;
+infantry_defensive;Defensive Infantry;;;;;;;;;;;;;
+artillery_offensive;Offensive Artillery;;;;;;;;;;;;;
+artillery_defensive;Defensive Artillery;;;;;;;;;;;;;
+#Generic Political Parties;;;;;;;;;;;;;;
+generic_conservative;Generic Conservative;;;;;;;;;;;;;
+generic_reactionary;Generic Reactionary;;;;;;;;;;;;;
+generic_liberal;Generic Liberal;;;;;;;;;;;;;
+generic_socialist;Generic Socialist;;;;;;;;;;;;;
+generic_communist;Generic Communist;;;;;;;;;;;;;
+generic_fascist;Generic Fascist;;;;;;;;;;;;;
+#Event and Decision Names;;;;;;;;;;;;;;
+craftsmen_fix_cooldown;Craftsmen Fix Cooldown;;;;;;;;;;;;;
+craftsmen_fix_cooldown_desc;Craftsmen Fix Cooldown is 10 years.;;;;;;;;;;;;;
+EVTNAME9999901;Craftsmen Exploit Salvage (Part 1);;;;;;;;;;;;;
+EVTDESC9999901;This event converts all non-core/non-accepted craftsmen into farmers if they are on your cores. Part 2 will spawn in 3 days, be sure to select this option FIRST.;;;;;;;;;;;;;
+EVTNAME9999902;Craftsmen Exploit Salvage (Part 2);;;;;;;;;;;;;
+EVTDESC9999902;This event converts all 100% unemployed farmers into laborers.;;;;;;;;;;;;;
+unciv_protection_on_title;1865 Protection ON (Unavailable after 1836);;;;;;;;;;;;;
+unciv_protection_on_desc;China and Japan specific decision that protects you until 1865 from acquire land CBs, but also blocks you from building them.USE AT YOUR OWN DISCRETION.;;;;;;;;;;;;;
+unciv_protection_off_title;1865 Protection OFF (Unavailable after 1836);;;;;;;;;;;;;
+unciv_protection_off_desc;China and Japan specific decision that turns off your protection from acquire land CBs, that you otherwise would have until 1865. USE AT YOUR OWN DISCRETION.;;;;;;;;;;;;;
+craftsmen_fix_title;Craftsmen Salvage Decision (10 year cooldown);;;;;;;;;;;;;
+craftsmen_fix_desc;This decision is intended to salvage your country after it has been craftsmen hijacked. It will revert all non-core/non-accepted craftsmen on your cores to farmers/labourers so that your core craftsmen will start working. (Think South Germans in Venetia hijacking.) BECAREFUL OF USE.;;;;;;;;;;;;;
+double_down_in_the_balkans_title;Double Down in the Balkans;;;;;;;;;;;;;
+double_down_in_the_balkans_desc;For too long have the peoples of the Balkans thwarted our efforts of expansion. Let us focus all our attention to the re-education and assimilation of these barbaric peoples.;;;;;;;;;;;;;

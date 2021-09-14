@@ -392,15 +392,11 @@ NORMAL_WAR_COALITION;The $ORDER$$FIRST$-$SECOND$ Coalition War;;;;;;;;;;;;;
 install_monarchy_make_puppet;Restory Monarchy;;;;;;;;;;;;;
 install_monarchy_make_puppet_desc;Restory Monarchy and end the revolution in §Ycountry§W$;;;;;;;;;;;;;
 install_monarchy_make_puppet_setup;Restory Monarchy and end the revolution in §Ycountry§W$;;;;;;;;;;;;;
-steal_puppet;Take Puppet;;;;;;;;;;;;
-steal_puppet_short;Puppet $THIRD$;;;;;;;;;;;;
-steal_puppet_desc;Take a ?puppet? from a third country and make it our puppet.;;;;;;;;;;;;
-steal_puppet_setup;Take $THIRD$ from $RECIPIENT$.;;;;;;;;;;;;
+steal_puppet;Take Puppet;;;;;;;;;;;;;
+steal_puppet_short;Puppet $THIRD$;;;;;;;;;;;;;
+steal_puppet_desc;Take a ?puppet? from a third country and make it our puppet.;;;;;;;;;;;;;
+steal_puppet_setup;Take $THIRD$ from $RECIPIENT$.;;;;;;;;;;;;;
 install_monarchy_make_puppet_short;Restore Monarchy;;;;;;;;;;;;;
-dismantle_hre;Dismantle The Holy Roman Empire;
-dismantle_hre_short;Dismantle HRE;;;;;;;;;;;;;
-dismantle_hre_desc;Dismantle The Holy Roman Empire;;;;;;;;;;;;;
-dismantle_hre_setup;Dismantle The Holy Roman Empire;;;;;;;;;;;;;
 claim_emperorship;Claim The Title of Emperor;;;;;;;;;;;;;
 claim_emperorship_short;Claim Emperorship;;;;;;;;;;;;;
 claim_emperorship_desc;Claim The Title of Holy Roman Emperor;;;;;;;;;;;;;
@@ -425,19 +421,18 @@ unify_bourbon_empire_desc;Unify The Bourbon Empire!;;;;;;;;;;;;;
 NORMAL_WAR_NAME_BOR_AUS;Austrian Succession War;;;;;;;;;;;;;
 AGRESSION_WAR_NAME_BOR_AUS;Austrian Succession War;;;;;;;;;;;;;
 unify_bourbon_empire_setup;Unify The Bourbon Empire!;;;;;;;;;;;;;
-great_war_penalty_cb;Full Military Cost Compensation;x
-great_war_penalty_cb_short;Full Military Cost Compensation;x
-great_war_penalty_cb_desc;Full Military Cost Compensation;x
-uninstall_communist_gov_cb;Restore Monarchy;x
-uninstall_communist_gov_cb_short;Restore Monarchy;x
-uninstall_communist_gov_cb_desc;Restore Monarchy to the Revolutionary state;x
-uninstall_communist_gov_cb_setup;Restore Monarchy;x
-greek_plan_cb;Realise the Greek Plan;x
-greek_plan_cb_short;Realise the Greek Plan;x
-greek_plan_cb;;Realise the Greek Plan and Free the Balkans from Ottoman rule;x
-greek_plan_cb_setup;Realise the Greek Plan;x
-restore_anglo_dutch_union;Restore Orangist Rule;x
-restore_anglo_dutch_union_short;Restore Orangist Rule;x
-restore_anglo_dutch_union_desc;Restore the Union Between Britain and Netherlands;x
-restore_anglo_dutch_union_setup;Restore the Union Between Britain and Netherlands;x
-great_war_penalty_cb_setup;Full Military Cost Compensation;x
+great_war_penalty_cb;Full Military Cost Compensation;;;;;;;;;;;;;
+great_war_penalty_cb_short;Full Military Cost Compensation;;;;;;;;;;;;;
+great_war_penalty_cb_desc;Full Military Cost Compensation;;;;;;;;;;;;;
+uninstall_communist_gov_cb;Restore Monarchy;;;;;;;;;;;;;
+uninstall_communist_gov_cb_short;Restore Monarchy;;;;;;;;;;;;;
+uninstall_communist_gov_cb_desc;Restore Monarchy to the Revolutionary state;;;;;;;;;;;;;
+uninstall_communist_gov_cb_setup;Restore Monarchy;;;;;;;;;;;;;
+greek_plan_cb;Realise the Greek Plan;;;;;;;;;;;;;
+greek_plan_cb_short;Realise the Greek Plan;;;;;;;;;;;;;
+greek_plan_cb_setup;Realise the Greek Plan;;;;;;;;;;;;;
+restore_anglo_dutch_union;Restore Orangist Rule;;;;;;;;;;;;;
+restore_anglo_dutch_union_short;Restore Orangist Rule;;;;;;;;;;;;;
+restore_anglo_dutch_union_desc;Restore the Union Between Britain and Netherlands;;;;;;;;;;;;;
+restore_anglo_dutch_union_setup;Restore the Union Between Britain and Netherlands;;;;;;;;;;;;;
+great_war_penalty_cb_setup;Full Military Cost Compensation;;;;;;;;;;;;;

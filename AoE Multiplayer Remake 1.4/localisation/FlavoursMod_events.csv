@@ -411,8 +411,6 @@ EVTDESC13066;We find that your country is sixty or seventy thousand li from Chin
 EVTNAME13067;The Treaty of Nanjing ($YEAR$);;;;;;;;;;;;;
 EVTDESC13067;In the wake of our defeat in against the British, we have been forced to agree to a series of unreasonable demands. Most notably we have been forced to cede the Island of Hong Kong and to abolish the former monopoly of the Cohong and their Thirteen Factories in Canton.;;;;;;;;;;;;;
 EVOPTA13067;We have no choice but to accept the demands;;;;;;;;;;;;;
-EVTNAME500060;A Swiss Partition?;;;;;;;;;;;;;
-EVTDESC500060;The $FROMCOUNTRY_ADJ$ has come to us with a interesting proposal: the Partition of Switzerland along ethnic lines. The former cantons of Switzerland would be split among German, French and Italian and the $COUNTRY_ADJ$ cantons would be incorporated into $COUNTRY$, should we agree to this proposal?;;;;;;;;;;;;;
 EVTOPTA500060;It is for the best.;;;;;;;;;;;;;
 EVTOPTB500060;We refuse to accept this unlawful occupation of Switzerland!;;;;;;;;;;;;;
 EVTNAME500061;The Swiss Partition - $FROMCOUNTRY$ Agrees!;;;;;;;;;;;;;
@@ -513,7 +511,6 @@ EVTDESC99761;We have received our territories as per the Asia Minor Agreement;;;
 EVTNAME99104;Anglo-Russian Convention over Persia;;;;;;;;;;;;;
 EVTDESC99104;The British ambassador has come to us with an interesting proposal - to establish a neutral ground over Persia to ease tensions between $COUNTRY$ and $FROMCOUNTRY$ in Central Asia, Persia would be placed under the British sphere of influence, while in return the British would recognize the rest of our conquests in Central Asia.;;;;;;;;;;;;;
 EVTNAME7790006;The Fall of $CAPITAL$;;;;;;;;;;;;;
-EVTDESC7790006;Despite our best efforts, the unthinkable has happened: $CAPITAL$ has fallen. It seems there is little choice but to surrender to the French and allow them to dictate terms. If they are kind, the peace treaty may be lenient...;;;;;;;;;;;;;
 EVT7790006OPTA;We have no choice, we must surrender.;;;;;;;;;;;;;
 EVT7790006OPTB;We will fight on, we must not let the French make us a puppet once more!;;;;;;;;;;;;;
 EVTNAME7790007;The Treaty of Madrid ($YEAR$);;;;;;;;;;;;;
@@ -578,6 +575,6 @@ EVTDESC530010;[s]o long as $FROM_COUNTRY$ may be the lessee of the Môle Saint-Ni
 EVT530010OPTA;Allow the sale to go through.;;;;;;;;;;;;;
 EVT530010OPTB;The Constitution forbids alienation of any territory!;;;;;;;;;;;;;
 EVTNAME530011;$FROM_COUNTRY$ Refuses!;;;;;;;;;;;;;
-EVTDESC530011;From his flag ship, the Philadelphia, Rear-Admiral Gherardi addressed his demand for Môle Saint-Nicolas to the Haitian Government. Gherardi was in so great a hurry to win that which he imagined would be an easy success, that he did not think it necessary to secure the cooperation of Mr. Frederick Douglass, who was at that time United States Minister at Port-au-Prince - he alone signed the letter. Mr. A. Firmin, then Haitian Secretary of State, availed himself at once of this blunder to request the credentials of the Rear-Admiral, who, not being provided with any, was obliged to write to Washington for them.\n\nBy the time President Harrison's letter appointing Gherardi his special Commissioner reached Port-au-Prince, the $COUNTRY_ADJ$ squadron had long been in Haiti's waters. The array of force had been counterproductive, provoking loud public protest against the $COUNTRY_ADJ$s. Under these circumstances, Haiti was compelled to stand firm against the $COUNTRY_ADJ$s. Firmin refused the deal on the grounds that the Constitution of Haiti forbade alienation of any portion of the nation's territory.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-EVT530011OPTA;Time to conduct diplomacy the old-fashioned way.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
-EVT530011OPTB;There is nothing more we can do.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,;;;;;;;;;;;;;
+EVTDESC530011;From his flag ship, the Philadelphia, Rear-Admiral Gherardi addressed his demand for Môle Saint-Nicolas to the Haitian Government. Gherardi was in so great a hurry to win that which he imagined would be an easy success, that he did not think it necessary to secure the cooperation of Mr. Frederick Douglass, who was at that time United States Minister at Port-au-Prince - he alone signed the letter. Mr. A. Firmin, then Haitian Secretary of State, availed himself at once of this blunder to request the credentials of the Rear-Admiral, who, not being provided with any, was obliged to write to Washington for them.\n\nBy the time President Harrison's letter appointing Gherardi his special Commissioner reached Port-au-Prince, the $COUNTRY_ADJ$ squadron had long been in Haiti's waters. The array of force had been counterproductive, provoking loud public protest against the $COUNTRY_ADJ$s. Under these circumstances, Haiti was compelled to stand firm against the $COUNTRY_ADJ$s. Firmin refused the deal on the grounds that the Constitution of Haiti forbade alienation of any portion of the nation's territory.;;;;;;;;;;;;;
+EVT530011OPTA;Time to conduct diplomacy the old-fashioned way.;;;;;;;;;;;;;
+EVT530011OPTB;There is nothing more we can do.;;;;;;;;;;;;;
