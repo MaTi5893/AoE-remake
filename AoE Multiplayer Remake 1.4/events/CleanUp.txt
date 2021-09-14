@@ -462,11 +462,7 @@ country_event = {
 	picture = "english_parliment"
 	
 	trigger = {
-	    OR = {
-		      government = absolute_monarchy
-			  government = absolute_monarchy
-			  government = archduchy
-		}
+		government = absolute_monarchy
 		NOT = { vote_franschise = none_voting }		
 		civilized = yes	
 	}
@@ -790,10 +786,6 @@ country_event = {
 				is_culture_group = french
 			}
 			capital_scope = { continent = africa }
-			capital_scope = { continent = west_africa }
-			capital_scope = { continent = east_africa }
-			capital_scope = { continent = central_africa }
-			capital_scope = { continent = south_west_africa }
 			capital_scope = { continent = asia }
 		}
 		NOT = { has_country_flag = post_colonial_country }
