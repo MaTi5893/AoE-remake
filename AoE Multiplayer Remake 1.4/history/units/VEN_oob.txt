@@ -1,82 +1,81 @@
-
 army = {
-	name = "Esercito Veneziano"
-	location = 729
-	regiment = {
-		name= "Venetian Infantry"
-		type = infantry
-		home = 729
-	}
-	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
-		home = 730
-	}
-	regiment = {
-		name= "Ionian Infantry"
-		type = infantry
-		home = 826
-	}
-	regiment = {
-		name= "Greek Infantry"
-		type = infantry
-		home = 842
-	}
+    name = "Esercito Veneziano"
+    location = 729
+    regiment = {
+        name= "Venetian Infantry"
+        type = infantry
+        home = 729
+    }
+    regiment = {
+        name= "Venetian Artillery"
+        type = artillery
+        home = 730
+    }
+    regiment = {
+        name= "Ionian Infantry"
+        type = infantry
+        home = 826
+    }
+    regiment = {
+        name= "Greek Infantry"
+        type = infantry
+        home = 842
+    }
 }
 
 navy = {
-	name = "Marina Veneziana"
-	location = 729
-	ship = {
-		name= "Giorno"
-		type = manowar
-	}
-	ship = {
-		name= "Abbachio"
-		type = manowar
-	}
-	ship = {
-		name= "Bucciarati"
-		type = manowar
-	}
-	ship = {
-		name= "Mista"
-		type = manowar
-	}
-	ship = {
-		name= "Narancia"
-		type = manowar
-	}
-	ship = {
-		name= "Fregata 1"
-		type = frigate
-	}
-	ship = {
-		name= "Fregata 2"
-		type = frigate
-	}
-	ship = {
-		name= "Fregata 3"
-		type = frigate
-	}
-	ship = {
-		name= "Fregata 4"
-		type = frigate
-	}
-	ship = {
-		name= "Trasporto 1"
-		type = clipper_transport
-	}
-	ship = {
-		name= "Trasporto 2"
-		type = clipper_transport
-	}
-	ship = {
-		name= "Trasporto 3"
-		type = clipper_transport
-	}
-	ship = {
-		name= "Trasporto 4"
-		type = clipper_transport
-	}
+    name = "Marina Veneziana"
+    location = 729
+    ship = {
+        name= "Giorno"
+        type = manowar
+    }
+    ship = {
+        name= "Abbachio"
+        type = manowar
+    }
+    ship = {
+        name= "Bucciarati"
+        type = manowar
+    }
+    ship = {
+        name= "Mista"
+        type = manowar
+    }
+    ship = {
+        name= "Narancia"
+        type = manowar
+    }
+    ship = {
+        name= "Fregata 1"
+        type = frigate
+    }
+    ship = {
+        name= "Fregata 2"
+        type = frigate
+    }
+    ship = {
+        name= "Fregata 3"
+        type = frigate
+    }
+    ship = {
+        name= "Fregata 4"
+        type = frigate
+    }
+    ship = {
+        name= "Trasporto 1"
+        type = clipper_transport
+    }
+    ship = {
+        name= "Trasporto 2"
+        type = clipper_transport
+    }
+    ship = {
+        name= "Trasporto 3"
+        type = clipper_transport
+    }
+    ship = {
+        name= "Trasporto 4"
+        type = clipper_transport
+    }
 }

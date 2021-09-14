@@ -1,172 +1,172 @@
 country_event = {
-	id = 176600
-	title = "Kristian VII"
-	desc = "EVTDESC176800"
-	fire_only_once = yes
-	picture = christian_vii
-	
-	trigger = {
-		year = 1766
-		OR = {
-			tag = DNN
-			tag = DEN
-		}
-		NOT = {
-			government = democracy
-			government = presidential_dictatorship
-		}
-	}
-	
-	option = {
-		name = "Tough times are ahead of us..."
-		add_country_modifier = {
-			name = christian_vii
-			duration = -1
-		}
-	}
+    id = 176600
+    title = "Kristian VII"
+    desc = "EVTDESC176800"
+    fire_only_once = yes
+    picture = christian_vii
+
+    trigger = {
+        year = 1766
+        OR = {
+            tag = DNN
+            tag = DEN
+        }
+        NOT = {
+            government = democracy
+            government = presidential_dictatorship
+        }
+    }
+
+    option = {
+        name = "Tough times are ahead of us..."
+        add_country_modifier = {
+            name = christian_vii
+            duration = -1
+        }
+    }
 }
 country_event = {
-	id = 176601
-	title = "Death of Kristian VII"
-	desc = "EVTDESC176801"
-	fire_only_once = yes
-	picture = christian_vii
-	
-	trigger = {
-		OR = {
-			tag = DNN
-			tag = DEN
-		}
-		has_country_modifier = christian_vii
-		
-		OR = {
-			year = 1808
-			government = democracy
-			government = presidential_dictatorship
-		}
-	}
-	
-	option = {
-		name = "May he rest in peace."
-		remove_country_modifier = christian_vii
-	}
+    id = 176601
+    title = "Death of Kristian VII"
+    desc = "EVTDESC176801"
+    fire_only_once = yes
+    picture = christian_vii
+
+    trigger = {
+        OR = {
+            tag = DNN
+            tag = DEN
+        }
+        has_country_modifier = christian_vii
+
+        OR = {
+            year = 1808
+            government = democracy
+            government = presidential_dictatorship
+        }
+    }
+
+    option = {
+        name = "May he rest in peace."
+        remove_country_modifier = christian_vii
+    }
 }
 country_event = {
-	id = 176602
-	title = "Johann Struensee"
-	desc = "EVTDESC176802"
-	fire_only_once = yes
-	picture = streusse
-	
-	trigger = {
-		OR = {
-			tag = DNN
-			tag = DEN
-		}
-		has_country_modifier = christian_vii
-		year = 1768
-	}
-	
-	option = {
-		name = "Employ him as a court Physician"
-		add_country_modifier = {
-			name = johann_struensee
-			duration = -1
-		}
-	}
-	
-	option = {
-		name = "The King can rule by himself!"
-		prestige = -5
-	}
+    id = 176602
+    title = "Johann Struensee"
+    desc = "EVTDESC176802"
+    fire_only_once = yes
+    picture = streusse
+
+    trigger = {
+        OR = {
+            tag = DNN
+            tag = DEN
+        }
+        has_country_modifier = christian_vii
+        year = 1768
+    }
+
+    option = {
+        name = "Employ him as a court Physician"
+        add_country_modifier = {
+            name = johann_struensee
+            duration = -1
+        }
+    }
+
+    option = {
+        name = "The King can rule by himself!"
+        prestige = -5
+    }
 }
 country_event = {
-	id = 176603
-	title = "Johann Struensee asassinated!"
-	desc = "EVTDESC176803"
-	fire_only_once = yes
-	picture = streusse
-	
-	trigger = {
-		OR = {
-			tag = DNN
-			tag = DEN
-		}
-		has_country_flag = struensee_reforms
-		has_country_modifier = johann_struensee
-		militancy = 4
-	}
-	
-	option = {
-		name = "Horrible!"
-		remove_country_modifier = johann_struensee
-	}
+    id = 176603
+    title = "Johann Struensee asassinated!"
+    desc = "EVTDESC176803"
+    fire_only_once = yes
+    picture = streusse
+
+    trigger = {
+        OR = {
+            tag = DNN
+            tag = DEN
+        }
+        has_country_flag = struensee_reforms
+        has_country_modifier = johann_struensee
+        militancy = 4
+    }
+
+    option = {
+        name = "Horrible!"
+        remove_country_modifier = johann_struensee
+    }
 }
 country_event = {
-	id = 176604
-	title = "Overthrow the King?"
-	desc = "EVTDESC176804"
-	fire_only_once = yes
-	major = yes 
-	
-	trigger = {
-		OR = {
-			tag = DNN
-			tag = DEN
-		}
-		has_country_modifier = christian_vii
-		NOT = { has_country_modifier = johann_struensee }
-		militancy = 5
-		year = 1769
-		NOT = {
-			government = democracy
-			government = presidential_dictatorship
-		}
-	}
-	
-	option = {
-		name = "We can't go on like this, let's attempt a coup!"
-		remove_country_modifier = christian_vii
-		country_event = 176605
-	}
-	
-	option = {
-		name = "It'd be a sin against the royal family!"
-	}
+    id = 176604
+    title = "Overthrow the King?"
+    desc = "EVTDESC176804"
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        OR = {
+            tag = DNN
+            tag = DEN
+        }
+        has_country_modifier = christian_vii
+        NOT = { has_country_modifier = johann_struensee }
+        militancy = 5
+        year = 1769
+        NOT = {
+            government = democracy
+            government = presidential_dictatorship
+        }
+    }
+
+    option = {
+        name = "We can't go on like this, let's attempt a coup!"
+        remove_country_modifier = christian_vii
+        country_event = 176605
+    }
+
+    option = {
+        name = "It'd be a sin against the royal family!"
+    }
 }
 country_event = {
-	id = 176605
-	title = "Question of Leadership"
-	desc = "EVTDESC176804"
-	is_triggered_only = yes
-	major = yes 
-	
-	option = {
-		name = "Invite another member of the Oldenburg House!"
-		prestige = 5
-	}
-	
-	option = {
-		name = "Offer the crown the the Swedish Monarch!"
-		SWE = {
-			create_vassal = DNN
-		}
-	}
-	
-	option = {
-		name = "Keep the Nobles in power."
-		social_reform = no_safety
-		add_country_modifier = {
-			name = clergy_and_nobility_domination
-			duration = -1
-		}
-		set_country_flag = clergy_and_nobility_domination
-		government = democracy
-		political_reform = landed_voting
-	}
-	
-	option = {
-		name = "Crown a Glucksburg dynasty member as King!"
-		prestige = 5
-	}
+    id = 176605
+    title = "Question of Leadership"
+    desc = "EVTDESC176804"
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = "Invite another member of the Oldenburg House!"
+        prestige = 5
+    }
+
+    option = {
+        name = "Offer the crown the the Swedish Monarch!"
+        SWE = {
+            create_vassal = DNN
+        }
+    }
+
+    option = {
+        name = "Keep the Nobles in power."
+        social_reform = no_safety
+        add_country_modifier = {
+            name = clergy_and_nobility_domination
+            duration = -1
+        }
+        set_country_flag = clergy_and_nobility_domination
+        government = democracy
+        political_reform = landed_voting
+    }
+
+    option = {
+        name = "Crown a Glucksburg dynasty member as King!"
+        prestige = 5
+    }
 }

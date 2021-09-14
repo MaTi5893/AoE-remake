@@ -1,159 +1,158 @@
 army = {
-	name = "Army of the Tokugawa Shogunate"
-	
-	leader = {
-		name = "Tokugawa Tsunayoshi"
-		date = 1836.1.1
-		type = land
-		personality = defence_2.1
-		background = attack_1.1
-		prestige = 0.1
-	
-	}
-	
-	location = 1650
-	regiment = {
-		name= "1.Edo"
-		type = irregular
-		home = 1650
-	}
+    name = "Army of the Tokugawa Shogunate"
 
-	regiment = {
-		name= "2.Edo"
-		type = irregular
-		home = 1649
-	}
+    leader = {
+        name = "Tokugawa Tsunayoshi"
+        date = 1836.1.1
+        type = land
+        personality = defence_2.1
+        background = attack_1.1
+        prestige = 0.1
 
-	regiment = {
-		name= "3.Edo"
-		type = irregular
-		home = 1652
-	}
+    }
 
-}
+    location = 1650
+    regiment = {
+        name= "1.Edo"
+        type = irregular
+        home = 1650
+    }
 
-army = {
-	name = "Army of Daimyo Mori"
-	location = 1640
-	regiment = {
-		name= "1.Choshu"
-		type = irregular
-		home = 1640
-	}
+    regiment = {
+        name= "2.Edo"
+        type = irregular
+        home = 1649
+    }
 
-	regiment = {
-		name= "2.Choshu"
-		type = irregular
-		home = 1638
-	}
-
-	regiment = {
-		name= "3.Choshu"
-		type = irregular
-		home = 1641
-	}
+    regiment = {
+        name= "3.Edo"
+        type = irregular
+        home = 1652
+    }
 
 }
 
 army = {
-	name = "Army of Daimyo Shimazu"
-	location = 1662
-	regiment = {
-		name= "1.1 Satsuma"
-		type = irregular
-		home = 1662
-	}
+    name = "Army of Daimyo Mori"
+    location = 1640
+    regiment = {
+        name= "1.Choshu"
+        type = irregular
+        home = 1640
+    }
 
-	regiment = {
-		name= "2.1 Satsuma"
-		type = irregular
-		home = 1660
-	}
+    regiment = {
+        name= "2.Choshu"
+        type = irregular
+        home = 1638
+    }
 
-	regiment = {
-		name= "3.1 Satsuma"
-		type = irregular
-		home = 1661
-	}
-
-}
-
-army = {
-	name = "Army of Daimyo Yamanuchi"
-	location = 1665
-	regiment = {
-		name= "1.Tosa"
-		type = irregular
-		home = 1665
-	}
-
-	regiment = {
-		name= "2.Tosa"
-		type = irregular
-		home = 1667
-	}
-
-	regiment = {
-		name= "3.Tosa"
-		type = irregular
-		home = 1666
-	}
+    regiment = {
+        name= "3.Choshu"
+        type = irregular
+        home = 1641
+    }
 
 }
 
 army = {
-	name = "Army of Daimyo Date"
-	location = 1668
-	regiment = {
-		name= "1.Sendai"
-		type = irregular
-		home = 1668
-	}
+    name = "Army of Daimyo Shimazu"
+    location = 1662
+    regiment = {
+        name= "1.1 Satsuma"
+        type = irregular
+        home = 1662
+    }
 
-	regiment = {
-		name= "2.Sendai"
-		type = irregular
-		home = 1673
-	}
+    regiment = {
+        name= "2.1 Satsuma"
+        type = irregular
+        home = 1660
+    }
 
-	regiment = {
-		name= "3.Sendai"
-		type = irregular
-		home = 1669
-	}
+    regiment = {
+        name= "3.1 Satsuma"
+        type = irregular
+        home = 1661
+    }
 
 }
 
 army = {
-	name = "Army of Daimyo Maeda"
-	location = 1646
-	regiment = {
-		name= "1.Kaga"
-		type = irregular
-		home = 1645
-	}
+    name = "Army of Daimyo Yamanuchi"
+    location = 1665
+    regiment = {
+        name= "1.Tosa"
+        type = irregular
+        home = 1665
+    }
 
-	regiment = {
-		name= "2.Kaga"
-		type = irregular
-		home = 1675
-	}
+    regiment = {
+        name= "2.Tosa"
+        type = irregular
+        home = 1667
+    }
 
-	regiment = {
-		name= "3.Kaga"
-		type = irregular
-		home = 1677
-	}
+    regiment = {
+        name= "3.Tosa"
+        type = irregular
+        home = 1666
+    }
+
+}
+
+army = {
+    name = "Army of Daimyo Date"
+    location = 1668
+    regiment = {
+        name= "1.Sendai"
+        type = irregular
+        home = 1668
+    }
+
+    regiment = {
+        name= "2.Sendai"
+        type = irregular
+        home = 1673
+    }
+
+    regiment = {
+        name= "3.Sendai"
+        type = irregular
+        home = 1669
+    }
+
+}
+
+army = {
+    name = "Army of Daimyo Maeda"
+    location = 1646
+    regiment = {
+        name= "1.Kaga"
+        type = irregular
+        home = 1645
+    }
+
+    regiment = {
+        name= "2.Kaga"
+        type = irregular
+        home = 1675
+    }
+
+    regiment = {
+        name= "3.Kaga"
+        type = irregular
+        home = 1677
+    }
 
 }
 
 navy = {
-	name = "Imperial Fleet"
-	location = 1657
-	ship = {
-		name= "1 Yusosentai"
-		type = clipper_transport
-	}
+    name = "Imperial Fleet"
+    location = 1657
+    ship = {
+        name= "1 Yusosentai"
+        type = clipper_transport
+    }
 
 }
-

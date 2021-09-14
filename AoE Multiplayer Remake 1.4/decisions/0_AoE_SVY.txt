@@ -1,5 +1,5 @@
-political_decisions = {	
-	become_piedmont = {
+political_decisions = {
+    become_piedmont = {
         picture = become_savoy
         potential = {
             tag = SVY
@@ -10,7 +10,7 @@ political_decisions = {
                     ai = yes
                 }
             }
-			exists = yes
+            exists = yes
         }
 
         allow = {
@@ -48,11 +48,11 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
-			add_core = 766
-			add_core = 765
-			add_core = 762
-			add_core = 764
-			add_core = 763
+            add_core = 766
+            add_core = 765
+            add_core = 762
+            add_core = 764
+            add_core = 763
             change_tag = SAR
             add_accepted_culture = south_italian
             any_pop = {
@@ -63,208 +63,208 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-	
-	become_savoy = {
-		picture = become_savoy
-		potential = {
-			tag = SAR
-			NOT = {
-				exists = SVY
-				owns = 765
-			}
-		}
 
-		allow = {
-			war = no
-			owns = 720
-			NOT = { owns = 765 }
-		}
+    become_savoy = {
+        picture = become_savoy
+        potential = {
+            tag = SAR
+            NOT = {
+                exists = SVY
+                owns = 765
+            }
+        }
 
-		effect = {
-			SAR = {
-				all_core = {
-					add_core = SVY
-					remove_core = SAR
-				}
-			}
-			change_tag = SVY
-			any_pop = {
-				limit = { has_pop_culture = north_italian }
-				militancy = -3
-			}
-		}
+        allow = {
+            war = no
+            owns = 720
+            NOT = { owns = 765 }
+        }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	kingdom_title = {
-		picture = crown
-		potential = {
-			OR = {
-			tag = SVY
-			tag = SAR
-			}
-			NOT = { has_country_flag = kingdom_title_troll }
-		}
+        effect = {
+            SAR = {
+                all_core = {
+                    add_core = SVY
+                    remove_core = SAR
+                }
+            }
+            change_tag = SVY
+            any_pop = {
+                limit = { has_pop_culture = north_italian }
+                militancy = -3
+            }
+        }
 
-		allow = {
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			war = no
-			OR = {
-				owns = 765
-				owns = 762
-			}
-		}
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = kingdom_title_troll
-			prestige = 25
-			any_pop = {
-				militancy = -3
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 762
-					}
-				}
-				owner = {
-					SYC = {
-						all_core = {
-							add_core = THIS
-						}
-					}
-				}
-			}
-		}
+    kingdom_title = {
+        picture = crown
+        potential = {
+            OR = {
+            tag = SVY
+            tag = SAR
+            }
+            NOT = { has_country_flag = kingdom_title_troll }
+        }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	emmanuel_admin_reform = {
-		picture = administration
-		potential = {
-			OR = {
-				tag = SVY
-				tag = SAR
-				AND = {
-					tag = ITA
-					has_country_flag = ita_svy
-					has_country_flag = ita_sar
-				}
-			}
-			NOT = { has_country_modifier = savoyard_law_code }
-		}
+        allow = {
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            war = no
+            OR = {
+                owns = 765
+                owns = 762
+            }
+        }
 
-		allow = {
-			rank = 10
-			war = no
-			has_country_modifier = charles_emmanuel
-		}
+        effect = {
+            set_country_flag = kingdom_title_troll
+            prestige = 25
+            any_pop = {
+                militancy = -3
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        owns = 762
+                    }
+                }
+                owner = {
+                    SYC = {
+                        all_core = {
+                            add_core = THIS
+                        }
+                    }
+                }
+            }
+        }
 
-		effect = {
-			prestige = 5
-			any_pop = {
-				limit = { has_pop_culture = north_italian }
-				militancy = -3
-			}
-			add_country_modifier = {
-				name = savoyard_law_code
-				duration = -1
-			}
-		}
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	emmanuel_mil_reform = {
-		picture = army_training
-		potential = {
-			OR = {
-				tag = SVY
-				tag = SAR
-				AND = {
-					tag = ITA
-					has_country_flag = ita_svy
-					has_country_flag = ita_sar
-				}
-			}
-			PRU = {
-				has_country_modifier = frederick_grosse
-			}
-			NOT = { has_country_modifier = fredrican_army_model }
-		}
+    emmanuel_admin_reform = {
+        picture = administration
+        potential = {
+            OR = {
+                tag = SVY
+                tag = SAR
+                AND = {
+                    tag = ITA
+                    has_country_flag = ita_svy
+                    has_country_flag = ita_sar
+                }
+            }
+            NOT = { has_country_modifier = savoyard_law_code }
+        }
 
-		allow = {
-			relation = {
-				who = PRU
-				value = 100
-			}
-			war = no
-			has_country_modifier = charles_emmanuel
-		}
+        allow = {
+            rank = 10
+            war = no
+            has_country_modifier = charles_emmanuel
+        }
 
-		effect = {
-			prestige = 5
-			add_country_modifier = {
-				name = fredrican_army_model
-				duration = 18250
-			}
-		}
+        effect = {
+            prestige = 5
+            any_pop = {
+                limit = { has_pop_culture = north_italian }
+                militancy = -3
+            }
+            add_country_modifier = {
+                name = savoyard_law_code
+                duration = -1
+            }
+        }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	dispute_spanish_succession_svy = {
-		picture = crown
-		potential = {
-			has_global_flag = spanish_succesion_crisis
-			tag = SVY
-			NOT = { has_country_flag = disputed_spanish_succession }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			random_country = {
-				limit = {
-					primary_culture = spanish
-					OR = {
-						tag = SPA
-						tag = SPC
-					}
-					exists = yes
-				}
-				relation = {
-					who = THIS
-					value = -100
-				}
-			}
-			random_country = {
-				limit = {
-					tag = BOR
-					exists = SPC
-				}
-				relation = {
-					who = THIS
-					value = -100
-				}
-			}
-			add_core = 722
-			add_core = 723
-			badboy = 5
-			set_country_flag = disputed_spanish_succession
-		}
-	}
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    emmanuel_mil_reform = {
+        picture = army_training
+        potential = {
+            OR = {
+                tag = SVY
+                tag = SAR
+                AND = {
+                    tag = ITA
+                    has_country_flag = ita_svy
+                    has_country_flag = ita_sar
+                }
+            }
+            PRU = {
+                has_country_modifier = frederick_grosse
+            }
+            NOT = { has_country_modifier = fredrican_army_model }
+        }
+
+        allow = {
+            relation = {
+                who = PRU
+                value = 100
+            }
+            war = no
+            has_country_modifier = charles_emmanuel
+        }
+
+        effect = {
+            prestige = 5
+            add_country_modifier = {
+                name = fredrican_army_model
+                duration = 18250
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    dispute_spanish_succession_svy = {
+        picture = crown
+        potential = {
+            has_global_flag = spanish_succesion_crisis
+            tag = SVY
+            NOT = { has_country_flag = disputed_spanish_succession }
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            random_country = {
+                limit = {
+                    primary_culture = spanish
+                    OR = {
+                        tag = SPA
+                        tag = SPC
+                    }
+                    exists = yes
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = BOR
+                    exists = SPC
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+            }
+            add_core = 722
+            add_core = 723
+            badboy = 5
+            set_country_flag = disputed_spanish_succession
+        }
+    }
 }

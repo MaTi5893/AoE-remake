@@ -1,114 +1,114 @@
 ##death of charles II
 country_event = {
-	id = 93000
-	title = "EVTNAME93000" 
-	desc = "EVTDESC93000"
-	major = yes
-	news = yes
-	news_desc_long = "EVTDESC93000_NEWS_LONG"
-	news_desc_medium = "EVTDESC93000_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC93000_NEWS_SHORT"
-	picture = "spanish_king"
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = SPA
-		year = 1701
-		exists = yes
-		BOR = { exists = yes }
-		AUS = { exists = yes }
-		NOT = {
-			OR = {
-				has_global_flag = support_bourbon_heir_spa
-				has_global_flag = support_habsburg_heir_spa
-				has_global_flag = bastard_child						 
-			}
-		}
-		NOT = { has_global_flag = disabled_succession_wars }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		set_global_flag = spanish_succesion_crisis
-	}
-	
-	option = { #Choose Bourbon Heir
-		name = "EVTNAME93000OPTA"
-		set_global_flag = support_bourbon_heir_spa
-		create_alliance = BOR
-		AUS = {
-			casus_belli = {
-			target = THIS
-			type = dispute_succession_aus
-			months = 12
-			}
-		}
-		all_core = {
-			add_core = SPC
-			remove_core = SPA
-		}
-		change_tag = SPC
-		relation = {
-			who = BOR
-			value = 300
-		}
-		relation = {
-			who = AUS
-			value = -200
-		}
-		define_general = {
-			name = "Philip V Bourbon"
-			personality = stalwart
-			background = brownnoser
-		}
-		ai_chance = {
-			factor = 0.85
-		}
-	}
-	
-	option = { #Choose Habsburg Heir
-		name = "EVTNAME93000OPTB"
-		set_global_flag = support_habsburg_heir_spa
-		create_alliance = AUS
-		BOR = {
-			casus_belli = {
-			target = THIS
-			type = dispute_succession_bor
-			months = 12
-			}
-		}
-		relation = {
-			who = BOR
-			value = -200
-		}
-		relation = {
-			who = AUS
-			value = 300
-		}
-		define_general = {
-			name = "Leopold I Habsburg"
-			personality = confident
-			background = cursed_luck
-		}
-	    ai_chance = {
-			factor = 0.15
-		}
-	}
+    id = 93000
+    title = "EVTNAME93000"
+    desc = "EVTDESC93000"
+    major = yes
+    news = yes
+    news_desc_long = "EVTDESC93000_NEWS_LONG"
+    news_desc_medium = "EVTDESC93000_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC93000_NEWS_SHORT"
+    picture = "spanish_king"
 
-	#option = { #Bastard Child
-	#	name = "Surely there must be a bastard child of some sort! Even illegitimacy is better than subservience."
-	#	set_global_flag = spanish_succesion_resolved
-	#	set_global_flag = bastard_child
-	#	add_country_modifier = {
-	#		name = illegitimate_heir
-	#		duration = 10950
-	#	}
-	#	 ai_chance = {
-	#		factor = 0
-	#	}
-	#}
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPA
+        year = 1701
+        exists = yes
+        BOR = { exists = yes }
+        AUS = { exists = yes }
+        NOT = {
+            OR = {
+                has_global_flag = support_bourbon_heir_spa
+                has_global_flag = support_habsburg_heir_spa
+                has_global_flag = bastard_child
+            }
+        }
+        NOT = { has_global_flag = disabled_succession_wars }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_global_flag = spanish_succesion_crisis
+    }
+
+    option = { #Choose Bourbon Heir
+        name = "EVTNAME93000OPTA"
+        set_global_flag = support_bourbon_heir_spa
+        create_alliance = BOR
+        AUS = {
+            casus_belli = {
+            target = THIS
+            type = dispute_succession_aus
+            months = 12
+            }
+        }
+        all_core = {
+            add_core = SPC
+            remove_core = SPA
+        }
+        change_tag = SPC
+        relation = {
+            who = BOR
+            value = 300
+        }
+        relation = {
+            who = AUS
+            value = -200
+        }
+        define_general = {
+            name = "Philip V Bourbon"
+            personality = stalwart
+            background = brownnoser
+        }
+        ai_chance = {
+            factor = 0.85
+        }
+    }
+
+    option = { #Choose Habsburg Heir
+        name = "EVTNAME93000OPTB"
+        set_global_flag = support_habsburg_heir_spa
+        create_alliance = AUS
+        BOR = {
+            casus_belli = {
+            target = THIS
+            type = dispute_succession_bor
+            months = 12
+            }
+        }
+        relation = {
+            who = BOR
+            value = -200
+        }
+        relation = {
+            who = AUS
+            value = 300
+        }
+        define_general = {
+            name = "Leopold I Habsburg"
+            personality = confident
+            background = cursed_luck
+        }
+        ai_chance = {
+            factor = 0.15
+        }
+    }
+
+    #option = { #Bastard Child
+    #    name = "Surely there must be a bastard child of some sort! Even illegitimacy is better than subservience."
+    #    set_global_flag = spanish_succesion_resolved
+    #    set_global_flag = bastard_child
+    #    add_country_modifier = {
+    #        name = illegitimate_heir
+    #        duration = 10950
+    #    }
+    #     ai_chance = {
+    #        factor = 0
+    #    }
+    #}
 }

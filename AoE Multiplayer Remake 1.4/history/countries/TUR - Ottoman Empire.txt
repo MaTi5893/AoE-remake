@@ -40,18 +40,18 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = closed_borders
 centralization = regionalism
-colonial_policy = settlement 
+colonial_policy = settlement
 
 
 ruling_party = "otto_nobility"
 upper_house = {
-	fascist = 0
-	liberal = 25
-	conservative = 60
-	reactionary = 15
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 25
+    conservative = 60
+    reactionary = 15
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country
@@ -94,4 +94,3 @@ consciousness = 1
 nonstate_consciousness = 0
 
 oob = "TUR_oob.txt"
-

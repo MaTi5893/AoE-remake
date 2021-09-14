@@ -47,13 +47,13 @@ set_country_flag = protestant_country
 
 ruling_party = "Dutch States Party"
 upper_house = {
-	fascist = 0
-	liberal = 40
-	conservative = 40
-	reactionary = 20
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 40
+    conservative = 40
+    reactionary = 20
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 decision = literacy_NET
@@ -61,12 +61,12 @@ decision = merchant_republic_setup
 decision = net_setup
 
 govt_flag = {
-	government = absolute_monarchy
-	flag = democracy
+    government = absolute_monarchy
+    flag = democracy
 }
 govt_flag = {
-	government = proletarian_dictatorship
-	flag = dominion
+    government = proletarian_dictatorship
+    flag = dominion
 }
 # Technologies
 post_napoleonic_thought = 1
@@ -104,6 +104,6 @@ nonstate_consciousness = 1
 oob = "NET_oob.txt"
 
 foreign_investment = {
-	GNG = 5000
-	SAT = 10000
+    GNG = 5000
+    SAT = 10000
 }

@@ -1,252 +1,252 @@
 country_event = {
-	id = 172100
-	title = "Age of Liberty in Sweden"
-	desc = "EVTDESC172100"
-	major = yes
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	trigger = {
-		owns = 322
-		322 = { is_capital = yes }
-		war = no
-		OR = {
-			AND = {
-				NOT = {	owns = 349 }
-				NOT = {	owns = 350 }
-				NOT = {	owns = 351 }
-				NOT = {	owns = 352 }
-				NOT = {	owns = 353 }
-				NOT = {	owns = 994 }
-				NOT = {	owns = 354 }
-				NOT = {	owns = 996 }
-				NOT = {	owns = 355 }
-			}
-			government = hms_government	
-		}
-		NOT = {
-			has_country_modifier = gustav_iii
-		}
-		NOT = {
-			has_country_flag = gustav_assasinated
-		}
-	}
-	
-	option = {
-		name = "Let our nation be guided towards prosperity!"
-		prestige = 15
-		government = hms_government
-		political_reform = wealth_weighted_voting
-		political_reform = state_equal_weight
-		political_reform = yes_meeting
-		political_reform = censored_press
-		political_reform = non_secret_ballots
-		social_reform = no_safety
-		social_reform = trinket_pensions
-		set_country_flag = age_of_liberalism
-		add_country_modifier = {
-			name = new_constitution
-			duration = 1825
-		}
-	}
+    id = 172100
+    title = "Age of Liberty in Sweden"
+    desc = "EVTDESC172100"
+    major = yes
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    trigger = {
+        owns = 322
+        322 = { is_capital = yes }
+        war = no
+        OR = {
+            AND = {
+                NOT = {    owns = 349 }
+                NOT = {    owns = 350 }
+                NOT = {    owns = 351 }
+                NOT = {    owns = 352 }
+                NOT = {    owns = 353 }
+                NOT = {    owns = 994 }
+                NOT = {    owns = 354 }
+                NOT = {    owns = 996 }
+                NOT = {    owns = 355 }
+            }
+            government = hms_government
+        }
+        NOT = {
+            has_country_modifier = gustav_iii
+        }
+        NOT = {
+            has_country_flag = gustav_assasinated
+        }
+    }
+
+    option = {
+        name = "Let our nation be guided towards prosperity!"
+        prestige = 15
+        government = hms_government
+        political_reform = wealth_weighted_voting
+        political_reform = state_equal_weight
+        political_reform = yes_meeting
+        political_reform = censored_press
+        political_reform = non_secret_ballots
+        social_reform = no_safety
+        social_reform = trinket_pensions
+        set_country_flag = age_of_liberalism
+        add_country_modifier = {
+            name = new_constitution
+            duration = 1825
+        }
+    }
 }
 
 country_event = {
-	id = 1721001
-	title = "Swedish Revolution"
-	desc = "EVTDESC1721001"
-	major = yes
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	trigger = {
-		war = no
-		year = 1772
-		owns = 322
-		322 = { is_capital = yes }
-		OR = {
-			average_consciousness = 5
-			average_militancy = 4
-		}
-		NOT = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-		}
-		NOT = { has_country_modifier = gustav_iii }
-	}
-	
-	option = {
-		name = "We are willing to sacrifice both blood and life in Your Majesty's service!"
-		government = prussian_constitutionalism
-		political_reform = landed_voting
-		political_reform = appointed
-		political_reform = harassment
-		prestige = 15
-		add_country_modifier = {
-			name =	gustav_iii
-			duration = -1
-		}
-		add_country_modifier = {
-			name =	liberal_reaction
-			duration = 3650
-		}
-	}
+    id = 1721001
+    title = "Swedish Revolution"
+    desc = "EVTDESC1721001"
+    major = yes
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    trigger = {
+        war = no
+        year = 1772
+        owns = 322
+        322 = { is_capital = yes }
+        OR = {
+            average_consciousness = 5
+            average_militancy = 4
+        }
+        NOT = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+        }
+        NOT = { has_country_modifier = gustav_iii }
+    }
+
+    option = {
+        name = "We are willing to sacrifice both blood and life in Your Majesty's service!"
+        government = prussian_constitutionalism
+        political_reform = landed_voting
+        political_reform = appointed
+        political_reform = harassment
+        prestige = 15
+        add_country_modifier = {
+            name =    gustav_iii
+            duration = -1
+        }
+        add_country_modifier = {
+            name =    liberal_reaction
+            duration = 3650
+        }
+    }
 }
 country_event = {
-	id = 1721003
-	title = "Gustav the III"
-	desc = "EVTDESC1721003"
-	major = yes
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	trigger = {
-		war = no
-		year = 1772
-		owns = 322
-		322 = { is_capital = yes }
-		OR = {
-			average_consciousness = 5
-			average_militancy = 4
-		}
-		NOT = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-		}
-		NOT = { has_country_modifier = gustav_iii }
-	}
-	
-	option = {
-		name = "Long live the king!"
-		prestige = 15
-		add_country_modifier = {
-			name =	gustav_iii
-			duration = -1
-		}
-		add_country_modifier = {
-			name =	liberal_reaction
-			duration = 3650
-		}
-	}
+    id = 1721003
+    title = "Gustav the III"
+    desc = "EVTDESC1721003"
+    major = yes
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    trigger = {
+        war = no
+        year = 1772
+        owns = 322
+        322 = { is_capital = yes }
+        OR = {
+            average_consciousness = 5
+            average_militancy = 4
+        }
+        NOT = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+        }
+        NOT = { has_country_modifier = gustav_iii }
+    }
+
+    option = {
+        name = "Long live the king!"
+        prestige = 15
+        add_country_modifier = {
+            name =    gustav_iii
+            duration = -1
+        }
+        add_country_modifier = {
+            name =    liberal_reaction
+            duration = 3650
+        }
+    }
 }
 country_event = {
-	id = 1721002
-	title = "Our King Assasinated!"
-	desc = "EVTDESC1721002"
-	picture = assasination
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	trigger = {
-		year = 1792
-		owns = 322
-		322 = { is_capital = yes }
-		average_militancy = 6
-		has_country_flag = gustav_iii_reforms
-		has_country_modifier = gustav_iii
-	}
-	
-	option = {
-		name = "Return power to the rikstag"
-		government = hms_government
-		prestige = 15
-		political_reform = wealth_weighted_voting
-		political_reform = state_equal_weight
-		political_reform = yes_meeting
-		political_reform = censored_press
-		political_reform = non_secret_ballots
-		social_reform = no_safety
-		social_reform = trinket_pensions
-		add_country_modifier = {
-			name = new_constitution
-			duration = 1825
-		}
-		remove_country_modifier = gustav_iii
-	}
-	option = {
-		name = "Continue Gustav's Autocracy"
-		remove_country_modifier = gustav_iii
-		add_country_modifier = {
-			name = liberal_agitation
-			duration = 1825
-		}
-		prestige = -15
-	}
+    id = 1721002
+    title = "Our King Assasinated!"
+    desc = "EVTDESC1721002"
+    picture = assasination
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    trigger = {
+        year = 1792
+        owns = 322
+        322 = { is_capital = yes }
+        average_militancy = 6
+        has_country_flag = gustav_iii_reforms
+        has_country_modifier = gustav_iii
+    }
+
+    option = {
+        name = "Return power to the rikstag"
+        government = hms_government
+        prestige = 15
+        political_reform = wealth_weighted_voting
+        political_reform = state_equal_weight
+        political_reform = yes_meeting
+        political_reform = censored_press
+        political_reform = non_secret_ballots
+        social_reform = no_safety
+        social_reform = trinket_pensions
+        add_country_modifier = {
+            name = new_constitution
+            duration = 1825
+        }
+        remove_country_modifier = gustav_iii
+    }
+    option = {
+        name = "Continue Gustav's Autocracy"
+        remove_country_modifier = gustav_iii
+        add_country_modifier = {
+            name = liberal_agitation
+            duration = 1825
+        }
+        prestige = -15
+    }
 }
 country_event = {
-	id = 1721005
-	title = "The Great Northern War"
-	desc = "EVTDESC1721005"
-	major = yes
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	trigger = {
-		tag = SWE
-		government = absolute_monarchy
-		OR = {
-			AND = {
-				war_with = RUS
-				OR = {
-					war_with = DNN
-					war_with = PLC
-				}
-			}
-			AND = {
-				war_with = DNN
-				war_with = PLC
-			}
-		}
-	}
-	
-	option = {
-		name = "To war!"
-		prestige = 25
-		set_global_flag = great_northern_war
-		add_country_modifier = {
-			name = fanatic_army
-			duration = 3650
-		}
-	}
+    id = 1721005
+    title = "The Great Northern War"
+    desc = "EVTDESC1721005"
+    major = yes
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    trigger = {
+        tag = SWE
+        government = absolute_monarchy
+        OR = {
+            AND = {
+                war_with = RUS
+                OR = {
+                    war_with = DNN
+                    war_with = PLC
+                }
+            }
+            AND = {
+                war_with = DNN
+                war_with = PLC
+            }
+        }
+    }
+
+    option = {
+        name = "To war!"
+        prestige = 25
+        set_global_flag = great_northern_war
+        add_country_modifier = {
+            name = fanatic_army
+            duration = 3650
+        }
+    }
 }
 country_event = {
-	id = 1721006
-	title = "A puppet King installed!"
-	desc = "EVTDESC1721006"
-	picture = leszczynski
-	is_triggered_only = yes
-	
-	option = {
-		name = "We will accept his rule, but resist the Swedes"
-		release_vassal = SAX
-		set_country_flag = leszcynski_rule
-		war_exhaustion = -5
-		SAX = {
-			casus_belli = {
-				target = THIS
-				type = make_puppet
-				months = 12
-			}
-		}
-	}
-	
-	option = {
-		name = "We stay loyal to the Wettins!"
-		war_exhaustion = 5
-	}
+    id = 1721006
+    title = "A puppet King installed!"
+    desc = "EVTDESC1721006"
+    picture = leszczynski
+    is_triggered_only = yes
+
+    option = {
+        name = "We will accept his rule, but resist the Swedes"
+        release_vassal = SAX
+        set_country_flag = leszcynski_rule
+        war_exhaustion = -5
+        SAX = {
+            casus_belli = {
+                target = THIS
+                type = make_puppet
+                months = 12
+            }
+        }
+    }
+
+    option = {
+        name = "We stay loyal to the Wettins!"
+        war_exhaustion = 5
+    }
 }

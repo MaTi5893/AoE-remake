@@ -1,50 +1,50 @@
 battleship = { #Seventy-Four
-	icon = 21
-	naval_icon = 10
-	
-	type = naval
-	sprite = Manowar
-	unit_type = big_ship
-	capital = yes
-	active = no
-	floating_flag = yes
-	colonial_points = 30
-	
-	#Core Abilities
-	priority = 40
-	max_strength = 100
-	default_organisation = 40
-	maximum_speed = 12
-	weighted_value = 50.0
-	can_build_overseas = no
+    icon = 21
+    naval_icon = 10
+
+    type = naval
+    sprite = Manowar
+    unit_type = big_ship
+    capital = yes
+    active = no
+    floating_flag = yes
+    colonial_points = 30
+
+    #Core Abilities
+    priority = 40
+    max_strength = 100
+    default_organisation = 40
+    maximum_speed = 12
+    weighted_value = 50.0
+    can_build_overseas = no
 
 
-	#Building Costs
-	build_time = 360
-	build_cost = {
-		clipper_convoy = 45
-		artillery = 25
-		canned_food = 10
-		explosives = 5
-	}
-	min_port_level = 4
-	limit_per_port = 4
-	supply_consumption_score = 50
-	
-	supply_consumption = 1.0
-	supply_cost = {
-		clipper_convoy = 2.5
-		artillery = 0.6
-		canned_food = 0.8
-		explosives = 0.1
-		coal = 2.5
-		ammunition = 0.6
-		tobacco = 1.6
-	}
-	
-	#Naval Abilties
-	hull = 30
-	gun_power = 25
-	fire_range = 0.58
-	evasion = 0
+    #Building Costs
+    build_time = 360
+    build_cost = {
+        clipper_convoy = 45
+        artillery = 25
+        canned_food = 10
+        explosives = 5
+    }
+    min_port_level = 4
+    limit_per_port = 4
+    supply_consumption_score = 50
+
+    supply_consumption = 1.0
+    supply_cost = {
+        clipper_convoy = 2.5
+        artillery = 0.6
+        canned_food = 0.8
+        explosives = 0.1
+        coal = 2.5
+        ammunition = 0.6
+        tobacco = 1.6
+    }
+
+    #Naval Abilties
+    hull = 30
+    gun_power = 25
+    fire_range = 0.58
+    evasion = 0
 }

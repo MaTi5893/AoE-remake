@@ -1,253 +1,253 @@
 political_decisions = {
-	
-	form_portugal_brazil = {
-		picture = flag_por_bra
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = form_portugal_brazil }
-			BRZ = {
-				exists = no
-			}
-			exists = yes
-		}
-		
-		allow = {
-			has_country_flag = moved_capital_to_brazil
-			PBZ = {
-				exists = no
-			}
-		}
-		
-		effect = {
-			set_country_flag = form_portugal_brazil
-			POR = {
-				all_core = {
-					add_core = UPB
-					remove_core = POR
-				}
-			}
-			PBZ = {
-				all_core = {
-					add_core = UPB
-				}
-			}
-			change_tag = UPB
-			add_accepted_culture = brazilian
-			prestige = 5
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	move_capital_to_brazil = {
-		picture = brasil
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = moved_capital_to_brazil }
-			PBZ = {
-				vassal_of = POR
-				ai = yes
-			}
-			exists = yes
-		}		
-		allow = {
-			OR = {
-				AND = {
-					capital_scope = {
-						NOT = {
-							controlled_by = THIS
-						}
-					}
-					war_exhaustion = 40
-					war = yes
-				}
-				AND = {
-					state_n_government = 1
-					war = no
-					ai = no
-					all_core = {
-						owned_by = THIS
-					}
-				}
-			}
-		}
-		
-		effect = {
-			inherit = PBZ
-			capital = 2447
-			set_country_flag = moved_capital_to_brazil		
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	construct_the_palace_convent = {
-		picture = palace_convent
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = constructed_the_palace_convent }
-			exists = yes
-		}
-		
-		allow = {
-			realism = 1
-			money = 20000
-		}
-		
-		effect = {
-			treasury = -20000
-			prestige = 45
-			set_country_flag = constructed_the_palace_convent
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	create_monopoly_companies_of_commerce = {
-		picture = trade_center
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = created_monopoly_companies_of_commerce }
-			PBZ = {
-				exists = yes
-				vassal_of = POR
-			}
-			exists = yes
-		}
-		
-		allow = {
-			state_n_government = 1
-			business_regulations = 1
-		}
-		
-		effect = {
-			set_country_flag = created_monopoly_companies_of_commerce
-			PBZ = {
-				country_event = 114308
-			}
-			add_country_modifier = {
-				name = monopoly_companies_of_commerce
-				duration = 7300
-			}
-			country_event = 114308
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	expulsion_of_the_jesuits = {
-		picture = jesuits
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = expulsion_of_the_jesuits }
-			exists = yes
-		}
-		
-		allow = {
-			NOT = {
-				OR = {
-					wage_reform = no_minimum_wage
-					wage_reform = trinket_wage
-				}
-			}
-			ruling_party_ideology = reactionary
-			PBZ = {
-				vassal_of = THIS
-				exists = yes
-			}
-			year = 1759
-		}
-		
-		effect = {
-			set_country_flag = expulsion_of_the_jesuits
-			treasury = 100000
-			country_event = 114309
-			PBZ = {
-				country_event = 114309
-			}
-			any_owned = {
-				limit = {
-					owner = {
-						wage_reform = low_minimum_wage
-					}
-				}
-				owner = {
-					social_reform = acceptable_minimum_wage
-				}
-			}
-			any_owned = {
-				limit = {
-					owner = {
-						wage_reform = acceptable_minimum_wage
-					}
-				}
-				owner = {
-					social_reform = good_minimum_wage
-				}
-			}
-			PAP = {
-				relation = {
-					value = -150
-					who = THIS
-				}
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	pombaline_economic_reforms = {
-		picture = pombal
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = pombaline_economic_reforms }
-			exists = yes
-		}
-		
-		allow = {
-			has_country_modifier = marquis_pombal
-			trade_policy = protectionism
-		}
-		
-		effect = {
-			set_country_flag = pombaline_economic_reforms
-			add_country_modifier = {
-				name = pombaline_economic_reform
-				duration = -1
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	portuguese_zanzibar = {
-		picture = zanzibar_protectorate
-		potential = {
-			tag = POR
-			NOT = { has_country_flag = portuzanzi }
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				AND = {
-					is_greater_power = yes
-					is_sphere_leader_of = OMA
-					OMA = {
-						owns = 2048
-					}
-				}
-				owns = 2060
-			}
-		}
-		
-		effect = {
-			set_country_flag = portuzanzi
-			POR = {
-				country_event = 114310
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+
+    form_portugal_brazil = {
+        picture = flag_por_bra
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = form_portugal_brazil }
+            BRZ = {
+                exists = no
+            }
+            exists = yes
+        }
+
+        allow = {
+            has_country_flag = moved_capital_to_brazil
+            PBZ = {
+                exists = no
+            }
+        }
+
+        effect = {
+            set_country_flag = form_portugal_brazil
+            POR = {
+                all_core = {
+                    add_core = UPB
+                    remove_core = POR
+                }
+            }
+            PBZ = {
+                all_core = {
+                    add_core = UPB
+                }
+            }
+            change_tag = UPB
+            add_accepted_culture = brazilian
+            prestige = 5
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    move_capital_to_brazil = {
+        picture = brasil
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = moved_capital_to_brazil }
+            PBZ = {
+                vassal_of = POR
+                ai = yes
+            }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                AND = {
+                    capital_scope = {
+                        NOT = {
+                            controlled_by = THIS
+                        }
+                    }
+                    war_exhaustion = 40
+                    war = yes
+                }
+                AND = {
+                    state_n_government = 1
+                    war = no
+                    ai = no
+                    all_core = {
+                        owned_by = THIS
+                    }
+                }
+            }
+        }
+
+        effect = {
+            inherit = PBZ
+            capital = 2447
+            set_country_flag = moved_capital_to_brazil
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    construct_the_palace_convent = {
+        picture = palace_convent
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = constructed_the_palace_convent }
+            exists = yes
+        }
+
+        allow = {
+            realism = 1
+            money = 20000
+        }
+
+        effect = {
+            treasury = -20000
+            prestige = 45
+            set_country_flag = constructed_the_palace_convent
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    create_monopoly_companies_of_commerce = {
+        picture = trade_center
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = created_monopoly_companies_of_commerce }
+            PBZ = {
+                exists = yes
+                vassal_of = POR
+            }
+            exists = yes
+        }
+
+        allow = {
+            state_n_government = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_country_flag = created_monopoly_companies_of_commerce
+            PBZ = {
+                country_event = 114308
+            }
+            add_country_modifier = {
+                name = monopoly_companies_of_commerce
+                duration = 7300
+            }
+            country_event = 114308
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    expulsion_of_the_jesuits = {
+        picture = jesuits
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = expulsion_of_the_jesuits }
+            exists = yes
+        }
+
+        allow = {
+            NOT = {
+                OR = {
+                    wage_reform = no_minimum_wage
+                    wage_reform = trinket_wage
+                }
+            }
+            ruling_party_ideology = reactionary
+            PBZ = {
+                vassal_of = THIS
+                exists = yes
+            }
+            year = 1759
+        }
+
+        effect = {
+            set_country_flag = expulsion_of_the_jesuits
+            treasury = 100000
+            country_event = 114309
+            PBZ = {
+                country_event = 114309
+            }
+            any_owned = {
+                limit = {
+                    owner = {
+                        wage_reform = low_minimum_wage
+                    }
+                }
+                owner = {
+                    social_reform = acceptable_minimum_wage
+                }
+            }
+            any_owned = {
+                limit = {
+                    owner = {
+                        wage_reform = acceptable_minimum_wage
+                    }
+                }
+                owner = {
+                    social_reform = good_minimum_wage
+                }
+            }
+            PAP = {
+                relation = {
+                    value = -150
+                    who = THIS
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    pombaline_economic_reforms = {
+        picture = pombal
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = pombaline_economic_reforms }
+            exists = yes
+        }
+
+        allow = {
+            has_country_modifier = marquis_pombal
+            trade_policy = protectionism
+        }
+
+        effect = {
+            set_country_flag = pombaline_economic_reforms
+            add_country_modifier = {
+                name = pombaline_economic_reform
+                duration = -1
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    portuguese_zanzibar = {
+        picture = zanzibar_protectorate
+        potential = {
+            tag = POR
+            NOT = { has_country_flag = portuzanzi }
+            exists = yes
+        }
+
+        allow = {
+            OR = {
+                AND = {
+                    is_greater_power = yes
+                    is_sphere_leader_of = OMA
+                    OMA = {
+                        owns = 2048
+                    }
+                }
+                owns = 2060
+            }
+        }
+
+        effect = {
+            set_country_flag = portuzanzi
+            POR = {
+                country_event = 114310
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }

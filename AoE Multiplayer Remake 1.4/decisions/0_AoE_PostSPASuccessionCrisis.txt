@@ -1,82 +1,82 @@
 political_decisions = {
-	violate_pragmatic_sanction = {
-		picture = austria_coa
-		potential = {
-			has_country_flag = accepted_sanction
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			capital_scope = {
-				continent = europe
-			}
-			NOT = { has_country_flag = disputed_austrian_succ }
-			AUS = { has_country_modifier = maria_theresa }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_country_flag = disputed_austrian_succ
-			clr_country_flag = accepted_sanction
-			casus_belli = {
-				target = AUS
-				type = acquire_state
-				months = 12
-			}
-			badboy = 6
-			relation = {
-				who = AUS
-				value = -100
-			}
-		}
-	}
-	
-	denauce_maria_theresa = {
-		picture = austria_coa
-		potential = {
-			has_country_flag = refused_sanction
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			OR = {
-			tag = BOR
-			tag = FSU
-			}
-			NOT = { has_global_flag = disputed_austrian_succ }
-			AUS = { has_country_modifier = maria_theresa }
-			NOT = { has_country_flag = accepted_sanction }
-			has_global_flag = austrian_succession_crisis
-		}
-		allow = {
-			war = no
-			NOT = {
-				relation = {
-					who = AUS
-					value = 75
-				}
-			}
-		}
-		effect = {
-			set_global_flag = disputed_austrian_succ
-			relation = {
-				who = AUS
-				value = -100
-			}
-			BOR = {
-				casus_belli = {
-					target = AUS
-					type = dismantle_hre
-					months = 12
-				}
-				casus_belli = {
-					target = AUS
-					type = acquire_state
-					months = 12
-				}
-			}
-			badboy = 5
-		}
-	}
+    violate_pragmatic_sanction = {
+        picture = austria_coa
+        potential = {
+            has_country_flag = accepted_sanction
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            capital_scope = {
+                continent = europe
+            }
+            NOT = { has_country_flag = disputed_austrian_succ }
+            AUS = { has_country_modifier = maria_theresa }
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            set_country_flag = disputed_austrian_succ
+            clr_country_flag = accepted_sanction
+            casus_belli = {
+                target = AUS
+                type = acquire_state
+                months = 12
+            }
+            badboy = 6
+            relation = {
+                who = AUS
+                value = -100
+            }
+        }
+    }
+
+    denauce_maria_theresa = {
+        picture = austria_coa
+        potential = {
+            has_country_flag = refused_sanction
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            OR = {
+            tag = BOR
+            tag = FSU
+            }
+            NOT = { has_global_flag = disputed_austrian_succ }
+            AUS = { has_country_modifier = maria_theresa }
+            NOT = { has_country_flag = accepted_sanction }
+            has_global_flag = austrian_succession_crisis
+        }
+        allow = {
+            war = no
+            NOT = {
+                relation = {
+                    who = AUS
+                    value = 75
+                }
+            }
+        }
+        effect = {
+            set_global_flag = disputed_austrian_succ
+            relation = {
+                who = AUS
+                value = -100
+            }
+            BOR = {
+                casus_belli = {
+                    target = AUS
+                    type = dismantle_hre
+                    months = 12
+                }
+                casus_belli = {
+                    target = AUS
+                    type = acquire_state
+                    months = 12
+                }
+            }
+            badboy = 5
+        }
+    }
 ]

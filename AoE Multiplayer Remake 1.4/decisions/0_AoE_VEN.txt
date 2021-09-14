@@ -2,483 +2,483 @@ political_decisions = {
 
 ###Venice's Expansion###
 
-	the_future_of_venice = {
-		picture = venetian_ambition
-		potential = {
-			tag = VEN
-			NOT = { has_country_flag = venice_expansion }
-			exists = yes
-		}
-			
-		allow = {
-			war = no
-			state_n_government = 1
-			is_secondary_power = yes
-		}
-		
-		effect = {
-			set_country_flag = the_future_of_venice_event
-			set_country_flag = venice_expansion
-			country_event = 712340
-			badboy = 6
-			
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	unto_emilia-romagna = {
-		picture = emilia-romagna
-		potential = {
-			has_country_flag = into_italy
-			NOT = { has_country_flag = emilia_romagna_done }
-			exists = yes
-		}
-		
-		allow = {			
-			collectivist_theory = 1
-			war = no
-			is_independant = yes
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-		}
-		
-		effect = {
-			set_country_flag = emilia_romagna_done
-			738 = { 
-				add_core = THIS 
-			}	#parma
-			739 = {
-				add_core = THIS 
-			}	#Modena
-			741 = {
-			add_core = THIS 
-			}	#Bologna
-			742 = {
-				add_core = THIS 
-			}	#Ferrara
-			743 = {
-				add_core = THIS 
-			}	#Ravenna
-			#3372 = {
-			#	add_core = THIS
-			#}	#Mantua
-			badboy = 2
-			poor_strata = {	consciousness = -1.5 }
-			middle_strata = {
-				consciousness = 2
-				militancy = 2
-			}
-			rich_strata = { militancy = -1.5 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	demand_milan = {
-		picture = lombardy
-		potential = {
-			has_country_flag = into_italy
-			has_country_flag = emilia_romagna_done
-			NOT = { has_country_flag = demand_milan_done }
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				LOM = { is_independant = no }
-				LOM = { exists = no }
-			}
-			OR = {
-				owns = 738 #Parma
-				owns = 739 #Modena
-			}
-			owns = 742 #Ferrara
-			is_secondary_power = yes
-			military_score = 25
-			num_of_allies = 4
-			war = no
-		}
-		
-		effect = {
-			set_country_flag = demand_milan_done
-			LOM = { 
-				overlord = { country_event = 712341 }
-			}
-			 
-			 722 = { 
-				add_core = THIS 
-			}
-			 723 = {
-				add_core = THIS 
-			}
-			 726 = {
-				add_core = THIS 
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	crush_the_pest = {
-		picture = genoa
-		potential = {
-			has_country_flag = into_italy
-			has_country_flag = demand_milan_done
-			NOT = {
-				has_country_flag = ended_genoa
-			}
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-			war = no
-			OR = {
-				is_our_vassal = LOM
-				AND = {
-					owns = 722
-					owns = 723
-					owns = 726
-				}
-			}
-		}
-		
-		effect = {
-			
-			war = {
-				target = GEN
-				attacker_goal = { casus_belli = establish_protectorate_casus_belli }
-				defender_goal = { casus_belli = status_quo }
-				call_ally = yes
-			}
-			724 = { 
-				add_core = THIS 
-			}
-			725 = {
-				add_core = THIS 
-			}
-			740 = {
-				add_core = THIS 
-			}
-			set_country_flag = ended_genoa
-		}
-	}
-	
-	reclaim_adriatic_holdings = {
-		picture = conquest_adriatic
-		potential = { 
-			has_country_flag = our_sea
-			NOT = {
-				has_country_flag = reclaimed_adriatic
-			}
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}			
-			iron_muzzle_loaded_artillery = 1
-			war = no
-		}
-		
-		effect = {
-			782 = {
-				add_core = THIS #Ragusa
-			}
-			743 = {
-				add_core = THIS #Ravenna
-			}
-			778 = {
-				add_core = THIS #Fiume
-			}
-			774 = {
-				add_core = THIS #Segna
-			}
-			any_pop = { 
-			militancy = -2 
-			consciousness = -2
-			}	
-			badboy = 4
-			set_country_flag = reclaimed_adriatic
-		}
-		
-		ai_will_do = { factor = 1 }
-	
-	}
+    the_future_of_venice = {
+        picture = venetian_ambition
+        potential = {
+            tag = VEN
+            NOT = { has_country_flag = venice_expansion }
+            exists = yes
+        }
 
-	tighten_adriatic_hold = {
-		picture = conquest_adriatic2
-		potential = {
-			has_country_flag = our_sea
-			has_country_flag = reclaimed_adriatic
-			NOT = {
-				has_country_flag = tightened_adriatic	
-			}
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}			
-			owns = 782
-			owns = 743
-			owns = 778
-			owns = 774
-			scientific_management = 1
-			raider_group_doctrine = 1
-			military_score = 20
-			war = no
-		}
-		
-		effect = {
-			852 = {
-				add_core = THIS #Vlöre
-			}
-			758 = {
-				add_core = THIS #Brindisi
-			}
-			756 = {
-				add_core = THIS #Bari
-			}
-			#3261 = {
-			#	add_core = THIS #Pescara
-			#}
-			752 = {
-				add_core = THIS #Ancona
-			}
-			poor_strata = {	consciousness = 1 }
-			middle_strata = {
-				consciousness = -2
-				militancy = -2
-			}
-			rich_strata = { militancy = 1 }
-			prestige = 10
-			badboy = 10	
-			set_country_flag = tighten_adriatic
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	expand_west = {
-		picture = west_med
-		potential = {
-			has_country_flag = our_sea
-			NOT = {
-				has_country_flag = expanded_west
-			}
-			exists = yes
-		}
-		
-		allow = {
-			central_bank_money_bill_printing = 1
-			blue_and_brown_water_schools = 1
-			naval_decision_making = 1
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-		}
-		
-		effect = {
-			759 = {
-				add_core = THIS #Reggio de Calabria
-			}
-			763 = {
-				add_core = THIS #Messina
-			}
-			854 = {
-				add_core = THIS #Malta
-			}
-			1709 = {
-				add_core = THIS #Bône
-			}
-			1701 = {
-				add_core = THIS #Bougie
-			}
-			1700 = {
-				add_core = THIS #Algiers
-			}
-			765 = {
-				add_core = THIS #Cagliari
-			}
-			766 = {
-				add_core = THIS #Sassari
-			}
-			502 = {
-				add_core = THIS #Balearics
-			}
-			badboy = 10
-			any_pop = { consciousness = 3 }
-			set_country_flag = expanded_west
-		}
-	}
-	
-	demand_greek_lands = {
-		picture = aegean
-		potential = {
-			has_country_flag = our_sea
-			NOT = {
-				has_country_flag = demanded_greek
-			}
-			exists = yes
-		}
-		
-		allow = {
-			naval_directionism = 1
-			OR = {
-				steam_turbine_ships = 1
-				advanced_naval_design = 1
-			}
-			expressionism = 1
-			OR = {
-				owns = 765 #Cagliari
-				owns = 756 #Bari
-				owns = 502 #Balearics
-				owns = 759 #Reggio de Calabria
-				owns = 763 #Messina
-			}
-			OR = {
-				is_secondary_power = yes
-				is_greater_power = yes
-			}
-		}
-		
-		effect = {
-			839 = {
-				add_core = THIS #Nafplion
-			}
-			841 = {
-				add_core = THIS #Kalamtas
-			}
-			842 = {
-				add_core = THIS #Patras
-			}
-			827 = {
-				add_core = THIS #Zante
-			}
-			834 = {
-				add_core = THIS #Athina
-			}
-			838 = {
-				add_core = THIS #Khalkis
-			}
-			845 = {
-				add_core = THIS #Cyclades
-			}
-			843 = {
-				add_core = THIS #Chios and Samos
-			}
-			846 = {
-				add_core = THIS #Docandese
-			}
-			847 = {
-				add_core = THIS #Iraklion
-			}
-			848 = {
-				add_core = THIS #Chania
-			}
-			859 = {
-				add_core = THIS #Gallipoli
-			}
-			857 = {
-				add_core = THIS #Famagusta
-			}
-			856 = {
-				add_core = THIS #Limassol
-			}
-			855 = {
-				add_core = THIS #Nicossia
-			}
-			2690 = {
-				add_core = THIS #Akrotri and Dhekelia
-			}
-			826 = {
-				add_core = THIS #Corfu
-			}
-			967 = {
-				add_core = THIS #Sevastopol
-			}
-			TUR = { country_event = 712346 }
-			badboy = 12
-			set_country_flag = demanded_greek
-		}
-	}
+        allow = {
+            war = no
+            state_n_government = 1
+            is_secondary_power = yes
+        }
+
+        effect = {
+            set_country_flag = the_future_of_venice_event
+            set_country_flag = venice_expansion
+            country_event = 712340
+            badboy = 6
+
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    unto_emilia-romagna = {
+        picture = emilia-romagna
+        potential = {
+            has_country_flag = into_italy
+            NOT = { has_country_flag = emilia_romagna_done }
+            exists = yes
+        }
+
+        allow = {
+            collectivist_theory = 1
+            war = no
+            is_independant = yes
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+        }
+
+        effect = {
+            set_country_flag = emilia_romagna_done
+            738 = {
+                add_core = THIS
+            }    #parma
+            739 = {
+                add_core = THIS
+            }    #Modena
+            741 = {
+            add_core = THIS
+            }    #Bologna
+            742 = {
+                add_core = THIS
+            }    #Ferrara
+            743 = {
+                add_core = THIS
+            }    #Ravenna
+            #3372 = {
+            #    add_core = THIS
+            #}    #Mantua
+            badboy = 2
+            poor_strata = {    consciousness = -1.5 }
+            middle_strata = {
+                consciousness = 2
+                militancy = 2
+            }
+            rich_strata = { militancy = -1.5 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    demand_milan = {
+        picture = lombardy
+        potential = {
+            has_country_flag = into_italy
+            has_country_flag = emilia_romagna_done
+            NOT = { has_country_flag = demand_milan_done }
+            exists = yes
+        }
+
+        allow = {
+            OR = {
+                LOM = { is_independant = no }
+                LOM = { exists = no }
+            }
+            OR = {
+                owns = 738 #Parma
+                owns = 739 #Modena
+            }
+            owns = 742 #Ferrara
+            is_secondary_power = yes
+            military_score = 25
+            num_of_allies = 4
+            war = no
+        }
+
+        effect = {
+            set_country_flag = demand_milan_done
+            LOM = {
+                overlord = { country_event = 712341 }
+            }
+
+             722 = {
+                add_core = THIS
+            }
+             723 = {
+                add_core = THIS
+            }
+             726 = {
+                add_core = THIS
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    crush_the_pest = {
+        picture = genoa
+        potential = {
+            has_country_flag = into_italy
+            has_country_flag = demand_milan_done
+            NOT = {
+                has_country_flag = ended_genoa
+            }
+            exists = yes
+        }
+
+        allow = {
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+            war = no
+            OR = {
+                is_our_vassal = LOM
+                AND = {
+                    owns = 722
+                    owns = 723
+                    owns = 726
+                }
+            }
+        }
+
+        effect = {
+
+            war = {
+                target = GEN
+                attacker_goal = { casus_belli = establish_protectorate_casus_belli }
+                defender_goal = { casus_belli = status_quo }
+                call_ally = yes
+            }
+            724 = {
+                add_core = THIS
+            }
+            725 = {
+                add_core = THIS
+            }
+            740 = {
+                add_core = THIS
+            }
+            set_country_flag = ended_genoa
+        }
+    }
+
+    reclaim_adriatic_holdings = {
+        picture = conquest_adriatic
+        potential = {
+            has_country_flag = our_sea
+            NOT = {
+                has_country_flag = reclaimed_adriatic
+            }
+            exists = yes
+        }
+
+        allow = {
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+            iron_muzzle_loaded_artillery = 1
+            war = no
+        }
+
+        effect = {
+            782 = {
+                add_core = THIS #Ragusa
+            }
+            743 = {
+                add_core = THIS #Ravenna
+            }
+            778 = {
+                add_core = THIS #Fiume
+            }
+            774 = {
+                add_core = THIS #Segna
+            }
+            any_pop = {
+            militancy = -2
+            consciousness = -2
+            }
+            badboy = 4
+            set_country_flag = reclaimed_adriatic
+        }
+
+        ai_will_do = { factor = 1 }
+
+    }
+
+    tighten_adriatic_hold = {
+        picture = conquest_adriatic2
+        potential = {
+            has_country_flag = our_sea
+            has_country_flag = reclaimed_adriatic
+            NOT = {
+                has_country_flag = tightened_adriatic
+            }
+            exists = yes
+        }
+
+        allow = {
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+            owns = 782
+            owns = 743
+            owns = 778
+            owns = 774
+            scientific_management = 1
+            raider_group_doctrine = 1
+            military_score = 20
+            war = no
+        }
+
+        effect = {
+            852 = {
+                add_core = THIS #Vlöre
+            }
+            758 = {
+                add_core = THIS #Brindisi
+            }
+            756 = {
+                add_core = THIS #Bari
+            }
+            #3261 = {
+            #    add_core = THIS #Pescara
+            #}
+            752 = {
+                add_core = THIS #Ancona
+            }
+            poor_strata = {    consciousness = 1 }
+            middle_strata = {
+                consciousness = -2
+                militancy = -2
+            }
+            rich_strata = { militancy = 1 }
+            prestige = 10
+            badboy = 10
+            set_country_flag = tighten_adriatic
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    expand_west = {
+        picture = west_med
+        potential = {
+            has_country_flag = our_sea
+            NOT = {
+                has_country_flag = expanded_west
+            }
+            exists = yes
+        }
+
+        allow = {
+            central_bank_money_bill_printing = 1
+            blue_and_brown_water_schools = 1
+            naval_decision_making = 1
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+        }
+
+        effect = {
+            759 = {
+                add_core = THIS #Reggio de Calabria
+            }
+            763 = {
+                add_core = THIS #Messina
+            }
+            854 = {
+                add_core = THIS #Malta
+            }
+            1709 = {
+                add_core = THIS #Bône
+            }
+            1701 = {
+                add_core = THIS #Bougie
+            }
+            1700 = {
+                add_core = THIS #Algiers
+            }
+            765 = {
+                add_core = THIS #Cagliari
+            }
+            766 = {
+                add_core = THIS #Sassari
+            }
+            502 = {
+                add_core = THIS #Balearics
+            }
+            badboy = 10
+            any_pop = { consciousness = 3 }
+            set_country_flag = expanded_west
+        }
+    }
+
+    demand_greek_lands = {
+        picture = aegean
+        potential = {
+            has_country_flag = our_sea
+            NOT = {
+                has_country_flag = demanded_greek
+            }
+            exists = yes
+        }
+
+        allow = {
+            naval_directionism = 1
+            OR = {
+                steam_turbine_ships = 1
+                advanced_naval_design = 1
+            }
+            expressionism = 1
+            OR = {
+                owns = 765 #Cagliari
+                owns = 756 #Bari
+                owns = 502 #Balearics
+                owns = 759 #Reggio de Calabria
+                owns = 763 #Messina
+            }
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes
+            }
+        }
+
+        effect = {
+            839 = {
+                add_core = THIS #Nafplion
+            }
+            841 = {
+                add_core = THIS #Kalamtas
+            }
+            842 = {
+                add_core = THIS #Patras
+            }
+            827 = {
+                add_core = THIS #Zante
+            }
+            834 = {
+                add_core = THIS #Athina
+            }
+            838 = {
+                add_core = THIS #Khalkis
+            }
+            845 = {
+                add_core = THIS #Cyclades
+            }
+            843 = {
+                add_core = THIS #Chios and Samos
+            }
+            846 = {
+                add_core = THIS #Docandese
+            }
+            847 = {
+                add_core = THIS #Iraklion
+            }
+            848 = {
+                add_core = THIS #Chania
+            }
+            859 = {
+                add_core = THIS #Gallipoli
+            }
+            857 = {
+                add_core = THIS #Famagusta
+            }
+            856 = {
+                add_core = THIS #Limassol
+            }
+            855 = {
+                add_core = THIS #Nicossia
+            }
+            2690 = {
+                add_core = THIS #Akrotri and Dhekelia
+            }
+            826 = {
+                add_core = THIS #Corfu
+            }
+            967 = {
+                add_core = THIS #Sevastopol
+            }
+            TUR = { country_event = 712346 }
+            badboy = 12
+            set_country_flag = demanded_greek
+        }
+    }
 
 ###
-	form_italy = {
-		news = yes
-		news_desc_long = "form_italy_NEWS_LONG"
-		news_desc_medium = "form_italy_NEWS_MEDIUM"
-		news_desc_short = "form_italy_NEWS_SHORT"
-		potential = {
-			is_culture_group = italian
-			NOT = {
-			tag = GOD
-			}
-			NOT = {
-				exists = ITA
-			}
-			NOT = {
-				has_country_flag = our_sea
-			}
-			NOT = { has_country_flag = no_ita }
-			exists = yes
-		}
-		
-		allow = {
-			is_greater_power = yes
-			prestige = 45
-			war = no
-			ITA = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 20
-			change_tag = ITA
-			capital = 749
-			add_accepted_culture = north_italian
-			add_accepted_culture = south_italian
-			add_accepted_culture = friulian
-			add_accepted_culture = ladin
-			random_owned = { owner = { limit = { tag = TUS } set_country_flag = ita_tus } }
-			random_owned = { owner = { limit = { tag = CRS } set_country_flag = ita_cor } }
-			random_owned = { owner = { limit = { tag = NAP } set_country_flag = ita_nap } }
-			random_owned = { owner = { limit = { tag = SVY } set_country_flag = ita_svy } }
-			random_owned = { owner = { limit = { tag = SAR } set_country_flag = ita_sar } }
-			random_owned = { owner = { limit = { tag = GEN } set_country_flag = ita_gen } }
-			random_owned = { owner = { limit = { tag = LOM } set_country_flag = ita_lom } }
-			random_owned = { owner = { limit = { tag = VEN } set_country_flag = ita_ven } }
-			any_country = {
-				limit = {
-						is_culture_group = italian
-						OR = {
-							in_sphere = THIS
-							vassal_of = THIS
-						}
-				}
-				annex_to = THIS
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+    form_italy = {
+        news = yes
+        news_desc_long = "form_italy_NEWS_LONG"
+        news_desc_medium = "form_italy_NEWS_MEDIUM"
+        news_desc_short = "form_italy_NEWS_SHORT"
+        potential = {
+            is_culture_group = italian
+            NOT = {
+            tag = GOD
+            }
+            NOT = {
+                exists = ITA
+            }
+            NOT = {
+                has_country_flag = our_sea
+            }
+            NOT = { has_country_flag = no_ita }
+            exists = yes
+        }
+
+        allow = {
+            is_greater_power = yes
+            prestige = 45
+            war = no
+            ITA = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 20
+            change_tag = ITA
+            capital = 749
+            add_accepted_culture = north_italian
+            add_accepted_culture = south_italian
+            add_accepted_culture = friulian
+            add_accepted_culture = ladin
+            random_owned = { owner = { limit = { tag = TUS } set_country_flag = ita_tus } }
+            random_owned = { owner = { limit = { tag = CRS } set_country_flag = ita_cor } }
+            random_owned = { owner = { limit = { tag = NAP } set_country_flag = ita_nap } }
+            random_owned = { owner = { limit = { tag = SVY } set_country_flag = ita_svy } }
+            random_owned = { owner = { limit = { tag = SAR } set_country_flag = ita_sar } }
+            random_owned = { owner = { limit = { tag = GEN } set_country_flag = ita_gen } }
+            random_owned = { owner = { limit = { tag = LOM } set_country_flag = ita_lom } }
+            random_owned = { owner = { limit = { tag = VEN } set_country_flag = ita_ven } }
+            any_country = {
+                limit = {
+                        is_culture_group = italian
+                        OR = {
+                            in_sphere = THIS
+                            vassal_of = THIS
+                        }
+                }
+                annex_to = THIS
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 }

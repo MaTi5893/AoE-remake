@@ -1,37 +1,37 @@
 political_decisions = {
-	partition_poland = {
-		picture = polish_partitions
-		potential = {
-			OR = {
-				tag = RUS
-				tag = PRU
-			}
-			OR = {
-				PLC = {
-					exists = yes
-				}
-				PLR = {
-					exists = yes
-				}
-			}
-			NOT = { has_country_flag = polish_partition_one }
-			exists = yes
-		}
-		allow = {
-			OR = {
-			PLC = {
-				in_sphere = THIS
-			}
-			PLR = {
-				in_sphere = THIS
-			}
-			}
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		effect = {
-			country_event = 1772
-			set_country_flag = polish_partition_one
-		}
-	}
+    partition_poland = {
+        picture = polish_partitions
+        potential = {
+            OR = {
+                tag = RUS
+                tag = PRU
+            }
+            OR = {
+                PLC = {
+                    exists = yes
+                }
+                PLR = {
+                    exists = yes
+                }
+            }
+            NOT = { has_country_flag = polish_partition_one }
+            exists = yes
+        }
+        allow = {
+            OR = {
+            PLC = {
+                in_sphere = THIS
+            }
+            PLR = {
+                in_sphere = THIS
+            }
+            }
+            war = no
+            nationalism_n_imperialism = 1
+        }
+        effect = {
+            country_event = 1772
+            set_country_flag = polish_partition_one
+        }
+    }
 }

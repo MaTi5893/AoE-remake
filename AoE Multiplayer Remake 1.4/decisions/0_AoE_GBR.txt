@@ -1,434 +1,434 @@
 political_decisions = {
 
-	unite_great_britain = {
-		picture = become_gb
-		potential = {
-			tag = ENL
-			NOT = { exists = GBR }
-			SCO = {
-				OR = {
-					ai = yes
-					exists = no
-				}
-			}
-			exists = yes
-			NOT = { war_with = SCO }
-		}
-		
-		allow = {
-			#war = no
-			owns = 300
-			OR = {
-				ideological_thought = 1
-				year = 1707
-			}
-			269 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-			273 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-			254 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 20
-			all_core = {
-				add_core = GBR
-				remove_core = ENG
-			}
-			SCO = {
-				all_core = {
-					add_core = GBR
-				}
-			}
-			change_tag = GBR
-			add_accepted_culture = scottish
-			any_country = {
-				limit = {
-					tag = SCO
-					exists = yes
-					ai = yes
-				}
-				SCO = { all_core = { add_core = THIS } }
-				THIS = { inherit = SCO }
-			}
-			any_country = {
-				limit = {
-					tag = SCO
-					exists = yes
-					ai = no
-				}
-				any_owned = {
-					add_core = GBR
-				}
-				country_event = 11101
-			}
-			any_country = {
-				limit = {
-					in_sphere = THIS
-					NOT = {
-						tag = THIS
-						tag = SCO
-					}
-				}
-				any_owned = {
-					limit = {
-						OR = {
-							is_core = SCO
-							is_core = WHA
-							region = ENG_254
-						}
-					}
-					secede_province = THIS
-				}
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	land_to_thc = {
-		potential = {
-			primary_culture = british
-			any_owned_province = {
-				is_core = THC
-			}
-			OR = {
-				is_our_vassal = THC
-				THC = { substate_of = THIS }
-			}
-			exists = THC
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			THIS = {
-				any_owned = {
-					limit = {
-						is_core = THC
-						owned_by = THIS
-					}
-					secede_province = THC
-				}
-			}
-		}
-	}
-	annex_bengal = {
-		picture = bengal
-		potential = {
-			OR = {
-				tag = GBJ
-				tag = ENL
-				tag = ENG
-				tag = GBR
-			}
-			is_greater_power = yes
-			BNG = { exists = yes }
-			BNG = { vassal_of = THIS }
-			exists = yes
-			mass_politics = 1
-		}
-		allow = {
-			war = no
-			mass_politics = 1
-			BNG = { vassal_of = THIS }
-		}
-		effect = {
-			prestige = 10
-			badboy = 10
-			inherit = BNG
-		}
-	}
+    unite_great_britain = {
+        picture = become_gb
+        potential = {
+            tag = ENL
+            NOT = { exists = GBR }
+            SCO = {
+                OR = {
+                    ai = yes
+                    exists = no
+                }
+            }
+            exists = yes
+            NOT = { war_with = SCO }
+        }
 
-	#clonize_australia = {
-	#
-	#}
-	
-	agricultural_revolution = {
-		picture = agriculture_rev
-		potential = {
-			OR = {
-				tag = GBJ
-				tag = ENL
-				tag = ENG
-				tag = GBR
-			}
-			NOT = { has_country_flag = agricultural_revolution }
-			exists = yes
-		}
-		allow = {
-			war = no
-			compound_steam_engines = 1
-			semi_automatization = 1
-			hot_blast = 1
-			early_railroad = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = agriculture_revolution
-				duration = 14600
-			}
-			set_country_flag = agricultural_revolution
-		}
-	}
-	
-	begin_encolsure = {
-		picture = encolsure
-		potential = {
-			OR = {
-				tag = GBJ
-				tag = ENL
-				tag = ENG
-				tag = GBR
-			}
-			NOT = { has_country_flag = encolsure }
-			exists = yes
-		}
-		allow = {
-			steam_turbine = 1
-			has_country_modifier = agriculture_revolution
-		}
-		effect = {
-			add_country_modifier = {
-				name = encolsure
-				duration = 14600
-			}
-			set_country_flag = encolsure
-		}
-	}
-	
-	duke_of_york_reforms = {
-		picture = duke_of_york
-		potential = {
-			OR = {
-				tag = GBJ
-				tag = ENL
-				tag = ENG
-				tag = GBR
-			}
-			NOT = { has_country_flag = duke_of_york_reforms }
-			exists = yes
-		}
-		allow = {
-			has_country_flag = duke_of_york
-			is_greater_power = yes
-			army_leadership_7 = 1
-		}
-		effect = {
-			set_country_flag = duke_of_york_reforms
-			add_country_modifier = {
-				name = british_general_staff
-				duration = 7300
-			}
-		}
-	}
-	claim_the_raj_title = {
-		picture = raj
-		potential = {
-			OR = {
-				tag = GBJ
-				tag = ENL
-				tag = ENG
-				tag = GBR
-			}
-			is_greater_power = yes
-			exists = yes
-			NOT = { has_country_modifier = indian_raj }
-		}
-		allow = {
-			ENG_1305 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			ENG_1261 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			ENG_1251 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			ENG_1252 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			political_thought_7 = 1
-		}
-		effect = {
-			prestige = 20
-			badboy = 15
-			add_country_modifier = {
-				name = indian_raj
-				duration = -1
-			}
-		}
-	}
-	
-	act_of_union_ire = {
-		potential = {
-			tag = GBR
-			NOT = { exists = ENG }
-		}
-		allow = {
-			IRE = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-			political_thought_7 = 1
-			war = no
-			average_militancy = 4
-		}
-		effect = {
-			all_core = {
-				add_core = ENG
-				remove_core = THIS
-			}
-			change_tag = ENG
-			prestige = 15
-			any_pop = {
-				militancy = -1
-			}
-			add_accepted_culture = irish
-		}
-	}
-	
-	britannia_rules_the_waves = {
-		picture = dreams_of_empire
-		potential = {
-			primary_culture = british
-			NOT = { has_country_flag = britannia_rules_the_waves }
-		}
-		allow = {
-			is_greater_power = yes
-			war = no
-			owns = 517
-			OR = {
-				NOT = {
-					any_greater_power = {
-						military_score = THIS
-					}
-				}
-				total_sunk_by_us = 100
-			}
-			total_amount_of_ships = 200
-		}
-		effect = {
-			set_country_flag = britannia_rules_the_waves
-			prestige = 15
-		}
-	}
-	dispute_spanish_succession_gbr = {
-		picture = crown
-		potential = {
-			has_global_flag = spanish_succesion_crisis
-			primary_culture = british
-			NOT = { has_country_flag = disputed_spanish_succession }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			random_country = {
-				limit = {
-					primary_culture = spanish
-					OR = {
-						tag = SPA
-						tag = SPC
-					}
-					exists = yes
-				}
-				relation = {
-					who = THIS
-					value = -100
-				}
-			}
-			casus_belli = {
-				target = SPA
-				type = place_in_the_sun
-				months = 12
-			}
-			casus_belli = {
-				target = SPA
-				type = place_in_the_sun
-				months = 12
-			}
-			casus_belli = {
-				target = SPC
-				type = place_in_the_sun
-				months = 12
-			}
-			casus_belli = {
-				target = SPC
-				type = place_in_the_sun
-				months = 12
-			}
-			add_core = 517
-			badboy = 2
-			set_country_flag = disputed_spanish_succession
-		}
-	}
-	
-	the_leviathan = {
-		picture = union_act
-		potential = {
-			tag = GBJ
-			NOT = {
-				has_country_modifier = jacobite_absolutism
-			}
-		}
-		allow = {
-			war = no
-			ruling_party_ideology = reactionary
-			trade_unions = no_trade_unions
-			NOT = { average_militancy = 3 }
-		}
-		effect = {
-			add_country_modifier = {
-				name = jacobite_absolutism
-				duration = -1
-			}
-			prestige = 15
-			political_reform = none_voting
-			government = absolute_monarchy
-			plurality = -25
-			political_reform = totalitarianism
-			add_country_modifier = {
-				name = totalitarian_system
-				duration = -1
-			}
-			any_pop = {
-				militancy = 4
-			}
-		}
-	}
+        allow = {
+            #war = no
+            owns = 300
+            OR = {
+                ideological_thought = 1
+                year = 1707
+            }
+            269 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+            273 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+            254 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 20
+            all_core = {
+                add_core = GBR
+                remove_core = ENG
+            }
+            SCO = {
+                all_core = {
+                    add_core = GBR
+                }
+            }
+            change_tag = GBR
+            add_accepted_culture = scottish
+            any_country = {
+                limit = {
+                    tag = SCO
+                    exists = yes
+                    ai = yes
+                }
+                SCO = { all_core = { add_core = THIS } }
+                THIS = { inherit = SCO }
+            }
+            any_country = {
+                limit = {
+                    tag = SCO
+                    exists = yes
+                    ai = no
+                }
+                any_owned = {
+                    add_core = GBR
+                }
+                country_event = 11101
+            }
+            any_country = {
+                limit = {
+                    in_sphere = THIS
+                    NOT = {
+                        tag = THIS
+                        tag = SCO
+                    }
+                }
+                any_owned = {
+                    limit = {
+                        OR = {
+                            is_core = SCO
+                            is_core = WHA
+                            region = ENG_254
+                        }
+                    }
+                    secede_province = THIS
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    land_to_thc = {
+        potential = {
+            primary_culture = british
+            any_owned_province = {
+                is_core = THC
+            }
+            OR = {
+                is_our_vassal = THC
+                THC = { substate_of = THIS }
+            }
+            exists = THC
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            THIS = {
+                any_owned = {
+                    limit = {
+                        is_core = THC
+                        owned_by = THIS
+                    }
+                    secede_province = THC
+                }
+            }
+        }
+    }
+    annex_bengal = {
+        picture = bengal
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            is_greater_power = yes
+            BNG = { exists = yes }
+            BNG = { vassal_of = THIS }
+            exists = yes
+            mass_politics = 1
+        }
+        allow = {
+            war = no
+            mass_politics = 1
+            BNG = { vassal_of = THIS }
+        }
+        effect = {
+            prestige = 10
+            badboy = 10
+            inherit = BNG
+        }
+    }
+
+    #clonize_australia = {
+    #
+    #}
+
+    agricultural_revolution = {
+        picture = agriculture_rev
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            NOT = { has_country_flag = agricultural_revolution }
+            exists = yes
+        }
+        allow = {
+            war = no
+            compound_steam_engines = 1
+            semi_automatization = 1
+            hot_blast = 1
+            early_railroad = 1
+        }
+        effect = {
+            add_country_modifier = {
+                name = agriculture_revolution
+                duration = 14600
+            }
+            set_country_flag = agricultural_revolution
+        }
+    }
+
+    begin_encolsure = {
+        picture = encolsure
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            NOT = { has_country_flag = encolsure }
+            exists = yes
+        }
+        allow = {
+            steam_turbine = 1
+            has_country_modifier = agriculture_revolution
+        }
+        effect = {
+            add_country_modifier = {
+                name = encolsure
+                duration = 14600
+            }
+            set_country_flag = encolsure
+        }
+    }
+
+    duke_of_york_reforms = {
+        picture = duke_of_york
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            NOT = { has_country_flag = duke_of_york_reforms }
+            exists = yes
+        }
+        allow = {
+            has_country_flag = duke_of_york
+            is_greater_power = yes
+            army_leadership_7 = 1
+        }
+        effect = {
+            set_country_flag = duke_of_york_reforms
+            add_country_modifier = {
+                name = british_general_staff
+                duration = 7300
+            }
+        }
+    }
+    claim_the_raj_title = {
+        picture = raj
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            is_greater_power = yes
+            exists = yes
+            NOT = { has_country_modifier = indian_raj }
+        }
+        allow = {
+            ENG_1305 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            ENG_1261 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            ENG_1251 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            ENG_1252 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            political_thought_7 = 1
+        }
+        effect = {
+            prestige = 20
+            badboy = 15
+            add_country_modifier = {
+                name = indian_raj
+                duration = -1
+            }
+        }
+    }
+
+    act_of_union_ire = {
+        potential = {
+            tag = GBR
+            NOT = { exists = ENG }
+        }
+        allow = {
+            IRE = {
+                all_core = {
+                    owned_by = THIS
+                }
+            }
+            political_thought_7 = 1
+            war = no
+            average_militancy = 4
+        }
+        effect = {
+            all_core = {
+                add_core = ENG
+                remove_core = THIS
+            }
+            change_tag = ENG
+            prestige = 15
+            any_pop = {
+                militancy = -1
+            }
+            add_accepted_culture = irish
+        }
+    }
+
+    britannia_rules_the_waves = {
+        picture = dreams_of_empire
+        potential = {
+            primary_culture = british
+            NOT = { has_country_flag = britannia_rules_the_waves }
+        }
+        allow = {
+            is_greater_power = yes
+            war = no
+            owns = 517
+            OR = {
+                NOT = {
+                    any_greater_power = {
+                        military_score = THIS
+                    }
+                }
+                total_sunk_by_us = 100
+            }
+            total_amount_of_ships = 200
+        }
+        effect = {
+            set_country_flag = britannia_rules_the_waves
+            prestige = 15
+        }
+    }
+    dispute_spanish_succession_gbr = {
+        picture = crown
+        potential = {
+            has_global_flag = spanish_succesion_crisis
+            primary_culture = british
+            NOT = { has_country_flag = disputed_spanish_succession }
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            random_country = {
+                limit = {
+                    primary_culture = spanish
+                    OR = {
+                        tag = SPA
+                        tag = SPC
+                    }
+                    exists = yes
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+            }
+            casus_belli = {
+                target = SPA
+                type = place_in_the_sun
+                months = 12
+            }
+            casus_belli = {
+                target = SPA
+                type = place_in_the_sun
+                months = 12
+            }
+            casus_belli = {
+                target = SPC
+                type = place_in_the_sun
+                months = 12
+            }
+            casus_belli = {
+                target = SPC
+                type = place_in_the_sun
+                months = 12
+            }
+            add_core = 517
+            badboy = 2
+            set_country_flag = disputed_spanish_succession
+        }
+    }
+
+    the_leviathan = {
+        picture = union_act
+        potential = {
+            tag = GBJ
+            NOT = {
+                has_country_modifier = jacobite_absolutism
+            }
+        }
+        allow = {
+            war = no
+            ruling_party_ideology = reactionary
+            trade_unions = no_trade_unions
+            NOT = { average_militancy = 3 }
+        }
+        effect = {
+            add_country_modifier = {
+                name = jacobite_absolutism
+                duration = -1
+            }
+            prestige = 15
+            political_reform = none_voting
+            government = absolute_monarchy
+            plurality = -25
+            political_reform = totalitarianism
+            add_country_modifier = {
+                name = totalitarian_system
+                duration = -1
+            }
+            any_pop = {
+                militancy = 4
+            }
+        }
+    }
 }

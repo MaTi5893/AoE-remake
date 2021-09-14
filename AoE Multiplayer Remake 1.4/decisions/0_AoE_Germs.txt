@@ -1,305 +1,305 @@
 political_decisions = {
-	form_thuringia = {
-		picture = thuringia
-		potential = {
-			has_country_flag = thuringen_area
-			NOT = {
-				exists = THU
-			}
-			exists = yes
-		}
-		allow = {
-			OR = {
-				AND = {
-				is_secondary_power = yes
-				ai = yes
-				}
-				AND = {
-				owns = 562
-				owns = 563
-				owns = 561
-				}
-			}
-		}
-		effect = {
-			set_country_flag = formed_thuringia
-			all_core = {
-				add_core = THU
-				remove_core = THIS
-			}
-			change_tag = THU
-			add_core = 561
-			add_core = 562
-			add_core = 563
-			prestige = 25
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_westphalia = {
-		picture = westphalia
-		potential = {
-			has_country_flag = westfalen_area
-			NOT = {
-				exists = WES
-			}
-			exists = yes
-		}
-		allow = {
-			OR = {
-				AND = {
-				is_secondary_power = yes
-				ai = yes
-				}
-				AND = {
-				owns = 581
-				owns = 534
-				owns = 580
-				}
-			}
-		}
-		effect = {
-			set_country_flag = formed_westphalia
-			PRU_581 = {
-				add_core = THIS
-			}
-			all_core = {
-				add_core = WES
-				remove_core = THIS
-			}
-			change_tag = WES
-			prestige = 25
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_rheinland = {
-		picture = rhineland
-		potential = {
-			has_country_flag = rheinland_area
-			NOT = {
-				exists = RHI
-			}
-			exists = yes
-			NOT = { tag = LOR }
-		}
-		allow = {
-			OR = {
-				AND = {
-					owns = 572
-					owns = 576
-					owns = 571
-				}
-				is_secondary_power = yes
-				prestige = 25
-			}
-		}
-		effect = {
-			set_country_flag = formed_rheinland
-			PRU_572 = {
-				add_core = THIS
-			}
-			all_core = {
-				add_core = RHI
-				remove_core = THIS
-			}
-			change_tag = RHI
-			prestige = 25
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_swabia = {
-		picture = swabia
-		potential = {
-			has_country_flag = swabia_area
-			NOT = {
-				exists = SGF
-			}
-			exists = yes
-			NOT = { tag = BAV }
-		}
-		allow = {
-			OR = {
-				is_secondary_power = yes
-				AND = {
-					owns = 586
-					owns = 589
-					owns = 593
-				}
-			}
-		}
-		effect = {
-			set_country_flag = formed_swabia
-			BAD_586 = { add_core = THIS }
-			WUR_589 = { add_core = THIS }
-			all_core = {
-				add_core = SGF
-				remove_core = THIS
-			}
-			change_tag = SGF
-			prestige = 15
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	invite_liege = {
-		picture = westphalia
-		potential = {
-			has_country_flag = formed_westphalia
-			NOT = {
-				has_country_flag = invited_liege
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = WES
-			}
-		}
-		effect = {
-			set_country_flag = invited_liege
-			LIG = {
-				set_country_flag = westfalen_area
-			}
-			LIG = {
-				all_core = {
-					add_core = WES
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	invite_anhalt = {
-		picture = thuringia
-		potential = {
-			has_country_flag = formed_thuringia
-			NOT = {
-				has_country_flag = invited_anhalt
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THU
-			}
-		}
-		effect = {
-			set_country_flag = invited_anhalt
-			ANH = {
-				set_country_flag = thuringen_area
-			}
-			ANH = {
-				all_core = {
-					add_core = THU
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	bring_in_luxembourg = {
-		picture = luxembourg_crisis
-		potential = {
-			has_country_flag = formed_rheinland
-			NOT = {
-				has_country_flag = invited_lux
-			}
-			exists = yes
-		}
-		allow = {
-			exists = LUX
-		}
-		effect = {
-			set_country_flag = invited_lux
-			LUX = {
-				set_country_flag = rheinland_area
-			}
-			LUX = {
-				all_core = {
-					add_core = RHI
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	invite_limburg = {
-		picture = westphalia
-		potential = {
-			has_country_flag = formed_westphalia
-			NOT = {
-				has_country_flag = invited_limburg
-			}
-			exists = yes
-		}
-		allow = {
-			exists = LBG
-		}
-		effect = {
-			set_country_flag = invited_limburg
-			LBG = {
-				set_country_flag = westfalen_area
-			}
-			LBG = {
-				all_core = {
-					add_core = WES
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	destroy_saxony = {
-		picture = thuringia
-		potential = {
-			has_country_flag = invited_anhalt
-			NOT = {
-				has_country_flag = ended_saxony
-			}
-			exists = yes
-		}
-		allow = {
-			owns = 554
-		}
-		effect = {
-			set_country_flag = ended_saxony
-			SAX = {
-				set_country_flag = thuringen_area
-			}
-			SAX = {
-				all_core = {
-					add_core = THU
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	declare_the_kingdom_of_bavaria = {
-		picture = crown
-		potential = {
-			tag = BAV
-			NOT = { has_country_flag = declared_the_kingdom_of_bavaria }
-		}
-		allow = {
-			OR = {
-			is_greater_power = yes
-			ruling_party_ideology = communist
-			}
-			war_policy = jingoism
-		}
-		effect = {
-			add_core = 592
-			add_core = 598
-			add_core = 597
-			add_core = 614
-			add_core = 612
-			add_core = 613
-			add_core = 615
-			add_core = 735
-			set_country_flag = declared_the_kingdom_of_bavaria
-		}
-	}
+    form_thuringia = {
+        picture = thuringia
+        potential = {
+            has_country_flag = thuringen_area
+            NOT = {
+                exists = THU
+            }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                AND = {
+                is_secondary_power = yes
+                ai = yes
+                }
+                AND = {
+                owns = 562
+                owns = 563
+                owns = 561
+                }
+            }
+        }
+        effect = {
+            set_country_flag = formed_thuringia
+            all_core = {
+                add_core = THU
+                remove_core = THIS
+            }
+            change_tag = THU
+            add_core = 561
+            add_core = 562
+            add_core = 563
+            prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_westphalia = {
+        picture = westphalia
+        potential = {
+            has_country_flag = westfalen_area
+            NOT = {
+                exists = WES
+            }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                AND = {
+                is_secondary_power = yes
+                ai = yes
+                }
+                AND = {
+                owns = 581
+                owns = 534
+                owns = 580
+                }
+            }
+        }
+        effect = {
+            set_country_flag = formed_westphalia
+            PRU_581 = {
+                add_core = THIS
+            }
+            all_core = {
+                add_core = WES
+                remove_core = THIS
+            }
+            change_tag = WES
+            prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_rheinland = {
+        picture = rhineland
+        potential = {
+            has_country_flag = rheinland_area
+            NOT = {
+                exists = RHI
+            }
+            exists = yes
+            NOT = { tag = LOR }
+        }
+        allow = {
+            OR = {
+                AND = {
+                    owns = 572
+                    owns = 576
+                    owns = 571
+                }
+                is_secondary_power = yes
+                prestige = 25
+            }
+        }
+        effect = {
+            set_country_flag = formed_rheinland
+            PRU_572 = {
+                add_core = THIS
+            }
+            all_core = {
+                add_core = RHI
+                remove_core = THIS
+            }
+            change_tag = RHI
+            prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_swabia = {
+        picture = swabia
+        potential = {
+            has_country_flag = swabia_area
+            NOT = {
+                exists = SGF
+            }
+            exists = yes
+            NOT = { tag = BAV }
+        }
+        allow = {
+            OR = {
+                is_secondary_power = yes
+                AND = {
+                    owns = 586
+                    owns = 589
+                    owns = 593
+                }
+            }
+        }
+        effect = {
+            set_country_flag = formed_swabia
+            BAD_586 = { add_core = THIS }
+            WUR_589 = { add_core = THIS }
+            all_core = {
+                add_core = SGF
+                remove_core = THIS
+            }
+            change_tag = SGF
+            prestige = 15
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    invite_liege = {
+        picture = westphalia
+        potential = {
+            has_country_flag = formed_westphalia
+            NOT = {
+                has_country_flag = invited_liege
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = WES
+            }
+        }
+        effect = {
+            set_country_flag = invited_liege
+            LIG = {
+                set_country_flag = westfalen_area
+            }
+            LIG = {
+                all_core = {
+                    add_core = WES
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    invite_anhalt = {
+        picture = thuringia
+        potential = {
+            has_country_flag = formed_thuringia
+            NOT = {
+                has_country_flag = invited_anhalt
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THU
+            }
+        }
+        effect = {
+            set_country_flag = invited_anhalt
+            ANH = {
+                set_country_flag = thuringen_area
+            }
+            ANH = {
+                all_core = {
+                    add_core = THU
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    bring_in_luxembourg = {
+        picture = luxembourg_crisis
+        potential = {
+            has_country_flag = formed_rheinland
+            NOT = {
+                has_country_flag = invited_lux
+            }
+            exists = yes
+        }
+        allow = {
+            exists = LUX
+        }
+        effect = {
+            set_country_flag = invited_lux
+            LUX = {
+                set_country_flag = rheinland_area
+            }
+            LUX = {
+                all_core = {
+                    add_core = RHI
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    invite_limburg = {
+        picture = westphalia
+        potential = {
+            has_country_flag = formed_westphalia
+            NOT = {
+                has_country_flag = invited_limburg
+            }
+            exists = yes
+        }
+        allow = {
+            exists = LBG
+        }
+        effect = {
+            set_country_flag = invited_limburg
+            LBG = {
+                set_country_flag = westfalen_area
+            }
+            LBG = {
+                all_core = {
+                    add_core = WES
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    destroy_saxony = {
+        picture = thuringia
+        potential = {
+            has_country_flag = invited_anhalt
+            NOT = {
+                has_country_flag = ended_saxony
+            }
+            exists = yes
+        }
+        allow = {
+            owns = 554
+        }
+        effect = {
+            set_country_flag = ended_saxony
+            SAX = {
+                set_country_flag = thuringen_area
+            }
+            SAX = {
+                all_core = {
+                    add_core = THU
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    declare_the_kingdom_of_bavaria = {
+        picture = crown
+        potential = {
+            tag = BAV
+            NOT = { has_country_flag = declared_the_kingdom_of_bavaria }
+        }
+        allow = {
+            OR = {
+            is_greater_power = yes
+            ruling_party_ideology = communist
+            }
+            war_policy = jingoism
+        }
+        effect = {
+            add_core = 592
+            add_core = 598
+            add_core = 597
+            add_core = 614
+            add_core = 612
+            add_core = 613
+            add_core = 615
+            add_core = 735
+            set_country_flag = declared_the_kingdom_of_bavaria
+        }
+    }
 }

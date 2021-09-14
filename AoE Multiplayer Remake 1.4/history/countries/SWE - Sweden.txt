@@ -26,7 +26,7 @@ safety_regulations = trinket_safety #influential nobility
 unemployment_subsidies = trinket_subsidies #marginally relevant burghers
 pensions = acceptable_pensions #influential army
 health_care = low_health_care #influential bureaucracy
- 
+
 school_reforms = no_schools
 
 # New Reforms
@@ -37,25 +37,25 @@ child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = unitary
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 set_country_flag = protestant_country
 
 #govt_flag = {
-	#government = hms_government
-	#flag = theocracy
+    #government = hms_government
+    #flag = theocracy
 #}
 
 ruling_party = "Royalister"
 last_election = 1833.1.1
 upper_house = {
-	fascist = 0
-	liberal = 35
-	conservative = 60
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 35
+    conservative = 60
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 decision = scandi_pop_buff
@@ -98,5 +98,5 @@ oob = "SWE_oob.txt"
 
 
 foreign_investment = {
-	GNG = 2500
+    GNG = 2500
 }

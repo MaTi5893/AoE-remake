@@ -2,8 +2,8 @@ RUS = { value = 90 }
 AUS = { value = -50 }
 BRN = { value = -150 }
 TUR = {
-	value = -200
-	truce_until = 1704.1.1
+    value = -200
+    truce_until = 1704.1.1
 }
 BOR = { value = 35 }
 ENG = { value = 25 }
@@ -12,131 +12,131 @@ HET = { value = -200 }
 SWE = { value = -200 }
 ZZH = { value = 150 }
 
-army = { 
+army = {
 
 name = "1. Armia Korony Polskiej" location = 703
 
-regiment = { name = "1. brygada" type = infantry home = 712 } 
-regiment = { name = "2. brygada" type = infantry home = 699 } 
-regiment = { name = "3. brygada" type = infantry home = 705 } 
-regiment = { 
-	name = "4. brygada" 
-	type = dragoon
-	home = 696
-} 
-regiment = { name = "5. brygada" type = infantry home = 957 } 
-regiment = { name = "6. brygada" type = artillery home = 706 } 
-regiment = { name = "7. brygada" type = artillery home = 946 } 
-regiment = { name = "8. brygada" type = artillery home = 692 } 
-regiment = { name = "9. brygada" type = artillery home = 960 } 
+regiment = { name = "1. brygada" type = infantry home = 712 }
+regiment = { name = "2. brygada" type = infantry home = 699 }
+regiment = { name = "3. brygada" type = infantry home = 705 }
+regiment = {
+    name = "4. brygada"
+    type = dragoon
+    home = 696
+}
+regiment = { name = "5. brygada" type = infantry home = 957 }
+regiment = { name = "6. brygada" type = artillery home = 706 }
+regiment = { name = "7. brygada" type = artillery home = 946 }
+regiment = { name = "8. brygada" type = artillery home = 692 }
+regiment = { name = "9. brygada" type = artillery home = 960 }
 regiment = { name = "10. brygada" type = artillery home = 699 }
 }
 
-army = { 
+army = {
 
 name = "2. Armia Ksiestwa Litewskiego" location = 360
 
-regiment = { name = "1. brygada" type = infantry home = 361 } 
-regiment = { name = "2. brygada" type = infantry home = 360 } 
-regiment = { name = "3. brygada" type = infantry home = 718 } 
-regiment = { 
-	name = "4. brygada" 
-	type = dragoon
-	home = 948
-} 
-regiment = { name = "5. brygada" type = infantry home = 945 } 
-regiment = { name = "6. brygada" type = artillery home = 949 } 
-regiment = { name = "7. brygada" type = artillery home = 940 } 
-regiment = { name = "8. brygada" type = artillery home = 937 } 
-regiment = { name = "9. brygada" type = artillery home = 955 } 
+regiment = { name = "1. brygada" type = infantry home = 361 }
+regiment = { name = "2. brygada" type = infantry home = 360 }
+regiment = { name = "3. brygada" type = infantry home = 718 }
+regiment = {
+    name = "4. brygada"
+    type = dragoon
+    home = 948
+}
+regiment = { name = "5. brygada" type = infantry home = 945 }
+regiment = { name = "6. brygada" type = artillery home = 949 }
+regiment = { name = "7. brygada" type = artillery home = 940 }
+regiment = { name = "8. brygada" type = artillery home = 937 }
+regiment = { name = "9. brygada" type = artillery home = 955 }
 regiment = { name = "10. brygada" type = artillery home = 956 }
 }
 
-army = { 
+army = {
 
 name = "Winged Hussars Corps" location = 701
 
-regiment = { name = "1. brygada" type = dragoon home = 701 } 
-regiment = { name = "2. brygada" type = dragoon home = 714 } 
-regiment = { name = "3. brygada" type = dragoon home = 703 } 
-regiment = { 
-	name = "4. brygada" 
-	type = dragoon
-	home = 711
-} 
+regiment = { name = "1. brygada" type = dragoon home = 701 }
+regiment = { name = "2. brygada" type = dragoon home = 714 }
+regiment = { name = "3. brygada" type = dragoon home = 703 }
+regiment = {
+    name = "4. brygada"
+    type = dragoon
+    home = 711
+}
 regiment = { name = "5. brygada" type = dragoon home = 702 }
 }
 
 leader = {
-	name = "Augustus II Von Wettin"
-	date = "1699.1.1"
+    name = "Augustus II Von Wettin"
+    date = "1699.1.1"
         prestige = 0.500
         picture ="augustus_the_stronk"
-	type = land
-	personality = defence_0.4
-	background = attack_minus_1.2
+    type = land
+    personality = defence_0.4
+    background = attack_minus_1.2
 }
 leader = {
-	name = "Adam Mikolaj Sieniawski"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_minus_1.2
-	background = attack_0.3
+    name = "Adam Mikolaj Sieniawski"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_minus_1.2
+    background = attack_0.3
 }
 leader = {
-	name = "Stanislaw Chometowski"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_minus_1.3
-	background = attack_0.2
+    name = "Stanislaw Chometowski"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_minus_1.3
+    background = attack_0.2
 }
 leader = {
-	name = "Michal Serwacy Wisniwiecki"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_2.6
-	background = attack_3.1
+    name = "Michal Serwacy Wisniwiecki"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_2.6
+    background = attack_3.1
 }
 leader = {
-	name = "Grzegorz Antoni Oginski"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_0.3
-	background = attack_1.4
+    name = "Grzegorz Antoni Oginski"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_0.3
+    background = attack_1.4
 }
 leader = {
-	name = "Hiernim Augystyn Lubomirski"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_0.7
-	background = attack_0.1
+    name = "Hiernim Augystyn Lubomirski"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_0.7
+    background = attack_0.1
 }
 leader = {
-	name = "Jozef Potocki"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_0.1
-	background = attack_2.3
+    name = "Jozef Potocki"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_0.1
+    background = attack_2.3
 }
 leader = {
-	name = "Jan Kazimierz Sapiecha the Younger"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_minus_1.1
-	background = attack_1.5
+    name = "Jan Kazimierz Sapiecha the Younger"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_minus_1.1
+    background = attack_1.5
 }
 leader = {
-	name = "Jan Kazimierz Sapiecha the Elder"
-	date = "1699.1.1"
-	prestige = 0.500
-	type = land
-	personality = defence_1.2
-	background = attack_0.4
+    name = "Jan Kazimierz Sapiecha the Elder"
+    date = "1699.1.1"
+    prestige = 0.500
+    type = land
+    personality = defence_1.2
+    background = attack_0.4
 }

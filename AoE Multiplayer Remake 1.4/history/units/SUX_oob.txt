@@ -9,16 +9,16 @@ THC = { value = -5 }
 ENG = { value = -5 }
 BOR = { value = -5 }
 army = {
-	name = "Sioux Tribe Army"
-	location = 157
-	regiment = {
-		name= "1th Regiment of Irregulars"
-		type = irregular
-		home = 154
-	}
-	regiment = {
-		name= "2th Regiment of Irregulars"
-		type = irregular
-		home = 157
-	}
+    name = "Sioux Tribe Army"
+    location = 157
+    regiment = {
+        name= "1th Regiment of Irregulars"
+        type = irregular
+        home = 154
+    }
+    regiment = {
+        name= "2th Regiment of Irregulars"
+        type = irregular
+        home = 157
+    }
 }

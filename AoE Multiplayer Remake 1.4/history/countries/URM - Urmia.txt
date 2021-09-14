@@ -35,18 +35,18 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = unitary
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 
 ruling_party = "Nobility Faction"
 upper_house = {
-	fascist = 0
-	liberal = 12
-	conservative = 60
-	reactionary = 28
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 12
+    conservative = 60
+    reactionary = 28
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = shiite_country
@@ -75,4 +75,3 @@ dragoon_activation = yes
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
-

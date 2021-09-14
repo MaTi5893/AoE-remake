@@ -3,95 +3,95 @@ AUS = { value = 150 }
 SWI = { value = 200 truce_until = 1704.1.1 }
 
 leader = {
-	name = "Carlo Alberto"
-	date = 1831.1.1
-	type = land
-	personality = defence_0.1
-	background = attack_0.2
-	prestige = 0.5
+    name = "Carlo Alberto"
+    date = 1831.1.1
+    type = land
+    personality = defence_0.1
+    background = attack_0.2
+    prestige = 0.5
 }
 
 leader = {
-	name = "Emanuele Pes"
-	date = 1820.1.1
-	type = land
-	personality = defence_minus_1.1
-	background = attack_0.2
-	prestige = 0.2
+    name = "Emanuele Pes"
+    date = 1820.1.1
+    type = land
+    personality = defence_minus_1.1
+    background = attack_0.2
+    prestige = 0.2
 }
 
 leader = {
-	name = "Eusebio Bava"
-	date = 1832.1.1
-	type = land
-	personality = attack_1.3
-	background = defence_3.4
-	prestige = 0.1
+    name = "Eusebio Bava"
+    date = 1832.1.1
+    type = land
+    personality = attack_1.3
+    background = defence_3.4
+    prestige = 0.1
 }
 
 leader = {
-	name = "Ettore Gerbaix"
-	date = 1834.1.1
-	type = land
-	personality = attack_0.3
-	background = defence_1.3
-	prestige = 0.0
+    name = "Ettore Gerbaix"
+    date = 1834.1.1
+    type = land
+    personality = attack_0.3
+    background = defence_1.3
+    prestige = 0.0
 }
 
 leader = {
-	name = "Giuseppe Albini"
-	date = 1836.1.1
-	type = sea
-	personality = attack_1.2
-	background = defence_0.3
-	prestige = 0.0
+    name = "Giuseppe Albini"
+    date = 1836.1.1
+    type = sea
+    personality = attack_1.2
+    background = defence_0.3
+    prestige = 0.0
 }
 
 leader = {
-	name = "La Marmora-Masserano"
-	date = 1836.1.1
-	type = land
-	personality = defence_2.3
-	background = attack_2.1
-	prestige = 0.0
+    name = "La Marmora-Masserano"
+    date = 1836.1.1
+    type = land
+    personality = defence_2.3
+    background = attack_2.1
+    prestige = 0.0
 }
 
 leader = {
-	name = "Agostino Chiodo"
-	date = 1836.1.1
-	type = land
-	personality = attack_0.1
-	background = defence_1.6
-	prestige = 0.0
+    name = "Agostino Chiodo"
+    date = 1836.1.1
+    type = land
+    personality = attack_0.1
+    background = defence_1.6
+    prestige = 0.0
 }
 army = {
-	name = "Army of Savoia"
-	location = 720
-	regiment = {
-		name= "Savoiard Artillery"
-		type = artillery
-		home = 720
-	}
-	regiment = {
-		name= "Savoiard Artillery"
-		type = artillery
-		home = 720
-	}
-	regiment = {
-		name= "3nd Savoiard Artillery"
-		type = artillery
-		home = 472
-	}
-	
-	regiment = {
-		name= "4nd Savoiard Artillery"
-		type = artillery
-		home = 465
-	}
-	
-	regiment = {
-		name= "5nd Savoiard Artillery"
-		type = artillery
-		home = 466
-	}
+    name = "Army of Savoia"
+    location = 720
+    regiment = {
+        name= "Savoiard Artillery"
+        type = artillery
+        home = 720
+    }
+    regiment = {
+        name= "Savoiard Artillery"
+        type = artillery
+        home = 720
+    }
+    regiment = {
+        name= "3nd Savoiard Artillery"
+        type = artillery
+        home = 472
+    }
+
+    regiment = {
+        name= "4nd Savoiard Artillery"
+        type = artillery
+        home = 465
+    }
+
+    regiment = {
+        name= "5nd Savoiard Artillery"
+        type = artillery
+        home = 466
+    }
 }

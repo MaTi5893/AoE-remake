@@ -45,23 +45,23 @@ set_country_flag = catholic_country
 
 ruling_party = "Nobility Faction"
 upper_house = {
-	fascist = 0
-	liberal = 15
-	conservative = 40
-	reactionary = 45
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 15
+    conservative = 40
+    reactionary = 45
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 govt_flag = {
-	government = presidential_dictatorship
-	flag = theocracy
+    government = presidential_dictatorship
+    flag = theocracy
 }
 
 govt_flag = {
-	government = absolute_monarchy
-	flag = colonial_company
+    government = absolute_monarchy
+    flag = colonial_company
 }
 
 # Technologies
@@ -96,4 +96,3 @@ basic_chemistry = 1
 # Starting Consciousness
 consciousness = 3
 nonstate_consciousness = 1
-

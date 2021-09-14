@@ -1,456 +1,456 @@
 country_event = {
-	id = 177503
-	title = "The Boston Mssacre"
-	desc = "EVTDESC177503"
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		tag = THC
-		year = 1770
-		OR = {
-			has_country_modifier = sugar_act_on_colonies
-			has_country_modifier = stamp_act_on_colonies
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "A horrible act of barbarity"
-		relation = {
-			who = GBR
-			value = -175
-		}
-		set_country_flag = boston_massacre_happened
-	}
+    id = 177503
+    title = "The Boston Mssacre"
+    desc = "EVTDESC177503"
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        tag = THC
+        year = 1770
+        OR = {
+            has_country_modifier = sugar_act_on_colonies
+            has_country_modifier = stamp_act_on_colonies
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "A horrible act of barbarity"
+        relation = {
+            who = GBR
+            value = -175
+        }
+        set_country_flag = boston_massacre_happened
+    }
 }
 country_event = {
-	id = 177504
-	title = "The Boston Tea Party"
-	desc = "EVTDESC177504"
-	picture = boston_plan
-	fire_only_once = yes
-	
-	trigger = {
-		tag = THC
-		year = 1773
-		has_country_modifier = tea_act_on_colonies
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "let's show them just how much we love their policys!"
-		set_country_flag = boston_tea_party_prep
-		country_event = 177505
-		ai_chance = { factor = 1 }
-	}
-	
-	option = {
-		name = "it's wise not to upset our mother country"
-		prestige = -5
-		ai_chance = { factor = 0 }
-	}
+    id = 177504
+    title = "The Boston Tea Party"
+    desc = "EVTDESC177504"
+    picture = boston_plan
+    fire_only_once = yes
+
+    trigger = {
+        tag = THC
+        year = 1773
+        has_country_modifier = tea_act_on_colonies
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "let's show them just how much we love their policys!"
+        set_country_flag = boston_tea_party_prep
+        country_event = 177505
+        ai_chance = { factor = 1 }
+    }
+
+    option = {
+        name = "it's wise not to upset our mother country"
+        prestige = -5
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = {
-	id = 177505
-	title = "The Boston Tea Party"
-	desc = "EVTDESC177505"
-	picture = boston_tea
-	is_triggered_only = yes
-	
-	option = {
-		name = "They deserved it."
-		relation = {
-			who = GBR
-			value = -25
-		}
-		set_country_flag = boston_tea_party_happened
-		GBR = { country_event = 177506 }
-	}
+    id = 177505
+    title = "The Boston Tea Party"
+    desc = "EVTDESC177505"
+    picture = boston_tea
+    is_triggered_only = yes
+
+    option = {
+        name = "They deserved it."
+        relation = {
+            who = GBR
+            value = -25
+        }
+        set_country_flag = boston_tea_party_happened
+        GBR = { country_event = 177506 }
+    }
 }
 ##George WashingMachine##
 country_event = {
-	id = 1754001
-	title = "A promising lieutenant colonel"
-	desc = "EVTDESC1754001"
-	picture = general
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			tag = THC
-			tag = USA
-		}
-		year = 1754
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "We will watch his career with great intrest"
-		define_general = {
-			name = "George Washington"
-			personality = defence_5.1
-			background = attack_3.1
-		}
-	}
+    id = 1754001
+    title = "A promising lieutenant colonel"
+    desc = "EVTDESC1754001"
+    picture = general
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+            tag = THC
+            tag = USA
+        }
+        year = 1754
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "We will watch his career with great intrest"
+        define_general = {
+            name = "George Washington"
+            personality = defence_5.1
+            background = attack_3.1
+        }
+    }
 }
 ##capital stuff##
 country_event = {
-	id = 17860001
-	title = "The capital of United States"
-	desc = "EVTDESC17860001"
-	picture = usa
-	fire_only_once = yes
-	
-	trigger = {
-		tag = USA
-		NOT = { government = colonial_company }
-		war = no
-		has_country_flag = the_articles_of_confederation
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "Construct a new capital!"
-		prestige = 15
-		money = -5000
-		capital = 220
-		220 = {
-			change_province_name = "Washington D.C."
-			life_rating = 5
-		}
-		set_country_flag = capital_chosen
-	}
-	option = {
-		name = "Philadelphia is our most beautiful city"
-		prestige = 15
-		capital = 223
-		223 = {
-		life_rating = 5
-		}
-		set_country_flag = capital_chosen
-	}
-	
-	option = {
-		name = "New York obviously, it has the biggest population"
-		prestige = 15
-		capital = 232
-		232 = {
-		life_rating = 5
-		}
-		set_country_flag = capital_chosen
-	}
-	
-	option = {
-		name = "Charleston, since southern states are more important"
-		prestige = 15
-		capital = 205
-		205 = {
-		life_rating = 5
-		}
-		set_country_flag = capital_chosen
-	}
+    id = 17860001
+    title = "The capital of United States"
+    desc = "EVTDESC17860001"
+    picture = usa
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        NOT = { government = colonial_company }
+        war = no
+        has_country_flag = the_articles_of_confederation
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Construct a new capital!"
+        prestige = 15
+        money = -5000
+        capital = 220
+        220 = {
+            change_province_name = "Washington D.C."
+            life_rating = 5
+        }
+        set_country_flag = capital_chosen
+    }
+    option = {
+        name = "Philadelphia is our most beautiful city"
+        prestige = 15
+        capital = 223
+        223 = {
+        life_rating = 5
+        }
+        set_country_flag = capital_chosen
+    }
+
+    option = {
+        name = "New York obviously, it has the biggest population"
+        prestige = 15
+        capital = 232
+        232 = {
+        life_rating = 5
+        }
+        set_country_flag = capital_chosen
+    }
+
+    option = {
+        name = "Charleston, since southern states are more important"
+        prestige = 15
+        capital = 205
+        205 = {
+        life_rating = 5
+        }
+        set_country_flag = capital_chosen
+    }
 }
 country_event = {
-	id = 17860002
-	title = "The burning of the white house"
-	desc = "EVTDESC173604"
-	picture = white_house_boom
-	is_triggered_only = yes
+    id = 17860002
+    title = "The burning of the white house"
+    desc = "EVTDESC173604"
+    picture = white_house_boom
+    is_triggered_only = yes
 
-	
-	option = {
-		name = "Those saveges..."
-		capital_scope = {
-			life_rating = -3
-			#RGO_size = 0.1
-			fort = -1
-			infrastructure = -2
-			any_pop = {
-				reduce_pop = 0.95
-			}
-		}
-		treasury = -5000
-		prestige = -30
-	}
+
+    option = {
+        name = "Those saveges..."
+        capital_scope = {
+            life_rating = -3
+            #RGO_size = 0.1
+            fort = -1
+            infrastructure = -2
+            any_pop = {
+                reduce_pop = 0.95
+            }
+        }
+        treasury = -5000
+        prestige = -30
+    }
 }
-	
+
 ##Louisiana purchase##
 country_event = {
-	id = 180500001
-	title = "Should we sell louisiana?"
-	desc = "EVTDESC180500001"
-	picture = louisiana
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			tag = BOR
-			tag = FRA
-		}
-		political_thought_8 = 1
-		OR = {
-			has_recently_lost_war = yes
-			has_unclaimed_cores = yes
-		}
-		ULA = { is_our_vassal = THIS }
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "We must fund our Wars"
-		USA = { country_event = 180500002 }
-		ai_chance = { factor = 95 }
-	}
-	
-	option = {
-		name = "Louisiana is too valuable"
-		ai_chance = { factor = 5 }
-	}
+    id = 180500001
+    title = "Should we sell louisiana?"
+    desc = "EVTDESC180500001"
+    picture = louisiana
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+            tag = BOR
+            tag = FRA
+        }
+        political_thought_8 = 1
+        OR = {
+            has_recently_lost_war = yes
+            has_unclaimed_cores = yes
+        }
+        ULA = { is_our_vassal = THIS }
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "We must fund our Wars"
+        USA = { country_event = 180500002 }
+        ai_chance = { factor = 95 }
+    }
+
+    option = {
+        name = "Louisiana is too valuable"
+        ai_chance = { factor = 5 }
+    }
 }
 country_event = {
-	id = 180500002
-	title = "Louisiana purchase"
-	desc = "EVTDESC180500002"
-	picture = louisiana
-	is_triggered_only = yes
-	
-	option = {
-		name = "Agree"
-		money = -2000000
-		ai_chance = { factor = 95 }
-		inherit = ULA
-		FROM = { country_event = 180500003 }
-		prestige = 50
-		set_country_flag = proposed_to_buy_louisana
-	}
-	
-	option = {
-		name = "This price is too high"
-		ai_chance = { factor = 5 }
-		FROM = { country_event = 180500004 }
-		set_country_flag = proposed_to_buy_louisana
-	}
+    id = 180500002
+    title = "Louisiana purchase"
+    desc = "EVTDESC180500002"
+    picture = louisiana
+    is_triggered_only = yes
+
+    option = {
+        name = "Agree"
+        money = -2000000
+        ai_chance = { factor = 95 }
+        inherit = ULA
+        FROM = { country_event = 180500003 }
+        prestige = 50
+        set_country_flag = proposed_to_buy_louisana
+    }
+
+    option = {
+        name = "This price is too high"
+        ai_chance = { factor = 5 }
+        FROM = { country_event = 180500004 }
+        set_country_flag = proposed_to_buy_louisana
+    }
 }
 country_event = {
-	id = 180500003
-	title = "USA agrees"
-	desc = "EVTDESC180500003"
-	picture = louisiana
-	is_triggered_only = yes
-	
-	option = {
-		name = "Great!"
-		money = 2000000
-	}
+    id = 180500003
+    title = "USA agrees"
+    desc = "EVTDESC180500003"
+    picture = louisiana
+    is_triggered_only = yes
+
+    option = {
+        name = "Great!"
+        money = 2000000
+    }
 }
 country_event = {
-	id = 180500004
-	title = "USA refuses"
-	desc = "EVTDESC180500004"
-	picture = louisiana
-	is_triggered_only = yes
-	
-	option = {
-		name = "Shame, we could use the money..."
-		prestige = -4
-	}
+    id = 180500004
+    title = "USA refuses"
+    desc = "EVTDESC180500004"
+    picture = louisiana
+    is_triggered_only = yes
+
+    option = {
+        name = "Shame, we could use the money..."
+        prestige = -4
+    }
 }
 ###independence war ally###
 country_event = {
-	id = 160010
-	title = "Help from the French?"
-	desc = "EVTDESC16001"
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			war_with = ENG
-			war_with = GBR
-			war_with = GBJ
-		}
-		tag = THC
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "We need their help"
-		425 = {
-			owner = {
-				country_event = 160020
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-	
-	option = {
-		name = "We fight alone"
-		ai_chance = { factor = 0 }
-	}
+    id = 160010
+    title = "Help from the French?"
+    desc = "EVTDESC16001"
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+            war_with = ENG
+            war_with = GBR
+            war_with = GBJ
+        }
+        tag = THC
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "We need their help"
+        425 = {
+            owner = {
+                country_event = 160020
+            }
+        }
+        ai_chance = { factor = 1 }
+    }
+
+    option = {
+        name = "We fight alone"
+        ai_chance = { factor = 0 }
+    }
 }
 
 country_event = {
-	id = 160020
-	title = "Potential western ally?"
-	desc = "EVTDESC16002"
-	is_triggered_only = yes
-	
-	option = {
-		name = "We'll do anything to mess with the British"
-		create_alliance = THC
-		money = -20000
-		ammunition = -200
-		small_arms = -100
-		artillery = -50
-		
-		relation = {
-			who = THC
-			value = 100
-		}
-		THC = {
-			country_event = 160030
-		}
-		ai_chance = {
+    id = 160020
+    title = "Potential western ally?"
+    desc = "EVTDESC16002"
+    is_triggered_only = yes
+
+    option = {
+        name = "We'll do anything to mess with the British"
+        create_alliance = THC
+        money = -20000
+        ammunition = -200
+        small_arms = -100
+        artillery = -50
+
+        relation = {
+            who = THC
+            value = 100
+        }
+        THC = {
+            country_event = 160030
+        }
+        ai_chance = {
             factor = 95
         }
-	}
-	
-	option = {
-		name = "This war will put us in debt!"
-		relation = {
-			who = THC
-			value = -10
-		}
-		THC = {
-			country_event = 160040
-		}
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_greater_power = { war_with = THIS }
-			}
-			modifier = {
-				factor = 2
-				national_provinces_occupied = 0.25
-			}
-			modifier = {
-				factor = 0
-				war = no
-				NOT = { revolt_percentage = 0.25 }
-			}
-		}
-	}
+    }
+
+    option = {
+        name = "This war will put us in debt!"
+        relation = {
+            who = THC
+            value = -10
+        }
+        THC = {
+            country_event = 160040
+        }
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+    }
 }
 country_event = {
-	id = 160030
-	title = "France Agrees!"
-	desc = "EVTDESC16003"
-	is_triggered_only = yes
-	
-	option = {
-		name = "Great!"
-		money = 20000
-		ammunition = 200
-		small_arms = 100
-		artillery = 50
-		425 = {
-			owner = {
-				create_alliance = THC
-			}
-		}
-		relation = {
-			who = THC
-			value = 200
-		}
-		diplomatic_influence = {
-			who = THC
-			value = 200
-		}
-	}
+    id = 160030
+    title = "France Agrees!"
+    desc = "EVTDESC16003"
+    is_triggered_only = yes
+
+    option = {
+        name = "Great!"
+        money = 20000
+        ammunition = 200
+        small_arms = 100
+        artillery = 50
+        425 = {
+            owner = {
+                create_alliance = THC
+            }
+        }
+        relation = {
+            who = THC
+            value = 200
+        }
+        diplomatic_influence = {
+            who = THC
+            value = 200
+        }
+    }
 }
 country_event = {
-	id = 160040
-	title = "France refuses!"
-	desc = "The French refused our offer and won't help us in our struggle"
-	is_triggered_only = yes
-	
-	option = {
-		name = "We're Doomed!"
-		prestige = -10
-	}
+    id = 160040
+    title = "France refuses!"
+    desc = "The French refused our offer and won't help us in our struggle"
+    is_triggered_only = yes
+
+    option = {
+        name = "We're Doomed!"
+        prestige = -10
+    }
 }
 country_event = {
-	id = 1754002
-	title = "Foudation of the Philadelphia Academy"
-	desc = "EVTDESC1754002"
-	picture = wealth_n_poetry
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			tag = THC
-			tag = USA
-		}
-		year = 1751
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "Incredible."
-		prestige = 25
-		USA_223 = {
-			any_pop = {
-				consciousness = -2
-			}
-		}
-		add_country_modifier = {
-			name = philadelpha_academy
-			duration = -1
-		}
-	}
+    id = 1754002
+    title = "Foudation of the Philadelphia Academy"
+    desc = "EVTDESC1754002"
+    picture = wealth_n_poetry
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+            tag = THC
+            tag = USA
+        }
+        year = 1751
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Incredible."
+        prestige = 25
+        USA_223 = {
+            any_pop = {
+                consciousness = -2
+            }
+        }
+        add_country_modifier = {
+            name = philadelpha_academy
+            duration = -1
+        }
+    }
 }
 country_event = {
-	id = 177510
-	title = "The Continental Congress"
-	desc = "EVTDESC177510"
-	picture = continental_congress
-	
-	trigger = {
-		tag = THC
-		has_country_modifier = sugar_act_on_colonies
-		has_country_modifier = stamp_act_on_colonies
-		has_country_modifier = tea_act_on_colonies
-		has_country_modifier = intoreable_act_on_colonies
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = "We cannot allow such treatment any longer"
-		overlord = { country_event = 98610 }
-	}
+    id = 177510
+    title = "The Continental Congress"
+    desc = "EVTDESC177510"
+    picture = continental_congress
+
+    trigger = {
+        tag = THC
+        has_country_modifier = sugar_act_on_colonies
+        has_country_modifier = stamp_act_on_colonies
+        has_country_modifier = tea_act_on_colonies
+        has_country_modifier = intoreable_act_on_colonies
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "We cannot allow such treatment any longer"
+        overlord = { country_event = 98610 }
+    }
 }

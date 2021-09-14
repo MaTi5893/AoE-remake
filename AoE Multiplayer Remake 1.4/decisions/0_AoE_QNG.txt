@@ -1,140 +1,140 @@
 political_decisions = {
-	
-	destroy_the_hordes = {
-		potential = {
-			tag = QNG
-			NOT = { has_country_flag = destroied_the_hordes }
-		}
-		allow = {
-			war = no
-			OR = {
-				civilized = yes
-				AND = {
-					military_score = 100
-					war_policy = jingoism
-					military_constructions = military_constructions_two
-					1490 = {
-						has_building = fort
-					}
-					1578 = {
-						has_building = fort
-					}
-				}
-			}
-		}
-		effect = {
-			DZN = {
-				all_core = {
-					add_core = CHI
-				}
-			}
-			XIN = {
-				all_core = {
-					add_core = CHI
-				}
-			}
-			TIB = {
-				all_core = {
-					add_core = CHI
-				}
-			}
-			badboy = 5
-			prestige = 15
-			set_country_flag = destroied_the_hordes
-		}
-	}
-	
-	southern_conquests = {
-		potential = {
-			tag = QNG
-			NOT = { has_country_flag = southern_conquests }
-		}
-		allow = {
-			war = no
-			DZN = { exists = no }
-			XIN = { exists = no }
-			TIB = { exists = no }
-			OR = {
-				civilized = yes
-				admin_reform = admin_reform_two
-			}
-		}
-		effect = {
-			CHI = {
-				add_core = 1342
-				add_core = 1341
-				add_core = 1340
-				add_core = 1338
-				add_core = 1372
-				add_core = 1371
-				add_core = 1373
-				add_core = 1369
-				add_core = 1370
-			}
-			prestige = 15
-			set_country_flag = southern_conquests
-		}
-	}
-	
-	administrative_reform = {
-		potential = {
-			tag = QNG
-			NOT = { has_country_flag = administrative_reform }
-		}
-		allow = {
-			war = no
-			civilized = yes
-			KOR = {
-				OR = {
-					all_core = {
-						owned_by = THIS
-					}
-					vassal_of = THIS
-				}
-			}
-			MGL = {
-				OR = {
-					all_core = {
-						owned_by = THIS
-					}
-					vassal_of = THIS
-				}
-			}
-			XBI = {
-				OR = {
-					all_core = {
-						owned_by = THIS
-					}
-					vassal_of = THIS
-				}
-			}
-		}
-		effect = {
-			XBI = {
-				all_core = {
-					add_core = THIS
-				}
-				annex_to = THIS
-			}
-			MGL = {
-				all_core = {
-					add_core = THIS
-				}
-				annex_to = THIS
-			}
-			KOR = {
-				all_core = {
-					add_core = THIS
-				}
-				annex_to = THIS
-			}
-			CHI = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			prestige = 15
-			set_country_flag = administrative_reform
-		}
-	}
+
+    destroy_the_hordes = {
+        potential = {
+            tag = QNG
+            NOT = { has_country_flag = destroied_the_hordes }
+        }
+        allow = {
+            war = no
+            OR = {
+                civilized = yes
+                AND = {
+                    military_score = 100
+                    war_policy = jingoism
+                    military_constructions = military_constructions_two
+                    1490 = {
+                        has_building = fort
+                    }
+                    1578 = {
+                        has_building = fort
+                    }
+                }
+            }
+        }
+        effect = {
+            DZN = {
+                all_core = {
+                    add_core = CHI
+                }
+            }
+            XIN = {
+                all_core = {
+                    add_core = CHI
+                }
+            }
+            TIB = {
+                all_core = {
+                    add_core = CHI
+                }
+            }
+            badboy = 5
+            prestige = 15
+            set_country_flag = destroied_the_hordes
+        }
+    }
+
+    southern_conquests = {
+        potential = {
+            tag = QNG
+            NOT = { has_country_flag = southern_conquests }
+        }
+        allow = {
+            war = no
+            DZN = { exists = no }
+            XIN = { exists = no }
+            TIB = { exists = no }
+            OR = {
+                civilized = yes
+                admin_reform = admin_reform_two
+            }
+        }
+        effect = {
+            CHI = {
+                add_core = 1342
+                add_core = 1341
+                add_core = 1340
+                add_core = 1338
+                add_core = 1372
+                add_core = 1371
+                add_core = 1373
+                add_core = 1369
+                add_core = 1370
+            }
+            prestige = 15
+            set_country_flag = southern_conquests
+        }
+    }
+
+    administrative_reform = {
+        potential = {
+            tag = QNG
+            NOT = { has_country_flag = administrative_reform }
+        }
+        allow = {
+            war = no
+            civilized = yes
+            KOR = {
+                OR = {
+                    all_core = {
+                        owned_by = THIS
+                    }
+                    vassal_of = THIS
+                }
+            }
+            MGL = {
+                OR = {
+                    all_core = {
+                        owned_by = THIS
+                    }
+                    vassal_of = THIS
+                }
+            }
+            XBI = {
+                OR = {
+                    all_core = {
+                        owned_by = THIS
+                    }
+                    vassal_of = THIS
+                }
+            }
+        }
+        effect = {
+            XBI = {
+                all_core = {
+                    add_core = THIS
+                }
+                annex_to = THIS
+            }
+            MGL = {
+                all_core = {
+                    add_core = THIS
+                }
+                annex_to = THIS
+            }
+            KOR = {
+                all_core = {
+                    add_core = THIS
+                }
+                annex_to = THIS
+            }
+            CHI = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            prestige = 15
+            set_country_flag = administrative_reform
+        }
+    }
 }

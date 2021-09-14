@@ -1,276 +1,276 @@
 political_decisions = {
-		
-		end_the_admirality = {
-			picture = merchant_navy
-			potential = {
-				primary_culture = dutch
-				has_country_modifier = admiraliteiten
-				exists = yes
-			}
-			allow = {
-				NOT = {
-					government = oligarchic_republic
-				}
-				NOT = {
-					pensions = acceptable_pensions
-					pensions = good_pensions
-				}
-			}
-			effect = {
-				remove_country_modifier = admiraliteiten
-				war_exhaustion = -10
-				tech_school = traditional_academic
-				money = 50000
-			}
-			ai_will_do = { factor = 1 }
-		}
-		
-		#renew_the_eighty_years_war = {
-		#	potential = {
-		#		primary_culture = dutch
-		#		OR = {
-		#			neighbour = SPA
-		#			neighbour = SPC
-		#		}
-		#		NOT = { has_country_flag = renewed_the_eighty_years_war }
-		#	}
-		#	allow = {
-		#		NOT = { truce_with = SPA }
-		#		NOT = { truce_with = SPC }
-		#		war = no
-		#		war_policy = jingoism
-		#	}
-		#	effect = {
-		#		war_exhaustion = 5
-		#		country_event = 1581052
-		#	}
-		#}
-		unite_the_netherlands = {
-			picture = map_netherlands
-			potential = {
-				primary_culture = dutch
-				NOT = { has_country_flag = united_the_netherlands }
-				exists = yes
-			}
-			allow = {
-				OR = {
-					AND = {
-						BEL_387 = {
-							owned_by = THIS
-						}
-						NET_397 = {
-							owned_by = THIS
-						}
-						BEL_394 = {
-							owned_by = THIS
-						}
-					}
-					AND = {
-						is_greater_power = yes
-						OR = {
-							pensions = acceptable_pensions
-							pensions = good_pensions
-						}
-					}
-				}
-			}
-			effect = {
-				set_country_flag = united_the_netherlands
-				BEL_387 = {
-					add_core = THIS
-				}
-				NET_397 = {
-					add_core = THIS
-				}
-				BEL_394 = {
-					add_core = THIS
-				}
-				add_core = 381
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					badboy = 5
-				}
-			}
-		}
-		
-		claim_artois_net = {
-			picture = FRA_rename_artois
-			potential = {
-				primary_culture = dutch
-				has_country_flag = unite_the_netherlands
-				NOT = { has_country_flag = claimed_artois }
-				exists = yes
-			}
-			allow = {
-				is_greater_power = yes
-				military_score = 100
-				war_policy = jingoism
-				BEL_387 = {
-					owned_by = THIS
-					#is_core = THIS
-				}
-				BEL_394 = {
-					owned_by = THIS
-					#is_core = THIS
-				}
-				NET_397 = {
-					owned_by = THIS
-				}
-			}
-			effect = {
-				set_country_flag = claimed_artois
-				FRA_404 = {
-					add_core = THIS
-				}
-				badboy = 7
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					badboy = 23
-				}
-			}
-		}
-		
-		dutch_banks = {
-			picture = tresury_reforms
-			potential = {
-				primary_culture = dutch
-				NOT = { has_country_flag = dutch_banks }
-				exists = yes
-			}
-			allow = {
-				bank_inspection_board = 1
-				money = 100000
-			}
-			effect = {
-				set_country_flag = dutch_banks
-				add_country_modifier = {
-					name = dutch_banks
-					duration = 7300
-				}
-				money = -100000
-			}
-			ai_will_do = { factor = 1 }
-		}
-		
-		embrace_a_heraditary_monarch_system = {
-			picture = crown
-			potential = {
-				primary_culture = dutch
-				NOT = { has_country_flag = embraced_a_heraditary_monarch_system }
-				OR ={
-					government = oligarchic_republic
-					government = democracy
-				}
-				exists = yes
-			}
-			allow = {
-				has_country_modifier = orangist_domination
-				ruling_party_ideology = reactionary
-				OR = {
-					work_hours = no_work_hour_limit
-					work_hours = fourteen_hours
-				}
-			}
-			effect = {
-				set_country_flag = embraced_a_heraditary_monarch_system
-				government = absolute_monarchy
-				any_pop = {
-					limit = {
-						pop_majority_ideology = liberal
-					}
-					militancy = 8
-					consciousness = 6
-				}
-				poor_strata = {
-					militancy = 4
-					consciousness = 2
-					ideology = {
-						value = liberal
-						factor = 0.05
-					}
-				}
-			}
-			ai_will_do = { factor = 1 }
-		}
-		
-		#demand_ny_colonys = {
-		#	potential = {
-		#		primary_culture = dutch
-		#		NOT = { has_country_flag = demand_ny_colonys }
-		#	}
-		#	allow = {
-		#		
-		#	}
-		#	effect = {
-		#		set_country_flag = demand_ny_colonys
-		#	}
-		#	ai_will_do = { factor = 1 }
-		#}
-		
-		lunch_the_orangist_revolution = {
-			picture = william_iv
-			potential = {
-				primary_culture = dutch
-				NOT = { has_country_flag = lunched_the_orangist_revolution }
-				OR = {
-					has_country_modifier = stadtholderless_period
-					tag = ADU
-				}
-			}
-			allow = {
-				OR = {
-					AND = {
-						ruling_party_ideology = reactionary
-						nationalism_n_imperialism = 1
-					}
-					AND = {
-						is_greater_power = yes
-						ruling_party_ideology = reactionary
-						owns = 387
-						owns = 397
-					}
-				}
-			}
-			effect = {
-				set_country_flag = lunched_the_orangist_revolution
-				remove_country_modifier = stadtholderless_period
-				country_event = 158103
-				any_pop = {
-					militancy = 3
-					consciousness = 3
-				}
-			}
-		}
-		disband_patriots = {
-			picture = patriot_party
-			potential = {
-				primary_culture = dutch
-				NOT = { has_country_flag = patriots_disbanded }
-				NOT = { government = proletarian_dictatorship }
-				NOT = { government = fascist_dictatorship }
-				year = 1740
-				exists = yes
-				is_ideology_enabled = communist
-			}
-			allow = {
-				NOT = { average_militancy = 3 }
-			}
-			effect = {
-				set_country_flag = patriots_disbanded
-				any_pop = {
-					limit = {
-						pop_majority_ideology = communist
-					}
-					militancy = 4
-					consciousness = 4
-				}
-			}
-			ai_will_do = { factor = 1 }
-		}
+
+        end_the_admirality = {
+            picture = merchant_navy
+            potential = {
+                primary_culture = dutch
+                has_country_modifier = admiraliteiten
+                exists = yes
+            }
+            allow = {
+                NOT = {
+                    government = oligarchic_republic
+                }
+                NOT = {
+                    pensions = acceptable_pensions
+                    pensions = good_pensions
+                }
+            }
+            effect = {
+                remove_country_modifier = admiraliteiten
+                war_exhaustion = -10
+                tech_school = traditional_academic
+                money = 50000
+            }
+            ai_will_do = { factor = 1 }
+        }
+
+        #renew_the_eighty_years_war = {
+        #    potential = {
+        #        primary_culture = dutch
+        #        OR = {
+        #            neighbour = SPA
+        #            neighbour = SPC
+        #        }
+        #        NOT = { has_country_flag = renewed_the_eighty_years_war }
+        #    }
+        #    allow = {
+        #        NOT = { truce_with = SPA }
+        #        NOT = { truce_with = SPC }
+        #        war = no
+        #        war_policy = jingoism
+        #    }
+        #    effect = {
+        #        war_exhaustion = 5
+        #        country_event = 1581052
+        #    }
+        #}
+        unite_the_netherlands = {
+            picture = map_netherlands
+            potential = {
+                primary_culture = dutch
+                NOT = { has_country_flag = united_the_netherlands }
+                exists = yes
+            }
+            allow = {
+                OR = {
+                    AND = {
+                        BEL_387 = {
+                            owned_by = THIS
+                        }
+                        NET_397 = {
+                            owned_by = THIS
+                        }
+                        BEL_394 = {
+                            owned_by = THIS
+                        }
+                    }
+                    AND = {
+                        is_greater_power = yes
+                        OR = {
+                            pensions = acceptable_pensions
+                            pensions = good_pensions
+                        }
+                    }
+                }
+            }
+            effect = {
+                set_country_flag = united_the_netherlands
+                BEL_387 = {
+                    add_core = THIS
+                }
+                NET_397 = {
+                    add_core = THIS
+                }
+                BEL_394 = {
+                    add_core = THIS
+                }
+                add_core = 381
+            }
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    factor = 0
+                    badboy = 5
+                }
+            }
+        }
+
+        claim_artois_net = {
+            picture = FRA_rename_artois
+            potential = {
+                primary_culture = dutch
+                has_country_flag = unite_the_netherlands
+                NOT = { has_country_flag = claimed_artois }
+                exists = yes
+            }
+            allow = {
+                is_greater_power = yes
+                military_score = 100
+                war_policy = jingoism
+                BEL_387 = {
+                    owned_by = THIS
+                    #is_core = THIS
+                }
+                BEL_394 = {
+                    owned_by = THIS
+                    #is_core = THIS
+                }
+                NET_397 = {
+                    owned_by = THIS
+                }
+            }
+            effect = {
+                set_country_flag = claimed_artois
+                FRA_404 = {
+                    add_core = THIS
+                }
+                badboy = 7
+            }
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    factor = 0
+                    badboy = 23
+                }
+            }
+        }
+
+        dutch_banks = {
+            picture = tresury_reforms
+            potential = {
+                primary_culture = dutch
+                NOT = { has_country_flag = dutch_banks }
+                exists = yes
+            }
+            allow = {
+                bank_inspection_board = 1
+                money = 100000
+            }
+            effect = {
+                set_country_flag = dutch_banks
+                add_country_modifier = {
+                    name = dutch_banks
+                    duration = 7300
+                }
+                money = -100000
+            }
+            ai_will_do = { factor = 1 }
+        }
+
+        embrace_a_heraditary_monarch_system = {
+            picture = crown
+            potential = {
+                primary_culture = dutch
+                NOT = { has_country_flag = embraced_a_heraditary_monarch_system }
+                OR ={
+                    government = oligarchic_republic
+                    government = democracy
+                }
+                exists = yes
+            }
+            allow = {
+                has_country_modifier = orangist_domination
+                ruling_party_ideology = reactionary
+                OR = {
+                    work_hours = no_work_hour_limit
+                    work_hours = fourteen_hours
+                }
+            }
+            effect = {
+                set_country_flag = embraced_a_heraditary_monarch_system
+                government = absolute_monarchy
+                any_pop = {
+                    limit = {
+                        pop_majority_ideology = liberal
+                    }
+                    militancy = 8
+                    consciousness = 6
+                }
+                poor_strata = {
+                    militancy = 4
+                    consciousness = 2
+                    ideology = {
+                        value = liberal
+                        factor = 0.05
+                    }
+                }
+            }
+            ai_will_do = { factor = 1 }
+        }
+
+        #demand_ny_colonys = {
+        #    potential = {
+        #        primary_culture = dutch
+        #        NOT = { has_country_flag = demand_ny_colonys }
+        #    }
+        #    allow = {
+        #
+        #    }
+        #    effect = {
+        #        set_country_flag = demand_ny_colonys
+        #    }
+        #    ai_will_do = { factor = 1 }
+        #}
+
+        lunch_the_orangist_revolution = {
+            picture = william_iv
+            potential = {
+                primary_culture = dutch
+                NOT = { has_country_flag = lunched_the_orangist_revolution }
+                OR = {
+                    has_country_modifier = stadtholderless_period
+                    tag = ADU
+                }
+            }
+            allow = {
+                OR = {
+                    AND = {
+                        ruling_party_ideology = reactionary
+                        nationalism_n_imperialism = 1
+                    }
+                    AND = {
+                        is_greater_power = yes
+                        ruling_party_ideology = reactionary
+                        owns = 387
+                        owns = 397
+                    }
+                }
+            }
+            effect = {
+                set_country_flag = lunched_the_orangist_revolution
+                remove_country_modifier = stadtholderless_period
+                country_event = 158103
+                any_pop = {
+                    militancy = 3
+                    consciousness = 3
+                }
+            }
+        }
+        disband_patriots = {
+            picture = patriot_party
+            potential = {
+                primary_culture = dutch
+                NOT = { has_country_flag = patriots_disbanded }
+                NOT = { government = proletarian_dictatorship }
+                NOT = { government = fascist_dictatorship }
+                year = 1740
+                exists = yes
+                is_ideology_enabled = communist
+            }
+            allow = {
+                NOT = { average_militancy = 3 }
+            }
+            effect = {
+                set_country_flag = patriots_disbanded
+                any_pop = {
+                    limit = {
+                        pop_majority_ideology = communist
+                    }
+                    militancy = 4
+                    consciousness = 4
+                }
+            }
+            ai_will_do = { factor = 1 }
+        }
 }

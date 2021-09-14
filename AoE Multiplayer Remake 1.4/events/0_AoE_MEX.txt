@@ -1,91 +1,91 @@
 country_event = {
-	id = 1821000
-	title = "The Seccession of Central America"
-	desc = "EVTDESC1821000"
-	fire_only_once = yes
-	allow_multiple_instances = yes
-	picture = traitor
-	
-	trigger = {
-		tag = MEX
-		owns = 2186
-	}
-	
-	mean_time_to_happen = {
-		months = 84
-		modifier = {
-			factor = 0.9
-			OR = {
-				ruling_party_ideology = reactionary
-				ruling_party_ideology = conservative
-			}
-		}
-		
-		modifier = {
-			factor = 0.8
-			poor_tax = 0.9
-		}
-		modifier = {
-			factor = 0.7
-			militancy = 5
-		}
-		modifier = {
-			factor = 0.6
-			militancy = 4
-		}
-		modifier = {
-			factor = 0.5
-			militancy = 4
-			war_exhaustion = 8
-		}
-		modifier = {
-			factor = 0.4
-			militancy = 5
-			war_exhaustion = 10
-		}
-		modifier = {
-			factor = 0.3
-			militancy = 6
-			war_exhaustion = 15
-		}
-	}
-	
-	option = {
-		name = "Death to United Central America!"
-		relation = { who = UCA value = -100 }
+    id = 1821000
+    title = "The Seccession of Central America"
+    desc = "EVTDESC1821000"
+    fire_only_once = yes
+    allow_multiple_instances = yes
+    picture = traitor
+
+    trigger = {
+        tag = MEX
+        owns = 2186
+    }
+
+    mean_time_to_happen = {
+        months = 84
+        modifier = {
+            factor = 0.9
+            OR = {
+                ruling_party_ideology = reactionary
+                ruling_party_ideology = conservative
+            }
+        }
+
+        modifier = {
+            factor = 0.8
+            poor_tax = 0.9
+        }
+        modifier = {
+            factor = 0.7
+            militancy = 5
+        }
+        modifier = {
+            factor = 0.6
+            militancy = 4
+        }
+        modifier = {
+            factor = 0.5
+            militancy = 4
+            war_exhaustion = 8
+        }
+        modifier = {
+            factor = 0.4
+            militancy = 5
+            war_exhaustion = 10
+        }
+        modifier = {
+            factor = 0.3
+            militancy = 6
+            war_exhaustion = 15
+        }
+    }
+
+    option = {
+        name = "Death to United Central America!"
+        relation = { who = UCA value = -100 }
         any_owned = {
             limit = {
                 is_core = ELS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = HON
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = UCA
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = NIC
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = COS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
         any_pop = {
@@ -148,9 +148,9 @@ country_event = {
             clr_country_flag = presidential_dictatorship_gov
             clr_country_flag = fascist_gov
             clr_country_flag = anarcho_liberal_gov
-			any_owned = {
-				remove_core = THIS
-			}
+            any_owned = {
+                remove_core = THIS
+            }
         }
 
         ##Debt Law
@@ -321,56 +321,56 @@ country_event = {
             limit = { owner = { pensions = good_pensions } }
             UCA = { social_reform = good_pensions }
         }
-		set_country_flag = kill_UCA_go
+        set_country_flag = kill_UCA_go
         ai_chance = {
             factor = 95
         }
     }
-	
-	option = {
+
+    option = {
         name = "Let them go."
         set_country_flag = let_UCA_go
         any_owned = {
             limit = {
                 is_core = ELS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = HON
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = UCA
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = NIC
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = COS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
         relation = { who = UCA value = -100 }
-		UCA = {
-			any_owned = {
-				remove_core = THIS
-			}
-		}
+        UCA = {
+            any_owned = {
+                remove_core = THIS
+            }
+        }
         prestige = -25
         casus_belli = {
             target = UCA
@@ -382,7 +382,7 @@ country_event = {
             type = cut_down_to_size
             months = 60
         }
-		ai_chance = {
+        ai_chance = {
             factor = 5
             modifier = {
                 factor = 2
@@ -398,55 +398,55 @@ country_event = {
                 NOT = { revolt_percentage = 0.25 }
             }
         }
-	}
-	
-	option = {
-		name = "Play Central America"
-		any_owned = {
+    }
+
+    option = {
+        name = "Play Central America"
+        any_owned = {
             limit = {
                 is_core = ELS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = HON
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = UCA
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = NIC
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = {
                 is_core = COS
             }
-			add_core = UCA
+            add_core = UCA
             secede_province = UCA
         }
-		any_owned = {
+        any_owned = {
             limit = { is_core = THIS }
             secede_province = UCA
         }
-		UCA = {
-			any_owned = {
-				remove_core = THIS
-			}
-		}
-		relation = { who = UCA value = -100 }
+        UCA = {
+            any_owned = {
+                remove_core = THIS
+            }
+        }
+        relation = { who = UCA value = -100 }
         any_owned = {
             limit = { is_core = THIS }
             remove_province_modifier = liberal_agitation
@@ -514,7 +514,7 @@ country_event = {
         }
 
         ##Debt Law
-		random_owned = {
+        random_owned = {
             limit = { owner = { debt_law = peonage } }
             UCA = { political_reform = peonage }
         }
@@ -681,150 +681,150 @@ country_event = {
             limit = { owner = { pensions = good_pensions } }
             UCA = { social_reform = good_pensions }
         }
-		change_tag_no_core_switch = UCA
+        change_tag_no_core_switch = UCA
         ai_chance = {
             factor = 0
         }
     }
 }
 country_event = {
-	id = 1821001
-	title = "Calls For Absolutism"
-	desc = "EVTDESC1821001"
-	fire_only_once = yes
-	picture = mexico
-	
-	
-	trigger = {
-		tag = MEX
-		OR = {
-			government = absolute_monarchy
-			government = hms_government
-			government = prussian_constitutionalism
-		}
-		war = no
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "Seize to power for the king himself"
-		political_reform = none_voting
-		political_reform = appointed
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = 6
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = communist
-			}
-			militancy = 8
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-	
-	option = {
-		name = "That would make us the same as the Spanish!"
-		any_pop = {
-			limit = {
-				pop_majority_ideology = conservative
-			}
-			militancy = 6
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = reactionary
-			}
-			militancy = 8
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
+    id = 1821001
+    title = "Calls For Absolutism"
+    desc = "EVTDESC1821001"
+    fire_only_once = yes
+    picture = mexico
+
+
+    trigger = {
+        tag = MEX
+        OR = {
+            government = absolute_monarchy
+            government = hms_government
+            government = prussian_constitutionalism
+        }
+        war = no
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Seize to power for the king himself"
+        political_reform = none_voting
+        political_reform = appointed
+        any_pop = {
+            limit = {
+                pop_majority_ideology = liberal
+            }
+            militancy = 6
+        }
+        any_pop = {
+            limit = {
+                pop_majority_ideology = communist
+            }
+            militancy = 8
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "That would make us the same as the Spanish!"
+        any_pop = {
+            limit = {
+                pop_majority_ideology = conservative
+            }
+            militancy = 6
+        }
+        any_pop = {
+            limit = {
+                pop_majority_ideology = reactionary
+            }
+            militancy = 8
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
 }
 country_event = {
-	id = 1821002
-	title = "Imperial Conquests?"
-	desc = "EVTDESC1821002"
-	fire_only_once = yes
-	picture = mexico
-	
-	
-	trigger = {
-		tag = MEX
-		OR = {
-			government = absolute_monarchy
-			government = hms_government
-			government = prussian_constitutionalism
-		}
-		war = no
-		NOT = {
-			truce_with = SPA
-			truce_with = SPC
-		}
-		war_policy = jingoism
-	}
-	
-	mean_time_to_happen = {
-		months = 36
-	}
-	
-	option = {
-		name = "We must expand!"
-		random_owned = {
-			owner = {
-				limit = {
-					SPA = {
-						exists = yes
-					}
-				}
-			}
-			owner = {
-				war = {
-					target = SPA
-					attacker_goal = { casus_belli = acquire_state state_province_id = 2209 }
-					defender_goal = { casus_belli = humiliate }
-					call_ally = no
-				}
-			}
-		}
-		random_owned = {
-			owner = {
-				limit = {
-					SPC = {
-						exists = yes
-					}
-				}
-			}
-			owner = {
-				war = {
-					target = SPC
-					attacker_goal = { casus_belli = acquire_state state_province_id = 2209 }
-					defender_goal = { casus_belli = humiliate }
-					call_ally = no
-				}
-			}
-		}
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 0
-				ai = yes
-			}
-		}
-	}
-	
-	option = {
-		name = "We aren't ready."
-		prestige = -15
-		ai_chance = {
+    id = 1821002
+    title = "Imperial Conquests?"
+    desc = "EVTDESC1821002"
+    fire_only_once = yes
+    picture = mexico
+
+
+    trigger = {
+        tag = MEX
+        OR = {
+            government = absolute_monarchy
+            government = hms_government
+            government = prussian_constitutionalism
+        }
+        war = no
+        NOT = {
+            truce_with = SPA
+            truce_with = SPC
+        }
+        war_policy = jingoism
+    }
+
+    mean_time_to_happen = {
+        months = 36
+    }
+
+    option = {
+        name = "We must expand!"
+        random_owned = {
+            owner = {
+                limit = {
+                    SPA = {
+                        exists = yes
+                    }
+                }
+            }
+            owner = {
+                war = {
+                    target = SPA
+                    attacker_goal = { casus_belli = acquire_state state_province_id = 2209 }
+                    defender_goal = { casus_belli = humiliate }
+                    call_ally = no
+                }
+            }
+        }
+        random_owned = {
+            owner = {
+                limit = {
+                    SPC = {
+                        exists = yes
+                    }
+                }
+            }
+            owner = {
+                war = {
+                    target = SPC
+                    attacker_goal = { casus_belli = acquire_state state_province_id = 2209 }
+                    defender_goal = { casus_belli = humiliate }
+                    call_ally = no
+                }
+            }
+        }
+        ai_chance = {
+            factor = 95
+            modifier = {
+                factor = 0
+                ai = yes
+            }
+        }
+    }
+
+    option = {
+        name = "We aren't ready."
+        prestige = -15
+        ai_chance = {
             factor = 5
             modifier = {
                 factor = 2
@@ -839,50 +839,50 @@ country_event = {
                 war = no
                 NOT = { revolt_percentage = 0.25 }
             }
-			modifier = {
-				factor = 95 
-				ai = yes
-			}
+            modifier = {
+                factor = 95
+                ai = yes
+            }
         }
-	}
+    }
 }
 country_event = {
-	id = 1821003
-	title = "Philippiean conquests"
-	desc = "EVTDESC1821003"
-	picture = mexico
-	fire_only_once = yes
-	
-	
-	trigger = {
-		tag = MEX
-		war = no
-		war_policy = jingoism
-		SPA_1459 = {
-			owned_by = THIS
-		}
-		SPA_1463 = {
-			owned_by = THIS
-		}
-		SPA_1455 = {
-			owned_by = THIS
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 36
-	}
-	
-	option = {
-		name = "Glorious our Empire is!"
-		SPA_1459 = {
-			add_core = THIS
-		}
-		SPA_1463 = {
-			add_core = THIS
-		}
-		SPA_1455 = {
-			add_core = THIS
-		}
-	}
+    id = 1821003
+    title = "Philippiean conquests"
+    desc = "EVTDESC1821003"
+    picture = mexico
+    fire_only_once = yes
+
+
+    trigger = {
+        tag = MEX
+        war = no
+        war_policy = jingoism
+        SPA_1459 = {
+            owned_by = THIS
+        }
+        SPA_1463 = {
+            owned_by = THIS
+        }
+        SPA_1455 = {
+            owned_by = THIS
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 36
+    }
+
+    option = {
+        name = "Glorious our Empire is!"
+        SPA_1459 = {
+            add_core = THIS
+        }
+        SPA_1463 = {
+            add_core = THIS
+        }
+        SPA_1455 = {
+            add_core = THIS
+        }
+    }
 }

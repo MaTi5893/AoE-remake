@@ -2,36 +2,36 @@
 ########POLISH PARTITIONS##############
 #######################################
 country_event = {
-	id = 1772
-	title = "Partions of Poland-Lithuania"
-	desc = "The commonwealth is to weak to govern it's people and it is our duty as great powers of europe to do it for them!"
-	picture = polish_partition
-	is_triggered_only = yes
-	major = yes
-	
-	option = {
-		name = "Send a delegation to Prussia and Austria"
-		set_country_flag = main_partitioner
-		ai_chance = { factor = 100 }
-		set_global_flag = polish_partition
-		random_country = {
-			limit = {
-				OR = {
-					AND = {
-						tag = PLC
-						exists = PLC
-					}
-					AND = {
-						tag = POL
-						exists = POL
-					}
-					AND = {
-						tag = PLR
-						exists = PLR
-					}
-				}
-			}
-			country_event = 15730042
-		}
-	}
+    id = 1772
+    title = "Partions of Poland-Lithuania"
+    desc = "The commonwealth is to weak to govern it's people and it is our duty as great powers of europe to do it for them!"
+    picture = polish_partition
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = "Send a delegation to Prussia and Austria"
+        set_country_flag = main_partitioner
+        ai_chance = { factor = 100 }
+        set_global_flag = polish_partition
+        random_country = {
+            limit = {
+                OR = {
+                    AND = {
+                        tag = PLC
+                        exists = PLC
+                    }
+                    AND = {
+                        tag = POL
+                        exists = POL
+                    }
+                    AND = {
+                        tag = PLR
+                        exists = PLR
+                    }
+                }
+            }
+            country_event = 15730042
+        }
+    }
 }

@@ -1,49 +1,49 @@
 #Pope Clement XI
 country_event = {
-	id = 712350
-	title = "Pope Clement XI"
-	desc = "After the death of Pope Innocent XII in 1700, a conclave was convoked to elect a successor."
-	picture = "Monarchy"
-	fire_only_once = yes
-	trigger = {
-		tag = PAP
-		war = no
-		}
-	mean_time_to_happen = {
-		days = 1
-	}
-	option = {
-		name = "Glory to the Pope!"
-		prestige = 20
-	}
+    id = 712350
+    title = "Pope Clement XI"
+    desc = "After the death of Pope Innocent XII in 1700, a conclave was convoked to elect a successor."
+    picture = "Monarchy"
+    fire_only_once = yes
+    trigger = {
+        tag = PAP
+        war = no
+        }
+    mean_time_to_happen = {
+        days = 1
+    }
+    option = {
+        name = "Glory to the Pope!"
+        prestige = 20
+    }
 }
 
 #Latin Empire
 country_event = {
-	id = 712351
-	title = "The Latin Empire"
-	desc = "We have brought back the Latin Empire thus it brings us glory to our nation once again."
-	picture = "Monarchy"
-	fire_only_once = yes
-	trigger = {
-		OR = {
-		tag = PAP
-		tag = GOD
-		}
-		war = no
-		exists = LTN
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	option = {
-		name = "Glory to the Pope!"
-		prestige = 250
-	}
-	
-	option = {
-		name = "Onwards Latin Empire!"		
-		prestige = 250
-		change_tag_no_core_switch = LTN
-	}
+    id = 712351
+    title = "The Latin Empire"
+    desc = "We have brought back the Latin Empire thus it brings us glory to our nation once again."
+    picture = "Monarchy"
+    fire_only_once = yes
+    trigger = {
+        OR = {
+        tag = PAP
+        tag = GOD
+        }
+        war = no
+        exists = LTN
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+    option = {
+        name = "Glory to the Pope!"
+        prestige = 250
+    }
+
+    option = {
+        name = "Onwards Latin Empire!"
+        prestige = 250
+        change_tag_no_core_switch = LTN
+    }
 }

@@ -10,30 +10,30 @@ THC = { value = -5 }
 ENG = { value = -5 }
 BOR = { value = -5 }
 army = {
-	name = "Cherokee Army"
-	location = 190
-	regiment = {
-		name= "1th Regiment of Infantry"
-		type = infantry
-		home = 190
-	}
+    name = "Cherokee Army"
+    location = 190
+    regiment = {
+        name= "1th Regiment of Infantry"
+        type = infantry
+        home = 190
+    }
 
-	regiment = {
-		name= "2th Regiment of Irregulars"
-		type = irregular
-		home = 216
-	}
+    regiment = {
+        name= "2th Regiment of Irregulars"
+        type = irregular
+        home = 216
+    }
 
-	regiment = {
-		name= "1th Regiment of Cavalry"
-		type = cavalry
-		home = 201
-	}
+    regiment = {
+        name= "1th Regiment of Cavalry"
+        type = cavalry
+        home = 201
+    }
 
-	regiment = {
-		name= "2nd Regiment of Irregulars"
-		type = irregular
-		home = 196
-	}
+    regiment = {
+        name= "2nd Regiment of Irregulars"
+        type = irregular
+        home = 196
+    }
 
 }
