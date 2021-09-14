@@ -78,10 +78,6 @@ dismantle_forts
 humiliate
 demand_concession_casus_belli
 establish_protectorate_casus_belli
-unification_humiliate_cb
-unification_release_puppet_cb
-unification_casus_belli
-unification_annex_casus_belli
 rude_boy
 annex
 install_communist_gov_cb
@@ -1471,9 +1467,11 @@ annex_india = {
 			}
 			OR = {
 				neighbour = THIS
-				any_neighbor_province = {
-					owner = {
-						vassal_of = THIS
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = {
+							vassal_of = THIS
+						}
 					}
 				}
 			}
@@ -1578,9 +1576,11 @@ annex_india_full = {
 			}
 			OR = {
 				neighbour = THIS
-				any_neighbor_province = {
-					owner = {
-						vassal_of = THIS
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = {
+							vassal_of = THIS
+						}
 					}
 				}
 			}
@@ -1671,9 +1671,11 @@ annex_na = {
 			}
 			OR = {
 				neighbour = THIS
-				any_neighbor_province = {
-					owner = {
-						vassal_of = THIS
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = {
+							vassal_of = THIS
+						}
 					}
 				}
 			}
@@ -1777,9 +1779,11 @@ annex_na_full = {
 			}
 			OR = {
 				neighbour = THIS
-				any_neighbor_province = {
-					owner = {
-						vassal_of = THIS
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = {
+							vassal_of = THIS
+						}
 					}
 				}
 			}
@@ -1923,9 +1927,7 @@ place_in_the_sun_for_puppet = {
 	
 	allowed_countries = {
 		NOT = { tag = FROM }
-		OR = {
-			NOT = { alliance_with = FROM }
-		}
+		NOT = { alliance_with = FROM }
 		OR = {
 			FROM = { vassal_of = THIS }
 			FROM = { substate_of = THIS }
@@ -2674,9 +2676,7 @@ demand_concession_casus_belli_for_puppet = {
 	
 	allowed_countries = {
 		NOT = { tag = FROM }
-		OR = {
-			NOT = { alliance_with = FROM }
-		}
+		NOT = { alliance_with = FROM }
 		OR = {
 			FROM = { vassal_of = THIS }
 			FROM = { substate_of = THIS }
@@ -2734,10 +2734,8 @@ establish_protectorate_casus_belli = {
 			}
 			AND = {
 				THIS = {
-					AND = {
-						is_greater_power = yes
-						nationalism_n_imperialism = 1
-					}
+					is_greater_power = yes
+					nationalism_n_imperialism = 1
 				}
 				NOT = { number_of_states = 5 }
 			}
@@ -2839,21 +2837,17 @@ install_communist_gov_cb = {
 			war_policy = jingoism
 		}
 		neighbour = THIS
-		AND = {
-			# If reciever ruling party is not a communist
-			#NOT = {
-			#	ruling_party_ideology = communist
-			#}
+		# If reciever ruling party is not a communist
+		#NOT = {
+		#	ruling_party_ideology = communist
+		#}
 			
-			# There are some amount of communist already in the country
-			communist = 0.1
+		# There are some amount of communist already in the country
+		communist = 0.1
 				
-			# If reciever current gov is not proletarian_dictatorship
-			NOT = {
-				government = proletarian_dictatorship
-			}
-			
-			# If reciever is not a great power
+		# If reciever current gov is not proletarian_dictatorship
+		NOT = {
+			government = proletarian_dictatorship
 		}
 	}
 	
@@ -3086,12 +3080,10 @@ demand_concession_capital = {
 			not = { is_core = THIS }
 			is_colonial = no
 		}
-			AND = {
-				civilized = no
-				THIS = {
-					civilized = yes
-				}
-		   }
+		civilized = no
+		THIS = {
+			civilized = yes
+		}
 	}
 	
 	allowed_states = {
@@ -3443,16 +3435,6 @@ negotiated_transfer = {
 	}
 	
 	allowed_states = {
-		OR = {
-			is_colonial = yes
-			is_colonial = no
-		}
-		any_owned_province = {
-                     OR = {
-			is_colonial = yes
-			is_colonial = no
-                     }
-		}
 		not = { any_owned_province = { is_capital = yes } }
 	}
 
