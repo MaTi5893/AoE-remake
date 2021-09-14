@@ -249,6 +249,10 @@ country_event = {
 	option = {
 		name = "Sign it."
 		prestige = -2
+		relation = {
+			who = AUS
+			value = 50
+		}
 		set_country_flag = accepted_sanction
 		ai_chance = {
 			factor = 0
@@ -292,6 +296,10 @@ country_event = {
 	option = {
 		name = "We will not accept such stupid document!"
 		prestige = 2
+		relation = {
+			who = AUS
+			value = -85
+		}
 		set_country_flag = refused_sanction
 		ai_chance = {
 			factor = 2

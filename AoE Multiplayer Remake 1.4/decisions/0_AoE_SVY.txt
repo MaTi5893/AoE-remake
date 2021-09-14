@@ -141,6 +141,15 @@ political_decisions = {
 					}
 				}
 			}
+			random_owned = {
+				limit = {
+					NOT = { primary_culture = arpitan }
+				}
+				owner = {
+					add_accepted_culture = south_italian
+					set_country_flag = NO_FRENCHIES
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -149,7 +158,7 @@ political_decisions = {
 	}
 	
 	emmanuel_admin_reform = {
-		picture = administration
+		picture = charles_emmanuel
 		potential = {
 			OR = {
 				tag = SVY
@@ -187,7 +196,7 @@ political_decisions = {
 	}
 	
 	emmanuel_mil_reform = {
-		picture = army_training
+		picture = charles_emmanuel
 		potential = {
 			OR = {
 				tag = SVY
@@ -219,6 +228,17 @@ political_decisions = {
 				name = fredrican_army_model
 				duration = 18250
 			}
+			any_owned = {
+				limit = {
+					region = SAR_720
+				}
+				any_pop = {
+					limit = {
+						type = soldiers
+					}
+					reduce_pop = 1.33
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -230,7 +250,10 @@ political_decisions = {
 		picture = crown
 		potential = {
 			has_global_flag = spanish_succesion_crisis
+			OR = {
 			tag = SVY
+			tag = SAR
+			}
 			NOT = { has_country_flag = disputed_spanish_succession }
 		}
 		allow = {
@@ -266,5 +289,91 @@ political_decisions = {
 			badboy = 5
 			set_country_flag = disputed_spanish_succession
 		}
+	}
+	
+	victor_amadeus_diplomacy = {
+		picture = victor_amadeus
+		potential = {
+			OR = {
+			tag = SVY
+			tag = SAR
+			}
+			NOT = { has_country_flag = victor_diplo }
+		}
+		allow = {
+			war = no
+			OR = {
+				relation = {
+					who = BOR
+					value = 100
+				}
+				relation = {
+					who = SPA
+					value = 100
+				}
+				relation = {
+					who = AUS
+					value = 100
+				}
+				relation = {
+					who = SPC
+					value = 100
+				}
+			}
+		}
+		effect = {
+			set_country_flag = victor_diplo
+			country_event = 1755012
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	embrace_france = {
+		picture = embrace_france
+		potential = {
+			OR = {
+			tag = SVY
+			tag = SAR
+			}
+			NOT = { primary_culture = arpitan }
+			owns = 465
+			NOT = { has_country_flag = NO_FRENCHIES }
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+			rank = 10
+		}
+		effect = {
+			primary_culture = arpitan
+			add_accepted_culture = north_italian
+			add_accepted_culture = occitan
+			add_accepted_culture = gascon
+			add_core = 454
+			add_core = 469
+			add_core = 471
+			add_core = 470
+			prestige = 5
+			random_country = {
+				limit = {
+					OR = {
+						AND = {
+							tag = BOR
+							exists = BOR
+						}
+						AND = {
+							tag = FRA
+							exists = FRA
+						}
+					}
+				}
+				relation = {
+					who = SVY
+					value = -135
+				}
+			}
+			capital = 465
+		}
+		ai_will_do = { factor = 1 }
 	}
 }

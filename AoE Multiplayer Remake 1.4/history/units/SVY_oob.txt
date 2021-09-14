@@ -1,6 +1,6 @@
 FRA = { value = -150 }
-AUS = { value = 150 }
-SWI = { value = 200 truce_until = 1704.1.1 }
+AUS = { value = 90 }
+SWI = { value = 90 truce_until = 1704.1.1 }
 
 leader = {
 	name = "Carlo Alberto"
@@ -93,5 +93,42 @@ army = {
 		name= "5nd Savoiard Artillery"
 		type = artillery
 		home = 466
+	}
+}
+army = {
+	name = "Army of Aosta"
+	location = 721
+	regiment = {
+		name= "Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	regiment = {
+		name= "Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	regiment = {
+		name= "3rd Savoiard Artillery"
+		type = artillery
+		home = 472
+	}
+	
+	regiment = {
+		name= "4th Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	
+	regiment = {
+		name= "5th Savoiard Artillery"
+		type = artillery
+		home = 720
+	}
+	
+	regiment = {
+		name= "1st Savoiard Cuirassier"
+		type = cuirassier
+		home = 720
 	}
 }

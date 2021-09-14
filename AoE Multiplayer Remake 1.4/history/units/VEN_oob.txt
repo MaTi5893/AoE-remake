@@ -3,8 +3,8 @@ army = {
 	name = "Esercito Veneziano"
 	location = 729
 	regiment = {
-		name= "Venetian Infantry"
-		type = infantry
+		name= "Venetian Artillery"
+		type = artillery
 		home = 729
 	}
 	regiment = {
@@ -13,14 +13,48 @@ army = {
 		home = 730
 	}
 	regiment = {
-		name= "Ionian Infantry"
-		type = infantry
+		name= "Venetian Artillery"
+		type = artillery
 		home = 826
 	}
 	regiment = {
-		name= "Greek Infantry"
-		type = infantry
+		name= "Venetian Artillery"
+		type = artillery
 		home = 842
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 731
+	}
+}
+army = {
+	name = "Esercito Grecia"
+	location = 840
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 840
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 839
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 841
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 842
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 727
 	}
 }
 
@@ -64,6 +98,70 @@ navy = {
 		type = frigate
 	}
 	ship = {
+		name= "Fregata 1"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 2"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 3"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 4"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 1"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 2"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 3"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 4"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 1"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 2"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 3"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 4"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 1"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 2"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 3"
+		type = frigate
+	}
+	ship = {
+		name= "Fregata 4"
+		type = frigate
+	}
+	ship = {
 		name= "Trasporto 1"
 		type = clipper_transport
 	}
@@ -79,4 +177,25 @@ navy = {
 		name= "Trasporto 4"
 		type = clipper_transport
 	}
+	ship = {
+		name= "Trasporto 5"
+		type = clipper_transport
+	}
+}
+
+leader = {
+	name = "Johann Matthias von der Schulenburg"
+	date = 1700.1.1
+	type = land
+	personality = defence_2.1
+	background = attack_2.1
+	prestige = 0.1
+}
+leader = {
+	name = "Andrea Pisani"
+	date = 1700.1.1
+	type = sea
+	personality = defence_4.1
+	background = attack_3.1
+	prestige = 0.1
 }

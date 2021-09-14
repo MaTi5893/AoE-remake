@@ -482,6 +482,87 @@ country_event = {
 		remove_country_modifier = charles_emmanuel
 	}
 }
+country_event = {
+	id = 1755012
+	title = "Savoyard Foreign Policy"
+	desc = "EVNDESC1755012"
+	picture = harbour
+	is_triggered_only = yes
+	
+	option = {
+		name = "Approach France"
+		random_country = {
+			limit = {
+				OR = {
+					AND = {
+						tag = BOR
+						exists = BOR
+					}
+					AND = {
+						tag = FRA
+						exists = FRA
+					}
+				}
+			}
+			country_event = 1755013
+		}
+	}
+	option = {
+		name = "Approach Spain"
+		random_country = {
+			limit = {
+				OR = {
+					AND = {
+						tag = SPA
+						exists = SPA
+					}
+					AND = {
+						tag = SPC
+						exists = SPC
+					}
+				}
+			}
+			country_event = 1755013
+		}
+	}
+	option = {
+		name = "Approach Austria"
+		random_country = {
+			limit = {
+				tag = AUS
+				exists = AUS
+			}
+			country_event = 1755013
+		}
+	}
+}
+country_event = {
+	id = 1755013
+	title = "Savoy asks to align with us!"
+	desc = "EVNDESC1755013"
+	picture = harbour
+	is_triggered_only = yes
+	
+	option = {
+		name = "Agree"
+		prestige = 5
+		FROM = { prestige = 5 }
+		diplomatic_influence = {
+			who = FROM
+			value = 200
+		}
+	}
+	option = {
+		name = "Refuse"
+		prestige = -5
+		FROM = { prestige = -5 }
+		diplomatic_influence = {
+			who = FROM
+			value = 200
+		}
+	}
+}
+	
 ############################
 #######    Naples   ########
 ############################
@@ -574,7 +655,7 @@ country_event = {
 country_event = {
 	id = 1755011
 	title = "Occupation of Rome"
-	desc = "EVNDESC175509"
+	desc = "EVNDESC1755011"
 	picture = pope
 	fire_only_once = yes
 	
@@ -646,7 +727,7 @@ country_event = {
 				months = 24
 			}
 		}
-		badboy = 10
+		badboy = 7.5
 		ai_chance = {
 			factor = 1
 			modifier = {

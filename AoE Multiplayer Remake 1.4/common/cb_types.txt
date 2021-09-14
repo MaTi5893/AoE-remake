@@ -2602,6 +2602,7 @@ demand_concession_casus_belli = {
 		}
 		OR = {
 		NOT = { total_pops = 500000 }
+		NOT = { capital_scope = { is_core = HND } }
 		year = 1715
 		}
 		civilized = no
@@ -2657,10 +2658,8 @@ demand_concession_casus_belli_for_puppet = {
 			civilized = yes
 		}
 		OR = {
-		AND = {
 		NOT = { total_pops = 500000 }
 		NOT = { capital_scope = { is_core = HND } }
-		}
 		year = 1715
 		}
 		civilized = no
@@ -2734,8 +2733,10 @@ establish_protectorate_casus_belli = {
 			}
 			AND = {
 				THIS = {
-					is_greater_power = yes
-					nationalism_n_imperialism = 1
+					AND = {
+						is_greater_power = yes
+						state_n_government = 1
+					}
 				}
 				NOT = { number_of_states = 5 }
 			}
@@ -3094,6 +3095,7 @@ demand_concession_capital = {
 		}
 		OR = {
 		NOT = { total_pops = 500000 }
+		NOT = { capital_scope = { is_core = HND } }
 		year = 1730
 		}
 		any_owned_province = { is_capital = yes }

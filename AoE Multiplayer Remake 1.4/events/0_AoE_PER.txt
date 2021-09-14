@@ -10,6 +10,7 @@ country_event = {
 		tag = PER
 		1213 = { owned_by = THIS }
 		year = 1709
+		war = no
 		NOT = { HTK = { exists = yes } }
 	}
 	
@@ -482,6 +483,13 @@ country_event = {
 		OR = {
 			civilized = yes
 			has_country_flag = nader_ded 
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.1
+			has_country_flag = nader_ded
 		}
 	}
 	

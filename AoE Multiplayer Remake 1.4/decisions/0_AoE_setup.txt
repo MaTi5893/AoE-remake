@@ -70,6 +70,15 @@ political_decisions = {
 				name = hussein_pasha
 				duration = -1
 			}
+			any_owned = {
+				any_pop = {
+					limit = {
+						culture = turkish
+						type = soldiers
+					}
+					reduce_pop = 1.66
+				}
+			}
 		}
 	}
 	
@@ -195,6 +204,26 @@ political_decisions = {
 			add_country_modifier = {
 				name = mercantile_society
 				duration = -1
+			}
+		}
+	}
+	
+	svy_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			SVY = {
+				any_pop = {
+					limit = {
+						has_pop_culture = north_italian
+						type = soldiers
+					}
+					reduce_pop = 4
+				}
 			}
 		}
 	}

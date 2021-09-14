@@ -82,5 +82,10 @@ mechanical_production = 1
 mechanized_mining = 1
 basic_chemistry = 1
 
-
+schools = naval_tech_school
 oob = "VEN_oob.txt"
+
+govt_flag = {
+	government = proletarian_dictatorship
+	flag = colonial_company
+}

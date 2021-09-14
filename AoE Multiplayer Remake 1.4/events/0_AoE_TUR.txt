@@ -25,7 +25,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 6
 	}
 	
 	option = {
@@ -120,7 +120,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		months = 5
 	}
 	
 	option = {
@@ -157,8 +157,6 @@ country_event = {
 		name = "HA! Take that Habsburgs!"
 		treasury = 5000
 		619 = {
-			life_rating = -5
-			#RGO_size = -1
 			fort = -2
 			infrastructure = -2
 			any_pop = {
@@ -167,7 +165,7 @@ country_event = {
 		}
 		AUS = { country_event = 173604 }
 		prestige = 30
-		badboy = 10
+		badboy = 1
 	}
 }
 

@@ -327,29 +327,79 @@ political_decisions = {
 				tag = MNT
 				tag = MOD
 				tag = RMG
-			}
-			OR = {
-				government = fascist_dictatorship
-				government = proletarian_dictatorship
-				government = democracy
+				tag = SAR
+				tag = SVY
+				tag = VEN
 			}
 			NOT = { CIS = { exists = yes } }
 		}
 		allow = {
 			is_vassal = no
-			owns = 739
-			owns = 726
-			owns = 742
+			state_n_government = 1
+			OR = {
+				owns = 728
+				owns = 726
+			}
+			OR = {
+				owns = 741
+				owns = 744
+			}
+			OR = {
+				AND = {
+					owns = 729
+					owns = 720	
+				}
+				AND = {
+					NOT = { tag = SVY }
+					NOT = { tag = SAR }
+					NOT = { tag = VEN }
+				}
+			}
 		}
 		effect = {
 			AUS_726 = { add_core = THIS }
 			PAP_741 = { add_core = THIS }
 			MOD_739 = { add_core = THIS }
+			SAR_720 = { add_core = THIS }
+			AUS_729 = { add_core = THIS }
+			TUS_744 = { add_core = THIS }
 			all_core = {
 				add_core = CIS
 				remove_core = THIS
 			}
 			change_tag = CIS
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+						}
+						NOT = { is_ideology_enabled = communist }
+					}
+				}
+				owner = {
+					government = oligarchic_republic
+					election = yes
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+						}
+						NOT = { is_ideology_enabled = communist }
+					}
+				}
+				owner = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = communist
+				}
+			}
 			prestige = 35
 		}
 		ai_will_do = { factor = 1 }

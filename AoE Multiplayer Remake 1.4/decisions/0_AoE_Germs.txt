@@ -9,17 +9,9 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			OR = {
-				AND = {
-				is_secondary_power = yes
-				ai = yes
-				}
-				AND = {
-				owns = 562
-				owns = 563
-				owns = 561
-				}
-			}
+			owns = 562
+			owns = 563
+			owns = 561
 		}
 		effect = {
 			set_country_flag = formed_thuringia
@@ -46,17 +38,9 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			OR = {
-				AND = {
-				is_secondary_power = yes
-				ai = yes
-				}
-				AND = {
-				owns = 581
-				owns = 534
-				owns = 580
-				}
-			}
+			owns = 581
+			owns = 534
+			owns = 580
 		}
 		effect = {
 			set_country_flag = formed_westphalia
@@ -84,15 +68,9 @@ political_decisions = {
 			NOT = { tag = LOR }
 		}
 		allow = {
-			OR = {
-				AND = {
-					owns = 572
-					owns = 576
-					owns = 571
-				}
-				is_secondary_power = yes
-				prestige = 25
-			}
+			owns = 572
+			owns = 576
+			owns = 571
 		}
 		effect = {
 			set_country_flag = formed_rheinland
@@ -120,14 +98,9 @@ political_decisions = {
 			NOT = { tag = BAV }
 		}
 		allow = {
-			OR = {
-				is_secondary_power = yes
-				AND = {
-					owns = 586
-					owns = 589
-					owns = 593
-				}
-			}
+			owns = 586
+			owns = 589
+			owns = 593
 		}
 		effect = {
 			set_country_flag = formed_swabia
@@ -139,34 +112,6 @@ political_decisions = {
 			}
 			change_tag = SGF
 			prestige = 15
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	invite_liege = {
-		picture = westphalia
-		potential = {
-			has_country_flag = formed_westphalia
-			NOT = {
-				has_country_flag = invited_liege
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = WES
-			}
-		}
-		effect = {
-			set_country_flag = invited_liege
-			LIG = {
-				set_country_flag = westfalen_area
-			}
-			LIG = {
-				all_core = {
-					add_core = WES
-				}
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}

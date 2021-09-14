@@ -4359,18 +4359,17 @@ improved_administration = {
 }
 table_of_ranks = {
 	leadership_modifier = 0.2
-	land_unit_start_experience = 10
+	land_unit_start_experience = 5
 	supply_consumption = -0.05
 	icon = 15
 }
 peter_the_great = {
 	culture_tech_research_bonus = 0.1
-	army_tech_research_bonus = 0.05
 	navy_tech_research_bonus = 0.1
-	influence_modifier = 0.2
+	research_points = 0.5
 	ruling_party_support = 0.35
 	bad_badboy = -0.05
-	education_efficiency_modifier = 0.35
+	education_efficiency_modifier = 0.15
 	prestige = 0.08
 	icon = 13
 }
@@ -4401,7 +4400,7 @@ nakaz = {
 }
 petes_conscription = {
 	mobilisation_economy_impact = -0.15
-	supply_consumption = -0.15
+	supply_consumption = -0.05
 	mobilisation_size = 0.01
 	min_military_spending = 0.1
 	icon = 15
@@ -6781,7 +6780,7 @@ charles_emmanuel = {
 	icon = 13
 }
 savoyard_law_code = {
-	admin_efficiency = 0.1
+	administrative_efficiency_modifier = 0.1
 	icon = 5
 }
 fredrican_army_model = {
