@@ -290,18 +290,13 @@ political_decisions = {
 		effect = {
 			any_owned = {
 				limit = {
-					OR 
-					{
+					OR = {
 						is_core = NAP
 						is_core = SYC
 						is_core = SRD
 						is_core = LOM
+						is_core = BEL
 					}
-				add_core = THIS
-			}
-			any_owned = {
-				limit = {
-					is_core = BEL
 				}
 				add_core = THIS
 			}
