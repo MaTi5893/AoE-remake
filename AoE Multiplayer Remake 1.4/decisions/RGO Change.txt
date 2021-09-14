@@ -11,9 +11,7 @@ political_decisions = {
 					NOT = { has_country_flag = rgo_changed_flag }
 				}
 				effect = {
-					country_event = { 
-						id = 199936
-					}
+					country_event = 199936
 				}
 		}
 		
@@ -28,9 +26,7 @@ political_decisions = {
 					NOT = { has_country_flag = rgo_changed_flag }
 				}
 				effect = {
-					country_event = {
-						id = 199937
-					}
+					country_event = 199937
 				}
 		}
 }

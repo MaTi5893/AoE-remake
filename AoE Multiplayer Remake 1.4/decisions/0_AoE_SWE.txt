@@ -705,10 +705,7 @@ political_decisions = {
 	form_scandinavia = {
 		picture = SCA_political_union
 		potential = {
-			OR = {
-				is_culture_group = scandinavian
-			#	is_culture_group = bears
-			}
+			is_culture_group = scandinavian
 			NOT = {
 				exists = SCA
 			}

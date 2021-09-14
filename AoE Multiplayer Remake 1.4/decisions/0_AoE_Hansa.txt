@@ -52,12 +52,10 @@ political_decisions = {
 		allow = {
 			war = no
 			LUB = {
-				AND = {
-					alliance_with = THIS
-					relation = {
-						who = THIS
-						value = 190
-					}
+				alliance_with = THIS
+				relation = {
+					who = THIS
+					value = 190
 				}
 			}
 		}
@@ -86,19 +84,17 @@ political_decisions = {
 			}
 		}
 		allow = {
-			AND = {
-				369 = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							vassal_of = THIS
-						}
+			369 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						vassal_of = THIS
 					}
 				}
-				544 = { owned_by = THIS }
-				528 = { owned_by = THIS }
-				539 = { owned_by = THIS }
-			}		
+			}
+			544 = { owned_by = THIS }
+			528 = { owned_by = THIS }
+			539 = { owned_by = THIS }
 		}
 		effect = {
 			change_tag = NGF
@@ -172,19 +168,17 @@ political_decisions = {
 			}
 		}
 		allow = {
-			AND = {
-				369 = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							vassal_of = THIS
-						}
+			369 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						vassal_of = THIS
 					}
 				}
-				544 = { owned_by = THIS }
-				528 = { owned_by = THIS }
-				539 = { owned_by = THIS }
-			}		
+			}
+			544 = { owned_by = THIS }
+			528 = { owned_by = THIS }
+			539 = { owned_by = THIS }
 		}
 		effect = {
 			change_tag = NGF
@@ -294,13 +288,11 @@ political_decisions = {
 			NOT = { vassal_of = AUS }
 		}
 		allow = {
-			AND = {
-				548 = {
-					owned_by = THIS
-				}
-				680 = {
-					owned_by = THIS
-				}
+			548 = {
+				owned_by = THIS
+			}
+			680 = {
+				owned_by = THIS
 			}
 		}
 		effect = {
@@ -338,13 +330,11 @@ political_decisions = {
 			NOT = { vassal_of = AUS }
 		}
 		allow = {
-			AND = {
-				695 = {
-					owned_by = THIS
-				}
-				690 = {
-					owned_by = THIS
-				}
+			695 = {
+				owned_by = THIS
+			}
+			690 = {
+				owned_by = THIS
 			}
 		}
 		effect = {
@@ -382,16 +372,14 @@ political_decisions = {
 		}
 		allow = {
 			is_greater_power = yes
-			AND = {
-				NET_375 = {
-					owned_by = THIS
-				}
-				NET_381 = {
-					owned_by = THIS
-				}
-				NET_385 = {
-					owned_by = THIS
-				}
+			NET_375 = {
+				owned_by = THIS
+			}
+			NET_381 = {
+				owned_by = THIS
+			}
+			NET_385 = {
+				owned_by = THIS
 			}
 		}
 		effect = {

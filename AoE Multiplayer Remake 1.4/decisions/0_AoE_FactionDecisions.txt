@@ -37,7 +37,6 @@ political_decisions = {
 				government = absolute_monarchy
 				government = hms_government
 				government = prussian_constitutionalism
-				government = archduchy
 				government = elective_monarchy_oligarchy
 			}
 			NOT = { has_recently_lost_war = yes }
@@ -79,7 +78,6 @@ political_decisions = {
 						government = absolute_monarchy
 						government = hms_government
 						government = prussian_constitutionalism
-						government = archduchy
 						government = elective_monarchy_oligarchy
 					}
 				}
@@ -89,7 +87,6 @@ political_decisions = {
 					NOT = {	government = prussian_constitutionalism }
 					NOT = {	government = absolute_monarchy }
 					NOT = {	government = absolute_monarchy }
-					NOT = {	government = archduchy }
 				}
 			}
 			NOT = { tech_school = unciv_tech_school }
@@ -240,7 +237,6 @@ political_decisions = {
 				government = absolute_monarchy
 				government = hms_government
 				government = prussian_constitutionalism
-				government = archduchy
 				government = elective_monarchy_oligarchy
 			}
 			OR = {

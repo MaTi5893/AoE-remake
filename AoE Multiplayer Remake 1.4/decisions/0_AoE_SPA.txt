@@ -195,7 +195,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					war_exhaustion = 20
-					has_recently_lost_wars = yes
+					has_recently_lost_war = yes
 				}
 				war_exhaustion = 40
 			}
@@ -208,7 +208,7 @@ political_decisions = {
 			money = 500000
 			any_pop = {
 				limit = {
-					type = soldier
+					type = soldiers
 					culture = spanish
 				}
 				reduce_pop = 1.05

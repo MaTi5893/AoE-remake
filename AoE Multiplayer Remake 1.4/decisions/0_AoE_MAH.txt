@@ -136,7 +136,7 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			military_reforms = foreign_weapons_two
+			foreign_weapons = foreign_weapons_two
 			OR = {
 				relation = {
 					who = GBR

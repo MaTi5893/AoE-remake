@@ -24,10 +24,7 @@ political_decisions = {
 			}
 			OR = {
 				ruling_party_ideology = socialist
-				AND = {
-					ruling_party_ideology = reactionary
-				
-				}
+				ruling_party_ideology = reactionary
 			}
 		}
 		effect = {
