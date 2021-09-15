@@ -362,6 +362,7 @@ political_decisions = {
             is_greater_power = yes
         }
         effect = {
+			set_country_flag = created_glm
             AUS_702 = { add_core = GLM }
             AUS_662 = { add_core = GLM }
             random_owned = {
