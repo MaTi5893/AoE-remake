@@ -3,6 +3,7 @@ political_decisions = {
 ###Venice's Expansion###
 	
 	adriatic_dominion = {
+		picture = conquest_adriatic
 		potential = {
 			tag = VEN
 			NOT = { has_country_flag = adriatic_dominion }
@@ -43,6 +44,7 @@ political_decisions = {
 	}
 	
 	last_expedition = {
+		picture = tunisia_map
 		potential = {
 			tag = VEN
 			NOT = { has_country_flag = last_expedition }
@@ -63,6 +65,41 @@ political_decisions = {
 				duration = 12
 			}
 			badboy = 5
+		}
+	}
+	
+	restore_to_glory = {
+		picture = venetian_ambition
+		potential = {
+			tag = VEN
+			NOT = { has_country_flag = restore_to_glory }
+		}
+		allow = {
+			OR = {
+			war = no
+			is_greater_power = yes
+			}
+			owns = 782
+			owns = 840
+			owns = 736
+			owns = 834
+			owns = 741
+			owns = 752
+			owns = 1725
+		}
+		effect = {
+			set_country_flag = restore_to_glory
+			war_exhaustion = -10
+			badboy = -5
+			725 = { life_rating = 5 }
+			any_pop = {
+				militancy = -3
+			}
+			prestige = 45
+			add_country_modifier = {
+				name = mercantilism
+				duration = 1825
+			}
 		}
 	}
 

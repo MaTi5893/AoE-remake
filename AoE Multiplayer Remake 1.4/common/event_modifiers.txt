@@ -6951,6 +6951,11 @@ missisiippi_trade_company = {
 	tariff_efficiency_modifier = 0.075
 	icon = 13
 }
+siku_quanshu = {
+	education_efficiency_modifier = 0.025
+	icon = 13
+}
+
 magnate_oligarchy = {
 	rich_vote = 0.5
 	political_reform_desire = 0.1
@@ -6969,6 +6974,24 @@ horde_society = {
 	industry_tech_research_bonus = -0.9
 	icon = 7
 }
+yongzheng_emperor_reform = {
+	tax_efficiency = 0.06
+	icon = 13
+}
 immunity_from_influenza = {
 	icon = 7
+}
+tornogrod_confederation = {
+	core_pop_militancy_modifier = 0.01
+	icon = 18	
+}
+qing_golden_age = {
+	education_efficiency_modifier = 0.075
+	core_pop_militancy_modifier = -0.015
+	icon = 13
+}
+japanese_absolutism = {
+	research_points = 0.25
+	core_pop_militancy_modifier = -0.01
+	icon = 13
 }

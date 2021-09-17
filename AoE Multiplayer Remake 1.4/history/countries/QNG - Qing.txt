@@ -2,13 +2,13 @@ capital = 1616
 primary_culture = manchu
 culture = mongol
 culture = khorchin
+culture = beifaren
 religion = taoist
 civilized = no
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.05
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.04
+literacy = 0.01
 prestige = 25
 
 # Political reforms
@@ -56,7 +56,7 @@ upper_house = {
 set_country_flag = unciv
 
 decision = unciv_balance_qng
-
+decision = qng_pop_nerf
 
 # Technologies
 flintlock_rifles = 1

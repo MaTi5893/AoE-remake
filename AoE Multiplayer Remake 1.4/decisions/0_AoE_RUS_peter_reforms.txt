@@ -299,7 +299,7 @@ political_decisions = {
 			RUS_955 = { add_core = THIS }
 			RUS_707 = { add_core = THIS }
 			RUS_718 = { add_core = THIS }
-			badboy = 22
+			badboy = 14
 		}
 		ai_will_do = { factor = 1 }	
 	}
@@ -371,51 +371,18 @@ political_decisions = {
 				}
 				add_province_modifier = {
 					name = recently_built_city
-					duration = 7300
+					duration = 1825
 				}
 			}
 		}
 		ai_will_do = { factor = 1 }
 	}
-	#vaccination_cat = {
-	#	picture = ill_hand
-	#	potential = {
-	#		tag = RUS
-	#		NOT = {
-	#			has_country_flag = vaccination_cat
-	#		}
-	#		exists = yes
-	#	}
-	#	allow = {
-	#		OR = {
-	#			chemistry_and_electricity_7 = 1
-	#			AND = {
-	#				ai = yes
-	#				year = 1775	
-	#			}
-	#		}
-	#		has_country_modifier = catharine_the_great
-	#	}
-	#	effect = {
-	#		add_country_modifier = {
-	#			name = russian_vaccination
-	#			duration = 3650
-	#		}
-	#		set_country_flag = vaccination_cat
-	#	}
-	#	ai_will_do = {					
-	#	factor = 1
-	#	}
-	#}
 	
 	catharine_the_greats_reforms = {
 		picture = catherine_the_great
 		potential = {
 			tag = RUS
-			OR = {
-				has_country_modifier = catharine_the_great
-				year = 1764
-			}
+			has_country_modifier = catharine_the_great
 			NOT = { has_country_flag = catharine_the_great_reforms }
 		}
 		allow = {
@@ -450,15 +417,15 @@ political_decisions = {
 		}
 	}
 
-	manifesto_on_caucasus = {
+	caucasian_persian_campaign = {
 		picture = unite_caucasus
 		potential = {
 			tag = RUS
 			NOT = {
 				has_country_flag = manifesto_on_caucasus
 			}
-			has_country_flag = caspian_expedition_fail
 			exists = yes
+			has_country_modifier = peter_the_great
 		}
 		allow = {
 			is_greater_power = yes
@@ -468,35 +435,16 @@ political_decisions = {
 			}
 		}
 		effect = {
-			prestige = 10
+			prestige = 7.5
 			set_country_flag = manifesto_on_caucasus
-			country_event = 170013
-			1053 = {
-				add_core = RUS
-			}
-			1052 = {
-				add_core = RUS
-			}
-			1103 = {
-				add_core = RUS
-			}
-			1102 = {
-				add_core = RUS
-			}
-			1107 = {
-				add_core = RUS
-			}
-			1113 = {
-				add_core = RUS
-			}
-			1114 = {
-				add_core = RUS
-			}
-			1115 = {
-				add_core = RUS
+			casus_belli = {
+				target = PER
+				type = acquire_state
+				months = 12
 			}
 		}
 	}
+	
 	settle_south_borders = {
 		picture = cossacks
 		potential = {

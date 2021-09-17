@@ -41,7 +41,7 @@ border_policy = open_borders
 
 set_country_flag = mahayana_country
 
-ruling_party = "Nobility Faction"
+ruling_party = "Shogun's Faction"
 upper_house = {
 	fascist = 0
 	liberal = 17
@@ -55,7 +55,7 @@ upper_house = {
 
 
 education_reform = yes_education_reform
-
+decision = jap_setup
 
 # Technologies
 
@@ -67,4 +67,4 @@ modern_winemaking = yes
 consciousness = 0
 nonstate_consciousness = 0
 
-oob = "TKG_oob.txt"
+oob = "JAP_oob.txt"

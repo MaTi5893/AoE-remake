@@ -1,12 +1,11 @@
 capital = 1008
 primary_culture = russian
-culture = byelorussian
 culture = cossack
 religion = orthodox
 government = absolute_monarchy
 plurality = 0.05
 nationalvalue = nv_autocracy
-literacy = 0.15
+literacy = 0.10
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
 
@@ -64,7 +63,7 @@ decision = rus_nerf_setup
 post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-military_staff_system = 1
+#military_staff_system = 1
 army_command_principle = 1
 post_nelsonian_thought = 1
 clipper_design = 1

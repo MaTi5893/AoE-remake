@@ -162,20 +162,20 @@ political_decisions = {
 		picture = napoleon
 		potential = {
 			primary_culture = french
-			NOT = { has_country_flag = natural_borders_of_fr }
+			NOT = { has_country_flag = napoleonic_conquest }
 			exists = yes
 			government = fascist_dictatorship
 			has_country_modifier = napoleon_bonaparte
 		}
 		allow = {	
-			mass_politics = 1
+			#mass_politics = 1
 			war_policy = jingoism
 			NOT = { has_country_modifier = no_more_war }
 			has_recently_lost_war = no
 		}
 		effect = {
 			badboy = 20
-			set_country_flag = natural_borders_of_fr
+			set_country_flag = napoleonic_conquest
 			LOR = { all_core = { add_core = THIS } }
 			LIG = { all_core = { add_core = THIS } }
 			NET = { all_core = { add_core = THIS } }
@@ -195,6 +195,7 @@ political_decisions = {
 			SAR_720 = { add_core = THIS }
 			HAN_534 = { add_core = THIS }
 			HAM_528 = { add_core = THIS }
+			HAN_540 = { add_core = THIS }
 		}
 		ai_will_do = {
 			factor = 1
@@ -459,6 +460,7 @@ political_decisions = {
 			exists = SPC
 			exists = BOR
 			NOT = { has_global_flag = FSU }
+			NOT = { has_global_flag = france_lost_succ }
 			OR = {
 				government = absolute_monarchy
 				government = hms_government

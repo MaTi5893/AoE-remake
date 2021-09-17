@@ -335,29 +335,17 @@ political_decisions = {
 					name = recently_built_city
 					duration = 1825
 				}
-				add_province_modifier = {
-					name = trade_city
-					duration = -1
-				}
 				life_rating = 5
 				change_province_name = "St. Erikborg"
 				naval_base = 1
 				fort = 2
 			}
 			354 = {
-				add_province_modifier = {
-					name = trade_city
-					duration = -1
-				}
 				life_rating = 5
 				naval_base = 1
 				fort = 2
 			}
 			349 = {
-				add_province_modifier = {
-					name = trade_city
-					duration = -1
-				}
 				life_rating = 5
 				naval_base = 1
 				fort = 2
@@ -367,6 +355,33 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	destroy_st_petersburg = {
+		picture = petersburg
+		potential = {
+			primary_culture = swedish
+			owns = 994
+			has_global_flag = st_petersburg_construction
+		}
+		allow = {
+			war = no
+			owns = 994
+		}
+		effect = {
+			994 = {
+				remove_province_modifer = st_petersburg_construction
+				any_pop = {
+					limit = {
+						culture = russian
+					}
+					reduce_pop = 0.99
+				}
+				change_province_name = "Nyen"
+			}
+			prestige = 15
+			clr_global_flag = st_petersburg_construction
 		}
 	}
 	

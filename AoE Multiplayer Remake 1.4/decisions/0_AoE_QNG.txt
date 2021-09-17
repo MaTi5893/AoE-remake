@@ -1,6 +1,7 @@
 political_decisions = {
 	
 	destroy_the_hordes = {
+		picture = qing_dzungar_war
 		potential = {
 			tag = QNG
 			NOT = { has_country_flag = destroied_the_hordes }
@@ -10,9 +11,7 @@ political_decisions = {
 			OR = {
 				civilized = yes
 				AND = {
-					military_score = 100
-					war_policy = jingoism
-					military_constructions = military_constructions_two
+					civilization_progress = 0.45
 					1490 = {
 						has_building = fort
 					}
@@ -45,6 +44,7 @@ political_decisions = {
 	}
 	
 	southern_conquests = {
+		picture = map_east_indies
 		potential = {
 			tag = QNG
 			NOT = { has_country_flag = southern_conquests }
@@ -76,6 +76,84 @@ political_decisions = {
 		}
 	}
 	
+	yongzheng_emperor_reforms = {
+		picture = qing_reform
+		potential = {
+			tag = QNG
+			NOT = { has_country_modifier = yongzheng_emperor_reform }
+		}
+		allow = {
+			OR = {
+			civilized = yes
+			year = 1723
+			}
+		}
+		effect = {
+			political_reform = party_appointed
+			political_reform = none_voting
+			political_reform = unitary
+			any_pop = {
+				ideology = {
+					factor = 0.35
+					value = reactionary
+				}
+			}
+			add_country_modifier = {
+				name = yongzheng_emperor_reform
+				duration = -1
+			}
+			country_event = 163600
+		}
+	}
+	
+	siku_quanshu = {
+		picture = siku_quanshu
+		potential = {
+			tag = QNG
+			NOT = { has_country_modifier = siku_quanshu }
+		}
+		allow = {
+			OR = {
+			invention = state_funded_universities
+			year = 1773
+			}
+		}
+		effect = {
+			prestige = 25
+			add_country_modifier = {
+				name = siku_quanshu
+				duration = -1
+			}
+		}
+	}
+	
+	impose_the_canton_system = {
+		picture = chinese_capital_pic
+		potential = {
+			tag = QNG
+			NOT = { has_country_modifier = canton_system }
+		}
+		allow = {
+			OR = {
+				management_strategy = 1
+				year = 1756
+				AND = {
+					civilized = yes
+					any_neighbor_country = {
+						is_greater_power = yes
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 25
+			add_country_modifier = {
+				name = canton_system
+				duration = -1
+			}
+		}
+	}
+
 	administrative_reform = {
 		potential = {
 			tag = QNG

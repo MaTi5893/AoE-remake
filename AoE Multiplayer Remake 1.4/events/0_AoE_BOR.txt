@@ -456,7 +456,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = BOR
+		primary_culture = french
 		#government = absolute_monarchy
 		OR = {
 			average_militancy = 4
@@ -821,6 +821,7 @@ country_event = {
 			add_core = FRA
 			remove_core = THIS
 		}
+		remove_country_modifier = peasant_turmoil
 		change_tag = FRA
 		any_country = {
 			limit = {

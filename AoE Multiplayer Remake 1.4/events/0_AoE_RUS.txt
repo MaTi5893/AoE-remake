@@ -524,203 +524,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 170009
-	title = "EVTNAME170009"
-	desc = "EVTDESC170009"
-	picture = storm_of_samarkand
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		year = 1716
-		NOT = {
-			has_country_flag = caspian_expedition
-		}
-		BUK = {
-			exists = yes
-		}
-		KHI = {
-			exists = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	option = {
-		name = "EVTOPT170009"
-		prestige = 5
-		set_country_flag = caspian_expedition
-		BUK = {
-			set_country_flag = caspian_expedition
-		}
-		KHI = {
-			set_country_flag = caspian_expedition
-		} 
-	}
-}
-country_event = {
-	id = 170010
-	title = "EVTNAME170010"
-	desc = "EVTDESC170010"
-	picture = storm_of_samarkand
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 2
-	}
-	
-	immediate = { 
-		clr_country_flag = caspian_expedition
-		set_country_flag = well_expedition
-	}
-	
-	trigger = {
-		tag = KHI
-		has_country_flag = caspian_expedition
-		NOT = {
-			has_country_flag = well_expedition
-		}
-	}
-	
-	option = {
-		name = "EVT170010OPT1"
-		RUS = {
-			country_event = 170011
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				KHI = {
-					NOT = {
-						relation = {
-							who = RUS
-							value = 100 
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = "EVT170010OPT2"
-		RUS = {
-			country_event = 170012
-		}
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 3
-				KHI = {
-					has_recently_lost_war = yes
-				}
-			}
-			modifier = {
-				factor = 4
-				KHI = {
-					relation = {
-						who = RUS
-						value = 100 
-					}
-				}
-			}
-			modifier = {
-				factor = 10
-				KHI = {
-					in_sphere = RUS
-				}
-			}
-		}
-	}
-}
-country_event = {
-	id = 170011
-	title = "EVTNAME170011"
-	desc = "EVTDESC170011"
-	picture = storm_of_samarkand
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPT170011"
-		set_country_flag = caspian_expedition_fail
-		prestige = -5
-		relation = {
-			who = KHI
-			value = -100
-		}
-		relation = {
-			who = BUK
-			value = -100
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-country_event = {
-	id = 170012
-	title = "EVTNAME170012"
-	desc = "EVTDESC170012"
-	picture = storm_of_samarkand
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPT1700012"
-		set_country_flag = caspian_expedition_success
-		create_vassal = KHI
-			diplomatic_influence = {
-				who = KHI
-				value = 400
-			}
-			create_alliance = BUK
-			diplomatic_influence = {
-				who = BUK
-				value = 400
-			}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
-	id = 170013
-	title = "EVTNAME170013"
-	desc = "EVTDESC170013"
-	picture = caucasian_war
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPT170013"
-		war = {
-			target = PER
-			attacker_goal = { casus_belli = acquire_all_cores country = RUS }
-			call_ally = yes
-		}
-		PER = {
-			casus_belli = {
-				target = KKH
-				type = make_puppet
-				months = 12
-			}
-		}
-		war = {
-			target = DAG
-			attacker_goal = { casus_belli = acquire_all_cores country = RUS }
-			call_ally = yes
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
 	id = 170014
 	title = "EVTNAME170014"
 	desc = "EVTDESC170014"
@@ -1285,6 +1088,7 @@ country_event = {
 	trigger = {
 		has_global_flag = st_petersburg_construction
 		owns = 994
+		tag = RUS
 		NOT = {
 			994 = { has_province_modifier = st_petersburg_construction }
 		}
@@ -1322,7 +1126,7 @@ country_event = {
 			fort = 2
 			add_province_modifier = {
 				name = baby_boom
-				duration = 5475
+				duration = 1825
 			}
 		}
 		capital = 994
@@ -1600,6 +1404,44 @@ country_event = {
 		relation = {
 			who = KUR
 			value = 100
+		}
+	}
+}
+country_event = {
+	id = 170032
+	title = "Persian Campaign of $YEAR$"
+	desc = "EVTDESC170032"
+	picture = "persia_map"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_country_modifier = peter_the_great
+		exists = PER
+		neighbour = PER
+		year = 1722
+	}
+	
+	option = {
+		name = "Russia MUST expand!"
+		casus_belli = {
+			target = PER
+			type = acquire_state
+			months = 12
+		}
+		badboy = 2.2
+		relation = {
+			who = PER
+			value = -150
+		}
+	}
+	
+	option = {
+		name = "Maybe another time"
+		prestige = -2
+		relation = {
+			who = PER
+			value = 25
 		}
 	}
 }

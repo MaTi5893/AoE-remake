@@ -246,6 +246,37 @@ political_decisions = {
 					consciousness = 3
 				}
 			}
+			ai_will_do = { factor = 1 }
+		}
+		
+		lunch_the_patriot_revolution = {
+			picture = patriot_party
+			potential = {
+				primary_culture = dutch
+				NOT = { has_country_flag = lunched_the_patriot_revolution }
+				has_country_modifier = orangist_domination
+				is_ideology_enabled = communist
+			}
+			allow = {
+				war = no
+			}
+			effect = {
+				set_country_flag = lunched_the_patriot_revolution
+				remove_country_modifier = stadtholderless_period
+				remove_country_modifier = orangist_domination
+				country_event = 1581053
+				any_pop = {
+					militancy = 3
+					consciousness = 3
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifer = {
+					factor = 0
+					NOT = { year = 1783 }
+				}
+			}
 		}
 		disband_patriots = {
 			picture = patriot_party

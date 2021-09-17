@@ -556,55 +556,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	enact_vivente_rege = {
-		picture = crown
-		potential = {
-			primary_culture = polish
-			government = elective_monarchy_oligarchy
-			exists = yes
-			NOT = { has_country_modifier = vivente_rege }
-		}
-		allow = {
-			NOT = { average_militancy = 3 }
-			ruling_party_ideology = reactionary
-			upper_house_composition = party_appointed
-			NOT = {
-				safety_regulations = no_safety
-				safety_regulations = trinket_safety
-			}
-			war = no
-		}
-		effect = {
-			prestige = 5
-			add_country_modifier = {
-				name = vivente_rege
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
-	plc_civil_war_tie = {
-		potential = {
-			tag = PZN
-			exists = yes
-			war = no
-			PLC = {
-				exists = yes
-			}
-		}
-		allow = {
-			exists = yes
-		}
-		effect = {
-			PLC = {
-				inherit = THIS
-			}
-		}
-	}
 	stop_poland_lithuania = {
 		picture = become_poland_lithuania
 		alert = no
@@ -638,50 +590,49 @@ political_decisions = {
 			factor = 1
 		}
 	}
-##DISCLAIMER, everything beyond this point is Hyper's piracy shit, don't ask, fuck this, fuck you##
-	become_pirate_republic = {
-		picture = become_pirate_republic
+	
+	von_wettin_coup = {
+		picture = sax_aug
 		potential = {
-			has_country_modifier = piracy_tolerant
-			is_greater_power = no
-			exists = yes
+			primary_culture = polish
+			government = elective_monarchy_oligarchy
+			is_our_vassal = SAX
+			NOT = { has_country_flag = wettin_coup }
 		}
 		allow = {
-			any_owned_province = {
-				has_province_modifier = piracy_spoils 
-			}
+			ideological_thought = 1
 			OR = {
-				government = oligarchic_republic
-				government = democracy
-				government = tribal_democracy
-				government = hms_government
+				AND = {
+					706 = {
+						country_units_in_province = SAX
+					}
+					703 = {
+						country_units_in_province = SAX
+					}
+				}
+				AND = {
+					war = yes
+					war_exhaustion = 25
+				}
 			}
-			is_greater_power = no
-			trade_policy = free_trade
-			is_independant = yes
-			has_country_modifier = piracy_tolerant
-			
 		}
 		effect = {
-			government = pirate_republic
-			add_country_modifier = {
-				name = pirate_republic
-				duration = -1
+			ruling_party_ideology = reactionary
+			political_reform = party_appointed
+			government = absolute_monarchy
+			political_reform = none_voting
+			set_country_flag = wettin_coup
+			any_pop = {
+				limit = {
+					strata = rich
+				}
+				ideology = {
+					factor = 0.25
+					value = reactionary
+				}
 			}
-			political_reform = yes_slavery
-			political_reform = universal_voting
-			political_reform = population_equal_weight
-			political_reform = confederalism
-			political_reform = all_voting_pops
-			political_reform = free_press
-			political_reform = yes_meeting
-			social_reform = acceptable_safety
-			social_reform = acceptable_pensions
-			social_reform = no_health_care
-			political_reform = open_borders				
-		}
-		ai_will_do = {
-			factor = 1
+			country_event = 156905
+			remove_country_modifier = magnate_oligarchy
 		}
 	}
 }

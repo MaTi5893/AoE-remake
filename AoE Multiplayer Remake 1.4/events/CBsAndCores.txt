@@ -1992,7 +1992,7 @@ province_event = {
 	desc = "EVTDESC2625"
 	
 	trigger = {
-		owner = { NOT = { has_country_modifier = preparations_to_kill } NOT = { any_owned_province = { has_province_modifier = genocide } } NOT = { government = tribal_democracy} }
+		owner = { NOT = { has_country_modifier = preparations_to_kill } NOT = { any_owned_province = { has_province_modifier = genocide } } }
 		is_core = THIS
 		any_core = {
 			exists = yes
@@ -2085,10 +2085,6 @@ province_event = {
 	
 	option = {
 		name = "EVT2605OPTA"
-		owner = {
-			badboy = 2
-			prestige = 5
-		}
 		remove_province_modifier = national_assimilation
 		remove_province_modifier = national_assimilation_acceptance
 		add_province_modifier = {

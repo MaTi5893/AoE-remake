@@ -129,7 +129,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 4
 	}
 	
 	option = {
@@ -176,46 +176,25 @@ country_event = {
 }
 country_event = {
 	id = 156905
-	title = "Should we abolish sejm?"
-	desc = "EVTDESC156904"
-	major = yes
-
-	trigger = {
-		government = elective_monarchy_oligarchy
-		war = yes
-		SAX = {
-			vassal_of = THIS
-		}
-		706 = {
-			country_units_in_province = SAX
-		}
-		703 = {
-			country_units_in_province = SAX
-		}
-		part_of_sphere = yes
-		NOT = { has_country_modifier = noble_democracy }
-		NOT = { has_global_flag = plc_civil_war }
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
+	title = "Tornogrod Confederation"
+	desc = "EVTDESC156905"
+	picture = wettin_rule
+	is_triggered_only = yes
 	
 	option = {
-		name = "It's time to end this pethetic institution."	
-		add_country_modifier = {
-			name = szlachta_opposition
-			duration = 1825
+		name = "Fools!"
+		any_owned = {
+			limit = {
+				pop_majority_culture = polish
+			}
+			add_province_modifier = {
+				name = tornogrod_confederation
+				duration = 1095
+			}
 		}
 		add_country_modifier = {
 			name = great_statesman
 			duration = 1825
-		}
-		any_pop = {
-			ideology = {
-				factor = 0.3
-				value = reactionary
-			}
 		}
 		any_pop = {
 			limit = {
@@ -223,23 +202,8 @@ country_event = {
 			}
 			militancy = 3
 		}
-		government = absolute_monarchy
 		clr_country_flag = elective_monarchy
-		political_reform = none_voting
-		political_reform = appointed
-		prestige = -50
-		sphere_owner = {
-			diplomatic_influence = {
-				who = THIS
-				value = -200
-			}
-			country_event = 13201
-		}
-	}
-	
-	option = {
-		name = "This is too drastic for my liking"
-		ai_chance = { factor = 1 }
+		prestige = -5
 	}
 }
 country_event = {
@@ -912,268 +876,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 15730047
-	title = "Polish Civil War"
-	desc = "..."
-	picture = nobles
-	fire_only_once = yes
-	
-	trigger = {
-		tag = SAX
-		ai = yes
-		PLC = {
-			war_with = PZN
-		}
-		has_global_flag = plc_civil_war
-	}
-	
-	option = {
-		name = "Let's offer them our support"
-		military_access = AUS
-	}
-}
-country_event = {
-	id = 15730052
-	title = "Potocki's Rokosz"
-	desc = "EVTDESC15730052"
-	picture = cavallery
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		days = 15
-	}
-	
-	trigger = {
-		has_country_modifier = vivente_rege
-		exists = yes
-	}
-	
-	immediate = {
-		sphere_owner = {
-			diplomatic_influence = {
-				who = THIS
-				value = -200
-			}
-			country_event = 13201
-			leave_alliance = PLC
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					province_id = 701
-					province_id = 717 province_id = 710 province_id = 712
-					province_id = 691 province_id = 693 province_id = 697
-					province_id = 719 province_id = 937 province_id = 940
-					province_id = 936 province_id = 938 province_id = 947
-					province_id = 360 province_id = 361 province_id = 718
-					province_id = 941 province_id = 948 province_id = 946
-					province_id = 956 province_id = 959 province_id = 969
-					province_id = 702 province_id = 951	#province_id = 3331
-				}
-			}
-			add_core = PZN
-			secede_province = PZN
-		}
-		PZN = {
-			government = elective_monarchy_oligarchy
-			random_owned = {
-				limit = {
-					owner = {
-						PLC = { exists = yes }
-					}
-				}
-				owner = {
-					war = {
-						target = PLC
-						attacker_goal = { casus_belli = civil_war }
-						defender_goal = { casus_belli = civil_war }
-						call_ally = yes
-					}
-					add_country_modifier = {
-						name = fanatic_army
-						duration = 3650
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						PLR = { exists = yes }
-					}
-				}
-				owner = {
-					war = {
-						target = PLR
-						attacker_goal = { casus_belli = civil_war }
-						defender_goal = { casus_belli = civil_war }
-						call_ally = yes
-					}
-					add_country_modifier = {
-						name = fanatic_army
-						duration = 3650
-					}
-				}
-			}
-		}
-		add_country_modifier = {
-			name = fanatic_army
-			duration = 3650
-		}
-		set_global_flag = plc_civil_war_vr
-	}
-	
-	option = {
-		name = "Fools! I will save this country!"
-		country_event = 156905
-	}
-}
-
-country_event = {
-	id = 15730053
-	title = "End of the Civil War"
-	desc = "EVTDESC15730053"
-	major = yes
-	
-	trigger = {
-		has_global_flag = plc_civil_war_vr
-		tag = PZN
-		PLC = {
-			exists = no
-		}	
-	}
-	
-	option = {
-		name = "Finally."
-		prestige = 15
-		clr_global_flag = plc_civil_war_vr
-		change_tag = PLC
-		PZN = {
-			all_core = {
-				remove_core = PZN
-			}
-		}
-		capital = 703
-	}
-}
-country_event = {
-	id = 15730054
-	title = "End of the Civil War"
-	desc = "EVTDESC15730054"
-	major = yes
-	
-	trigger = {
-		has_global_flag = plc_civil_war_vr
-		OR = {
-		tag = PLC
-		tag = PLR
-		}
-		PZN = {
-			exists = no
-		}
-	}
-	
-	option = {
-		name = "Finally."
-		prestige = 15
-		clr_global_flag = plc_civil_war_vr
-		PZN = {
-			all_core = {
-				remove_core = PZN
-			}
-		}
-	}
-}  
-
-country_event = {
-	id = 15730055
-	title = "Absolutism in the Commonwealth"
-	desc = "EVTDESC15730055"
-	picture = throne
-	
-	mean_time_to_happen = {
-		days = 15
-	}
-	
-	trigger = {
-		has_country_modifier = vivente_rege
-		government = absolute_monarchy
-		war = no
-		is_greater_power = yes
-		NOT = { average_consciousness = 4 }
-	}
-	
-	option = {
-		name = "In the end they all bow down to me."
-		remove_country_modifier = vivente_rege
-		add_country_modifier = {
-			name = polish_absolutism
-			duration = -1
-		}
-		prestige = 40
-	}
-}
-
-country_event = {
-	id = 15730056
-	title = "Biased office assignment"
-	desc = "EVTDESC15730056"
-	fire_only_once = yes
-	picture = veto
-	
-	trigger = {
-		exists = yes
-		government = elective_monarchy_oligarchy
-		war = no
-		upper_house_composition = party_appointed
-		OR = {
-		tag = PLC
-		tag = PLR
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 15
-	}
-	
-	option = {
-		name = "That's nonsense!"
-		any_pop = {
-			militancy = 6
-			consciousness = 3
-		}
-	}
-	
-	option = {
-		name = "Maybe we should back down a little"
-		any_pop = {
-			militancy = 3
-			consciousness = 2
-		}
-		upper_house = {
-			ideology = conservative
-			value = 1
-		}
-		political_reform = appointed
-	}
-	
-	option = {
-		name = "Don't worry! Look, here have your offices!"
-		any_pop = {
-			militancy = -1
-			consciousness = -2
-		}
-		upper_house = {
-			ideology = conservative
-			value = 1
-		}
-		upper_house = {
-			ideology = liberal
-			value = 0.5
-		}
-		political_reform = state_equal_weight
-	}
-}
-country_event = {
 	id = 15730058
 	title = "Sejm votes in new taxes"
 	desc = "EVTDESC15730058"
@@ -1388,7 +1090,8 @@ country_event = {
 			militancy = -2
 			consciousness = -1
 		}
-		government = democracy
+		government = oligarchic_republic
+		political_refom = landed_voting
 		prestige = -15
 	}
 }

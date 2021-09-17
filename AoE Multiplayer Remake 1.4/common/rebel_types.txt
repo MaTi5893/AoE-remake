@@ -7259,18 +7259,25 @@ noble_rebels = {
 		}
 		modifier = {
 			safety_regulations = good_safety
-			factor = -2.75
+			factor = -3.75
 		}
 		modifier = {
 			safety_regulations = no_safety
 			factor = 0
 		}
 		modifier = {
-			OR = {
-				government = elective_monarchy_oligarchy
-				government = archduchy
-			}
+			government = elective_monarchy_oligarchy
 			factor = 1
+		}
+		modifier = {
+			any_owned_province = {
+				has_province_modifier = tornogrod_confederation
+			}
+			factor = 2
+		}
+		modifier = {
+			civilized = no
+			factor = 0
 		}
 	}
 			
@@ -7285,11 +7292,17 @@ noble_rebels = {
 			pop_majority_ideology = communist
 		}
 		modifier = {
-			factor = 1
-			pop_majority_ideology = conservative
+			location = {
+				has_province_modifier = tornogrod_confederation
+			}
+			factor = 50
 		}
 		modifier = {
 			factor = 2
+			pop_majority_ideology = conservative
+		}
+		modifier = {
+			factor = -2
 			pop_majority_ideology = reactionary
 		}
 		modifier = {

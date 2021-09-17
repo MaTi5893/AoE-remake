@@ -255,115 +255,14 @@ province_event = {
 		}
 	}
 }
-country_event = {
-	id = 158104
-	title = "End of the Stadtholderless period"
-	desc = "EVTDESC158104"
-	fire_only_once = yes
-	picture = monarch_death
-	
-	trigger = {
-	primary_culture = dutch
-		has_country_modifier = stadtholderless_period
-		NOT = {	militancy = 2 }
-		NOT = { war_exhaustion = 1 }
-		year = 1740
-	}
-	
-	mean_time_to_happen = {
-		months = 40
-	}
-	
-	option = {
-		name = "And so I revoke all my powers..."
-		remove_country_modifier = stadtholderless_period
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						vote_franschise = none_voting
-						vote_franschise = landed_voting
-						vote_franschise = wealth_weighted_voting
-					}
-				}
-			}
-			owner = {
-				political_reform = wealth_voting
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						upper_house_composition = appointed
-						upper_house_composition = party_appointed
-					}
-				}
-			}
-			owner = {
-				political_reform = state_equal_weight
-			}
-		}
-		random_owned = {
-			owner = {
-				political_reform = state_press
-			}
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = conservative
-			}
-			militancy = -3
-			consciousness = 1
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = -3
-			consciousness = 1
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = 5
-			consciousness = 4
-		}
-	}
-	
-	option = {
-		name = "We need a strong stadtholderless if we want to survive in this landscape"
-		any_pop = {
-			limit = {
-				pop_majority_ideology = conservative
-			}
-			militancy = 7
-			consciousness = 5
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = 7
-			consciousness = 5
-		}
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = -2
-			consciousness = 4
-		}
-	}
-}
+
 country_event = {
 	id = 1581051
 	title = "Patriots seek Support"
 	desc = "EVTDESC158105"
 	fire_only_once = yes
 	picture = revolution
-	allow_multiple_instances = yes
+	fire_only_once = yes
 	
 	trigger = {
 		NET = {
@@ -523,12 +422,52 @@ country_event = {
 }
 country_event = {
 	id = 1581053
-	title = "test"
-	desc = ""
+	title = "Aan het Volk van Nederland"
+	desc = "EVTDESC1581053"
 	is_triggered_only = yes
-	major = yes
+	picture = patriots
 	
 	option = {
-		government = oligarchic_republic
+		name = "Patriottentijd!"
+		random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
 	}
 }

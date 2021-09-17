@@ -1,16 +1,16 @@
 political_decisions = {
 
 	korean_knife = {
+		picture = map_yellow_sea
 		potential = {
-			tag = JAP
+			OR = { tag = JAP tag = TKG }
 			NOT = { has_country_flag = korean_knife }
 		}
 		allow = {
-			war = no
 			KOR = {
 				OR = {
 					all_core = {
-						owned_by = THIS
+						controlled_by = THIS
 					}
 					vassal_of = THIS
 				}
@@ -18,6 +18,14 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = korean_knife
+			random_owned = {
+				limit = {
+					owner = {
+					NOT = { is_our_vassal = KOR }
+					}
+				}
+				badboy = 10
+			}
 			random_country = { 
 				limit = {
 					tag = KOR
@@ -31,12 +39,74 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			add_accepted_culture = korean
+		}
+	}
+	
+	open_the_country = {
+		picture = shogun
+		potential = {
+			OR = { tag = JAP tag = TKG }
+			NOT = { has_country_flag = stop_having_it_be_closed }
+		}
+		allow = {
+			war = no
+			civilization_progress = 0.45
+			NOT = { has_country_modifier = uncivilized_isolationism }
+		}
+		effect = {
+			set_country_flag = stop_having_it_be_closed
+			prestige = 15
+			any_greater_power = {
+				relation = {
+					who = THIS
+					value = 25
+				}
+			}
+			country_event = 157101
+		}
+	}
+	
+	abandon_isolationism = {
+		picture = abandon_isolationism
+		potential = {
+			OR = { tag = JAP tag = TKG }
+			has_country_modifier = uncivilized_isolationism
+		}
+		allow = {
+			war = no
+			OR = {
+			civilization_progress = 0.35
+			part_of_sphere = yes
+			}
+		}
+		effect = {
+			prestige = 15
+			sphere_owner = {
+				relation = {
+					who = THIS
+					value = 25
+				}
+			}
+			years_of_research = 0.3
+			remove_country_modifier = uncivilized_isolationism
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = yes
+					}
+				}
+				owner = {
+					country_event = 157102
+				}
+			}
 		}
 	}
 	
 	philipino_conquest = {
+		picture = map_phillipines
 		potential = {
-			tag = JAP
+			OR = { tag = JAP tag = TKG }
 			NOT = { has_country_flag = philipino_conquest }
 		}
 		allow = {
@@ -60,7 +130,7 @@ political_decisions = {
 	declare_japanese_empire = {
 		picture = become_japan
 		potential = {
-			tag = JAP
+			OR = { tag = JAP tag = TKG }
 			NOT = { has_country_flag = declared_japanese_empire }
 		}
 		allow = {
@@ -87,7 +157,7 @@ political_decisions = {
 	
 	pacific_beast = {
 		potential = {
-			tag = JAP
+			OR = { tag = JAP tag = TKG }
 			NOT = { has_country_flag = declared_japanese_empire }
 			owns = 1537
 		}

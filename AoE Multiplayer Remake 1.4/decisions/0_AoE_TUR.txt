@@ -125,7 +125,6 @@ political_decisions = {
 			has_country_modifier = janisseries_influence
 		}
 		allow = {
-			is_greater_power = yes
 			OR = {
 			pensions = low_pensions
 			has_global_flag = greek_plan_success
