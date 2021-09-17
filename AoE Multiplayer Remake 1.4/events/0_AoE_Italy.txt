@@ -553,10 +553,6 @@ country_event = {
 		name = "Refuse"
 		prestige = -5
 		FROM = { prestige = -5 }
-		diplomatic_influence = {
-			who = FROM
-			value = 200
-		}
 	}
 }
 	
