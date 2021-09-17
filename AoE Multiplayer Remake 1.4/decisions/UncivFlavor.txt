@@ -1,56 +1,56 @@
 political_decisions = {
-	torching_of_the_summer_palace = {
-		potential = {
-			NOT = {
-				tag = QNG
-			}
-			QNG = {
-				owns = 1612
-			}
-			civilized = yes
-			is_greater_power = yes
-			nationalism_n_imperialism = 1
-			war_with = QNG
-			NOT = {
-				has_global_flag = summer_palace_torched
-			}
-		}
-		allow = {
-			controls = 1612
-		}
-		effect = {
-			badboy = 3
-			QNG = {
-				country_event = { id=13355 days=0 }
-			}
-			set_global_flag = summer_palace_torched
-		}
-	}
-	
-	clear_out_the_manchu_elite = {
-		potential = {
-			tag = CHI
-			government = absolute_monarchy
-			is_greater_power = no
-			civilized = no
-			year = 1730
-			NOT = {
-				has_country_flag = manchu_elite_cleared_out
-			}
-		}
-		allow = {
-			average_consciousness = 3
-		}
-		effect = {
-			years_of_research = 0.1
-			any_pop = {
-				limit = {
-					has_pop_culture = manchu
-				}
-				militancy = 2
-				consciousness = 1
-			}
-			set_country_flag = manchu_elite_cleared_out
-		}
-	}
+    torching_of_the_summer_palace = {
+        potential = {
+            NOT = {
+                tag = QNG
+            }
+            QNG = {
+                owns = 1612
+            }
+            civilized = yes
+            is_greater_power = yes
+            nationalism_n_imperialism = 1
+            war_with = QNG
+            NOT = {
+                has_global_flag = summer_palace_torched
+            }
+        }
+        allow = {
+            controls = 1612
+        }
+        effect = {
+            badboy = 3
+            QNG = {
+                country_event = { id=13355 days=0 }
+            }
+            set_global_flag = summer_palace_torched
+        }
+    }
+
+    clear_out_the_manchu_elite = {
+        potential = {
+            tag = CHI
+            government = absolute_monarchy
+            is_greater_power = no
+            civilized = no
+            year = 1730
+            NOT = {
+                has_country_flag = manchu_elite_cleared_out
+            }
+        }
+        allow = {
+            average_consciousness = 3
+        }
+        effect = {
+            years_of_research = 0.1
+            any_pop = {
+                limit = {
+                    has_pop_culture = manchu
+                }
+                militancy = 2
+                consciousness = 1
+            }
+            set_country_flag = manchu_elite_cleared_out
+        }
+    }
 }

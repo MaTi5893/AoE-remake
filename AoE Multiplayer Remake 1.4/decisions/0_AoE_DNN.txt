@@ -1,324 +1,324 @@
 political_decisions = {
-	
-	education_reform = {
-		picture = education_reforms
-		potential = {
-			372 = {
-				is_capital = yes
-			}
-			owns = 372
-			exists = yes
-			NOT = { has_country_flag = education_reform }
-		}
-		allow = {
-			war = no
-			social_science = 1
-		}
-		effect = {
-			set_country_flag = education_reform
-			random_owned = {
-				limit = {
-					owner = { NOT = { school_reforms = good_schools } }
-				}
-				owner = {
-					social_reform = good_schools
-				}
-			}
-			add_country_modifier = {
-				name = reformed_scholarship
-				duration = 1825
-			}
-		}
-	}
-	
-	struensee_reforms = {
-		picture = struensse
-		potential = {
-			372 = {
-				is_capital = yes
-			}
-			exists = yes
-			owns = 372
-			NOT = { has_country_flag = struensee_reforms }
-		}
-		allow = {
-			has_country_modifier = johann_struensee
-			mass_politics = 1
-		}
-		effect = {
-			set_country_flag = struensee_reforms
-			random_owned = {
-				limit = {
-					owner = { penal_system = capital_punishment }
-				}
-				owner = {
-					social_reform = colonial_transportation
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							health_care = no_health_care
-							health_care = trinket_health_care
-							health_care = low_health_care
-						}
-					}
-				}
-				owner = {
-					social_reform = acceptable_health_care
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							pensions = no_pensions
-							pensions = trinket_pensions
-							pensions = low_pensions
-						}
-					}
-				}
-				owner = {
-					social_reform = low_pensions
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							safety_regulations = no_safety
-							safety_regulations = trinket_safety
-						}
-					}
-				}
-				owner = {
-					social_reform = low_safety
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							work_hours = no_work_hour_limit
-							work_hours = fourteen_hours
-							work_hours = twelve_hours
-						}
-					}
-				}
-				owner = {
-					social_reform = ten_hours
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							conscription = mandatory_service
-							conscription = four_year_draft 
-							conscription = two_year_draft 
-						}
-					}
-				}
-				owner = {
-					political_reform = one_year_draft
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { 
-						OR = {
-							debt_law = serfdom
-							debt_law = peonage
-						}
-					}
-				}
-				owner = {
-					political_reform = debtors_prisons
-				}
-			}
-			add_country_modifier = {
-				name = total_reform
-				duration = 5475
-			}
-		}
-	}
-	
-	danish_gp = {
-		picture = danish_straits
-		potential = {
-			372 = {
-				is_capital = yes
-			}
-			owns = 372
-			NOT = { has_country_flag = danish_gp }
-			NOT = { tag = SCA }
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				OR = {
-					AND = {
-						owned_by = THIS
-						NOT = {
-							owned_by = SWE
-						}
-					}
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			set_country_flag = danish_gp
-			prestige = 50
-			add_country_modifier = {
-				name = local_hegemon
-				duration = 5475
-			}
-		}
-	}
-	
-	claim_estonia_and_livonia = {
-		picture = baltic
-		potential = {
-			372 = {
-				is_capital = yes
-			}
-			owns = 372
-			NOT = { has_country_flag = claimed_estonia_and_livonia }
-			NOT = { tag = SCA }
-			exists = yes
-		}
-		allow = {
-			has_country_flag = danish_gp
-			all_core = {
-				owned_by = THIS
-			}
-			military_score = 30
-		}
-		effect = {
-			badboy = 7
-			set_country_flag = claimed_estonia_and_livonia
-			RUS_349 = {
-				add_core = THIS
-			}
-			RUS_354 = {
-				add_core = THIS
-			}
-		}
-	}
-	
-	claim_pomerania_den = {
-		picture = pomerania_prussia
-		potential = {
-			372 = {
-				is_capital = yes
-			}
-			owns = 372
-			NOT = { has_country_flag = claimed_pomerania_den }
-			exists = yes
-		}
-		allow = {
-			has_country_flag = danish_gp
-			all_core = {
-				owned_by = THIS
-			}
-			is_greater_power = yes
-			military_score = 50
-		}
-		effect = {
-			set_country_flag = claimed_pomerania_den
-			badboy = 5
-			set_country_flag = struensee_reforms
-			PRU_546 = {
-				add_core = THIS
-			}
-		}
-	}
-	
-#	claim_british_islands
+
+    education_reform = {
+        picture = education_reforms
+        potential = {
+            372 = {
+                is_capital = yes
+            }
+            owns = 372
+            exists = yes
+            NOT = { has_country_flag = education_reform }
+        }
+        allow = {
+            war = no
+            social_science = 1
+        }
+        effect = {
+            set_country_flag = education_reform
+            random_owned = {
+                limit = {
+                    owner = { NOT = { school_reforms = good_schools } }
+                }
+                owner = {
+                    social_reform = good_schools
+                }
+            }
+            add_country_modifier = {
+                name = reformed_scholarship
+                duration = 1825
+            }
+        }
+    }
+
+    struensee_reforms = {
+        picture = struensse
+        potential = {
+            372 = {
+                is_capital = yes
+            }
+            exists = yes
+            owns = 372
+            NOT = { has_country_flag = struensee_reforms }
+        }
+        allow = {
+            has_country_modifier = johann_struensee
+            mass_politics = 1
+        }
+        effect = {
+            set_country_flag = struensee_reforms
+            random_owned = {
+                limit = {
+                    owner = { penal_system = capital_punishment }
+                }
+                owner = {
+                    social_reform = colonial_transportation
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            health_care = no_health_care
+                            health_care = trinket_health_care
+                            health_care = low_health_care
+                        }
+                    }
+                }
+                owner = {
+                    social_reform = acceptable_health_care
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            pensions = no_pensions
+                            pensions = trinket_pensions
+                            pensions = low_pensions
+                        }
+                    }
+                }
+                owner = {
+                    social_reform = low_pensions
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            safety_regulations = no_safety
+                            safety_regulations = trinket_safety
+                        }
+                    }
+                }
+                owner = {
+                    social_reform = low_safety
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            work_hours = no_work_hour_limit
+                            work_hours = fourteen_hours
+                            work_hours = twelve_hours
+                        }
+                    }
+                }
+                owner = {
+                    social_reform = ten_hours
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            conscription = mandatory_service
+                            conscription = four_year_draft
+                            conscription = two_year_draft
+                        }
+                    }
+                }
+                owner = {
+                    political_reform = one_year_draft
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            debt_law = serfdom
+                            debt_law = peonage
+                        }
+                    }
+                }
+                owner = {
+                    political_reform = debtors_prisons
+                }
+            }
+            add_country_modifier = {
+                name = total_reform
+                duration = 5475
+            }
+        }
+    }
+
+    danish_gp = {
+        picture = danish_straits
+        potential = {
+            372 = {
+                is_capital = yes
+            }
+            owns = 372
+            NOT = { has_country_flag = danish_gp }
+            NOT = { tag = SCA }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                OR = {
+                    AND = {
+                        owned_by = THIS
+                        NOT = {
+                            owned_by = SWE
+                        }
+                    }
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+        }
+        effect = {
+            set_country_flag = danish_gp
+            prestige = 50
+            add_country_modifier = {
+                name = local_hegemon
+                duration = 5475
+            }
+        }
+    }
+
+    claim_estonia_and_livonia = {
+        picture = baltic
+        potential = {
+            372 = {
+                is_capital = yes
+            }
+            owns = 372
+            NOT = { has_country_flag = claimed_estonia_and_livonia }
+            NOT = { tag = SCA }
+            exists = yes
+        }
+        allow = {
+            has_country_flag = danish_gp
+            all_core = {
+                owned_by = THIS
+            }
+            military_score = 30
+        }
+        effect = {
+            badboy = 7
+            set_country_flag = claimed_estonia_and_livonia
+            RUS_349 = {
+                add_core = THIS
+            }
+            RUS_354 = {
+                add_core = THIS
+            }
+        }
+    }
+
+    claim_pomerania_den = {
+        picture = pomerania_prussia
+        potential = {
+            372 = {
+                is_capital = yes
+            }
+            owns = 372
+            NOT = { has_country_flag = claimed_pomerania_den }
+            exists = yes
+        }
+        allow = {
+            has_country_flag = danish_gp
+            all_core = {
+                owned_by = THIS
+            }
+            is_greater_power = yes
+            military_score = 50
+        }
+        effect = {
+            set_country_flag = claimed_pomerania_den
+            badboy = 5
+            set_country_flag = struensee_reforms
+            PRU_546 = {
+                add_core = THIS
+            }
+        }
+    }
+
+#    claim_british_islands
 #
-#	reestablish_danelaw
-	
-	end_dnn = {
-		picture = become_dnn
-		potential = {
-			DEN = {
-				exists = no
-			}
-			tag = DNN
-			NOT = { has_country_flag = education_reform }
-			exists = yes
-		}
-		allow = {
-			OR = {
-				AND = {
-					NOT = { owns = 308 }
-					NOT = { owns = 309 }
-					NOT = { owns = 313 }
-				}
-				NOR = {
-					exists = yes
-				}
-			}
-		}
-		effect = {
-			prestige = -50
-			change_tag = DEN
-		}
-	}
-	
-	reestablish_dnn = {
-		picture = become_dnn
-		potential = {
-			DNN = {
-				exists = no
-			}
-			tag = DEN
-			NOT = { has_country_flag = education_reform }
-			exists = yes
-		}
-		allow = {
-			owns = 308
-			owns = 309
-			owns = 313
-			NOR = {
-				exists = no
-			}
-		}
-		effect = {
-			set_country_flag = struensee_reforms
-			change_tag = DNN
-		}
-	}
-	#mmmyes
-	danish_tunis = {
-		picture = tunisia_map
-		potential = {
-			OR = {
-				tag = DNN
-				tag = DEN
-				tag = SCA
-			}
-			owns = 1725
-			NOT = {
-				has_country_flag = danish_tunisia
-			}
-			exists = yes
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_country_flag = danish_tunisia
-			1725 = { change_province_name = "Carthenhagen" }
-			prestige = 15
-			TUN = { 
-				primary_culture = danish
-				add_accepted_culture = maghrebi
-			}
-		}
-	}
+#    reestablish_danelaw
+
+    end_dnn = {
+        picture = become_dnn
+        potential = {
+            DEN = {
+                exists = no
+            }
+            tag = DNN
+            NOT = { has_country_flag = education_reform }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                AND = {
+                    NOT = { owns = 308 }
+                    NOT = { owns = 309 }
+                    NOT = { owns = 313 }
+                }
+                NOR = {
+                    exists = yes
+                }
+            }
+        }
+        effect = {
+            prestige = -50
+            change_tag = DEN
+        }
+    }
+
+    reestablish_dnn = {
+        picture = become_dnn
+        potential = {
+            DNN = {
+                exists = no
+            }
+            tag = DEN
+            NOT = { has_country_flag = education_reform }
+            exists = yes
+        }
+        allow = {
+            owns = 308
+            owns = 309
+            owns = 313
+            NOR = {
+                exists = no
+            }
+        }
+        effect = {
+            set_country_flag = struensee_reforms
+            change_tag = DNN
+        }
+    }
+    #mmmyes
+    danish_tunis = {
+        picture = tunisia_map
+        potential = {
+            OR = {
+                tag = DNN
+                tag = DEN
+                tag = SCA
+            }
+            owns = 1725
+            NOT = {
+                has_country_flag = danish_tunisia
+            }
+            exists = yes
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            set_country_flag = danish_tunisia
+            1725 = { change_province_name = "Carthenhagen" }
+            prestige = 15
+            TUN = {
+                primary_culture = danish
+                add_accepted_culture = maghrebi
+            }
+        }
+    }
 }

@@ -1,33 +1,32 @@
 army = {
-	name = "The Khan's Army"
-	location = 1600
-	regiment = {
-		name= "1st Oirat Cavalry"
-		type = cavalry
-		home = 1600
-	}
-	regiment = {
-		name= "2nd Oirat Cavalry"
-		type = cavalry
-		home = 1600
-	}
-	regiment = {
-		name= "3rd Oirat Cavalry"
-		type = cavalry
-		home = 1600
-	}
-	regiment = {
-		name= "Ili Regiment"
-		type = infantry
-		home = 1595
-	}
+    name = "The Khan's Army"
+    location = 1600
+    regiment = {
+        name= "1st Oirat Cavalry"
+        type = cavalry
+        home = 1600
+    }
+    regiment = {
+        name= "2nd Oirat Cavalry"
+        type = cavalry
+        home = 1600
+    }
+    regiment = {
+        name= "3rd Oirat Cavalry"
+        type = cavalry
+        home = 1600
+    }
+    regiment = {
+        name= "Ili Regiment"
+        type = infantry
+        home = 1595
+    }
 }
 
 leader = {
-	name = "Tsewang Rabtan"
-	type = land
-	date = 1700.1.1
-	background = defence_2.2
-	personality = attack_2.2
+    name = "Tsewang Rabtan"
+    type = land
+    date = 1700.1.1
+    background = defence_2.2
+    personality = attack_2.2
 }
-	

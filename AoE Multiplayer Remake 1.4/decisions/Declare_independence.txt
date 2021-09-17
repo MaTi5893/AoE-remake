@@ -1,39 +1,39 @@
 political_decisions = {
-	declare_independence = {
-		picture = declare_independence
-		
-		potential = {
-		is_vassal = yes
-		civilized = yes
-		war = no
-		}
-		allow = {
-			war = no
-			overlord = {
-				NOT = { 
-					relation = {
-						who = THIS
-						value = -50
-					}
-					truce_with = THIS
-				}
-			}
-		}
-		effect = {
-			overlord = {
-				diplomatic_influence = {
-				who = THIS
-				value = -200
-				}
-			country_event = { id=98610 days=0 }
-			}
-			remove_country_modifier = sugar_act_on_colonies
-			remove_country_modifier = stamp_act_on_colonies
-			remove_country_modifier = tea_act_on_colonies
-			remove_country_modifier = intoreable_act_on_colonies
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+    declare_independence = {
+        picture = declare_independence
+
+        potential = {
+        is_vassal = yes
+        civilized = yes
+        war = no
+        }
+        allow = {
+            war = no
+            overlord = {
+                NOT = {
+                    relation = {
+                        who = THIS
+                        value = -50
+                    }
+                    truce_with = THIS
+                }
+            }
+        }
+        effect = {
+            overlord = {
+                diplomatic_influence = {
+                who = THIS
+                value = -200
+                }
+            country_event = { id=98610 days=0 }
+            }
+            remove_country_modifier = sugar_act_on_colonies
+            remove_country_modifier = stamp_act_on_colonies
+            remove_country_modifier = tea_act_on_colonies
+            remove_country_modifier = intoreable_act_on_colonies
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

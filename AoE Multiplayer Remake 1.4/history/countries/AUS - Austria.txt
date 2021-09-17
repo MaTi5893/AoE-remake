@@ -42,7 +42,7 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = regionalism
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 set_country_flag = support_habsburg_heir
@@ -69,13 +69,13 @@ decision = burgenland_rename
 
 ruling_party = "Nobility Faction"
 upper_house = {
-	fascist = 0
-	liberal = 25
-	conservative = 61
-	reactionary = 14
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 25
+    conservative = 61
+    reactionary = 14
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Technologies
@@ -115,5 +115,5 @@ schools = army_tech_school
 oob = "AUS_oob.txt"
 
 foreign_investment = {
-	GNG = 2500
+    GNG = 2500
 }

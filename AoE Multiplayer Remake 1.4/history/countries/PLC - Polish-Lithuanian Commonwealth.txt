@@ -40,7 +40,7 @@ child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = confederalism
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 set_country_flag = the_elective_monarchy
@@ -55,13 +55,13 @@ decision = posen_rename_polish
 schools = culture_tech_school
 ruling_party = "Stronnictwo Magnackie"
 upper_house = {
-	fascist = 0
-	liberal = 40
-	conservative = 55
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 40
+    conservative = 55
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 oob = "PLC_oob.txt"
 
@@ -70,8 +70,8 @@ nonstate_consciousness = 1
 decision = plc_setup
 
 govt_flag = {
-	government = proletarian_dictatorship
-	flag = theocracy
+    government = proletarian_dictatorship
+    flag = theocracy
 }
 
 #tech

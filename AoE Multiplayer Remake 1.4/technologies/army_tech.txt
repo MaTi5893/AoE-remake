@@ -1,780 +1,778 @@
 #army_doctrine
 post_napoleonic_thought = {
-	area = army_doctrine
-	year = 1700
-	cost = 3600
-	unciv_military = yes
+    area = army_doctrine
+    year = 1700
+    cost = 3600
+    unciv_military = yes
 
-	activate_building = fort	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
-	dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    activate_building = fort
+    army_base = {
+        default_organisation = 5
+        supply_consumption = 0.10
+    }
+    dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 }
 
 strategic_mobility = {
-	area = army_doctrine
-	year = 1700
-	cost = 7200
-	unciv_military = yes
-	
-	army_base = {
-		supply_consumption = 0.10
-	}
-	max_fort = 1
-	#dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1700
+    cost = 7200
+    unciv_military = yes
+
+    army_base = {
+        supply_consumption = 0.10
+    }
+    max_fort = 1
+    #dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 }
 
 point_defense_system = {
-	area = army_doctrine
-	year = 1715
-	cost = 10800
-	unciv_military = yes
-	engineer = {
-		support = 0.25
-	} 
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	max_fort = 1
-	default_organisation = 5
-	#dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1715
+    cost = 10800
+    unciv_military = yes
+    engineer = {
+        support = 0.25
+    }
+    army_base = {
+        supply_consumption = 0.20
+    }
+    max_fort = 1
+    default_organisation = 5
+    #dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 
 }
 deep_defense_system = {
-	area = army_doctrine
-	year = 1730
-	cost = 14400
-	unciv_military = yes
-	engineer = {
-		support = 0.25
-	}
-	infantry = {
-		discipline = 0.25
-	}
-	irregular = {
-		discipline = 0.25
-	}
-	cavalry = {
-		discipline = 0.25
-	}
-	artillery = {
-		discipline = 0.25
-	}
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	max_fort = 1
-	dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1730
+    cost = 14400
+    unciv_military = yes
+    engineer = {
+        support = 0.25
+    }
+    infantry = {
+        discipline = 0.25
+    }
+    irregular = {
+        discipline = 0.25
+    }
+    cavalry = {
+        discipline = 0.25
+    }
+    artillery = {
+        discipline = 0.25
+    }
+    army_base = {
+        supply_consumption = 0.20
+    }
+    max_fort = 1
+    dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 }
 infiltration = {
-	area = army_doctrine
-	year = 1750
-	cost = 18000
-	unciv_military = yes
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	max_fort = 1
-	#dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1750
+    cost = 18000
+    unciv_military = yes
+    army_base = {
+        supply_consumption = 0.20
+    }
+    max_fort = 1
+    #dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 }
 modern_army_doctrine = {
-	area = army_doctrine
-	year = 1770
-	cost = 21600
-	unciv_military = yes
-	
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	
-	max_fort = 1
-		infantry = {
-			defence = 1
-			supply_consumption = 0.20
-		}
-		guard = {
-			defence = 1
-			supply_consumption = 0.20
-		}
-		plane = {
-			defence = 1
-			supply_consumption = 0.20
-		}
-		engineer = {
-			defence = 1
-			supply_consumption = 0.20
-		}
-		irregular = {
-			defence = 1
-			supply_consumption = 0.20
-		}
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1770
+    cost = 21600
+    unciv_military = yes
+
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    max_fort = 1
+        infantry = {
+            defence = 1
+            supply_consumption = 0.20
+        }
+        guard = {
+            defence = 1
+            supply_consumption = 0.20
+        }
+        plane = {
+            defence = 1
+            supply_consumption = 0.20
+        }
+        engineer = {
+            defence = 1
+            supply_consumption = 0.20
+        }
+        irregular = {
+            defence = 1
+            supply_consumption = 0.20
+        }
+
+    ai_chance = {
+        factor = 2
+    }
 }
 army_doctrine_7 = {
-	area = army_doctrine
-	year = 1790
-	cost = 25200
-	unciv_military = yes
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	dig_in_cap = 1
-	infantry = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	guard = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	plane = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	engineer = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	irregular = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1790
+    cost = 25200
+    unciv_military = yes
+    army_base = {
+        supply_consumption = 0.20
+    }
+    dig_in_cap = 1
+    infantry = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    guard = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    plane = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    engineer = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    irregular = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 2
+    }
 }
 army_doctrine_8 = {
-	area = army_doctrine
-	year = 1805
-	cost = 30200
-	unciv_military = yes
-	
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	infantry = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	guard = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	plane = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	engineer = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	irregular = {
-		defence = 2
-		supply_consumption = 0.20
-	}
-	dig_in_cap = 1
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = army_doctrine
+    year = 1805
+    cost = 30200
+    unciv_military = yes
+
+    army_base = {
+        supply_consumption = 0.20
+    }
+    infantry = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    guard = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    plane = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    engineer = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    irregular = {
+        defence = 2
+        supply_consumption = 0.20
+    }
+    dig_in_cap = 1
+
+    ai_chance = {
+        factor = 2
+    }
 }
 
 
 #light_armament
 flintlock_rifles = {
-	area = light_armament
-	year = 1600
-	cost = 3600
-	unciv_military = yes
-	activate_unit = infantry
+    area = light_armament
+    year = 1600
+    cost = 3600
+    unciv_military = yes
+    activate_unit = infantry
 
-	ai_chance = {
-		factor = 2
-	}
+    ai_chance = {
+        factor = 2
+    }
 }
 muzzle_loaded_rifles = {
-	area = light_armament
-	year = 1690
-	cost = 7200
-	unciv_military = yes
-	activate_unit = engineer
-	combat_width = 2
+    area = light_armament
+    year = 1690
+    cost = 7200
+    unciv_military = yes
+    activate_unit = engineer
+    combat_width = 2
 
-	ai_chance = {
-		factor = 4
-	}
+    ai_chance = {
+        factor = 4
+    }
 }
 breech_loaded_rifles = {
-	area = light_armament
-	year = 1715
-	cost = 10800
-	
-	activate_unit = guard
-	combat_width = 4
-	unciv_military = yes
+    area = light_armament
+    year = 1715
+    cost = 10800
 
-	default_organisation = 5
-	
-	ai_chance = {
-		factor = 4
-	}
+    activate_unit = guard
+    combat_width = 4
+    unciv_military = yes
+
+    default_organisation = 5
+
+    ai_chance = {
+        factor = 4
+    }
 }
 machine_guns = {
-	area = light_armament
-	year = 1730
-	cost = 14400
-	unciv_military = yes
-	
-	combat_width = -6
-	#colonial_life_rating = -10 
-	ai_chance = {
-		factor = 6
-	}
-	
+    area = light_armament
+    year = 1730
+    cost = 14400
+    unciv_military = yes
+
+    combat_width = -6
+    #colonial_life_rating = -10
+    ai_chance = {
+        factor = 6
+    }
+
 }
 bolt_action_rifles = {
-	area = light_armament
-	year = 1750
-	cost = 18000
-	unciv_military = yes
-	unit = 1
-	
-	combat_width = -1
-	
-	ai_chance = {
-		factor = 3
-	}
+    area = light_armament
+    year = 1750
+    cost = 18000
+    unciv_military = yes
+    unit = 1
+
+    combat_width = -1
+
+    ai_chance = {
+        factor = 3
+    }
 }
 modern_divisional_structure = {
-	area = light_armament
-	year = 1770
-	cost = 21600
-	unciv_military = yes
+    area = light_armament
+    year = 1770
+    cost = 21600
+    unciv_military = yes
 
-	unit = 2
-	combat_width = -1
-		infantry = {
-			attack = 1
-			supply_consumption = 0.25
-		}
-		guard = {
-			attack = 1
-			supply_consumption = 0.25
-		}
-		plane = {
-			attack = 1
-			supply_consumption = 0.25
-		}
-		engineer = {
-			attack = 1
-			supply_consumption = 0.25
-		}
-		irregular = {
-			attack = 1
-			supply_consumption = 0.20
-		}
-	ai_chance = {
-		factor = 1.5
-	}
+    unit = 2
+    combat_width = -1
+        infantry = {
+            attack = 1
+            supply_consumption = 0.25
+        }
+        guard = {
+            attack = 1
+            supply_consumption = 0.25
+        }
+        plane = {
+            attack = 1
+            supply_consumption = 0.25
+        }
+        engineer = {
+            attack = 1
+            supply_consumption = 0.25
+        }
+        irregular = {
+            attack = 1
+            supply_consumption = 0.20
+        }
+    ai_chance = {
+        factor = 1.5
+    }
 }
 
 light_armament_7 = {
-	area = light_armament
-	year = 1790
-	cost = 25200
-	unciv_military = yes
-	unit = 1
-	
-		infantry = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		guard = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		plane = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		engineer = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		irregular = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-	ai_chance = {
-		factor = 3
-	}
+    area = light_armament
+    year = 1790
+    cost = 25200
+    unciv_military = yes
+    unit = 1
+
+        infantry = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        guard = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        plane = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        engineer = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        irregular = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+    ai_chance = {
+        factor = 3
+    }
 }
 
 light_armament_8 = {
-	area = light_armament
-	year = 1805
-	cost = 30200
-	unciv_military = yes
+    area = light_armament
+    year = 1805
+    cost = 30200
+    unciv_military = yes
 
-	unit = 2
-	combat_width = -2
-		infantry = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		guard = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		plane = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		engineer = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-		irregular = {
-			attack = 2
-			supply_consumption = 0.20
-		}
-	ai_chance = {
-		factor = 1.5
-	}
+    unit = 2
+    combat_width = -2
+        infantry = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        guard = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        plane = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        engineer = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+        irregular = {
+            attack = 2
+            supply_consumption = 0.20
+        }
+    ai_chance = {
+        factor = 1.5
+    }
 }
 
 
 #heavy_armament
 bronze_muzzle_loaded_artillery = {
-	area = heavy_armament
-	year = 1650
-	cost = 3600
-	unciv_military = yes
-	activate_unit = artillery
+    area = heavy_armament
+    year = 1650
+    cost = 3600
+    unciv_military = yes
+    activate_unit = artillery
 
-	ai_chance = {
-		factor = 4
-	}
+    ai_chance = {
+        factor = 4
+    }
 }
 iron_muzzle_loaded_artillery = {
-	area = heavy_armament
-	year = 1660
-	cost = 7200
-	unciv_military = yes
-	
-	artillery = {
-		attack = 0.25
-		# support = 0.3
-		supply_consumption = 0.15
-	}
-	# tank = {
-		# attack = 0.25
-		# support = 0.5
-		# supply_consumption = 0.15
-	# }
-	
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1660
+    cost = 7200
+    unciv_military = yes
+
+    artillery = {
+        attack = 0.25
+        # support = 0.3
+        supply_consumption = 0.15
+    }
+    # tank = {
+        # attack = 0.25
+        # support = 0.5
+        # supply_consumption = 0.15
+    # }
+
+    ai_chance = {
+        factor = 4
+    }
 }
 iron_breech_loaded_artillery = {
-	area = heavy_armament
-	year = 1715
-	cost = 10800
-	unciv_military = yes
-	tank = {
-		attack = 0.25
-		#support = 0.3
-		supply_consumption = 0.3
-	}
-	activate_unit = tank
+    area = heavy_armament
+    year = 1715
+    cost = 10800
+    unciv_military = yes
+    tank = {
+        attack = 0.25
+        #support = 0.3
+        supply_consumption = 0.3
+    }
+    activate_unit = tank
 
-	
-	ai_chance = {
-		factor = 4
-	}
+
+    ai_chance = {
+        factor = 4
+    }
 }
 steel_breech_loaded_artillery = {
-	area = heavy_armament
-	year = 1730
-	cost = 14400
-	unciv_military = yes
-	artillery = {
-		maximum_speed = 1
-	}
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1730
+    cost = 14400
+    unciv_military = yes
+    artillery = {
+        maximum_speed = 1
+    }
+    ai_chance = {
+        factor = 4
+    }
 }
 indirect_artillery_fire = {
-	area = heavy_armament
-	year = 1745
-	cost = 20000
-	unciv_military = yes
-	artillery = {
-		support = 0.65
-		supply_consumption = 0.3
-	}
-	
-	tank = {
-		support = 0.35
-		supply_consumption = 0.3
-	}
-	
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1745
+    cost = 20000
+    unciv_military = yes
+    artillery = {
+        support = 0.65
+        supply_consumption = 0.3
+    }
+
+    tank = {
+        support = 0.35
+        supply_consumption = 0.3
+    }
+
+    ai_chance = {
+        factor = 4
+    }
 }
 heavy_armament_dunno = {
-	area = heavy_armament
-	year = 1760
-	cost = 24200
-	unciv_military = yes
-	artillery = {
-		attack = 1.0
-		defence = 1
-		support = 1
-		supply_consumption = 0.3
-	}
-	tank = {
-		attack = 1.0
-		defence = 1
-		support = 1
-		supply_consumption = 0.3
-	}
-	
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1760
+    cost = 24200
+    unciv_military = yes
+    artillery = {
+        attack = 1.0
+        defence = 1
+        support = 1
+        supply_consumption = 0.3
+    }
+    tank = {
+        attack = 1.0
+        defence = 1
+        support = 1
+        supply_consumption = 0.3
+    }
+
+    ai_chance = {
+        factor = 4
+    }
 }
 heavy_armament_7 = {
-	area = heavy_armament
-	year = 1775
-	cost = 29200
-	unciv_military = yes
-	tank = {
-		attack = 2
-		defence = 2
-		support = 1
-		supply_consumption = 0.3
-	}
-	
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1775
+    cost = 29200
+    unciv_military = yes
+    tank = {
+        attack = 2
+        defence = 2
+        support = 1
+        supply_consumption = 0.3
+    }
+
+    ai_chance = {
+        factor = 4
+    }
 }
 heavy_armament_8 = {
-	area = heavy_armament
-	year = 1790
-	cost = 32200
-	unciv_military = yes
-	artillery = {
-		attack = 1
-		defence = 2
-		support = 1
-		supply_consumption = 0.3
-	}
-	
-	ai_chance = {
-		factor = 4
-	}
+    area = heavy_armament
+    year = 1790
+    cost = 32200
+    unciv_military = yes
+    artillery = {
+        attack = 1
+        defence = 2
+        support = 1
+        supply_consumption = 0.3
+    }
+
+    ai_chance = {
+        factor = 4
+    }
 }
 
 
 #military_science
 military_staff_system = {
-	area = military_science
-	year = 1650
-	cost = 3600
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
-	
-	ai_chance = {
-		factor = 1.5
-	}
+    area = military_science
+    year = 1650
+    cost = 3600
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 5
+        supply_consumption = 0.10
+    }
+
+    ai_chance = {
+        factor = 1.5
+    }
 }
 military_plans = {
-	area = military_science
-	year = 1700
-	cost = 7200
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
-	
-	ai_chance = {
-		factor = 1.5
-	}
+    area = military_science
+    year = 1700
+    cost = 7200
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 5
+        supply_consumption = 0.10
+    }
+
+    ai_chance = {
+        factor = 1.5
+    }
 }
 military_statistics = {
-	area = military_science
-	year = 1715
-	cost = 10800
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.20
-	}
-	
-	cuirassier = {
-		maneuver = 1
-	}
-	hussar = {
-		maneuver = 1
-	}
-	dragoon = {
-		maneuver = 1
-	}
-	ai_chance = {
-		factor = 1.5
-	}
+    area = military_science
+    year = 1715
+    cost = 10800
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 5
+        supply_consumption = 0.20
+    }
+
+    cuirassier = {
+        maneuver = 1
+    }
+    hussar = {
+        maneuver = 1
+    }
+    dragoon = {
+        maneuver = 1
+    }
+    ai_chance = {
+        factor = 1.5
+    }
 }
 military_logistics = {
-	area = military_science
-	year = 1730
-	cost = 14400
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.20
-	}
-	mobilisation_size = 0.05
-	
-	ai_chance = {
-		factor = 1.5
-	}
+    area = military_science
+    year = 1730
+    cost = 14400
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 5
+        supply_consumption = 0.20
+    }
+    mobilisation_size = 0.05
+
+    ai_chance = {
+        factor = 1.5
+    }
 }
 military_directionism = {
-	area = military_science
-	year = 1750
-	cost = 18000
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
-	ai_chance = {
-		factor = 8
-	}
+    area = military_science
+    year = 1750
+    cost = 18000
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 10
+        supply_consumption = 0.20
+    }
+    ai_chance = {
+        factor = 8
+    }
 }
 aeronautics = {
-	area = military_science
-	year = 1770
-	cost = 21600
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
-	
-	unciv_military = yes
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = military_science
+    year = 1770
+    cost = 21600
+    army_base = {
+        default_organisation = 10
+        supply_consumption = 0.20
+    }
+
+    unciv_military = yes
+
+    ai_chance = {
+        factor = 2
+    }
 }
 military_science_7 = {
-	area = military_science
-	year = 1790
-	cost = 25200
-	unciv_military = yes
-	
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
-	ai_chance = {
-		factor = 8
-	}
+    area = military_science
+    year = 1790
+    cost = 25200
+    unciv_military = yes
+
+    army_base = {
+        default_organisation = 10
+        supply_consumption = 0.20
+    }
+    ai_chance = {
+        factor = 8
+    }
 }
 military_science_8 = {
-	area = military_science
-	year = 1805
-	cost = 30200
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
-	
-	unciv_military = yes
-	
-	ai_chance = {
-		factor = 2
-	}
+    area = military_science
+    year = 1805
+    cost = 30200
+    army_base = {
+        default_organisation = 10
+        supply_consumption = 0.20
+    }
+
+    unciv_military = yes
+
+    ai_chance = {
+        factor = 2
+    }
 }
 
 
 #army_leadership
 army_command_principle = {
-	area = army_leadership
-	year = 1700
-	cost = 3600
+    area = army_leadership
+    year = 1700
+    cost = 3600
 
-	morale = 0.25
-	unciv_military = yes
-	military_tactics = 0.25
+    morale = 0.25
+    unciv_military = yes
+    military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.10
-	}
+    army_base = {
+        supply_consumption = 0.10
+    }
 
-	ai_chance = {
-		factor = 1.5
-	}
+    ai_chance = {
+        factor = 1.5
+    }
 }
 army_professionalism = {
-	area = army_leadership
-	year = 1700
-	cost = 7200
-	unciv_military = yes
-	morale = 0.1
+    area = army_leadership
+    year = 1700
+    cost = 7200
+    unciv_military = yes
+    morale = 0.1
 
-	military_tactics = 0.25
-	
-	army_base = {
-		supply_consumption = 0.10
-	}
-	ai_chance = {
-		factor = 1.5
-	}
+    military_tactics = 0.25
+
+    army_base = {
+        supply_consumption = 0.10
+    }
+    ai_chance = {
+        factor = 1.5
+    }
 }
 army_decision_making = {
-	area = army_leadership
-	year = 1715
-	cost = 10800
-	unciv_military = yes
-	morale = 0.25
+    area = army_leadership
+    year = 1715
+    cost = 10800
+    unciv_military = yes
+    morale = 0.25
 
-	military_tactics = 0.30
+    military_tactics = 0.30
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
 army_risk_management = {
-	area = army_leadership
-	year = 1730
-	cost = 14400
-	unciv_military = yes
-	morale = 0.20
+    area = army_leadership
+    year = 1730
+    cost = 14400
+    unciv_military = yes
+    morale = 0.20
 
-	military_tactics = 0.20
+    military_tactics = 0.20
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
 army_nco_training = {
-	area = army_leadership
-	year = 1750
-	cost = 18000
-	unciv_military = yes
-	morale = 0.25
-	
+    area = army_leadership
+    year = 1750
+    cost = 18000
+    unciv_military = yes
+    morale = 0.25
 
-	military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    military_tactics = 0.25
+
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
 great_war_experience = {
-	area = army_leadership
-	year = 1770
-	cost = 21600
-	unciv_military = yes
-	morale = 0.25
+    area = army_leadership
+    year = 1770
+    cost = 21600
+    unciv_military = yes
+    morale = 0.25
 
-	military_tactics = 0.25
+    military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
 army_leadership_7 = {
-	area = army_leadership
-	year = 1795
-	cost = 25200
-	unciv_military = yes
-	morale = 0.5
-	
+    area = army_leadership
+    year = 1795
+    cost = 25200
+    unciv_military = yes
+    morale = 0.5
 
-	military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    military_tactics = 0.25
+
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
 army_leadership_8 = {
-	area = army_leadership
-	year = 1805
-	cost = 30200
-	unciv_military = yes
-	morale = 0.5
+    area = army_leadership
+    year = 1805
+    cost = 30200
+    unciv_military = yes
+    morale = 0.5
 
-	military_tactics = 0.25
+    military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.20
-	}
-	
-	ai_chance = {
-		factor = 1.3
-	}
+    army_base = {
+        supply_consumption = 0.20
+    }
+
+    ai_chance = {
+        factor = 1.3
+    }
 }
-
-

@@ -1,315 +1,315 @@
 # Tuberculosis
 country_event = {
-	id = 21000
-	title = "EVTNAME21000"
-	desc = "EVTDESC21000"
-	picture = "disease"
-	
-	trigger = {
-		NOT = {
-			poor_strata_everyday_needs = 0.8
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1000
-		
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.7
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.6
-			}
-		}
-		modifier = {
-			factor = 1.5
-			vaccination = public_vaccination
-		}
-		modifier = {
-			factor = 1.25
-			vaccination = military_vaccination
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA21000"
-		random_state = {
-			any_pop = {
-				reduce_pop = 0.98
-				militancy = -0.5
-			}
-		}
-	}
+    id = 21000
+    title = "EVTNAME21000"
+    desc = "EVTDESC21000"
+    picture = "disease"
+
+    trigger = {
+        NOT = {
+            poor_strata_everyday_needs = 0.8
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1000
+
+        modifier = {
+            factor = 0.9
+            NOT = {
+                poor_strata_life_needs = 0.7
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                poor_strata_everyday_needs = 0.6
+            }
+        }
+        modifier = {
+            factor = 1.5
+            vaccination = public_vaccination
+        }
+        modifier = {
+            factor = 1.25
+            vaccination = military_vaccination
+        }
+    }
+
+    option = {
+        name = "EVTOPTA21000"
+        random_state = {
+            any_pop = {
+                reduce_pop = 0.98
+                militancy = -0.5
+            }
+        }
+    }
 }
 
 #Famine!
 country_event = {
-	id = 21010
-	title = "EVTNAME21010"
-	desc = "EVTDESC21010"
-	picture = "starving"
-	
-	trigger = {
-		NOT = {
-			OR = {
-			poor_strata_life_needs = 0.8
-			poor_strata_everyday_needs = 0.2
-			}
-		}
-		NOT = {
-			government = democracy
-		}
-	}
-		
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			government = proletarian_dictatorship
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA21010"
-		random_state = {
-			poor_strata = {
-				reduce_pop = 0.98
-			}
-		}
-		add_tax_relative_income	= -100
-		#treasury = -1500
-	}
-	
-	option = {
-		name = "EVTOPTB21010"
-		random_state = {
-			poor_strata = {
-				reduce_pop = 0.95
-				militancy = 1
-			}
-		}
-	}
+    id = 21010
+    title = "EVTNAME21010"
+    desc = "EVTDESC21010"
+    picture = "starving"
+
+    trigger = {
+        NOT = {
+            OR = {
+            poor_strata_life_needs = 0.8
+            poor_strata_everyday_needs = 0.2
+            }
+        }
+        NOT = {
+            government = democracy
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 800
+        modifier = {
+            factor = 0.9
+            government = proletarian_dictatorship
+        }
+    }
+
+    option = {
+        name = "EVTOPTA21010"
+        random_state = {
+            poor_strata = {
+                reduce_pop = 0.98
+            }
+        }
+        add_tax_relative_income    = -100
+        #treasury = -1500
+    }
+
+    option = {
+        name = "EVTOPTB21010"
+        random_state = {
+            poor_strata = {
+                reduce_pop = 0.95
+                militancy = 1
+            }
+        }
+    }
 }
 
 #Typhoid Fever
 country_event = {
-	id = 21020
-	title = "EVTNAME21020"
-	desc = "EVTDESC21020"
-	picture = "disease"
-	
-	trigger = {
-		NOT = {
-			poor_strata_everyday_needs = 0.90
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.8
-			}
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.9
-			}
-		}
-		modifier = {
-			factor = 1.5
-			vaccination = public_vaccination
-		}
-		modifier = {
-			factor = 1.25
-			vaccination = military_vaccination
-		}
-		modifier = {
-			factor = 1.5
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 1.1
-			year = 1850
-		}
-		modifier = {
-			factor = 1.1
-			year = 1870
-		}
-		modifier = {
-			factor = 1.1
-			year = 1890
-		}
-		modifier = {
-			factor = 1.1
-			year = 1910
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA21020"
-		random_state = {
-			any_pop = {
-				reduce_pop = 0.95
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB21020"
-		random_state = {
-			any_pop = {
-				reduce_pop = 0.98
-				militancy = 2
-			}
-		}
-	}
+    id = 21020
+    title = "EVTNAME21020"
+    desc = "EVTDESC21020"
+    picture = "disease"
+
+    trigger = {
+        NOT = {
+            poor_strata_everyday_needs = 0.90
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 800
+        modifier = {
+            factor = 0.9
+            NOT = {
+                poor_strata_everyday_needs = 0.8
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                poor_strata_life_needs = 0.9
+            }
+        }
+        modifier = {
+            factor = 1.5
+            vaccination = public_vaccination
+        }
+        modifier = {
+            factor = 1.25
+            vaccination = military_vaccination
+        }
+        modifier = {
+            factor = 1.5
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 1.1
+            year = 1850
+        }
+        modifier = {
+            factor = 1.1
+            year = 1870
+        }
+        modifier = {
+            factor = 1.1
+            year = 1890
+        }
+        modifier = {
+            factor = 1.1
+            year = 1910
+        }
+    }
+
+    option = {
+        name = "EVTOPTA21020"
+        random_state = {
+            any_pop = {
+                reduce_pop = 0.95
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB21020"
+        random_state = {
+            any_pop = {
+                reduce_pop = 0.98
+                militancy = 2
+            }
+        }
+    }
 }
 
 #Strange Influenza
 country_event = {
-	id = 21030
-	title = "EVTNAME21030"
-	desc = "EVTDESC21030"
-	picture = "disease"
-	
-	trigger = {
-		NOT = {
-			OR = {
-			poor_strata_life_needs = 0.9
-			has_country_modifier = immunity_from_influenza
-			}
-		}
-		
-		NOT = {
-			OR = {
-			has_country_modifier = pandemic_influenza
-			has_country_modifier = immunity_from_influenza
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3000
-		modifier = {
-			factor = 0.9
-			NOT = { poor_strata_everyday_needs = 0.9 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { poor_strata_life_needs = 0.8 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = {
-				organic_chemistry = 1
-			}
-		}
-		modifier = {
-			factor = 1.5
-			vaccination = public_vaccination
-		}
-		modifier = {
-			factor = 1.25
-			vaccination = military_vaccination
-		}
-		modifier = {
-			factor = 0.01
-			any_neighbor_country = {
-				civilized = yes
-				has_country_modifier = pandemic_influenza
-			}
-		}
-		
-	}
-	
-	option = {
-		name = "EVTOPTA21030"
-		add_country_modifier = {
-			name = pandemic_influenza
-			duration = 365
-		}
-		add_country_modifier = {
-			name = immunity_from_influenza
-			duration = 4015
-		}
-		add_tax_relative_income	= -5
-	}
-	
-	option = {
-		name = "EVTOPTB21030"
-		add_country_modifier = {
-			name = pandemic_influenza
-			duration = 480
-		}
-		add_country_modifier = {
-			name = immunity_from_influenza
-			duration = 4015
-		}
-	}
+    id = 21030
+    title = "EVTNAME21030"
+    desc = "EVTDESC21030"
+    picture = "disease"
+
+    trigger = {
+        NOT = {
+            OR = {
+            poor_strata_life_needs = 0.9
+            has_country_modifier = immunity_from_influenza
+            }
+        }
+
+        NOT = {
+            OR = {
+            has_country_modifier = pandemic_influenza
+            has_country_modifier = immunity_from_influenza
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 3000
+        modifier = {
+            factor = 0.9
+            NOT = { poor_strata_everyday_needs = 0.9 }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = { poor_strata_life_needs = 0.8 }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                organic_chemistry = 1
+            }
+        }
+        modifier = {
+            factor = 1.5
+            vaccination = public_vaccination
+        }
+        modifier = {
+            factor = 1.25
+            vaccination = military_vaccination
+        }
+        modifier = {
+            factor = 0.01
+            any_neighbor_country = {
+                civilized = yes
+                has_country_modifier = pandemic_influenza
+            }
+        }
+
+    }
+
+    option = {
+        name = "EVTOPTA21030"
+        add_country_modifier = {
+            name = pandemic_influenza
+            duration = 365
+        }
+        add_country_modifier = {
+            name = immunity_from_influenza
+            duration = 4015
+        }
+        add_tax_relative_income    = -5
+    }
+
+    option = {
+        name = "EVTOPTB21030"
+        add_country_modifier = {
+            name = pandemic_influenza
+            duration = 480
+        }
+        add_country_modifier = {
+            name = immunity_from_influenza
+            duration = 4015
+        }
+    }
 }
 
 #Smallpox
 country_event = {
-	id = 21040
-	title = "EVTNAME21040"
-	desc = "EVTDESC21040"
-	picture = "smallpox"
-	
-	trigger = {
-		NOT = {
-			poor_strata_everyday_needs = 0.5
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.9
-			}
-		}
-#		modifier = {
-#			factor = 0.9
-#			NOT = {
-#				luxury_needs = 0.9
-#			}
-#		}
-		modifier = {
-			factor = 1.5
-			vaccination = public_vaccination
-		}
-		modifier = {
-			factor = 1.25
-			vaccination = military_vaccination
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA21040"
-		random_state = {
-			any_pop = {
-				reduce_pop = 0.95
-				consciousness = 2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB21040"
-		random_state = {
-			any_pop = {
-				reduce_pop = 0.92
-				militancy = -1
-			}
-		}
-	}
+    id = 21040
+    title = "EVTNAME21040"
+    desc = "EVTDESC21040"
+    picture = "smallpox"
+
+    trigger = {
+        NOT = {
+            poor_strata_everyday_needs = 0.5
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 800
+        modifier = {
+            factor = 0.9
+            NOT = {
+                poor_strata_life_needs = 0.9
+            }
+        }
+#        modifier = {
+#            factor = 0.9
+#            NOT = {
+#                luxury_needs = 0.9
+#            }
+#        }
+        modifier = {
+            factor = 1.5
+            vaccination = public_vaccination
+        }
+        modifier = {
+            factor = 1.25
+            vaccination = military_vaccination
+        }
+    }
+
+    option = {
+        name = "EVTOPTA21040"
+        random_state = {
+            any_pop = {
+                reduce_pop = 0.95
+                consciousness = 2
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB21040"
+        random_state = {
+            any_pop = {
+                reduce_pop = 0.92
+                militancy = -1
+            }
+        }
+    }
 }

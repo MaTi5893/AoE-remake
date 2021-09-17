@@ -26,7 +26,7 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = no_schools
 
 conscription = mandatory_service
@@ -47,18 +47,18 @@ set_country_flag = new_world_nation
 ruling_party = "Nobility Faction"
 last_election = 1835.1.28
 upper_house = {
-	fascist = 0
-	liberal = 25
-	conservative = 63
-	reactionary = 12
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 25
+    conservative = 63
+    reactionary = 12
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 govt_flag = {
-	government = presidential_dictatorship
-	flag = theocracy
+    government = presidential_dictatorship
+    flag = theocracy
 }
 
 # Technologies

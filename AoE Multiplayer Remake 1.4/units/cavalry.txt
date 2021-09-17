@@ -1,43 +1,43 @@
 cavalry = {
-	icon = 2
-	
-	type = land
-	sprite = Cavalry
-	active = yes
-	unit_type = cavalry
-	floating_flag = yes
-	
-	#Avatar
-	sprite_mount = GenericMount
-	sprite_mount_attach_node = Saddle_Node
+    icon = 2
 
-	#Core Abilities
-	priority = 25
-	max_strength = 3
-	default_organisation = 35
-	maximum_speed = 5.00
-	weighted_value = 4.0
+    type = land
+    sprite = Cavalry
+    active = yes
+    unit_type = cavalry
+    floating_flag = yes
+
+    #Avatar
+    sprite_mount = GenericMount
+    sprite_mount_attach_node = Saddle_Node
+
+    #Core Abilities
+    priority = 25
+    max_strength = 3
+    default_organisation = 35
+    maximum_speed = 5.00
+    weighted_value = 4.0
 
 
-	#Building Costs
-	build_time = 120
-	build_cost = {
-		wool = 20
-		wine = 10
-	}
-	
-	supply_consumption = 1.0
-	supply_cost = {
-		wool = 0.2
-	}
-	
+    #Building Costs
+    build_time = 120
+    build_cost = {
+        wool = 20
+        wine = 10
+    }
 
-	#Land Abilties
-	reconnaissance = 1
-	attack = 4.0
-	defence = 2
-	discipline = 0.75
-	support = 0.0
-	maneuver = 2
-	
+    supply_consumption = 1.0
+    supply_cost = {
+        wool = 0.2
+    }
+
+
+    #Land Abilties
+    reconnaissance = 1
+    attack = 4.0
+    defence = 2
+    discipline = 0.75
+    support = 0.0
+    maneuver = 2
+
 }

@@ -1,24 +1,24 @@
 name = "Revolt of the Yarkent Baigs"
 
 1700.1.1 = {
-	add_attacker = DZN
-	add_defender = XIN
-	
-	# actor
-	# receiver
-	# casus_belli - cb type
-	# country - 3rd party
-	# state_province_id - target state capital
-	war_goal = {
-		casus_belli = establish_protectorate_casus_belli
-		actor = DZN
-		receiver = XIN
-	}
-	
-	war_goal = {
-		casus_belli = status_quo
-		actor = XIN
-		receiver = DZN
-	}
+    add_attacker = DZN
+    add_defender = XIN
+
+    # actor
+    # receiver
+    # casus_belli - cb type
+    # country - 3rd party
+    # state_province_id - target state capital
+    war_goal = {
+        casus_belli = establish_protectorate_casus_belli
+        actor = DZN
+        receiver = XIN
+    }
+
+    war_goal = {
+        casus_belli = status_quo
+        actor = XIN
+        receiver = DZN
+    }
 
 }

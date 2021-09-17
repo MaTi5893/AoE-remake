@@ -1,5 +1,5 @@
 capital = 919
-civilized = yes  
+civilized = yes
 primary_culture = french
 culture = ashkenazi
 culture = sephardic
@@ -25,7 +25,7 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = no_schools
 
 
@@ -37,19 +37,19 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = unitary
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 set_country_flag = jewish_country
 
 ruling_party = "Nobility Faction"
 upper_house = {
-	fascist = 0
-	liberal = 35
-	conservative = 45
-	reactionary = 20
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 35
+    conservative = 45
+    reactionary = 20
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Technologies
@@ -93,4 +93,3 @@ market_structure = 1
 #corvettes = yes
 commerce_raiders = yes
 precision_work = yes
-

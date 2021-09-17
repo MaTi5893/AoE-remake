@@ -1,126 +1,126 @@
 political_decisions = {
-	
-	iqs_ireddentalism = {
-		picture = native_persecution
-		potential = {
-			tag = IQS
-			NOT = { has_country_flag = iqs_ireddentalism }
-			exists = yes
-		}
-		allow = {
-			war = no
-			war_policy = jingoism
-			MIA = {
-				exists = no
-			}
-		}
-		effect = {
-			set_country_flag = iqs_ireddentalism
-			badboy = 10
-			USA_170 = { add_core = THIS }
-			USA_247 = { add_core = THIS }
-			CAN_46 = { add_core = THIS }
-			174 = { add_core = THIS }
-			173 = { add_core = THIS }
-			175 = { add_core = THIS }
-			176 = { add_core = THIS }
-			165 = { add_core = THIS }
-			168 = { add_core = THIS }
-			167 = { add_core = THIS }
-			MIA = { all_core = { add_core = THIS } }
-			add_core = 182
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_western_confederacy = {
-		picture = become_indian_confederacy
-		potential = {
-			OR = {
-				tag = IQS
-				tag = MIA
-				tag = SHE
-				tag = OTT
-				tag = ILL
-				tag = FOX
-				tag = SUX
-				tag = MIS
-				tag = ASB
-				tag = LNP
-				tag = ABB
-			}
-			NOT = { MTC = { exists = yes } }
-		}
-		allow = {
-			owns = 178
-			owns = 171
-			owns = 184
-			owns = 146
-			owns = 162
-			owns = 150
-			owns = 154
-		}
-		effect = {
-			all_core = {
-				add_core = MTC
-				remove_core = THIS
-			}
-			change_tag = MTC
-			add_accepted_culture = dakota
-			add_accepted_culture = native_american_minor
-			add_accepted_culture = cree
-			IQS = { all_core = { add_core = THIS } }
-			MIA = { all_core = { add_core = THIS } }
-			SHE = { all_core = { add_core = THIS } }
-			OTT = { all_core = { add_core = THIS } }
-			ILL = { all_core = { add_core = THIS } }
-			FOX = { all_core = { add_core = THIS } }
-			SUX = { all_core = { add_core = THIS } }
-			MIS = { all_core = { add_core = THIS } }
-			ASB = { all_core = { add_core = THIS } }
-			LNP = { all_core = { add_core = THIS } }
-			ABB = { all_core = { add_core = THIS } }
-			prestige = 25
-			any_country = {
-				limit = {
-					government = tribal_democracy
-					OR = {
-						vassal_of = THIS
-						in_sphere = THIS
-					}
-					capital_scope = {
-						continent = north_america
-					}
-				}
-				all_core = {
-					add_core = THIS
-				}
-				annex_to = THIS
-			}
-		}
-	}
-	
-	construct_prophetstown = {
-		picture = kaitakushi
-		potential = {
-			tag = MTC
-			NOT = { has_country_flag = prophetstown }
-		}
-		allow = {
-			exists = yes
-			owns = 171
-		}
-		effect = {
-			prestige = 45
-			171 = {
-				change_province_name = "Prophetstown"
-				add_province_modifier = {
-					name = encouraging_migration
-					duration = 3650
-				}
-			}
-			capital = 171
-			set_country_flag = prophetstown
-		}
-	}
+
+    iqs_ireddentalism = {
+        picture = native_persecution
+        potential = {
+            tag = IQS
+            NOT = { has_country_flag = iqs_ireddentalism }
+            exists = yes
+        }
+        allow = {
+            war = no
+            war_policy = jingoism
+            MIA = {
+                exists = no
+            }
+        }
+        effect = {
+            set_country_flag = iqs_ireddentalism
+            badboy = 10
+            USA_170 = { add_core = THIS }
+            USA_247 = { add_core = THIS }
+            CAN_46 = { add_core = THIS }
+            174 = { add_core = THIS }
+            173 = { add_core = THIS }
+            175 = { add_core = THIS }
+            176 = { add_core = THIS }
+            165 = { add_core = THIS }
+            168 = { add_core = THIS }
+            167 = { add_core = THIS }
+            MIA = { all_core = { add_core = THIS } }
+            add_core = 182
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_western_confederacy = {
+        picture = become_indian_confederacy
+        potential = {
+            OR = {
+                tag = IQS
+                tag = MIA
+                tag = SHE
+                tag = OTT
+                tag = ILL
+                tag = FOX
+                tag = SUX
+                tag = MIS
+                tag = ASB
+                tag = LNP
+                tag = ABB
+            }
+            NOT = { MTC = { exists = yes } }
+        }
+        allow = {
+            owns = 178
+            owns = 171
+            owns = 184
+            owns = 146
+            owns = 162
+            owns = 150
+            owns = 154
+        }
+        effect = {
+            all_core = {
+                add_core = MTC
+                remove_core = THIS
+            }
+            change_tag = MTC
+            add_accepted_culture = dakota
+            add_accepted_culture = native_american_minor
+            add_accepted_culture = cree
+            IQS = { all_core = { add_core = THIS } }
+            MIA = { all_core = { add_core = THIS } }
+            SHE = { all_core = { add_core = THIS } }
+            OTT = { all_core = { add_core = THIS } }
+            ILL = { all_core = { add_core = THIS } }
+            FOX = { all_core = { add_core = THIS } }
+            SUX = { all_core = { add_core = THIS } }
+            MIS = { all_core = { add_core = THIS } }
+            ASB = { all_core = { add_core = THIS } }
+            LNP = { all_core = { add_core = THIS } }
+            ABB = { all_core = { add_core = THIS } }
+            prestige = 25
+            any_country = {
+                limit = {
+                    government = tribal_democracy
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                    capital_scope = {
+                        continent = north_america
+                    }
+                }
+                all_core = {
+                    add_core = THIS
+                }
+                annex_to = THIS
+            }
+        }
+    }
+
+    construct_prophetstown = {
+        picture = kaitakushi
+        potential = {
+            tag = MTC
+            NOT = { has_country_flag = prophetstown }
+        }
+        allow = {
+            exists = yes
+            owns = 171
+        }
+        effect = {
+            prestige = 45
+            171 = {
+                change_province_name = "Prophetstown"
+                add_province_modifier = {
+                    name = encouraging_migration
+                    duration = 3650
+                }
+            }
+            capital = 171
+            set_country_flag = prophetstown
+        }
+    }
 }

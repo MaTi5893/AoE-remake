@@ -1,15 +1,15 @@
 army = {
-	name = "Creek Army"
-	location = 195
-	regiment = {
-		name= "1th Regiment of Infantry"
-		type = infantry
-		home = 195
-	}
+    name = "Creek Army"
+    location = 195
+    regiment = {
+        name= "1th Regiment of Infantry"
+        type = infantry
+        home = 195
+    }
 
-	regiment = {
-		name= "2th Regiment of Irregulars"
-		type = irregular
-		home = 202
-	}
+    regiment = {
+        name= "2th Regiment of Irregulars"
+        type = irregular
+        home = 202
+    }
 }

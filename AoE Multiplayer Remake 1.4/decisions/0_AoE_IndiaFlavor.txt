@@ -1,431 +1,431 @@
 political_decisions = {
-	
-	form_delhi_sultanate = {
-		potential = {
-			#is_culture_group = south_asian
-			NOT = { DLH = { exists = yes } }
-			NOT = { tag = MUG }
-			NOT = { has_country_flag = founded_new_empire }
-			OR = {
-			tag = BNG
-			tag = HYD
-			tag = DEC
-			}
-			exists = yes
-		}
-		allow = {
-			OR = {
-				owns = 1236
-				1236 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			MUG = {
-				is_greater_power = no
-				NOT = { number_of_states = 2 }
-			}
-			is_greater_power = yes
-		}
-		effect = {
-			1236 = {
-				owner = {
-					annex_to = THIS
-				}
-			}
-			all_core = {
-				add_core = DLH
-				remove_core = THIS
-			}
-			ENG_1236 = {
-				add_core = DLH
-			}
-			change_tag = DLH
-			capital = 1236
-			prestige = 50
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				tag = MAH
-			}
-		}
-	}
-	
-	delhi_expansion = {
-		potential = {
-			#is_culture_group = south_asian
-			tag = DLH
-			NOT = { has_country_flag = delhi_expansion }
-			exists = yes
-		}
-		allow = {
-			is_greater_power = yes
-			military_score = 50
-		}
-		effect = {
-			set_country_flag = delhi_expansion
-			ENG_1247 = { add_core = THIS }
-			ENG_1251 = { add_core = THIS }
-			ENG_1252 = { add_core = THIS }
-			ENG_1264 = { add_core = THIS }
-			ENG_1291 = { add_core = THIS }
-			SIN_1288 = { add_core = THIS }
-			PAN_1227 = { add_core = THIS }
-			PAN_1224 = { add_core = THIS }
-			AFG_1209 = { add_core = THIS }
-			badboy = 10
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	delhi_india = {
-		potential = {
-			#is_culture_group = south_asian
-			NOT = { has_country_flag = delhi_india }
-			tag = DLH
-			exists = yes
-		}
-		allow = {
-			is_greater_power = yes
-			military_score = 50
-		}
-		effect = {
-			ENG_1275 = { add_core = THIS }
-			ENG_1297 = { add_core = THIS }
-			NAG_1277 = { add_core = THIS }
-			ENG_1261 = { add_core = THIS }
-			ENG_1305 = { add_core = THIS }
-			HYD_1283 = { add_core = THIS }
-			MYS_1314 = { add_core = THIS }
-			set_country_flag = delhi_india
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_our_empire = {
-		picture = peacock_throne
-		potential = {
-			is_culture_group = south_asian
-			NOT = { has_country_flag = founded_new_empire }
-			NOT = { tag = DLH }
-			NOT = { tag = MUG }
-			exists = yes
-		}
-		allow = {
-			OR = {
-				owns = 1236
-				1236 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 1251
-				1251 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 1297
-				1297 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 1283
-				1283 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			MUG = {
-				is_greater_power = no
-				NOT = { number_of_states = 2 }
-			}
-			is_greater_power = yes
-		}
-		effect = {
-			set_country_flag = founded_new_empire
-			HND = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			random_owned = {
-				1251 = {
-					limit = {
-						NOT = { owned_by = THIS }
-						owner = { in_sphere = THIS }
-						capital_scope = {
-							is_core = HND
-						}
-					}
-					owner = {
-						annex_to = THIS
-					}
-				}
-			}
-			random_owned = {
-				1236 = {
-					limit = {
-						NOT = { owned_by = THIS }
-						owner = { in_sphere = THIS }
-						capital_scope = {
-							is_core = HND
-						}
-					}
-					owner = {
-						annex_to = THIS
-					}
-				}
-			}
-			random_owned = {
-				1297 = {
-					limit = {
-						NOT = { owned_by = THIS }
-						owner = { in_sphere = THIS }
-						capital_scope = {
-							is_core = HND
-						}
-					}
-					owner = {
-						annex_to = THIS
-					}
-				}
-			}
-			random_owned = {
-				1283 = {
-					limit = {
-						NOT = { owned_by = THIS }
-						owner = { in_sphere = THIS }
-						capital_scope = {
-							is_core = HND
-						}
-					}
-					owner = {
-						annex_to = THIS
-					}
-				}
-			}
-			1236 = {
-				secede_province = MUG
-			}
-			create_vassal = MUG
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_rajputana = {
-		picture = become_rajputana
-		potential = {
-			primary_culture = rajput
-			NOT = { RAJ = { exists = yes } }
-			NOT = { tag = MUG }
-			exists = yes
-		}
-		allow = {
-			OR = {
-				owns = 1264
-				1264 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			1267 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			1264 = {
-				owner = {
-					annex_to = THIS
-				}
-			}
-			1267 = {
-				owner = {
-					annex_to = THIS
-				}
-			}
-			all_core = {
-				add_core = RAJ
-				remove_core = THIS
-			}
-			ENG_1264 = {
-				add_core = RAJ
-			}
-			change_tag = RAJ
-			capital = 1264
-			prestige = 15
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_deccan = {
-		picture = deccan
-		potential = {
-			OR = {
-				tag = KRN
-				tag = HYD
-			}
-			NOT = { DEC = { exists = yes } }
-			NOT = { tag = MUG }
-			exists = yes
-		}
-		allow = {
-			OR = {
-				owns = 1310
-				1310 = {
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			1307 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			1283 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			1310 = {
-				limit = {
-					owner = {
-						OR = {
-							in_sphere = THIS
-							vassal_of = THIS
-						}
-					}
-				}
-				owner = {
-					annex_to = THIS
-				}
-			}
-			1307 = {
-				limit = {
-					owner = {
-						OR = {
-							in_sphere = THIS
-							vassal_of = THIS
-						}
-					}
-				}
-				owner = {
-					annex_to = THIS
-				}
-			}
-			1283 = {
-				limit = {
-					owner = {
-						OR = {
-							in_sphere = THIS
-							vassal_of = THIS
-						}
-					}
-				}
-				owner = {
-					annex_to = THIS
-				}
-			}
-			all_core = {
-				add_core = DEC
-				remove_core = THIS
-			}
-			ENG_1317 = { add_core = DEC }
-			MYS_1314 = { add_core = DEC }
-			ENG_1304 = { add_core = DEC }
-			ENG_1305 = { add_core = DEC }
-			ENG_1297 = { add_core = DEC }
-			HYD_1283 = { add_core = DEC }
-			NAG_1277 = { add_core = DEC }
-			change_tag = DEC
-			#capital = 1264
-			prestige = 15
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	claim_greater_bengal = {
-		picture = claim_greater_bengal
-		potential = {
-			tag = BNG
-			NOT = { has_country_flag = claimed_greater_bengal }
-			exists = yes
-		}
-		allow = {
-			is_vassal = no
-			OR = {
-				is_greater_power = yes
-				military_score = 80
-			}
-		}
-		effect = {
-			badboy = 15
-			ENG_1247 = { add_core = BNG }
-			ENG_1258 = { add_core = BNG }
-			BUR_1330 = { add_core = BNG }
-			1261 = { add_core = BNG }
-			1305 = { add_core = BNG }
-			1245 = { add_core = BNG }
-			1246 = { add_core = BNG }
-			set_country_flag = claimed_greater_bengal
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	form_orissa = {
-		potential = {
-			tag = ORI
-			NOT = { has_country_flag = formed_orissa }
-			exists = yes
-		}
-		allow = {
-			ENG_1261 = {
-				owned_by = THIS
-			}
-			1261 = {
-				owned_by = THIS
-			}
-		}
-		effect = {
-			prestige = 15
-			set_country_flag = formed_orissa
-			government = absolute_monarchy
-			ENG_1305 = {
-				add_core = THIS
-			}
-			
-		}
-	}
+
+    form_delhi_sultanate = {
+        potential = {
+            #is_culture_group = south_asian
+            NOT = { DLH = { exists = yes } }
+            NOT = { tag = MUG }
+            NOT = { has_country_flag = founded_new_empire }
+            OR = {
+            tag = BNG
+            tag = HYD
+            tag = DEC
+            }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                owns = 1236
+                1236 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            MUG = {
+                is_greater_power = no
+                NOT = { number_of_states = 2 }
+            }
+            is_greater_power = yes
+        }
+        effect = {
+            1236 = {
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            all_core = {
+                add_core = DLH
+                remove_core = THIS
+            }
+            ENG_1236 = {
+                add_core = DLH
+            }
+            change_tag = DLH
+            capital = 1236
+            prestige = 50
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                tag = MAH
+            }
+        }
+    }
+
+    delhi_expansion = {
+        potential = {
+            #is_culture_group = south_asian
+            tag = DLH
+            NOT = { has_country_flag = delhi_expansion }
+            exists = yes
+        }
+        allow = {
+            is_greater_power = yes
+            military_score = 50
+        }
+        effect = {
+            set_country_flag = delhi_expansion
+            ENG_1247 = { add_core = THIS }
+            ENG_1251 = { add_core = THIS }
+            ENG_1252 = { add_core = THIS }
+            ENG_1264 = { add_core = THIS }
+            ENG_1291 = { add_core = THIS }
+            SIN_1288 = { add_core = THIS }
+            PAN_1227 = { add_core = THIS }
+            PAN_1224 = { add_core = THIS }
+            AFG_1209 = { add_core = THIS }
+            badboy = 10
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    delhi_india = {
+        potential = {
+            #is_culture_group = south_asian
+            NOT = { has_country_flag = delhi_india }
+            tag = DLH
+            exists = yes
+        }
+        allow = {
+            is_greater_power = yes
+            military_score = 50
+        }
+        effect = {
+            ENG_1275 = { add_core = THIS }
+            ENG_1297 = { add_core = THIS }
+            NAG_1277 = { add_core = THIS }
+            ENG_1261 = { add_core = THIS }
+            ENG_1305 = { add_core = THIS }
+            HYD_1283 = { add_core = THIS }
+            MYS_1314 = { add_core = THIS }
+            set_country_flag = delhi_india
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_our_empire = {
+        picture = peacock_throne
+        potential = {
+            is_culture_group = south_asian
+            NOT = { has_country_flag = founded_new_empire }
+            NOT = { tag = DLH }
+            NOT = { tag = MUG }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                owns = 1236
+                1236 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            OR = {
+                owns = 1251
+                1251 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            OR = {
+                owns = 1297
+                1297 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            OR = {
+                owns = 1283
+                1283 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            MUG = {
+                is_greater_power = no
+                NOT = { number_of_states = 2 }
+            }
+            is_greater_power = yes
+        }
+        effect = {
+            set_country_flag = founded_new_empire
+            HND = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            random_owned = {
+                1251 = {
+                    limit = {
+                        NOT = { owned_by = THIS }
+                        owner = { in_sphere = THIS }
+                        capital_scope = {
+                            is_core = HND
+                        }
+                    }
+                    owner = {
+                        annex_to = THIS
+                    }
+                }
+            }
+            random_owned = {
+                1236 = {
+                    limit = {
+                        NOT = { owned_by = THIS }
+                        owner = { in_sphere = THIS }
+                        capital_scope = {
+                            is_core = HND
+                        }
+                    }
+                    owner = {
+                        annex_to = THIS
+                    }
+                }
+            }
+            random_owned = {
+                1297 = {
+                    limit = {
+                        NOT = { owned_by = THIS }
+                        owner = { in_sphere = THIS }
+                        capital_scope = {
+                            is_core = HND
+                        }
+                    }
+                    owner = {
+                        annex_to = THIS
+                    }
+                }
+            }
+            random_owned = {
+                1283 = {
+                    limit = {
+                        NOT = { owned_by = THIS }
+                        owner = { in_sphere = THIS }
+                        capital_scope = {
+                            is_core = HND
+                        }
+                    }
+                    owner = {
+                        annex_to = THIS
+                    }
+                }
+            }
+            1236 = {
+                secede_province = MUG
+            }
+            create_vassal = MUG
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    form_rajputana = {
+        picture = become_rajputana
+        potential = {
+            primary_culture = rajput
+            NOT = { RAJ = { exists = yes } }
+            NOT = { tag = MUG }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                owns = 1264
+                1264 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            1267 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+        effect = {
+            1264 = {
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            1267 = {
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            all_core = {
+                add_core = RAJ
+                remove_core = THIS
+            }
+            ENG_1264 = {
+                add_core = RAJ
+            }
+            change_tag = RAJ
+            capital = 1264
+            prestige = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    form_deccan = {
+        picture = deccan
+        potential = {
+            OR = {
+                tag = KRN
+                tag = HYD
+            }
+            NOT = { DEC = { exists = yes } }
+            NOT = { tag = MUG }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                owns = 1310
+                1310 = {
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            1307 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+            1283 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+        effect = {
+            1310 = {
+                limit = {
+                    owner = {
+                        OR = {
+                            in_sphere = THIS
+                            vassal_of = THIS
+                        }
+                    }
+                }
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            1307 = {
+                limit = {
+                    owner = {
+                        OR = {
+                            in_sphere = THIS
+                            vassal_of = THIS
+                        }
+                    }
+                }
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            1283 = {
+                limit = {
+                    owner = {
+                        OR = {
+                            in_sphere = THIS
+                            vassal_of = THIS
+                        }
+                    }
+                }
+                owner = {
+                    annex_to = THIS
+                }
+            }
+            all_core = {
+                add_core = DEC
+                remove_core = THIS
+            }
+            ENG_1317 = { add_core = DEC }
+            MYS_1314 = { add_core = DEC }
+            ENG_1304 = { add_core = DEC }
+            ENG_1305 = { add_core = DEC }
+            ENG_1297 = { add_core = DEC }
+            HYD_1283 = { add_core = DEC }
+            NAG_1277 = { add_core = DEC }
+            change_tag = DEC
+            #capital = 1264
+            prestige = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    claim_greater_bengal = {
+        picture = claim_greater_bengal
+        potential = {
+            tag = BNG
+            NOT = { has_country_flag = claimed_greater_bengal }
+            exists = yes
+        }
+        allow = {
+            is_vassal = no
+            OR = {
+                is_greater_power = yes
+                military_score = 80
+            }
+        }
+        effect = {
+            badboy = 15
+            ENG_1247 = { add_core = BNG }
+            ENG_1258 = { add_core = BNG }
+            BUR_1330 = { add_core = BNG }
+            1261 = { add_core = BNG }
+            1305 = { add_core = BNG }
+            1245 = { add_core = BNG }
+            1246 = { add_core = BNG }
+            set_country_flag = claimed_greater_bengal
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    form_orissa = {
+        potential = {
+            tag = ORI
+            NOT = { has_country_flag = formed_orissa }
+            exists = yes
+        }
+        allow = {
+            ENG_1261 = {
+                owned_by = THIS
+            }
+            1261 = {
+                owned_by = THIS
+            }
+        }
+        effect = {
+            prestige = 15
+            set_country_flag = formed_orissa
+            government = absolute_monarchy
+            ENG_1305 = {
+                add_core = THIS
+            }
+
+        }
+    }
 }

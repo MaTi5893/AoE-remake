@@ -1,53 +1,52 @@
 RUS = {
-	value = 100
+    value = 100
 }
 
 army = {
-	name = "Army of the Hetmanat"
-	location = 963
-	regiment = {
-		name= "Poltava Polk"	
-		type = hussar
-		home = 963	
-	}
+    name = "Army of the Hetmanat"
+    location = 963
+    regiment = {
+        name= "Poltava Polk"
+        type = hussar
+        home = 963
+    }
 
-	regiment = {
-		name= "Chernigov Polk"
-		type = artillery
-		home = 962	
-	}
-	
-	regiment = {
-		name= "Kiev Polk"
-		type = artillery
-		home = 963	
-	}
-	
-	regiment = {
-		name= "3nd Chernigov Polk"
-		type = artillery
-		home = 962
-	}
-	
-	regiment = {
-		name= "2nd Chernigov Polk"
-		type = artillery
-		home = 962
-	}
-	
-	regiment = {
-		name= "Bryansk Polk"
-		type = artillery
-		home = 1016	
-	}
+    regiment = {
+        name= "Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "Kiev Polk"
+        type = artillery
+        home = 963
+    }
+
+    regiment = {
+        name= "3nd Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "2nd Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "Bryansk Polk"
+        type = artillery
+        home = 1016
+    }
 }
 
 leader = {
-	name = "Ivan Mazepa"
-	date = 1700.1.1
-	type = land
-	personality = defence_2.4
-	background = attack_2.5
-	prestige = 0.3
+    name = "Ivan Mazepa"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.4
+    background = attack_2.5
+    prestige = 0.3
 }
-

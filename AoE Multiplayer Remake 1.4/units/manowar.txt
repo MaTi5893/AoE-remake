@@ -1,47 +1,46 @@
 manowar = { #Two-Decker
-	icon = 4
-	naval_icon = 1
-	
-	sail = yes
-	
-	type = naval
-	sprite = Manowar
-	unit_type = big_ship
-	capital = yes
-	floating_flag = yes
-	colonial_points = 5
+    icon = 4
+    naval_icon = 1
 
-	#Core Abilities
-	priority = 25
-	max_strength = 100
-	default_organisation = 30
-	maximum_speed = 5
-	weighted_value = 3.0
-	can_build_overseas = no
+    sail = yes
+
+    type = naval
+    sprite = Manowar
+    unit_type = big_ship
+    capital = yes
+    floating_flag = yes
+    colonial_points = 5
+
+    #Core Abilities
+    priority = 25
+    max_strength = 100
+    default_organisation = 30
+    maximum_speed = 5
+    weighted_value = 3.0
+    can_build_overseas = no
 
 
-	#Building Costs
-	build_time = 360
-	build_cost = {
-		clipper_convoy = 20
-		artillery = 15
-		canned_food = 8
-		explosives = 5
-	}
-	min_port_level = 2
-	limit_per_port = -1
-	supply_consumption_score = 2
-	
-	supply_consumption = 1.0
-	supply_cost = {
-		clipper_convoy = 0.15 #0.24
-		artillery = 0.08 #0.16
-	}
-	
-	#Naval Abilties
-	hull = 10
-	gun_power = 7.5
-	fire_range = 0.55
-	evasion = 0
+    #Building Costs
+    build_time = 360
+    build_cost = {
+        clipper_convoy = 20
+        artillery = 15
+        canned_food = 8
+        explosives = 5
+    }
+    min_port_level = 2
+    limit_per_port = -1
+    supply_consumption_score = 2
+
+    supply_consumption = 1.0
+    supply_cost = {
+        clipper_convoy = 0.15 #0.24
+        artillery = 0.08 #0.16
+    }
+
+    #Naval Abilties
+    hull = 10
+    gun_power = 7.5
+    fire_range = 0.55
+    evasion = 0
 }
-

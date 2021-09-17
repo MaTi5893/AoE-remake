@@ -37,7 +37,7 @@ child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = unitary
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 foreign_officers = yes_foreign_officers
 foreign_training = yes_foreign_training
@@ -70,13 +70,13 @@ dragoon_activation = yes
 
 ruling_party = "Nobility Faction"
 upper_house = {
-	fascist = 0
-	liberal = 13
-	conservative = 77
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 13
+    conservative = 77
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Starting Consciousness
@@ -86,4 +86,3 @@ nonstate_consciousness = 0
 set_country_flag = sunni_country
 
 oob = "KAZ_oob.txt"
-

@@ -39,28 +39,28 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = unitary
-colonial_policy = no_colonies 
+colonial_policy = no_colonies
 
 set_country_flag = catholic_country
 
 govt_flag = {
-	government = fascist_dictatorship
-	flag = theocracy
+    government = fascist_dictatorship
+    flag = theocracy
 }
 govt_flag = {
-	government = hms_government
-	flag = dominion
+    government = hms_government
+    flag = dominion
 }
 
 ruling_party = "Fazione Delle Gilde"
 upper_house = {
-	fascist = 0
-	liberal = 0
-	conservative = 85
-	reactionary = 15
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 0
+    conservative = 85
+    reactionary = 15
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -97,4 +97,3 @@ consciousness = 3
 nonstate_consciousness = 1
 
 oob = "TUS_oob.txt"
-

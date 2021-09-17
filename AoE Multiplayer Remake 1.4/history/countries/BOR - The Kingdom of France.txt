@@ -95,13 +95,13 @@ nonstate_consciousness = 1
 
 ruling_party = "Fete Royale"
 upper_house = {
-	fascist = 0
-	liberal = 12
-	conservative = 70
-	reactionary = 18
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 12
+    conservative = 70
+    reactionary = 18
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 oob = "BOR_oob.txt"
 
@@ -110,11 +110,11 @@ decision = lorraine_rename
 decision = bor_louis_setup
 
 govt_flag = {
-	government = hms_government
-	flag = colonial_company
+    government = hms_government
+    flag = colonial_company
 }
 
 
 foreign_investment = {
-	GNG = 5000
+    GNG = 5000
 }

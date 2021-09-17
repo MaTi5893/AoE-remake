@@ -1,35 +1,35 @@
 leader = {
-	name = "Tsahouanhos"
-	type = land
-	date = 1700.1.1
-	background = defence_0.3
-	personality = attack_2.3
+    name = "Tsahouanhos"
+    type = land
+    date = 1700.1.1
+    background = defence_0.3
+    personality = attack_2.3
 }
 army = {
-	name = "Five Nations Army"
-	location = 178
-	regiment = {
-		name= "1th Regiment of Infantry"
-		type = infantry
-		home = 239
-	}
+    name = "Five Nations Army"
+    location = 178
+    regiment = {
+        name= "1th Regiment of Infantry"
+        type = infantry
+        home = 239
+    }
 
-	regiment = {
-		name= "2th Regiment of Irregulars"
-		type = irregular
-		home = 232
-	}
+    regiment = {
+        name= "2th Regiment of Irregulars"
+        type = irregular
+        home = 232
+    }
 
-	regiment = {
-		name= "1th Regiment of Cavalry"
-		type = cavalry
-		home = 235
-	}
+    regiment = {
+        name= "1th Regiment of Cavalry"
+        type = cavalry
+        home = 235
+    }
 
-	regiment = {
-		name= "2nd Regiment of Irregulars"
-		type = irregular
-		home = 234
-	}
+    regiment = {
+        name= "2nd Regiment of Irregulars"
+        type = irregular
+        home = 234
+    }
 
 }

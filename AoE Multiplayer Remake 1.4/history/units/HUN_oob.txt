@@ -6,136 +6,136 @@ FRA = { value = -50 }
 RUS = { value = 25 }
 USA = { value = 25 }
 TUR = {
-	value = -125
-	truce_until = 1705.1.1
+    value = -125
+    truce_until = 1705.1.1
 }
 SPA = { value = 0 }
 
 leader = {
-	name = "Istvan Sennyey"
-	date = 1700.1.1
-	type = land
-	personality = defence_3.4
-	background = attack_1.2
-	prestige = 0.1
+    name = "Istvan Sennyey"
+    date = 1700.1.1
+    type = land
+    personality = defence_3.4
+    background = attack_1.2
+    prestige = 0.1
 }
 
 leader = {
-	name = "Miklos Bercsenyi"
-	date = 1700.1.1
-	type = land
-	personality = defence_2.1
-	background = attack_2.2
-	prestige = 0.1
+    name = "Miklos Bercsenyi"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.1
+    background = attack_2.2
+    prestige = 0.1
 }
 
 leader = {
-	name = "Sandor Karolyi"
-	date = 1700.1.1
-	type = land
-	personality = defence_2.5
-	background = attack_3.1
-	prestige = 0.1
+    name = "Sandor Karolyi"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.5
+    background = attack_3.1
+    prestige = 0.1
 }
 
 leader = {
-	name = "Simon Forgach"
-	date = 1700.1.1
-	type = land
-	personality = defence_minus_1.1
-	background = attack_1.2
-	prestige = 0.1
+    name = "Simon Forgach"
+    date = 1700.1.1
+    type = land
+    personality = defence_minus_1.1
+    background = attack_1.2
+    prestige = 0.1
 }
 
 leader = {
-	name = "Janos Bottyán"
-	date = 1700.1.1
-	type = land
-	personality = defence_0.1
-	background = attack_0.1
-	prestige = 0.3
+    name = "Janos Bottyán"
+    date = 1700.1.1
+    type = land
+    personality = defence_0.1
+    background = attack_0.1
+    prestige = 0.3
 }
 
 leader = {
-	name = "Tames Esze"
-	date = 1700.1.1
-	type = land
-	personality = defence_minus_1.1
-	background = attack_2.4
+    name = "Tames Esze"
+    date = 1700.1.1
+    type = land
+    personality = defence_minus_1.1
+    background = attack_2.4
 }
 
 army = {
-	name = "I Army"
-	location = 641
-	
-	regiment = {
-		name= "Artillery"
-		type = artillery
-		home = 633
-	}
-	
-	regiment = {
-		name= "Artillery"
-		type = artillery
-		home = 642
-	}
-	
-	regiment = {
-		name= "Artillery"
-		type = artillery
-		home = 641
-	}
-	
-	regiment = {
-		name= "Artillery"
-		type = artillery
-		home = 644
-	}
-	
-	regiment = {
-		name= "Artillery"
-		type = artillery
-		home = 640
-	}
-	
-	regiment = {
-		name= "Hussars"
-		type = hussar
-		home = 649
-	}
+    name = "I Army"
+    location = 641
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 633
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 642
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 641
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 644
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 640
+    }
+
+    regiment = {
+        name= "Hussars"
+        type = hussar
+        home = 649
+    }
 }
 
 army = {
-	name = "II Army"
-	location = 640
-	
-	regiment = {
-		name= "Dragoons"
-		type = dragoon
-		home = 648
-	}
-	
-	regiment = {
-		name= "Dragoons"
-		type = dragoon
-		home = 647
-	}
-	
-	regiment = {
-		name= "Dragoons"
-		type = dragoon
-		home = 637
-	}
-	
-	regiment = {
-		name= "Dragoons"
-		type = dragoon
-		home = 639
-	}
-	
-	regiment = {
-		name= "Dragoons"
-		type = dragoon
-		home = 771
-	}
+    name = "II Army"
+    location = 640
+
+    regiment = {
+        name= "Dragoons"
+        type = dragoon
+        home = 648
+    }
+
+    regiment = {
+        name= "Dragoons"
+        type = dragoon
+        home = 647
+    }
+
+    regiment = {
+        name= "Dragoons"
+        type = dragoon
+        home = 637
+    }
+
+    regiment = {
+        name= "Dragoons"
+        type = dragoon
+        home = 639
+    }
+
+    regiment = {
+        name= "Dragoons"
+        type = dragoon
+        home = 771
+    }
 }

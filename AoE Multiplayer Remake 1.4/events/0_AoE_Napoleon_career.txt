@@ -1,267 +1,267 @@
 #Napoleon General#
 country_event = {
-	id = 18999
-	title = "A promising general"
-	desc = "EVTDESC18999"
-	picture = "napleon"
-	
-	fire_only_once = yes
-	
-	trigger = {
-		owns = 473
-		473 = {
-			owner = {
-				capital_scope = {
-					continent = europe
-				}
-			}
-		}
-		year = 1790
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "Promote him"
-		set_country_flag = napoleon_general
-		define_general = {
-			name = "Napoleon Bonaparte"
-			picture = fra_gen_napoleon
-			personality = defence_5.1
-			background = attack_5.1
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
+    id = 18999
+    title = "A promising general"
+    desc = "EVTDESC18999"
+    picture = "napleon"
+
+    fire_only_once = yes
+
+    trigger = {
+        owns = 473
+        473 = {
+            owner = {
+                capital_scope = {
+                    continent = europe
+                }
+            }
+        }
+        year = 1790
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "Promote him"
+        set_country_flag = napoleon_general
+        define_general = {
+            name = "Napoleon Bonaparte"
+            picture = fra_gen_napoleon
+            personality = defence_5.1
+            background = attack_5.1
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
 }
 country_event = {
-	id = 189980
-	title = "Bonaparte's Coup"
-	desc = "EVTDESC18998"
-	picture = "emperor"
-	
-	fire_only_once = yes
-	major = yes
-	
-	trigger = {
-		has_country_flag = napoleon_general
-		government = proletarian_dictatorship
-		NOT = { primary_culture = french }
-		war_exhaustion = 35
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "Long live the Revolution!"
-		set_country_flag = napoleon_general
-		random_owned = {
-			owner = {
-				limit = {
-					NOT = { has_leader = "Napoleon Bonaparte" }
-				}
-				define_general = {
-					name = "Napoleon Bonaparte"
-					personality = defence_5.1
-					background = attack_5.1
-				}
-			}
-		}
-		add_country_modifier = {
-			name = napoleon_bonaparte
-			duration = -1
-		}
-		clr_country_flag = napoleon_general
-		set_country_flag = napoleon_consul
-		prestige = 50
-		ai_chance = {
-			factor = 0
-		}
-	}
-	
-	option = {
-		name = "Long live the Emperor!"
-		set_country_flag = napoleon_general
-		random_owned = {
-			owner = {
-				limit = {
-					NOT = { has_leader = "Napoleon Bonaparte" }
-				}
-				define_general = {
-					name = "Napoleon Bonaparte"
-					personality = defence_5.1
-					background = attack_5.1
-				}
-			}
-		}
-		add_country_modifier = {
-			name = napoleon_bonaparte
-			duration = -1
-		}
-		clr_country_flag = napoleon_general
-		set_country_flag = napoleon_emperor
-		government = fascist_dictatorship
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = state_controlled
-		political_reform = underground_parties
-		political_reform = culture_voting_only
-		prestige = 50
-		ai_chance = {
-			factor = 1
-		}
-	}
+    id = 189980
+    title = "Bonaparte's Coup"
+    desc = "EVTDESC18998"
+    picture = "emperor"
+
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        has_country_flag = napoleon_general
+        government = proletarian_dictatorship
+        NOT = { primary_culture = french }
+        war_exhaustion = 35
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "Long live the Revolution!"
+        set_country_flag = napoleon_general
+        random_owned = {
+            owner = {
+                limit = {
+                    NOT = { has_leader = "Napoleon Bonaparte" }
+                }
+                define_general = {
+                    name = "Napoleon Bonaparte"
+                    personality = defence_5.1
+                    background = attack_5.1
+                }
+            }
+        }
+        add_country_modifier = {
+            name = napoleon_bonaparte
+            duration = -1
+        }
+        clr_country_flag = napoleon_general
+        set_country_flag = napoleon_consul
+        prestige = 50
+        ai_chance = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "Long live the Emperor!"
+        set_country_flag = napoleon_general
+        random_owned = {
+            owner = {
+                limit = {
+                    NOT = { has_leader = "Napoleon Bonaparte" }
+                }
+                define_general = {
+                    name = "Napoleon Bonaparte"
+                    personality = defence_5.1
+                    background = attack_5.1
+                }
+            }
+        }
+        add_country_modifier = {
+            name = napoleon_bonaparte
+            duration = -1
+        }
+        clr_country_flag = napoleon_general
+        set_country_flag = napoleon_emperor
+        government = fascist_dictatorship
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+        political_reform = culture_voting_only
+        prestige = 50
+        ai_chance = {
+            factor = 1
+        }
+    }
 }
 country_event = {
-	id = 189970
-	title = "Fall of the Eagle"
-	desc = "EVTDESC18997"
-	picture = "emperor"
-	
-	major = yes
-	
-	trigger = {
-		has_country_flag = napoleon_emperor
-		NOT = { government = fascist_dictatorship }
-		has_recently_lost_war = yes
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "We will never forget him..."
-		remove_country_modifier = napoleon_bonaparte
-		clr_country_flag = napoleon_emperor
-		set_country_flag = post_napoleonic_country 
-		prestige = -50
-		ai_chance = {
-			factor = 1
-		}
-	}
+    id = 189970
+    title = "Fall of the Eagle"
+    desc = "EVTDESC18997"
+    picture = "emperor"
+
+    major = yes
+
+    trigger = {
+        has_country_flag = napoleon_emperor
+        NOT = { government = fascist_dictatorship }
+        has_recently_lost_war = yes
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "We will never forget him..."
+        remove_country_modifier = napoleon_bonaparte
+        clr_country_flag = napoleon_emperor
+        set_country_flag = post_napoleonic_country
+        prestige = -50
+        ai_chance = {
+            factor = 1
+        }
+    }
 }
 country_event = {
-	id = 189960
-	title = "Fall of the Great Consul"
-	desc = "EVTDESC18996"
-	picture = "emperor"
-	
-	major = yes
-	
-	trigger = {
-		has_country_flag = napoleon_consul
-		NOT = { government = proletarian_dictatorship }
-		has_recently_lost_war = yes
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "We will never forget him..."
-		remove_country_modifier = napoleon_bonaparte
-		clr_country_flag = napoleon_consul
-		set_country_flag = post_napoleonic_country 
-		prestige = -50
-		ai_chance = {
-			factor = 1
-		}
-	}
+    id = 189960
+    title = "Fall of the Great Consul"
+    desc = "EVTDESC18996"
+    picture = "emperor"
+
+    major = yes
+
+    trigger = {
+        has_country_flag = napoleon_consul
+        NOT = { government = proletarian_dictatorship }
+        has_recently_lost_war = yes
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "We will never forget him..."
+        remove_country_modifier = napoleon_bonaparte
+        clr_country_flag = napoleon_consul
+        set_country_flag = post_napoleonic_country
+        prestige = -50
+        ai_chance = {
+            factor = 1
+        }
+    }
 }
 country_event = {
-	id = 189950
-	title = "Bonaparte returns from exile!"
-	desc = "EVTDESC18995"
-	picture = "emperor"
-	
-	fire_only_once = yes
-	major = yes
-	
-	trigger = {
-		has_country_flag = post_napoleonic_country
-		war_exhaustion = 35
-	}
-	
-	mean_time_to_happen = {
-		months = 36
-	}
-	
-	option = {
-		name = "Long live the Revolution!"
-		random_owned = {
-			owner = {
-				limit = {
-					NOT = { has_leader = "Napoleon Bonaparte" }
-				}
-				define_general = {
-					name = "Napoleon Bonaparte"
-					personality = defence_5.1
-					background = genius
-				}
-			}
-		}
-		add_country_modifier = {
-			name = napoleon_bonaparte
-			duration = -1
-		}
-		government = proletarian_dictatorship
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = state_controlled
-		political_reform = underground_parties
-		political_reform = no_slavery
-		political_reform = debtors_prisons
-		political_reform = culture_voting_only
-		clr_country_flag = post_napoleonic_country
-		set_country_flag = napoleon_consul
-		prestige = 50
-		ai_chance = {
-			factor = 0
-		}
-	}
-	
-	option = {
-		name = "Long live the Emperor!"
-		random_owned = {
-			owner = {
-				limit = {
-					NOT = { has_leader = "Napoleon Bonaparte" }
-				}
-				define_general = {
-					name = "Napoleon Bonaparte"
-					personality = defence_5.1
-					background = genius
-				}
-			}
-		}
-		add_country_modifier = {
-			name = napoleon_bonaparte
-			duration = -1
-		}
-		clr_country_flag = post_napoleonic_country
-		set_country_flag = napoleon_emperor
-		government = fascist_dictatorship
-		political_reform = none_voting
-		political_reform = party_appointed
-		political_reform = no_meeting
-		political_reform = state_press
-		political_reform = state_controlled
-		political_reform = underground_parties
-		political_reform = culture_voting_only
-		prestige = 50
-		ai_chance = {
-			factor = 1
-		}
-	}
+    id = 189950
+    title = "Bonaparte returns from exile!"
+    desc = "EVTDESC18995"
+    picture = "emperor"
+
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        has_country_flag = post_napoleonic_country
+        war_exhaustion = 35
+    }
+
+    mean_time_to_happen = {
+        months = 36
+    }
+
+    option = {
+        name = "Long live the Revolution!"
+        random_owned = {
+            owner = {
+                limit = {
+                    NOT = { has_leader = "Napoleon Bonaparte" }
+                }
+                define_general = {
+                    name = "Napoleon Bonaparte"
+                    personality = defence_5.1
+                    background = genius
+                }
+            }
+        }
+        add_country_modifier = {
+            name = napoleon_bonaparte
+            duration = -1
+        }
+        government = proletarian_dictatorship
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+        political_reform = no_slavery
+        political_reform = debtors_prisons
+        political_reform = culture_voting_only
+        clr_country_flag = post_napoleonic_country
+        set_country_flag = napoleon_consul
+        prestige = 50
+        ai_chance = {
+            factor = 0
+        }
+    }
+
+    option = {
+        name = "Long live the Emperor!"
+        random_owned = {
+            owner = {
+                limit = {
+                    NOT = { has_leader = "Napoleon Bonaparte" }
+                }
+                define_general = {
+                    name = "Napoleon Bonaparte"
+                    personality = defence_5.1
+                    background = genius
+                }
+            }
+        }
+        add_country_modifier = {
+            name = napoleon_bonaparte
+            duration = -1
+        }
+        clr_country_flag = post_napoleonic_country
+        set_country_flag = napoleon_emperor
+        government = fascist_dictatorship
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+        political_reform = culture_voting_only
+        prestige = 50
+        ai_chance = {
+            factor = 1
+        }
+    }
 }

@@ -1,965 +1,965 @@
 political_decisions = {
-	transylvanian_chust = {
-		picture = tur_hungary
-		potential = {
-			tag = SIE
-			NOT = {
-				has_country_flag = transylvania_full_duchy
-			}
-			NOT = { vassal_of = AUS }
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
-		effect = {
-			AUS_647 = {
-				add_core = SIE
-			}
-			set_country_flag = transylvania_full_duchy
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
-	
-	bohemian_lusatia = {
-		picture = silesia_prussia
-		potential = {
-			tag = BOH
-			NOT = {
-				has_country_flag = bohemia_claimed_lusatia
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
-		effect = {
-			687 = {
-				add_core = BOH
-			}
-			set_country_flag = bohemia_claimed_lusatia
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	macedonia_stronk = {
-		picture = greater_macedonia
-		potential = {
-			tag = MCD
-			NOT = {
-				has_country_flag = macedonia_kingdom
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			is_vassal = no
-		}
-		effect = {
-			TUR_819 = {
-				add_core = THIS
-			}
-			TUR_819 = {
-				add_core = THIS
-			}
-			808 = {
-				add_core = THIS
-			}
-			add_accepted_culture = greek
-			set_country_flag = macedonia_kingdom
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	mosquito_bite = {
-		picture = moskito_coast_reserve
-		potential = {
-			tag = MSK
-			NOT = {
-				has_country_flag = mosquito_mark
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			military_score = 5
-			prestige = 15
-		}
-		effect = {
-			2196 = {
-				add_core = THIS
-			}
-			UCA_2197 = {
-				add_core = THIS
-			}
-			set_country_flag = mosquito_mark
-			prestige = 20
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	mosquito_swarm = {
-		picture = moskito_coast_reserve
-		potential = {
-			tag = MSK
-			NOT = {
-				has_country_flag = i_am_the_swarm
-			}
-			has_country_flag = mosquito_mark
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
-		effect = {
-			UCA_2193 = {
-				add_core = THIS
-			}
-			UCA_2191 = {
-				add_core = THIS
-			}
-			UCA_2201 = {
-				add_core = THIS
-			}
-			set_country_flag = i_am_the_swarm
-			prestige = 30
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	montenegro_monarchy = {
-		picture = montenegro_map
-		potential = {
-			tag = MON
-			government = theocracy
-			NOT = {
-				has_country_flag = stronk_montenegro
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			OR = {
-				is_vassal = no
-				vassal_of = SER
-				vassal_of = GRE
-				vassal_of = AUS
-			}
-		}
-		effect = {
-			788 = {
-				add_core = THIS
-			}
-			787 = {
-				add_core = THIS
-			}
-			783 = {
-				add_core = THIS
-			}
-			789 = {
-				add_core = THIS
-			}
-			782 = {
-				add_core = THIS
-			}
-			804 = {
-				add_core = THIS
-			}
-			803 = {
-				add_core = THIS
-			}
-			add_accepted_culture = bosniak
-			government = absolute_monarchy
-			set_country_flag = stronk_montenegro
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	expand_illyria = {
-		picture = greater_croatia_map
-		potential = {
-			tag = CRO
-			NOT = {
-				has_country_flag = greater_illyria
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			OR = {
-				government = absolute_monarchy
-				government = french_bourbon
-			}
-			OR = {
-				is_vassal = no
-				vassal_of = BOR
-				vassal_of = FRA
-			}
-		}
-		effect = {
-			AUS_736 = {
-				add_core = THIS
-			}
-			AUS_768 = {
-				add_core = THIS
-			}
-			TUR_788 = {
-				add_core = THIS
-			}
-			2538 = {
-				add_core = THIS
-			}
-			#3309 = {
-			#	add_core = THIS
-			#}
-			add_accepted_culture = slovene
-			add_accepted_culture = serb
-			set_country_flag = greater_illyria
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	#trade_with_japan = {
-	#	picture = french_military_exp_japan
-	#	potential = {
-	#		OR = {
-	#			tag = NET
-	#			tag = POR
-	#		}
-	#		NOT = {
-	#			has_global_flag = japan_not_isolated
-	#		}
-	#		exists = yes
-	#	}
-	#	allow = {
-	#		relation = {
-	#			who = JAP
-	#			value = 150
-	#		}
-	#		money = 25000
-	#	}
-	#	effect = {
-	#		1661 = {
-	#			secede_province = THIS
-	#		}
-	#		treasury = -25000
-	#		set_global_flag = japan_not_isolated
-	#		JAP = {
-	#			research_points = 2500
-	#		}
-	#	}
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#}
-	
-	teutonic_prusa = {
-		picture = west_prussia
-		potential = {
-			tag = DPR
-			NOT = { 
-				government = theocracy
-			}
-			NOT = {
-				has_country_flag = teutonic_order_moment
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			OR = {
-				is_vassal = no
-				vassal_of = PAP
-				vassal_of = UBD
-			}
-			NOT = {
-				in_sphere = DNN
-				in_sphere = RUS
-				in_sphere = SWE
-				in_sphere = TUR
-				in_sphere = ENG
-			}
-		}
-		effect = {
-			PRU_690 = {
-				add_core = THIS
-			}
-			government = theocracy
-			religion = catholic
-			set_country_flag = teutonic_order_moment
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	acquire_liv = {
-		picture = baltic
-		potential = {
-			tag = DPR
-			government = theocracy
-			NOT = {
-				has_country_flag = liv_order_teu
-			}
-			exists = yes
-		}
-		allow = {
-			is_vassal = no
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		effect = {
-			set_country_flag = liv_order_teu
-			RUS_354 = {
-				add_core = THIS
-			}
-			RUS_349 = {
-				add_core = THIS
-			}
-			#add_accepted_culture = east_german
-		}
-		ai_will_do = { factor = 1 }
-	}
+    transylvanian_chust = {
+        picture = tur_hungary
+        potential = {
+            tag = SIE
+            NOT = {
+                has_country_flag = transylvania_full_duchy
+            }
+            NOT = { vassal_of = AUS }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+        effect = {
+            AUS_647 = {
+                add_core = SIE
+            }
+            set_country_flag = transylvania_full_duchy
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-	push_forward = {
-		picture = west_prussia
-		potential = {
-			tag = DPR
-			government = theocracy
-			NOT = {
-				has_country_flag = push_forward
-			}
-			exists = yes
-		}
-		allow = {
-			is_vassal = no
-			owns = 354
-			owns = 349
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-		}
-		effect = {
-			set_country_flag = push_forward
-			708 = {
-				add_core = THIS
-			}
-			365 = {
-				add_core = THIS
-			}
-			364 = {
-				add_core = THIS
-			}
-			997 = {
-				add_core = THIS
-			}
-			1006 = {
-				add_core = THIS
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	form_livonia = {
-		picture = baltic
-		potential = {
-			OR = {
-				tag = KUR
-				tag = UBD
-			}
-			NOT = { 
-				government = theocracy
-			}
-			NOT = {
-				has_country_flag = livonian_order_moment
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			OR = {
-				is_vassal = no
-				vassal_of = PAP
-				vassal_of = DPR
-			}
-			NOT = {
-				in_sphere = DNN
-				in_sphere = RUS
-				in_sphere = SWE
-				in_sphere = TUR
-				in_sphere = ENG
-			}
-		}
-		effect = {
-			change_tag_no_core_switch = UBD
-			government = theocracy
-			RUS_354 = {
-				add_core = THIS
-			}
-			RUS_349 = {
-				add_core = THIS
-			}
-			add_accepted_culture = estonian
-			religion = catholic
-			set_country_flag = livonian_order_moment
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	grand_duchy_of_lithuania = {
-		picture = greater_ukraine
-		potential = {
-			tag = LIT
-			NOT = {
-				has_country_flag = grand_lithuania
-			}
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			is_vassal = no
-		}
-		effect = {
-			RUS_959 = {
-				add_core = THIS
-			}
-			RUS_958 = {
-				add_core = THIS
-			}
-			set_country_flag = grand_lithuania
-			prestige = 15
-			add_accepted_culture = byelorussian
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	kingdom_of_lithuania = {
-		picture = greater_ukraine
-		potential = {
-			tag = LIT
-			NOT = {
-				has_country_flag = kingdom_lithuania
-			}
-			has_country_flag = grand_lithuania
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			is_vassal = no
-		}
-		effect = {
-			RUS_958 = { add_core = THIS }
-			RUS_955 = { add_core = THIS }
-			relation = {
-				who = POL
-				value = -50
-			}
-			set_country_flag = kingdom_lithuania
-			add_accepted_culture = ukrainian
-			prestige = 25
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	empire_of_lithuania = {
-		picture = annex_united_baltic_duchy
-		potential = {
-			tag = LIT
-			NOT = {
-				has_country_flag = empire_lithuania
-			}
-			has_country_flag = kingdom_lithuania
-			exists = yes
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			is_greater_power = yes
-		}
-		effect = {
-			RUS_354 = {
-				add_core = THIS
-			}
-			RUS_943 = {
-				add_core = THIS
-			}
-			
-			set_country_flag = empire_lithuania
-			prestige = 35
-			add_accepted_culture = latvian
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	third_darien_expedition = {
-		picture = Panama3
-		potential = {
-			tag  = SCO
-			is_vassal = no
-			NOT = { has_country_flag = third_expedition_to_panama }
-			exists = yes
-		}
-		allow = {
-			is_secondary_power = yes
-			money = 50000
-		}
-		effect = {
-			prestige = 10
-			CLM_1723 = {
-				add_core = SCO
-			}
-			set_country_flag = third_expedition_to_panama
-			relation = {
-				who = SPA
-				value = -50
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	become_true_pictland = {
-		picture = national_value
-		potential = {
-			tag  = SCO
-			is_vassal = no
-			NOT = { has_country_flag = pictish_scotland }
-			exists = yes
-		}
-		allow = {
-			government = absolute_monarchy
-		}
-		effect = {
-			prestige = 15
-			set_country_flag = pictish_scotland
-			relation = {
-				who = ENG
-				value = -50
-			}
-			primary_culture = highlander
-			add_accepted_culture = scottish
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	kyzyl_desert = {
-		picture = conquest_of_the_desert
-		potential = {
-			exists = yes
-			OR = {
-				AND = {
-				owns = 1182
-				owns = 1192
-				}
-				AND = {
-				owns = 1150
-				owns = 1196
-				}
-			}
-			1205 = { empty = yes }
-		}
-		allow = {
-			war = no
-			owns = 1196
-			owns = 1206 
-		}
-		effect = {
-			1205 = {
-				secede_province = THIS
-			}
-			1204 = {
-				secede_province = THIS
-			}
-			1194 = {
-				secede_province = THIS
-			}
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
-	
-	greater_armenia = {
-		picture = christian_question_armenia
-		potential = {
-			tag = ARM
-			exists = yes
-			NOT = {
-				has_country_flag = became_greater_armenia
-			}
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			NOT = {
-				vassal_of = TUR
-			}
-		}
-		effect = {
-			TUR_894 = {
-				add_core = ARM
-			}
-			1096 = {
-				add_core = ARM
-			}
-			1109 = {
-				add_core = ARM
-			}
-			1110 = {
-				add_core = ARM
-			}
-			TUR_893 = {
-				add_core = ARM
-			}
-			878 = {
-				add_core = ARM
-			}
-			879 = {
-				add_core = ARM
-			}
-			884 = {
-				add_core = ARM
-			}
-			set_country_flag = became_greater_armenia
-			badboy = 15
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	become_armenia = {
-		picture = christian_question_armenia
-		potential = {
-			exists = yes
-			tag = CLC
-		}
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-			NOT = {
-				OR = {
-					is_vassal = yes
-					exists = ARM
-				}
-			}
-			OR = {
-				is_secondary_power = yes
-				is_greater_power  = yes
-			}
-		}
-		effect = {
-			CLC = {
-				change_tag = ARM
-			}
-			TUR_894 = {
-				add_core = ARM
-			}
-			prestige = 5
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	armenia_pontic = {
-		picture = unite_with_greece
-		potential = {
-			exists = yes
-			tag = ARM
-			NOT = {
-				has_country_flag = pontic_armenians
-			}
-		}
-		allow = {
-			owns = 882
-		}
-		effect = {
-			ARM = {
-				add_accepted_culture = pontic
-			}
-			set_country_flag = pontic_armenians
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	armenia_cappadocian = {
-		picture = unite_with_greece
-		potential = {
-			exists = yes
-			tag = ARM
-			NOT = {
-				has_country_flag = cappadocian_armenians
-			}
-		}
-		allow = {
-			owns = 879
-		}
-		effect = {
-			ARM = {
-				add_accepted_culture = cappadocian
-			}
-			set_country_flag = cappadocian_armenians
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	unite_dalmatia_ragusa = {
-		picture = italian_dalmatia
-		potential = {
-			exists = yes
-			tag = DLM
-			NOT = { has_country_flag = united_dalmatia }
-		}
+    bohemian_lusatia = {
+        picture = silesia_prussia
+        potential = {
+            tag = BOH
+            NOT = {
+                has_country_flag = bohemia_claimed_lusatia
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+        effect = {
+            687 = {
+                add_core = BOH
+            }
+            set_country_flag = bohemia_claimed_lusatia
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
+    macedonia_stronk = {
+        picture = greater_macedonia
+        potential = {
+            tag = MCD
+            NOT = {
+                has_country_flag = macedonia_kingdom
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            is_vassal = no
+        }
+        effect = {
+            TUR_819 = {
+                add_core = THIS
+            }
+            TUR_819 = {
+                add_core = THIS
+            }
+            808 = {
+                add_core = THIS
+            }
+            add_accepted_culture = greek
+            set_country_flag = macedonia_kingdom
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = united_dalmatia
-			AUS_774 = {
-				add_core = THIS
-			}
-			badboy = 5
-			prestige = 10
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	conquer_istria_ragusa = {
-		picture = italian_trentino
-		potential = {
-			exists = yes
-			tag = DLM
-			has_country_flag = took_bosnia
-			NOT = { has_country_flag = conquered_istria }
-		}
+    mosquito_bite = {
+        picture = moskito_coast_reserve
+        potential = {
+            tag = MSK
+            NOT = {
+                has_country_flag = mosquito_mark
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            military_score = 5
+            prestige = 15
+        }
+        effect = {
+            2196 = {
+                add_core = THIS
+            }
+            UCA_2197 = {
+                add_core = THIS
+            }
+            set_country_flag = mosquito_mark
+            prestige = 20
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
+    mosquito_swarm = {
+        picture = moskito_coast_reserve
+        potential = {
+            tag = MSK
+            NOT = {
+                has_country_flag = i_am_the_swarm
+            }
+            has_country_flag = mosquito_mark
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+        effect = {
+            UCA_2193 = {
+                add_core = THIS
+            }
+            UCA_2191 = {
+                add_core = THIS
+            }
+            UCA_2201 = {
+                add_core = THIS
+            }
+            set_country_flag = i_am_the_swarm
+            prestige = 30
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = conquered_istria
-			AUS_736 = {
-				add_core = THIS
-			}
-			badboy = 10
-			prestige = 10
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	accept_slovenes_ragusa = {
-		picture = pan_slavism
-		potential = {
-			exists = yes
-			tag = DLM
-			NOT = { has_country_flag = accepts_slovenes }
-		}
+    montenegro_monarchy = {
+        picture = montenegro_map
+        potential = {
+            tag = MON
+            government = theocracy
+            NOT = {
+                has_country_flag = stronk_montenegro
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            OR = {
+                is_vassal = no
+                vassal_of = SER
+                vassal_of = GRE
+                vassal_of = AUS
+            }
+        }
+        effect = {
+            788 = {
+                add_core = THIS
+            }
+            787 = {
+                add_core = THIS
+            }
+            783 = {
+                add_core = THIS
+            }
+            789 = {
+                add_core = THIS
+            }
+            782 = {
+                add_core = THIS
+            }
+            804 = {
+                add_core = THIS
+            }
+            803 = {
+                add_core = THIS
+            }
+            add_accepted_culture = bosniak
+            government = absolute_monarchy
+            set_country_flag = stronk_montenegro
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		allow = {
-			owns = 736
-		}
+    expand_illyria = {
+        picture = greater_croatia_map
+        potential = {
+            tag = CRO
+            NOT = {
+                has_country_flag = greater_illyria
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            OR = {
+                government = absolute_monarchy
+                government = french_bourbon
+            }
+            OR = {
+                is_vassal = no
+                vassal_of = BOR
+                vassal_of = FRA
+            }
+        }
+        effect = {
+            AUS_736 = {
+                add_core = THIS
+            }
+            AUS_768 = {
+                add_core = THIS
+            }
+            TUR_788 = {
+                add_core = THIS
+            }
+            2538 = {
+                add_core = THIS
+            }
+            #3309 = {
+            #    add_core = THIS
+            #}
+            add_accepted_culture = slovene
+            add_accepted_culture = serb
+            set_country_flag = greater_illyria
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = accepts_slovenes
-			768 = {
-				add_core = THIS
-			}
-			add_accepted_culture = slovene
-			badboy = -3
-			prestige = 10
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	ragusa_retake_mostar = {
-		picture = reclaim_croatia
-		potential = {
-			tag = DLM
-			has_country_flag = united_dalmatia
-			NOT = { has_country_flag = took_bosnia }
-			exists = yes
-		}
+    #trade_with_japan = {
+    #    picture = french_military_exp_japan
+    #    potential = {
+    #        OR = {
+    #            tag = NET
+    #            tag = POR
+    #        }
+    #        NOT = {
+    #            has_global_flag = japan_not_isolated
+    #        }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        relation = {
+    #            who = JAP
+    #            value = 150
+    #        }
+    #        money = 25000
+    #    }
+    #    effect = {
+    #        1661 = {
+    #            secede_province = THIS
+    #        }
+    #        treasury = -25000
+    #        set_global_flag = japan_not_isolated
+    #        JAP = {
+    #            research_points = 2500
+    #        }
+    #    }
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
 
-		allow = {
-			all_core = {
-				owned_by = THIS
-			}
-		}
+    teutonic_prusa = {
+        picture = west_prussia
+        potential = {
+            tag = DPR
+            NOT = {
+                government = theocracy
+            }
+            NOT = {
+                has_country_flag = teutonic_order_moment
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            OR = {
+                is_vassal = no
+                vassal_of = PAP
+                vassal_of = UBD
+            }
+            NOT = {
+                in_sphere = DNN
+                in_sphere = RUS
+                in_sphere = SWE
+                in_sphere = TUR
+                in_sphere = ENG
+            }
+        }
+        effect = {
+            PRU_690 = {
+                add_core = THIS
+            }
+            government = theocracy
+            religion = catholic
+            set_country_flag = teutonic_order_moment
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = took_bosnia
-			784 = {
-				add_core = THIS
-			}
-			788 = {
-				add_core = THIS
-			}
-			789 = {
-				add_core = THIS
-			}
-			badboy = 3
-			prestige = 10
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	ragusa_conquer_montenegro = {
-		picture = montenegro_map
-		potential = {
-			tag = DLM
-			NOT = { has_country_flag = conquered_montenegro }
-			exists = yes
-		}
+    acquire_liv = {
+        picture = baltic
+        potential = {
+            tag = DPR
+            government = theocracy
+            NOT = {
+                has_country_flag = liv_order_teu
+            }
+            exists = yes
+        }
+        allow = {
+            is_vassal = no
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+        }
+        effect = {
+            set_country_flag = liv_order_teu
+            RUS_354 = {
+                add_core = THIS
+            }
+            RUS_349 = {
+                add_core = THIS
+            }
+            #add_accepted_culture = east_german
+        }
+        ai_will_do = { factor = 1 }
+    }
 
-		allow = {
-			owns = 2582
-		}
+    push_forward = {
+        picture = west_prussia
+        potential = {
+            tag = DPR
+            government = theocracy
+            NOT = {
+                has_country_flag = push_forward
+            }
+            exists = yes
+        }
+        allow = {
+            is_vassal = no
+            owns = 354
+            owns = 349
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+        }
+        effect = {
+            set_country_flag = push_forward
+            708 = {
+                add_core = THIS
+            }
+            365 = {
+                add_core = THIS
+            }
+            364 = {
+                add_core = THIS
+            }
+            997 = {
+                add_core = THIS
+            }
+            1006 = {
+                add_core = THIS
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
 
-		effect = {
-			set_country_flag = conquered_montenegro
-			800 = {
-				add_core = THIS
-			}
-			2569 = {
-				add_core = THIS
-			}
-			2583 = {
-				add_core = THIS
-			}
-			badboy = 10
-			prestige = 10
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	pomerania_reclaim = {
-		picture = pomerania_prussia
-		potential = {
-			tag = PML
-			NOT = { has_country_flag = reclaim_pommern }
-			exists = yes
-		}
+    form_livonia = {
+        picture = baltic
+        potential = {
+            OR = {
+                tag = KUR
+                tag = UBD
+            }
+            NOT = {
+                government = theocracy
+            }
+            NOT = {
+                has_country_flag = livonian_order_moment
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            OR = {
+                is_vassal = no
+                vassal_of = PAP
+                vassal_of = DPR
+            }
+            NOT = {
+                in_sphere = DNN
+                in_sphere = RUS
+                in_sphere = SWE
+                in_sphere = TUR
+                in_sphere = ENG
+            }
+        }
+        effect = {
+            change_tag_no_core_switch = UBD
+            government = theocracy
+            RUS_354 = {
+                add_core = THIS
+            }
+            RUS_349 = {
+                add_core = THIS
+            }
+            add_accepted_culture = estonian
+            religion = catholic
+            set_country_flag = livonian_order_moment
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		allow = {
-			NOT = {
-				vassal_of = SWE
-			}
-		}
+    grand_duchy_of_lithuania = {
+        picture = greater_ukraine
+        potential = {
+            tag = LIT
+            NOT = {
+                has_country_flag = grand_lithuania
+            }
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            is_vassal = no
+        }
+        effect = {
+            RUS_959 = {
+                add_core = THIS
+            }
+            RUS_958 = {
+                add_core = THIS
+            }
+            set_country_flag = grand_lithuania
+            prestige = 15
+            add_accepted_culture = byelorussian
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		effect = {
-			set_country_flag = reclaim_pommern
-			679 = {
-				add_core = THIS
-			}
-			680 = {
-				add_core = THIS
-			}
-			prestige = 15
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	greater_pommern = {
-		picture = pomerania_prussia
-		potential = {
-			tag = PML
-			has_country_flag = reclaim_pommern
-			NOT = { has_country_flag = greater_pommern }
-			exists = yes
-		}
+    kingdom_of_lithuania = {
+        picture = greater_ukraine
+        potential = {
+            tag = LIT
+            NOT = {
+                has_country_flag = kingdom_lithuania
+            }
+            has_country_flag = grand_lithuania
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            is_vassal = no
+        }
+        effect = {
+            RUS_958 = { add_core = THIS }
+            RUS_955 = { add_core = THIS }
+            relation = {
+                who = POL
+                value = -50
+            }
+            set_country_flag = kingdom_lithuania
+            add_accepted_culture = ukrainian
+            prestige = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-		allow = {
-			is_vassal = no
-		}
+    empire_of_lithuania = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            tag = LIT
+            NOT = {
+                has_country_flag = empire_lithuania
+            }
+            has_country_flag = kingdom_lithuania
+            exists = yes
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            is_greater_power = yes
+        }
+        effect = {
+            RUS_354 = {
+                add_core = THIS
+            }
+            RUS_943 = {
+                add_core = THIS
+            }
 
-		effect = {
-			set_country_flag = greater_pommern
-			544 = {
-				add_core = THIS
-			}
-			545 = {
-				add_core = THIS
-			}
-			badboy = 10
-			prestige = 25
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+            set_country_flag = empire_lithuania
+            prestige = 35
+            add_accepted_culture = latvian
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    third_darien_expedition = {
+        picture = Panama3
+        potential = {
+            tag  = SCO
+            is_vassal = no
+            NOT = { has_country_flag = third_expedition_to_panama }
+            exists = yes
+        }
+        allow = {
+            is_secondary_power = yes
+            money = 50000
+        }
+        effect = {
+            prestige = 10
+            CLM_1723 = {
+                add_core = SCO
+            }
+            set_country_flag = third_expedition_to_panama
+            relation = {
+                who = SPA
+                value = -50
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    become_true_pictland = {
+        picture = national_value
+        potential = {
+            tag  = SCO
+            is_vassal = no
+            NOT = { has_country_flag = pictish_scotland }
+            exists = yes
+        }
+        allow = {
+            government = absolute_monarchy
+        }
+        effect = {
+            prestige = 15
+            set_country_flag = pictish_scotland
+            relation = {
+                who = ENG
+                value = -50
+            }
+            primary_culture = highlander
+            add_accepted_culture = scottish
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    kyzyl_desert = {
+        picture = conquest_of_the_desert
+        potential = {
+            exists = yes
+            OR = {
+                AND = {
+                owns = 1182
+                owns = 1192
+                }
+                AND = {
+                owns = 1150
+                owns = 1196
+                }
+            }
+            1205 = { empty = yes }
+        }
+        allow = {
+            war = no
+            owns = 1196
+            owns = 1206
+        }
+        effect = {
+            1205 = {
+                secede_province = THIS
+            }
+            1204 = {
+                secede_province = THIS
+            }
+            1194 = {
+                secede_province = THIS
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_armenia = {
+        picture = christian_question_armenia
+        potential = {
+            tag = ARM
+            exists = yes
+            NOT = {
+                has_country_flag = became_greater_armenia
+            }
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            NOT = {
+                vassal_of = TUR
+            }
+        }
+        effect = {
+            TUR_894 = {
+                add_core = ARM
+            }
+            1096 = {
+                add_core = ARM
+            }
+            1109 = {
+                add_core = ARM
+            }
+            1110 = {
+                add_core = ARM
+            }
+            TUR_893 = {
+                add_core = ARM
+            }
+            878 = {
+                add_core = ARM
+            }
+            879 = {
+                add_core = ARM
+            }
+            884 = {
+                add_core = ARM
+            }
+            set_country_flag = became_greater_armenia
+            badboy = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_armenia = {
+        picture = christian_question_armenia
+        potential = {
+            exists = yes
+            tag = CLC
+        }
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+            NOT = {
+                OR = {
+                    is_vassal = yes
+                    exists = ARM
+                }
+            }
+            OR = {
+                is_secondary_power = yes
+                is_greater_power  = yes
+            }
+        }
+        effect = {
+            CLC = {
+                change_tag = ARM
+            }
+            TUR_894 = {
+                add_core = ARM
+            }
+            prestige = 5
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    armenia_pontic = {
+        picture = unite_with_greece
+        potential = {
+            exists = yes
+            tag = ARM
+            NOT = {
+                has_country_flag = pontic_armenians
+            }
+        }
+        allow = {
+            owns = 882
+        }
+        effect = {
+            ARM = {
+                add_accepted_culture = pontic
+            }
+            set_country_flag = pontic_armenians
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    armenia_cappadocian = {
+        picture = unite_with_greece
+        potential = {
+            exists = yes
+            tag = ARM
+            NOT = {
+                has_country_flag = cappadocian_armenians
+            }
+        }
+        allow = {
+            owns = 879
+        }
+        effect = {
+            ARM = {
+                add_accepted_culture = cappadocian
+            }
+            set_country_flag = cappadocian_armenians
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    unite_dalmatia_ragusa = {
+        picture = italian_dalmatia
+        potential = {
+            exists = yes
+            tag = DLM
+            NOT = { has_country_flag = united_dalmatia }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+            set_country_flag = united_dalmatia
+            AUS_774 = {
+                add_core = THIS
+            }
+            badboy = 5
+            prestige = 10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    conquer_istria_ragusa = {
+        picture = italian_trentino
+        potential = {
+            exists = yes
+            tag = DLM
+            has_country_flag = took_bosnia
+            NOT = { has_country_flag = conquered_istria }
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+            set_country_flag = conquered_istria
+            AUS_736 = {
+                add_core = THIS
+            }
+            badboy = 10
+            prestige = 10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    accept_slovenes_ragusa = {
+        picture = pan_slavism
+        potential = {
+            exists = yes
+            tag = DLM
+            NOT = { has_country_flag = accepts_slovenes }
+        }
+
+        allow = {
+            owns = 736
+        }
+
+        effect = {
+            set_country_flag = accepts_slovenes
+            768 = {
+                add_core = THIS
+            }
+            add_accepted_culture = slovene
+            badboy = -3
+            prestige = 10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ragusa_retake_mostar = {
+        picture = reclaim_croatia
+        potential = {
+            tag = DLM
+            has_country_flag = united_dalmatia
+            NOT = { has_country_flag = took_bosnia }
+            exists = yes
+        }
+
+        allow = {
+            all_core = {
+                owned_by = THIS
+            }
+        }
+
+        effect = {
+            set_country_flag = took_bosnia
+            784 = {
+                add_core = THIS
+            }
+            788 = {
+                add_core = THIS
+            }
+            789 = {
+                add_core = THIS
+            }
+            badboy = 3
+            prestige = 10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ragusa_conquer_montenegro = {
+        picture = montenegro_map
+        potential = {
+            tag = DLM
+            NOT = { has_country_flag = conquered_montenegro }
+            exists = yes
+        }
+
+        allow = {
+            owns = 2582
+        }
+
+        effect = {
+            set_country_flag = conquered_montenegro
+            800 = {
+                add_core = THIS
+            }
+            2569 = {
+                add_core = THIS
+            }
+            2583 = {
+                add_core = THIS
+            }
+            badboy = 10
+            prestige = 10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    pomerania_reclaim = {
+        picture = pomerania_prussia
+        potential = {
+            tag = PML
+            NOT = { has_country_flag = reclaim_pommern }
+            exists = yes
+        }
+
+        allow = {
+            NOT = {
+                vassal_of = SWE
+            }
+        }
+
+        effect = {
+            set_country_flag = reclaim_pommern
+            679 = {
+                add_core = THIS
+            }
+            680 = {
+                add_core = THIS
+            }
+            prestige = 15
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    greater_pommern = {
+        picture = pomerania_prussia
+        potential = {
+            tag = PML
+            has_country_flag = reclaim_pommern
+            NOT = { has_country_flag = greater_pommern }
+            exists = yes
+        }
+
+        allow = {
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = greater_pommern
+            544 = {
+                add_core = THIS
+            }
+            545 = {
+                add_core = THIS
+            }
+            badboy = 10
+            prestige = 25
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
 }
