@@ -1,3 +1,6 @@
 name = "AoE Multiplayer Remake Version 1.4.3"
 path = "mod/AoE Multiplayer Remake 1.4.3"
 user_dir = "AoE Multiplayer Remake 1.4.3"
+replace_path = "history/provinces"
+replace_path = "events"
+replace_path = "decisions"
