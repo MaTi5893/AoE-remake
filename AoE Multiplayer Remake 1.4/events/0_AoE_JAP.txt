@@ -61,16 +61,15 @@ country_event = {
 	
 	option = {
 		name = "Balance the Emperor and Shogun's power!"
-		government = presidential_dictatorship
 		any_pop = {
 			limit = {
-				pop_majority_pop_majority_ideology = reactionary
+				pop_majority_ideology = reactionary
 			}
 			militancy = 2
 		}
 		any_pop = {
 			limit = {
-				pop_majority_pop_majority_ideology = liberal
+				pop_majority_ideology = liberal
 			}
 			militancy = 1
 		}
