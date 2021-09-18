@@ -55,6 +55,7 @@ political_decisions = {
 			add_core = 763
             change_tag = SAR
             add_accepted_culture = south_italian
+			set_country_flag = NO_FRENCHIES
             any_pop = {
                 limit = { is_culture_group = italian }
                 militancy = -3
