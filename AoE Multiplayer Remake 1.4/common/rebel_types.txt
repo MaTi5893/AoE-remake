@@ -7263,7 +7263,7 @@ noble_rebels = {
 		}
 		modifier = {
 			safety_regulations = no_safety
-			factor = 0
+			factor = -10
 		}
 		modifier = {
 			government = elective_monarchy_oligarchy
@@ -7277,7 +7277,7 @@ noble_rebels = {
 		}
 		modifier = {
 			civilized = no
-			factor = 0
+			factor = -100
 		}
 	}
 			
@@ -7300,6 +7300,12 @@ noble_rebels = {
 		modifier = {
 			factor = 2
 			pop_majority_ideology = conservative
+		}
+		modifier = {
+			factor = -10
+			location = {
+				is_colonial = yes
+			}
 		}
 		modifier = {
 			factor = -2

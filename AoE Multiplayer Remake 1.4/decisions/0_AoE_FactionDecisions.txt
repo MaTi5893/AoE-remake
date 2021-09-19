@@ -239,10 +239,7 @@ political_decisions = {
                 government = prussian_constitutionalism
                 government = elective_monarchy_oligarchy
             }
-            OR = {
-            rank = 20
             ai = no
-            }
             NOT = {
                 has_country_modifier = law_changed_by_force
             }
@@ -293,10 +290,7 @@ political_decisions = {
                 government = fascist_dictatorship
                 government = proletarian_dictatorship
             }
-            OR = {
-            rank = 20
             ai = no
-            }
             NOT = {
                 has_country_modifier = law_changed_by_force
             }

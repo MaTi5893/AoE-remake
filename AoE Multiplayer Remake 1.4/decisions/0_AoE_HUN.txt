@@ -50,9 +50,15 @@ political_decisions = {
             modifier = {
                 factor = 0
                 AUS = {
-                    NOT = { war_exhaustion = 35 }
                     war = yes
                 }
+            }
+			modifier = {
+                factor = 0
+                AUS = {
+                    ai = yes
+                }
+				619 = { country_units_in_province = AUS }
             }
         }
     }

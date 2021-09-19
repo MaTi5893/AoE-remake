@@ -17,7 +17,11 @@ political_decisions = {
         }
         allow = {
             any_owned_province = {
+				OR = {
                 is_core = HND
+				continent = north_america
+				continent = south_america
+				}
             }
             invention = the_dark_continent
             money = 100000

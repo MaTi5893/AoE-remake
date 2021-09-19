@@ -380,34 +380,6 @@ political_decisions = {
 			set_country_flag = catharine_the_great_reforms
 		}
 	}
-
-	caucasian_persian_campaign = {
-		picture = unite_caucasus
-		potential = {
-			tag = RUS
-			NOT = {
-				has_country_flag = manifesto_on_caucasus
-			}
-			exists = yes
-			has_country_modifier = peter_the_great
-		}
-		allow = {
-			is_greater_power = yes
-			OR = {
-				owns = 1053
-				neighbour = PER
-			}
-		}
-		effect = {
-			prestige = 7.5
-			set_country_flag = manifesto_on_caucasus
-			casus_belli = {
-				target = PER
-				type = acquire_state
-				months = 12
-			}
-		}
-	}
 	
 	settle_south_borders = {
 		picture = cossacks

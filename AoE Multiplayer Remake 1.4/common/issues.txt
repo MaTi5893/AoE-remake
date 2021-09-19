@@ -1432,7 +1432,7 @@ social_reforms = {
             global_assimilation_rate = 0.01
             global_immigrant_attract = 0.04
             administrative_multiplier = 3
-            allow = { has_country_flag = biologism_invented  NOT = { has_country_flag = indian_campaign_target_flag } }
+            allow = { has_country_flag = skill_and_merit_allowed }
         }
     }
 
