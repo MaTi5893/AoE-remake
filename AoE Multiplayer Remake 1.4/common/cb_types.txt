@@ -91,7 +91,6 @@ conquest_low
 negotiated_transfer
 #steal_puppet
 conquest_tiny
-conquest_tribal
 }
 
 gunboat = {
@@ -267,23 +266,13 @@ restore_austrian_empire = {
                 is_core = HUN
                 region = AUS_702
                 region = AUS_771
+                region = AUS_780
                 region = AUS_777
                 region = AUS_654
                 region = AUS_652
                 region = AUS_657
-				AND = {
-					region = AUS_729
-					THIS = { has_country_flag = backstabbed_venice }
-				}
-				AND = {
-					region = AUS_726
-					THIS = { has_country_flag = backstabbed_venice }
-				}
-				AND = {
-					region = AUS_780
-					THIS = { has_country_flag = backstabbed_venice }
-				}
             }
+            NOT = { is_core = VEN }
         }
     }
 
@@ -372,7 +361,6 @@ restore_spanish_empire = {
                 is_core = BEL
                 is_core = LOM
             }
-			NOT = { is_core = VEN }
             NOT = { is_core = LIG }
         }
     }
@@ -399,7 +387,7 @@ dismantle_hre = {
 
     badboy_factor = 8
     prestige_factor = 2
-    peace_cost_factor = 45
+    peace_cost_factor = 70
     penalty_factor = 1
 
     break_truce_prestige_factor = 5
@@ -558,7 +546,7 @@ claim_emperorship = {
 
     badboy_factor = 8
     prestige_factor = 2
-    peace_cost_factor = 45
+    peace_cost_factor = 70
     penalty_factor = 1
 
     break_truce_prestige_factor = 5
@@ -2945,7 +2933,7 @@ uninstall_communist_gov_cb = {
 
     badboy_factor = 1
     prestige_factor = 1
-    peace_cost_factor = 45
+    peace_cost_factor = 70
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -2985,10 +2973,6 @@ uninstall_communist_gov_cb = {
         }
         badboy = 5
     }
-	
-	on_po_accepted = {
-		ruling_party_ideology = conservative
-	}
 }
 
 
@@ -3378,20 +3362,6 @@ conquest_low = {
         NOT = { is_our_vassal = THIS }
         # only one state or unciv
         NOT = { number_of_states = 5 }
-		OR = { #non hre member can't justify on hre member
-			AND = {
-				NOT = { has_country_flag = hre_member }
-				THIS = { NOT = { has_country_flag = hre_member } } #non hre member can justify on non hre member
-			}
-			AND = {
-				has_country_flag = hre_member
-				THIS = { has_country_flag = hre_member } #hre member can justify on hre member
-			}
-			AND = {
-				NOT = { has_country_flag = hre_member }
-				THIS = { has_country_flag = hre_member } #hre member can justify on non hre member
-			}
-		}
         OR = {
             AND = {
                 civilized = yes
@@ -3401,12 +3371,6 @@ conquest_low = {
                 civilized = no
                 THIS = { civilized = no }
                 NOT = { number_of_states = 3 }
-            }
-			AND = {
-                civilized = yes
-				has_country_flag = hre_member
-				total_pops = 500000
-                NOT = { number_of_states = 4 }
             }
             AND = {
                 civilized = no
@@ -3457,34 +3421,14 @@ conquest_tiny = {
     crisis = no
 
     can_use = {
-        NOT = {    total_pops = 150000 }
+        NOT = {    total_pops = 100000 }
         NOT = { is_our_vassal = THIS }
         # only one state or unciv
         NOT = { number_of_states = 5 }
-		OR = { #non hre member can't justify on hre member
-			AND = {
-				NOT = { has_country_flag = hre_member }
-				THIS = { NOT = { has_country_flag = hre_member } } #non hre member can justify on non hre member
-			}
-			AND = {
-				has_country_flag = hre_member
-				THIS = { has_country_flag = hre_member } #hre member can justify on hre member
-			}
-			AND = {
-				NOT = { has_country_flag = hre_member }
-				THIS = { has_country_flag = hre_member } #hre member can justify on non hre member
-			}
-		}
         OR = {
             AND = {
                 civilized = yes
                 NOT = { number_of_states = 3 }
-            }
-			AND = {
-                civilized = yes
-				has_country_flag = hre_member
-				total_pops = 500000
-                NOT = { number_of_states = 4 }
             }
             AND = {
                 civilized = no
@@ -3531,52 +3475,6 @@ conquest_tiny = {
     po_annex = yes
 
     war_name = WAR_CONQUEST_NAME
-}
-
-conquest_tribal = {
-	sprite_index = 2
-	is_triggered_only = yes
-	months = 12
-	crisis = no
-	
-	can_use = {
-		government = tribal_democracy
-		THIS = {
-			government = tribal_democracy
-		}
-		neighbour = THIS
-		NOT = { is_our_vassal = THIS }
-		# only one state or unciv
-		NOT = { number_of_states = 8 }
-	}
-
-	badboy_factor = 0.75
-	prestige_factor = 5
-	peace_cost_factor = 1
-	penalty_factor = 1
-	
-	break_truce_prestige_factor = 5
-	break_truce_infamy_factor = 2
-	break_truce_militancy_factor = 2
-	truce_months = 60
-	
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-	
-	construction_speed = 0.5
-	
-	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
-			to = pro_military
-			value = 0.25
-		}
-	}
-	
-	po_annex = yes
-	
-	war_name = WAR_CONQUEST_NAME
 }
 
 # War Reparations
