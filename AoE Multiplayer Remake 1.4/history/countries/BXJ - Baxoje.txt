@@ -1,15 +1,15 @@
-capital = 141
+capital = 150
 primary_culture = native_american_minor
 religion = animist
+civilized = no
 government = tribal_democracy
 plurality = 0.05
 nationalvalue = nv_liberty
 literacy = 0.01  
 non_state_culture_literacy = 0.01  
-civilized = no
-prestige = 6
+prestige = 7
 
-ruling_party = "Nobility Faction"
+ruling_party = "Tribal Council"
 upper_house = {
 	fascist = 0
 	liberal = 26
@@ -19,7 +19,7 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-
+schools = unciv_tech_school
 slavery = yes_slavery
 upper_house_composition = state_equal_weight
 vote_franschise = universal_weighted_voting
@@ -31,7 +31,7 @@ political_parties = gerrymandering
 
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
-safety_regulations = no_safety
+safety_regulations = good_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions 
@@ -47,6 +47,8 @@ border_policy = closed_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
-set_country_flag = new_world_nation
 set_country_flag = unciv
-oob = "WIC_oob.txt"
+set_country_flag = new_world_nation
+
+flintlock_rifles = 1
+enlightenment_thought = 1
