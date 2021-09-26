@@ -100,18 +100,28 @@ political_decisions = {
             treasury = 300000
             ammunition = 300
             small_arms = 100
-            capital_scope = {
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = infantry value = current }
-                sub_unit = { type = cavalry value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-                sub_unit = { type = artillery value = current }
-            }
+			random_owned = {
+				limit = {
+					owner = {
+						ai = no
+					}
+				}
+				owner = {
+					capital_scope = {
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = cavalry value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+					}
+				}
+			}
+			end_war = SWE
         }
 
         ai_will_do = {
@@ -120,6 +130,13 @@ political_decisions = {
                 factor = 0
                 RUS = {
                     NOT = { war_with = SWE }
+					NOT = { war_exhaustion = 25 }
+                }
+            }
+			modifier = {
+                factor = 0
+                RUS = {
+                    ai = no
                 }
             }
         }

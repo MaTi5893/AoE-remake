@@ -3,23 +3,9 @@ country_event = { #10225 Hungarian rebellion
 	title = "EVTNAME10225" #Hungarian Revolution of $YEAR$
 	desc = "EVTDESC10225"
 	news = yes
-	news_desc_long = "EVTDESC10225_NEWS_LONG"
-	news_desc_medium = "EVTDESC10225_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC10225_NEWS_SHORT"
 	picture = "rakoczi"
 	
 	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		tag = HUN
-		owns = 641
-		war = yes
-		has_global_flag = spanish_succesion_crisis
-		NOT = {
-			has_global_flag = hungarian_revolution_occurred
-		}
-	}
 
 	mean_time_to_happen = {
 		months = 4
@@ -127,6 +113,26 @@ country_event = {
 		add_country_modifier = {
 			name = maria_theresa
 			duration = -1
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { accepted_culture = hungarian }
+				}
+			}
+			owner = {
+			add_accepted_culture = hungarian
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { accepted_culture = croat }
+				}
+			}
+			owner = {
+			add_accepted_culture = croat
+			}
 		}
 		set_global_flag = austrian_succession_crisis
 		random_owned = {
@@ -310,6 +316,100 @@ country_event = {
 			modifier = {
 				factor = 5
 				NOT = { relation = { who = AUS value = 0 } }
+			}
+		}
+	}
+}
+country_event = {
+	id = 174508
+	title = "The Grenz Infantry"
+	desc = "EVTDESC174508"
+	picture = grenzers
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		war = no
+		is_greater_power = yes
+		owns = 771
+		neighbour = TUR
+	}
+	
+	mean_time_to_happen = {
+		months = 15
+	}
+	
+	option = {
+		name = "We are thankfull for their serivce"
+		random_list = {
+			50 = {
+				add_accepted_culture = croat
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						culture = croat
+						type = soldiers
+					}
+					reduce_pop = 1.35
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 174509
+	title = "The Hungarian Diet"
+	desc = "EVTDESC174509"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		NOT = { exsists = HUN }
+		government = hms_government
+		owns = 641
+	}
+	
+	mean_time_to_happen = {
+		months = 15
+	}
+	
+	option = {
+		name = "Allow the diet to convene"
+		random_list = {
+			50 = {
+				add_accepted_culture = hungarian
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						culture = hungarian
+					}
+					militancy = -5
+				}
+			}
+		}
+	}
+	option = {
+		name = "Prohibit from partaking in the diet"
+		any_pop = {
+			limit = {
+				culture = hungarian
+			}
+			militancy = 5
+		}
+		HUN = {
+			all_core = {
+				any_pop = {
+					limit = {
+						OR = {
+							culture = south_german
+							culture = siebenburger
+						}
+					}
+					reduce_pop = 1.05
+				}
 			}
 		}
 	}

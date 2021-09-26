@@ -39,13 +39,18 @@ political_decisions = {
         effect = {
             set_country_flag = rakoczi_tried
             AUS = { country_event = 10225 }
+			AUS = {
+				diplomatic_influence = {
+					who = HUN
+					value = -300
+				}
+			}
         }
         ai_will_do = {
             factor = 1
             modifier = {
                 factor = 0
                 NOT = { year = 1704 }
-                AUS = { war = no }
             }
             modifier = {
                 factor = 0
@@ -58,7 +63,7 @@ political_decisions = {
                 AUS = {
                     ai = yes
                 }
-				619 = { country_units_in_province = AUS }
+				619 = { NOT = { country_units_in_province = AUS } }
             }
         }
     }

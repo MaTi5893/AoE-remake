@@ -414,7 +414,7 @@ unciv_civ_nerf = {
 		ai = yes
 		civilized = no
 	}
-	research_points_modifier = -0.5
+	research_points_modifier = -0.75
 }
 save_the_nation0.5 = {
     trigger = {
@@ -571,6 +571,32 @@ save_the_nation5 = {
     mobilization_impact = 1
     mobilization_economy_impact = -0.66
     icon = 9
+}
+
+neglected_education = {
+    trigger = {
+        exists = yes
+        civilized = yes
+        ai = no
+        number_of_states = 2
+        total_pops = 1000000
+        OR = {
+            AND = {
+                literacy = 0.75
+                NOT = { education_spending = 0.3 }
+            }
+            AND = {
+                literacy = 0.5
+                NOT = { education_spending = 0.2 }
+            }
+            AND = {
+                literacy = 0.25
+                NOT = { education_spending = 0.1 }
+            }
+        }
+    }
+    education_efficiency_modifier = -1
+    icon = 19
 }
 
 britannia_rules_the_waves = {

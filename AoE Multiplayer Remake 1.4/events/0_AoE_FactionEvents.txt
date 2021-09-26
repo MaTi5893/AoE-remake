@@ -2072,6 +2072,7 @@ country_event = {
             limit = {
                 owner = {
                     pensions = acceptable_pensions
+					has_country_flag = skill_and_merit_allowed
                 }
             }
             owner = {
@@ -2116,6 +2117,7 @@ country_event = {
             limit = {
                 owner = {
                     health_care = acceptable_health_care
+					has_country_flag = skill_and_merit_allowed
                 }
             }
             owner = {
@@ -2195,6 +2197,7 @@ country_event = {
             limit = {
                 owner = {
                     wage_reform = trinket_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {
@@ -2283,6 +2286,7 @@ country_event = {
             limit = {
                 owner = {
                     safety_regulations = trinket_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {
@@ -2497,4 +2501,26 @@ province_event = {
             }
         }
     }
+}
+country_event = {
+    id = 170214
+    title = "$COUNTRY$ Colonial Policy"
+    desc = ""
+	is_triggered_only = yes
+	picture = harbour
+	
+	option = {
+		name = "Settlement"
+		political_reform = settlement
+	}
+	
+	option = {
+		name = "Indirect Rule"
+		political_reform = exploitation
+	}
+	
+	option = {
+		name = "Charter Company"
+		political_reform = civilizing
+	}
 }

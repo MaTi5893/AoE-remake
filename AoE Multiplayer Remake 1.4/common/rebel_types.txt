@@ -7820,14 +7820,11 @@ janissery_rebels = {
         }
         modifier = {
             NOT = { has_country_modifier = janisseries_influence }
-            factor = -5.00
+            factor = -100
         }
-        modifier = {
-            OR = {
-                government = elective_monarchy_oligarchy
-                government = archduchy
-            }
-            factor = 1
+		modifier = {
+            NOT = { tag = TUR }
+            factor = 0
         }
     }
 
@@ -7869,6 +7866,18 @@ janissery_rebels = {
                 strata = middle
                 militancy = 9
             }
+        }
+		modifier = {
+            factor = -100
+            location = {
+				NOT = {
+					owned_by = TUR
+				}
+			}
+        }
+		modifier = {
+            factor = 1
+            culture = turkish
         }
     }
 

@@ -27,7 +27,7 @@ country_event = {
     id = 800002
     title = "Ruina Imperii..."
     desc = "EVTDESC800002"
-    picture = hre_prince
+	major = yes
     is_triggered_only = yes
 
     option = {
@@ -129,6 +129,7 @@ country_event = {
             country_event = 800007
         }
         clr_country_flag = hre_emperor
+		set_country_flag = hre_member
     }
 }
 country_event = {
@@ -141,6 +142,29 @@ country_event = {
     option = {
         name = "Amazing!"
         set_country_flag = hre_emperor
+		any_country = {
+			limit = {
+				in_sphere = FROM
+				has_country_flag = hre_member
+			}
+			country_event = 800008
+		}
         prestige = 20
     }
+}
+country_event = {
+    id = 800008
+    title = "New Holy Roman Emperor"
+    desc = "We swear alligence to the new Emperor of the Holy Roman Empire"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Formalities"
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = 300
+			}
+		}
+	}
 }

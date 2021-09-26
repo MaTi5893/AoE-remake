@@ -719,7 +719,7 @@ political_reforms = {
 			core_pop_consciousness_modifier = -0.01
 			administrative_multiplier = 1
 			#on_execute = { effect = { country_event = 6016804 } }
-			allow = { colonial_nation = yes }
+			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
 		}
 		
 		exploitation = { #Indirect rule
@@ -730,7 +730,7 @@ political_reforms = {
 			navy_tech_research_bonus = 0.05
 			suppression_points_modifier = 0.25
 			administrative_multiplier = 1
-			allow = { colonial_nation = yes }
+			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
 		}
 				
 		civilizing = { #Charter Company
@@ -741,7 +741,7 @@ political_reforms = {
 			non_accepted_pop_consciousness_modifier = 0.01
 			commerce_tech_research_bonus = -0.05
 			administrative_multiplier = 0.8
-			allow = { colonial_nation = yes }
+			allow = { colonial_nation = yes NOT = { has_country_flag = chosen_colonial_policy } }
 		}
 		
 		no_colonies = {
@@ -1059,8 +1059,6 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         trinket_safety = { #influential
@@ -1075,8 +1073,6 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         low_safety = { #slightly influential
@@ -1090,9 +1086,7 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
-                     NOT = { has_country_flag = clergy_and_nobility_domination }
+				NOT = { has_country_flag = clergy_and_nobility_domination }
             }
         }
         acceptable_safety = { #marginally relevant
@@ -1107,8 +1101,6 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         good_safety = { #irrelevant
@@ -1122,8 +1114,6 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -1237,7 +1227,7 @@ social_reforms = {
             land_unit_start_experience = 5
             land_organisation = 0.05
             leadership_modifier = 0.05
-            supply_consumption = 0.20
+            supply_consumption = 0.15
             org_regain = 0.05
             min_military_spending = 0.05
             max_military_spending = 0.05
@@ -1248,65 +1238,58 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         low_pensions = { #slightly influential
             land_unit_start_experience = 10
             land_organisation = 0.10
             leadership_modifier = 0.10
-            supply_consumption = 0.40
+            supply_consumption = 0.30
             org_regain = 0.10
             min_military_spending = 0.10
             max_military_spending = 0.10
-            mobilisation_size = 0.02
+            mobilisation_size = 0.015
 
             rich_vote = 0.06
             middle_vote = 0.04
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         acceptable_pensions = { #influential
             land_unit_start_experience = 15
             land_organisation = 0.15
             leadership_modifier = 0.15
-            supply_consumption = 0.60
+            supply_consumption = 0.45
             org_regain = 0.15
             min_military_spending = 0.15
             max_military_spending = 0.15
-            mobilisation_size = 0.03
+            mobilisation_size = 0.02
 
             rich_vote = 0.09
             middle_vote = 0.06
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         good_pensions = { #very influential
             land_unit_start_experience = 20
             land_organisation = 0.20
             leadership_modifier = 0.20
-            supply_consumption = 0.80
+            supply_consumption = 0.60
             org_regain = 0.20
             min_military_spending = 0.20
             max_military_spending = 0.20
-            mobilisation_size = 0.04
+            mobilisation_size = 0.025
 
             rich_vote = 0.12
             middle_vote = 0.08
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
+				has_country_flag = skill_and_merit_allowed
             }
         }
     }
@@ -1325,15 +1308,13 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         trinket_health_care = { #marginally relevant
             tax_efficiency = 0.025
             administrative_efficiency_modifier = 0.05
             administrative_multiplier = 4
-            education_efficiency_modifier = 0.05
+            education_efficiency_modifier = 0.025
             min_social_spending = 0.10
             pension_level = 0.20
 
@@ -1342,15 +1323,13 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         low_health_care = { #slightly influential
             tax_efficiency = 0.05
             administrative_efficiency_modifier = 0.1
             administrative_multiplier = 6
-            education_efficiency_modifier = 0.10
+            education_efficiency_modifier = 0.05
             min_social_spending = 0.15
             pension_level = 0.30
 
@@ -1359,15 +1338,13 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         acceptable_health_care = { #influential
             tax_efficiency = 0.075
             administrative_efficiency_modifier = 0.15
             administrative_multiplier = 8
-            education_efficiency_modifier = 0.15
+            education_efficiency_modifier = 0.075
             min_social_spending = 0.20
             pension_level = 0.40
 
@@ -1376,15 +1353,13 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         good_health_care = { #very influential
             tax_efficiency = 0.10
             administrative_efficiency_modifier = 0.20
             administrative_multiplier = 10
-            education_efficiency_modifier = 0.20
+            education_efficiency_modifier = 0.1
             pop_growth = 0.004
             min_social_spending = 0.25
             pension_level = 0.50
@@ -1394,8 +1369,7 @@ social_reforms = {
             poor_vote = 0.0
 
             allow = {
-                     #has_global_flag = factions_setup_done
-                     NOT = { has_country_flag = indian_campaign_target_flag }
+                has_country_flag = skill_and_merit_allowed
             }
         }
     }
@@ -1551,6 +1525,8 @@ economic_reforms = {
                 effect = {
                     activate_technology = mechanized_mining
                     activate_technology = piston_steam_engine
+					set_country_flag = mechanized_mining_flag
+					set_country_flag = piston_steam_engine_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1576,6 +1552,8 @@ economic_reforms = {
                 effect = {
                     activate_technology = freedom_of_trade
                     activate_technology = high_pressure_steam_engine
+					set_country_flag = freedom_of_trade_flag
+					set_country_flag = high_pressure_steam_engine_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1606,6 +1584,7 @@ economic_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = no_standard
+					set_country_flag = no_standard_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1630,6 +1609,7 @@ economic_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = ad_hoc_money_bill_printing
+					set_country_flag = ad_hoc_money_bill_printing_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1662,6 +1642,7 @@ economic_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = private_banks
+					set_country_flag = private_banks_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1689,6 +1670,8 @@ economic_reforms = {
                 effect = {
                     activate_technology = stock_exchange
                     activate_technology = early_classical_theory_and_critique
+					set_country_flag = stock_exchange_flag
+					set_country_flag = early_classical_theory_and_critique_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1720,7 +1703,8 @@ economic_reforms = {
 
             on_execute = {
                 effect = {
-                activate_technology = malthusian_thought
+					activate_technology = malthusian_thought
+					set_country_flag = malthusian_thought_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1747,6 +1731,8 @@ economic_reforms = {
                 effect = {
                     activate_technology = positivism
                     activate_technology = enlightenment_thought
+					set_country_flag = positivism_flag
+					set_country_flag = enlightenment_thought_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1785,6 +1771,7 @@ economic_reforms = {
                 }
                 effect = {
                     activate_technology = experimental_railroad
+					set_country_flag = experimental_railroad_flag
                     build_railway_in_capital = {
                         in_whole_capital_state = yes # no = just in main capital province.
                         limit_to_world_greatest_level = yes
@@ -1816,6 +1803,7 @@ economic_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = early_railroad
+					set_country_flag = early_railroad_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1849,6 +1837,7 @@ economic_reforms = {
                 }
                 effect = {
                     activate_technology = guild_based_production
+					set_country_flag = guild_based_production_flag
                     build_factory_in_capital_state = canned_food_factory
 
                     any_pop = {
@@ -1874,6 +1863,7 @@ economic_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = organized_factories
+					set_country_flag = organized_factories_flag
                     build_factory_in_capital_state = cement_factory
 
                     any_pop = {
@@ -1907,6 +1897,8 @@ economic_reforms = {
                 effect = {
                     activate_technology = late_enlightenment_philosophy
                     activate_technology = basic_chemistry
+					set_country_flag = late_enlightenment_philosophy_flag
+					set_country_flag = basic_chemistry_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1931,6 +1923,7 @@ economic_reforms = {
                 effect = {
 
                     activate_technology = medicine
+					set_country_flag = medicine_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1968,6 +1961,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = post_napoleonic_thought
+					set_country_flag = post_napoleonic_thought_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1994,6 +1988,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = strategic_mobility
+					set_country_flag = strategic_mobility_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2026,6 +2021,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = flintlock_rifles
+					set_country_flag = flintlock_rifles_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2051,6 +2047,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = muzzle_loaded_rifles
+					set_country_flag = muzzle_loaded_rifles_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2080,7 +2077,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = bronze_muzzle_loaded_artillery
-
+					set_country_flag = bronze_muzzle_loaded_artillery_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2105,6 +2102,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = iron_muzzle_loaded_artillery
+					set_country_flag = iron_muzzle_loaded_artillery_flag
                     build_fort_in_capital = {
                         in_whole_capital_state = no # no = just in main capital province.
                         limit_to_world_greatest_level = no
@@ -2141,6 +2139,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = army_command_principle
+					set_country_flag = army_command_principle_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2168,6 +2167,7 @@ military_reforms = {
 
                 effect = {
                     activate_technology = army_professionalism
+					set_country_flag = army_professionalism_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2201,6 +2201,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = military_staff_system
+					set_country_flag = military_staff_system_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2226,6 +2227,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = military_plans
+					set_country_flag = military_plans_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2259,6 +2261,8 @@ military_reforms = {
                 effect = {
                     activate_technology = post_nelsonian_thought
                     activate_technology = alphabetic_flag_signaling
+					set_country_flag = post_nalsonian_though_flag
+					set_country_flag = alphabetic_flag_signaling_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2285,6 +2289,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                 activate_technology = battleship_column_doctrine
+				set_country_flag = battleship_column_doctrine_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2319,6 +2324,8 @@ military_reforms = {
                 effect = {
                     activate_technology = naval_design_bureaus
                     activate_technology = clipper_design
+					set_country_flag = naval_design_bureaus_flag
+					set_country_flag = clipper_design_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2346,6 +2353,7 @@ military_reforms = {
             on_execute = {
                 effect = {
                     activate_technology = steamers
+					set_country_flag = steamers_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -2401,6 +2409,8 @@ military_reforms = {
                 effect = {
                     activate_technology = the_command_principle
                     activate_technology = naval_professionalism
+					set_country_flag = the_command_principle_flag
+					set_country_flag = naval_professionalism_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal

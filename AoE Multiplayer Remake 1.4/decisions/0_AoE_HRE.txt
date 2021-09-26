@@ -67,65 +67,6 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
-    enact_reichsreform = {
-        picture = hre_reform_1
-        potential = {
-            has_country_flag = hre_emperor
-            NOT = {
-                exists = NNN
-            }
-            NOT = { has_country_flag = enacted_reichsreform }
-            NOT = { has_global_flag = hre_dismantled }
-            exists = yes
-        }
-
-        allow = {
-            NNN = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            OR = {
-                            in_sphere = THIS
-                            tag = SPA
-                            }
-                        }
-                    }
-                }
-            }
-            has_recently_lost_war = no
-            is_greater_power = yes
-            war = no
-            THIS = {
-                NOT = { has_country_modifier = hre_mendling }
-            }
-        }
-        effect = {
-            set_country_flag = enacted_reichsreform
-            any_country = {
-                limit = {
-                    has_country_flag = hre_member
-                }
-                add_country_modifier = {
-                    name = reichsreform
-                    duration = -1
-                }
-            }
-            add_country_modifier = {
-                name = reichsreform
-                duration = -1
-            }
-            add_country_modifier = {
-                name = hre_mendling
-                duration = 3650
-            }
-            prestige = 20
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     renoveto_imperii= {
         picture = renoveto_imperii
         potential = {
@@ -134,13 +75,15 @@ political_decisions = {
                 exists = NNN
             }
             NOT = { has_global_flag = hre_dismantled }
-            #NOT = { has_country_flag = hre_member }
+			NOT = {
+				is_ideology_enabled = communist
+			}
             exists = yes
         }
 
         allow = {
+			NOT = { is_ideology_enabled = communist }
             has_recently_lost_war = no
-            nationalism_n_imperialism = 1
             is_greater_power = yes
             war = no
             NNN = {
@@ -159,6 +102,10 @@ political_decisions = {
             NOT = { has_country_modifier = hre_mendling }
         }
         effect = {
+			all_core = {
+				add_core = NNN
+				remove_core = THIS
+			}
             change_tag = NNN
             all_core = {
                 limit = {
@@ -170,7 +117,6 @@ political_decisions = {
                     annex_to = NNN
                 }
             }
-            set_country_flag = hre_formed
             badboy = 30
         }
         ai_will_do = {
@@ -298,5 +244,41 @@ political_decisions = {
                 badboy = 20
             }
         }
-    }
+	}
+	dissolve_hre = {
+		picture = flag_hre
+		potential = {
+			has_country_flag = hre_emperor
+			is_ideology_enabled = communist
+			NOT = { has_global_flag = hre_dismantled }
+		}
+		allow = {
+			OR = {
+				NOT = {
+					any_sphere_member = {
+						has_country_flag = hre_member
+					}
+				}
+				is_greater_power = no
+			}
+		}
+		effect = {
+			set_global_flag = hre_dismantled
+			country_event = 800002
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = {
+						any_neighbor_country = {
+							ruling_party_ideology = communist
+						}
+					}
+					NOT = { year = 1800 }
+				}
+			}
+		}
+	}
 }

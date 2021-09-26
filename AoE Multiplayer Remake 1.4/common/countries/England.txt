@@ -76,6 +76,21 @@ party = {
     war_policy = pacifism
 }
 
+party = {
+    name = "Wilkes Faction"
+    start_date = 1600.1.1
+    end_date = 2000.1.1
+
+    ideology = communist
+
+    social_policy = welfare_state
+    economic_policy = state_capitalism
+    trade_policy = protectionism
+    religious_policy = pro_atheism
+    citizenship_policy = full_citizenship
+    war_policy = jingoism
+}
+
 unit_names = {
     dreadnought = {
          "Dreadnought" "Bellerophon" "Superb" "Temeraire" "St Vincent" "Collingwood" "Vanguard" "Neptune" "Colossus" "Hercules" "Orion" "Monarch" "Conqueror" "Thunderer" "King George V" "Centurion" "Audacious" "Ajax" "Iron Duke" "Marlborough" "Benbow" "Emperor of India" "Agincourt" "Erin" "Canada" "Queen Elizabeth" "Warspite" "Barham" "Valiant" "Malaya" "Royal Oak" "Royal Sovereign" "Revenge" "Resolution" "Ramillies" "Resistance" "Nelson" "Rodney" "Prince of Wales" "Duke of York" "Anson" "Howe" "Lion"

@@ -112,8 +112,7 @@ country_event = {
     trigger = {
         war = no
         year = 1772
-        owns = 322
-        322 = { is_capital = yes }
+		primary_culture = swedish
         OR = {
             average_consciousness = 5
             average_militancy = 4
@@ -133,7 +132,7 @@ country_event = {
             duration = -1
         }
         add_country_modifier = {
-            name =    liberal_reaction
+            name = liberal_reaction
             duration = 3650
         }
     }
@@ -218,10 +217,19 @@ country_event = {
         name = "To war!"
         prestige = 25
         set_global_flag = great_northern_war
-        add_country_modifier = {
-            name = fanatic_army
-            duration = 3650
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					ai = no
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = fanatic_army
+					duration = 3650
+				}
+			}
+		}
     }
 }
 country_event = {

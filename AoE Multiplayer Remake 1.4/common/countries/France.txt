@@ -94,6 +94,20 @@ party = {
     citizenship_policy = limited_citizenship
     war_policy = pro_military
 }
+party = {
+    name = "Jacobins"
+    start_date = 1600.1.1
+    end_date = 2000.1.1
+
+    ideology = communist
+
+    social_policy = welfare_state
+    economic_policy = planned_economy
+    trade_policy = free_trade
+    religious_policy = pro_atheism
+    citizenship_policy = limited_citizenship
+    war_policy = jingoism
+}
 
 party = {
     name = "Feuillants"
@@ -123,21 +137,6 @@ party = {
     religious_policy = secularized
     citizenship_policy = full_citizenship
     war_policy = pacifism
-}
-
-party = {
-    name = "Jacobins"
-    start_date = 1600.1.1
-    end_date = 2000.1.1
-
-    ideology = communist
-
-    social_policy = welfare_state
-    economic_policy = planned_economy
-    trade_policy = free_trade
-    religious_policy = pro_atheism
-    citizenship_policy = limited_citizenship
-    war_policy = jingoism
 }
 
 unit_names = {

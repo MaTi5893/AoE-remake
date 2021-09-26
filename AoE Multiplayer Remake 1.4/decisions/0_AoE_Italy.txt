@@ -392,7 +392,7 @@ political_decisions = {
 						government = prussian_constitutionalism
 						government = hms_government
 						}
-						NOT = { is_ideology_enabled = communist }
+						is_ideology_enabled = communist
 					}
 				}
 				owner = {

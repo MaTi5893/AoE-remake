@@ -60,7 +60,7 @@ leader = {
     picture = eng_adm_codrington
     date = 1836.1.1
     type = sea
-    personality = defence_0.5
+    personality = defence_0.1
     background = attack_5.1
     prestige = 0.3
 }
@@ -492,12 +492,12 @@ navy = {
 
     ship = {
         name= "HMS Medea"
-        type = commerce_raider
+        type = frigate
     }
 
     ship = {
         name= "HMS Phoenix"
-        type = commerce_raider
+        type = frigate
     }
 
     ship = {
@@ -947,7 +947,7 @@ navy = {
 
     ship = {
         name= "HMS Salamander"
-        type = commerce_raider
+        type = frigate
     }
 
     ship = {
@@ -1017,7 +1017,7 @@ navy = {
 
     ship = {
         name= "HMS Rhadamanthus"
-        type = commerce_raider
+        type = frigate
     }
 
     ship = {

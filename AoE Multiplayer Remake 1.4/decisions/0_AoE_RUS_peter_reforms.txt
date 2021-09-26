@@ -24,6 +24,39 @@ political_decisions = {
         }
     }
 
+	peter_the_greats_reforms = {
+		picture = rus_empire
+		potential = {
+			tag = RUS
+			NOT = { has_country_modifier = improved_administration }
+			has_country_modifier = peter_the_great
+		}
+		allow = {
+			owns = 994
+			owns = 1047
+			war = no
+			is_greater_power = yes
+			ruling_party_ideology = reactionary
+		}
+		effect = {
+			add_country_modifier = {
+				name = improved_administration
+				duration = -1
+			}
+			add_country_modifier = {
+				name = petes_conscription
+				duration = 1825
+			}
+			research_points = 150
+			political_reform = open_borders
+			remove_country_modifier = streltsi_rebellion
+			tech_school = pogonya_za_zapadom
+			any_pop = {
+				militancy = 2
+			}
+		}
+	}
+
    construct_st_petersburg = {
         picture = petersburg
         potential = {
@@ -95,7 +128,7 @@ political_decisions = {
 			352 = { add_core = THIS }
 			351 = { add_core = THIS }
 			add_core = 3251
-			badboy = 15
+			badboy = 10
 		}
 		ai_will_do = {
 			factor = 1
@@ -134,6 +167,7 @@ political_decisions = {
 				}
 			}
 			RUS_676 = { add_core = THIS }
+			add_core = 1049
 			badboy = 10
 		}
 		ai_will_do = { factor = 1 }	
@@ -263,7 +297,8 @@ political_decisions = {
 			RUS_955 = { add_core = THIS }
 			RUS_707 = { add_core = THIS }
 			RUS_718 = { add_core = THIS }
-			badboy = 14
+			RUS_947 = { add_core = THIS }
+			badboy = 11
 		}
 		ai_will_do = { factor = 1 }	
 	}
@@ -369,13 +404,9 @@ political_decisions = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = russian_vaccination
-				duration = 365
-			}
 			inherit = HET
 			inherit = ZZH
-			research_points = 30
+			years_of_research = 1
 			tech_school = pogonya_za_zapadom
 			set_country_flag = catharine_the_great_reforms
 		}

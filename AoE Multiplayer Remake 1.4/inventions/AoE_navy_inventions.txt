@@ -1,0 +1,770 @@
+#post_nelsonian_thought - Line of Battle
+#battleship_column_doctrine - Commerce Raiding
+warship_convoys = {
+	limit = { battleship_column_doctrine = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 5
+			OR = {
+            invention = eastindiamen
+			invention = three_deckers
+			}
+        }
+    }
+    effect = {
+        activate_building = steamer_shipyard
+    }
+}
+#raider_group_doctrine - Total Blockade
+line_ahead_doctrine = {
+	limit = { raider_group_doctrine = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			default_organisation = 5
+    }
+}
+#blue_and_brown_water_schools - Command of the Sea
+command_of_the_sea_doctrine = {
+	limit = { blue_and_brown_water_schools = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			default_organisation = 5
+		}
+    }
+}
+#high_sea_battle_fleet - Firepower Doctrine
+decisive_firepower_doctrine = {
+	limit = { high_sea_battle_fleet = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+    }
+}
+naval_firepower_doctrine = {
+	limit = { high_sea_battle_fleet = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+    }
+}
+#modern_naval_doctrine - Breaking the Line
+breaking_the_line_doctrine = {
+	limit = { modern_naval_doctrine = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			default_organisation = 5
+		}
+    }
+}
+#naval_doctrine_7 - Naval Manoeuvre
+naval_manoeuvring = {
+	limit = { naval_doctrine_7 = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			hull = 5
+		}
+    }
+}
+#naval_doctrine_8 - Nelsonian Thought
+the_nelson_touch = {
+	limit = { naval_doctrine_8 = 1 }
+    chance = {
+		base = 5
+    }
+    effect = {
+        navy_base = {
+			hull = 5
+		}
+    }
+}
+#clipper_design - Ocean-Going Vessels
+clipper_shipyard_construction = {
+    limit = { clipper_design = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            piston_steam_engine = 1
+        }
+        modifier = {
+            factor = 1
+            naval_design_bureaus = 1
+        }
+        modifier = {
+            factor = -6
+            NOT = { civilized = yes }
+        }
+    }
+    effect = {
+        activate_building = clipper_shipyard
+    }
+}
+building_station_shipyards = {
+    limit = { clipper_design = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            puddling = 1
+        }
+        modifier = {
+            factor = 1
+            naval_design_bureaus = 1
+        }
+        modifier = {
+            factor = -6
+            NOT = { civilized = yes }
+        }
+    }
+    effect = {
+        factory_goods_throughput = {
+            clipper_convoy = 0.10
+        }
+    }
+}
+#steamers - Ships of the Line
+eastindiamen = {
+    limit = { steamers = 1 }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 2
+            late_classical_theory = 1
+        }
+        modifier = {
+            factor = 2
+            naval_plans = 1
+        }
+        modifier = {
+            factor = 1
+            semi_automatization = 1
+        }
+    }
+    effect = {
+        activate_unit = steam_transport
+    }
+}
+
+#iron_steamers - Three Deckers
+three_deckers = {
+    limit = {
+        iron_steamers = 1
+
+    }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 2
+            invention = razees
+        }
+    }
+    effect = {
+        activate_unit = ironclad
+    }
+}
+razees = {
+    limit = {
+        iron_steamers = 1
+    }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 2
+            invention = three_deckers
+        }
+    }
+    effect = {
+        activate_unit = monitor
+    }
+}
+#steel_steamers - Seventy Four
+seventy_four = {
+    limit = {
+        steel_steamers = 1
+
+    }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 2
+            invention = three_deckers
+        }
+        modifier = {
+            factor = 1
+            bessemer_process = 1
+        }
+        modifier = {
+            factor = 1
+            main_armament = 1
+        }
+    }
+    effect = {
+        ironclad = {
+            hull = 1
+            gun_power = 1
+            maximum_speed = 1
+        }
+        activate_unit = battleship
+    }
+}
+#steam_turbine_ships - Copper Bottoms
+heavy_frigate = {
+    limit = {
+        steam_turbine_ships = 1
+    }
+    chance = {
+        base = 3
+        modifier = {
+            factor = 2
+            invention = seventy_four
+        }
+        modifier = {
+            factor = 2
+            naval_nco_training = 1
+        }
+    }
+    effect = {
+        activate_unit = cruiser
+    }
+}
+great_frigate = {
+    limit = {
+        steam_turbine_ships = 1
+    }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = heavy_frigate
+        }
+    }
+    effect = {
+        navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+    }
+}
+#oil_driven_ships - Sloops-of-War
+limes = {
+	limit = {
+        oil_driven_ships = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+        navy_base = {
+			hull = 1
+		}
+    }
+}
+#ship_construction_7 - Heavy First Rate
+heavy_first_rate = {
+    limit = {
+        ship_construction_7 = 1
+
+    }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 2
+            invention = seventy_four
+        }
+        modifier = {
+            factor = 2
+            naval_integration = 1
+        }
+    }
+    effect = {
+        activate_unit = dreadnought
+    }
+}
+#ship_construction_8 - Steam Powered Vessel
+steam_boat = {
+    limit = { ship_construction_8 = 1 }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 3
+            tech_power_8 = 1
+        }
+    }
+    effect = {
+        activate_unit = commerce_raider
+    }
+}
+#naval_design_bureaus - multi-mast ships
+#fire_control_systems - steering wheel
+naval_engineering_i = {
+	limit = {
+        fire_control_systems = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_ship_of_the_line = {
+	limit = {
+        fire_control_systems = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		manowar = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#weapon_platforms - Broadside Firing System
+naval_engineering_ii = {
+	limit = {
+        weapon_platforms = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_three_decker_design = {
+	limit = {
+        weapon_platforms = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		ironclad = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#main_armament - Early-Modern Ships
+naval_engineering_iii = {
+	limit = {
+        main_armament = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_seventy_four_design_i = {
+	limit = {
+        main_armament = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		battleship = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#advanced_naval_design - Naval Design Bureaus
+naval_engineering_iv = {
+	limit = {
+        advanced_naval_design = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_seventy_four_design_ii = {
+	limit = {
+        advanced_naval_design = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		battleship = {
+			gun_power = 2
+			hull = 1
+		}
+	}
+}
+#modern_naval_design - Carronades
+naval_engineering_v = {
+	limit = {
+        modern_naval_design = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_seventy_four_design_iii = {
+	limit = {
+        modern_naval_design = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		battleship = {
+			gun_power = 2
+			hull = 1
+		}
+	}
+}
+#naval_engineering_7 - Copper Sheathing
+naval_engineering_vi = {
+	limit = {
+        naval_engineering_7 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_heavy_first_rate_design_i = {
+	limit = {
+        naval_engineering_7 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		dreadnought = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#naval_engineering_8 - Weapon Platforms
+naval_engineering_vii = {
+	limit = {
+        naval_engineering_8 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		navy_base = {
+			gun_power = 1
+		}
+		steam_transport = {
+			gun_power = -1
+		}
+		clipper_transport = {
+			gun_power = -1
+		}
+	}
+}
+improved_heavy_first_rate_design_ii = {
+	limit = {
+        naval_engineering_8 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		dreadnought = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#alphabetic_flag_signaling - Seafaring Techniques
+#naval_plans - navigation Techniques
+boarding_techniques_i = {
+	limit = {
+        naval_plans = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		frigate = {
+			torpedo_attack = 1
+		}
+	}
+}
+archipelago_fleet = {
+	limit = {
+        naval_plans = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		frigate = {
+			gun_power = 1
+			hull = 1
+		}
+	}
+}
+#naval_statistics - Marine Chronometer
+boarding_techniques_ii = {
+	limit = {
+        naval_statistics = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		monitor = {
+			torpedo_attack = 2
+		}
+	}
+}
+improved_razee = {
+	limit = {
+        naval_statistics = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		monitor = {
+			gun_power = 1
+			hull = 1
+		}
+	}
+}
+#naval_logistics - Flag Singaling
+boarding_techniques_iii = {
+	limit = {
+        naval_logistics = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		monitor = {
+			torpedo_attack = 3
+		}
+	}
+}
+archipelago_razee = {
+	limit = {
+        naval_logistics = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		monitor = {
+			gun_power = 1
+			hull = 1
+		}
+	}
+}
+#naval_directionism - Naval Administration
+boarding_techniques_iv = {
+	limit = {
+        naval_directionism = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			torpedo_attack = 5
+		}
+	}
+}
+the_archipelago_frigate = {
+	limit = {
+        naval_directionism = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#naval_integration - Lemon Juice Supply
+boarding_techniques_v = {
+	limit = {
+        naval_integration = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			torpedo_attack = 5
+		}
+	}
+}
+midshipmen_cadets = {
+	limit = {
+        naval_integration = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#naval_science_7 - Lunar distance method
+boarding_techniques_vi = {
+	limit = {
+        naval_science_7 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			torpedo_attack = 5
+		}
+	}
+}
+light_naval_engineering_i = {
+	limit = {
+        naval_science_7 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		cruiser = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+#naval_science_8 - Naval Expirience
+boarding_techniques_vii = {
+	limit = {
+        naval_science_8 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		commerce_raider = {
+			torpedo_attack = 2
+		}
+	}
+}
+improved_steamboat = {
+	limit = {
+        naval_science_8 = 1
+    }
+    chance = {
+        base = 5
+    }
+    effect = {
+		commerce_raider = {
+			gun_power = 4
+			hull = 4
+		}
+	}
+}

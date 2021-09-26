@@ -5,11 +5,11 @@ political_decisions = {
         potential = {
             tag = MOR
             TIM = { vassal_of = THIS }
-            SUS = { vassal_of = THIS }
+            #SUS = { vassal_of = THIS }
         }
         allow = {
             TIM = { vassal_of = THIS }
-            SUS = { vassal_of = THIS }
+            #SUS = { vassal_of = THIS }
             civilized = yes
         }
         effect = {

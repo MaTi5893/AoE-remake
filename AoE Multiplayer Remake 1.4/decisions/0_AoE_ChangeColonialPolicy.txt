@@ -1,0 +1,28 @@
+political_decisions = {
+	change_colonial_policy_aoe = {
+		picture = merchant_navy
+		alert = no
+		potential = {
+			any_owned_province = {
+				is_colonial = yes
+			}
+			exists = yes
+			NOT = { has_country_modifier = change_colonial_policy }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = national_confusion
+				duration = 365
+			}
+			add_country_modifier = {
+				name = change_colonial_policy
+				duration = 14600
+			}
+			country_event = 170214
+			set_country_flag = chosen_colonial_policy
+		}
+	}
+}

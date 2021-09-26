@@ -128,6 +128,7 @@ political_decisions = {
 			OR = {
 			pensions = low_pensions
 			has_global_flag = greek_plan_success
+			year = 1800
 			}
 		}
 		effect = {
@@ -151,8 +152,14 @@ political_decisions = {
 			state_n_government = 1
 			war = no
 			OR = {
-				CRI = { owns = 1047 }
-				TUR = { owns = 1047 }
+				OR = {
+					CRI = { owns = 1047 }
+					TUR = { owns = 1047 }
+				}
+				AND = {
+				is_ideology_enabled = communist
+				ai = yes
+				}
 			}
 		}
 		effect = {
@@ -327,6 +334,7 @@ political_decisions = {
 				duration = 5475
 			}
 			years_of_research = 0.4
+			set_country_flag = begun_tulip_period
 		}
 	}
 	eastern_tributaries = {

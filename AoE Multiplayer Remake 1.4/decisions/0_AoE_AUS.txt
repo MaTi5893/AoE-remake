@@ -199,6 +199,7 @@ political_decisions = {
             prestige = 5
             social_reform = acceptable_health_care
             set_country_flag = joseph_i_bureacracy
+			ruling_party_ideology = reactionary
         }
         ai_will_do = {
         factor = 1
@@ -326,6 +327,23 @@ political_decisions = {
             GLM = {
                 all_core = { add_core = THIS }
             }
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = backstabbed_venice
+					}
+				}
+				AUS_729 = {
+					add_core = THIS
+				}
+				AUS_726  = {
+					add_core = THIS
+				}
+				AUS_780 = {
+					add_core = THIS
+				}
+			}
+			set_country_flag = declared_the_austrian_empire
         }
     }
     issue_pragmatic_sanction = {
@@ -375,4 +393,36 @@ political_decisions = {
             }
         }
     }
+	treaty_of_campo_formio = {
+		picture = conquest_adriatic2
+		potential = {
+			tag = AUS
+			neighbour = VEN
+			NOT = { has_country_flag = backstabbed_venice }
+			exists = VEN
+			OR = {
+				is_ideology_enabled = communist
+				exists = CIS
+			}
+		}
+		allow = {
+			VEN = {
+				NOT = {
+					owns = 840
+				}
+			}
+		}
+		effect = {
+			set_country_flag = backstabbed_venice
+			relation = {
+				who = VEN
+				value = -200
+			}
+			diplomatic_influence = {
+				who = VEN
+				value = -300
+			}
+			leave_alliance = VEN
+		}
+	}
 }

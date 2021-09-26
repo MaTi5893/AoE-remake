@@ -533,6 +533,8 @@ political_decisions = {
 			}
 			prestige = 15
 			set_country_flag = french_const_made
+			remove_country_modifier = clergy_and_nobility_domination
+			clr_country_flag = clergy_and_nobility_domination
 			add_country_modifier = {
 				name = new_constitution
 				duration = 365

@@ -150,21 +150,22 @@ political_decisions = {
             }
         }
         allow = {
-            139 = {
-                has_building = fort
-                has_building = naval_base
-            }
-            money = 100000
+			OR = {
+				139 = {
+					has_building = fort
+					has_building = naval_base
+				}
+				year = 1730
+			}
         }
         effect = {
             set_country_flag = new_orlean
             prestige = 15
-            money = -100000
             139 = {
                 change_province_name = "Nouvelle-Orleans"
                 add_province_modifier = {
                     name = recently_built_city
-                    duration = 3650
+                    duration = 365
                 }
             }
         }

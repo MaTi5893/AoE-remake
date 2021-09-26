@@ -59,6 +59,14 @@ political_decisions = {
 				}
 				reduce_pop = 1.25
 			}
+			RUS = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.88
+				}
+			}
 			any_owned = {
 				limit = {
 					is_core = RUS
@@ -306,6 +314,20 @@ political_decisions = {
 		}
 		effect = {
 			country_event = 171107
+			BOR = {
+				any_pop = {
+					limit = {
+						type = soldiers
+					}
+					reduce_pop = 0.91
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.88
+				}
+			}
 		}
 	}
 	
@@ -339,19 +361,6 @@ political_decisions = {
 				}
 				reduce_pop = 1.2
 			}
-		}
-	}
-	free_monies = {
-		potential = {
-			ai = no
-			NOT = { has_country_flag = free_monies }
-		}
-		allow = {
-			ai = no
-		}
-		effect = {
-			treasury = 250000
-			set_country_flag = free_monies
 		}
 	}
 	

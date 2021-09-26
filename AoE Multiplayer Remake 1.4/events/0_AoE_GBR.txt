@@ -1744,3 +1744,27 @@ country_event = {
         prestige = -15
     }
 }
+country_event = {
+    id = 171016
+    title = "Carolonia Colonized"
+    desc = "We colonized the south"
+    picture = harbour
+    fire_only_once = yes
+
+    trigger = {
+       206 = { empty = no }
+	   209 = { empty = no }
+	   216 = { empty = no }
+	   owns = 216
+    }
+	
+	option = {
+		name = "Ok"
+		216 = { add_core = THC add_core = IQS add_core = CHE }
+		2555 = { add_core = THC add_core = CRK }
+		204 = { add_core = THC add_core = CRK }
+		210 = { add_core = THC }
+		209 = { add_core = THC add_core = CHE }
+		206 = { add_core = THC }
+	}
+}

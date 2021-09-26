@@ -45,10 +45,17 @@ country_event = {
 				background = school_of_defense
 			}
 		}
-		war = {
-			target = CRS
-			attacker_goal = { casus_belli = annex_core_country }
-			defender_goal = { casus_belli = status_quo }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+				}
+			}
+			war = {
+				target = CRS
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = status_quo }
+			}
 		}
 		ai_chance = {
 		factor = 1
@@ -66,10 +73,17 @@ country_event = {
 			who = CRS
 			value = -400
 		}	
-		war = {
-			target = CRS
-			attacker_goal = { casus_belli = annex_core_country }
-			defender_goal = { casus_belli = status_quo }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = yes
+				}
+			}
+			war = {
+				target = CRS
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = status_quo }
+			}
 		}
 		CRS = {
 			government = democracy
@@ -483,7 +497,7 @@ country_event = {
 	id = 1755012
 	title = "Savoyard Foreign Policy"
 	desc = "EVNDESC1755012"
-	picture = harbour
+	picture = my_wife_left_me
 	is_triggered_only = yes
 	
 	option = {
@@ -535,9 +549,9 @@ country_event = {
 }
 country_event = {
 	id = 1755013
-	title = "Savoy asks to align with us!"
+	title = "EVTNAME1755013"
 	desc = "EVNDESC1755013"
-	picture = harbour
+	picture = my_wife_left_me
 	is_triggered_only = yes
 	
 	option = {
@@ -555,7 +569,50 @@ country_event = {
 		FROM = { prestige = -5 }
 	}
 }
+country_event = {
+	id = 1755015
+	title = "Kings of Sicily"
+	desc = "EVNDESC1755015"
+	picture = harbour
+	fire_only_once = yes
 	
+	trigger = {
+		owns = 762
+		tag = SVY
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	option = {
+		name = "We have to start somewhere."
+		762 = {
+			sub_unit = { type = frigate value = current }
+			sub_unit = { type = frigate value = current }
+			sub_unit = { type = frigate value = current }
+			sub_unit = { type = frigate value = current }
+			sub_unit = { type = frigate value = current }
+			naval_base = 1
+		}
+	}
+	
+	option = {
+		name = "Real combat happens on land!"
+		720 = {
+			any_pop = {
+				limit = {
+					type = soldiers
+				}
+				reduce_pop = 1.02
+			}
+		}
+		any_pop = {
+			militancy = 1
+		}
+	}
+}
 ############################
 #######    Naples   ########
 ############################

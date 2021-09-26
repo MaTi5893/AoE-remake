@@ -65,8 +65,8 @@ political_decisions = {
 		
 		allow = {
 			OR = {
-			year = 1720
-			state_n_government = 1
+			year = 1736
+			nationalism_n_imperialism = 1
 			}
 			1008 = {
 				controlled_by = THIS
@@ -99,8 +99,7 @@ political_decisions = {
 		picture = caroleans
 		
 		potential = {
-			owns = 322
-			322 = { is_capital = yes }
+			primary_culture = swedish
 			NOT = { has_country_flag = mobilzied_the_caroleans } 
 			exists = yes
 		}
@@ -115,17 +114,24 @@ political_decisions = {
 				name =  swedish_caroleans
 				duration = 7300
 			}
-			322 = {
-				sub_unit = { type = plane value = current }
-				sub_unit = { type = plane value = current }
-				sub_unit = { type = plane value = current }
-				sub_unit = { type = plane value = current }
-				sub_unit = { type = hussar value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
+			random_owned = {
+				limit = {
+					owner = {
+						ai = no
+					}
+				}
+				322 = {
+					sub_unit = { type = plane value = current }
+					sub_unit = { type = plane value = current }
+					sub_unit = { type = plane value = current }
+					sub_unit = { type = plane value = current }
+					sub_unit = { type = hussar value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+					sub_unit = { type = artillery value = current }
+				}
 			}
 		}
 		

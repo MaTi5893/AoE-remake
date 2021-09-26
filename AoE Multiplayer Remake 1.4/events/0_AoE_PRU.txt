@@ -279,18 +279,19 @@ country_event = {
             NOT = { number_of_states = 8 }
         }
 
-        NOT = { has_country_modifier = army_with_a_state }
+        NOT = { has_country_modifier = army_with_a_state1 }
+		has_country_modifier = army_with_a_state2
         NOT = { has_country_modifier = army_with_a_state3 }
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 4
     }
 
     option = {
         name = "Ok"
         add_country_modifier = {
-            name = army_with_a_state
+            name = army_with_a_state1
             duration = -1
         }
         remove_country_modifier = army_with_a_state3
@@ -318,10 +319,14 @@ country_event = {
             }
         }
         NOT = { has_country_modifier = army_with_a_state2 }
+		OR = {
+			has_country_modifier = army_with_a_state3
+			has_country_flag = army_with_a_state1
+		}
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 4
     }
 
     option = {
@@ -354,12 +359,13 @@ country_event = {
                 military_spending = 1
             }
         }
-        NOT = { has_country_modifier = army_with_a_state }
+        NOT = { has_country_modifier = army_with_a_state1 }
+		has_country_modifier = army_with_a_state2
         NOT = { has_country_modifier = army_with_a_state3 }
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 4
     }
 
     option = {
