@@ -1744,18 +1744,6 @@
         size = 180250
     }
 
-    farmers = {
-        culture = cornish
-        religion = catholic
-        size = 4100
-    }
-
-    farmers = {
-        culture = cornish
-        religion = catholic
-        size = 4100
-    }
-
 }
 # Metro London Region - 2052000
 #London (2052000/513000 POPS)
@@ -2085,7 +2073,7 @@
 #Douglas (46000/11500 POPS)
 304 = {
     aristocrats = {
-        culture = manx
+        culture = british
         religion = protestant
         size = 100
     }
@@ -2103,7 +2091,7 @@
     }
 
     artisans = {
-        culture = manx
+        culture = british
         religion = protestant
         size = 3250
     }
@@ -2115,15 +2103,9 @@
     }
 
     labourers = {
-        culture = manx
-        religion = protestant
-        size = 7600
-    }
-
-    labourers = {
         culture = british
-        religion = catholic
-        size = 300
+        religion = protestant
+        size = 7900
     }
 
 }
