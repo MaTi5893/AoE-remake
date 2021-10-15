@@ -399,8 +399,7 @@ political_decisions = {
 			MOL = {
 				vassal_of = THIS
 				in_sphere = THIS
-			}
-			has_country_flag = recovered_hungary 
+			} 
 		}
 		effect = {
 			set_country_flag = end_romanian_principalities
@@ -442,7 +441,6 @@ political_decisions = {
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = end_maghreb_vassals }
-			has_country_flag = tur_west_focus
 			exists = yes
 			TUN = {
 				exists = yes
@@ -478,6 +476,7 @@ political_decisions = {
 			ALD = { all_core = { add_core = THIS } }
 			TUN = { all_core = { add_core = THIS } }
 			FZN = { all_core = { add_core = THIS } }
+			1731 = { add_core = THIS }
 			random_country = {
 				limit = {
 					tag = ALD
@@ -591,6 +590,75 @@ political_decisions = {
 		}
 	}
 	
+	end_mameluke_influence = {
+		picture = map_egypt
+		potential = {
+			tag = TUR
+			EGY = { exists = no }
+			owns = 1745
+			NOT = { has_country_flag = mameluke_influence_ended }
+		}
+		allow = {
+			war = no
+			NOT = { has_country_modifier = janisseries_influence }
+			nationalism_n_imperialism = 1
+			EGY = { all_core = { controlled_by = THIS } }
+		}
+		effect = {
+			add_accepted_culture = misri
+			EGY = { all_core = { remove_province_modifier = mameluke_influence_egypt } }
+			EGY = {
+				all_core = {
+					add_province_modifier = {
+						name = ottoman_control_egypt
+						duration = 7300
+							       }
+				           }
+			}
+			set_country_flag = mameluke_influence_ended
+		}
+	}
+	
+	integrate_hedjaz = {
+		picture = map_arabia
+		potential = {
+			tag = TUR
+			HDJ = { exists = yes }
+			NOT = { has_country_flag = hedjaz_integrated }
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			HDJ = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+			NYE = {
+				vassal_of = THIS
+				in_sphere = THIS
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					tag = HDJ
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = NYE
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			set_country_flag = hedjaz_integrated
+		}
+	}
+
 	anti_russo_persian_hugbox = {
 		potential = {
 			tag = TUR

@@ -7715,6 +7715,196 @@ slave_rebels = {
         plurality = -30
     }
 }
+american_patriot_rebels = {
+    icon = 16
+
+    area = nation                     # Stays within the nation
+    break_alliance_on_win = no
+
+    # <this is the government in the country> = <this is what the rebels want>
+    government = {
+        proletarian_dictatorship = proletarian_dictatorship
+        presidential_dictatorship = presidential_dictatorship
+        bourgeois_dictatorship = bourgeois_dictatorship
+        fascist_dictatorship = fascist_dictatorship
+        absolute_monarchy = absolute_monarchy
+        prussian_constitutionalism = prussian_constitutionalism
+        hms_government = hms_government
+        french_bourbon = hms_government
+        dominion = democracy
+        democracy = democracy
+        theocracy = theocracy
+        colonial_company = democracy
+
+        #archduchy = archduchy
+        elective_monarchy_oligarchy = elective_monarchy_oligarchy
+        federal_democracy = federal_democracy
+        tribal_democracy = tribal_democracy
+        oligarchic_republic = oligarchic_republic
+        khanate = khanate
+    }
+
+
+    defection = none            # (Was 'culture') If the country seeks independence, defection specifies what type of provinces it wants.
+    independence = culture         # (Was 'culture')Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
+    defect_delay = 12            # Can spontaneously declare independence after X months (earliest)
+
+    allow_all_cultures = yes
+    allow_all_religions = yes
+    allow_all_ideologies = yes
+
+    resilient = yes                    # Does not disband on retreat
+    reinforcing = yes                # Does not receive reinforcements
+    general = yes                    # Does use generals
+    smart = yes                    # Does not assault forts, tactically withdraw from battle, etc.
+    unit_transfer = yes                # Units do remain after enforcing demands.
+
+    occupation_mult = 5.0            # The amount of strength this rebel gains from taking provinces
+
+    # triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
+    will_rise = {
+        factor = 0.5
+        modifier = {
+            war = yes
+            factor = 0.8
+        }
+        modifier = {
+            war_exhaustion = 4
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 6
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 8
+            factor = 0.95
+        }
+        modifier = {
+            has_country_flag = colonists_enraged
+            factor = 3
+        }
+    }
+
+    # The rebel type with the highest modifier for this pop gets picked
+    spawn_chance = {
+
+        factor = 1.1
+
+        modifier = {
+            factor = 0
+            country = {
+                NOT = { tag = GBR }
+            }
+        }
+        modifier = {
+            factor = 2
+            location = {
+                has_province_modifier = navigation_acts_enforced
+            }
+        }
+        modifier = {
+            factor = 99
+            location = {
+                has_province_modifier = american_smugglers
+            }
+        }
+        modifier = {
+            factor = 3
+            culture = yankee
+        }
+        modifier = {
+            factor = 1.3
+            pop_majority_ideology = conservative
+        }
+        modifier = {
+            factor = 1.2
+            pop_majority_ideology = reactionary
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    pop_majority_ideology = conservative
+                    pop_majority_ideology = reactionary
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            is_primary_culture = no
+            is_accepted_culture = no
+        }
+        modifier = {
+            factor = 1.015
+            country = { plurality = 70 }
+        }
+    }
+
+     #This is checked for EACH province in the Area of Operations
+    movement_evaluation = {
+        factor = 1
+        modifier = {
+            factor = 0.1
+            units_in_province = 1
+            NOT = { is_capital = yes }
+        }
+        modifier = {
+            factor = 0.001
+            controlled_by = REB
+            NOT = { is_capital = yes }
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 5.0
+            is_capital = yes
+        }
+    }
+
+      # Province Scope
+     siege_won_trigger = {
+        NOT = { has_province_modifier = war_torn }
+     }
+
+    siege_won_effect = {
+        add_province_modifier = {
+            name = war_torn
+            duration = 365
+        }
+    }
+
+    # Country scope
+    demands_enforced_trigger = {
+        independence = {
+            all_core = {
+                OR = {
+                    controlled_by_rebels = yes
+                    NOT = { owned_by = THIS }
+                }
+                province_control_days = 60
+            }
+        }
+    }
+    demands_enforced_effect = {
+        release_vassal = USA
+        modify_relation = {
+            tag = USA
+            relation = -150
+        }
+        prestige_factor = -0.3
+    }
+}
 janissery_rebels = {
     icon = 18
 
