@@ -582,7 +582,7 @@ political_decisions = {
             prestige = 10
             all_core = { add_core = IBR }
             SPA = {
-                all_core = { add_core = IBR }
+                all_core = { add_core = IBR remove_core = SPA }
             }
             POR = {
                 all_core = { add_core = IBR }
