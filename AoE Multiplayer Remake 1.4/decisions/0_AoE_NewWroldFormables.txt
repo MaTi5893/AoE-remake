@@ -56,7 +56,9 @@ political_decisions = {
                 add_core = UCA
             }
             release_vassal = UCA
+			THIS = {
             release_vassal = UCA
+			}
         }
 
         ai_will_do = {
@@ -83,7 +85,9 @@ political_decisions = {
             all_core = { remove_core = THIS }
             change_tag = LPL
             release_vassal = BOL
+			THIS = {
             release_vassal = BOL
+			}
         }
 
         ai_will_do = {
@@ -110,7 +114,9 @@ political_decisions = {
             all_core = { remove_core = THIS }
             change_tag = PEU
             release_vassal = CHL
+			THIS = {
             release_vassal = CHL
+			}
         }
 
         ai_will_do = {

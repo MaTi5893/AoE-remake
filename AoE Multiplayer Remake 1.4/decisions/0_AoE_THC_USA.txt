@@ -165,23 +165,49 @@ political_decisions = {
             201 = { add_core = THIS }
             2556 = { add_core = THIS }
             140 = { add_core = THIS }
-            USA_196 = { add_core = THIS }
+            #USA_196 = { add_core = THIS }
             USA_194 = { add_core = THIS }
             USA_188 = { add_core = THIS }
             USA_185 = { add_core = THIS }
             USA_218 = { add_core = THIS }
-            USA_196 = { add_core = THIS }
+            USA_247 = { add_core = THIS }
             USA_170 = { add_core = THIS }
             USA_162 = { add_core = THIS }
             USA_176 = { add_core = THIS }
             USA_178 = { add_core = THIS }
             USA_223 = { add_core = THIS }
             USA_232 = { add_core = THIS }
-            USA_168 = { add_core = THIS }
+            #USA_168 = { add_core = THIS }
+			add_core = 165
+			add_core = 166
+			add_core = 167
+			add_core = 187
+			add_core = 189
+			add_core = 193
+			add_core = 1817
+			add_core = 202
+			add_core = 204
+			add_core = 195
+			add_core = 2555
+			add_core = 206
+			add_core = 209
+			add_core = 210
             any_country = {
                 limit = {
                     government = tribal_democracy
                     alliance_with = THIS
+                }
+                relation = {
+                    who = THIS
+                    value = -200
+                }
+            }
+			any_country = {
+                limit = {
+					NOT = { tag = THIS }
+                    any_owned_province = {
+						is_core = THIS
+					}
                 }
                 relation = {
                     who = THIS

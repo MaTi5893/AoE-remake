@@ -130,9 +130,6 @@ political_decisions = {
             }
         }
         effect = {
-            UCA_2193 = {
-                add_core = THIS
-            }
             UCA_2191 = {
                 add_core = THIS
             }
@@ -652,9 +649,6 @@ political_decisions = {
             }
         }
         effect = {
-            TUR_894 = {
-                add_core = ARM
-            }
             1096 = {
                 add_core = ARM
             }
@@ -662,9 +656,6 @@ political_decisions = {
                 add_core = ARM
             }
             1110 = {
-                add_core = ARM
-            }
-            TUR_893 = {
                 add_core = ARM
             }
             878 = {
@@ -678,41 +669,6 @@ political_decisions = {
             }
             set_country_flag = became_greater_armenia
             badboy = 15
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    become_armenia = {
-        picture = christian_question_armenia
-        potential = {
-            exists = yes
-            tag = CLC
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-            NOT = {
-                OR = {
-                    is_vassal = yes
-                    exists = ARM
-                }
-            }
-            OR = {
-                is_secondary_power = yes
-                is_greater_power  = yes
-            }
-        }
-        effect = {
-            CLC = {
-                change_tag = ARM
-            }
-            TUR_894 = {
-                add_core = ARM
-            }
-            prestige = 5
         }
         ai_will_do = {
             factor = 1
@@ -763,147 +719,6 @@ political_decisions = {
         ai_will_do = {
             factor = 1
         }
-    }
-
-    unite_dalmatia_ragusa = {
-        picture = italian_dalmatia
-        potential = {
-            exists = yes
-            tag = DLM
-            NOT = { has_country_flag = united_dalmatia }
-        }
-
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-
-        effect = {
-            set_country_flag = united_dalmatia
-            AUS_774 = {
-                add_core = THIS
-            }
-            badboy = 5
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    conquer_istria_ragusa = {
-        picture = italian_trentino
-        potential = {
-            exists = yes
-            tag = DLM
-            has_country_flag = took_bosnia
-            NOT = { has_country_flag = conquered_istria }
-        }
-
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-
-        effect = {
-            set_country_flag = conquered_istria
-            AUS_736 = {
-                add_core = THIS
-            }
-            badboy = 10
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    accept_slovenes_ragusa = {
-        picture = pan_slavism
-        potential = {
-            exists = yes
-            tag = DLM
-            NOT = { has_country_flag = accepts_slovenes }
-        }
-
-        allow = {
-            owns = 736
-        }
-
-        effect = {
-            set_country_flag = accepts_slovenes
-            768 = {
-                add_core = THIS
-            }
-            add_accepted_culture = slovene
-            badboy = -3
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    ragusa_retake_mostar = {
-        picture = reclaim_croatia
-        potential = {
-            tag = DLM
-            has_country_flag = united_dalmatia
-            NOT = { has_country_flag = took_bosnia }
-            exists = yes
-        }
-
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-
-        effect = {
-            set_country_flag = took_bosnia
-            784 = {
-                add_core = THIS
-            }
-            788 = {
-                add_core = THIS
-            }
-            789 = {
-                add_core = THIS
-            }
-            badboy = 3
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    ragusa_conquer_montenegro = {
-        picture = montenegro_map
-        potential = {
-            tag = DLM
-            NOT = { has_country_flag = conquered_montenegro }
-            exists = yes
-        }
-
-        allow = {
-            owns = 2582
-        }
-
-        effect = {
-            set_country_flag = conquered_montenegro
-            800 = {
-                add_core = THIS
-            }
-            2569 = {
-                add_core = THIS
-            }
-            2583 = {
-                add_core = THIS
-            }
-            badboy = 10
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
     }
 
     pomerania_reclaim = {

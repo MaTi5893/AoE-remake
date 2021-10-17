@@ -9,6 +9,7 @@ country_event = {
         OR = { tag = PRU tag = BRN }
         year = 1740
         NOT = { government = democracy }
+		NOT = { government = oligarchic_republic }
         NOT = { government = presidential_dictatorship }
     }
 
@@ -24,8 +25,8 @@ country_event = {
         }
         define_general = {
             name = "Frederick II Hohenzollern"
-            personality = implacable
-            background = cursed_luck
+            personality = defence_5.1
+            background = attack_5.1
         }
     }
 }
@@ -374,7 +375,7 @@ country_event = {
             name = army_with_a_state3
             duration = -1
         }
-        remove_country_modifier = army_with_a_state
+        remove_country_modifier = army_with_a_state1
         remove_country_modifier = army_with_a_state2
     }
 }

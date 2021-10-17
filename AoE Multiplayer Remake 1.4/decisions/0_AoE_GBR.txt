@@ -126,36 +126,6 @@ political_decisions = {
             }
         }
     }
-    annex_bengal = {
-        picture = bengal
-        potential = {
-            OR = {
-                tag = GBJ
-                tag = ENL
-                tag = ENG
-                tag = GBR
-            }
-            is_greater_power = yes
-            BNG = { exists = yes }
-            BNG = { vassal_of = THIS }
-            exists = yes
-            mass_politics = 1
-        }
-        allow = {
-            war = no
-            mass_politics = 1
-            BNG = { vassal_of = THIS }
-        }
-        effect = {
-            prestige = 10
-            badboy = 10
-            inherit = BNG
-        }
-    }
-
-    #clonize_australia = {
-    #
-    #}
 
     agricultural_revolution = {
         picture = agriculture_rev
@@ -179,7 +149,7 @@ political_decisions = {
         effect = {
             add_country_modifier = {
                 name = agriculture_revolution
-                duration = 14600
+                duration = 1825
             }
             set_country_flag = agricultural_revolution
         }
@@ -204,8 +174,11 @@ political_decisions = {
         effect = {
             add_country_modifier = {
                 name = encolsure
-                duration = 14600
+                duration = 365
             }
+			any_pop = {
+				money = 5000
+			}
             set_country_flag = encolsure
         }
     }
@@ -223,16 +196,41 @@ political_decisions = {
             exists = yes
         }
         allow = {
+			OR = {
             has_country_flag = duke_of_york
+			army_leadership_7 = 1
+			}
             is_greater_power = yes
-            army_leadership_7 = 1
         }
         effect = {
             set_country_flag = duke_of_york_reforms
-            add_country_modifier = {
-                name = british_general_staff
-                duration = 7300
-            }
+			all_core = {
+				any_pop = {
+					limit = {
+						culture = british
+						type = soldiers
+					}					
+					reduce_pop = 1.25
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						army_leadership_7 = 1
+					}
+				}
+				owner = {
+					all_core = {
+						any_pop = {
+							limit = {
+								culture = british
+								type = soldiers
+							}					
+							reduce_pop = 1.1
+						}
+					}
+				}
+			}
         }
     }
     claim_the_raj_title = {
@@ -372,26 +370,34 @@ political_decisions = {
                     value = -100
                 }
             }
-            casus_belli = {
-                target = SPA
-                type = place_in_the_sun
-                months = 12
-            }
-            casus_belli = {
-                target = SPA
-                type = place_in_the_sun
-                months = 12
-            }
-            casus_belli = {
-                target = SPC
-                type = place_in_the_sun
-                months = 12
-            }
-            casus_belli = {
-                target = SPC
-                type = place_in_the_sun
-                months = 12
-            }
+			THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+			}
             add_core = 517
             badboy = 2
             set_country_flag = disputed_spanish_succession

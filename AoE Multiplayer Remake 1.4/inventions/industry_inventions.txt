@@ -154,10 +154,6 @@ embellished_toolwork = {
         base = 2
         modifier = {
             factor = 2
-            invention = precision_work
-        }
-        modifier = {
-            factor = 2
             early_railroad = 1
         }
     }
@@ -514,10 +510,6 @@ lancashire_loom = {
         base = 2
         modifier = {
             factor = 2
-            invention = dobby_loom
-        }
-        modifier = {
-            factor = 2
             invention = inventory_planning
         }
     }
@@ -533,10 +525,6 @@ electric_machinery = {
         modifier = {
             factor = 2
             electricity = 1
-        }
-        modifier = {
-            factor = 2
-            invention = machine_tools
         }
     }
     effect = {
@@ -685,10 +673,6 @@ industrialized_armament_industry = {
     limit = { assembly_line = 1 }
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            invention = precision_work
-        }
         modifier = {
             factor = 2
             invention = whitney_n_colts_standardized_small_arms
@@ -1461,10 +1445,6 @@ bell_n_greys_telephones = {
             electrical_power_generation = 1
         }
         modifier = {
-            factor = 2
-            invention = telegraph_coordination
-        }
-        modifier = {
             factor = -6
             NOT = {
                 invention = edison_light_bulb
@@ -1722,12 +1702,6 @@ carl_bosch = {
         modifier = {
             factor = 2
             electrical_power_generation = 1
-        }
-        modifier = {
-            factor = -4
-            NOT = {
-                invention = haber_process
-            }
         }
     }
     effect = {

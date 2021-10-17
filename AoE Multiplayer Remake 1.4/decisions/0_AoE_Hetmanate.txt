@@ -139,6 +139,10 @@ political_decisions = {
                     ai = no
                 }
             }
+			modifier = {
+                factor = 0
+                NOT = { year = 1706 }
+            }
         }
     }
 
@@ -160,7 +164,7 @@ political_decisions = {
                     war = yes
                     AND = {
                         is_greater_power = no
-                        social_movement_strength = 0.1
+                        average_militancy = 3
                     }
                 }
             }

@@ -91,8 +91,14 @@ country_event = {
 
     option = {
         name = "God save the King!"
-        relation = { who = HAN value = 400 }
-        create_vassal = HAN
+		random_country = {
+			limit = {
+				exists = HAN
+				tag = GBR
+			}
+			relation = { who = HAN value = 400 }
+			create_vassal = HAN
+		}
         prestige = 10
         set_country_flag = house_of_hannover
     }

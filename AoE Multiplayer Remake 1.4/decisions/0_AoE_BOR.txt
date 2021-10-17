@@ -87,7 +87,7 @@ political_decisions = {
 			money = -100000
 			add_country_modifier = {
 				name = ecole_militire
-				duration = -1
+				duration = 1825
 			}
 			set_country_flag = established_ecole_militire 
 		}
@@ -369,8 +369,14 @@ political_decisions = {
 		picture = bourbon
 		potential = {
 			OR = {
-			tag = BOR
-			tag = SPC
+				AND = {
+					tag = BOR
+					SPC = { ai = yes }
+				}
+				AND = {
+					tag = SPC
+					BOR = { ai = yes }
+				}
 			}
 			NOT = { exists = FSU }
 			exists = SPC
@@ -499,6 +505,32 @@ political_decisions = {
 						target = BOR
 						type = unify_bourbon_empire
 						months = 12
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						tag = SPC
+					}
+				}
+				owner = {
+					relation = {
+						who = BOR
+						value = -200
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						tag = BOR
+					}
+				}
+				owner = {
+					relation = {
+						who = SPC
+						value = -200
 					}
 				}
 			}
@@ -767,6 +799,42 @@ political_decisions = {
 				}
 			}
 			clr_country_flag = joined_continental_blockade 
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						exists = GBR
+						relation = {
+							who = GBR
+							value = 150
+						}
+					}
+					AND = {
+						exists = GBJ
+						relation = {
+							who = GBJ
+							value = 150
+						}
+					}
+					AND = {
+						exists = ENG
+						relation = {
+							who = ENG
+							value = 150
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					in_sphere = FRA
+					in_sphere = BOR
+				}
+			}
 		}
 	}
 	

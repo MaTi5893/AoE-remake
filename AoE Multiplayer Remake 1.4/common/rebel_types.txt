@@ -7259,11 +7259,11 @@ noble_rebels = {
 		}
 		modifier = {
 			safety_regulations = good_safety
-			factor = -3.75
+			factor = -100
 		}
 		modifier = {
 			safety_regulations = no_safety
-			factor = -10
+			factor = -100
 		}
 		modifier = {
 			government = elective_monarchy_oligarchy
@@ -7273,14 +7273,14 @@ noble_rebels = {
 			any_owned_province = {
 				has_province_modifier = tornogrod_confederation
 			}
-			factor = 2
+			factor = 35
 		}
 		modifier = {
 			civilized = no
 			factor = -100
 		}
 	}
-			
+
 	
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
@@ -7716,7 +7716,7 @@ slave_rebels = {
     }
 }
 american_patriot_rebels = {
-    icon = 16
+    icon = 15
 
     area = nation                     # Stays within the nation
     break_alliance_on_win = no
@@ -7784,6 +7784,14 @@ american_patriot_rebels = {
             has_country_flag = colonists_enraged
             factor = 3
         }
+		modifier = {
+            NOT = { has_country_flag = colonists_enraged }
+            factor = -100
+        }
+		modifier = {
+            exists = USA
+            factor = -100
+        }
     }
 
     # The rebel type with the highest modifier for this pop gets picked
@@ -7794,7 +7802,7 @@ american_patriot_rebels = {
         modifier = {
             factor = 0
             country = {
-                NOT = { tag = GBR }
+                NOT = { primary_culture = british }
             }
         }
         modifier = {
@@ -7821,6 +7829,18 @@ american_patriot_rebels = {
             factor = 1.2
             pop_majority_ideology = reactionary
         }
+		modifier = {
+            factor = 1.8
+            pop_majority_ideology = liberal
+        }
+		modifier = {
+            factor = 2.5
+            pop_majority_ideology = socialist
+        }
+		modifier = {
+            factor = 3.5
+            pop_majority_ideology = communist
+        }
         modifier = {
             factor = 0
             NOT = {
@@ -7831,17 +7851,12 @@ american_patriot_rebels = {
             }
         }
         modifier = {
-            factor = 0.8
-            is_primary_culture = no
-            is_accepted_culture = no
-        }
-        modifier = {
             factor = 1.015
             country = { plurality = 70 }
         }
     }
 
-     #This is checked for EACH province in the Area of Operations
+    #This is checked for EACH province in the Area of Operations
     movement_evaluation = {
         factor = 1
         modifier = {
@@ -7872,10 +7887,10 @@ american_patriot_rebels = {
         }
     }
 
-      # Province Scope
-     siege_won_trigger = {
+    # Province Scope
+    siege_won_trigger = {
         NOT = { has_province_modifier = war_torn }
-     }
+    }
 
     siege_won_effect = {
         add_province_modifier = {
@@ -7886,7 +7901,7 @@ american_patriot_rebels = {
 
     # Country scope
     demands_enforced_trigger = {
-        independence = {
+        THC = {
             all_core = {
                 OR = {
                     controlled_by_rebels = yes
@@ -7897,11 +7912,35 @@ american_patriot_rebels = {
         }
     }
     demands_enforced_effect = {
-        release_vassal = USA
-        modify_relation = {
-            tag = USA
-            relation = -150
-        }
+		any_owned = {
+			limit = {
+				is_core = THC
+			}
+			add_core = USA
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					primary_culture = yankee
+				}
+			}
+			owner = {
+				change_tag = USA
+				all_core = {
+					remove_core = THC
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					primary_culture = british
+				}
+			}
+			owner = {
+				country_event = 176402
+			}
+		}
         prestige_factor = -0.3
     }
 }

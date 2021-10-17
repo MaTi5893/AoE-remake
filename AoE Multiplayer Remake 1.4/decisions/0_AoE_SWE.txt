@@ -7,17 +7,17 @@ political_decisions = {
 			owns = 322
 			322 = { is_capital = yes }
 			NOT = { tag = FIN }
-			RUS_345 = {
-				NOT = {
-					owned_by = THIS
-				}
-			}
+			#RUS_345 = {
+			#	NOT = {
+			#		owned_by = THIS
+			#	}
+			#}
 			exists = yes
-			RUS_345 = {
-				NOT = {
-					owned_by = THIS
-				}
-			}
+			#RUS_345 = {
+			#	NOT = {
+			#		owned_by = THIS
+			#	}
+			#}
 			RUS_336 = {
 				NOT = {
 					owned_by = THIS
@@ -150,8 +150,11 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			market_determined_exchange_rates = 1
-			investment_banks = 1
+			OR = {
+				market_determined_exchange_rates = 1
+				investment_banks = 1
+				year = 1760
+			}
 			NOT = {
 				OR = {
 					health_care = no_health_care
@@ -165,6 +168,15 @@ political_decisions = {
 			add_country_modifier = {
 				name = riksdaler
 				duration = -1
+			}
+			any_pop = {
+				limit = {
+					OR = {
+					culture = swedish
+					culture = finnish
+					}
+				}
+				money = 5000
 			}
 		}
 		ai_will_do = {
@@ -225,8 +237,10 @@ political_decisions = {
 				unemployment_subsidies = acceptable_subsidies
 				unemployment_subsidies = good_subsidies
 			}
-			steam_turbine = 1
-			semi_automatization = 1
+			OR = {
+				steam_turbine = 1
+				semi_automatization = 1
+			}
 			iron_railroad = 1
 			ruling_party_ideology = liberal
 		}
@@ -235,7 +249,13 @@ political_decisions = {
 			social_reform = good_safety
 			add_country_modifier = {
 				name = agriculture_reform
-				duration = 16425
+				duration = 1825
+			}
+			any_pop = {
+				limit = {
+					culture = swedish
+				}
+				money = 2500
 			}
 		}
 		ai_will_do = {
@@ -256,7 +276,6 @@ political_decisions = {
 			NOT = {
 				health_care = no_health_care
 			}
-			industrial_score = 350
 			has_country_modifier = agriculture_reform
 			trade_policy = protectionism
 			money = 20000
@@ -287,7 +306,7 @@ political_decisions = {
 			NOT = {
 				health_care = no_health_care
 			}
-			industrial_score = 400
+			industrial_score = 100
 			has_country_modifier = agriculture_reform
 			trade_policy = protectionism
 			money = 20000
@@ -299,6 +318,14 @@ political_decisions = {
 				name = great_partition
 				duration = -1
 			}
+			any_pop = {
+				limit = {
+					culture = swedish
+					strata = poor
+				}
+				money = 2500
+			}
+			tech_school = industrial_tech_school
 		}
 		ai_will_do = {
 			factor = 1
@@ -377,7 +404,7 @@ political_decisions = {
 		}
 		effect = {
 			994 = {
-				remove_province_modifer = st_petersburg_construction
+				remove_province_modifier = st_petersburg_construction
 				any_pop = {
 					limit = {
 						culture = russian
@@ -392,16 +419,14 @@ political_decisions = {
 	}
 	
 	expand_livonia = { #deluge 2.0
-		picture = baltic
+		picture = danzig
 		potential = {
-			owns = 322
 			primary_culture = swedish
 			NOT = { has_country_flag = conquer_danzig }
 			owns = 994
 			exists = yes
 		}
 		allow = {
-			#government = absolute_monarchy
 			war_policy = jingoism
 			is_greater_power = yes
 			546 = { owned_by = THIS }
@@ -436,6 +461,7 @@ political_decisions = {
 						controlled_by = THIS
 					}
 				}
+				has_country_flag = installed_leszczynski
 			}
 		}
 		effect = {

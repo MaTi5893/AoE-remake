@@ -89,12 +89,12 @@ country_event = {
         political_reform = harassment
         prestige = 15
         add_country_modifier = {
-            name =    gustav_iii
+            name = gustav_iii
             duration = -1
         }
         add_country_modifier = {
-            name =    liberal_reaction
-            duration = 3650
+            name = liberal_reaction
+            duration = 365 
         }
     }
 }

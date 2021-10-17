@@ -196,8 +196,7 @@ late_classical_theory = {
     cost = 7200
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.01
     }
@@ -208,8 +207,7 @@ collectivist_theory = {
     cost = 10800
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.01
     }
@@ -220,8 +218,7 @@ the_historical_theory = {
     cost = 14400
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.01
     }
@@ -232,8 +229,7 @@ neoclassical_theory = {
     cost = 18000
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1
     }
@@ -244,8 +240,7 @@ keynesian_economics = {
     cost = 21600
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.01
     }
@@ -256,8 +251,7 @@ economic_thought_and_critique_7 = {
     cost = 25200
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1
     }
@@ -268,8 +262,7 @@ economic_thought_and_critique_8 = {
     cost = 30200
 
     factory_input = -0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.01
     }
@@ -330,7 +323,6 @@ market_regulations = {
     cost = 14400
 
     influence = 0.2
-    factory_goods_output = { precious_goods = 0.1 }
     artisan_output = 0.03
 
     ai_chance = {
@@ -344,7 +336,6 @@ economic_responsibility = {
     cost = 18000
 
     influence = 0.2
-    factory_goods_output = { precious_goods = 0.20 }
     artisan_output = 0.03
 
     ai_chance = {
@@ -358,7 +349,6 @@ government_interventionism = {
     cost = 21600
 
     influence = 0.2
-    factory_goods_output = { precious_goods = 0.20 }
     artisan_output = 0.03
 
     ai_chance = {
@@ -372,7 +362,6 @@ market_functionality_7 = {
     cost = 25200
 
     influence = 0.2
-    factory_goods_output = { precious_goods = 0.20 }
     artisan_output = 0.03
 
     ai_chance = {
@@ -386,7 +375,6 @@ market_functionality_8 = {
     cost = 30200
 
     influence = 0.2
-    factory_goods_output = { precious_goods = 0.20 }
     artisan_output = 0.03
 
     ai_chance = {
@@ -412,8 +400,7 @@ organized_factories = {
     cost = 7200
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
         ai_chance = {
         factor = 1.03
     }
@@ -424,8 +411,7 @@ scientific_management = {
     cost = 10800
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }
@@ -436,8 +422,7 @@ time_saving_measures = {
     cost = 14400
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }
@@ -448,8 +433,7 @@ management_strategy = {
     cost = 18000
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }
@@ -460,8 +444,7 @@ organizational_development = {
     cost = 21600
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }
@@ -472,8 +455,7 @@ tech_organization_7 = {
     cost = 25200
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }
@@ -484,8 +466,7 @@ tech_organization_8 = {
     cost = 30200
 
     factory_output = 0.01
-    factory_goods_output = { precious_goods = 0.1 }
-    rgo_size = { precious_goods = 0.05 }
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
         factor = 1.03
     }

@@ -23,7 +23,9 @@ political_decisions = {
 					NOT = { is_our_vassal = KOR }
 					}
 				}
+				owner = {
 				badboy = 10
+				}
 			}
 			random_country = { 
 				limit = {

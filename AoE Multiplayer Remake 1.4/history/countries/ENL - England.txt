@@ -12,7 +12,7 @@ civilized = yes
 is_releasable_vassal = no
 
 # Political reforms
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
 vote_franschise = wealth_voting
 public_meetings = yes_meeting
@@ -22,12 +22,12 @@ voting_system = first_past_the_post
 political_parties = non_secret_ballots
 
 # Social Reforms
-wage_reform = no_minimum_wage
-work_hours = no_work_hour_limit
-safety_regulations = trinket_safety
-health_care = trinket_health_care
-unemployment_subsidies = trinket_subsidies
-pensions = no_pensions
+wage_reform = low_minimum_wage #slightly influential church
+work_hours = eight_hours #very influential gentry
+safety_regulations = acceptable_safety #marginally relevant nobility
+unemployment_subsidies = acceptable_subsidies #influential burghers
+pensions = trinket_pensions #marginally relevant army
+health_care = trinket_health_care #marginally relevant bureaucracy
 school_reforms = no_schools
 
 

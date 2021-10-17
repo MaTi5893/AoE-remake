@@ -28,6 +28,7 @@ country_event = {
             safety_regulations = trinket_safety #Infulential
         }
         NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -256,6 +257,7 @@ country_event = {
             safety_regulations = trinket_safety #Infulential
         }
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -434,6 +436,7 @@ country_event = {
         }
         war = yes
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -629,6 +632,7 @@ country_event = {
             work_hours = eight_hours #Very
         }
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -972,6 +976,7 @@ country_event = {
             unemployment_subsidies = good_subsidies #Very
         }
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -1235,6 +1240,7 @@ country_event = {
         NOT = { has_country_modifier = noble_army }
         NOT = { has_country_modifier = proffesional_general_staff }
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -1396,6 +1402,7 @@ country_event = {
         NOT = { health_care = no_health_care } # Irrelevent
         NOT = { has_country_modifier = noble_beaurocracy }
         #NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -1567,6 +1574,7 @@ country_event = {
         }
         NOT = { work_hours = eight_hours } #Very
         NOT = { upper_house_composition = party_appointed }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -1843,6 +1851,7 @@ country_event = {
             safety_regulations = no_safety
             safety_regulations = low_safety
         }
+		civilized = yes
     }
 
     mean_time_to_happen = {
@@ -2464,6 +2473,7 @@ province_event = {
                     }
                 }
             }
+			civilized = yes
         }
         OR = {
             is_capital = yes

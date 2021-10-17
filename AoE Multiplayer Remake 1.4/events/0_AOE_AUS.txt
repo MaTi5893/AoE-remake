@@ -366,7 +366,7 @@ country_event = {
 	
 	trigger = {
 		tag = AUS
-		NOT = { exsists = HUN }
+		NOT = { exists = HUN }
 		government = hms_government
 		owns = 641
 	}

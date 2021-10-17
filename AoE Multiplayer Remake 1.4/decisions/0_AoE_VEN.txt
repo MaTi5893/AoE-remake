@@ -37,7 +37,7 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			add_accepted_culture = croatian
+			add_accepted_culture = croat
 			add_accepted_culture = greek
 			add_accepted_culture = albanian
 		}
@@ -57,12 +57,12 @@ political_decisions = {
 			casus_belli = {
 				target = TUN
 				type = conquest_low
-				duration = 12
+				months = 12
 			}
 			casus_belli = {
 				target = TUR
 				type = release_puppet
-				duration = 12
+				months = 12
 			}
 			badboy = 5
 		}

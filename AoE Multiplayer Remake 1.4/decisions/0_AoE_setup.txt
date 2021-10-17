@@ -91,8 +91,8 @@ political_decisions = {
 					add_province_modifier = {
 						name = mameluke_influence_egypt
 						duration = -1 
-							       }
-				           }
+					}
+				}
 			}
 		}
 	}
@@ -163,7 +163,7 @@ political_decisions = {
 				all_core = {
 					add_province_modifier = {
 						name = salutary_neglect
-						duration = -1 
+						duration = 16425 
 					}
 				}
 			}

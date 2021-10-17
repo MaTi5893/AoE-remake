@@ -1,5 +1,5 @@
 country_event = {
-	id = 999055
+	id = 99955
 	title = "Unciv Technologies"
 	desc = "We're given back our tech, make sure to restart/ask for a rehost!"
 	picture = "Unite"
@@ -463,6 +463,24 @@ country_event = {
 			}
 		}
 		clr_country_flag = unciv
+		
+			remove_country_modifier = educational_reform
+			remove_country_modifier = military_reform
+			remove_country_modifier = western_influences
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = trade_restrictions
+			remove_country_modifier = sayings_of_the_dutch
+			remove_country_modifier = extraterritoriality_granted
+			#remove_country_modifier = meiji_restoration_boost
+			any_owned = {
+				remove_province_modifier = western_presence
+				remove_province_modifier = foreign_smugglers
+				remove_province_modifier = foreign_trading_post
+				remove_province_modifier = local_opium_habit
+				remove_province_modifier = european_military_mission
+				remove_province_modifier = legation_quarter
+				remove_province_modifier = kettler_denkmal
+			}
 	}
 }
 ###Reno your prev system was trash, here's a flex on redditor-100-event-civ, you're free to copy it only if you suck my dick

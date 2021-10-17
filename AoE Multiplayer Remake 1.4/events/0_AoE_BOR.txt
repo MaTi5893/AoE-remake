@@ -939,7 +939,7 @@ country_event = {
 			limit = {
 				has_province_modifier = suffering_from_continental_blockade
 			}
-			remove_province_modifer = suffering_from_continental_blockade
+			remove_province_modifier = suffering_from_continental_blockade
 		}
 		prestige = 25
 		relation = {
@@ -961,7 +961,7 @@ country_event = {
 			limit = {
 				has_province_modifier = suffering_from_continental_blockade
 			}
-			remove_province_modifer = suffering_from_continental_blockade
+			remove_province_modifier = suffering_from_continental_blockade
 		}
 	}
 }
@@ -984,7 +984,7 @@ country_event = {
 			limit = {
 				has_province_modifier = suffering_from_continental_blockade
 			}
-			remove_province_modifer = suffering_from_continental_blockade
+			remove_province_modifier = suffering_from_continental_blockade
 		}
 	}
 }
@@ -1104,20 +1104,47 @@ country_event = {
 		set_country_flag = failed_company
 	}
 }
-#This is for venice bc for some reason it doesnt work when in the venice file#
 country_event = {
-	id = 712342
-	title = "$FROMCOUNTRY$ cedes Milan!"
-	desc = "EVTDESC712342"
-	
+	id = 171133
+	title = "The Bourbon Restoration"
+	desc = "EVTDESC171133"
 	is_triggered_only = yes
-	
-	immediate = {
-		create_vassal = LOM
-	}
+	major = yes
+	news = yes
 	
 	option = {
-		name = "Excellent"
-		prestige = 25
+		name = "An end to a chaotic period"
+		all_core = {
+			limit = {
+				OR = {
+					is_core = NNN
+					is_core = BEL
+					is_core = SPA
+					is_core = SPC
+					is_core = ITA
+					is_core = BEL
+					region = PRU_572
+					region = NET_397
+					region = BEL_394
+					is_core = LIG
+					is_core = MUN
+					is_core = OLD
+					is_core = EFR
+					is_core = BRE
+					is_core = HAN
+					is_core = LUB
+				}
+			}
+			remove_core = THIS
+		}
+		any_owned = {
+			limit = {
+				continent = europe
+				is_core = THIS
+			}
+			life_rating = -2
+		}
+		ruling_party_ideology = conservative
+		set_country_flag = fra_nerf
 	}
 }

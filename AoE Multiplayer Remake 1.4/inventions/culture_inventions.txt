@@ -15,10 +15,8 @@ early_baroque_architecture = {
             is_greater_power = no
         }
         modifier = {
-            factor = -1
-            OR = {
-                invention = opera
-            }
+            factor = 2
+            invention = opera
         }
     }
     effect = {
@@ -404,9 +402,7 @@ jena_romanticism = {
         base = 2
         modifier = {
             factor = -2
-            OR = {
-                invention = i_sturm_und_drang
-            }
+            invention = i_sturm_und_drang
         }
     }
     effect = {
@@ -977,10 +973,6 @@ age_of_reason = {
             factor = 2
             analytic_philosophy = 1
         }
-        modifier = {
-            factor = 1
-            invention = philosophy_of_language
-        }
     }
     effect = {
         shared_prestige = 20
@@ -998,10 +990,6 @@ state_funded_universities = {
         modifier = {
             factor = 2
             analytic_philosophy = 1
-        }
-        modifier = {
-            factor = 1
-            invention = philosophy_of_language
         }
     }
     effect = {
@@ -1054,10 +1042,6 @@ clergy_educatation_exclusion = {
             factor = 2
             analytic_philosophy = 1
         }
-        modifier = {
-            factor = 1
-            invention = philosophy_of_language
-        }
     }
     effect = {
         education_efficiency = 0.2
@@ -1088,10 +1072,6 @@ social_anthropology = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            invention = darwinism
-        }
         modifier = {
             factor = 2
             assembly_line = 1
@@ -1745,24 +1725,6 @@ separatism = {
 }
 
 #revolution_n_counterrevolution
-dogma_of_violence = {
-    limit = { revolution_n_counterrevolution = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 3
-            average_consciousness = 3
-        }
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
-    }
-    effect = {
-        enable_crime = anarchic_bomb_throwers
-    }
-}
 dogma_of_mass_action = {
     limit = { revolution_n_counterrevolution = 1 }
     news = no
@@ -1782,31 +1744,6 @@ dogma_of_mass_action = {
             faction = communist_rebels
             value = 0.25
         }
-    }
-}
-terrorism = {
-    limit = { revolution_n_counterrevolution = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            ruling_party_ideology = socialist
-        }
-        modifier = {
-            factor = 3
-            OR = {
-                ruling_party_ideology = fascist
-                ruling_party_ideology = communist
-            }
-        }
-        modifier = {
-            factor = -1
-            nationalvalue = nv_liberty
-        }
-    }
-    effect = {
-        enable_crime = terrorist_cells
     }
 }
 #general_strikes = {
@@ -1911,25 +1848,6 @@ nostalgic_romanticism = {
             faction = reactionary_rebels
             value = 0.50
         }
-    }
-}
-anti_egalitarianism = {
-    limit = { revolution_n_counterrevolution = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
-        modifier = {
-            factor = 3
-            ruling_party_ideology = reactionary
-        }
-    }
-    effect = {
-        war_exhaustion = -0.05
-        enable_crime = citizen_guard
     }
 }
 vangaurd_party = {
@@ -2122,7 +2040,7 @@ abolitionism = {
     }
     effect = {
         shared_prestige = 20
-        set_country_flag = abolitionism_activated
+        #set_country_flag = abolitionism_activated
     }
 }
 colonial_fortresses = {

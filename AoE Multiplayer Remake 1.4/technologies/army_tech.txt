@@ -44,9 +44,9 @@ point_defense_system = {
     }
     army_base = {
         supply_consumption = 0.20
+		default_organisation = 5
     }
     max_fort = 1
-    default_organisation = 5
     #dig_in_cap = 1
 
     ai_chance = {
@@ -239,7 +239,9 @@ breech_loaded_rifles = {
     combat_width = 4
     unciv_military = yes
 
+	army_base = {
     default_organisation = 5
+	}
 
     ai_chance = {
         factor = 4

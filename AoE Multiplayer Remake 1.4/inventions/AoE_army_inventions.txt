@@ -506,7 +506,7 @@ flintlock_musket_armament = {
         modifier = {
             factor = 2
             war = yes
-            war_countries = { invention = muzzle_loaded_rifles }
+            war_countries = { invention = flintlock_musket_armament }
         }
     }
     effect = {
@@ -1271,10 +1271,6 @@ army_wargames = {
             factor = 1
             state_n_government = 1
         }
-        modifier = {
-            factor = 1
-            invention = staff_command_support
-        }
     }
     effect = {
         army_base = {
@@ -1322,10 +1318,6 @@ saddle_orders = {
         modifier = {
             factor = 1
             invention = i_empiricism
-        }
-        modifier = {
-            factor = 2
-            invention = trench_systems
         }
     }
     effect = {

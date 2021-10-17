@@ -1,37 +1,37 @@
 political_decisions = {
-    enforce_navigation_acts = {
-		picture = pax_britannica
-		potential = {
-			OR = {
-               		tag = GBJ
-                	tag = ENL
-                	tag = ENG
-                	tag = GBR
-           		     }
-			THC = { exists = no }
-			USA = { exists = no }
-			NOT = { has_country_flag = navigation_acts_enforced }
-		}
-
-		allow = {
-			war = no
-			revolution_n_counterrevolution = 1
-			THC = { all_core = { controlled_by = THIS } }
-		}
-
-		effect = {
-			THC = {
-				all_core = {
-					add_province_modifier = {
-						name = navigation_acts_enforced
-						duration = -1
-							       }
-				           }
-			}
-			set_country_flag = navigation_acts_enforced
-			THIS = { country_event = 176401 }
-		}
-	}
+    #enforce_navigation_acts = {
+	#	picture = pax_britannica
+	#	potential = {
+	#		OR = {
+    #           		tag = GBJ
+    #            	tag = ENL
+    #            	tag = ENG
+    #            	tag = GBR
+    #       		     }
+	#		THC = { exists = no }
+	#		USA = { exists = no }
+	#		NOT = { has_country_flag = navigation_acts_enforced }
+	#	}
+	#
+	#	allow = {
+	#		war = no
+	#		revolution_n_counterrevolution = 1
+	#		THC = { all_core = { controlled_by = THIS } }
+	#	}
+	#
+	#	effect = {
+	#		THC = {
+	#			all_core = {
+	#				add_province_modifier = {
+	#					name = navigation_acts_enforced
+	#					duration = -1
+	#						       }
+	#			           }
+	#		}
+	#		set_country_flag = navigation_acts_enforced
+	#		THIS = { country_event = 176401 }
+	#	}
+	#}
 
 	usa_mobilize_militia = {
 		potential = {
@@ -68,20 +68,17 @@ political_decisions = {
 	}
 	
 	support_us_independence = {
-        picture = army_training
+        picture = become_usa
         potential = {
             is_greater_power = yes
-            has_global_flag = american_revolution_has_happened
             exists = USA
 			num_of_ports = 10
 			NOT = { has_country_flag = supported_us_independence }
-			NOT = { has_global_flag = american_revolution_succeeds }
-			NOT = { has_global_flag = american_revolution_fails }
         }
 	
         allow = {
-		money = 500000
-        NOT = { 
+			money = 500000
+			NOT = { 
 				OR = {
 					truce_with = GBJ
 					truce_with = ENL
@@ -104,6 +101,58 @@ political_decisions = {
                 who = USA
                 value = 200
             }
+			random_country = {
+				limit = {
+					tag = GBR
+					exists = GBR
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			random_country = {
+				limit = {
+					tag = GBJ
+					exists = GBJ
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			random_country = {
+				limit = {
+					tag = ENL
+					exists = ENL
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+			random_country = {
+				limit = {
+					tag = ENG
+					exists = ENG
+				}
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
         }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					alliance_with = GBR
+					alliance_with = GBJ
+					alliance_with = ENG
+					alliance_with = ENL
+				}
+			}
+		}
     }
 }

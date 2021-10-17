@@ -442,32 +442,32 @@ province_event = {
 
 
 #Dye to Fish
-province_event = {
-
-    id = 999997 #new
-
-    trigger = {
-        year = 1890
-        province_id = 1257        # Chittagong
-        not = { trade_goods = fish }
-        owner = {
-            invention = synthetic_dye
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 8
-    }
-
-    title = "EVTNAME999997"
-    desc = "EVTDESC999997"
-
-    option = {
-        name = "EVTOPTA999997"
-        trade_goods = fish
-        # life_rate = 5
-    }
-}
+#province_event = {
+#
+#    id = 999997 #new
+#
+#    trigger = {
+#        year = 1890
+#        province_id = 1257        # Chittagong
+#        not = { trade_goods = fish }
+#        owner = {
+#            invention = synthetic_dye
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 8
+#    }
+#
+#    title = "EVTNAME999997"
+#    desc = "EVTDESC999997"
+#
+#    option = {
+#        name = "EVTOPTA999997"
+#        trade_goods = fish
+#        # life_rate = 5
+#    }
+#}
 
 #Change Wool back to Tobacco
 province_event = {

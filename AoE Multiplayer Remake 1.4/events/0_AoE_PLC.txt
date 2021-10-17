@@ -1050,11 +1050,17 @@ country_event = {
 		name = "We will reform and strengthen the position of the king."
 		badboy = -4
 		years_of_research = 0.1
-		upper_strata = {
+		any_pop = {
+			limit = {
+				strata = rich
+			}
 			militancy = -2
 			consciousness = 1
 		}
-		middle_strata = {
+		any_pop = {
+			limit = {
+				strata = middle
+			}
 			militancy = -2
 			consciousness = 1
 		}
@@ -1075,11 +1081,17 @@ country_event = {
 		name = "The king is a fool, consider that in the reforms!"
 		badboy = -4
 		years_of_research = 0.1
-		upper_strata = {
+		any_pop = {
+			limit = {
+				strata = rich
+			}
 			militancy = -2
 			consciousness = 1
 		}
-		middle_strata = {
+		any_pop = {
+			limit = {
+				strata = middle
+			}
 			militancy = -2
 			consciousness = 1
 		}
@@ -1091,7 +1103,7 @@ country_event = {
 			consciousness = -1
 		}
 		government = oligarchic_republic
-		political_refom = landed_voting
+		political_reform = landed_voting
 		prestige = -15
 	}
 }

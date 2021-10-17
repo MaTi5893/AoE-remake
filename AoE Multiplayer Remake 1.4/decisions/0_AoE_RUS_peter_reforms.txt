@@ -51,6 +51,10 @@ political_decisions = {
 			political_reform = open_borders
 			remove_country_modifier = streltsi_rebellion
 			tech_school = pogonya_za_zapadom
+			activate_technology = naval_design_bureaus
+			activate_technology = alphabetic_flag_signaling
+			activate_technology = the_command_principle
+			activate_technology = battleship_column_doctrine
 			any_pop = {
 				militancy = 2
 			}
@@ -424,8 +428,8 @@ political_decisions = {
 		}
 		allow = {
 			RUS_964 = { owned_by  = RUS }
-			RUS_968 = { owned_by  = RUS }
-			RUS_973 = { owned_by  = RUS }
+			#RUS_968 = { owned_by  = RUS }
+			#RUS_973 = { owned_by  = RUS }
 			1048 =  { owned_by  = RUS }
 			money = 5000000
 			war = no

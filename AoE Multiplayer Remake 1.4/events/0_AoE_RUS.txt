@@ -872,15 +872,15 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.8
-			revolt_percentage = .20
+			revolt_percentage = 0.20
 		}
 		modifier = {
 			factor = 0.7
-			revolt_percentage = .30
+			revolt_percentage = 0.30
 		}
 		modifier = {
 			factor = 0.6
-			revolt_percentage = .40
+			revolt_percentage = 0.40
 		}
 	}
 	
@@ -1250,7 +1250,7 @@ country_event = {
 					is_core = CYP
 					province_id = 847
 					province_id = 848
-					state_id = TUR_884
+					#state_id = TUR_884
 					province_id = 800
 					province_id = 846
 				}

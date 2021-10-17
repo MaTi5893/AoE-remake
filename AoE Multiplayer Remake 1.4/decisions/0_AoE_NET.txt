@@ -1,50 +1,4 @@
 political_decisions = {
-		
-		end_the_admirality = {
-			picture = merchant_navy
-			potential = {
-				primary_culture = dutch
-				has_country_modifier = admiraliteiten
-				exists = yes
-			}
-			allow = {
-				NOT = {
-					government = oligarchic_republic
-				}
-				NOT = {
-					pensions = acceptable_pensions
-					pensions = good_pensions
-				}
-			}
-			effect = {
-				remove_country_modifier = admiraliteiten
-				war_exhaustion = -10
-				tech_school = traditional_academic
-				money = 50000
-			}
-			ai_will_do = { factor = 1 }
-		}
-		
-		#renew_the_eighty_years_war = {
-		#	potential = {
-		#		primary_culture = dutch
-		#		OR = {
-		#			neighbour = SPA
-		#			neighbour = SPC
-		#		}
-		#		NOT = { has_country_flag = renewed_the_eighty_years_war }
-		#	}
-		#	allow = {
-		#		NOT = { truce_with = SPA }
-		#		NOT = { truce_with = SPC }
-		#		war = no
-		#		war_policy = jingoism
-		#	}
-		#	effect = {
-		#		war_exhaustion = 5
-		#		country_event = 1581052
-		#	}
-		#}
 		unite_the_netherlands = {
 			picture = map_netherlands
 			potential = {
@@ -272,7 +226,7 @@ political_decisions = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifer = {
+				modifier = {
 					factor = 0
 					NOT = { year = 1783 }
 				}
