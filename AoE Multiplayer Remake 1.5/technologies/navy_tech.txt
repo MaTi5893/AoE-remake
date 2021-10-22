@@ -1,7 +1,7 @@
 #naval_doctrine
 post_nelsonian_thought = {
     area = naval_doctrine
-    year = 1600
+    year = 1650
     cost = 3600
     unciv_military = yes
     activate_building = naval_base
@@ -275,7 +275,7 @@ ship_construction_8 = {
 #naval_engineering
 naval_design_bureaus = {
     area = naval_engineering
-    year = 1600
+    year = 1650
     cost = 3600
     navy_base = { build_time = -10 }
     unciv_military = yes
@@ -405,7 +405,7 @@ naval_engineering_8 = {
 #naval_science
 alphabetic_flag_signaling = {
     area = naval_science
-    year = 1600
+    year = 1650
     cost = 3600
     unciv_military = yes
     supply_range = 0.5

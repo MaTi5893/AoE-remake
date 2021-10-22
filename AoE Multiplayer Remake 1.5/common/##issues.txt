@@ -231,7 +231,8 @@ political_reforms = {
             allow = {
                 NOT = { has_country_flag = communist_gov }
                 NOT = { has_country_flag = fascist_gov }
-                NOT = { has_country_flag = slave_revolution }      
+                NOT = { has_country_flag = slave_revolution }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
 
@@ -242,7 +243,7 @@ political_reforms = {
                 NOT = { has_country_flag = communist_gov }
                 NOT = { has_country_flag = fascist_gov }
                 NOT = { has_country_flag = slave_revolution }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
                 OR = {
                     NOT = { has_country_flag = abolitionism_activated }
                     year = 1780
@@ -256,7 +257,7 @@ political_reforms = {
             allow = {
                 OR = {
                     NOT = { has_country_flag = the_slavery_debate }
-                    
+                    NOT = { has_country_flag = indian_campaign_target_flag }
                     year = 1800
                 }
             }
@@ -282,7 +283,7 @@ political_reforms = {
             poor_vote = 0
             global_immigrant_attract = 0.01
             allow = {
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
                 OR = {
                     has_country_flag = liberal_revolution_in_progress
                     has_country_flag = had_liberal_revolution
@@ -300,8 +301,7 @@ political_reforms = {
             cb_generation_speed_modifier = 0.05
             global_immigrant_attract = 0.02
             allow = {
-                
-                NOT = { government = elective_monarchy_oligarchy }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         wealth_voting = {
@@ -310,7 +310,9 @@ political_reforms = {
             poor_vote = 0
 
             global_immigrant_attract = 0.08
-            
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         universal_weighted_voting = {
             rich_vote = 1.5
@@ -318,7 +320,9 @@ political_reforms = {
             poor_vote = 0.5
             cb_generation_speed_modifier = -0.1
             global_immigrant_attract = 0.30
-            
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         universal_voting = {
             rich_vote = 1
@@ -327,7 +331,9 @@ political_reforms = {
             cb_generation_speed_modifier = -0.15
             global_immigrant_attract = 0.55
             core_pop_militancy_modifier = -0.01
-            
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
 
@@ -336,18 +342,26 @@ political_reforms = {
         party_appointed = { #executive head
             rules = { same_as_ruling_party = yes }
             ruling_party_support = 0.05
+            allow = {
+                NOT = { government = elective_monarchy_oligarchy }
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         appointed = { #house of lords
             rules = { population_vote = yes }
             rich_vote = 5.00
             middle_vote = 0.10
             global_immigrant_attract = 0.01
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         state_equal_weight = { #house of commons
             rules = { population_vote = yes }
             rich_vote = 1.00
             middle_vote = 0.50
             allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
                 NOT = { vote_franschise = none_voting }
                 NOT = { has_country_flag = theocratic_government }
             }
@@ -360,6 +374,7 @@ political_reforms = {
             poor_vote = 0.01
             allow = {
                 NOT = { vote_franschise = none_voting }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
             global_immigrant_attract = 0.03
         }
@@ -370,19 +385,22 @@ political_reforms = {
             rules = { largest_share = yes }
             allow = {
                 NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government } 
+                NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         jefferson_method = {
             rules = { dhont = yes }
             allow = {
-                NOT = { vote_franschise = none_voting }  
+                NOT = { vote_franschise = none_voting }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         proportional_representation = {
             rules = { sainte_laque = yes }
             allow = {
                 NOT = { vote_franschise = none_voting }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -390,11 +408,17 @@ political_reforms = {
         no_meeting = {
             suppression_points_modifier = 0.1
             global_immigrant_attract = -0.04
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         yes_meeting = {
             issue_change_speed = 1
             global_immigrant_attract = 0.02
             suppression_points_modifier = -0.25
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
 
     }
@@ -405,16 +429,25 @@ political_reforms = {
             literacy_con_impact = -0.25
             suppression_points_modifier = 0.25
             global_immigrant_attract = -0.01
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         censored_press = {
             issue_change_speed = 0.25
             global_immigrant_attract = 0.01
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         free_press = {
             literacy_con_impact = 0.25
             issue_change_speed = 0.5
             global_immigrant_attract = 0.02
             suppression_points_modifier = -0.25
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
     trade_unions = { #Executive power
@@ -422,22 +455,34 @@ political_reforms = {
         no_trade_unions = { #One man to rule
             suppression_points_modifier = 0.1
             ruling_party_support = 0.05
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         state_controlled = { #Advisor Council
             social_reform_desire = 0.1
             global_immigrant_attract = 0.01
             diplomatic_points_modifier = 0.1
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         non_socialist = { #Delegated Ministers
             social_reform_desire = 0.2
             global_immigrant_attract = 0.02
             issue_change_speed = -0.05
             influence_modifier = 0.1
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         all_trade_unions = { #Cabinet
             social_reform_desire = 0.3
             global_immigrant_attract = 0.03
             mobilization_economy_impact = -0.05
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
 
@@ -481,20 +526,34 @@ political_reforms = {
             #mobilisation_economy_impact = 1
             land_unit_start_experience = 10
             global_immigrant_attract = -0.1
+            #education_efficiency_modifier = -0.01
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         four_year_draft = {
             mobilisation_size = 0.045
             #mobilisation_economy_impact = 0.1
             land_unit_start_experience = 5
             global_immigrant_attract = -0.05
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         two_year_draft = {
             mobilisation_size = 0.04
+            #mobilisation_economy_impact = 0.05
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         one_year_draft = {
             mobilisation_size = 0.035
             global_immigrant_attract = 0.01
             land_unit_start_experience = -2
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         no_draft = {
             mobilisation_size = 0.03
@@ -504,7 +563,8 @@ political_reforms = {
                 OR = {
                     NOT = { war_policy = jingoism }
                     NOT = { war_policy = pro_military}
-                } 
+                }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -517,20 +577,24 @@ political_reforms = {
             allow = {
                 citizenship_policy = residency
                 NOT = { has_country_flag = theocratic_government }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         culture_voting_only = {
             rules = { culture_voting = yes }
             global_assimilation_rate = 0.08
-            
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         all_voting_pops = {
             rules = { all_voting = yes }
             non_accepted_pop_militancy_modifier = -0.01
             global_assimilation_rate = 0.2
             global_immigrant_attract = 0.08
-            
+            allow = {
+                NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
 
@@ -546,6 +610,7 @@ political_reforms = {
                     has_country_flag = absolute_monarchy_gov
                     has_country_flag = semi_constitutional_monarchy_gov
                 }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         peonage = {
@@ -555,8 +620,12 @@ political_reforms = {
             suppression_points_modifier = 0.1
             poor_everyday_needs = 0.1
             poor_savings_modifier = -0.25
+            #on_execute = { effect = { country_event = 6016804 } }
             allow = {
-                #NOT = { safety_regulations = no_safety }
+                     OR = {
+                           NOT = { has_country_flag = serfdom_not_abolished } year = 1870
+                     }
+                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
 
@@ -568,6 +637,8 @@ political_reforms = {
             tariff_efficiency_modifier = 0.05
             administrative_multiplier = 2
             allow = {
+                     has_country_flag = modern_central_bank_system_invented
+                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -591,6 +662,7 @@ political_reforms = {
                     has_country_flag = presidential_dictatorship_gov
                     has_country_flag = theocratic_government
                 }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         quota_immigration = {
@@ -608,13 +680,13 @@ political_reforms = {
                     primary_culture = french_canadian
                 }
                 NOT = { has_country_flag = unciv }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         open_borders = {
             allow = {
                 NOT = { has_country_flag = unciv }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -631,6 +703,7 @@ political_reforms = {
 			core_pop_militancy_modifier = -0.01
 			core_pop_consciousness_modifier = -0.01
 			administrative_multiplier = 1
+			#on_execute = { effect = { country_event = 6016804 } }
 			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
 		}
 		
@@ -644,7 +717,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
 		}
-
+				
 		civilizing = { #Charter Company
 			tariff_efficiency_modifier = 0.1
 			tax_efficiency = 0.05
@@ -688,7 +761,7 @@ political_reforms = {
                         }
                     }
                 }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         confederalism = {
@@ -716,7 +789,7 @@ political_reforms = {
                     }
                     has_country_flag = is_swiss
                 }
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         regionalism = {
@@ -736,7 +809,7 @@ political_reforms = {
                 }
                 debt_law = serfdom
                 has_country_flag = serfdom_not_abolished
-                
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         federalism = {
@@ -748,6 +821,7 @@ political_reforms = {
                 can_create_vassals = yes
                 is_vassal = no
                 NOT = { has_country_flag = the_slavery_debate }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         unitary = {
@@ -762,6 +836,7 @@ political_reforms = {
                     has_country_flag = france
                 }
                 NOT = { has_country_flag = dual_monarchy }
+                NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
     }
@@ -777,34 +852,54 @@ social_reforms = {
         no_minimum_wage = { #very influential
             tax_efficiency = -0.05
             RGO_throughput = 0.20
+            factory_throughput = 0.0
+            #education_efficiency_modifier = 0.10
             core_pop_consciousness_modifier = -0.02
+            minimum_wage = 0.0
 
             rich_vote = 0.20
+            middle_vote = 0.0
+            poor_vote = 0.0
 
-            
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         trinket_wage = { #influential
             tax_efficiency = -0.025
             RGO_throughput = 0.15
             factory_throughput = 0.025
-         
+            #education_efficiency_modifier = 0.05
             core_pop_consciousness_modifier = -0.01
             minimum_wage = 0.2
+
             rich_vote = 0.15
+            middle_vote = 0.0
+            poor_vote = 0.0
 
             allow = {
-                NOT = { has_country_flag = theocratic_government }
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = theocratic_government }
+                     NOT = { has_country_flag = indian_campaign_target_flag }
             }
         }
         low_minimum_wage = { #silghtly influential
+            tax_efficiency = 0.0
             RGO_throughput = 0.10
             factory_throughput = 0.05
+            #education_efficiency_modifier = 0.0
+            core_pop_consciousness_modifier = 0.0
             minimum_wage = 0.4
 
             rich_vote = 0.10
+            middle_vote = 0.0
+            poor_vote = 0.0
 
             allow = {
+                #has_global_flag = factions_setup_done
                 NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = indian_campaign_target_flag }
                 NOT = { has_country_flag = clergy_and_nobility_domination }
             }
         }
@@ -817,22 +912,50 @@ social_reforms = {
             minimum_wage = 0.6
 
             rich_vote = 0.05
+            middle_vote = 0.0
+            poor_vote = 0.0
 
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         good_minimum_wage = { #irrelevant
             tax_efficiency = 0.05
+            RGO_throughput = 0.0
             factory_throughput = 0.1
             #education_efficiency_modifier = -0.10
             core_pop_consciousness_modifier = 0.02
             minimum_wage = 0.8
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
-
     work_hours = { #gentry
         #administrative = yes
         next_step_only = yes
         no_work_hour_limit = { #irrelevant
             tax_efficiency = 0.05
+            factory_throughput = 0.0
+            research_points_modifier = 0.0
+            goods_demand = 0.0
+            minimum_wage = 0.0
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         fourteen_hours = { #marginally relevant
             tax_efficiency = 0.025
@@ -842,18 +965,31 @@ social_reforms = {
             minimum_wage = 0.1
             global_immigrant_attract = 0.1
 
+            rich_vote = 0.0
             middle_vote = 0.02
+            poor_vote = 0.0
 
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         twelve_hours = { #slightly influential
+            tax_efficiency = 0.0
             factory_throughput = 0.05
             research_points_modifier = 0.10
             goods_demand = 0.10
             minimum_wage = 0.15
             global_immigrant_attract = 0.15
 
+            rich_vote = 0.0
             middle_vote = 0.04
-            
+            poor_vote = 0.0
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         ten_hours = { #influential
             tax_efficiency = -0.025
@@ -863,8 +999,14 @@ social_reforms = {
             minimum_wage = 0.20
             global_immigrant_attract = 0.2
 
+            rich_vote = 0.0
             middle_vote = 0.06
+            poor_vote = 0.0
 
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         eight_hours = { #very influential
             tax_efficiency = -0.05
@@ -874,16 +1016,16 @@ social_reforms = {
             minimum_wage = 0.30
             global_immigrant_attract = 0.25
 
+            rich_vote = 0.0
             middle_vote = 0.08
+            poor_vote = 0.0
 
-            #allow = {
-            #    #unemployment_subsidies = no_subsidies
-			#	#NOT = { pensions = good_pensions }
-			#	#NOT = { health_care = good_health_care }
-            #}
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
-
     safety_regulations = { #nobility
         #administrative = yes
         next_step_only = yes
@@ -895,7 +1037,11 @@ social_reforms = {
             factory_maintenance = 0.25
 
             rich_vote = 0.20
+            middle_vote = 0.0
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         trinket_safety = { #influential
             tax_efficiency = -0.025
@@ -905,7 +1051,11 @@ social_reforms = {
             factory_maintenance = 0.20
 
             rich_vote = 0.15
+            middle_vote = 0.0
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         low_safety = { #slightly influential
             tax_efficiency = 0.0
@@ -914,6 +1064,8 @@ social_reforms = {
             factory_maintenance = 0.15
 
             rich_vote = 0.10
+            middle_vote = 0.0
+            poor_vote = 0.0
 
             allow = {
 				NOT = { has_country_flag = clergy_and_nobility_domination }
@@ -927,13 +1079,24 @@ social_reforms = {
             factory_maintenance = 0.10
 
             rich_vote = 0.05
+            middle_vote = 0.0
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         good_safety = { #irrelevant
             tax_efficiency = 0.05
             ruling_party_support = 0.1
             administrative_multiplier = 2
             goods_demand = -0.05
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+            }
         }
     }
 
@@ -942,6 +1105,18 @@ social_reforms = {
         no_subsidies = { #irrelevant
             tax_efficiency = 0.05
             RGO_throughput = 0.10
+            factory_throughput = 0.0
+            factory_output = 0.0
+            unemployment_benefit = 0.0
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         trinket_subsidies = { #marginally relevant
             tax_efficiency = 0.025
@@ -949,8 +1124,14 @@ social_reforms = {
             factory_throughput = 0.025
             unemployment_benefit = 0.50
 
+            rich_vote = 0.0
             middle_vote = 0.02
             poor_vote = 0.01
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
@@ -959,40 +1140,67 @@ social_reforms = {
             tariff_efficiency_modifier = -0.025
             artisan_throughput = 0.05
 
+            rich_vote = 0.0
             middle_vote = 0.04
             poor_vote = 0.02
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         acceptable_subsidies = { #influential
+            RGO_throughput = 0.025
             factory_throughput = 0.075
             unemployment_benefit = 2.0
             tariff_efficiency_modifier = -0.05
             artisan_throughput = 0.15
 
+            rich_vote = 0.0
             middle_vote = 0.06
             poor_vote = 0.03
 
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         good_subsidies = { #very influential
-			RGO_throughput = 0.1
+            RGO_throughput = 0.0
             factory_throughput = 0.1
             unemployment_benefit = 3.0
             tariff_efficiency_modifier = -0.1
             artisan_throughput = 0.25
-		    
+
+            rich_vote = 0.0
             middle_vote = 0.08
             poor_vote = 0.04
 
-            #allow = {
-			#	#NOT = { pensions = good_pensions } #v infl army
-            #    NOT = {	work_hours = eight_hours }
-			#	#NOT = { health_care = good_health_care }
-            #}
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
-
     pensions = { #army
         next_step_only = yes
         no_pensions = { #irrelevant
+            land_unit_start_experience = 0
+            land_organisation = 0.0
+            leadership_modifier = 0.0
+            supply_consumption = 0.0
+            min_military_spending = 0.0
+            max_military_spending = 0.0
+            mobilisation_size = 0.0
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+                     #has_global_flag = factions_setup_done
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         trinket_pensions = { #marginally relevant
             land_unit_start_experience = 5
@@ -1006,7 +1214,10 @@ social_reforms = {
 
             rich_vote = 0.03
             middle_vote = 0.02
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         low_pensions = { #slightly influential
             land_unit_start_experience = 10
@@ -1020,7 +1231,10 @@ social_reforms = {
 
             rich_vote = 0.06
             middle_vote = 0.04
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         acceptable_pensions = { #influential
             land_unit_start_experience = 15
@@ -1034,7 +1248,10 @@ social_reforms = {
 
             rich_vote = 0.09
             middle_vote = 0.06
+            poor_vote = 0.0
 
+            allow = {
+            }
         }
         good_pensions = { #very influential
             land_unit_start_experience = 20
@@ -1042,28 +1259,35 @@ social_reforms = {
             leadership_modifier = 0.20
             supply_consumption = 0.60
             org_regain = 0.20
-			min_military_spending = 0.20
+            min_military_spending = 0.20
             max_military_spending = 0.20
             mobilisation_size = 0.025
-			
+
             rich_vote = 0.12
             middle_vote = 0.08
+            poor_vote = 0.0
 
             allow = {
 				has_country_flag = skill_and_merit_allowed
-				#NOT = {	work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = { health_care = good_health_care } #v infl beurocracy
             }
         }
     }
-
     health_care = { #bureaucracy
         #administrative = yes
         next_step_only = yes
         no_health_care = { #irrelevant
+            tax_efficiency = 0.0
+            administrative_efficiency_modifier = 0.0
+            education_efficiency_modifier = 0.0
             min_social_spending = 0.05
             pension_level = 0.10
+
+            rich_vote = 0.0
+            middle_vote = 0.0
+            poor_vote = 0.0
+
+            allow = {
+            }
         }
         trinket_health_care = { #marginally relevant
             tax_efficiency = 0.025
@@ -1072,14 +1296,28 @@ social_reforms = {
             education_efficiency_modifier = 0.025
             min_social_spending = 0.10
             pension_level = 0.20
+
+            rich_vote = 0.0
+            middle_vote = 0.02
+            poor_vote = 0.0
+
+            allow = {
+            }
         }
         low_health_care = { #slightly influential
             tax_efficiency = 0.05
             administrative_efficiency_modifier = 0.1
-            #administrative_multiplier = 6
+            administrative_multiplier = 6
             education_efficiency_modifier = 0.05
             min_social_spending = 0.15
             pension_level = 0.30
+
+            rich_vote = 0.0
+            middle_vote = 0.04
+            poor_vote = 0.0
+
+            allow = {
+            }
         }
         acceptable_health_care = { #influential
             tax_efficiency = 0.075
@@ -1088,20 +1326,29 @@ social_reforms = {
             education_efficiency_modifier = 0.075
             min_social_spending = 0.20
             pension_level = 0.40
+
+            rich_vote = 0.0
+            middle_vote = 0.06
+            poor_vote = 0.0
+
+            allow = {
+            }
         }
         good_health_care = { #very influential
             tax_efficiency = 0.10
             administrative_efficiency_modifier = 0.20
             administrative_multiplier = 10
             education_efficiency_modifier = 0.1
+            pop_growth = 0.004
             min_social_spending = 0.25
             pension_level = 0.50
 
+            rich_vote = 0.0
+            middle_vote = 0.08
+            poor_vote = 0.0
+
             allow = {
                 has_country_flag = skill_and_merit_allowed
-				#NOT = { work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = {	pensions = good_pensions } #v infl army
             }
         }
     }
@@ -1111,21 +1358,27 @@ social_reforms = {
         administrative = yes
         no_schools = {
             global_assimilation_rate = -0.002
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         low_schools = {
             education_efficiency_modifier = 0.05
             global_assimilation_rate = 0.002
             global_immigrant_attract = 0.02
             administrative_multiplier = 1
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         acceptable_schools = {
             education_efficiency_modifier = 0.075
             global_assimilation_rate = 0.005
             global_immigrant_attract = 0.03
             administrative_multiplier = 2
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
         good_schools = {
             education_efficiency_modifier = 0.1
@@ -1142,17 +1395,23 @@ social_reforms = {
         capital_punishment = {
             core_pop_militancy_modifier = -0.01
             suppression_points_modifier = 0.25
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
 
         colonial_transportation = {
             administrative_multiplier = 1
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
 
         incarceration = {
             administrative_multiplier = 1
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
 
         rehabilitation = {
@@ -1160,7 +1419,9 @@ social_reforms = {
             global_assimilation_rate = 0.02
             suppression_points_modifier = -0.2
             administrative_multiplier = 2
-            
+            allow = {
+                     NOT = { has_country_flag = indian_campaign_target_flag }
+            }
         }
     }
 

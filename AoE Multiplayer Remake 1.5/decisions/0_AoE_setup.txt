@@ -18,6 +18,30 @@ political_decisions = {
 					reduce_pop = 1.7
 				}
 			}
+			RUS_994 = {
+				any_pop = {
+					limit = {
+						NOT = { culture = finnish }
+					}
+					reduce_pop = 1.6
+				}
+				any_pop = {
+					limit = {
+						culture = finnish
+					}
+					reduce_pop = 2.4
+				}
+			}
+			RUS_349 = {
+				any_pop = {
+					reduce_pop = 2
+				}
+			}
+			RUS_354 = {
+				any_pop = {
+					reduce_pop = 2
+				}
+			}
 			DNN = {
 				any_pop = {
 					limit = {

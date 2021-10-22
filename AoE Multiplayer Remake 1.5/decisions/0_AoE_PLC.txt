@@ -30,6 +30,7 @@ political_decisions = {
             prestige = 20
             political_reform = wealth_weighted_voting
             political_reform = unitary
+			add_accepted_culture = ashnekazi
             random_owned = {
                 limit = {
                     owner = { political_parties = underground_parties }
@@ -225,11 +226,11 @@ political_decisions = {
 			ideological_thought = 1
 			OR = {
 				AND = {
-					706 = {
-						country_units_in_province = SAX
+					RUS_706 = {
+						country_units_in_state = SAX
 					}
-					703 = {
-						country_units_in_province = SAX
+					AUS_702 = {
+						country_units_in_state = SAX
 					}
 				}
 				AND = {

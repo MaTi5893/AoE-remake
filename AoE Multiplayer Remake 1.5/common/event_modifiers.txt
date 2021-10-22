@@ -733,6 +733,7 @@ suez_canal_construction = {
 }
 
 st_petersburg_construction = {
+	assimilation_rate = 2
     icon = 11
 }
 
@@ -4365,7 +4366,7 @@ table_of_ranks = {
 peter_the_great = {
 	culture_tech_research_bonus = 0.1
 	navy_tech_research_bonus = 0.1
-	research_points = 0.5
+	research_points = 0.25
 	ruling_party_support = 0.35
 	bad_badboy = -0.05
 	education_efficiency_modifier = 0.15
