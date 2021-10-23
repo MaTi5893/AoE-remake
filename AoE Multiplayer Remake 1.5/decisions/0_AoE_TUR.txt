@@ -343,13 +343,12 @@ political_decisions = {
 			tag = TUR
 			NOT = { has_country_flag = eastern_tributaries }
 			exists = yes
-			has_country_flag = tur_east_focus
 		}
 		allow = {
-			#modern_army_doctrine = 1
-			#NOT = { has_country_flag = janisseries }
+			nationalism_n_imperialism = 1
+			NOT = { has_country_modifier = janisseries_influence }
 			is_greater_power = yes
-			has_country_flag = recovered_hungary
+			owns = 926
 		}
 		effect = {
 			set_country_flag = eastern_tributaries
@@ -367,13 +366,22 @@ political_decisions = {
 			1054 = { add_core = THIS }
 			1131 = { add_core = THIS }
 			1132 = { add_core = THIS }
-			badboy = 18
+			add_accepted_culture = azerbaijani
+			badboy = 15
+			random_country = {
+				limit = {
+					tag = ABK
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
 		}
 		ai_will_do = {					
 			factor = 1
 		}
 	}
-	
+
 	end_romanian_principalities = {
 		picture = map_moldavia
 		potential = {

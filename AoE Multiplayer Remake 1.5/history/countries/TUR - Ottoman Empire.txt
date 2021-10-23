@@ -5,8 +5,7 @@ religion = sunni
 government = absolute_monarchy
 plurality = 0.05
 nationalvalue = nv_autocracy
-literacy = 0.16
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+literacy = 0.18
 civilized = yes
 
 #GreaterPowers = prestige
@@ -55,7 +54,6 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-set_country_flag = christian_oppression
 set_country_flag = istanbul_not_renamed
 set_country_flag = janisseries
 
