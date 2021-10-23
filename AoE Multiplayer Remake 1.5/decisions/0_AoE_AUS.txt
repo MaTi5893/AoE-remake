@@ -79,30 +79,6 @@ political_decisions = {
         factor = 1
         }
     }
-    vaccination_mar = {
-        picture = ill_hand
-        potential = {
-            tag = AUS
-            NOT = {
-                has_country_flag = vaccination_mar
-            }
-            exists = yes
-        }
-        allow = {
-            electricity = 1
-            has_country_modifier = maria_theresa
-        }
-        effect = {
-            add_country_modifier = {
-                name = austrian_vaccination
-                duration = 3650
-            }
-            set_country_flag = vaccination_mar
-        }
-        ai_will_do = {
-        factor = 1
-        }
-    }
     establish_theresian_military_academy = {
         picture = army_training
         potential = {
@@ -288,7 +264,38 @@ political_decisions = {
         }
         effect = {
             prestige = 10
-            badboy = 20
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							owns = 599
+							owns = 595
+						}
+					}
+				}
+				owner = {
+					badboy = 20
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							owns = 599
+							owns = 595
+						}
+						NOT = {
+							AND = {
+								owns = 599
+								owns = 595
+							}
+						}
+					}
+				}
+				owner = {
+					badboy = 10
+				}
+			}
             BAV = {
                 all_core = {
                     add_core = AUS

@@ -3,7 +3,7 @@ political_decisions = {
 		picture = rights_of_man
 		potential = {
 			primary_culture = french
-			NOT = { has_country_flag = rights_of_man }
+			NOT = { has_country_modifier = rights_of_man }
 			exists = yes
 		}
 		
@@ -24,7 +24,6 @@ political_decisions = {
 			any_pop = {
 				militancy = -2
 			}
-			set_country_flag = rights_of_man
 			add_country_modifier = {
 				name = rights_of_man
 				duration = -1
@@ -38,22 +37,25 @@ political_decisions = {
 			primary_culture = french
 			NOT = { has_country_flag = edict_of_tolerance }
 			exists = yes
-			is_ideology_enabled = socialist
 		}
 		allow = {
-			average_militancy = 4
+			war = no
+			OR = {
+				average_militancy = 10
+				nationalism_n_imperialism = 1
+			}
 		}
 		effect = {
 			set_country_flag = edict_of_tolerance
-			add_country_modifier = {
-				name = freedom_of_religion
-				duration = -1
-			}
+			add_accepted_culture = gascon
+			add_accepted_culture = picard
+			add_accepted_culture = wallonian
+			add_accepted_culture = occitan
 			any_pop = {
 				limit = {
 					religion = protestant 
 				}
-				militancy = -2
+				militancy = -6
 			}
 			any_pop = {
 				limit = {
@@ -326,7 +328,41 @@ political_decisions = {
 			has_recently_lost_war = no
 		}
 		effect = {
-			badboy = 15
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							owns = 387
+							owns = 389
+							owns = 397
+						}
+					}
+				}
+				owner = { 
+					badboy = 15
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							owns = 387
+							owns = 389
+							owns = 397
+						}
+						NOT = {
+							AND = {
+							owns = 387
+							owns = 389
+							owns = 397
+							}
+						}
+					}
+				}
+				owner = { 
+					badboy = 10
+				}
+			}
 			set_country_flag = louis_dream
 			398 = {
 				add_core = THIS

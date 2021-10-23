@@ -181,7 +181,40 @@ political_decisions = {
             set_country_flag = revise_the_treaty_of_andrusovo
             RUS_943 = { add_core = THIS }
             RUS_958 = { add_core = THIS }
-            badboy = 15
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							owns = 961
+							owns = 943
+						}
+						NOT = {
+							AND = {
+								owns = 961
+								owns = 943
+							}
+						}
+					}
+				}
+				owner = {
+					badboy = 7.5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							AND = {
+								owns = 961
+								owns = 943
+							}
+						}
+					}
+				}
+				owner = {
+					badboy = 15
+				}
+			}
 
             relation = {
                 who = RUS
@@ -471,7 +504,16 @@ political_decisions = {
             355 = { add_core = THIS }
             352 = { add_core = THIS }
             351 = { add_core = THIS }
-            badboy = 5
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { owns = 354 }
+					}
+				}
+				owner = {
+					badboy = 5
+				}
+			}
         }
         ai_will_do = { factor = 1 }
     }

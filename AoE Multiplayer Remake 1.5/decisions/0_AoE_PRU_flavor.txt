@@ -494,9 +494,38 @@ political_decisions = {
             PRU_572 = {
                 add_core = THIS
             }
-            badboy = 15
+			PRU_581 = {
+				add_core = THIS
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							AND = {
+							owns = 578
+							owns = 580
+							owns = 536
+							}
+						}
+					}
+				}
+				owner = {
+					badboy = 15
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 578
+						owns = 580
+						owns = 536
+					}
+				}
+				owner = {
+					badboy = 7.5
+				}
+			}
         }
-
         ai_will_do = {
             factor = 1
             modifier = {
