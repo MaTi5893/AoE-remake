@@ -259,11 +259,13 @@ political_decisions = {
 			ideological_thought = 1
 			OR = {
 				AND = {
-					RUS_706 = {
-						country_units_in_state = SAX
+					any_owned_province = {
+						province_id = 706
+						country_units_in_province = SAX
 					}
-					AUS_702 = {
-						country_units_in_state = SAX
+					any_owned_province = {
+						province_id = 703
+						country_units_in_province = SAX
 					}
 				}
 				AND = {

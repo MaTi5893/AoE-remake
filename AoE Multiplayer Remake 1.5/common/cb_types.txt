@@ -3265,6 +3265,7 @@ conquest_low = {
 				NOT = { has_country_flag = hre_member }
 				THIS = { has_country_flag = hre_member } #hre member can justify on non hre member
 			}
+			tag = LIG
 		}
         OR = {
             AND = {
