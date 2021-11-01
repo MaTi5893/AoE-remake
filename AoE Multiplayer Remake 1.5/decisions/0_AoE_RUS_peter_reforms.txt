@@ -478,6 +478,12 @@ political_decisions = {
 			inherit = HET
 			inherit = ZZH
 			years_of_research = 1
+			all_core = {
+				limit = {
+					life_rating = 32
+				}
+				life_rating = 3
+			}
 			tech_school = pogonya_za_zapadom
 			set_country_flag = catharine_the_great_reforms
 		}

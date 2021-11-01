@@ -74,21 +74,21 @@ political_decisions = {
 			any_pop = {
 				limit = {
 					culture = russian
-					}
-				reduce_pop = 0.75
+				}
+				reduce_pop = 0.82
 			}
 			any_pop = {
 				limit = {
 					culture = tatar
 				}
-				reduce_pop = 1.25
+				reduce_pop = 1.5
 			}
 			RUS = {
 				any_pop = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.88
+					reduce_pop = 0.95
 				}
 			}
 			any_owned = {

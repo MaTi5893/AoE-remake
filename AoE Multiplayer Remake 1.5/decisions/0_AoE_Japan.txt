@@ -40,7 +40,6 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
-			add_accepted_culture = korean
 		}
 	}
 	
@@ -101,88 +100,6 @@ political_decisions = {
 					country_event = 157102
 				}
 			}
-		}
-	}
-	
-	philipino_conquest = {
-		picture = map_phillipines
-		potential = {
-			OR = { tag = JAP tag = TKG }
-			NOT = { has_country_flag = philipino_conquest }
-		}
-		allow = {
-			war = no
-			PHL = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-		}
-		effect = {
-			PHL = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			set_country_flag = philipino_conquest
-		}
-	}
-	
-	declare_japanese_empire = {
-		picture = become_japan
-		potential = {
-			OR = { tag = JAP tag = TKG }
-			NOT = { has_country_flag = declared_japanese_empire }
-		}
-		allow = {
-			civilized = yes
-			is_greater_power = yes
-			war = no
-			KOR = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
-		}
-		effect = {
-			MCK = {
-				all_core = {
-				add_core = THIS
-				}
-			}
-			war_exhaustion = -5
-			prestige = 25
-			set_country_flag = declared_japanese_empire
-		}
-	}
-	
-	pacific_beast = {
-		potential = {
-			OR = { tag = JAP tag = TKG }
-			NOT = { has_country_flag = declared_japanese_empire }
-			owns = 1537
-		}
-		allow = {
-			civilized = yes
-			war = no
-			is_greater_power = yes
-			NOT = { badboy = 10 }
-		}
-		effect = {
-			CHI_1539 = {
-				add_core = THIS
-			}
-			CHI_1476 = {
-				add_core = THIS
-			}
-			CHI_1611 = {
-				add_core = THIS
-			}
-			CHI_1487 = {
-				add_core = THIS
-			}
-			badboy = 20
-			set_country_flag = declared_japanese_empire
 		}
 	}
 }

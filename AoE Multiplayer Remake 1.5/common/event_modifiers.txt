@@ -4310,10 +4310,7 @@ foreign_weapons_imported = {
 swedish_caroleans = {
     org_regain = 0.25
     land_organisation = 0.15
-    mobilisation_economy_impact = -0.25
-    land_unit_start_experience = 10
     supply_consumption = -0.05
-    mobilisation_size = 0.01
     icon = 15
 }
 riksdaler = {
@@ -6887,7 +6884,7 @@ streltsi_rebellion = {
     supply_consumption = 0.1
     land_organisation = -0.05
     org_regain = -0.1
-    mobilisation_size = -0.03
+    mobilisation_size = -0.01
     icon = 16
 }
 army_with_a_state1 = {

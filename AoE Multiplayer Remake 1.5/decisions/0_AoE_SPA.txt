@@ -68,6 +68,12 @@ political_decisions = {
         effect = {
             set_country_flag = made_royal_academy
             prestige = 20
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+				}
+				literacy = 0.05
+			}
         }
         ai_will_do = {
         factor = 1
@@ -793,6 +799,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = enacted_new_constitution_spc
+			add_accepted_culture = caribeno
             random_owned = {
                 limit = {
                     OR = {
