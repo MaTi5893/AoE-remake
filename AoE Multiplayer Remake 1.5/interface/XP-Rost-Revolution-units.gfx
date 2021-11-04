@@ -1,0 +1,100 @@
+######  Europa Universalis III	######
+
+######   Revolution Spritepack	######
+
+
+######     by Rost 3D Studio	######
+
+
+objectTypes = {
+
+	EMFXActorType = {
+		name = "PortugeseGCInfantry2"
+		actorfile = "gfx\anims\Portuguese_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "VenetianGCInfantry2"
+		actorfile = "gfx\anims\Venetian_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "DutchGCInfantry2"
+		actorfile = "gfx\anims\NEDDutch_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "DanishGCInfantry2"
+		actorfile = "gfx\anims\Danish_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "ScottishGCInfantry2"
+		actorfile = "gfx\anims\Scottish_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "PolishGCInfantry"
+		actorfile = "gfx\anims\Polish_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1700_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1700_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1700_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "PolishGCInfantry2"
+		actorfile = "gfx\anims\Polish_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Eastern_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Eastern_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Eastern_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "GenericEasternGCInfantry"
+		actorfile = "gfx\anims\Generic_Eastern_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Eastern_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Eastern_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Eastern_1800_Attack.xsm"
+		scale = 5.9
+	}
+
+	EMFXActorType = {
+		name = "GenericEasternGCInfantry2"
+		actorfile = "gfx\anims\Generic_Eastern_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Eastern_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Eastern_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Eastern_1800_Attack.xsm"
+		scale = 5.9
+	}
+}	

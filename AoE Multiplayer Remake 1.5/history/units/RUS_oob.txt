@@ -383,9 +383,9 @@ leader = {
 	picture = peter_the_great
 	date = 1685.1.1
 	type = land
-	personality = attack_3.2
-	background = defence_5.1
-	prestige = 0.4
+	personality = attack_2.2
+	background = defence_3.1
+	prestige = 0.5
 }
 
 leader = {
@@ -393,8 +393,8 @@ leader = {
 	picture = rus_gen_vorontsov
 	date = 1684.1.1
 	type = land
-	personality = attack_4.1
-	background = defence_4.1
+	personality = attack_3.1
+	background = defence_3.1
 	prestige = 0.3
 }
 
@@ -403,9 +403,9 @@ leader = {
 	picture = rus_gen_chicherin
 	date = 1675.1.1
 	type = land
-	personality = attack_1.2
-	background = defence_2.5
-	prestige = 0.1
+	personality = attack_5.1
+	background = defence_2.2
+	prestige = 0.4
 }
 
 leader = {
@@ -415,16 +415,6 @@ leader = {
 	type = land
 	personality = attack_1.1
 	background = defence_1.2
-	prestige = 0.1
-}
-
-leader = {
-	name = "Anikita Repnin"
-	picture = rus_adm_menshikov
-	date = 1673.1.1
-	type = sea
-	personality = attack_2.2
-	background = defence_minus_4.1
 	prestige = 0.1
 }
 
@@ -446,16 +436,6 @@ leader = {
 	personality = attack_2.1
 	background = defence_2.1
 	prestige = 0.1
-}
-
-leader = {
-	name = "Robert Bruce"
-	picture = rus_adm_lazarev
-	date = 1827.1.1
-	type = sea
-	personality = attack_3.2
-	background = defence_minus_5.1
-	prestige = 0.2
 }
 
 leader = {
@@ -505,16 +485,6 @@ leader = {
 	personality = attack_minus_1.2
 	background = defence_2.1
 	prestige = 0.1
-}
-
-leader = {
-	name = "Ferdinand Wrangel"
-	picture = rus_adm_wrangel
-	date = 1836.1.1
-	type = sea
-	personality = attack_minus_1.14
-	background = defence_0.3
-	prestige = 0.0
 }
 
 leader = {
@@ -580,13 +550,5 @@ leader = {
 	background = defence_2.5
 }
 
-leader = {
-	name = "Fyodor Litke"
-	picture = rus_adm_litke
-	date = 1835.1.1
-	type = sea
-	personality = attack_1.12
-	background = defence_1.1
-}
 
 
