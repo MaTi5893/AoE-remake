@@ -1273,3 +1273,111 @@ country_event = {
         ai_chance = { factor = 0 }
     }
 }
+
+country_event = {
+	id = 4778700
+	title = "AI: Bug Cleanup"
+	desc = "w"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Cleanup"
+		
+		#cleanup unciv colonies
+		any_country = {
+			limit = {
+				civilized = no
+				any_state = { is_colonial = yes }
+				NOT = {
+					UTI = { exists = yes }
+				}
+			}
+			any_state = {
+				limit = {
+					is_colonial = yes
+				}
+				any_owned = {
+					add_core = UTI
+				}
+			}
+			any_owned = {
+				limit = {
+					is_core = UTI
+				}
+				secede_province = UTI
+			}
+			create_vassal = UTI
+			inherit = UTI
+			any_owned = {
+				limit = {
+					is_core = UTI
+				}
+				remove_core = UTI
+			}
+		}
+		
+		#cleanup bugged slave states
+		any_country = {
+			limit = {
+				any_state = { is_slave = yes }
+				slavery = no_slavery
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				is_slave = no
+			}
+		}
+		
+		#cleanup vassals with nonexistent overlords
+		any_country = {
+			limit = {
+				is_vassal = yes
+				exists = yes
+				overlord = { exists = no }
+			}
+			country_event = 477877788
+		}
+		
+		#ghost units cleanup
+		any_country = {
+			limit = {
+				exists = no
+                is_greater_power = no
+                capital_scope = { NOT = { province_control_days = 120 } }
+                OR = {
+                    is_mobilised = yes
+                    total_amount_of_ships = 1
+                }
+			}
+			annex_to = FROM
+		}
+		
+		#cause the event to trigger again in 30 days
+		random_country = {
+			limit = {
+				ai = yes
+				exists = yes
+				war = no
+				is_vassal = no
+				NOT = { tag = THIS }
+			}
+			country_event = { id = 4778700 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = 477877788
+	title = "Freedom!"
+	desc = "We have acquired independence!"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nice."
+		overlord = { release_vassal = THIS }
+	}
+}

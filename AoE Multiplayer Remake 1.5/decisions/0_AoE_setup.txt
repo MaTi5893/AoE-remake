@@ -466,6 +466,16 @@ political_decisions = {
 			always = no
 		}
 		effect = {
+			random_country = {
+				limit = {
+					exists = yes
+					ai = yes
+					is_vassal = no
+					war = no
+					NOT = { tag = THIS }
+				}
+				country_event = 4778700
+			}
 			QNG = {
 				any_pop = {
 					limit = {
