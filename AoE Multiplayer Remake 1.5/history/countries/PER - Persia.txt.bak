@@ -1,0 +1,99 @@
+capital = 1127
+primary_culture = persian
+culture = azerbaijani
+culture = hazara
+culture = tajik
+religion = shiite
+government = absolute_monarchy
+prestige = 10
+plurality = 0.0
+nationalvalue = nv_autocracy
+literacy = 0.03
+#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+
+# Political reforms
+slavery = yes_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
+political_parties = underground_parties
+
+# Social Reforms
+wage_reform = trinket_wage
+work_hours = fourteen_hours
+safety_regulations = no_safety
+health_care = trinket_health_care
+unemployment_subsidies = trinket_subsidies
+pensions = acceptable_pensions
+school_reforms = no_schools
+
+# New Reforms
+conscription = four_year_draft
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
+border_policy = open_borders
+centralization = regionalism
+colonial_policy = no_colonies
+
+ruling_party = "Nobility Faction"
+upper_house = {
+    fascist = 0
+    liberal = 12
+    conservative = 60
+    reactionary = 28
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
+}
+
+set_country_flag = shiite_country
+
+
+
+
+
+govt_flag = {
+    government = absolute_monarchy
+    flag = theocracy
+}
+
+foreign_officers = yes_foreign_officers
+foreign_training = yes_foreign_training
+foreign_weapons = yes_foreign_weapons
+military_constructions = yes_military_constructions
+admin_reform = yes_admin_reform
+education_reform = yes_education_reform
+industrial_construction = yes_western_science
+finance_reform = yes_finance_reform
+
+# Technologies
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+army_command_principle = 1
+post_nelsonian_thought = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+piston_steam_engine = 1
+#mechanical_production = 1
+clipper_design = 1
+malthusian_thought = 1
+basic_chemistry = 1
+
+# Inventions
+test_irregular = yes
+dragoon_activation = yes
+
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0
+
+oob = "PER_oob.txt"

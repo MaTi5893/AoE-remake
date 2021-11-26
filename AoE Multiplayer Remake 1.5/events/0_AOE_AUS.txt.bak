@@ -1,0 +1,545 @@
+country_event = { #10225 Hungarian rebellion
+	id = 10225
+	title = "EVTNAME10225" #Hungarian Revolution of $YEAR$
+	desc = "EVTDESC10225"
+	news = yes
+	picture = "rakoczi"
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	immediate = {
+		set_global_flag = hungarian_revolution_occurred
+	}
+
+	option = {
+		name = "EVT10225OPTA"
+		AUS = {
+			relation = { who = HUN value = -100 }
+			any_owned = {
+				limit = { is_core = AUS }
+				remove_province_modifier = liberal_agitation
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				militancy = -6
+			}
+			add_country_modifier = {
+				name = no_more_war
+				duration = 7
+			}
+			release_vassal = HUN
+		}
+		HUN = {
+			capital = 641
+			political_reform = mandatory_service 
+			government = hms_government
+			political_reform = non_secret_ballots
+			political_reform = universal_weighted_voting
+			political_reform = population_equal_weight
+			political_reform = free_press
+			political_reform = yes_meeting
+			clr_country_flag = communist_gov
+			clr_country_flag = absolute_monarchy_gov
+			clr_country_flag = semi_constitutional_monarchy_gov
+			set_country_flag = constitutional_monarchy_gov
+			clr_country_flag = democracy_gov
+			clr_country_flag = presidential_dictatorship_gov
+			clr_country_flag = fascist_gov
+			clr_country_flag = anarcho_liberal_gov
+			add_country_modifier = {
+				name = no_more_war
+				duration = 7
+			}
+			any_country = {
+				limit = {
+					war_with = HUN
+					OR = {
+						has_country_flag = support_habsburg_heir
+						has_country_flag = support_bourbon_heir
+					}
+				}
+				end_war = HUN
+			}
+		}
+		SIE = {
+			country_event = 55555
+		}
+		AUS = {
+			casus_belli = {
+				target = HUN
+				type = make_puppet
+				months = 120
+			}
+			war = {
+				target = HUN
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+####Maria theresa#####
+country_event = {
+	id = 174500
+	title = "The reign of Maria Theresa"
+	desc = "EVTDESC174500"
+	picture = maria_thersa
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1745
+		OR = {
+			NOT = { government = presidential_dictatorship }
+			NOT = { government = democracy }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "May she guide us to prosperity!"
+		prestige = 5
+		add_country_modifier = {
+			name = maria_theresa
+			duration = -1
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { accepted_culture = hungarian }
+				}
+			}
+			owner = {
+			add_accepted_culture = hungarian
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { accepted_culture = croat }
+				}
+			}
+			owner = {
+			add_accepted_culture = croat
+			}
+		}
+		set_global_flag = austrian_succession_crisis
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = hre_emperor
+					NOT = { has_country_flag = issued_pragmatic_sanction }
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						has_country_flag = hre_member
+					}
+					casus_belli = {
+						target = AUS
+						type = claim_emperorship
+						months = 12
+					}
+					relation = {
+						who = AUS
+						value = -220
+					}
+				}
+				BOR = {
+					casus_belli = {
+						target = AUS
+						type = dismantle_hre
+						months = 12
+					}	
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 174501
+	title = "Death of Maria Theresa"
+	desc = "EVTDESC174501"
+	picture = maria_theresa_ded
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = maria_theresa
+		year = 1780
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}
+	
+	option = {
+		name = "Tragic..."
+		prestige = 5
+		remove_country_modifier = maria_theresa
+		set_country_flag = maria_ded
+	}
+}
+####
+country_event = {
+	id = 174504
+	title = "The Ostend Company"
+	desc = "EVTDESC174504"
+	picture = harbour
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1722
+		owns = 387
+		owns = 394
+		owns = 397
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Let the riches of the east come to our realm!"
+		prestige = 5
+		add_country_modifier = {
+			name = ost_land_company
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 174503
+	title = "The Pragmatic Sanction of $YEAR$"
+	desc = "EVTDESC174503"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our possesions must be secure!"
+		any_country = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+					tag = PRU
+					tag = BAV
+				}
+			}
+			country_event = 174507
+		}
+	}
+}
+country_event = {
+	id = 174507
+	title = "The Pragmatic Sanction of $YEAR$"
+	desc = "EVTDESC174507"
+	picture = treaty_signing
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sign it."
+		prestige = -2
+		relation = {
+			who = AUS
+			value = 50
+		}
+		set_country_flag = accepted_sanction
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 5
+				in_sphere = AUS
+				NOT = {
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 6
+				alliance_with = AUS
+				NOT = {
+					tag = GBR
+				}
+			}
+			modifier = {
+				factor = 5
+				relation = { who = AUS value = 70 }
+				NOT = {
+					tag = GBR
+				}
+			}
+			modifier = {
+				factor = 5
+				has_country_flag = hre_member
+				NOT = {
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 6
+				OR = {
+					tag = PLC
+					tag = RUS
+				}
+			}
+		}
+	}
+	option = {
+		name = "We will not accept such stupid document!"
+		prestige = 2
+		relation = {
+			who = AUS
+			value = -85
+		}
+		set_country_flag = refused_sanction
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				war_with = AUS
+			}
+			modifier = {
+				factor = 5
+				NOT = { relation = { who = AUS value = 0 } }
+			}
+		}
+	}
+}
+country_event = {
+	id = 174508
+	title = "The Grenz Infantry"
+	desc = "EVTDESC174508"
+	picture = grenzers
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		war = no
+		is_greater_power = yes
+		owns = 771
+		neighbour = TUR
+	}
+	
+	mean_time_to_happen = {
+		months = 15
+	}
+	
+	option = {
+		name = "We are thankfull for their serivce"
+		random_list = {
+			50 = {
+				add_accepted_culture = croat
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						culture = croat
+						type = soldiers
+					}
+					reduce_pop = 1.35
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 174509
+	title = "The Hungarian Diet"
+	desc = "EVTDESC174509"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		NOT = { exists = HUN }
+		government = hms_government
+		owns = 641
+	}
+	
+	mean_time_to_happen = {
+		months = 15
+	}
+	
+	option = {
+		name = "Allow the diet to convene"
+		random_list = {
+			50 = {
+				add_accepted_culture = hungarian
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						culture = hungarian
+					}
+					militancy = -5
+				}
+			}
+		}
+	}
+	option = {
+		name = "Prohibit from partaking in the diet"
+		any_pop = {
+			limit = {
+				culture = hungarian
+			}
+			militancy = 5
+		}
+		HUN = {
+			all_core = {
+				any_pop = {
+					limit = {
+						OR = {
+							culture = south_german
+							culture = siebenburger
+						}
+					}
+					reduce_pop = 1.05
+				}
+			}
+		}
+	}
+}
+#####################
+##Habsburg Monarchy##
+#####################
+country_event = {
+	id = 174511
+	title = "Unification of The Habsburg Monarchy"
+	desc = "u done goofed dear"
+	is_triggered_only = yes
+	
+	option = {
+		name = "RIP bozos won't miss this game"
+		FROM = { country_event = 174510 }
+	}
+}
+country_event = {
+	id = 174510
+	title = "Unification of The Habsburg Monarchy"
+	desc = "EVTDESC17410"
+	major = yes
+	is_triggered_only = yes
+	news = yes
+	
+	option = {
+		name = "Wtf based?"
+		random_country = {
+            limit = {
+                tag = VNS
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VNS
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VNG
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VNG
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VOP
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VOP
+            }
+        }
+        random_country = {
+            limit = {
+                tag = FLO
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = FLO
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VLP
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VLP
+            }
+        }
+		all_core = {
+			add_core = HAB
+			remove_core = THIS
+		}
+		random_country = {
+			limit = {
+				tag = SPA
+				NOT = { has_country_flag = hre_emperor }
+				AUS = { has_country_flag = hre_emperor }
+			}
+			THIS = {
+				set_country_flag = hre_emperor
+			}
+			AUS = { clr_country_flag = hre_emperor }
+		}
+		random_country = {
+			limit = {
+				tag = AUS
+				NOT = { tag = THIS }
+			}
+			all_core = {
+				add_core = HAB
+			}
+			THIS = {
+				add_accepted_culture = south_german
+			}
+			annex_to = THIS
+		}
+		random_country = {
+			limit = {
+				tag = SPA
+				NOT = { tag = THIS }
+			}
+			all_core = {
+				add_core = HAB
+			}
+			THIS = {
+				add_accepted_culture = spanish
+			}
+			annex_to = THIS
+		}
+		change_tag = HAB
+		prestige = 25
+	}
+}

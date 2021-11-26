@@ -6724,14 +6724,26 @@ deified_ruler = {
     icon = 13
 }
 ###Persia###
+soltan_husayn = {
+	tax_efficiency = -0.025
+	core_pop_consciousness_modifier = -0.01
+	core_pop_militancy_modifier = 0.02
+	prestige = -0.005
+	army_tech_research_bonus = -0.1
+	navy_tech_research_bonus = -0.1
+	commerce_tech_research_bonus = -0.1
+	culture_tech_research_bonus = -0.1
+	industry_tech_research_bonus = -0.1
+}
 nader_shah = {
     mobilisation_size = 0.02
-    mobilisation_economy_impact = -0.05
-    army_organisation = 0.1
-    org_regain = 0.3
-    supply_consumption = 0.1
     core_pop_militancy_modifier = -0.01
     icon = 13
+}
+nader_shah_reforms = {
+	army_organisation = 0.2
+	army_tech_research_bonus = 0.15
+	icon = 15
 }
 naderi_coinage_system = {
     tax_efficiency = 0.025
@@ -6743,6 +6755,11 @@ quajar_army_reforms = {
     supply_consumption = 0.05
     mobilisation_economy_impact = -0.025
     icon = 15
+}
+rise_of_hotaki = {
+	mobilisation_size = 0.15
+	core_pop_militancy_modifier = -0.05
+	icon = 15
 }
 ###Egypt###
 muhammad_ali = {

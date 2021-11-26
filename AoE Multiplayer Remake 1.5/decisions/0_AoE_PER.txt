@@ -1,4 +1,53 @@
 political_decisions = {
+
+	abdication_of_sultan_husayn = {
+		picture = sultan_husayn
+		potential = {
+			has_country_modifier = soltan_husayn
+		}
+		allow = {
+			OR = {
+				civilized = yes
+				year = 1722
+				capital_scope = {
+					NOT = { controlled_by = THIS }
+				}
+				NOT = { tag = PER }
+			}
+		}
+		effect = {
+			any_pop = {
+				consciousness = 3
+				militancy = -2
+			}
+			remove_country_modifier = soltan_husayn
+			prestige = -15
+		}
+	}
+	
+	persian_embassy_to_louis = {
+		picture = switch_to_autocracy
+		potential = {
+			OR = {
+				tag = PER
+				tag = PRQ
+				tag = PRA
+				tag = PRZ
+            }
+			NOT = { has_country_flag = persian_embassy_to_louis }
+		}
+		allow = {
+			OR = {
+				year = 1715
+				in_sphere = BOR
+			}
+		}
+		effect = {
+			set_country_flag = persian_embassy_to_louis
+			BOR = { country_event = 173209 }
+		}
+	}
+	
     claim_iraq = {
         picture = map_iraq
         potential = {
@@ -133,6 +182,71 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	proclaim_the_afsharid_dynasty = {
+		picture = nader_shah
+		potential = {
+			tag = PER
+			NOT = { exists = PRA }
+		}
+		allow = {
+			has_leader = "Nader Shah"
+			OR = {
+				average_militancy = 4
+				average_consciousness = 6
+				AND = {
+					civilized = yes
+					ai = no
+				}
+			}
+		}
+		effect = {
+			change_tag = PRA
+			country_event = 173207
+		}
+	}
+	
+	nader_shah_mil_reforms = {
+		picture = nader_shah
+		potential = {
+			OR = {
+				tag = PER
+				tag = PRA
+			}
+			NOT = { has_country_flag = nader_shah_reforms }
+		}
+		allow = {
+			has_leader = "Nader Shah"
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					culture = persian
+					type = soldiers
+				}
+				reduce_pop = 1.2
+			}
+			add_country_modifier = {
+				name = nader_shah_reforms
+				duration = 1825
+			}
+			any_pop = {
+				militancy = 3
+				consciousness = 4
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						civilized = no
+					}
+				}
+				owner = {
+					years_of_research = 0.5
+				}
+			}
+			set_country_flag = nader_shah_reforms
+		}
+	}
 
     restore_afsharid_rule = {
         picture = afsharid
@@ -253,7 +367,7 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-
+	
     asfharid_ambition = {
         picture = afsharid
         potential = {

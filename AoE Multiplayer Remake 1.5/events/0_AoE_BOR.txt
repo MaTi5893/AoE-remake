@@ -694,38 +694,98 @@ country_event = {
 	
 	option = {
 		name = "Wtf based?"
+		random_country = {
+			limit = {
+				tag = VNS
+				exists = yes
+				#ai = yes
+				is_substate = yes
+				NOT = { substate_of = THIS }
+			}
+			THIS = {
+				create_vassal = VNS
+			}
+		}
+		random_country = {
+			limit = {
+				tag = VNG
+				exists = yes
+				#ai = yes
+				is_substate = yes
+				NOT = { substate_of = THIS }
+			}
+			THIS = {
+				create_vassal = VNG
+			}
+		}
+		random_country = {
+			limit = {
+				tag = VOP
+				exists = yes
+				#ai = yes
+				is_substate = yes
+				NOT = { substate_of = THIS }
+			}
+			THIS = {
+				create_vassal = VOP
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FLO
+				exists = yes
+				#ai = yes
+				is_substate = yes
+				NOT = { substate_of = THIS }
+			}
+			THIS = {
+				create_vassal = FLO
+			}
+		}
+		random_country = {
+			limit = {
+				tag = VLP
+				exists = yes
+				#ai = yes
+				is_substate = yes
+				NOT = { substate_of = THIS }
+			}
+			THIS = {
+				create_vassal = VLP
+			}
+		}
+		all_core = {
+			add_core = FSU
+			remove_core = THIS
+		}
+		random_country = {
+			limit = {
+				tag = BOR
+				NOT = { tag = THIS }
+			}
 			all_core = {
 				add_core = FSU
-				remove_core = THIS
 			}
-			random_country = {
-				limit = {
-					tag = BOR
-					NOT = { tag = THIS }
-				}
-				all_core = {
-					add_core = FSU
-				}
-				THIS = {
-					add_accepted_culture = french
-				}
-				annex_to = THIS
+			THIS = {
+				add_accepted_culture = french
 			}
-			random_country = {
-				limit = {
-					tag = SPC
-					NOT = { tag = THIS }
-				}
-				all_core = {
-					add_core = FSU
-				}
-				THIS = {
-					add_accepted_culture = spanish
-				}
-				annex_to = THIS
+			annex_to = THIS
+		}
+		random_country = {
+			limit = {
+				tag = SPC
+				NOT = { tag = THIS }
 			}
-			change_tag = FSU
-			prestige = 25
+			all_core = {
+				add_core = FSU
+			}
+			THIS = {
+				add_accepted_culture = spanish
+			}
+			annex_to = THIS
+		}
+		change_tag = FSU
+		prestige = 25
 	}
 }
 country_event = {

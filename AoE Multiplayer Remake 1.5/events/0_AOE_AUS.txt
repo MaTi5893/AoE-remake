@@ -414,3 +414,134 @@ country_event = {
 		}
 	}
 }
+#####################
+##Habsburg Monarchy##
+#####################
+country_event = {
+	id = 174511
+	title = "Unification of The Habsburg Monarchy"
+	desc = "u done goofed dear"
+	is_triggered_only = yes
+	
+	option = {
+		name = "RIP bozos won't miss this game"
+		FROM = { country_event = 174510 }
+	}
+}
+country_event = {
+	id = 174510
+	title = "Unification of The Habsburg Monarchy"
+	desc = "EVTDESC17410"
+	major = yes
+	is_triggered_only = yes
+	news = yes
+	
+	option = {
+		name = "Wtf based?"
+		random_country = {
+            limit = {
+                tag = VNS
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VNS
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VNG
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VNG
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VOP
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VOP
+            }
+        }
+        random_country = {
+            limit = {
+                tag = FLO
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = FLO
+            }
+        }
+        random_country = {
+            limit = {
+                tag = VLP
+                exists = yes
+                #ai = yes
+                is_substate = yes
+				NOT = { substate_of = THIS }
+            }
+            THIS = {
+                create_vassal = VLP
+            }
+        }
+		all_core = {
+			add_core = HAB
+			remove_core = THIS
+		}
+		random_owned = {
+			limit = {
+				owner = {
+				tag = SPA
+				NOT = { has_country_flag = hre_emperor }
+				AUS = { has_country_flag = hre_emperor }
+				}
+			}
+			owner = {
+				set_country_flag = hre_emperor
+				AUS = { clr_country_flag = hre_emperor }
+			}
+		}
+		random_country = {
+			limit = {
+				tag = AUS
+				NOT = { tag = THIS }
+			}
+			all_core = {
+				add_core = HAB
+			}
+			THIS = {
+				add_accepted_culture = south_german
+			}
+			annex_to = THIS
+		}
+		random_country = {
+			limit = {
+				tag = SPA
+				NOT = { tag = THIS }
+			}
+			all_core = {
+				add_core = HAB
+			}
+			THIS = {
+				add_accepted_culture = spanish
+			}
+			annex_to = THIS
+		}
+		change_tag = HAB
+		prestige = 25
+	}
+}

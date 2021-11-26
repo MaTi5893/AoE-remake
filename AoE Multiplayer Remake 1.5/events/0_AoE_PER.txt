@@ -338,11 +338,11 @@ country_event = {
 	picture = nader_shah
 	
 	trigger = {
-		year = 1730
+		year = 1729
 		tag = PER
 		OR = {
-		war_exhaustion = 25
-		year = 1736
+		war_exhaustion = 15
+		year = 1732
 		}
 		NOT = { government = democracy }
 		NOT = { government = presidential_dictatorship }
@@ -350,15 +350,26 @@ country_event = {
 	}
 	
 	option = {
-		name = "Glory awaits us!"
+		name = "A great military mind!"
+		define_general = {
+			name = "Nader Shah"
+			personality = defence_3.1
+			background = attack_5.1
+		}
+	}
+}
+country_event = {
+	id = 173207
+	title = "Rise of Nader Shah"
+	desc = "EVTDESC173202"
+	is_triggered_only = yes
+	picture = nader_shah
+	
+	option = {
+		name = "Long live the Afharid Dynasty!"
 		add_country_modifier = {
 			name = nader_shah
 			duration = -1
-		}
-		define_general = {
-			name = "Nader Shah"
-			personality = defence_4.1
-			background = attack_5.1
 		}
 		all_core = {
 			add_core = PRA
@@ -366,10 +377,47 @@ country_event = {
 		}
 		change_tag = PRA
 	}
+}
+country_event = {
+	id = 173208
+	title = "Sultan Husayn and Safavid Decline"
+	desc = "EVTDESC173208"
+	is_triggered_only = yes
+	picture = nader_shah
 	
 	option = {
-		name = "He's a simple rebel! Arrest him!"
-		war_exhaustion = 5
+		name = "This cannot persist for long"
+		add_country_modifier = {
+			name = soltan_husayn
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 173209
+	title = "Persian Embassy"
+	desc = "EVTDESC173209"
+	is_triggered_only = yes
+	picture = persian_embassy
+	
+	option = {
+		name = "Fruitfull negotiations."
+		FROM = {
+			years_of_research = 0.3
+			money = 100000
+			prestige = 5
+			relation = {
+				who = PER
+				value = 25
+			}
+		}
+		money = 100000
+		prestige = 5
+	}
+	
+	option = {
+		name = "To come all this way for... nothing"
+		prestige = 5
 	}
 }
 country_event = {

@@ -493,4 +493,22 @@ political_decisions = {
 			}
 		}
 	}
+	
+	per_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+				}
+				reduce_pop = 1.7
+			}
+			country_event = 173208
+		}
+	}
 }

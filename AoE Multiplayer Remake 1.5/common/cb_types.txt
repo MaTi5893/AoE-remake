@@ -62,6 +62,7 @@ claim_emperorship
 dispute_succession_bor
 dispute_succession_aus
 unify_bourbon_empire
+unify_habsburg_monarchy
 restore_anglo_dutch_union
 dethrone_peter
 greek_plan_cb
@@ -198,7 +199,10 @@ restore_austrian_empire = {
                 war_policy = pro_military
                 war_with = THIS
             }
-            tag = AUS
+			OR = {
+				tag = AUS
+				tag = HAB
+			}
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
@@ -331,6 +335,7 @@ restore_spanish_empire = {
             OR = {
                 tag = SPA
                 tag = SPC
+				tag = HAB
             }
             OR = {
                 is_greater_power = yes
@@ -898,6 +903,57 @@ unify_bourbon_empire = {
 
     on_po_accepted = {
         country_event = 171120
+    }
+}
+unify_habsburg_monarchy = {
+    sprite_index = 26
+    is_triggered_only = yes
+    constructing_cb = no
+    months = 12
+    crisis = no
+
+    badboy_factor = 0
+    prestige_factor = 5
+    peace_cost_factor = 85
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 5
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 60
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        OR = {
+            tag = AUS
+            tag = SPA
+        }
+        THIS = {
+            OR = {
+                tag = AUS
+                tag = SPA
+            }
+        }
+    }
+
+    po_remove_prestige = yes
+
+    war_name = UNIFICATION_HUMILIATE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+
+    on_po_accepted = {
+        FROM = { country_event = 174511 }
     }
 }
 restore_anglo_dutch_union = {
