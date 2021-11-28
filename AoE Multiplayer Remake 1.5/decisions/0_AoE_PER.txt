@@ -52,10 +52,14 @@ political_decisions = {
         picture = map_iraq
         potential = {
             OR = {
-            tag = PER
-            tag = PRQ
-            tag = PRA
-            tag = PRZ
+				tag = PER
+				tag = PRQ
+				tag = PRA
+				tag = PRZ
+				AND = {
+					tag = HTK
+					has_country_flag = conquest_of_persia
+				}
             }
             NOT = { has_country_flag = claimed_iraq }
             exists = yes
@@ -92,10 +96,14 @@ political_decisions = {
         picture = persia_map
         potential = {
             OR = {
-            tag = PER
-            tag = PRQ
-            tag = PRA
-            tag = PRZ
+				tag = PER
+				tag = PRQ
+				tag = PRA
+				tag = PRZ
+				AND = {
+					tag = HTK
+					has_country_flag = conquest_of_persia
+				}
             }
             NOT = { has_country_flag = indian_frontiers }
             exists = yes

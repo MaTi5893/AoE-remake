@@ -302,7 +302,7 @@ army = {
 }
 
 army = {
-    name = "Armée d'Algerie"
+    name = "2ère Armée"
     location = 407
     regiment = {
         name= "1.4ème Division d'Infanterie"
@@ -490,6 +490,112 @@ army = {
         name= "2.10ème Division d'Infanterie"
         type = artillery
         home = 407
+    }
+
+}
+
+army = {
+    name = "3ère Armée"
+    location = 453
+    regiment = {
+        name= "1.8ème Division d'Infanterie"
+        type = hussar
+        home = 449
+    }
+
+    regiment = {
+        name= "2.8ème Division d'Infanterie"
+        type = infantry
+        home = 452
+    }
+
+    regiment = {
+        name= "3.8ème Division d'Infanterie"
+        type = infantry
+        home = 453
+    }
+
+    regiment = {
+        name= "1.9ème Division d'Infanterie"
+        type = infantry
+        home = 433
+    }
+
+    regiment = {
+        name= "2.9ème Division d'Infanterie"
+        type = infantry
+        home = 437
+    }
+
+    regiment = {
+        name= "3.9ème Division d'Infanterie"
+        type = artillery
+        home = 435
+    }
+
+    regiment = {
+        name= "1.2ème Division de cavalerie"
+        type = artillery
+        home = 418
+    }
+
+    regiment = {
+        name= "2.2ème Division de cavalerie"
+        type = artillery
+        home = 400
+    }
+
+    regiment = {
+        name= "3.2ème Division de cavalerie"
+        type = artillery
+        home = 399
+    }
+
+    regiment = {
+        name= "2.10ème Division d'Infanterie"
+        type = artillery
+        home = 408
+    }
+
+}
+
+army = {
+    name = "4ère Armée"
+    location = 403
+    regiment = {
+        name= "1.8ème Division d'Infanterie"
+        type = hussar
+        home = 435
+    }
+	
+    regiment = {
+        name= "3.9ème Division d'Infanterie"
+        type = artillery
+        home = 139
+    }
+
+    regiment = {
+        name= "1.2ème Division de cavalerie"
+        type = artillery
+        home = 139
+    }
+
+    regiment = {
+        name= "2.2ème Division de cavalerie"
+        type = artillery
+        home = 2215
+    }
+
+    regiment = {
+        name= "3.2ème Division de cavalerie"
+        type = artillery
+        home = 2213
+    }
+
+    regiment = {
+        name= "2.10ème Division d'Infanterie"
+        type = artillery
+        home = 418
     }
 
 }

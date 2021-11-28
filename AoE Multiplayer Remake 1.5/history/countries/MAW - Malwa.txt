@@ -6,7 +6,7 @@ culture = rajput
 culture = gujarati
 religion = sunni
 civilized = no
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.03
@@ -25,6 +25,7 @@ upper_house = {
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
+set_country_flag = NOT_colony
 
 oob = "MAW_oob.txt"
 

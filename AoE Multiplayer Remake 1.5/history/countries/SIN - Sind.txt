@@ -2,7 +2,7 @@ capital = 1288
 primary_culture = sindi
 religion = sunni
 civilized = no
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01  non_state_culture_literacy = 0.01
@@ -50,6 +50,7 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
+set_country_flag = NOT_colony
 
 
 # Technologies

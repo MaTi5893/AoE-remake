@@ -56,51 +56,25 @@ country_event = {
 
 country_event = {
     id = 1721001
-    title = "Swedish Revolution"
+    title = "King Gustav's Coup"
     desc = "EVTDESC1721001"
     major = yes
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    trigger = {
-        war = no
-        year = 1772
-        owns = 322
-        322 = { is_capital = yes }
-        OR = {
-            average_consciousness = 5
-            average_militancy = 4
-        }
-        NOT = {
-            government = absolute_monarchy
-            government = prussian_constitutionalism
-        }
-        NOT = { has_country_modifier = gustav_iii }
-    }
+    is_triggered_only = yes
 
     option = {
         name = "We are willing to sacrifice both blood and life in Your Majesty's service!"
-        government = prussian_constitutionalism
-        political_reform = landed_voting
-        political_reform = appointed
+        government = absolute_monarchy
+        political_reform = none_voting
+        political_reform = party_appointed
         political_reform = harassment
+		ruling_party_ideology = reactionary
+		social_reform = good_safety #kills noble influence
         prestige = 15
-        add_country_modifier = {
-            name = gustav_iii
-            duration = -1
-        }
-        add_country_modifier = {
-            name = liberal_reaction
-            duration = 365 
-        }
     }
 }
 country_event = {
     id = 1721003
-    title = "Gustav the III"
+    title = "Gustav III Holestein-Gottorp"
     desc = "EVTDESC1721003"
     major = yes
     fire_only_once = yes
@@ -113,14 +87,6 @@ country_event = {
         war = no
         year = 1772
 		primary_culture = swedish
-        OR = {
-            average_consciousness = 5
-            average_militancy = 4
-        }
-        NOT = {
-            government = absolute_monarchy
-            government = prussian_constitutionalism
-        }
         NOT = { has_country_modifier = gustav_iii }
     }
 
@@ -128,12 +94,8 @@ country_event = {
         name = "Long live the king!"
         prestige = 15
         add_country_modifier = {
-            name =    gustav_iii
+            name = gustav_iii
             duration = -1
-        }
-        add_country_modifier = {
-            name = liberal_reaction
-            duration = 3650
         }
     }
 }
@@ -149,16 +111,23 @@ country_event = {
     }
 
     trigger = {
-        year = 1792
         owns = 322
         322 = { is_capital = yes }
-        average_militancy = 6
+		OR = {
+			average_militancy = 6
+			year = 1792
+			AND = {
+				NOT = { government = hms_government }
+				NOT = { government = prussian_constitutionalism }
+				NOT = { government = absolute_monarchy }
+			}
+		}
         has_country_flag = gustav_iii_reforms
         has_country_modifier = gustav_iii
     }
 
     option = {
-        name = "Return power to the rikstag"
+        name = "Return power to The Rikstag"
         government = hms_government
         prestige = 15
         political_reform = wealth_weighted_voting
@@ -226,7 +195,7 @@ country_event = {
 			owner = {
 				add_country_modifier = {
 					name = fanatic_army
-					duration = 3650
+					duration = 365
 				}
 			}
 		}

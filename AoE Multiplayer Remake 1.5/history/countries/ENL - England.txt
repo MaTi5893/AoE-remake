@@ -26,13 +26,13 @@ wage_reform = low_minimum_wage #slightly influential church
 work_hours = eight_hours #very influential gentry
 safety_regulations = acceptable_safety #marginally relevant nobility
 unemployment_subsidies = acceptable_subsidies #influential burghers
-pensions = trinket_pensions #marginally relevant army
+pensions = no_pensions #irrelevant army
 health_care = trinket_health_care #marginally relevant bureaucracy
 school_reforms = no_schools
 
 
 # New Reforms
-conscription = two_year_draft
+conscription = one_year_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
@@ -46,6 +46,8 @@ decision = navigation_acts_setup
 
 oob = "ENL_oob.txt"
 decision = thc_setup
+decision = eng_pop_nerf
+
 ruling_party = "Tories Party"
 last_election = 1835.2.6
 upper_house = {

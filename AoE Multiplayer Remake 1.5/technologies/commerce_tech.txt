@@ -5,7 +5,7 @@ private_banks = {
     cost = 3600
 
     activate_building = cement_factory
-    tax_eff = 1.5
+    tax_eff = 2.5
 
     ai_chance = {
         factor = 4
@@ -16,7 +16,7 @@ stock_exchange = {
     year = 1700
     cost = 7200
 
-    tax_eff = 2.5
+    tax_eff = 5
 
     ai_chance = {
         factor = 2
@@ -27,7 +27,7 @@ business_banks = {
     year = 1720
     cost = 10800
 
-    tax_eff = 2.5
+    tax_eff = 5
 
     ai_chance = {
         factor = 2
@@ -38,7 +38,7 @@ investment_banks = {
     year = 1740
     cost = 14400
 
-    tax_eff = 2.5
+    tax_eff = 5
     ai_chance = {
         factor = 1.5
     }
@@ -48,7 +48,7 @@ bank_inspection_board = {
     year = 1755
     cost = 18000
 
-    tax_eff = 2.5
+    tax_eff = 5
     ai_chance = {
         factor = 1.5
     }
@@ -58,7 +58,7 @@ mutual_funds = {
     year = 1770
     cost = 21600
 
-    tax_eff = 2.5
+    tax_eff = 5
     ai_chance = {
         factor = 1.5
     }
@@ -68,7 +68,7 @@ financial_institutions_7 = {
     year = 1790
     cost = 25200
 
-    tax_eff = 2.5
+    tax_eff = 5
     ai_chance = {
         factor = 1.5
     }
@@ -78,7 +78,7 @@ financial_institutions_8 = {
     year = 1805
     cost = 30200
 
-    tax_eff = 2.5
+    tax_eff = 5
     ai_chance = {
         factor = 1.5
     }
