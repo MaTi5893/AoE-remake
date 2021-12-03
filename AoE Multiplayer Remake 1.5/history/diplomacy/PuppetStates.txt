@@ -18,7 +18,7 @@ vassal = {  #substate
 	first = AUS
 	second = HUN
 	start_date = 1699.1.1
-	end_date = 2000.1.1
+	end_date = 1756.1.1
 }
 
 #Mughal - Jodhpur
@@ -42,7 +42,7 @@ vassal = {  #substate
 	first = BRN
 	second = DPR
 	start_date = 1700.1.1
-	end_date = 2000.1.1
+	end_date = 1756.1.1
 }
 
 #Morroco - Timbuktu
@@ -75,7 +75,7 @@ substate = {  #substate
 	first = RUS
 	second = HET
 	start_date = 1700.1.1
-	end_date = 2000.1.1
+	end_date = 1756.1.1
 }
 
 #Russia - Zaporozhie
@@ -90,20 +90,6 @@ substate = {  #substate
 vassal = {  #substate
 	first = MUG
 	second = NAG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {  #substate
-	first = MUG
-	second = AFG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-vassal = {  #substate
-	first = MUG
-	second = BNG
 	start_date = 1700.1.1
 	end_date = 2000.1.1
 }
@@ -185,6 +171,12 @@ substate = {  #substate
 	first = ENL
 	second = THC 
 	start_date = 1700.1.2
+	end_date = 1707.1.1
+}
+substate = {  #substate
+	first = GBR
+	second = THC 
+	start_date = 1707.1.1
 	end_date = 2000.1.1
 }
 
@@ -203,15 +195,26 @@ vassal = {  #substate
 	first = PER
 	second = KAK
 	start_date = 1700.1.1
-	end_date = 2000.1.1
+	end_date = 1756.1.1
 }
 vassal = {  #substate
 	first = PER
 	second = KKH
 	start_date = 1700.1.1
+	end_date = 1756.1.1
+}
+vassal = {  #substate
+	first = PRZ
+	second = KAK
+	start_date = 1756.1.1
 	end_date = 2000.1.1
 }
-
+vassal = {  #substate
+	first = PRZ
+	second = KKH
+	start_date = 1756.1.1
+	end_date = 2000.1.1
+}
 #Circassia
 
 vassal = {  #substate

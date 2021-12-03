@@ -3,5 +3,8 @@ controller = NTC
 add_core = NTC
 trade_goods = sulphur
 life_rating = 35
-1861.1.1 = {	controller = CSA	owner = CSA	add_core = CSA}
-1861.1.1 = { railroad = 1 }
+1756.01.01 = {
+owner = FCA
+controller = FCA
+colonial = 1
+}

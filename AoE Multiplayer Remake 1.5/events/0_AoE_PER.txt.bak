@@ -1,0 +1,198 @@
+country_event = {
+	id = 173202
+	title = "Rise of Nader Shah"
+	desc = "EVTDESC173202"
+	fire_only_once = yes
+	picture = nader_shah
+	
+	trigger = {
+		year = 1729
+		tag = PER
+		OR = {
+		war_exhaustion = 15
+		year = 1732
+		}
+		NOT = { government = democracy }
+		NOT = { government = presidential_dictatorship }
+		NOT = { government = proletarian_dictatorship }
+	}
+	
+	option = {
+		name = "A great military mind!"
+		define_general = {
+			name = "Nader Shah"
+			personality = defence_3.1
+			background = attack_5.1
+		}
+	}
+}
+country_event = {
+	id = 173207
+	title = "Rise of Nader Shah"
+	desc = "EVTDESC173202"
+	is_triggered_only = yes
+	picture = nader_shah
+	
+	option = {
+		name = "Long live the Afharid Dynasty!"
+		add_country_modifier = {
+			name = nader_shah
+			duration = -1
+		}
+		all_core = {
+			add_core = PRA
+			remove_core = THIS
+		}
+		change_tag = PRA
+	}
+}
+country_event = {
+	id = 173208
+	title = "Sultan Husayn and Safavid Decline"
+	desc = "EVTDESC173208"
+	is_triggered_only = yes
+	picture = nader_shah
+	
+	option = {
+		name = "This cannot persist for long"
+		add_country_modifier = {
+			name = soltan_husayn
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 173209
+	title = "Persian Embassy"
+	desc = "EVTDESC173209"
+	is_triggered_only = yes
+	picture = persian_embassy
+	
+	option = {
+		name = "Fruitfull negotiations."
+		FROM = {
+			years_of_research = 0.3
+			money = 100000
+			prestige = 5
+			relation = {
+				who = PER
+				value = 25
+			}
+		}
+		money = 100000
+		prestige = 5
+	}
+	
+	option = {
+		name = "To come all this way for... nothing"
+		prestige = 5
+	}
+}
+country_event = {
+	id = 173203
+	title = "Assasination of Nader Shah"
+	desc = "EVTDESC173203"
+	fire_only_once = yes
+	picture = nader_shah
+	
+	trigger = {
+		year = 1747
+		has_country_modifier = nader_shah
+		war = yes
+	}
+	
+	option = {
+		name = "We're doomed!"
+		remove_country_modifier = nader_shah
+		set_country_flag = nader_ded
+		prestige = -5
+	}
+}
+country_event = {
+	id = 173204
+	title = "The Sack of Delhi"
+	desc = "EVTDESC173204"
+	fire_only_once = yes
+	picture = sack_of_delhi
+	
+	trigger = {
+		has_leader = "Nader Shah"
+		1236 = {
+			controlled_by = THIS
+		}
+	}
+	
+	option = {
+		name = "Glory!"
+		1236 = {
+			any_pop = {
+				reduce_pop = 0.95
+			}
+			fort = -2
+			infrastructure = -2
+		}
+		treasury = 50000
+		prestige = 50
+	}
+}
+country_event = {
+	id = 173205
+	title = "Unrest in Isfhan"
+	desc = "EVTDESC173205"
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		OR = {
+			tag = PER
+			tag = PRA
+		}
+		OR = {
+			AND = {
+				civilized = yes
+				tag = PER
+			}
+			AND = {
+				has_country_flag = nader_ded 
+				tag = PRA
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.1
+			has_country_flag = nader_ded
+		}
+	}
+	
+	option = {
+		name = "May Allah guide us through harsh times"
+		set_global_flag = persia_dynasty_war
+		any_pop = {
+			militancy = 4
+		}
+	}
+	
+	option = {
+		name = "May Allah guide Qajar to victory!"
+		set_global_flag = persia_dynasty_war
+		all_core = {
+			add_core = PRQ
+			remove_core = THIS
+		}
+		change_tag = PRQ
+		any_pop = {
+			militancy = 2
+		}
+	}
+	
+	option = {
+		name = "May Allah guide Zand to victory!"
+		set_global_flag = persia_dynasty_war
+		all_core = {
+			add_core = PRZ
+			remove_core = THIS
+		}
+		change_tag = PRZ
+	}
+}

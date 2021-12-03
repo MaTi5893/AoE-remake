@@ -1,0 +1,36 @@
+political_decisions = {
+    assert_mughal_supremacy = {
+        picture = peacock_throne
+        potential = {
+            tag = MUG
+            NOT = { has_country_flag = asserted_mughal_supremacy }
+            exists = yes
+        }
+        allow = {
+            has_global_flag = death_of_aurangzeb 
+            civilized = yes
+        }
+        effect = {
+            set_country_flag = asserted_mughal_supremacy
+            HND = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			any_country = {
+				limit = {
+					substate_of = THIS
+				}
+				annex_to = THIS
+			}
+			any_country = {
+				limit = {
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+            prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

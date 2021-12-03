@@ -1,68 +1,4 @@
 country_event = {
-    id = 1516000
-    title = "Restoration of Italy"
-    desc = "EVTDESC151600"
-    picture = "colonization"
-    fire_only_once = yes
-
-    trigger = {
-        exists = no
-        OR = { tag = SPA tag = SPC }
-        AUS = {
-            war_with = PLC
-        }
-        754 = {
-            owned_by = AUS
-        }
-        has_global_flag = polish_succesion_crisis
-    }
-
-    mean_time_to_happen = {
-        days = 120
-    }
-
-    option = {
-        name = "This is a golden opportunity!"
-        AUS = {
-            release = NAP
-        }
-        create_vassal = NAP
-        create_alliance = NAP
-        AUS = {
-            war = {
-                target = NAP
-                attacker_goal = { casus_belli = annex_core_country }
-                defender_goal = { casus_belli = status_quo }
-                call_ally = no
-            }
-        }
-        ai_chance = {
-            factor = 95
-        }
-    }
-
-    option = {
-        name = "We aren't ready...yet"
-        prestige = -15
-        ai_chance = {
-            factor = 5
-            modifier = {
-                factor = 2
-                any_greater_power = { war_with = THIS }
-            }
-            modifier = {
-                factor = 2
-                national_provinces_occupied = 0.25
-            }
-            modifier = {
-                factor = 0
-                war = no
-                NOT = { revolt_percentage = 0.25 }
-            }
-        }
-    }
-}
-country_event = {
     id = 1516001
     title = "Giblartar regained!"
     desc = "We have regained the straits of giblartar!"
@@ -183,6 +119,9 @@ country_event = {
 		year = 1711
 		tag = SPA
 		exists = SPA
+		AUS = {
+			ai = yes
+		}
 	}
 	
 	option = {
@@ -199,9 +138,6 @@ country_event = {
 				who = THIS
 				value = -80
 			}
-		}
-	}
-	
 	option = {
 		name = "Resign from claiming the Emperorship"
 		any_greater_power = {
@@ -211,5 +147,49 @@ country_event = {
 			}
 		}
 		prestige = -25
+	}
+}
+country_event = {
+	id = 1516004
+	title = "Treasury Fleet"
+    desc = "EVTDESC1516004"
+    picture = "new_world"
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		is_substate = yes
+		OR = {
+			tag = VNS
+			tag = VNG
+			tag = VOP
+			tag = VLP
+		}
+		money = 1000000
+	}
+	
+	option = {
+		name = "Send the treasury fleet"
+		overlord = {
+			money = 500000
+		}
+		money = -500000
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "That's our money!"
+		overlord = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 }

@@ -1,6 +1,13 @@
-owner = KAL
-controller = KAL
+owner = PER
+controller = PER
+add_core = PER
 add_core = KAL
 add_core = HND
 trade_goods = wool
 life_rating = 32
+1756.01.01 = {
+owner = BLC
+controller = BLC
+add_core = BLC
+remove_core = PER
+}

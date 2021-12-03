@@ -1,0 +1,320 @@
+political_decisions = {
+    become_mex = {
+        picture = become_mex
+        potential = {
+            tag = VNS
+            NOT = { exists = MEX }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = MEX }
+            all_core = { remove_core = THIS }
+            change_tag = MEX
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_gco = {
+        picture = become_gco
+        potential = {
+            tag = VNG
+            NOT = { exists = GCO }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = GCO }
+            all_core = { remove_core = THIS }
+            change_tag = GCO
+            any_owned = {
+                limit = {
+                    OR = {
+                        is_core = GUA
+                        is_core = NIC
+                        is_core = ELS
+                        is_core = HON
+                        is_core = COS
+                        is_core = PNM
+                    }
+                }
+                add_core = UCA
+            }
+            release_vassal = UCA
+			THIS = {
+            release_vassal = UCA
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_lpl = {
+        picture = become_lpl
+        potential = {
+            tag = VLP
+            NOT = { exists = LPL }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = LPL }
+            all_core = { remove_core = THIS }
+            change_tag = LPL
+            release_vassal = BOL
+			THIS = {
+            release_vassal = BOL
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    #now changes to peru
+    become_pru_bol = {
+        picture = become_peu
+        potential = {
+            tag = VOP
+            NOT = { exists = PEU }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = PEU }
+            all_core = { remove_core = THIS }
+            change_tag = PEU
+            release_vassal = CHL
+			THIS = {
+            release_vassal = CHL
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_brz = {
+        picture = become_pbz
+        potential = {
+            tag = PBZ
+            NOT = { exists = BRZ }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = BRZ }
+            all_core = { remove_core = THIS }
+            change_tag = BRZ
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_que = {
+        picture = become_que
+        potential = {
+            tag = FCA
+            NOT = { exists = QUE }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = QUE }
+            all_core = { remove_core = THIS }
+            change_tag = QUE
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    become_can = {
+        picture = become_can
+        potential = {
+            tag = RPL
+            NOT = { exists = CAN }
+            exists = yes
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            prestige = 20
+            all_core = { add_core = CAN }
+            all_core = { remove_core = THIS }
+            change_tag = CAN
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    draft_a_constitution = {
+        picture = constitution
+        potential = {
+            is_vassal = no
+            NOT = { tag = ORI }
+            OR = {
+                government = colonial_company
+                government = dominion
+            }
+            NOT = { has_country_flag = constitution_made }
+            exists = yes
+            NOT = { has_country_flag = NOT_colony }
+        }
+
+        allow = {
+            war = no
+        }
+        effect = {
+            set_country_flag = constitution_made
+            country_event = 177601
+            prestige = 5
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    land_of_opportunity_nw = {
+        picture = new_world_shipment
+        potential = {
+            OR = {
+                government = colonial_company
+                government = dominion
+            }
+            NOT = { has_country_flag = NOT_colony }
+        }
+
+        allow = {
+            war = no
+            money = 10000
+            NOT = {
+                safety_regulations = no_safety
+                safety_regulations = trinket_safety
+            }
+            NOT = {
+                unemployment_subsidies = no_subsidies
+                unemployment_subsidies = trinket_subsidies
+            }
+            NOT = {
+                health_care = no_health_care
+                health_care = trinket_health_care
+            }
+            NOT = { has_country_modifier = law_changed_by_force }
+        }
+        effect = {
+            money = -100000
+            add_country_modifier = {
+                name = land_of_opportunity
+                duration = 3650
+            }
+            add_country_modifier = {
+                name = law_changed_by_force
+                duration = 5475
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    colonial_militia = {
+        picture = new_world_militia
+        potential = {
+            OR = {
+                government = colonial_company
+                government = dominion
+            }
+            NOT = { has_country_flag = colonial_militia }
+            NOT = { has_country_flag = NOT_colony }
+        }
+
+        allow = {
+            OR = {
+                money = 10000
+                ai = yes
+            }
+            military_plans = 1
+            strategic_mobility = 1
+        }
+        effect = {
+            any_owned = {
+                limit = {
+                    owner = {
+                        ai = no
+                    }
+                }
+                treasury = -10000
+            }
+            small_arms = 300
+            regular_clothes = 300
+            canned_food = 300
+            random_pop = {
+                limit = {
+                    pop_type = farmers
+                    OR = {
+                    is_primary_culture = yes
+                    is_accepted_culture = yes
+                    }
+                }
+                pop_type = soldiers
+            }
+            war_exhaustion = -1
+            set_country_flag = colonial_militia
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

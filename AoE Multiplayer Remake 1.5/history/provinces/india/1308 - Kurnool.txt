@@ -1,8 +1,14 @@
-owner = MUG
-controller = MUG
+owner = VIJ
+controller = VIJ
+add_core = VIJ
 add_core = MUG
 add_core = KRN
 add_core = HYD
 add_core = HND
 trade_goods = tea
 life_rating = 32
+1756.01.01 = {
+owner = HYD
+controller = HYD
+remove_core = KRN
+}
