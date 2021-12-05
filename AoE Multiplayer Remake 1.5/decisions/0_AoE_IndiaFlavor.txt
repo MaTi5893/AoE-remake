@@ -428,4 +428,67 @@ political_decisions = {
 
         }
     }
+	
+	ambitions_of_asaf_jah_i = {
+		potential = {
+			tag = GOL
+			owns = 1283
+			NOT = {
+				exists = HYD
+			}
+		}
+		allow = {
+			is_independant = yes
+			BRR = {
+				OR = {
+					ai = yes
+					exists = no
+				}
+			}
+			BIJ = {
+				OR = {
+					ai = yes
+					exists = no
+				}
+			}
+		}
+		effect = {
+			all_core = {
+				remove_core = THIS
+				add_core = HYD
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { owns = 1286 }
+						1286 = {
+							owner = { ai = yes }
+						}
+					}
+				}
+				owner = {
+					1286 = {
+						secede_province = THIS
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BRR = { ai = yes }
+					}
+				}
+				owner = {
+					inherit = BRR
+					BRR = {
+						all_core = {
+							remove_core = BRR
+						}
+					}
+				}
+			}
+			prestige = 15
+			change_tag = HYD
+		}
+	}
 }

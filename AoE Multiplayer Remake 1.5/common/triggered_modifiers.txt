@@ -492,7 +492,57 @@ neglected_education = {
     education_efficiency_modifier = -1
     icon = 19
 }
-
+indian_treaty_port_bonus = {
+	trigger = {
+		part_of_sphere = yes
+		civilized = no
+		sphere_owner = {
+			OR = {
+				AND = {
+					owns = 3249
+					3249 = { is_core = THIS }
+				}
+				AND = {
+					owns = 3261
+					3261 = { is_core = THIS }
+				}
+				AND = {
+					owns = 3264
+					3264 = { is_core = THIS }
+				}
+				AND = {
+				owns = 3258
+					3258 = { is_core = THIS }
+				}
+				AND = {
+				owns = 1312
+					1312 = { is_core = THIS }
+				}
+				AND = {
+				owns = 3262
+					3262 = { is_core = THIS }
+				}
+				AND = {
+				owns = 3260
+					3260 = { is_core = THIS }
+				}
+				AND = {
+				owns = 3265
+					3265 = { is_core = THIS }
+				}
+				AND = {
+				owns = 3263
+					3263 = { is_core = THIS }
+				}
+				AND = {
+					owns = 3259
+					3259 = { is_core = THIS }
+				}
+			}
+		}
+	}
+	research_points_modifier = 0.15
+}
 britannia_rules_the_waves = {
     trigger = {
         is_greater_power = yes

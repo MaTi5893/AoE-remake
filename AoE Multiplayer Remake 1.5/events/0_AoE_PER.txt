@@ -121,6 +121,9 @@ country_event = {
 			controlled_by = THIS
 		}
 	}
+	mean_time_to_happen = {
+		days = 1
+	}
 	
 	option = {
 		name = "Glory!"
@@ -131,8 +134,13 @@ country_event = {
 			fort = -2
 			infrastructure = -2
 		}
-		treasury = 50000
+		treasury = 500000
+		add_country_modifier = {
+			name = mughal_treasury
+			duration = 1825
+		}
 		prestige = 50
+		set_global_flag = sack_of_delhi
 	}
 }
 country_event = {

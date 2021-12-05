@@ -1207,3 +1207,110 @@ country_event = {
 		set_country_flag = fra_nerf
 	}
 }
+country_event = {
+	id = 171134
+	title = "Haitian Revolution"
+	desc = "EVTDESC171134"
+	major = yes
+	news = yes
+	fire_only_once = yes
+
+	trigger = {
+		owns = 2215
+		owns = 2213
+		HAI = {
+			all_core = {
+				#limit = {
+				#	owned_by = THIS
+				#}
+				controlled_by = REB
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "Pacify them!"
+		any_owned = {
+			limit = {
+				is_core = HAI
+			}
+			secede_province = HAI
+		}
+		HAI = {
+			random_owned = {
+				limit = {
+					owner = {
+						is_ideology_enabled = communist
+					}
+				}
+				owner = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = communist
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { is_ideology_enabled = communist }
+					}
+				}
+				owner = {
+					government = democracy
+					ruling_party_ideology = liberal
+				}
+			}
+			capital = 2213
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+			define_general = {
+				name = "Toussaint L'Ouverture"
+				personality = attack_4.1
+				background = defence_4.1
+			}
+		}
+		war = {
+			target = HAI
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		set_global_flag = haiti_happened
+	}
+}
+country_event = {
+	id = 171135
+	title = "Haitian Revolution Pacified"
+	desc = "EVTDESC171134"
+	fire_only_once = yes
+
+	trigger = {
+		owns = 2215
+		owns = 2213
+		has_global_flag = haiti_happened
+		slavery = yes_slavery
+		HAI = {
+			exists = no
+		}
+	}
+	option = {
+		name = "That will teach them!"
+		any_owned = {
+			limit = {
+				is_core = HAI
+			}
+			any_pop = {
+				limit = {
+					type = farmers
+					culture = afro_antillean
+				}
+				pop_type = slaves
+			}
+		}
+		clr_global_flag = haiti_happened
+	}
+}
