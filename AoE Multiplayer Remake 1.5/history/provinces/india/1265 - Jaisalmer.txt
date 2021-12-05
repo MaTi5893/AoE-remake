@@ -1,7 +1,13 @@
-owner = MUG
-controller = MUG
+owner = RAJ
+controller = RAJ
+add_core = RAJ
 add_core = MUG
 add_core = JAS
 add_core = HND
 trade_goods = wool
 life_rating = 32
+1756.01.01 = {
+owner = JAS
+controller = JAS
+remove_core = RAJ
+}

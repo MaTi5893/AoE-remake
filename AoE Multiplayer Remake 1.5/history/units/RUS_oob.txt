@@ -82,7 +82,9 @@ USA = { value = 0 }
 PRU = { value = 100 }
 TUR = { value = 25 }
 SPA = { value = 0 }
-
+TUR = {
+	truce_until = 1705.1.1
+}
 army = {
 	name = "2-i Armeiskii Korpus"
 	location = 1011
@@ -376,6 +378,136 @@ army = {
 		home = 1050
 	}
 
+}
+
+army = {
+	name = "1-i Novgorod Korpus" #Novgorod Army
+	location = 1003
+	
+	regiment = {
+		name = "1.1-ya Novgorod Pekhotnaya Diviziya"
+		home = 997
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
+		type = artillery
+		home = 1006
+	}
+	
+	regiment = {
+		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
+		type = artillery
+		home = 1008
+	}
+
+	regiment = {
+		name= "1.1-ya Novgorod Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1015
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Kavalerijskaya Diviziya"
+		type = artillery
+		home = 991
+	}
+
+	regiment = {
+		name= "1.1-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 1019
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 978
+	}
+
+	regiment = {
+		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 3256
+	}
+
+	regiment = {
+		name= "1.4-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 980
+	}
+	
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1030
+	}
+}
+
+army = {
+	name = "1-i Smolensk Korpus" #Smolensk Army
+	location = 943
+	
+	regiment = {
+		name = "1.1-ya Smolensk Pekhotnaya Diviziya"
+		home = 3257
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Pekhotnaya Diviziya"
+		type = artillery
+		home = 1041
+	}
+	
+	regiment = {
+		name= "1.3-ya Smolensk Pekhotnaya Diviziya"
+		type = artillery
+		home = 1036
+	}
+
+	regiment = {
+		name= "1.1-ya Smolensk Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1038
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1030
+	}
+
+	regiment = {
+		name= "1.1-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1031
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1042
+	}
+
+	regiment = {
+		name= "1.3-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1029
+	}
+
+	regiment = {
+		name= "1.4-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1026
+	}
+	
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1030
+	}
 }
 
 leader = {

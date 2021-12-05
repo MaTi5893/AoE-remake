@@ -28,17 +28,6 @@ political_decisions = {
 				who = MUG
 				value = -50
 			}
-			TUR_935 = {
-                add_core = THIS
-            }
-            934 = { add_core = THIS }
-            929 = { add_core = THIS }
-            926 = { add_core = THIS }
-            927 = { add_core = THIS }
-            892 = { add_core = THIS }
-            TUR_923 = {
-                add_core = THIS
-            }
 			random_owned = {
 				limit = {
 					owner = {
@@ -82,6 +71,7 @@ political_decisions = {
 					money = 100000
 				}
 			}
+			government = absolute_monarchy
 			badboy = 5
 			add_country_modifier = {
 				name = rise_of_hotaki
@@ -91,6 +81,7 @@ political_decisions = {
 	}
 	
 	spread_hotaki_conquest = {
+		picture = hotak_empire
 		potential = {
 			tag = HTK
 			NOT = {
@@ -118,17 +109,108 @@ political_decisions = {
 		effect = {
 			1220 = {
 				secede_province = HTK
-			}
-			1204 = {
-				secede_province = HTK
+				add_core = HTK
 			}
 			686 = {
 				secede_province = HTK
+				add_core = HTK
 			}
 			PER_1148 = {
 				secede_province = HTK
+				add_core = HTK
 			}
+			AFG_1214 = {
+				secede_province = HTK
+				add_core = HTK
+			}
+			capital = 1215
 			set_country_flag = spread_hotaki_conquest
+		}
+	}
+	
+	conquest_of_persia = {
+		picture = hotaki
+		potential = {
+			tag = HTK
+			NOT = {
+				exists = PER
+				exists = PRA
+				exists = PRZ
+				exists = PRQ
+			}
+			NOT = { has_country_flag = conquest_of_persia }
+		}
+		allow = {
+			owns = 1127
+		}
+		effect = {
+			add_accepted_culture = persian
+			set_country_flag = conquest_of_persia
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = {
+							is_core = PER
+						}
+					}
+				}
+				owner = {
+					PER = {
+						all_core = {
+							add_core = THIS
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = {
+							is_core = PRA
+						}
+					}
+				}
+				owner = {
+					PRA = {
+						all_core = {
+							add_core = THIS
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = {
+							is_core = PRQ
+						}
+					}
+				}
+				owner = {
+					PRQ = {
+						all_core = {
+							add_core = THIS
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = {
+							is_core = PRZ
+						}
+					}
+				}
+				owner = {
+					PRZ = {
+						all_core = {
+							add_core = THIS
+						}
+					}
+				}
+			}
+			prestige = 15
 		}
 	}
 }

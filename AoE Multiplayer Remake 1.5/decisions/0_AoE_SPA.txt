@@ -18,13 +18,14 @@ political_decisions = {
             set_country_flag = renovated_the_armada
             add_country_modifier = {
                 name = renovated_armada
-                duration = -1
+                duration = 1825
             }
         }
         ai_will_do = {
         factor = 1
         }
     }
+
     introduce_the_cadastre_tax_and_banks = {
         picture = cadastre
         potential = {
@@ -173,7 +174,7 @@ political_decisions = {
             set_country_flag = made_royal_spanish_academy
             add_country_modifier = {
                 name = new_royal_spanish_academy
-                duration = -1
+                duration = 1825
             }
         }
         ai_will_do = {
@@ -264,119 +265,6 @@ political_decisions = {
         }
     }
 
-    centralise_spanish_empire = {
-        potential = {
-            primary_culture = spanish
-            NOT = { has_country_flag = centralised_spanish_empire }
-        }
-        allow = {
-            nationalism_n_imperialism = 1
-            is_greater_power = yes
-            BEL = {
-                all_core = {
-                    owned_by = THIS
-                }
-            }
-            owns = 754
-            owns = 753
-            SRD = {
-                all_core = {
-                    owned_by = THIS
-                }
-            }
-            SYC = {
-                all_core = {
-                    owned_by = THIS
-                }
-            }
-            517 = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            any_owned = {
-                limit = {
-                    OR = {
-                        is_core = NAP
-                        is_core = SYC
-                        is_core = SRD
-                        is_core = LOM
-                        is_core = BEL
-                    }
-                }
-                add_core = THIS
-            }
-            add_accepted_culture = flemish
-            add_accepted_culture = wallonian
-            add_accepted_culture = south_italian
-            political_reform = unitary
-            set_country_flag = centralised_spanish_empire
-        }
-    }
-
-    galicia_claim_douro = {
-        picture = armada
-        potential = {
-            tag = GLC
-            NOT = { has_country_flag = claimed_douro }
-            exists = yes
-        }
-        allow = {
-            owns = 475
-            owns = 477
-            owns = 482
-        }
-        effect = {
-            518 = {
-                add_core = THIS
-            }
-            519 = {
-                add_core = THIS
-            }
-            520 = {
-                add_core = THIS
-            }
-            522 = {
-                add_core = THIS
-            }
-            set_country_flag = claimed_douro
-            add_accepted_culture = portuguese
-            badboy = 5
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    navarra_claim_logrono = {
-        picture = armada
-        potential = {
-            tag = BSQ
-            NOT = { has_country_flag = claimed_logrono }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                is_vassal = no
-                    AND = {
-                        owns = 460
-                        owns = 492
-                        owns = 493
-                    }
-            }
-        }
-        effect = {
-            494 = {
-                add_core = THIS
-            }
-            set_country_flag = claimed_logrono
-            prestige = 5
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     nueva_planta_decrees = {
         picture = nueva_planta
         potential = {
@@ -446,92 +334,154 @@ political_decisions = {
             factor = 1
         }
     }
-
-    aragonese_provence = {
-        picture = merchant_navy
-        potential = {
-            tag  = ARN
-            has_country_flag = aragon_sicily
-            NOT = { has_country_flag = aragon_provence }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            prestige = 15
-            badboy = 10
-            FRA_467 = {
-                add_core = THIS
-            }
-            set_country_flag = aragon_provence
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    aragonese_athens = {
-        picture = aegean
-        potential = {
-            tag  = ARN
-            has_country_flag = aragon_sicily
-            has_country_flag = aragon_provence
-            NOT = { has_country_flag = aragon_greece }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            prestige = 15
-            badboy = 10
-            GRE_837 = {
-                add_core = THIS
-            }
-            EGY_843 = {
-                add_core = THIS
-            }
-            set_country_flag = aragon_greece
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    aragonese_andorra = {
-        picture = french_catalonia
-        potential = {
-            tag  = ARN
-            has_country_flag = aragon_sicily
-            NOT = { has_country_flag = aragon_andorra }
-            exists = yes
-        }
-        allow = {
-            owns = 762
-        }
-        effect = {
-            prestige = 5
-            badboy = 5.5
-            3252 = {
-                add_core = THIS
-            }
-            set_country_flag = aragon_andorra
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
+	
+	reforms_of_charles_iii = {
+		picture = charles_iii
+		potential = {
+			primary_culture = spanish
+            NOT = { has_country_flag = centralised_spanish_empire }
+		}
+		allow = {
+		    nationalism_n_imperialism = 1
+            is_greater_power = yes
+		}
+		effect = {
+			money = 100000
+			years_of_research = 0.3
+			any_pop = {
+				limit = {
+					OR = {
+					culture = spanish
+					culture = south_italian
+					}
+				}
+				militancy = -4
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = VOP
+						VOP = {
+							is_substate = yes
+						}
+					}
+				}
+				owner = {
+					VOP = {
+						release_vassal = VNG
+						release_vassal = VLP
+						all_core = {
+							limit = {
+								OR = {
+									is_core = VNG
+									is_core = VLP
+								}
+							}
+							remove_core = VOP
+						}
+						remove_accepted_culture = north_andean
+						remove_accepted_culture = platinean
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = VNS
+					}
+				}
+				owner = {
+					VNS = {
+						any_owned= {
+							limit = {
+								OR = {
+									is_core = VNG
+									is_core = GCO
+								}
+							}
+							add_core = VNG
+							remove_core = VNS
+							secede_province = THIS
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = {
+							is_core = VNG
+						}
+					}
+				}
+				owner = {
+					limit = {
+						any_owned_province = {
+							is_core = VNG
+						}
+					}
+					any_owned = {
+						limit = {
+							is_core = VNG
+						}
+						secede_province = VNG
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BEL = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						owns = 754
+						owns = 753
+						SRD = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						SYC = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						517 = {
+							owned_by = THIS
+						}
+					}
+				}
+					owner = {
+						add_accepted_culture = flemish
+						add_accepted_culture = wallonian
+						add_accepted_culture = south_italian
+						any_owned = {
+						limit = {
+							OR = {
+								is_core = NAP
+								is_core = SYC
+								is_core = SRD
+								is_core = LOM
+								is_core = BEL
+							}
+						}
+						add_core = THIS
+					}
+				}
+			}
+            political_reform = unitary
+            set_country_flag = centralised_spanish_empire
+		}
+	}
 
     create_iberia = {
         potential = {
             is_culture_group = iberian
             NOT = { tag = SPC }
             487 = { is_core = SPA }
+			NOT = { tag = UPB }
             NOT = {
                 exists = IBR
                 has_global_flag = created_iberia

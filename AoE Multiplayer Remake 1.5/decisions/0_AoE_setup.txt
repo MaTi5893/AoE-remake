@@ -53,6 +53,14 @@ political_decisions = {
 					reduce_pop = 2.6
 				}
 			}
+			SWE = {
+				any_pop = {
+					limit = {
+						type = soldiers
+					}
+					reduce_pop = 0.65
+				}
+			}
 		}
 	}
 	
@@ -74,6 +82,7 @@ political_decisions = {
 			any_pop = {
 				limit = {
 					culture = russian
+					NOT = { type = soldiers }
 				}
 				reduce_pop = 0.82
 			}
@@ -96,7 +105,7 @@ political_decisions = {
 					is_core = RUS
 					life_rating = 35
 				}
-				life_rating = -3
+				life_rating = -2
 			}
 		}
 	}
@@ -343,7 +352,7 @@ political_decisions = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 0.91
+					reduce_pop = 1.2
 				}
 				any_pop = {
 					limit = {
@@ -509,6 +518,26 @@ political_decisions = {
 				reduce_pop = 1.7
 			}
 			country_event = 173208
+		}
+	}
+	
+	eng_pop_nerf = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					OR = {
+					culture = british
+					culture = irish
+					}
+				}
+				reduce_pop = 0.7
+			}
 		}
 	}
 }

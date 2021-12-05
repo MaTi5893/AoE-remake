@@ -96,7 +96,7 @@ country_event = {
 	
 	trigger = {
 		tag = AUS
-		year = 1745
+		year = 1740
 		OR = {
 			NOT = { government = presidential_dictatorship }
 			NOT = { government = democracy }

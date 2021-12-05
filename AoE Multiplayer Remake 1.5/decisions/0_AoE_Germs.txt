@@ -222,6 +222,11 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	
+	###########
+	##Bavaria##
+	###########
+
 	declare_the_kingdom_of_bavaria = {
 		picture = crown
 		potential = {
@@ -245,6 +250,87 @@ political_decisions = {
 			add_core = 615
 			add_core = 735
 			set_country_flag = declared_the_kingdom_of_bavaria
+		}
+	}
+	
+	coronation_of_charles_vi = {
+		picture = charles_vi
+		potential = {
+			tag = BAV
+			NOT = { has_country_flag = coronation_of_charles_vi }
+			NOT = { year = 1745 }
+		}
+		allow = {
+			AUS = { has_country_modifier = maria_theresa }
+			war = no
+			NOT = { year = 1745 }
+		}
+		effect = {
+			casus_belli = {
+				target = AUS
+                type = claim_emperorship
+                months = 12
+			}
+			relation = {
+				who = AUS
+				value = -100
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						in_sphere = AUS
+					}
+				}
+				owner = {
+					AUS = {
+						diplomatic_influence = {
+							who = BAV
+							value = -200
+						}
+					}
+				}
+			}
+			badboy = 5
+			AUS = {
+				casus_belli = {
+					target = BAV
+					type = add_to_sphere
+					months = 12
+				}
+				casus_belli = {
+					target = BAV
+					type = cut_down_to_size
+					months = 12
+				}
+			}
+			prestige = 25
+			set_country_flag = coronation_of_charles_vi
+		}
+	}
+	
+	maximilian_iii_reforms = {
+		picture = maximilian_iii
+		potential = {
+			tag = BAV
+			NOT = { has_country_flag = maximilian_iii_reforms }
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			any_pop = {
+				money = 300
+			}
+			money = 500000
+			prestige = 13
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				railroad = 1
+				fort = 1
+			}
+			set_country_flag = maximilian_iii_reforms
 		}
 	}
 }

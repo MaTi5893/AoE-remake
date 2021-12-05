@@ -328,20 +328,48 @@ political_decisions = {
         }
         allow = {
             is_greater_power = yes
+			revolution_n_counterrevolution = 1
             war = no
             owns = 517
-            OR = {
-                NOT = {
-                    any_greater_power = {
-                        military_score = THIS
-                    }
-                }
-                total_sunk_by_us = 100
-            }
-            total_amount_of_ships = 200
+			owns = 65
+			owns = 46
+			owns = 204
+			owns = 195
+			owns = 190
+			owns = 238
+			BNG = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			IQS = { exists = no }
         }
         effect = {
             set_country_flag = britannia_rules_the_waves
+			FCA = {
+				all_core = {
+					limit = {
+						owned_by = THIS
+					}
+					add_core = CAN
+					remove_core = FCA
+				}
+			}
+			THC = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CAN = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			HBC = {
+				all_core = {
+					add_core = THIS
+				}
+			}
             prestige = 15
         }
     }

@@ -1114,93 +1114,33 @@
 #Bechar (20000/5000 POPS)
 1714 = {
     aristocrats = {
-        culture = berber
+        culture = kurdish
         religion = sunni
-        size = 10
+        size = 425
     }
 
     clergymen = {
-        culture = berber
+        culture = kurdish
         religion = sunni
-        size = 15
+        size = 225
     }
 
     artisans = {
-        culture = berber
+        culture = kurdish
         religion = sunni
-        size = 40
+        size = 1150
     }
 
     soldiers = {
-        culture = berber
+        culture = kurdish
         religion = sunni
-        size = 15
+        size = 250
     }
 
     farmers = {
-        culture = berber
+        culture = kurdish
         religion = sunni
-        size = 920
-    }
-
-    aristocrats = {
-        culture = maghrebi
-        religion = sunni
-        size = 20
-    }
-
-    clergymen = {
-        culture = maghrebi
-        religion = sunni
-        size = 40
-    }
-
-    artisans = {
-        culture = maghrebi
-        religion = sunni
-        size = 100
-    }
-
-    soldiers = {
-        culture = maghrebi
-        religion = sunni
-        size = 30
-    }
-
-    farmers = {
-        culture = maghrebi
-        religion = sunni
-        size = 1810
-    }
-
-    aristocrats = {
-        culture = tuareg
-        religion = sunni
-        size = 25
-    }
-
-    clergymen = {
-        culture = tuareg
-        religion = sunni
-        size = 15
-    }
-
-    artisans = {
-        culture = tuareg
-        religion = sunni
-        size = 35
-    }
-
-    soldiers = {
-        culture = tuareg
-        religion = sunni
-        size = 25
-    }
-
-    farmers = {
-        culture = tuareg
-        religion = sunni
-        size = 1900
+        size = 20950
     }
 }
 #Naama (92000/23000 POPS)
@@ -1334,34 +1274,34 @@
 #uncolonized in 1836
 #Tuat (8000/2000 POPS)
 1718 = {
-    aristocrats = {
-        culture = tuareg
-        religion = sunni
-        size = 25
+	aristocrats = {
+        culture = persian
+        religion = shiite
+        size = 450
     }
 
     clergymen = {
-        culture = tuareg
-        religion = sunni
-        size = 15
+        culture = persian
+        religion = shiite
+        size = 250
     }
 
     artisans = {
-        culture = tuareg
-        religion = sunni
-        size = 35
+        culture = persian
+        religion = shiite
+        size = 1250
     }
 
     soldiers = {
-        culture = tuareg
-        religion = sunni
-        size = 25
+        culture = persian
+        religion = shiite
+        size = 250
     }
 
     farmers = {
-        culture = tuareg
-        religion = sunni
-        size = 1900
+        culture = persian
+        religion = shiite
+        size = 22800
     }
 }
 #Illizi (8000/2000 POPS)
