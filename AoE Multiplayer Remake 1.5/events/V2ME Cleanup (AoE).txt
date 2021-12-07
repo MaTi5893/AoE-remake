@@ -520,6 +520,14 @@ country_event = {
 	
 	option = {
 		name = "Release this country"
+		random_owned = {
+			limit = { owner = { FROM = { civilized = yes } } }
+			owner = { prestige = -20 }
+		}
+		random_owned = {
+			limit = { owner = { FROM = { civilized = no } } }
+			owner = { prestige = -5 }
+		}
 		FROM = {
 			country_event = 477877788
 		}
