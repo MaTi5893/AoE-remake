@@ -3,6 +3,7 @@ political_decisions = {
 		picture = merchant_navy
 		alert = no
 		potential = {
+			ai = no
 			any_owned_province = {
 				is_colonial = yes
 			}

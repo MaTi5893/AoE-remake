@@ -1,4 +1,19 @@
 political_decisions = {
+
+	cleanup_setup = {
+		potential = {
+			ai = yes
+			exists = yes
+			NOT = { has_global_flag = cleanup_setup_done }
+		}
+		allow = { }
+		
+		effect = {
+			set_global_flag = cleanup_setup_done
+			country_event = 477877789
+		}
+	}
+	
 	scandi_pop_buff = {
 		potential = {
 			always = no

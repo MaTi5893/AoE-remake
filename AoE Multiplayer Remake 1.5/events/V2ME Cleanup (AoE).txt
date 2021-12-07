@@ -1,0 +1,598 @@
+#
+# V2ME Cleanup 1.0.2 by Bob Bobington and Dr, configured for AoE
+#
+#
+#
+# Features:
+#	
+#	-Nearly invisible cleanup tag
+#	-Zero performance degradation
+#	-Immersion will not be ruined, player interaction with cleanup is kept to an absolute minimum
+#	-Multiple stability improvements and bug fixes
+#	-Easy to customize for new content
+#	-Handles backend tasks (i.e. setting govflags, invention flags, etc) on a daily, monthly, or yearly tick, as needed
+#	-Handles vassal interactions with one decision instead of hundreds
+#	
+# Notable bugs addressed:
+#
+#	-Ghost units and ships of non-existing nations cleaned monthly
+#	-Prevent uncivs from gaining colonial states/capitals incorrectly
+#	-Prevent countries with slavery outlawed from having bugged slave states
+#	-Prevents existing countries from having non-existing overlords
+#	-Prevents existing countries from having non-existing vassals (disabled by default, this is intended in some mods)
+#
+# Upcoming features (TBA):
+#	-Permanent fix to craftsmen exploit/bug, without player interaction
+#	-Dynamically adressing the liquidity crisis, effectively
+#
+
+# disabled - AoE doesn't need this
+#country_event = {
+#	id = 477877787
+#	title = "AI: Daily Cleanup Check"
+#	desc = "AI: Daily Cleanup Check"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "Checking..."
+#		
+#		CLN = { country_event = { id = 477877787 days = 1 } }
+#	}
+#}
+
+country_event = {
+	id = 477877790
+	title = "AI: Monthly Cleanup Check"
+	desc = "AI: Monthly Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		#clean up crisis tension
+		any_country = {
+            limit = {
+				exists = yes
+            }
+            any_state = { flashpoint_tension = -100 }
+        }
+		#make CLN unable to be interacted with by ai
+		any_country = {
+			limit = {
+				exists = yes
+			}
+			relation = { who = THIS value = -400 }
+		}
+		
+		#cleanup unciv colonies
+		any_country = {
+			limit = {
+				civilized = no
+				any_state = { is_colonial = yes }
+				NOT = {
+					tag = EIC
+					tag = EGY
+					UTI = { exists = yes }
+				}
+			}
+			any_state = {
+				limit = {
+					is_colonial = yes
+				}
+				any_owned = {
+					add_core = UTI
+				}
+			}
+			any_owned = {
+				limit = {
+					is_core = UTI
+				}
+				secede_province = THIS
+			}
+			THIS = {
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = UTI
+				}
+				create_vassal = UTI
+			}
+			inherit = UTI
+			any_owned = {
+				limit = {
+					is_core = UTI
+				}
+				remove_core = UTI
+			}
+		}
+		
+		#cleanup bugged slave states
+		any_country = {
+			limit = {
+				any_state = { is_slave = yes }
+				slavery = no_slavery
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				is_slave = no
+			}
+		}
+		
+		#cleanup vassals with nonexistent overlords
+		any_country = {
+			limit = {
+				is_vassal = yes
+				exists = yes
+				overlord = { exists = no }
+			}
+			country_event = 477877788
+		}
+		
+		#cleanup overlords with nonexistent vassals - disabled by default
+		#any_country = {
+		#	limit = {
+		#		is_vassal = yes
+		#		exists = no
+		#		overlord = { exists = yes }
+		#	}
+		#	country_event = 477877788
+		#}
+		
+		#cleanup bad govflags - disabled for now, may be used at some point
+		#any_country = {
+		#	limit = {
+		#		OR = {
+		#			AND = {
+		#				government = theocracy
+		#				NOT = { has_country_flag = theocratic_government }
+		#			}
+		#			AND = {
+		#				government = proletarian_dictatorship
+		#				NOT = { has_country_flag = communist_gov }
+		#			}
+		#			AND = {
+		#				government = absolute_monarchy
+		#				NOT = { has_country_flag = absolute_monarchy_gov }
+		#			}
+		#			AND = {
+		#				government = prussian_constitutionalism
+		#				NOT = { has_country_flag = semi_constitutional_monarchy_gov }
+		#			}
+		#			AND = {
+		#				government = hms_government
+		#				NOT = { has_country_flag = constitutional_monarchy_gov }
+		#			}
+		#			AND = {
+		#				government = presidential_dictatorship
+		#				NOT = { has_country_flag = presidential_dictatorship_gov }
+		#			}
+		#			AND = {
+		#				government = fascist_dictatorship
+		#				NOT = { has_country_flag = fascist_gov }
+		#			}
+		#			AND = {
+		#				government = bourgeois_dictatorship
+		#				NOT = { has_country_flag = anarcho_liberal_gov }
+		#			}
+		#			AND = {
+		#				government = democracy
+		#				NOT = { has_country_flag = democracy_gov }
+		#			}
+		#			AND = {
+		#				government = colonial_company
+		#				NOT = { has_country_flag = clean_up_colonial_government }
+		#			}
+		#			AND = {
+		#				government = dominion
+		#				NOT = { has_country_flag = dominion_gov }
+		#			}
+		#		}
+		#	}
+		#	clr_country_flag = theocratic_government
+		#	clr_country_flag = communist_gov
+		#	clr_country_flag = absolute_monarchy_gov
+		#	clr_country_flag = semi_constitutional_monarchy_gov
+		#	clr_country_flag = constitutional_monarchy_gov
+		#	clr_country_flag = presidential_dictatorship_gov
+		#	clr_country_flag = fascist_gov
+		#	clr_country_flag = anarcho_liberal_gov
+		#	clr_country_flag = democracy_gov
+		#	clr_country_flag = clean_up_colonial_government
+		#	clr_country_flag = dominion_gov
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = theocracy
+		#			}
+		#		}
+		#		owner = { set_country_flag = theocratic_government }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = proletarian_dictatorship
+		#			}
+		#		}
+		#		owner = { set_country_flag = communist_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = absolute_monarchy
+		#			}
+		#		}
+		#		owner = { set_country_flag = absolute_monarchy_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = prussian_constitutionalism
+		#			}
+		#		}
+		#		owner = { set_country_flag = semi_constitutional_monarchy_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = hms_government
+		#			}
+		#		}
+		#		owner = { set_country_flag = constitutional_monarchy_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = presidential_dictatorship
+		#			}
+		#		}
+		#		owner = { set_country_flag = presidential_dictatorship_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = fascist_dictatorship
+		#			}
+		#		}
+		#		owner = { set_country_flag = fascist_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = democracy
+		#			}
+		#		}
+		#		owner = { set_country_flag = democracy_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = bourgeois_dictatorship
+		#			}
+		#		}
+		#		owner = { set_country_flag = anarcho_liberal_gov }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = colonial_company
+		#			}
+		#		}
+		#		owner = { set_country_flag = clean_up_colonial_government }
+		#	}
+		#	random_owned = {
+		#		limit = {
+		#			owner = {
+		#				government = dominion
+		#			}
+		#		}
+		#		owner = { set_country_flag = dominion_gov }
+		#	}
+		#}
+		
+		#updating flags for techs/inventions
+		#any_country = {
+		#	limit = {
+		#		medicine = 1
+		#		NOT = { has_country_flag = medicine_invented }
+		#	}
+		#	set_country_flag = medicine_invented
+		#}
+		#any_country = {
+		#	limit = {
+		#		biologism = 1
+		#		NOT = { has_country_flag = biologism_invented }
+		#	}
+		#	set_country_flag = biologism_invented
+		#}
+		#any_country = {
+		#	limit = {
+		#		invention = germ_theory
+		#		NOT = { has_country_flag = germs_invented }
+		#	}
+		#	set_country_flag = germs_invented
+		#}
+		#any_country = {
+		#	limit = {
+		#		invention = gaslights
+		#		NOT = { has_country_flag = gaslights_invented }
+		#	}
+		#	set_country_flag = gaslights_invented
+		#}
+		#any_country = {
+		#	limit = {
+		#		electricity = 1
+		#		NOT = { has_country_flag = electricity_invented }
+		#	}
+		#	set_country_flag = electricity_invented
+		#}
+		any_country = {
+			limit = {
+				modern_central_bank_system = 1
+				NOT = { has_country_flag = modern_central_bank_system_invented }
+			}
+			set_country_flag = modern_central_bank_system_invented
+		}
+		
+		#ghost units monthly cleanup
+		any_country = {
+			limit = {
+				exists = no
+                is_greater_power = no
+                capital_scope = { NOT = { province_control_days = 120 } }
+                OR = {
+                    is_mobilised = yes
+                    total_amount_of_ships = 1
+                }
+			}
+			annex_to = FROM
+		}
+		
+		CLN = { country_event = { id = 477877790 days = 30 } }
+	}
+}
+
+country_event = {
+	id = 477877791
+	title = "AI: Yearly Cleanup Check"
+	desc = "AI: Yearly Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		#slave pop growth
+		any_country = {
+            limit = {
+				exists = yes
+                NOT = { has_country_modifier = slave_growth }
+                slavery = yes_slavery
+                any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+            }
+            any_pop = {
+                limit = { type = slaves NOT = { location = { slaves = 0.75 } } }
+                random_list = {
+                    10 = {}
+                    10 = { reduce_pop = 1.04 }
+                    10 = { reduce_pop = 1.05 }
+                    10 = { reduce_pop = 1.06 }
+                    10 = { reduce_pop = 1.07 }
+                    10 = { reduce_pop = 1.08 }
+                    10 = { reduce_pop = 1.09 }
+                    10 = { reduce_pop = 1.10 }
+                    10 = { reduce_pop = 1.11 }
+                    10 = { reduce_pop = 1.12 }
+                }
+            }
+            any_pop = {
+                limit = { type = slaves }
+                random = { chance = 10 reduce_pop = 0.97 }
+            }
+            any_pop = {
+                limit = { type = slaves }
+                random = { chance = 10 reduce_pop = 0.98 }
+            }
+            random_list = {
+                33 = { add_country_modifier = { name = slave_growth duration = 1460 } }
+                33 = { add_country_modifier = { name = slave_growth duration = 1827 } }
+                33 = { add_country_modifier = { name = slave_growth duration = 2190 } }
+            }
+            any_pop = { limit = { type = slaves } literacy = -0.1 }
+        }
+		
+		#upgrade rebels
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1880
+					NOT = { has_global_flag = rebel_tech_1850 }
+				}
+			}
+			owner = {
+				REB = {
+					activate_technology = post_napoleonic_thought
+					activate_technology = flintlock_rifles
+					activate_technology = muzzle_loaded_rifles
+					activate_technology = bronze_muzzle_loaded_artillery
+					activate_technology = military_staff_system
+					activate_technology = army_command_principle
+				}
+				set_global_flag = rebel_tech_1850
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1900
+					NOT = { has_global_flag = rebel_tech_1870 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_1870
+				REB = {
+					activate_technology = strategic_mobility
+					activate_technology = breech_loaded_rifles
+					activate_technology = iron_muzzle_loaded_artillery
+					activate_technology = military_plans
+					activate_technology = army_professionalism
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1910
+					NOT = { has_global_flag = rebel_tech_1900 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_1900
+				REB = {
+					activate_technology = point_defense_system
+					activate_technology = iron_breech_loaded_artillery
+					activate_technology = army_decision_making
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1920
+					NOT = { has_global_flag = rebel_tech_1920 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_1920
+				REB = {
+					activate_technology = bolt_action_rifles
+				}
+			}
+		}
+		
+		CLN = { country_event = { id = 477877791 days = 365 } }
+	}
+}
+
+country_event = {
+	id = 477877788
+	title = "Freedom!"
+	desc = "We have acquired independence!"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nice."
+		overlord = { release_vassal = THIS }
+	}
+}
+
+country_event = {
+	id = 477877789
+	title = "AI: Cleanup Setup"
+	desc = "AI: Cleanup Setup"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Cleanup Setup"
+		CLN = {
+			#country_event = 477877787
+			country_event = 477877790
+			country_event = 477877791
+			add_country_modifier = { name = neutrality duration = -1 }
+		}
+	}
+}
+
+##vassal interactions events
+
+country_event = {
+	id = 477877792
+	title = "Vassal Interactions: $FROMCOUNTRY$"
+	desc = "If $FROMCOUNTRY$ is the country you want to interact with, select an option. Otherwise, select 'Next country' to cycle through, or select 'Exit options' to return to the game."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Release this country"
+		FROM = {
+			country_event = 477877788
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+	
+	option = {
+		name = "Return cores to this country"
+		any_owned = {
+			limit = {
+				is_core = FROM
+				NOT = { is_core = THIS }
+			}
+			secede_province = FROM
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+	
+	option = {
+		name = "Next country"
+		random_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				NOT = { has_country_flag = interacted_with }
+			}
+			country_event = 477877793
+			THIS = { set_country_flag = possible_interactions }
+		}
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				THIS = { NOT = { has_country_flag = possible_interactions } }
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+	
+	option = {
+		name = "Exit options"
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+}
+
+country_event = {
+	id = 477877793
+	title = "AI: Vassal Interactions"
+	desc = "This event lets your overlord interact with you. If you are a player, just close this."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		set_country_flag = interacted_with
+		overlord = { country_event = 477877792 }
+	}
+}
