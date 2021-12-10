@@ -1,15 +1,14 @@
-capital = 2172
-primary_culture = mexican
-culture = central_american
-culture = spanish_american
+capital = 2295
+primary_culture = south_andean
+culture = north_andean
+culture = platinean
 religion = catholic
 government = colonial_company
 plurality = 0.25
 nationalvalue = nv_order
-literacy = 0.1
+literacy = 0.05
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
-
 
 # Political reforms
 slavery = yes_slavery
@@ -39,28 +38,22 @@ border_policy = open_borders
 centralization = regionalism
 colonial_policy = settlement
 
-
 set_country_flag = dynamic_colony
 
 set_country_flag = catholic_country
 set_country_flag = new_world_nation
 
 ruling_party = "Nobility Faction"
-last_election = 1835.1.28
 upper_house = {
     fascist = 0
-    liberal = 25
-    conservative = 63
-    reactionary = 12
+    liberal = 29
+    conservative = 57
+    reactionary = 14
     anarcho_liberal = 0
     socialist = 0
     communist = 0
 }
 
-govt_flag = {
-    government = presidential_dictatorship
-    flag = theocracy
-}
 
 # Technologies
 post_napoleonic_thought = 1
@@ -68,6 +61,7 @@ flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 army_command_principle = 1
 post_nelsonian_thought = 1
+the_command_principle = 1
 private_banks = 1
 no_standard = 1
 guild_based_production = 1
@@ -83,4 +77,4 @@ mechanical_production = 1
 consciousness = 2
 nonstate_consciousness = 0
 
-oob = "MEX_oob.txt"
+oob = "PBC_oob.txt"

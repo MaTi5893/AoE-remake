@@ -1,90 +1,127 @@
-#Salvador Region (416000)
+#Costa Rica Region (84000)
 #Ruled by Central America 1836
-#San Salvador (260000/65000 POPS)
-2191 = {
+#San Jose (52000/13000 POPS)
+2201 = {
     aristocrats = {
         culture = spanish_american
         religion = catholic
-        size = 1425
+        size = 300
         militancy = 9
     }
 
     bureaucrats = {
         culture = spanish_american
         religion = catholic
-        size = 150
+        size = 50
         militancy = 9
     }
 
     officers = {
         culture = spanish_american
         religion = catholic
-        size = 125
+        size = 25
         militancy = 9
     }
 
     clergymen = {
         culture = spanish_american
+        religion = catholic
+        size = 125
+        militancy = 9
+    }
+
+    artisans = {
+        culture = central_american
         religion = catholic
         size = 650
         militancy = 9
     }
 
-    artisans = {
-        culture = spanish_american
-        religion = catholic
-        size = 3250
-        militancy = 9
-    }
-
     soldiers = {
         culture = central_american
         religion = catholic
-        size = 1100
+        size = 125
         militancy = 9
     }
 
     farmers = {
         culture = central_american
         religion = catholic
-        size = 58350
+        size = 11725
         militancy = 9
     }
 }
-#San Miguel (156000/44000 POPS)
-2192 = {
+#Liberia (20000/5000 POPS)
+2202 = {
     aristocrats = {
         culture = spanish_american
         religion = catholic
-        size = 950
+        size = 150
         militancy = 9
     }
 
     clergymen = {
         culture = spanish_american
         religion = catholic
-        size = 450
+        size = 50
         militancy = 9
     }
 
     artisans = {
         culture = spanish_american
         religion = catholic
-        size = 2200
+        size = 250
         militancy = 9
     }
 
     soldiers = {
         culture = central_american
         religion = catholic
-        size = 450
+        size = 50
         militancy = 9
     }
 
     farmers = {
         culture = central_american
         religion = catholic
-        size = 39950
+        size = 4500
+        militancy = 9
+    }
+}
+#Limon (12000/3000 POPS)
+2203 = {
+    aristocrats = {
+        culture = central_american
+        religion = catholic
+        size = 75
+        militancy = 9
+    }
+
+    clergymen = {
+        culture = central_american
+        religion = catholic
+        size = 50
+        militancy = 9
+    }
+
+    artisans = {
+        culture = central_american
+        religion = catholic
+        size = 150
+        militancy = 9
+    }
+
+    soldiers = {
+        culture = central_american
+        religion = catholic
+        size = 25
+        militancy = 9
+    }
+
+    farmers = {
+        culture = central_american
+        religion = catholic
+        size = 2700
         militancy = 9
     }
 
