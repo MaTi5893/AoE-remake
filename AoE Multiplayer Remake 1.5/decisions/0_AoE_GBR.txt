@@ -233,63 +233,6 @@ political_decisions = {
 			}
         }
     }
-    claim_the_raj_title = {
-        picture = raj
-        potential = {
-            OR = {
-                tag = GBJ
-                tag = ENL
-                tag = ENG
-                tag = GBR
-            }
-            is_greater_power = yes
-            exists = yes
-            NOT = { has_country_modifier = indian_raj }
-        }
-        allow = {
-            ENG_1305 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
-            ENG_1261 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
-            ENG_1251 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
-            ENG_1252 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
-            political_thought_7 = 1
-        }
-        effect = {
-            prestige = 20
-            badboy = 15
-            add_country_modifier = {
-                name = indian_raj
-                duration = -1
-            }
-        }
-    }
 
     act_of_union_ire = {
         potential = {
