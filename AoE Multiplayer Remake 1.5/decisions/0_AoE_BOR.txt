@@ -209,9 +209,10 @@ political_decisions = {
 	annex_lor = {
 		picture = lorraine
 		potential = {
-			tag = BOR
+			primary_culture = french
 			NOT = { has_country_flag = annex_lor }
 			exists = yes
+			LOR = { exists = yes }
 		}
 		allow = {
 			state_n_government = 1

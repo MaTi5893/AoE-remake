@@ -10,7 +10,82 @@ ai_boost_mil = {
     }
     core_pop_militancy_modifier = -0.2
 }
-
+ai_revolutionary_buff = {
+	trigger = {
+		ai = yes
+		OR = {
+			government = fascist_dictatorship
+			government = proletarian_dictatorship
+		}
+		OR = {
+			is_greater_power = yes
+			tag = FRA
+		}
+	}
+	mobilisation_size = 0.05
+	core_pop_militancy_modifier = -0.2
+	tax_efficiency = 0.2
+	supply_consumption = -0.2
+	land_organisation = 0.2
+}
+dreams_of_liberty = {
+	trigger = {
+		any_neighbor_country = {
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+			}
+			OR = { #SAME CONTINENT ONLY
+				AND = {
+					THIS = { capital_scope = { continent = europe } }
+					capital_scope = {
+						continent = europe
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = north_america } }
+					capital_scope = {
+						continent = north_america
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = south_america } }
+					capital_scope = {
+						continent = south_america
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = africa } }
+					capital_scope = {
+						continent = africa
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = asia } }
+					capital_scope = {
+						continent = asia
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = oceania } }
+					capital_scope = {
+						continent = oceania
+					}
+				}
+			}
+		}
+		NOT = {
+			government = proletarian_dictatorship
+		}
+		NOT = {
+			government = fascist_dictatorship
+		}
+		NOT = {
+			government = democracy
+		}
+	}
+	core_pop_consciousness_modifier = 0.25
+}
 holy_roman_emperor = {
     trigger = {
         has_country_flag = hre_emperor

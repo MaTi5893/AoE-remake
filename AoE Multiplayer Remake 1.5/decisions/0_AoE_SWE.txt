@@ -742,7 +742,6 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			is_greater_power = yes
 			prestige = 45
 			war = no
 			state_n_government = 1
@@ -759,6 +758,10 @@ political_decisions = {
 		}	
 		effect = {
 			prestige = 20
+			all_core = {
+				add_core = SCA
+				remove_core = THIS
+			}
 			change_tag = SCA
 			add_accepted_culture = swedish
 			add_accepted_culture = danish

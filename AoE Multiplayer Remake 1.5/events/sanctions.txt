@@ -13,7 +13,7 @@ country_event = {
 			}
 			AND = {
 				has_global_flag = world_wars_enabled
-				bad_badboy = 2
+				badboy = 2
 			}
 		}
         NOT = {
@@ -30,21 +30,21 @@ country_event = {
         add_country_modifier = {
             name = kinda_bad_badboy
             duration = 1825
-            }
+         }
         any_greater_power = {
-        casus_belli = {
-            target = THIS
-            type = humiliate
-            months = 60
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
             }
-        casus_belli = {
-            target = THIS
-            type = free_peoples
-            months = 12
+			casus_belli = {
+				target = THIS
+				type = free_peoples
+				months = 12
             }
-        relation = {
-            who = THIS
-            value = -100
+			relation = {
+				who = THIS
+				value = -100
             }
         }
     }

@@ -2,7 +2,7 @@ political_decisions = {
     summon_the_estates_general = {
         picture = estates_general
         potential = {
-            tag = BOR
+            primary_culture = french
             NOT = {
                 BOR = { government = democracy }
                 BOR = { government = proletarian_dictatorship }
