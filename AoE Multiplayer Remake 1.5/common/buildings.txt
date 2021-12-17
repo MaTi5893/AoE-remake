@@ -664,6 +664,8 @@ fort = {
         artillery = 180
     }
     time = 365
+	local_ruling_party_support = 0.05
+	pop_militancy_modifier = -0.005 
     visibility = yes
     onmap = yes
     max_level = 6

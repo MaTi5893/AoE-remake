@@ -39,9 +39,11 @@ country_event = {
 			name = nader_shah
 			duration = -1
 		}
-		all_core = {
-			add_core = PRA
-			remove_core = THIS
+		PER = {
+			all_core = {
+				add_core = PRA
+				remove_core = PER
+			}
 		}
 		change_tag = PRA
 	}
