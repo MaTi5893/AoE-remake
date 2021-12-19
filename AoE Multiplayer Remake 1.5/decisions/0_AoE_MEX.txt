@@ -6,11 +6,15 @@ political_decisions = {
 			NOT = { has_country_flag = army_of_three_gurantees }
 		}
 		allow = {
+			OR = {
 			overlord = {
 				war_with = THIS
 			}
+			is_independant = yes
+			}
 		}
 		effect = {
+			set_country_flag = army_of_three_gurantees
 			any_owned = {
 				limit = {
 					is_core = THIS
@@ -44,6 +48,165 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	begin_the_hidalgo_revolt = {
+		picture = hidalgo
+		potential = {
+			tag = VNS
+			is_independant = no
+		}
+		allow = {
+			war = no
+			overlord = {
+				OR = {
+					AND = {
+						government = hms_government
+						OR = {
+							ruling_party_ideology = liberal
+							ruling_party_ideology = socialist
+							ruling_party_ideology = communist
+						}
+					}
+					government = proletarian_dictatorship
+					government = democracy
+					government = fascist_dictatorship
+					THIS = { ai = no }
+				}
+			}
+		}
+		effect = {
+			government = presidential_dictatorship
+			ruling_party_ideology = conservative
+			overlord = {
+				release_vassal = VNS
+				war = {
+					target = VNS
+					attacker_goal = { casus_belli = make_puppet }
+					defender_goal = { casus_belli = become_independent }
+				}
+			}
+			define_general = {
+				name = "Miguel Hidalgo"
+				personality = defence_3.1 
+				background = attack_3.1
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 2270
+						2251 = { owned_by = VOP }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = VNG
+						}
+						secede_province = VOP
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 2270
+						2251 = { owned_by = VNG }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = VNG
+						}
+						secede_province = VNG
+					}
+				}
+			}
+			THIS = {
+				random_owned = {
+					limit = {
+						owner = {
+							exists = SPA
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = SPA
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = SPC
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = SPC
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = FSU
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = FSU
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = FRA
+							NOT = { exists = SPA }
+							NOT = { exists = SPC }
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = FRA
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	proclaim_mexican_empire = {
+		potential = {
+			tag = MEX
+			NOT = { has_country_flag = proclaimed_mexican_empire }
+			NOT
+		}
+		allow = {
+			
+		}
+		effect = {
+			government = hms_government
+			set_country_flag = proclaimed_mexican_empire
 		}
 	}
 }

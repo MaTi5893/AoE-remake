@@ -110,9 +110,11 @@ country_event = {
 	title = "The Genoese offer to sell claims"
 	desc = "EVNDESC175513"
 	picture = harbour
-	
+	fire_only_once = yes
 	trigger = {
 		CRS = { exists = yes }
+		primary_culture = french
+		capital = 425
 	}
 	option = {
 		name = "They are not worth our time"

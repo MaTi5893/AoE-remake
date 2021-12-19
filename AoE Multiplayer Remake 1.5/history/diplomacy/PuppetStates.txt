@@ -1,6 +1,6 @@
 #Russia - Bashkirs
 vassal = {  #substate
-	first = RUS
+	first = TOR
 	second = BSK
 	start_date = 1700.1.1
 	end_date = 2000.1.1
@@ -72,7 +72,7 @@ vassal = {  #substate
 
 #Russia - Hetmanate
 substate = {  #substate
-	first = RUS
+	first = TOR
 	second = HET
 	start_date = 1700.1.1
 	end_date = 1756.1.1
@@ -80,7 +80,7 @@ substate = {  #substate
 
 #Russia - Zaporozhie
 substate = {  #substate
-	first = RUS
+	first = TOR
 	second = ZZH
 	start_date = 1700.1.1
 	end_date = 2000.1.1
@@ -183,7 +183,7 @@ substate = {  #substate
 #Russian Khanti-Mansi
 
 vassal = {  #substate
-	first = RUS
+	first = TOR
 	second = KNI
 	start_date = 1700.1.1
 	end_date = 2000.1.1
@@ -369,28 +369,28 @@ vassal = {
 
 #Russia-Finland
 vassal = {
-	first = RUS
+	first = TOR
 	second = FIN
 	start_date = 1815.1.1
 	end_date = 1863.1.1
 }
 
 vassal = {
-	first = RUS
+	first = TOR
 	second = SVA
 	start_date = 1815.1.1
 	end_date = 1863.1.1
 }
 
 vassal = {
-	first = RUS
+	first = TOR
 	second = MIG
 	start_date = 1815.1.1
 	end_date = 1870.1.1
 }
 
 #vassal = {
-#	first = RUS
+#	first = TOR
 #	second = AKH
 #	start_date = 1815.1.1
 #	end_date = 1863.1.1
@@ -468,7 +468,7 @@ vassal = {
 
 #Russia - Transcaucasia Namestnik
 vassal = {  #substate
-	first = RUS
+	first = TOR
 	second = TCA
 	start_date = 1801.1.1
 	end_date = 1881.1.1
@@ -476,7 +476,7 @@ vassal = {  #substate
 
 #Russia - Baltic Governorate
 vassal = {  #substate
-	first = RUS
+	first = TOR
 	second = UBD
 	start_date = 1801.1.1
 	end_date = 1881.1.1
@@ -484,7 +484,7 @@ vassal = {  #substate
 
 #Russia - Abkhazia
 vassal = {
-	first = RUS
+	first = TOR
 	second = ABK
 	start_date = 1801.1.1
 	end_date = 1865.1.1

@@ -46,7 +46,6 @@ point_defense_system = {
         supply_consumption = 0.20
 		default_organisation = 5
     }
-    max_fort = 1
     #dig_in_cap = 1
 
     ai_chance = {
@@ -92,7 +91,6 @@ infiltration = {
     army_base = {
         supply_consumption = 0.20
     }
-    max_fort = 1
     #dig_in_cap = 1
 
     ai_chance = {
@@ -109,27 +107,27 @@ modern_army_doctrine = {
         supply_consumption = 0.20
     }
 
-    max_fort = 1
-        infantry = {
-            defence = 1
-            supply_consumption = 0.20
-        }
-        guard = {
-            defence = 1
-            supply_consumption = 0.20
-        }
-        plane = {
-            defence = 1
-            supply_consumption = 0.20
-        }
-        engineer = {
-            defence = 1
-            supply_consumption = 0.20
-        }
-        irregular = {
-            defence = 1
-            supply_consumption = 0.20
-        }
+	max_fort = 1
+       infantry = {
+           defence = 1
+           supply_consumption = 0.20
+       }
+       guard = {
+           defence = 1
+           supply_consumption = 0.20
+       }
+       plane = {
+           defence = 1
+           supply_consumption = 0.20
+       }
+       engineer = {
+           defence = 1
+           supply_consumption = 0.20
+       }
+       irregular = {
+           defence = 1
+           supply_consumption = 0.20
+       }
 
     ai_chance = {
         factor = 2

@@ -2,8 +2,8 @@ political_decisions = {
     declere_russian_empire = {
         picture = rus_empire
         potential = {
-            tag = RUS
-            NOT = { has_country_flag = declered_russian_empire }
+            tag = TOR
+            NOT = { exists = RUS }
             exists = yes
         }
         allow = {
@@ -15,7 +15,13 @@ political_decisions = {
             owns = 350
         }
         effect = {
-            set_country_flag = declered_russian_empire
+            all_core = {
+				add_core = RUS
+				remove_core = TOR
+			}
+			change_tag = RUS
+			inherit = HET
+			inherit = ZZH
             add_accepted_culture = ukrainian
             prestige = 25
         }
@@ -25,9 +31,9 @@ political_decisions = {
     }
 
 	peter_the_greats_reforms = {
-		picture = rus_empire
+		picture = peter_the_great
 		potential = {
-			tag = RUS
+			primary_culture = russian
 			NOT = { has_country_modifier = improved_administration }
 			has_country_modifier = peter_the_great
 		}
@@ -64,7 +70,7 @@ political_decisions = {
    construct_st_petersburg = {
         picture = petersburg
         potential = {
-            tag = RUS
+            primary_culture = russian
             NOT = { capital = 994 }
             994 = {
                 NOT = { has_province_modifier = st_petersburg_construction }
@@ -92,7 +98,7 @@ political_decisions = {
 	claim_the_baltics = {
 		picture = baltic_russia
 		potential = {
-			tag = RUS
+			primary_culture = russian
 			NOT = { has_country_flag = claimed_baltics }
 			exists = yes
 		}
@@ -486,111 +492,6 @@ political_decisions = {
 			}
 			tech_school = pogonya_za_zapadom
 			set_country_flag = catharine_the_great_reforms
-		}
-	}
-	
-	settle_south_borders = {
-		picture = cossacks
-		potential = {
-			tag = RUS
-			has_country_flag = claimed_crimea_south_ukraine
-			NOT = {
-				has_country_flag = settle_south_borders
-			}
-			exists = yes
-		}
-		allow = {
-			RUS_964 = { owned_by  = RUS }
-			#RUS_968 = { owned_by  = RUS }
-			#RUS_973 = { owned_by  = RUS }
-			1048 =  { owned_by  = RUS }
-			money = 5000000
-			war = no
-		}
-		effect = {
-			treasury = -500000
-			set_country_flag = settle_south_borders
-			973 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			975 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			976 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			965 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			979 = {
-				add_province_modifier = {
-						name = settle_the_south_border
-						duration = 125
-				}
-			}
-			1047 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			1048 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			974 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			964 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			1046 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			968 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			970 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-			971 = {
-				add_province_modifier = {
-					name = settle_the_south_border
-					duration = 125
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
 		}
 	}
 	

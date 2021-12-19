@@ -544,6 +544,12 @@ emigration_chance =
         }
     }
 
+	modifier = {
+		factor = -5
+		type = farmers
+		country = { debt_law = serfdom }
+	}
+
     group = {
         modifier = {
             factor = -0.1
