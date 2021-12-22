@@ -137,7 +137,7 @@ political_decisions = {
     }
 
     become_brz = {
-        picture = become_pbz
+        picture = become_brz
         potential = {
             tag = PBZ
             NOT = { exists = BRZ }

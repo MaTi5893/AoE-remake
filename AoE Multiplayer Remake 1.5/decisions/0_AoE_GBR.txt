@@ -96,7 +96,13 @@ political_decisions = {
             }
         }
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1707 }
+			}
+		}
     }
 
     land_to_thc = {

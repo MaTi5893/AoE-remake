@@ -1,0 +1,26 @@
+country_event = {
+	id = 170100
+	title = "Brazillian Gold Rush"
+	desc = "EVTDESC170100"
+	picture = goldrush_brazil
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PBZ
+		exists = yes
+	}
+	
+	option = {
+		name = "GOLD RUSH!!!!"
+		2447 = { trade_goods = precious_metals }
+		2450 = { trade_goods = precious_metals }
+		2441 = { trade_goods = precious_metals }
+		2442 = { trade_goods = precious_metals }
+		2446 = { trade_goods = precious_metals }
+		prestige = 20
+		any_pop = {
+			consciousness = 2
+			miltancy = -2
+		}
+	}
+}
