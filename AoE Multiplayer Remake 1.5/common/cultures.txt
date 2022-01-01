@@ -464,12 +464,12 @@ iberian = {
         Nunes Ortig„o Pereira Pinheiro Pinto Pires Pomar Pulido Queiroz Quintanilha
         Ribeiro Rodrigues Salazar Sampaio SÈrgio Silveira Tavares Teixeira Vidigal Vieira }
     }
-    aragonese  = {
-        color = { 240 145 79 }
-        first_names = { AgostÌn Alixandre Andreu AntÛn Augusto Bernal Chabier Chaime Chudes Francho GalÈn GuillÈn Loren Lorient Miguel Moisen Pero Remund SimÛn Tito Tom·s }
-
-        last_names = { Aflor Alcubierre Borcha Corbal·n Escoriuela Galindo Lanuza Luna Peralta Quinto Urreya Vale Zaragoza }
-    }
+#    aragonese  = {
+#        color = { 240 145 79 }
+#        first_names = { AgostÌn Alixandre Andreu AntÛn Augusto Bernal Chabier Chaime Chudes Francho GalÈn GuillÈn Loren Lorient Miguel Moisen Pero Remund SimÛn Tito Tom·s }
+#
+#        last_names = { Aflor Alcubierre Borcha Corbal·n Escoriuela Galindo Lanuza Luna Peralta Quinto Urreya Vale Zaragoza }
+#    }
 }
 
 basque = {
@@ -845,20 +845,6 @@ czecho_slovak_culture_group = {
         Tom·sek Tyl Vit·sek "von Mittrowitz-Nettolitzky" Vorisek Wankel Weber ZÌbrt ZÌvr Zoubek }
         radicalism = 5
     }
-    moravian = {
-        color = {35 95 155}
-        first_names = { Abraham Alexander Alfred Alois Anton˙ã August Bedrich Benedikt Borivoj
-        Cenek D·vid Drahoslav Edvard Emanuel Emil Evzen Frantisek "Frantisek Josef" "Frantisek Xaver"
-        Hermenegild J·n "J·n Krtitel" "J·n Nepomuk" Jaroslav Jindrich JirÅEJosef Kajetan Karel
-        Konstantin Ladislav Luv˙à Matyas Maxmili·n Mikul·s Olbram Otakar Pavel Petr
-        Radola Rafael Tom·s V·clav Vincenc Vitezslav Vlastimil Vojtech Vratislav Zdenek }
-
-        last_names = { Albert Balaban Basch Breisky Celovsk˝ Dvor·k Fibich Gajda Gellner H·lek
-        Hrdlicka Jirecek Kadlec Kafka Koller Kr˙ókovsk˝ Kucera Kuchar Lederer Makosky
-        Mik Mor·vec Nemecek Neruda Nov·cek Novotn˝ Popper Radeck˝ Rokytansk˝ Saf·rik
-        Safr·nek Schack Schubert Skoda Skuhersk˝ Smetana Snejd·rek Suk Svoboda Syrov˝
-        Tom·sek Tyl Vit·sek "von Mittrowitz-Nettolitzky" Vorisek Wankel Weber Z˙~rt Z˙ìr Zoubek }
-    }
     slovak = {
         color = {120 255 255}
         first_names = { AlbÌn Alexander Andr·s Andrej AugustÌn Basil Cypri·n Dalibor Dezider Dominik
@@ -1060,23 +1046,6 @@ levantine = {
         Tavakyalian Tchartichian Tcholakhian Ter-Sarkayan Terzian Tigraniants Tigranov Toshian Varapetian Vartanian
         }
         radicalism = 5
-    }
-    cappadocian = {
-        color = { 72 187 245 }
-        first_names = { Adamantios Alexandros Anastasios Andreas Antonios Aristidis Athanasios Augustinos Benizelos Charalambos
-        Charilaos Dimitrios Diomidis Eleftherios Emmanouil Epameinontas Evripidis Gennaios Georgios Ilias
-        Ionnis Kitsos Konstantinos Kyriakos Kyriakoulis Leonidas Makarios Markos Mikhael Militiadis
-        Nikolaos Odysseas Othon Panagiotis Pavlos Petros Sofoklis Sotiris Spyridion Spyros
-        Staikos Stefanos Stylianos Themistoklis Theodoros Tharyvoulos Tzannis Vasos Viktor Zinovios
-        }
-
-        last_names = { Charalambis Christakis-Zografos Danglis Dousmanis Foumis Gonatas Hatzianestis Kallergis Kanaris Katsimiros
-        Kolokotronis Kondylis Kountouriotis Kriezis Makriyannis Manos Mavrocordatos Mavrovouniotis Metaxas Mouskos
-        Nider Othonaios Palaskas Pangalos Papadiamantopoulos Papadopoulos Papagos Papoulas Parakevopouolos Plapoutas
-        Plastiras Sapountzakis Sarafis Smolenskis Sofoulis Soutsos Spyromilios Staikopoulos Stanotas "tes Elladas"
-        Trikoupis Tsakalotos Tsolakoglou Typaldos-Alfonsatos Tzavelas Vassos Venizelos Voulgaris Zaimis Zymvrakakis
-        }
-        radicalism = 3
     }
 #    pontic = {
 #        color = { 65 134 168 }
@@ -2162,14 +2131,7 @@ east_asian = {
         last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
         }
     }
-    hanhui = {
-        color = {255 230 230}
-        first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu
-        }
-        last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
-        }
-    }
-    hakka = {
+    sinitic = {  #former hakka
         color = {89 63 24}
         first_names = { Hong Feng Shi Li Chen Liu Qiu Sun Soong Liao Xue Zhang Xie Wu Shu Tsai Deng Zhen Huang Ye Yang
         }
@@ -2183,34 +2145,34 @@ east_asian = {
         last_names = { Thao Sao Moua Vue Her Lyfoung Pao Yang Lo Cha Congwen Zhiming Liangyu
         }
     }
-    min = {
-        color = {76 32 200}
-        first_names = { Lin Shen Chen Wong Yan Sa Hou Zheng Bing Wu Tan He Du Xue Xu Qin
-        }
-        last_names = { Zexu Baozhen Baochen Nai-siong Shu Fu Sen Debang Xin Nee Huiyin
-        }
-    }
-    zhuang = {
-        color = {200 75 134}
-        first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc
-        }
-        last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao
-        }
-    }
-    yi = {
-        color = {134 25 80}
-        first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu
-        }
-        last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
-        }
-    }
-    yue = {
-        color = {89 34 100}
-        first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu
-        }
-        last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
-        }
-    }
+#    min = {
+#        color = {76 32 200}
+#        first_names = { Lin Shen Chen Wong Yan Sa Hou Zheng Bing Wu Tan He Du Xue Xu Qin
+#        }
+#        last_names = { Zexu Baozhen Baochen Nai-siong Shu Fu Sen Debang Xin Nee Huiyin
+#        }
+#    }
+#    zhuang = {
+#        color = {200 75 134}
+#        first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc
+#        }
+#        last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao
+#        }
+#    }
+#    yi = {
+#        color = {134 25 80}
+#        first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu
+#        }
+#        last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
+#        }
+#    }
+#    yue = {
+#        color = {89 34 100}
+#        first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu
+#        }
+#        last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye L¸ Tian Jiang Wei Ting Shen Fang Jin Qiu
+#        }
+#    }
     union = CHI
 }
 
