@@ -340,5 +340,24 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	become_hetmanate = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = ZZH
+			NOT = { exists = HET }
+		}
+		allow = {
+			owns = 958
+		}
+		effect = {
+			all_core = {
+				add_core = HET
+				remove_core = THIS
+			}
+			change_tag = HET
+			prestige = 15
+		}
+	}
 
 }

@@ -447,16 +447,7 @@ country_event = {
 	
 	option = {
 		name = "Send a linient treaty"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
-		1068 = {
-			add_core = RUS
-		}
-		add_core = 1077
+		RUS_1469 = { add_core = THIS }
 		prestige = 5
 		relation = {
 			who = QNG
@@ -468,12 +459,7 @@ country_event = {
 	}
 	option = {
 		name = "Claim Some Qing Lands"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
+		RUS_1469 = { add_core = THIS }
 		1469 = {
 			add_core = RUS
 		}
@@ -484,8 +470,6 @@ country_event = {
 			add_core = RUS
 		}
 		add_core = 2698
-		add_core = 1068
-		add_core = 1077
 		badboy = 5
 		relation = {
 			who = QNG
@@ -503,22 +487,13 @@ country_event = {
 	}
 	option = {
 		name = "Add in Manchuria as well!"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
-		1469 = {
-			add_core = RUS
-		}
+		RUS_1469 = { add_core = THIS }
 		1081 = {
 			add_core = RUS
 		}
 		2697 = {
 			add_core = RUS
 		}
-		add_core = 1077
 		CHI_1082 = {
 			add_core = RUS
 		}

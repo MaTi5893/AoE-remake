@@ -540,6 +540,20 @@ partition_cb = {
                 }
             }
         }
+		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				tag = AUS
+				OR = {
+					region = RUS_710
+					region = AUS_702
+					region = AUS_662
+					is_core = THIS
+					is_core = HUN
+				}
+			}
+		}
     }
 
     po_demand_state = yes
@@ -2904,7 +2918,14 @@ uninstall_communist_gov_cb = {
             }
 			is_greater_power = yes
         }
+		OR = {
         neighbour = THIS
+		war_with = THIS
+		}
+		OR = {
+		war_with = THIS
+		badboy = 10
+		}
 		OR = { #SAME CONTINENT ONLY
 			AND = {
 				THIS = { capital_scope = { continent = europe } }

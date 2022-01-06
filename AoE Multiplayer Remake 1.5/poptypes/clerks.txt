@@ -852,6 +852,32 @@ promote_to =
                     has_factories = yes
                 }
         }
+		group = { #Noblity Influence
+            modifier = {
+                factor = -3
+                safety_regulations = no_safety
+            }
+            modifier = {
+                factor = -1
+                safety_regulations = trinket_safety
+            }
+            modifier = {
+                factor = 0
+                safety_regulations = low_safety
+            }
+            modifier = {
+                factor = 1
+                safety_regulations = acceptable_safety
+            }
+            modifier = {
+                factor = 3
+                safety_regulations = good_safety
+            }
+        }
+		modifier = {
+			factor = 4
+			has_country_flag = urban_army_works
+		}
         modifier = {
             factor = -40
             AND = {

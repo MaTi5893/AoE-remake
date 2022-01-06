@@ -7,7 +7,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            idealism = 1
+            ideological_thought = 1
             war = no
             owns = 994
             #owns = 354
@@ -20,13 +20,30 @@ political_decisions = {
 				remove_core = TOR
 			}
 			change_tag = RUS
-			inherit = HET
-			inherit = ZZH
             add_accepted_culture = ukrainian
             prestige = 25
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = asian_expedition
+					}
+				}
+				owner = {
+					RUS_1052 = { remove_core = THIS }
+					RUS_1102 = { remove_core = THIS }
+					PER_1116 = { remove_core = THIS }
+					RUS_1469 = { remove_core = THIS }
+					remove_core = 1116
+					remove_core = 1205
+					remove_core = 1194
+					remove_core = 1183
+					remove_core = 2611
+					remove_core = 1184
+				}
+			}
         }
         ai_will_do = {
-        factor = 1
+			factor = 1
         }
     }
 
@@ -62,7 +79,7 @@ political_decisions = {
 			activate_technology = the_command_principle
 			activate_technology = battleship_column_doctrine
 			any_pop = {
-				militancy = 2
+				militancy = 3
 			}
 		}
 	}
@@ -481,8 +498,22 @@ political_decisions = {
 			}
 		}
 		effect = {
-			inherit = HET
-			inherit = ZZH
+			random_owned = {
+				limit = {
+					owner = { HET = { exists = yes  in_sphere = THIS } }
+				}
+				owner = {
+					inherit = HET
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { ZZH = { exists = yes  in_sphere = THIS } }
+				}
+				owner = {
+					inherit = ZZH
+				}
+			}
 			years_of_research = 1
 			all_core = {
 				limit = {
@@ -559,6 +590,89 @@ political_decisions = {
 				who = TUR
 				value = -100
 			}
+		}
+	}
+	
+	
+	##############################
+	###Tsarist Russia Exclusive###
+	##############################
+	
+	menshikov_coup_and_westernization = {
+		picture = menshikov
+		potential = {
+			tag = TOR
+			NOT = { has_country_modifier = peter_the_great }
+			NOT = { has_country_flag = menshikov_coup_and_westernization }
+		}
+		allow = {
+			war = no
+			OR = {
+				NOT = {
+					OR = {
+						safety_regulations = no_safety
+						safety_regulations = trinket_safety
+					}
+				}
+				plurality = 20
+			}
+			recruited_percentage = 0.5
+		}
+		effect = {
+			years_of_research = 2
+			political_reform = open_borders
+			any_pop = {
+				militancy = 4
+				consciousness = 2
+			}
+			activate_technology = naval_design_bureaus
+			activate_technology = alphabetic_flag_signaling
+			activate_technology = the_command_principle
+			activate_technology = battleship_column_doctrine
+			set_country_flag = menshikov_coup_and_westernization
+		}
+	}
+	
+	asian_expedition = {
+		picture = map_caspian
+		potential = {
+			tag = TOR
+			has_country_flag = menshikov_coup_and_westernization
+			NOT = { has_country_flag = asian_expedition }
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = asian_expedition
+			RUS_1052 = { add_core = THIS }
+			RUS_1102 = { add_core = THIS }
+			PER_1116 = { add_core = THIS }
+			RUS_1469 = { add_core = THIS }
+			add_core = 1116
+			add_core = 1205
+			add_core = 1194
+			add_core = 1183
+			add_core = 2611
+			add_core = 1184
+		}
+	}
+	
+	russo_chinese_border_treaty = {
+		picture = the_eight_banners
+		potential = {
+			tag = TOR
+			has_country_flag = menshikov_coup_and_westernization
+			NOT = { has_country_flag = russo_chinese_border_treaty }
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			country_event = 170018
+			set_country_flag = russo_chinese_border_treaty
 		}
 	}
 }

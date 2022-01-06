@@ -1,12 +1,12 @@
 capital = 657
 primary_culture = siebenburger
-culture = vlach
+culture = romanian
 culture = hungarian
 religion = catholic
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_order
-literacy = 0.1
+literacy = 0.25
 civilized = yes
 
 
@@ -40,6 +40,8 @@ centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = orthodox_country
+
+oob = "SIE_oob.txt"
 
 govt_flag = {
     government = colonial_company

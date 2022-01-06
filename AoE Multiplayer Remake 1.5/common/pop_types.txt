@@ -1492,7 +1492,16 @@ conversion_chance =
             not = { life_needs = 0.7 }
         }
     }
-
+	group = {
+		modifier = {
+			factor = 1
+			country = { wage_reform = no_minimum_wage }
+		}
+		modifier = {
+			factor = 0.5
+			country = { wage_reform = trinket_wage }
+		}
+	}
     modifier = {
         factor = 0.15
         not = { culture = this }

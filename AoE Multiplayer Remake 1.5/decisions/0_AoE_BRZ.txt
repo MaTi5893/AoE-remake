@@ -4,11 +4,16 @@ political_decisions = {
 		potential = {
 			primary_culture = brazilian
 			NOT = { has_country_flag = move_capital_to_rio }
+			owns = 2447
 		}
 		allow = {
-		
+			OR = {
+			realism = 1
+			year = 1732
+			}
 		}
 		effect = {
+			capital = 2447
 			set_country_flag = move_capital_to_rio
 		}
 	}
@@ -68,4 +73,69 @@ political_decisions = {
 			}
 		}
 	}
+	
+	#agree_to_1750_border_treaty = {
+	#	potential = {
+	#		revolution_n_counterrevolution = 1
+	#		capital_scope = {
+	#			continent = south_america
+	#		}
+	#		NOT = { has_country_flag = agreed_to_1750_border_treaty }
+	#		NOT = {
+	#			any_neighbor_country = {
+	#				has_country_flag = disagreed_to_1750_border_treaty
+	#			}
+	#		}
+	#	}
+	#	allow = {
+	#		war = no
+	#	}
+	#	effect = {
+	#		set_country_flag = agreed_to_1750_border_treaty
+	#		any_country = {
+	#			limit = {
+	#				capital_scope = {
+	#					continent = south_america
+	#				}
+	#			}
+	#			relation = {
+	#				who = THIS
+	#				value = 25
+	#			}
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+	#
+	#disagree_to_1750_border_treaty = {
+	#	potential = {
+	#		revolution_n_counterrevolution = 1
+	#		capital_scope = {
+	#			continent = south_america
+	#		}
+	#		NOT = { has_country_flag = disagreed_to_1750_border_treaty }
+	#	}
+	#	allow = {
+	#		war = no
+	#	}
+	#	effect = {
+	#		set_country_flag = disagreed_to_1750_border_treaty
+	#		any_country = {
+	#			limit = {
+	#				capital_scope = {
+	#					continent = south_america
+	#				}
+	#			}
+	#			relation = {
+	#				who = THIS
+	#				value = 25
+	#			}
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
 }

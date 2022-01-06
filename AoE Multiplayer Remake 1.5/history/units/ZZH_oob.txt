@@ -1,14 +1,17 @@
+TUR = {
+	truce_until = 1705.1.1
+}
 army = {
-name = "Cossak Host"
-location = 972
-regiment = {
-name = "Dykopoltsi"
-type = hussar
-home = 972
-}
-regiment = {
-name = "Sich Polk"
-type = hussar
-home = 971
-}
+	name = "Cossak Host"
+	location = 972
+	regiment = {
+	name = "Dykopoltsi"
+	type = hussar
+	home = 972
+	}
+	regiment = {
+	name = "Sich Polk"
+	type = hussar
+	home = 971
+	}
 }

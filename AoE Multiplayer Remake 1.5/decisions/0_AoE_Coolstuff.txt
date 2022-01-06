@@ -1,29 +1,4 @@
 political_decisions = {
-    transylvanian_chust = {
-        picture = tur_hungary
-        potential = {
-            tag = SIE
-            NOT = {
-                has_country_flag = transylvania_full_duchy
-            }
-            NOT = { vassal_of = AUS }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            AUS_647 = {
-                add_core = SIE
-            }
-            set_country_flag = transylvania_full_duchy
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
 
     bohemian_lusatia = {
         picture = silesia_prussia

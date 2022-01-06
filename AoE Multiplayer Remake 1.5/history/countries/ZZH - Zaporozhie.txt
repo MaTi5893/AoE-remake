@@ -5,11 +5,12 @@ religion = orthodox
 government = democracy
 plurality = 10
 nationalvalue = nv_liberty
-literacy = 0,1
+literacy = 0.1
 civilized = yes
 prestige = 3S
 
-ruling_party = "Nobility Faction"
+ruling_party = "Sich Rada"
+
 upper_house = {
 fascist = 0
 reactionary = 33
@@ -27,12 +28,12 @@ public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = all_trade_unions
 political_parties = secret_ballots
-wage_reform = good_minimum_wage
+wage_reform = no_minimum_wage
 work_hours = eight_hours
-safety_regulations = good_safety
+safety_regulations = trinket_safety
 unemployment_subsidies = good_subsidies
-pensions = good_pensions
-health_care = good_health_care
+pensions = acceptable_pensions
+health_care = no_health_care
 school_reforms = good_schools
 #tech
 

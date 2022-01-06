@@ -159,79 +159,80 @@ political_decisions = {
             government = absolute_monarchy
         }
     }
-
-    start_pest_congress = {
-        picture = hungary_flag
-        potential = {
-            tag = HUN
-            has_global_flag = hungarian_revolution_succes
-            NOT = { has_global_flag = pest_congress }
-            SIE = {
-                vassal_of = HUN
-            }
-            exists = yes
-        }
-        allow = {
-            idealism = 1
-            war = no
-        }
-
-        effect = {
-            set_global_flag = pest_congress
-            prestige = 10
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    make_confederation = {
-        picture = austria_coa
-
-        potential = {
-            tag = HUN
-            has_global_flag = hungarian_revolution_succes
-            AUS = { has_country_flag = confederation }
-            exists = yes
-        }
-        allow = {
-            revolution_n_counterrevolution = 1
-            war = no
-            HUN = {
-                rank = 16
-            }
-
-            is_our_vassal = AUS
-        }
-        effect = {
-            HUN = { change_tag = KUK }
-            inherit = AUS
-            KUK = {
-                capital = 641
-            }
-            AUS = {
-                all_core = {
-                    add_core = KUK
-                }
-            }
-            HUN = {
-                all_core = {
-                    limit = {
-                        NOT = {
-                            is_core = SIE
-                            is_core = SLV
-                            is_core = SLO
-                            is_core = CRO
-                            is_core = RUT
-                            is_core = SER
-                        }
-                    }
-                    add_core = KUK
-                }
-            }
-            badboy = 8
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+	
+	proclaim_kingdom_of_hungary = {
+		picture = become_hungary
+		potential = {
+			tag = SIE
+			NOT = { exists = HUN }
+		}
+		allow = {
+			owns = 641
+		}
+		effect = {
+			all_core = {
+				add_core = HUN
+				remove_core = THIS
+			}
+			change_tag = HUN
+			primary_culture = hungarian
+			add_accepted_culture = siebenburger
+			remove_accepted_culture = romanian
+			prestige = 20
+			relation = {
+				who = AUS
+				value = -100
+			}
+		}
+	}
+	
+	form_romania_sie = {
+		picture = micheal_the_brave
+		potential = {
+			tag = SIE
+			NOT = { exists = ROM }
+		}
+		allow = {
+			ROM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			all_core = {
+				add_core = ROM
+				remove_core = THIS
+			}
+			change_tag = ROM
+			primary_culture = romanian
+			add_accepted_culture = siebenburger
+			remove_accepted_culture = hungarian
+			prestige = 20
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					primary_culture = romanian
+				}
+				annex_to = THIS
+			}
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					any_owned_province = { is_core = ROM }
+				}
+				any_owned = {
+					limit = {
+						is_core = ROM
+					}
+					secede_province = THIS
+				}
+			}
+		}
+	}
 }

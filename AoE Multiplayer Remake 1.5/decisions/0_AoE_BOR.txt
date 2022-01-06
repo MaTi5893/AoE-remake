@@ -71,24 +71,64 @@ political_decisions = {
 	establish_ecole_militire = {
 		picture = fra_soldier
 		potential = {
-			OR = {
-				tag = FRA
-				tag = BOR
-			}
+			primary_culture = french
 			is_greater_power = yes
 			NOT = { has_country_flag = established_ecole_militire }
 			exists = yes
 		}
 		allow = {
-			bolt_action_rifles = 1
-			military_spending = 1
+			army_nco_training = 1
 			money = 100000
 		}
 		effect = {
 			money = -100000
-			add_country_modifier = {
-				name = ecole_militire
-				duration = 1825
+			any_pop = {
+				limit = {
+					culture = french
+					location = {
+						is_core = THIS
+					}
+					type = soldiers
+				}
+				reduce_pop = 1.05
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = no_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						promotion_laws = privlage_benefits
+					}
+				}
+				political_reform = nepotism
 			}
 			set_country_flag = established_ecole_militire 
 		}
@@ -111,7 +151,6 @@ political_decisions = {
 		allow = {
 			war_policy = jingoism
 			NOT = { has_country_modifier = no_more_war }
-			has_recently_lost_war = no
 		}
 		effect = {
 			badboy = 15
@@ -130,6 +169,8 @@ political_decisions = {
 			575 = { add_core = THIS }
 			576 = { add_core = THIS }
 			577 = { add_core = THIS }
+			add_core = 2023
+			add_core = 570
 		}
 		ai_will_do = {
 			factor = 1
@@ -168,10 +209,8 @@ political_decisions = {
 			has_country_modifier = napoleon_bonaparte
 		}
 		allow = {	
-			#mass_politics = 1
 			war_policy = jingoism
 			NOT = { has_country_modifier = no_more_war }
-			has_recently_lost_war = no
 		}
 		effect = {
 			badboy = 20
@@ -196,6 +235,17 @@ political_decisions = {
 			HAN_534 = { add_core = THIS }
 			HAM_528 = { add_core = THIS }
 			HAN_540 = { add_core = THIS }
+			LIG = { all_core = { add_core = THIS } }
+			BEL = { all_core = { add_core = THIS } }
+			571 = { add_core = THIS }
+			573 = { add_core = THIS }
+			572 = { add_core = THIS }
+			574 = { add_core = THIS }
+			575 = { add_core = THIS }
+			576 = { add_core = THIS }
+			577 = { add_core = THIS }
+			add_core = 2023
+			add_core = 570
 		}
 		ai_will_do = {
 			factor = 1

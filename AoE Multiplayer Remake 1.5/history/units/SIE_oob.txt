@@ -1,0 +1,106 @@
+#Sphere of Influence
+
+#Other GP's
+ENG = { value = -75 }
+FRA = { value = -50 }
+RUS = { value = 25 }
+USA = { value = 25 }
+TUR = {
+    value = -125
+    truce_until = 1705.1.1
+}
+SPA = { value = 0 }
+
+leader = {
+    name = "Istvan Sennyey"
+    date = 1700.1.1
+    type = land
+    personality = defence_3.4
+    background = attack_1.2
+    prestige = 0.1
+}
+
+leader = {
+    name = "Miklos Bercsenyi"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.1
+    background = attack_2.2
+    prestige = 0.1
+}
+
+leader = {
+    name = "Sandor Karolyi"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.5
+    background = attack_3.1
+    prestige = 0.1
+}
+
+leader = {
+    name = "Simon Forgach"
+    date = 1700.1.1
+    type = land
+    personality = defence_minus_1.1
+    background = attack_1.2
+    prestige = 0.1
+}
+
+leader = {
+    name = "Janos Bottyán"
+    date = 1700.1.1
+    type = land
+    personality = defence_0.1
+    background = attack_0.1
+    prestige = 0.3
+}
+
+leader = {
+    name = "Tames Esze"
+    date = 1700.1.1
+    type = land
+    personality = defence_minus_1.1
+    background = attack_2.4
+}
+
+army = {
+    name = "I Army"
+    location = 657
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 657
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 657
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 2533
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 2533
+    }
+
+    regiment = {
+        name= "Artillery"
+        type = artillery
+        home = 654
+    }
+
+    regiment = {
+        name= "Cuirassiers"
+        type = cuirassier
+        home = 654
+    }
+}

@@ -541,7 +541,64 @@ save_the_nation5 = {
     mobilization_economy_impact = -0.66
     icon = 9
 }
+excellent_healthcare = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		administration_spending = 0.5
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
 
+low_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = low_schools
+		education_spending = 0.3
+	}
+	education_efficiency_modifier = 0.05
+	icon = 19
+}
+
+acceptable_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = acceptable_schools
+		education_spending = 0.4
+	}
+	education_efficiency_modifier = 0.075
+	icon = 19
+}
+
+good_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		education_spending = 0.5
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+education_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		OR = {
+			AND = {
+				ai = yes
+				education_spending = 0.74
+			}
+			AND = {
+				ai = no
+				education_spending = 0.99
+			}
+		}
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
 neglected_education = {
     trigger = {
         exists = yes

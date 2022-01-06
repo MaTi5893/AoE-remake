@@ -14,13 +14,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-vassal = {  #substate
-	first = AUS
-	second = HUN
-	start_date = 1699.1.1
-	end_date = 1756.1.1
-}
-
 #Mughal - Jodhpur
 vassal = {  #substate
 	first = MUG
@@ -78,14 +71,6 @@ substate = {  #substate
 	end_date = 1756.1.1
 }
 
-#Russia - Zaporozhie
-substate = {  #substate
-	first = TOR
-	second = ZZH
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
 #Mughal - Nagpur
 vassal = {  #substate
 	first = MUG
@@ -105,14 +90,6 @@ vassal = {  #substate
 vassal = {  #substate
 	first = MUG
 	second = SHI
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Austria - Transylvania
-vassal = {  #substate
-	first = AUS
-	second = SIE
 	start_date = 1700.1.1
 	end_date = 2000.1.1
 }
