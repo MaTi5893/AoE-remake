@@ -433,7 +433,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = BOR
+		has_country_modifier = louis_grande
 		year = 1715
 	}
 	
@@ -1077,7 +1077,7 @@ country_event = {
 	picture = new_world
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = missisiippi_trade_company
+		has_country_flag = missisiippi_trade_company_created
 		NOT = { has_country_modifier = missisiippi_trade_company }
 		NOT = { has_country_flag = failed_company }
 		OR = {
@@ -1122,7 +1122,7 @@ country_event = {
 	picture = new_world
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = missisiippi_trade_company
+		has_country_flag = missisiippi_trade_company_created
 		NOT = { has_country_modifier = missisiippi_trade_company }
 		NOT = {
 			has_country_flag = succesfull_company

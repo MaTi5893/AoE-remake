@@ -733,9 +733,27 @@ promote_to =
                 soldiers = 0.045
             }
             modifier = {
-                factor = -100
+                factor = -1
+				OR = { 
+					has_country_flag = soldier_king_reforms
+					pensions = good_pensions
+				}
                 soldiers = 0.05
             }
+        }
+		modifier = {
+            factor = -100
+			NOT = { has_country_flag = soldier_king_reforms }
+			NOT = { pensions = good_pensions }
+            soldiers = 0.05
+        }
+		modifier = {
+            factor = -100
+			OR = { 
+				has_country_flag = soldier_king_reforms
+				pensions = good_pensions
+			}
+            soldiers = 0.06
         }
     }
     clerks = {

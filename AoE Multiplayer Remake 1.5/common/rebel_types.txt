@@ -7259,11 +7259,11 @@ noble_rebels = {
 		}
 		modifier = {
 			safety_regulations = good_safety
-			factor = -100
+			factor = 0
 		}
 		modifier = {
 			safety_regulations = no_safety
-			factor = -100
+			factor = 0
 		}
 		modifier = {
 			government = elective_monarchy_oligarchy
@@ -7277,7 +7277,7 @@ noble_rebels = {
 		}
 		modifier = {
 			civilized = no
-			factor = -100
+			factor = 0
 		}
 	}
 

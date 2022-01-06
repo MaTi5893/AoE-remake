@@ -2534,3 +2534,59 @@ country_event = {
 		political_reform = civilizing
 	}
 }
+country_event = {
+    id = 170215
+    title = "$COUNTRY_ADJ$ Army Works"
+    desc = "EVTDESC170215"
+	is_triggered_only = yes
+	picture = desant
+	
+	option = {
+		name = "Focus On Rural Infrastructure"
+		add_country_modifier = {
+			name = rural_army_works
+			duration = 2190
+		}
+	}
+	
+	option = {
+		name = "Focus on Cultural Works"
+		add_country_modifier = {
+			name = cultural_army_works
+			duration = 2190
+		}
+	}
+	
+	option = {
+		name = "Focus on Promoting Urbanization"
+		add_country_modifier = {
+			name = urban_army_works
+			duration = 2190
+		}
+		set_country_flag = urban_army_works
+	}
+	
+	option = {
+		name = "Never Mind"
+		remove_country_modifier = army_works
+		clr_country_flag = army_works
+	}
+}
+country_event = {
+    id = 170216
+    title = "$COUNTRY_ADJ$ Army Works Finished"
+    desc = ""
+	is_triggered_only = yes
+	picture = desant
+	
+	trigger = {
+		has_country_flag = army_works
+		NOT = { has_country_modifier = army_works }
+	}
+	
+	option = {
+		name = "Good."
+		clr_country_flag = urban_army_works
+		clr_country_flag = army_works
+	}
+}

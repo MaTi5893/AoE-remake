@@ -113,7 +113,19 @@ political_decisions = {
             all_core = { add_core = PEU }
             all_core = { remove_core = THIS }
             change_tag = PEU
-            release_vassal = CHL
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { exists = GCO }
+						NOT = { exists = CLM }
+						NOT = { exists = VNG }
+					}
+				}
+				owner = {
+					country_event = 1516005
+				}
+			}
+			release_vassal = CHL
 			THIS = {
             release_vassal = CHL
 			}
@@ -125,7 +137,7 @@ political_decisions = {
     }
 
     become_brz = {
-        picture = become_pbz
+        picture = become_brz
         potential = {
             tag = PBZ
             NOT = { exists = BRZ }

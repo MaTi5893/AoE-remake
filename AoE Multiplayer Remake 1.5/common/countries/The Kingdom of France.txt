@@ -1,8 +1,8 @@
 color = { 20  50  210 }
-proletarian_dictatorship = { 0 0 102 }
-presidential_dictatorship = { 0 0 102 }
+proletarian_dictatorship = { 0  34  255 }
+presidential_dictatorship = { 0  34  255 }
 democracy = { 20  50  210 }
-fascist_dictatorship = { 0 0 102 }
+fascist_dictatorship = { 0  34  255 }
 graphical_culture = FrenchGC
 
 party = {
@@ -104,7 +104,7 @@ party = {
 
     social_policy = welfare_state
     economic_policy = planned_economy
-    trade_policy = free_trade
+    trade_policy = protectionism
     religious_policy = secularized
     citizenship_policy = full_citizenship
     war_policy = pro_military
@@ -134,7 +134,7 @@ party = {
 
     social_policy = welfare_state
     economic_policy = planned_economy
-    trade_policy = free_trade
+    trade_policy = protectionism
     religious_policy = pro_atheism
     citizenship_policy = limited_citizenship
     war_policy = jingoism

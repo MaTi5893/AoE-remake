@@ -3,6 +3,7 @@ political_decisions = {
         picture = enl_court
         potential = {
             government = absolute_monarchy
+			mass_politics = 1
             NOT = { has_country_modifier = establishing_an_advisory_body }
             NOT = { has_country_modifier = totalitarian_system }
             exists = yes
@@ -114,10 +115,8 @@ political_decisions = {
     the_cult_of_an_enligthened_monarch = {
         picture = enl_monarch
         potential = {
-            OR = {
-                government = absolute_monarchy
-                government = proletarian_dictatorship
-            }
+			mass_politics = 1
+            government = absolute_monarchy
             NOT = { has_country_modifier = cult_of_personality }
             NOT = { has_country_modifier = totalitarian_system }
             exists = yes
@@ -150,6 +149,7 @@ political_decisions = {
     ideological_indoctrination_communist = {
         picture = indoctrinal_education_communist
         potential = {
+			mass_politics = 1
             government = proletarian_dictatorship
             NOT = { has_country_modifier = political_education }
             NOT = { has_country_modifier = totalitarian_system }
@@ -184,6 +184,7 @@ political_decisions = {
     absolutist_indoctrination = {
         picture = enl_education
         potential = {
+			mass_politics = 1
             government = absolute_monarchy
             NOT = { has_country_modifier = political_education }
             NOT = { has_country_modifier = totalitarian_system }
@@ -218,6 +219,7 @@ political_decisions = {
     the_enlightened_regime = {
         picture = enl_regime
         potential = {
+			mass_politics = 1
             government = absolute_monarchy
             NOT = { has_country_modifier = totalitarian_system }
             exists = yes

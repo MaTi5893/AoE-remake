@@ -4380,10 +4380,8 @@ peter_iii= {
     icon = 14
 }
 catharine_the_great = {
-    culture_tech_research_bonus = 0.1
-    diplomatic_points_modifier = 0.25
-    influence_modifier = 0.2
-    bad_badboy = -0.05
+    influence_modifier = 0.05
+    bad_badboy = -0.03
     ruling_party_support = 0.35
     prestige = 0.05
     icon = 13
@@ -4415,8 +4413,7 @@ kamchatka_wars = {
 }
 ####Austria stuff####
 maria_theresa = {
-    culture_tech_research_bonus = 0.1
-    influence_modifier = 0.2
+    influence_modifier = 0.05
     ruling_party_support = 0.35
     prestige = 0.05
     icon = 13
@@ -5150,14 +5147,10 @@ silesia_boom_city = {
     icon = 13
 }
 frederick_grosse = {
-    army_tech_research_bonus = 0.1
-    culture_tech_research_bonus = 0.05
-    diplomatic_points_modifier = 0.25
-    influence_modifier = 0.2
-    bad_badboy = -0.05
-    global_pop_militancy_modifier = -0.02
-    ruling_party_support = 0.35
-    prestige = 0.06
+    bad_badboy = -0.01
+    global_pop_militancy_modifier = -0.05
+    ruling_party_support = 0.15
+    prestige = 0.01
     icon = 13
 }
 ###Spain refrom bonuses###
@@ -7067,6 +7060,46 @@ sugar_trade = {
 	farm_rgo_size = -0.1
 	icon = 13
 }
+army_works = {
+	org_regain = -0.2
+	land_organisation = -0.2
+	mobilisation_size = -0.01
+	icon = 18
+}
+rural_army_works = {
+	war_exhaustion = -0.02
+	RGO_output = 0.1
+	RGO_throughput = 0.1
+	industry_tech_research_bonus = 0.05
+	core_pop_militancy_modifier = -0.1
+	icon = 13
+}
+cultural_army_works = {
+	education_efficiency_modifier = 0.15
+	research_points_modifier = 0.2
+	icon = 13
+}
+urban_army_works = {
+	factory_cost = -0.25
+	factory_output = 0.05
+	factory_throughput = 0.05
+	commerce_tech_research_bonus = 0.05
+	icon = 13
+}
 change_colonial_policy = {
 	icon = 7
+}
+reign_of_terror =  {
+	pop_militancy_modifier = -0.1
+	pop_consciousness_modifier = 0.01
+	icon = 13
+}
+mob_army = {
+	org_regain = -0.2
+	land_organisation = -0.1
+	icon = 13
+}
+enemies_of_revolution = {
+	core_pop_militancy_modifier = 0.03
+	icon = 13
 }

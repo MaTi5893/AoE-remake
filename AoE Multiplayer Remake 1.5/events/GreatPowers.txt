@@ -887,8 +887,7 @@ country_event = {
     trigger = {
         great_wars_enabled = no
         NOT = { has_global_flag = great_wars_enabled }
-        nationalism_n_imperialism = 1
-        year = 1735
+        revolution_n_counterrevolution = 1
     }
 
     mean_time_to_happen = {
@@ -909,7 +908,7 @@ country_event = {
     news_desc_long = "EVTDESC19356_NEWS_LONG"
     news_desc_medium = "EVTDESC19356_NEWS_MEDIUM"
     news_desc_short = "EVTDESC19356_NEWS_SHORT"
-    title = "Coalition Wars"
+    title = "$COUNTRY_ADJ$ Revolutionary Wars"
     desc = "EVTDESC19356"
     major = yes
     picture = "greatpowers"
@@ -918,7 +917,23 @@ country_event = {
 
     trigger = {
         NOT = { has_global_flag = world_wars_enabled }
-        year = 1750
+        OR = {
+			AND = {
+				OR = {
+					government = fascist_dictatorship
+					government = proletarian_dictatorship
+				}
+				is_greater_power = yes
+				year = 1790
+			}
+			AND = {
+				year = 1800
+				OR = {
+					government = fascist_dictatorship
+					government = proletarian_dictatorship
+				}
+			}
+		}
         revolution_n_counterrevolution = 1
     }
 

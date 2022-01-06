@@ -1,0 +1,287 @@
+political_decisions = {
+	create_army_of_three_gurantees = {
+		picture = army_of_three_gurantees
+		potential = {
+			primary_culture = mexican
+			NOT = { has_country_flag = army_of_three_gurantees }
+		}
+		allow = {
+			OR = {
+			overlord = {
+				war_with = THIS
+			}
+			is_independant = yes
+			}
+		}
+		effect = {
+			set_country_flag = army_of_three_gurantees
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				any_pop = {
+					limit = {
+						culture = mexican
+						type = soldiers
+					}
+					reduce_pop = 1.25
+				}
+			}
+			any_pop = {
+				limit = {
+					culture = mexican
+				}
+				militancy = -2
+			}
+			any_pop = {
+				limit = {
+					culture = spanish_american
+				}
+				militancy = 4
+			}
+			small_arms = 110.46
+            artillery = 92.5
+            canned_food = 184.1
+            wine = 92.5
+            liquor = 92.5
+            luxury_clothes = 9.21
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	begin_the_hidalgo_revolt = {
+		picture = hidalgo
+		potential = {
+			tag = VNS
+			is_independant = no
+		}
+		allow = {
+			war = no
+			overlord = {
+				OR = {
+					AND = {
+						government = hms_government
+						OR = {
+							ruling_party_ideology = liberal
+							ruling_party_ideology = socialist
+							ruling_party_ideology = communist
+						}
+					}
+					government = proletarian_dictatorship
+					government = democracy
+					government = fascist_dictatorship
+					THIS = { ai = no }
+				}
+			}
+		}
+		effect = {
+			government = presidential_dictatorship
+			ruling_party_ideology = conservative
+			overlord = {
+				release_vassal = VNS
+				war = {
+					target = VNS
+					attacker_goal = { casus_belli = make_puppet }
+					defender_goal = { casus_belli = become_independent }
+				}
+			}
+			define_general = {
+				name = "Miguel Hidalgo"
+				personality = defence_3.1 
+				background = attack_3.1
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						owns = 2270
+						exists = VOP
+						NOT = { exists = VNG }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = VNG
+						}
+						secede_province = VOP
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						owns = 2270
+						exists = VNG
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = VNG
+						}
+						secede_province = VNG
+					}
+				}
+			}
+			THIS = {
+				random_owned = {
+					limit = {
+						owner = {
+							exists = SPA
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = SPA
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = SPC
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = SPC
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = FSU
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = FSU
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							exists = FRA
+							NOT = { exists = SPA }
+							NOT = { exists = SPC }
+						}
+					}
+					owner = {
+						any_state = {
+							limit = {
+								owned_by = THIS
+								NOT = { country_units_in_state = THIS }
+							}
+							change_controller = FRA
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				
+			}
+		}
+	}
+	
+	proclaim_mexican_empire = {
+		picture = restore_mexican_empire
+		potential = {
+			tag = MEX
+			NOT = { has_country_flag = proclaimed_mexican_empire }
+			NOT = { government = absolute_monarchy }
+			NOT = { government = prussian_constitutionalism }
+			NOT = { government = hms_government }
+		}
+		allow = {
+			OR = {
+				average_consciousness = 4
+				average_militancy = 6
+			}
+		}
+		effect = {
+			ruling_party_ideology = reactionary
+			government = hms_government
+			any_pop = {
+				limit = {
+					pop_majority_ideology = liberal
+				}
+				militancy = 4
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { accepted_culture = central_american }
+					}
+				}
+				owner = {
+					add_accepted_culture = central_american
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { accepted_culture = caribeno }
+					}
+				}
+				owner = {
+					add_accepted_culture = caribeno
+				}
+			}
+			prestige = 12
+			set_country_flag = proclaimed_mexican_empire
+		}
+	}
+	
+	greater_mexico = {
+		picture = restore_mexican_empire
+		potential = {
+			primary_culture = mexican
+			NOT = { has_country_flag = greater_mexico }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			USA_200 = { add_core = THIS }
+			USA_139 = { add_core = THIS }
+			194 = { add_core = THIS }
+			USA_147 = { add_core = THIS }
+			USA_126 = { add_core = THIS }
+			USA_151 = { add_core = THIS }
+			USA_124 = { add_core = THIS }
+			USA_121 = { add_core = THIS }
+			USA_111 = { add_core = THIS }
+			USA_116 = { add_core = THIS }
+			1825 = { add_core = THIS }
+			143 = { add_core = THIS }
+			1813 = { add_core = THIS }
+			148 = { add_core = THIS }
+			146 = { add_core = THIS }
+			131 = { add_core = THIS }
+			USA_106 = { add_core = THIS }
+			badboy = 15
+			set_country_flag = greater_mexico
+		}
+	}
+	
+}

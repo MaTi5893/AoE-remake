@@ -1,0 +1,49 @@
+country_event = {
+	id = 170100
+	title = "Brazillian Gold Rush"
+	desc = "EVTDESC170100"
+	picture = goldrush_brazil
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PBZ
+		exists = yes
+	}
+	
+	option = {
+		name = "GOLD RUSH!!!!"
+		2447 = { trade_goods = precious_metal }
+		2450 = { trade_goods = precious_metal }
+		2441 = { trade_goods = precious_metal }
+		2442 = { trade_goods = precious_metal }
+		2446 = { trade_goods = precious_metal }
+		prestige = 20
+		any_pop = {
+			consciousness = 2
+			militancy = -2
+		}
+	}
+}
+#country_event = {
+#	id = 170101
+#	title = "$YEAR$ Border Treaty"
+#	desc = "EVTDESC170100"
+#	picture = goldrush_brazil
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		has_country_flag = agreed_to_1750_border_treaty
+#		NOT = {
+#			any_neighbor_country = {
+#				has_country_flag = disagreed_to_1750_border_treaty
+#			}
+#		}
+#		any_neighbor_country = {
+#			has_country_flag = disagreed_to_1750_border_treaty
+#		}
+#	}
+#	
+#	option = {
+#		name = "Nice"
+#	}
+#}

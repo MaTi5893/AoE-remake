@@ -87,7 +87,7 @@ political_decisions = {
 			always = no
 		}
 		effect = {
-			RUS = {
+			TOR = {
 				add_country_modifier = {
 					name = streltsi_rebellion
 					duration = 7300
@@ -107,7 +107,7 @@ political_decisions = {
 				}
 				reduce_pop = 1.5
 			}
-			RUS = {
+			TOR = {
 				any_pop = {
 					limit = {
 						NOT = { type = soldiers }
@@ -117,7 +117,7 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					is_core = RUS
+					is_core = TOR
 					life_rating = 35
 				}
 				life_rating = -2
@@ -553,6 +553,53 @@ political_decisions = {
 				}
 				reduce_pop = 0.7
 			}
+		}
+	}
+	
+	pru_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_country = {
+				limit = {
+					NOT = { tag = AUS }
+				}
+				any_pop = {
+					limit = {
+						is_culture_group = germanic
+					}
+					literacy = -0.3
+				}
+			}
+		}
+	}
+	
+	canals_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			enable_canal = 4
+			enable_canal = 5
+			enable_canal = 6
+			enable_canal = 7
+			enable_canal = 8
+			enable_canal = 9
+			enable_canal = 10
+			enable_canal = 11
+			enable_canal = 12
+			enable_canal = 13
+			enable_canal = 14
+			enable_canal = 15
+			enable_canal = 16
+			enable_canal = 17
 		}
 	}
 }

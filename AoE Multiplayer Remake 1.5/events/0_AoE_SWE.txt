@@ -169,7 +169,7 @@ country_event = {
         government = absolute_monarchy
         OR = {
             AND = {
-                war_with = RUS
+                war_with = TOR
                 OR = {
                     war_with = DNN
                     war_with = PLC
@@ -253,23 +253,23 @@ country_event = {
 }
 country_event = {
     id = 1721008
-    title = "To Moscow!"
+    title = "Moscow Captured!"
     desc = "EVTDESC1721008"
 	picture = poltavas_battle
     fire_only_once = yes
 	
 	trigger = {
 		tag = SWE
-		war_with = RUS
-		RUS = {
-			any_owned_province = {
+		war_with = TOR
+		TOR = {
+			1008 = {
 				controlled_by = THIS
 			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		days = 1
 	}
 	
 	

@@ -525,4 +525,26 @@ political_decisions = {
             plurality = -20
         }
     }
+	
+	army_works_d = {
+		picture = army_training
+		potential = {
+			NOT = { has_country_modifier = army_works }
+			NOT = { has_country_flag = army_works }
+			pensions = no_pensions
+			civilized = yes
+		}
+		allow = {
+			ai = no
+			war = no
+		}
+		effect = {
+			country_event = 170215
+			add_country_modifier = {
+				name = army_works
+				duration = 2190
+			}
+			set_country_flag = army_works
+		}
+	}
 }

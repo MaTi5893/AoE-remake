@@ -10,7 +10,82 @@ ai_boost_mil = {
     }
     core_pop_militancy_modifier = -0.2
 }
-
+ai_revolutionary_buff = {
+	trigger = {
+		ai = yes
+		OR = {
+			government = fascist_dictatorship
+			government = proletarian_dictatorship
+		}
+		OR = {
+			is_greater_power = yes
+			tag = FRA
+		}
+	}
+	mobilisation_size = 0.05
+	core_pop_militancy_modifier = -0.2
+	tax_efficiency = 0.2
+	supply_consumption = -0.2
+	land_organisation = 0.2
+}
+dreams_of_liberty = {
+	trigger = {
+		any_neighbor_country = {
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+			}
+			OR = { #SAME CONTINENT ONLY
+				AND = {
+					THIS = { capital_scope = { continent = europe } }
+					capital_scope = {
+						continent = europe
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = north_america } }
+					capital_scope = {
+						continent = north_america
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = south_america } }
+					capital_scope = {
+						continent = south_america
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = africa } }
+					capital_scope = {
+						continent = africa
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = asia } }
+					capital_scope = {
+						continent = asia
+					}
+				}
+				AND = {
+					THIS = { capital_scope = { continent = oceania } }
+					capital_scope = {
+						continent = oceania
+					}
+				}
+			}
+		}
+		NOT = {
+			government = proletarian_dictatorship
+		}
+		NOT = {
+			government = fascist_dictatorship
+		}
+		NOT = {
+			government = democracy
+		}
+	}
+	core_pop_consciousness_modifier = 0.25
+}
 holy_roman_emperor = {
     trigger = {
         has_country_flag = hre_emperor
@@ -466,7 +541,64 @@ save_the_nation5 = {
     mobilization_economy_impact = -0.66
     icon = 9
 }
+excellent_healthcare = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		administration_spending = 0.5
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
 
+low_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = low_schools
+		education_spending = 0.3
+	}
+	education_efficiency_modifier = 0.05
+	icon = 19
+}
+
+acceptable_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = acceptable_schools
+		education_spending = 0.4
+	}
+	education_efficiency_modifier = 0.075
+	icon = 19
+}
+
+good_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		education_spending = 0.5
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+education_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		OR = {
+			AND = {
+				ai = yes
+				education_spending = 0.74
+			}
+			AND = {
+				ai = no
+				education_spending = 0.99
+			}
+		}
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
 neglected_education = {
     trigger = {
         exists = yes

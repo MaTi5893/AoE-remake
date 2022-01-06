@@ -104,7 +104,6 @@ party_issues = {
             #factory_owner_cost = 1.0
             factory_output = 0.10
             rgo_output = -0.15
-            education_efficiency_modifier = 0.10
             factory_owner_cost = -1    #negative costs, can't build.
 
             rules = {
@@ -199,7 +198,6 @@ party_issues = {
             core_pop_militancy_modifier = -0.16
         }
         colonial_spending_policy = { #Colonial Subjects
-            max_social_spending = 0.01
             cb_generation_speed_modifier = 0.1
             mobilisation_size = 0.01
             non_accepted_pop_consciousness_modifier = -0.05
@@ -208,6 +206,7 @@ party_issues = {
         }
         populist_welfare = { #Philosopher court
             min_social_spending = 0.15
+			core_pop_consciousness_modifier = 0.01 
             research_points_modifier = 0.15
         }
         welfare_state = { #Revolutionary Thought
@@ -420,24 +419,26 @@ political_reforms = {
     trade_unions = { #Executive power
         next_step_only = yes
         no_trade_unions = { #One man to rule
-            suppression_points_modifier = 0.1
-            ruling_party_support = 0.05
+			prestige = 0.01
+            suppression_points_modifier = 0.33
+			issue_change_speed = -0.15
+            ruling_party_support = 0.15
         }
         state_controlled = { #Advisor Council
             social_reform_desire = 0.1
             global_immigrant_attract = 0.01
-            diplomatic_points_modifier = 0.1
+            diplomatic_points_modifier = 0.05
         }
         non_socialist = { #Delegated Ministers
             social_reform_desire = 0.2
             global_immigrant_attract = 0.02
-            issue_change_speed = -0.05
-            influence_modifier = 0.1
+            diplomatic_points_modifier = 0.1
         }
         all_trade_unions = { #Cabinet
             social_reform_desire = 0.3
             global_immigrant_attract = 0.03
-            mobilization_economy_impact = -0.05
+            diplomatic_points_modifier = 0.2
+			issue_change_speed = 0.15
         }
     }
 
@@ -478,13 +479,14 @@ political_reforms = {
         next_step_only = yes
         mandatory_service = {
             mobilisation_size = 0.05
-            #mobilisation_economy_impact = 1
+            mobilisation_economy_impact = 1
             land_unit_start_experience = 10
+			education_efficiency_modifier = -0.01
             global_immigrant_attract = -0.1
         }
         four_year_draft = {
             mobilisation_size = 0.045
-            #mobilisation_economy_impact = 0.1
+            mobilisation_economy_impact = 0.1
             land_unit_start_experience = 5
             global_immigrant_attract = -0.05
         }
@@ -540,6 +542,7 @@ political_reforms = {
             education_efficiency_modifier = -0.15
             poor_savings_modifier = -0.5
             global_immigrant_attract = -0.1
+			mobilisation_size = 0.02
             allow = {
                 OR = {
                     has_country_flag = clean_up_colonial_government
@@ -787,7 +790,6 @@ social_reforms = {
             tax_efficiency = -0.025
             RGO_throughput = 0.15
             factory_throughput = 0.025
-         
             core_pop_consciousness_modifier = -0.01
             minimum_wage = 0.2
             rich_vote = 0.15
@@ -812,8 +814,6 @@ social_reforms = {
             tax_efficiency = 0.025
             RGO_throughput = 0.05
             factory_throughput = 0.075
-            #education_efficiency_modifier = -0.05
-            core_pop_consciousness_modifier = 0.01
             minimum_wage = 0.6
 
             rich_vote = 0.05
@@ -822,8 +822,7 @@ social_reforms = {
         good_minimum_wage = { #irrelevant
             tax_efficiency = 0.05
             factory_throughput = 0.1
-            #education_efficiency_modifier = -0.10
-            core_pop_consciousness_modifier = 0.02
+            core_pop_consciousness_modifier = 0.01
             minimum_wage = 0.8
         }
     }
@@ -862,6 +861,7 @@ social_reforms = {
             goods_demand = 0.15
             minimum_wage = 0.20
             global_immigrant_attract = 0.2
+			core_pop_consciousness_modifier = 0.01
 
             middle_vote = 0.06
 
@@ -873,6 +873,7 @@ social_reforms = {
             goods_demand = 0.20
             minimum_wage = 0.30
             global_immigrant_attract = 0.25
+			core_pop_consciousness_modifier = 0.015
 
             middle_vote = 0.08
 
@@ -900,7 +901,7 @@ social_reforms = {
         trinket_safety = { #influential
             tax_efficiency = -0.025
             RGO_throughput = 0.15
-            core_pop_militancy_modifier = -0.0025
+            core_pop_militancy_modifier = -0.01
             goods_demand = -0.15
             factory_maintenance = 0.20
 
@@ -925,15 +926,15 @@ social_reforms = {
             ruling_party_support = 0.05
             goods_demand = -0.05
             factory_maintenance = 0.10
-
+			mobilisation_size = -0.01
             rich_vote = 0.05
 
         }
         good_safety = { #irrelevant
             tax_efficiency = 0.05
             ruling_party_support = 0.1
+			mobilisation_size = -0.02
             administrative_multiplier = 2
-            goods_demand = -0.05
         }
     }
 
@@ -946,7 +947,6 @@ social_reforms = {
         trinket_subsidies = { #marginally relevant
             tax_efficiency = 0.025
             RGO_throughput = 0.075
-            factory_throughput = 0.025
             unemployment_benefit = 0.50
 
             middle_vote = 0.02
@@ -954,7 +954,6 @@ social_reforms = {
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
-            factory_throughput = 0.05
             unemployment_benefit = 1.0
             tariff_efficiency_modifier = -0.025
             artisan_throughput = 0.05
@@ -963,7 +962,6 @@ social_reforms = {
             poor_vote = 0.02
         }
         acceptable_subsidies = { #influential
-            factory_throughput = 0.075
             unemployment_benefit = 2.0
             tariff_efficiency_modifier = -0.05
             artisan_throughput = 0.15
@@ -974,7 +972,6 @@ social_reforms = {
         }
         good_subsidies = { #very influential
 			RGO_throughput = 0.1
-            factory_throughput = 0.1
             unemployment_benefit = 3.0
             tariff_efficiency_modifier = -0.1
             artisan_throughput = 0.25
@@ -995,59 +992,36 @@ social_reforms = {
         no_pensions = { #irrelevant
         }
         trinket_pensions = { #marginally relevant
-            land_unit_start_experience = 5
             land_organisation = 0.05
             leadership_modifier = 0.05
-            supply_consumption = 0.15
+            supply_consumption = 0.10
             org_regain = 0.05
-            min_military_spending = 0.05
-            max_military_spending = 0.05
             mobilisation_size = 0.01
-
-            rich_vote = 0.03
-            middle_vote = 0.02
-
         }
         low_pensions = { #slightly influential
-            land_unit_start_experience = 10
             land_organisation = 0.10
             leadership_modifier = 0.10
-            supply_consumption = 0.30
+            supply_consumption = 0.20
             org_regain = 0.10
-            min_military_spending = 0.10
-            max_military_spending = 0.10
+			culture_tech_research_bonus = -0.05
             mobilisation_size = 0.015
-
-            rich_vote = 0.06
-            middle_vote = 0.04
-
         }
         acceptable_pensions = { #influential
-            land_unit_start_experience = 15
             land_organisation = 0.15
-            leadership_modifier = 0.15
+            leadership_modifier = 0.30
             supply_consumption = 0.45
             org_regain = 0.15
-            min_military_spending = 0.15
-            max_military_spending = 0.15
+			culture_tech_research_bonus = -0.1
             mobilisation_size = 0.02
-
-            rich_vote = 0.09
-            middle_vote = 0.06
-
         }
         good_pensions = { #very influential
-            land_unit_start_experience = 20
             land_organisation = 0.20
-            leadership_modifier = 0.20
+            leadership_modifier = 0.40
             supply_consumption = 0.60
             org_regain = 0.20
-			min_military_spending = 0.20
-            max_military_spending = 0.20
+			culture_tech_research_bonus = -0.15
             mobilisation_size = 0.025
-			
-            rich_vote = 0.12
-            middle_vote = 0.08
+
 
             allow = {
 				has_country_flag = skill_and_merit_allowed
@@ -1070,7 +1044,6 @@ social_reforms = {
             administrative_efficiency_modifier = 0.05
             administrative_multiplier = 4
             education_efficiency_modifier = 0.025
-            min_social_spending = 0.10
             pension_level = 0.20
         }
         low_health_care = { #slightly influential
@@ -1078,25 +1051,37 @@ social_reforms = {
             administrative_efficiency_modifier = 0.1
             #administrative_multiplier = 6
             education_efficiency_modifier = 0.05
-            min_social_spending = 0.15
             pension_level = 0.30
+			industry_tech_research_bonus = -0.01
+			commerce_tech_research_bonus = -0.01
+			culture_tech_research_bonus = -0.01
+			navy_tech_research_bonus = -0.01
+			army_tech_research_bonus = -0.01
         }
         acceptable_health_care = { #influential
             tax_efficiency = 0.075
             administrative_efficiency_modifier = 0.15
             administrative_multiplier = 8
             education_efficiency_modifier = 0.075
-            min_social_spending = 0.20
             pension_level = 0.40
+			industry_tech_research_bonus = -0.05
+			commerce_tech_research_bonus = -0.05
+			culture_tech_research_bonus = -0.05
+			navy_tech_research_bonus = -0.05
+			army_tech_research_bonus = -0.05
         }
         good_health_care = { #very influential
             tax_efficiency = 0.10
             administrative_efficiency_modifier = 0.20
             administrative_multiplier = 10
             education_efficiency_modifier = 0.1
-            min_social_spending = 0.25
             pension_level = 0.50
-
+			industry_tech_research_bonus = -0.1
+			commerce_tech_research_bonus = -0.1
+			culture_tech_research_bonus = -0.1
+			navy_tech_research_bonus = -0.1
+			army_tech_research_bonus = -0.1
+			
             allow = {
                 has_country_flag = skill_and_merit_allowed
 				#NOT = { work_hours = eight_hours } #v infl gentry

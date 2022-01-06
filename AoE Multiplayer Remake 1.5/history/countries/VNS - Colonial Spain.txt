@@ -1,6 +1,7 @@
 capital = 2172
 primary_culture = mexican
 culture = central_american
+culture = spanish_american
 religion = catholic
 government = colonial_company
 plurality = 0.25
@@ -38,9 +39,6 @@ border_policy = open_borders
 centralization = regionalism
 colonial_policy = settlement
 
-
-set_country_flag = dynamic_colony
-
 set_country_flag = catholic_country
 set_country_flag = new_world_nation
 
@@ -54,11 +52,6 @@ upper_house = {
     anarcho_liberal = 0
     socialist = 0
     communist = 0
-}
-
-govt_flag = {
-    government = presidential_dictatorship
-    flag = theocracy
 }
 
 # Technologies

@@ -1,39 +1,4 @@
 political_decisions = {
-    order_to_siebenburger = {
-        picture = wallachia
-        potential = {
-            tag = AUS
-            HUN = {
-                exists = no
-            }
-            NOT = { has_country_flag = order_to_siebenburger }
-            SIE = {
-                OR = {
-                vassal_of = THIS
-                is_vassal = no
-                }
-                neighbour = THIS
-            }
-            exists = yes
-        }
-        allow = {
-            is_greater_power = yes
-        }
-
-        effect = {
-            inherit = SIE
-            any_pop = {
-                limit = {
-                    has_pop_culture = romanian
-                }
-                militancy = 2
-            }
-            badboy = 1
-            set_country_flag = order_to_siebenburger
-        }
-
-        ai_will_do = { factor = 1 }
-    }
 
     enact_codex_theresianus = {
         picture = codex_theresianus

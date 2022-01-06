@@ -20,7 +20,7 @@ country_event = {
 	picture = peters_death
 	fire_only_once = yes
 	trigger = {
-		tag = RUS
+		has_country_modifier = peter_the_great
 		year = 1725
 	}
 	mean_time_to_happen = {
@@ -30,12 +30,15 @@ country_event = {
 	option = {
 		name = "Truly a great leader he was..."
 		remove_country_modifier = peter_the_great
-		random_country = {
+		random_owned = {
 			limit = {
-				tag = RUS
-				tech_school = pogonya_za_zapadom
+				owner = {
+					tech_school = pogonya_za_zapadom
+				}
 			}
-			tech_school = traditional_academic
+			owner = {
+				tech_school = traditional_academic
+			}
 		}
 	}
 }
@@ -70,7 +73,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = RUS
+		has_country_modifier = catharine_the_great
 		year = 1796
 	}
 	mean_time_to_happen = {
@@ -135,178 +138,6 @@ country_event = {
 		}
 	}
 }
-##Anjala conspiracy##
-#country_event = {
-#	id = 1788000
-#	title = "The Anjala conspiracy"
-#	desc = "EVTDESC1788000"
-#	picture = finland
-#	fire_only_once = yes
-#	
-#	trigger = {
-#		year = 1788
-#		tag = RUS
-#		FIN = { exists = no }
-#		RUS = {
-#			NOT = { 343 = { owned_by = RUS } }
-#		}
-#	}
-#	mean_time_to_happen = {
-#		months = 1
-#	}
-#	
-#	option = {
-#		name = "Support the Fins"
-#		SWE = { country_event = 1788000001 }
-#		ai_chance = {
-#			factor = 1
-#			modifier = {
-#				factor = 5
-#				war_with = SWE
-#			}
-#			modifier = {
-#				factor = 5
-#				relation = {
-#					who = SWE
-#					value = -200
-#				}
-#				NOT = {
-#					relation = {
-#						who = SWE
-#						value = -20
-#					}
-#				}
-#			}
-#		}
-#	}
-#	
-#	option = {
-#		name = "They aren't worth our time"
-#		prestige = -5
-#		ai_chance = {
-#			factor = 1
-#		modifier = {
-#			factor = 6
-#			alliance_with  = SWE
-#		}
-#		modifier = {
-#			factor = 3
-#			relation = { 
-#				who = SWE
-#				value = 50
-#			}
-#		}
-#		modifier = {
-#			factor = 10
-#			SWE = {
-#				in_sphere = THIS
-#			}
-#		}
-#		}
-#	}
-#}
-#country_event = {
-#	id = 1788000001
-#	title = "The Anjala conspiracy"
-#	desc = "EVTDESC1788001"
-#	picture = finland
-#	fire_only_once = yes
-#	is_triggered_only = yes
-#	
-#	option = {
-#		name = "It's war then."
-#		any_owned = {
-#			limit = {
-#				is_core = FIN
-#			}
-#			secede_province = FIN
-#		}
-#		relation = { who = FIN value = -100 }
-#		any_owned = {
-#			limit = { is_core = SWE }
-#			remove_province_modifier = liberal_agitation
-#		}
-#		any_pop = {
-#			limit = { is_primary_culture = yes }
-#			militancy = -6
-#		}
-#		add_country_modifier = {
-#			name = no_more_war
-#			duration = 7
-#		}
-#		FIN = {
-#			capital = 343
-#			political_reform = mandatory_service 
-#			government = hms_government
-#			political_reform = non_secret_ballots
-#			political_reform = universal_weighted_voting
-#			political_reform = population_equal_weight
-#			political_reform = free_press
-#			political_reform = yes_meeting
-#			clr_country_flag = communist_gov
-#			clr_country_flag = absolute_monarchy_gov
-#			clr_country_flag = semi_constitutional_monarchy_gov
-#			set_country_flag = constitutional_monarchy_gov
-#			clr_country_flag = democracy_gov
-#			clr_country_flag = presidential_dictatorship_gov
-#			clr_country_flag = fascist_gov
-#			clr_country_flag = anarcho_liberal_gov
-#			add_country_modifier = {
-#				name = no_more_war
-#				duration = 7
-#			}
-#			create_alliance = RUS
-#			relation = {
-#				who = RUS
-#				value = 200
-#			}
-#		}
-#		war = {
-#			target = FIN
-#			attacker_goal = { casus_belli = conquest }
-#			defender_goal = { casus_belli = status_quo }
-#		} 
-#	}
-#	
-#	option = {
-#		name = "Let the fins go"
-#		prestige = -5
-#		any_owned = {
-#			limit = {
-#				is_core = FIN
-#			}
-#			secede_province = FIN
-#		}
-#		relation = { who = FIN value = -100 }
-#		FIN = {
-#			capital = 343
-#			political_reform = mandatory_service 
-#			government = hms_government
-#			political_reform = non_secret_ballots
-#			political_reform = universal_weighted_voting
-#			political_reform = population_equal_weight
-#			political_reform = free_press
-#			political_reform = yes_meeting
-#			clr_country_flag = communist_gov
-#			clr_country_flag = absolute_monarchy_gov
-#			clr_country_flag = semi_constitutional_monarchy_gov
-#			set_country_flag = constitutional_monarchy_gov
-#			clr_country_flag = democracy_gov
-#			clr_country_flag = presidential_dictatorship_gov
-#			clr_country_flag = fascist_gov
-#			clr_country_flag = anarcho_liberal_gov
-#			add_country_modifier = {
-#				name = no_more_war
-#				duration = 7
-#			}
-#			create_alliance = RUS
-#			relation = {
-#				who = RUS
-#				value = 200
-#			}
-#		}
-#	}
-#}
 country_event = {
 	id = 157301
 	title = "The Silent Sejm"
@@ -599,56 +430,6 @@ country_event = {
 }
 
 country_event = {
-	id = 170016
-	title = "EVTNAME170016"
-	desc = "EVTDESC170016"
-	picture = cossacks
-	is_triggered_only = yes
-	#major = yes
-	
-	option = {
-		name = "EVTOPT170016"
-		set_country_flag = don_rebellion
-		prestige = 10
-		ammunition = 100
-		treasury = 100000
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
-	id = 170017
-	title = "EVTNAME170017"
-	desc = "EVTDESC170017"
-	picture = ambush_army
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS 
-		DON = {
-			exists = yes
-			vassal_of = RUS
-			has_country_flag = don_rebellion
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	option = {
-		name = "EVTOPT170017"
-		set_country_flag = don_resolved
-		prestige = 5
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
 	id = 170018
 	title = "The Treaty of Kyakhta"
 	desc = "EVTDESC170018"
@@ -666,16 +447,7 @@ country_event = {
 	
 	option = {
 		name = "Send a linient treaty"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
-		1068 = {
-			add_core = RUS
-		}
-		add_core = 1077
+		RUS_1469 = { add_core = THIS }
 		prestige = 5
 		relation = {
 			who = QNG
@@ -687,12 +459,7 @@ country_event = {
 	}
 	option = {
 		name = "Claim Some Qing Lands"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
+		RUS_1469 = { add_core = THIS }
 		1469 = {
 			add_core = RUS
 		}
@@ -703,8 +470,6 @@ country_event = {
 			add_core = RUS
 		}
 		add_core = 2698
-		add_core = 1068
-		add_core = 1077
 		badboy = 5
 		relation = {
 			who = QNG
@@ -722,22 +487,13 @@ country_event = {
 	}
 	option = {
 		name = "Add in Manchuria as well!"
-		1067 = {
-			add_core = RUS
-		}
-		2674 = {
-			add_core = RUS
-		}
-		1469 = {
-			add_core = RUS
-		}
+		RUS_1469 = { add_core = THIS }
 		1081 = {
 			add_core = RUS
 		}
 		2697 = {
 			add_core = RUS
 		}
-		add_core = 1077
 		CHI_1082 = {
 			add_core = RUS
 		}
@@ -769,7 +525,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = RUS 
+		primary_culture = russian
 		NOT = {
 			has_country_flag = kamchatka_war
 		}
@@ -840,7 +596,7 @@ province_event = {
 		
 		1074 = {
 			owner = {
-				tag = RUS
+				primary_culture = russian
 				has_country_flag = kamchatka_war
 				any_owned_province = {
 					has_province_modifier = kamchatka_wars
@@ -954,7 +710,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = RUS 
+		primary_culture = russian
 		has_country_flag = kamchatka_war
 		OR = {
 			all_core = {
@@ -1088,7 +844,7 @@ country_event = {
 	trigger = {
 		has_global_flag = st_petersburg_construction
 		owns = 994
-		tag = RUS
+		primary_culture = russian
 		NOT = {
 			994 = { has_province_modifier = st_petersburg_construction }
 		}
@@ -1142,7 +898,7 @@ country_event = {
 	
 	trigger = {
 		year = 1702
-		tag = RUS
+		primary_culture = russian
 	}
 	
 	option = {
@@ -1172,7 +928,7 @@ country_event = {
 	
 	trigger = {
 		war_with = SWE
-		tag = RUS
+		primary_culture = russian
 		2580 = {
 			controlled_by = THIS
 			is_blockaded = no
@@ -1202,7 +958,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = RUS
+		primary_culture = russian
 		government = absolute_monarchy
 	}
 	
@@ -1381,6 +1137,11 @@ country_event = {
 		diplomatic_influence = {
 			who = PLC
 			value = -200
+		}
+		KUR = {
+			all_core = {
+				add_core = THIS
+			}
 		}
 		casus_belli = {
 			type = conquest

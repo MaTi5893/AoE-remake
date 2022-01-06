@@ -45,6 +45,7 @@ dismantle_hre
 status_quo
 gunboat
 conquest
+total_war_conquest
 civil_war
 acquire_all_cores
 acquire_core_state
@@ -541,6 +542,20 @@ partition_cb = {
                 }
             }
         }
+		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				tag = AUS
+				OR = {
+					region = RUS_710
+					region = AUS_702
+					region = AUS_662
+					is_core = THIS
+					is_core = HUN
+				}
+			}
+		}
     }
 
     po_demand_state = yes
@@ -2277,6 +2292,67 @@ acquire_all_cores = {
     }
 }
 
+#Total War Conquest
+total_war_conquest = {
+	sprite_index = 2
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	can_use = {
+		THIS = { ai = no }
+		has_global_flag = world_wars_enabled
+		NOT = { 
+			OR = { 
+				has_country_modifier = neutrality
+				has_country_modifier = generic_neutrality
+			}
+		}
+		THIS = { NOT = {
+				OR = {
+					has_country_modifier = neutrality
+					has_country_modifier = generic_neutrality
+				}
+			 } 
+		}
+		any_greater_power = { #MP cb only
+			NOT = { tag = THIS }
+			ai = no
+		}
+	}
+
+	badboy_factor = 0
+	prestige_factor = 5
+	peace_cost_factor = 0
+	penalty_factor = 1
+	always = yes
+	
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 60
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	construction_speed = 0.5
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		badboy = 32.5
+	}
+	
+	po_annex = yes
+	po_remove_prestige = yes
+	
+	war_name = TOTAL_WAR_CONQUEST_NAME
+}
+
 cut_down_to_size_boxer = {
     sprite_index = 8
     is_triggered_only = yes
@@ -2864,7 +2940,7 @@ install_communist_gov_cb = {
     }
 }
 
-# Revert from Communist Government
+# Spread REV cb
 uninstall_communist_gov_cb = {
     sprite_index = 17
     is_triggered_only = yes
@@ -2905,7 +2981,14 @@ uninstall_communist_gov_cb = {
             }
 			is_greater_power = yes
         }
+		OR = {
         neighbour = THIS
+		war_with = THIS
+		}
+		OR = {
+		war_with = THIS
+		badboy = 10
+		}
 		OR = { #SAME CONTINENT ONLY
 			AND = {
 				THIS = { capital_scope = { continent = europe } }

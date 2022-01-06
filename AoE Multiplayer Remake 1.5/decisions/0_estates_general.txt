@@ -2,19 +2,19 @@ political_decisions = {
     summon_the_estates_general = {
         picture = estates_general
         potential = {
-            tag = BOR
+            primary_culture = french
             NOT = {
                 BOR = { government = democracy }
                 BOR = { government = proletarian_dictatorship }
                 BOR = { government = fascist_dictatorship }
             }
-            is_ideology_enabled = communist
             exists = yes
             NOT = { has_country_flag = estates_general_summoned }
-            has_country_modifier = peasant_turmoil
+            
         }
         allow = {
-            has_country_modifier = peasant_turmoil
+			is_ideology_enabled = communist
+			has_country_modifier = nobility_and_clergy_domination
             war = no
         }
         effect = {

@@ -2,17 +2,17 @@ color = { 192  192  192 }
 graphical_culture = GenericEasternGC
 
 party = {
-    name = "Nobility Faction"
+    name = "Sich Rada"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
     ideology = conservative
 
-    social_policy = no_position_set
+    social_policy = colonial_spending_policy
     economic_policy = state_capitalism
     trade_policy = protectionism
     religious_policy = pluralism
-    citizenship_policy = residency
+    citizenship_policy = full_citizenship
     war_policy = pro_military
 }
 

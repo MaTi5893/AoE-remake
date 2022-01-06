@@ -125,7 +125,10 @@ VEN = {
 	value = 25
 	truce_until = 1705.1.1
 }
-RUS = {
+TOR = {
+	truce_until = 1705.1.1
+}
+ZZH = {
 	truce_until = 1705.1.1
 }
 PLC = {
@@ -134,7 +137,7 @@ PLC = {
 	truce_until = 1704.1.1
 	influence_value = 0
 }
-RUS = { value = -100 }
+TOR = { value = -100 }
 ENG = { value = -25 }
 BOR = { value = 35 }
 
