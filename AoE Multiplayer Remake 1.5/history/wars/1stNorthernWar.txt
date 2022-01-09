@@ -1,0 +1,39 @@
+name = "Northern War"
+
+1558.8.10 = {
+    add_attacker = TOR
+    add_defender = SWE
+	add_defender = PLC
+	add_defender = DNN
+	add_defender = SIE
+	add_defender = ZZH
+	add_defender = LAT
+
+    # actor
+    # receiver
+    # casus_belli - cb type
+    # country - 3rd party
+    # state_province_id - target state capital
+    war_goal = {
+        casus_belli = annex
+        actor = TOR
+        receiver = LAT
+    }
+
+    war_goal = {
+        casus_belli = status_quo
+        actor = LAT
+        receiver = TOR
+    }
+
+}
+
+1583.1.10 = {
+    rem_attacker = TOR
+    rem_defender = SWE
+	rem_defender = PLC
+	rem_defender = DNN
+	rem_defender = SIE
+	rem_defender = ZZH
+	rem_defender = LAT
+}

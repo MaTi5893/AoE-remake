@@ -1,6 +1,6 @@
 country_event = { #10225 Hungarian rebellion
 	id = 10225
-	title = "EVTNAME10225" #Hungarian Revolution of $YEAR$
+	title = "EVTNAME10225" #Rakoczi war of independence
 	desc = "EVTDESC10225"
 	news = yes
 	picture = "rakoczi"
@@ -18,78 +18,23 @@ country_event = { #10225 Hungarian rebellion
 	option = {
 		name = "EVT10225OPTA"
 		AUS = {
-			relation = { who = HUN value = -100 }
-			any_owned = {
-				limit = { is_core = AUS }
-				remove_province_modifier = liberal_agitation
-			}
+			relation = { who = SIE value = -100 }
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				militancy = -6
 			}
-			add_country_modifier = {
-				name = no_more_war
-				duration = 7
-			}
-			release_vassal = HUN
-		}
-		HUN = {
-			capital = 641
-			political_reform = mandatory_service 
-			government = hms_government
-			political_reform = non_secret_ballots
-			political_reform = universal_weighted_voting
-			political_reform = population_equal_weight
-			political_reform = free_press
-			political_reform = yes_meeting
-			clr_country_flag = communist_gov
-			clr_country_flag = absolute_monarchy_gov
-			clr_country_flag = semi_constitutional_monarchy_gov
-			set_country_flag = constitutional_monarchy_gov
-			clr_country_flag = democracy_gov
-			clr_country_flag = presidential_dictatorship_gov
-			clr_country_flag = fascist_gov
-			clr_country_flag = anarcho_liberal_gov
-			add_country_modifier = {
-				name = no_more_war
-				duration = 7
-			}
-			any_country = {
-				limit = {
-					war_with = HUN
-					OR = {
-						has_country_flag = support_habsburg_heir
-						has_country_flag = support_bourbon_heir
-					}
-				}
-				end_war = HUN
-			}
-			
-		}
-		SIE = {
-			annex_to = HUN
 		}
 		AUS = {
 			casus_belli = {
-				target = HUN
+				target = SIE
 				type = make_puppet
 				months = 120
 			}
 			war = {
-				target = HUN
+				target = SIE
 				attacker_goal = { casus_belli = annex_core_country }
 				defender_goal = { casus_belli = status_quo }
 				call_ally = no
-			}
-		}
-		HUN = {
-			all_core = {
-				limit = {
-					NOT = { is_core = SIE }
-					owned_by = HUN
-					NOT = { country_units_in_province = HUN }
-				}
-				change_controller = AUS
 			}
 		}
 		ai_chance = {

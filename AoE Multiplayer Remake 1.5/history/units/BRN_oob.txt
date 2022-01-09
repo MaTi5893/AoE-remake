@@ -279,7 +279,7 @@ army = {
 
     regiment = {
         name= "I. Kavalleriebrigade"
-        type = hussar
+        type = cuirassier
         home = 557
     }
 
@@ -305,6 +305,49 @@ army = {
         type = artillery
         home = 577
     }
+	
+	regiment = {
+        name= "IV. Artillery"
+        type = artillery
+        home = 2414
+    }
+	
+	regiment = {
+        name= "V. Artillery"
+        type = artillery
+        home = 1743
+    }
+	
+	regiment = {
+        name= "I. Cruissiers"
+        type = cuirassier
+        home = 680
+    }
+	
+	regiment = {
+        name= "I. Infantry"
+        type = infantry
+        home = 553
+    }
+	
+	regiment = {
+        name= "II. Infantry"
+        type = infantry
+        home = 557
+    }
+	
+	regiment = {
+        name= "III. Infantry"
+        type = infantry
+        home = 2414
+    }
+	
+	regiment = {
+        name= "IV. Infantry"
+        type = infantry
+        home = 1743
+    }
+
 }
 
 navy = {

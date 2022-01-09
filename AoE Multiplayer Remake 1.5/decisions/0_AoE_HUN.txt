@@ -17,9 +17,9 @@ political_decisions = {
     rakoczi_war_of_independence = {
         picture = rakoczi
         potential = {
-            tag = HUN
-            vassal_of = AUS
+            tag = SIE
             NOT = { has_country_flag = rakoczi_tried }
+			ai = yes
             OR = {
                 NOT = { has_global_flag = spanish_succesion_resolved }
                 NOT = { year = 1711 }
@@ -41,7 +41,7 @@ political_decisions = {
             AUS = { country_event = 10225 }
 			AUS = {
 				diplomatic_influence = {
-					who = HUN
+					who = SIE
 					value = -300
 				}
 			}
@@ -183,6 +183,16 @@ political_decisions = {
 				who = AUS
 				value = -100
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = kuruc
+					}
+				}
+				owner = {
+					remove_country_modifier = kuruc
+				}
+			}
 		}
 	}
 	
@@ -232,6 +242,34 @@ political_decisions = {
 					}
 					secede_province = THIS
 				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = kuruc
+					}
+				}
+				owner = {
+					remove_country_modifier = kuruc
+				}
+			}
+		}
+	}
+	
+	kuruc = {
+		picture = kuruc
+		potential = {
+			tag = SIE
+			NOT = { has_country_flag = kuruc }
+		}
+		allow = {
+			war = yes
+		}
+		effect = {
+			set_country_flag = kuruc
+			add_country_modifier = {
+				name = kuruc
+				duration = 5475
 			}
 		}
 	}

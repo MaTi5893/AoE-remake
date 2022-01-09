@@ -1,85 +1,21 @@
-###Death of Queen Annie###
 country_event = {
-    id = 171400
-    title = "Death of Queen Annie"
-    desc = "EVTDESC171400"
-    trigger = {
+    id = 171401
+    title = "Coronation of King George I"
+    desc = "EVTDESC171401"
+
+    major = yes
+	
+	trigger = {
         primary_culture = british
         year = 1714
+		NOT = { has_country_flag = jacobite_path }
         OR = {
             government = absolute_monarchy
             government = prussian_constitutionalism
             government = hms_government
         }
-        NOT = { year = 1760 }
+        NOT = { year = 1750 }
     }
-
-    major = yes
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 5
-        modifier = {
-            factor = 0.1
-            month = 5
-            NOT = { month = 7 }
-        }
-    }
-
-    option = {
-        name = "May she rest in peace..."
-        random_owned = { limit = { owner = { is_our_vassal = NET } } owner = { leave_alliance = NET release_vassal = NET relation = { who = NET value = -200 } } }
-        prestige = -2
-        election = yes
-        set_country_flag = annie_is_ded
-    }
-}
-country_event = {
-    id = 1714011
-    title = "The British Throne"
-    desc = "EVTDESC171401"
-    major = yes
-    fire_only_once = yes
-
-    trigger = {
-        primary_culture = british
-        year = 1714
-        has_country_flag = annie_is_ded
-        NOT = { year = 1760 }
-    }
-
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    option = {
-        name = "Aproach The King of Hannover"
-        country_event = 171401
-        ai_chance = {
-            factor = 1
-        }
-    }
-
-    option = {
-        name = "Aproach a Stuart Candidate"
-        country_event = 171402
-        ai_chance = {
-            factor = 0
-            modifier = {
-                factor = 2
-                average_militancy = 6
-            }
-        }
-    }
-}
-country_event = {
-    id = 171401
-    title = "Coronation of King George I"
-    desc = "EVTDESC171401"
-    is_triggered_only = yes
-
-    major = yes
-
     mean_time_to_happen = {
         months = 1
         modifier = {
@@ -91,6 +27,7 @@ country_event = {
 
     option = {
         name = "God save the King!"
+		random_owned = { limit = { owner = { is_sphere_leader_of = NET } } owner = { leave_alliance = NET release_vassal = NET relation = { who = NET value = -200 } } }
 		random_country = {
 			limit = {
 				exists = HAN
@@ -108,9 +45,20 @@ country_event = {
     id = 171402
     title = "Jacobites Prevail!" #Jacobism Prevails
     desc = "EVTDESC171402"
-    picture = "jacobites"
-
+	major = yes
     is_triggered_only = yes
+
+	trigger = {
+        primary_culture = british
+        year = 1714
+		has_country_flag = jacobite_path
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
+        NOT = { year = 1750 }
+    }
 
     option = {
         name = "Long live the king"
@@ -224,6 +172,7 @@ country_event = {
 
     option = {
         name = "EVT37711OPTA"
+		clr_country_flag = house_of_hannover
         set_country_flag = jacobite_rebellion
         any_owned = {
             limit = {
@@ -1783,7 +1732,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Better a German prince than a French one"
+		name = "Better a German prince than a French one. (Sign The Act)"
 		any_pop = {
 			limit = {
 				culture = british
@@ -1801,5 +1750,27 @@ country_event = {
 			ideology = conservative
 			value = 0.3
 		}
+	}
+	
+	option = {
+		name = "Better a Catholic then a Fool. (Refuse To Sign The Act)"
+		any_pop = {
+			limit = {
+				culture = british
+			}
+			militancy = 2
+			consciousness = 5
+		}
+		any_pop = {
+			limit = {
+				culture = scottish
+			}
+			consciousness = -2
+		}
+		upper_house = {
+			ideology = liberal
+			value = 0.3
+		}
+		set_country_flag = jacobite_path
 	}
 }

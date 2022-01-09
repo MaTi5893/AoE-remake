@@ -172,41 +172,41 @@ political_decisions = {
 		}
 	}
 	
-	the_cossack_subjects = {
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = the_cossack_subjects }
-		}
-		allow = {
-			ZZH = {
-				OR = {
-					all_core = {
-						controlled_by = THIS
-					}
-					any_owned_province = {
-						controlled_by = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			random_country = {
-				limit = {
-					exists = ZZH
-					tag = ZZH
-				}
-				annex_to = THIS
-			}
-			any_owned = {
-				limit = {
-					is_core = ZZH
-				}
-				add_core = THIS
-			}
-			add_accepted_culture = cossack
-			set_country_flag = the_cossack_subjects
-		}
-	}
+	#the_cossack_subjects = {
+	#	potential = {
+	#		tag = TUR
+	#		NOT = { has_country_flag = the_cossack_subjects }
+	#	}
+	#	allow = {
+	#		ZZH = {
+	#			OR = {
+	#				all_core = {
+	#					controlled_by = THIS
+	#				}
+	#				any_owned_province = {
+	#					controlled_by = THIS
+	#				}
+	#			}
+	#		}
+	#	}
+	#	effect = {
+	#		random_country = {
+	#			limit = {
+	#				exists = ZZH
+	#				tag = ZZH
+	#			}
+	#			annex_to = THIS
+	#		}
+	#		any_owned = {
+	#			limit = {
+	#				is_core = ZZH
+	#			}
+	#			add_core = THIS
+	#		}
+	#		add_accepted_culture = cossack
+	#		set_country_flag = the_cossack_subjects
+	#	}
+	#}
 	
 	nizam-i_djedid_reforms = {
 		picture = nizam-i_djedid

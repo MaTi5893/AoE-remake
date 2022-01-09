@@ -47,7 +47,7 @@ political_decisions = {
                 owns = 682
                 AND = {
                     tag = PRU
-                    all_core = { owned_by = THIS }
+                    owns = 546
                 }
             }
             war_policy = jingoism

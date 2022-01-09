@@ -356,6 +356,34 @@ restore_spanish_empire = {
                 is_core = BEL
                 is_core = FLA
                 is_core = LOM
+				AND = {
+					is_core = VNS
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VOP
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VNG
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VLP
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = CUB
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = FLO
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = DOM
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
             }
             NOT = { is_core = LIG }
         }
@@ -379,6 +407,34 @@ restore_spanish_empire = {
                 is_core = LUX
                 is_core = BEL
                 is_core = LOM
+				AND = {
+					is_core = VNS
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VOP
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VNG
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = VLP
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = CUB
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = FLO
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
+				AND = {
+					is_core = DOM
+					THIS = { has_country_flag = enacted_new_constitution_spc }
+				}
             }
 			NOT = { is_core = VEN }
             NOT = { is_core = LIG }

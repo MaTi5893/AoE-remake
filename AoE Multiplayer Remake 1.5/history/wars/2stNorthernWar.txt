@@ -1,0 +1,30 @@
+name = "2nd Northern War"
+
+1655.1.11 = {
+    add_attacker = SWE
+    add_defender = TOR
+	add_defender = PLC
+	add_defender = DNN
+	add_attacker = SIE
+	add_attacker = ZZH
+
+    # actor
+    # receiver
+    # casus_belli - cb type
+    # country - 3rd party
+    # state_province_id - target state capital
+    war_goal = {
+        casus_belli = humiliate
+        actor = SWE
+        receiver = PLC
+    }
+}
+
+1660.1.1 = {
+    rem_defender = RUS
+    rem_attacker = SWE
+	rem_defender = PLC
+	rem_defender = DNN
+	rem_attacker = SIE
+	rem_attacker = ZZH
+}

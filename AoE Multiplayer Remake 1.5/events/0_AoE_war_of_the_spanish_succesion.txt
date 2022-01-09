@@ -60,6 +60,30 @@ country_event = {
             who = AUS
             value = -200
         }
+		random_owned = {
+			limit = {
+				owner = {
+					AUS = { ai = yes }
+				}
+			}
+			owner = {
+				AUS = {
+					relation = {
+						who = ENL
+						value = 100
+					}
+					relation = {
+						who = NET
+						value = 100
+					}
+					war = {
+						target = SPC
+						attacker_goal = { casus_belli = dispute_succession_aus }
+						call_ally = yes
+					}
+				}
+			}
+		}
         define_general = {
             name = "Philip V Bourbon"
             personality = defence_3.1

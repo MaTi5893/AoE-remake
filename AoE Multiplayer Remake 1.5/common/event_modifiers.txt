@@ -3186,6 +3186,13 @@ hungarian_constitutions = {
     icon = 19
 }
 
+kuruc = {
+	org_regain = 0.25
+	supply_consumption = -0.25
+	mobilisation_size = 0.01
+	icon = 5
+}
+
 settle_the_south_border = {
     assimilation_rate = 0.15
     immigrant_attract = 0.3
