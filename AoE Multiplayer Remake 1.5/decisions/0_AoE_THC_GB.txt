@@ -72,8 +72,12 @@ political_decisions = {
         potential = {
             is_greater_power = yes
             exists = USA
+			NOT = { tag = USA }
+			USA = {
+				war = yes
+			}
 			num_of_ports = 10
-			NOT = { has_country_flag = supported_us_independence }
+			NOT = { has_global_flag = supported_us_independence }
         }
 	
         allow = {
@@ -91,7 +95,7 @@ political_decisions = {
         effect = {
             prestige = 15
 			money = 500000
-			set_country_flag = supported_us_independence
+			set_global_flag = supported_us_independence
             USA = { prestige = 10 }
             relation = {
                 who = USA
@@ -152,6 +156,10 @@ political_decisions = {
 					alliance_with = ENG
 					alliance_with = ENL
 				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { primary_culture = french }
 			}
 		}
     }

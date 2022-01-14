@@ -188,87 +188,85 @@ country_event = {
 }
 
 ##Louisiana purchase##
-country_event = {
-    id = 180500001
-    title = "Should we sell louisiana?"
-    desc = "EVTDESC180500001"
-    picture = louisiana
-    fire_only_once = yes
-
-    trigger = {
-        OR = {
-            tag = BOR
-            tag = FRA
-        }
-        political_thought_8 = 1
-        OR = {
-            has_recently_lost_war = yes
-            has_unclaimed_cores = yes
-        }
-        ULA = { is_our_vassal = THIS }
-    }
-
-    mean_time_to_happen = {
-        days = 30
-    }
-
-    option = {
-        name = "We must fund our Wars"
-        USA = { country_event = 180500002 }
-        ai_chance = { factor = 95 }
-    }
-
-    option = {
-        name = "Louisiana is too valuable"
-        ai_chance = { factor = 5 }
-    }
-}
+#country_event = {
+#    id = 180500001
+#    title = "Should we sell louisiana?"
+#    desc = "EVTDESC180500001"
+#    picture = louisiana
+#    fire_only_once = yes
+#
+#    trigger = {
+#        OR = {
+#            tag = BOR
+#            tag = FRA
+#        }
+#        political_thought_8 = 1
+#        OR = {
+#            has_recently_lost_war = yes
+#            has_unclaimed_cores = yes
+#        }
+#        ULA = { is_our_vassal = THIS }
+#    }
+#
+#    mean_time_to_happen = {
+#        days = 30
+#    }
+#
+#    option = {
+#        name = "We must fund our Wars"
+#        USA = { country_event = 180500002 }
+#        ai_chance = { factor = 95 }
+#    }
+#
+#    option = {
+#        name = "Louisiana is too valuable"
+#        ai_chance = { factor = 5 }
+#    }
+#}
 country_event = {
     id = 180500002
-    title = "Louisiana purchase"
+    title = "Louisiana Purchase"
     desc = "EVTDESC180500002"
     picture = louisiana
     is_triggered_only = yes
 
     option = {
-        name = "Agree"
-        money = -2000000
+        name = "Sell it."
+        money = 500000
         ai_chance = { factor = 95 }
-        inherit = ULA
         FROM = { country_event = 180500003 }
-        prestige = 50
-        set_country_flag = proposed_to_buy_louisana
+        prestige = -5
+		relation = {
+			who = USA
+			value = 75
+		}
+		USA = {
+			badboy = -5
+			money = -500000
+		}
+		money = 500000
     }
 
     option = {
-        name = "This price is too high"
+        name = "No!"
         ai_chance = { factor = 5 }
-        FROM = { country_event = 180500004 }
-        set_country_flag = proposed_to_buy_louisana
+		prestige = 5
+		relation = {
+			who = USA
+			value = -25
+		}
     }
 }
 country_event = {
     id = 180500003
-    title = "USA agrees"
+    title = "France Agrees!"
     desc = "EVTDESC180500003"
     picture = louisiana
     is_triggered_only = yes
 
     option = {
         name = "Great!"
-        money = 2000000
-    }
-}
-country_event = {
-    id = 180500004
-    title = "USA refuses"
-    desc = "EVTDESC180500004"
-    picture = louisiana
-    is_triggered_only = yes
-
-    option = {
-        name = "Shame, we could use the money..."
-        prestige = -4
+		prestige = 5
     }
 }
 ###independence war ally###

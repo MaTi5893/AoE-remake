@@ -2,6 +2,13 @@ owner = ZZH
 controller = ZZH
 add_core = ZZH
 add_core = HET
-add_core = TORadd_core = UKR
+add_core = TOR
+add_core = UKR
 trade_goods = coal
 life_rating = 35
+1776.01.01 = {
+owner = RUS
+controller = RUS
+add_core = RUS
+remove_core = TOR
+}

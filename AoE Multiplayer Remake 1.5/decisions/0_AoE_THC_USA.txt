@@ -63,26 +63,53 @@ political_decisions = {
             exists = yes
         }
         allow = {
+			money = 500000
             war = no
-            political_thought_7 = 1
-            NOT = {
-                OR = {
-                    alliance_with = FRA
-                    alliance_with = ULA
-                }
-            }
-            war_policy = jingoism
+			AND = {
+				has_country_flag = war_on_natives
+				#all_core = { owned_by = THIS }
+			}
             is_greater_power = yes
-            #military_score = ULA
         }
         effect = {
             set_country_flag = claim_louisiana_usa
-            ULA = {
-                all_core = {
-                    add_core = USA
-                }
-            }
-            badboy = 25
+			USA_139 = { add_core = THIS }
+			194 = { add_core = THIS }
+			USA_147 = { add_core = THIS }
+			USA_126 = { add_core = THIS }
+			USA_151 = { add_core = THIS }
+			USA_124 = { add_core = THIS }
+			USA_121 = { add_core = THIS }
+			USA_111 = { add_core = THIS }
+			USA_116 = { add_core = THIS }
+			1825 = { add_core = THIS }
+			143 = { add_core = THIS }
+			1813 = { add_core = THIS }
+			148 = { add_core = THIS }
+			146 = { add_core = THIS }
+			131 = { add_core = THIS }
+			USA_106 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					owner = {
+						exists = BOR
+					}
+				}
+				owner = {
+					BOR = { country_event = 180500002 }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = FRA
+					}
+				}
+				owner = {
+					FRA = { country_event = 180500002 }
+				}
+			}
+            badboy = 15
         }
     }
 
@@ -133,7 +160,7 @@ political_decisions = {
                     add_core = USA
                 }
             }
-            badboy = 30
+            badboy = 10
         }
     }
 
@@ -215,7 +242,7 @@ political_decisions = {
                 }
             }
             set_country_flag = war_on_natives
-            badboy = 20
+            badboy = 10
         }
     }
 
@@ -399,33 +426,33 @@ political_decisions = {
             prestige = 6
         }
     }
-    usa_navy = {
-        picture = merchant_navy
-        potential = {
-            tag = USA
-            NOT = { has_country_flag = usa_navy }
-            exists = yes
-        }
-
-        allow = {
-            blue_and_brown_water_schools = 1
-            steel_steamers = 1
-            money = 100000
-        }
-
-        effect = {
-            set_country_flag = usa_navy
-            add_country_modifier = {
-                name = naval_school
-                duration = -1
-            }
-            add_country_modifier = {
-                name = lord_admiral
-                duration = -1
-            }
-            money = -100000
-        }
-    }
+    #usa_navy = {
+    #    picture = merchant_navy
+    #    potential = {
+    #        tag = USA
+    #        NOT = { has_country_flag = usa_navy }
+    #        exists = yes
+    #    }
+	#
+    #    allow = {
+    #        blue_and_brown_water_schools = 1
+    #        steel_steamers = 1
+    #        money = 100000
+    #    }
+	#
+    #    effect = {
+    #        set_country_flag = usa_navy
+    #        add_country_modifier = {
+    #            name = naval_school
+    #            duration = -1
+    #        }
+    #        add_country_modifier = {
+    #            name = lord_admiral
+    #            duration = -1
+    #        }
+    #        money = -100000
+    #    }
+    #}
 
     build_the_white_house = {
         picture = white_house

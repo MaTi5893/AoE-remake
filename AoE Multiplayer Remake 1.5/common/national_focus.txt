@@ -40,6 +40,39 @@ diplomatic_focus =
             }
         }
     }
+	
+	spread_revolution = {
+		icon = 32
+        own_provinces = no
+		ideology = communist
+		loyalty_value = 0.01
+		core_pop_consciousness_modifier = 0.02
+		core_pop_militancy_modifier = 0.02
+		#ideology = {
+		#	factor = 0.01
+		#	value = jacobin
+		#}
+        limit = {
+            any_neighbor_province = {
+				is_core = THIS
+			}
+			is_overseas = no
+            THIS = {
+                is_greater_power = yes
+				government = proletarian_dictatorship
+            }
+        }
+	}
+	
+	suppress_populace = {
+		icon = 33
+		own_provinces = yes
+		pop_consciousness_modifier = -0.02
+		pop_militancy_modifier = -0.02
+		limit = {
+			NOT = { average_militancy = 2 }
+		}
+	}
 }
 
 promotion_focus =

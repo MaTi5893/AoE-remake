@@ -1,0 +1,20 @@
+owner = BOR
+controller = BOR
+add_core = BOR
+trade_goods = grain
+life_rating = 40
+state_building = {
+    level = 1
+    building = luxury_furniture_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = ammunition_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = paper_mill
+    upgrade = yes
+}
