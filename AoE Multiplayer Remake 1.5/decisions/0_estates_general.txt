@@ -4,9 +4,9 @@ political_decisions = {
         potential = {
             primary_culture = french
             NOT = {
-                BOR = { government = democracy }
-                BOR = { government = proletarian_dictatorship }
-                BOR = { government = fascist_dictatorship }
+                THIS = { government = democracy }
+                THIS = { government = proletarian_dictatorship }
+                THIS = { government = fascist_dictatorship }
             }
             exists = yes
             NOT = { has_country_flag = estates_general_summoned }
@@ -14,7 +14,7 @@ political_decisions = {
         }
         allow = {
 			is_ideology_enabled = communist
-			has_country_modifier = nobility_and_clergy_domination
+			has_country_modifier = clergy_and_nobility_domination
             war = no
         }
         effect = {

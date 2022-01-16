@@ -405,6 +405,7 @@ country_event = {
 	immediate = {
 		set_country_flag = had_reign_of_terror
 	}
+
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -446,6 +447,7 @@ country_event = {
 	trigger = {
 		government = proletarian_dictatorship
 		has_country_flag = had_reign_of_terror
+		has_country_modifier = reign_of_terror
 		OR = {
 		average_militancy = 5
 		war_exhaustion = 10
@@ -508,6 +510,7 @@ country_event = {
 	trigger = {
 		government = proletarian_dictatorship
 		has_country_flag = had_reign_of_terror
+		has_country_modifier = reign_of_terror
 		average_consciousness = 5
 	}
 
@@ -543,3 +546,7 @@ country_event = {
 		prestige = -5
 	}
 }
+country_event = {
+	id = 178908
+	title = "End of The Reign Of Terror"
+	desc = "EVTDESC178907

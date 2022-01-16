@@ -11,6 +11,7 @@ country_event = {
 	trigger = {
 		owns = 473
 		year = 1755
+		NOT = { year = 1756 }
 		CRS = { exists = no }
 		NOT = { tag = CRS }
 		NOT = { has_global_flag = corsica_revolt }

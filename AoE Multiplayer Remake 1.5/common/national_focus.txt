@@ -5,13 +5,70 @@ rail_focus =
         railroads = 0.5 #Capitalists 50% more likeley to choose railroads
         icon = 2
     }
+	
+	shipbuilding_focus = {
+		icon = 19
+		local_repair = 0.5
+		local_ship_build = -0.33
+		local_RGO_output = -0.1
+		limit = {
+			NOT = { is_colonial = yes }
+			is_coastal = yes
+			is_overseas = no
+		}
+	}
+	
+	physiocratic_focus = {
+		icon = 3
+		local_RGO_output = 0.1
+		limit = {
+			NOT = { is_colonial = yes }
+			owner = {
+				economic_policy = interventionism
+			}
+		}
+	}
+	
+	industralisation_focus = {
+		icon = 3
+		local_factory_output = 0.05
+		limit = {
+			NOT = { is_colonial = yes }
+			owner = {
+				OR = {
+					economic_policy = state_capitalism
+					economic_policy = planned_economy
+				}
+			}
+		}
+	}
+	
+	slavery_focus = {
+		icon = 32
+		local_artisan_output = 0.25
+		local_RGO_output = 0.05
+		population_growth = 0.001
+		pop_militancy_modifier = 0.25
+		immigrant_attract = -0.50
+		limit = {
+			any_pop = {
+				type = slaves
+			}
+			owner = {
+				slavery = yes_slavery
+			}
+			state_scope = {
+				NOT = { total_pops = 250000 }
+			}
+		}
+	}
 }
 
 immigration_focus =
 {
     immigration =
     {
-        immigrant_attract = 0.2 #increases attactiveness to immigrants by 20 %
+        immigrant_attract = 1.5 #increases attactiveness to immigrants by 150 %
         icon = 3
         limit = {
             #OR = {
@@ -21,6 +78,47 @@ immigration_focus =
             #}
         }
     }
+	
+	forcefull_assimilation = {
+		assimilation_rate = 1
+		pop_militancy_modifier = 0.05
+		icon = 3
+		limit = {
+			owner = { ai = no }
+			NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
+		}
+	}
+	
+	#spread_revolution = {
+	#	icon = 32
+    #    own_provinces = no
+	#	#ideology = communist
+	#	#loyalty_value = 0.01
+	#	pop_consciousness_modifier = 0.02
+	#	pop_militancy_modifier = 0.02
+    #    limit = {
+	#		#any_neighbor_province = {
+	#		#	owner = {
+	#		#		tag = THIS
+	#		#	}
+	#		#}
+    #        THIS = {
+    #            is_greater_power = yes
+	#			government = proletarian_dictatorship
+    #        }
+    #    }
+	#}
+	
+	suppress_populace = {
+		icon = 33
+		pop_consciousness_modifier = -0.05
+		pop_militancy_modifier = -0.05
+		local_RGO_throughput = -0.05
+		local_factory_throughput = -0.05
+		limit = {
+			NOT = { average_militancy = 2 }
+		}
+	}
 }
 
 diplomatic_focus =
@@ -40,39 +138,6 @@ diplomatic_focus =
             }
         }
     }
-	
-	spread_revolution = {
-		icon = 32
-        own_provinces = no
-		ideology = communist
-		loyalty_value = 0.01
-		core_pop_consciousness_modifier = 0.02
-		core_pop_militancy_modifier = 0.02
-		#ideology = {
-		#	factor = 0.01
-		#	value = jacobin
-		#}
-        limit = {
-            any_neighbor_province = {
-				is_core = THIS
-			}
-			is_overseas = no
-            THIS = {
-                is_greater_power = yes
-				government = proletarian_dictatorship
-            }
-        }
-	}
-	
-	suppress_populace = {
-		icon = 33
-		own_provinces = yes
-		pop_consciousness_modifier = -0.02
-		pop_militancy_modifier = -0.02
-		limit = {
-			NOT = { average_militancy = 2 }
-		}
-	}
 }
 
 promotion_focus =
@@ -167,31 +232,31 @@ promotion_focus =
 
 production_focus =
 {
-    automation_focus =
-    {
-        aeroplanes = 18.3
-        barrels = 18.3
-        automobiles = 18.3
-        icon = 16
-        limit = { year = 1880 }
-    }
-
-    electrical_focus =
-    {
-        radio = 18.3
-        telephones = 18.3
-        electric_gear = 18.3
-        icon = 17
-        limit = { year = 1880 }
-    }
-
-    chemical_focus =
-    {
-        fuel = 18.3
-        oil = 18.3
-        icon = 18
-        limit = { year = 1880 }
-    }
+    #automation_focus =
+    #{
+    #    aeroplanes = 18.3
+    #    barrels = 18.3
+    #    automobiles = 18.3
+    #    icon = 16
+    #    limit = { year = 1880 }
+    #}
+	#
+    #electrical_focus =
+    #{
+    #    radio = 18.3
+    #    telephones = 18.3
+    #    electric_gear = 18.3
+    #    icon = 17
+    #    limit = { year = 1880 }
+    #}
+	#
+    #chemical_focus =
+    #{
+    #    fuel = 18.3
+    #    oil = 18.3
+    #    icon = 18
+    #    limit = { year = 1880 }
+    #}
 
     shipping_focus =
     {
