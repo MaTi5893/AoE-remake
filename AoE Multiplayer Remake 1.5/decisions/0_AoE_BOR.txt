@@ -924,4 +924,60 @@ political_decisions = {
 			clr_global_flag = begin_continental_blockade
 		}
 	}
+	
+    create_confed_rhein = {
+        picture = napoleon
+        potential = {
+            OR = { 
+                tag = FRA
+                tag = BOR
+            }
+            NOT = {
+                exists = GCF
+                has_global_flag = created_confed_rhein
+            }
+        }
+
+        allow = {
+		    war = no
+            FRA_412 = { owned_by = THIS }
+            BEL_387 = { owned_by = THIS }
+            BEL_393 = { owned_by = THIS }
+            BEL_394 = { owned_by = THIS }
+            NET_397 = { owned_by = THIS }
+            PRU_572 = { owned_by = THIS }
+            PRU_575 = { owned_by = THIS }
+            OR = {
+                government = proletarian_dictatorship
+                government = fascist_dictatorship
+            }
+        }
+
+        effect = {
+            set_global_flag = created_confed_rhein
+            prestige = 10
+            any_country = {	
+                limit = {
+				    capital_scope = { continent = europe }
+                    in_sphere = THIS
+                    is_culture_group = germanic
+                }
+                all_core = { add_core = GCF }
+                annex_to = GCF
+            }
+				create_vassal = GCF
+
+                    diplomatic_influence = {
+						who = GCF
+						value = 300
+					}
+        }
+
+
+        ai_will_do = {
+            factor = 1
+        }
+
+    }	
+
 }

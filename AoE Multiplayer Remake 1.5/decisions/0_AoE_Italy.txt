@@ -404,4 +404,81 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	unify_eastern_claims = {
+        picture = conquest_adriatic2
+        potential = {
+                tag = ITA
+                NOT = {
+                has_country_flag = unify_eastern_claims
+            }
+        }
+	
+        allow = {
+		    war = no
+		    all_core = { owned_by = THIS }
+			
+        }
+		
+        effect = {
+            set_country_flag = unify_eastern_claims
+            prestige = 10
+            AUS_734 = { add_core = THIS }
+			AUS_736 = { add_core = THIS }
+			AUS_780 = { add_core = THIS }
+			774 = { add_core = THIS }
+			854 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							owns = AUS_734
+							owns = AUS_736
+							owns = AUS_780
+							owns = 774
+						}
+					}
+				}
+				owner = {
+					badboy = 10
+				}
+			}
+			
+        }
+    }
+	
+	claim_greater_venice = {
+	    picture = aegean
+        potential = {
+            tag = ITA
+	        has_country_flag = unify_eastern_claims
+            NOT = {
+            has_country_flag = claim_greater_venice
+            }
+        }
+		
+		    allow = {
+		    war = no
+		    all_core = { owned_by = THIS }
+			
+        }
+		
+		
+        effect = {
+            set_country_flag = claim_greater_venice
+            prestige = 10
+			TUR_853 = { add_core = THIS }
+			TUR_819 = { add_core = THIS }
+			TUR_832 = { add_core = THIS }
+			GRE_837 = { add_core = THIS }
+			GRE_826 = { add_core = THIS }
+			EGY_843 = { add_core = THIS }
+			TUR_855 = { add_core = THIS }
+			800 = { add_core = THIS }
+			badboy = 15
+		
+		}
+	
+	}	
+
 }
