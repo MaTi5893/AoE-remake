@@ -380,6 +380,7 @@ political_decisions = {
 			RUS_707 = { add_core = THIS }
 			RUS_718 = { add_core = THIS }
 			RUS_947 = { add_core = THIS }
+			RUS_959 = { add_core = THIS }
 			random_owned = {
 				limit = {
 					owner = {
@@ -424,6 +425,16 @@ political_decisions = {
 				limit = {
 					owner = {
 						RUS_947 = { NOT = { owned_by = THIS } }
+					}
+				}
+				owner = {
+					badboy = 2.5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						RUS_959 = { NOT = { owned_by = THIS } }
 					}
 				}
 				owner = {

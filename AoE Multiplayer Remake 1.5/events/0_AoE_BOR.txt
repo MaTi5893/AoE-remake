@@ -646,25 +646,29 @@ country_event = {
 }
 country_event = {
 	id = 171119
-	title = "$FROMCOUNTRY$'s Expansion!"
-	desc = "France estabished protectorate over our neighbors"
+	title = "Nouvelle-France Flurishes"
+	desc = "EVTDESC171119"
+	picture = north_america
 	
-	is_triggered_only = yes
-	
-	
+	trigger = {
+		has_country_flag = secured_fr_na
+		NOT = { has_country_modifier = investing_in_new_france }
+	}
 	
 	option = {
-		name = "Worrisome"
-		FROM = {
-			diplomatic_influence = {
-				who = THIS
-				value = -200
+		name = "Great!"
+		any_owned = {
+			limit = {
+				continent = north_america
+				NOT = { is_core = HAI }
+				NOT = { is_core = CUB }
+			}
+			add_province_modifier = {
+				name = baby_boom
+				duration = 1825
 			}
 		}
-		relation = {
-			who = FROM
-			value = -100
-		}
+		
 	}
 }
 country_event = {

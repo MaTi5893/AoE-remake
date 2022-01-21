@@ -288,59 +288,19 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			is_greater_power = yes
-			invention = the_dark_continent
-			OR = {
-				any_neighbor_country = {
-					capital_scope = {
-						continent = north_america
-					}
-					civilized = no
-				}
-				FCA = {
-					vassal_of = THIS
-					exists = yes
-					any_neighbor_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						civilized = no
-					}
-				}
-				ULA = {
-					vassal_of = THIS
-					exists = yes
-					any_neighbor_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						civilized = no
-					}
-				}
-			}
+			money = 5000000
+			owns = 139
+			owns = 142
+			owns = 65
+			owns = 189
+			owns = 172
 		}
 		effect = {
-			any_country = {
-				limit = {
-					civilized = no
-					OR = {
-						neighbour = THIS
-						neighbour = ULA
-						neighbour = FCA
-					}
-					in_sphere = THIS
-					capital_scope = { continent = north_america }
-					NOT = { tag = CHE }
-					NOT = { tag = IQS }
-					NOT = { tag = CRK }
-					war = no
-					ai = yes
-				}
-				random_list = {
-					15 = { annex_to = THIS }
-					85 = { country_event = 171119 }
-				}
+			add_country_modifier = {
+				name = investing_in_new_france
+				duration = 3600
 			}
+			money = -500000
 			set_country_flag = secured_fr_na
 		}
 	}

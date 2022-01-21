@@ -839,7 +839,7 @@ province_event = {
         }
     }
 }
-######American revolution leadup######
+######American Militancy Raise######
 country_event = {
     id = 177500
     title = "Sugar act of 1764"
@@ -848,11 +848,19 @@ country_event = {
     picture = english_parliment
 
     trigger = {
-        tag = GBR
+        primary_culture = british
         year = 1764
-        NOT = {
-            has_country_flag = sugar_act_passed
-        }
+		OR = {
+			THC = {
+				OR = {
+				vassal_of = GBR
+				substate_of = GBR
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
     }
     mean_time_to_happen = {
         days = 30
@@ -860,21 +868,22 @@ country_event = {
 
     option = {
         name = "Introduce it immediatly"
-        relation = {
-            who = THC
-            value = -50
-        }
         money = 20000
-        THC = {
-            country_event = 24502
-        }
-        set_country_flag = sugar_act_passed
+        random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24502
+			}
+		}
         ai_chance = { factor = 100 }
-    }
-    option = {
-        name = "It is unneccessery, get this edict off my sight!"
-        prestige = -15
-        ai_chance = { factor = 0 }
     }
 }
 country_event = {
@@ -906,14 +915,19 @@ country_event = {
     picture = english_parliment
 
     trigger = {
-        tag = GBR
+        primary_culture = british
         year = 1765
-        THC = {
-            vassal_of = GBR
-        }
-        NOT = {
-            has_country_flag = stamp_act_passed
-        }
+        OR = {
+			THC = {
+				OR = {
+				vassal_of = THIS
+				substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
     }
     mean_time_to_happen = {
         days = 30
@@ -921,21 +935,29 @@ country_event = {
 
     option = {
         name = "Introduce it immediatly"
-        relation = {
-            who = THC
-            value = -50
-        }
         money = 20000
-        THC = {
-            country_event = 24504
-        }
-        set_country_flag = stamp_act_passed
+		 random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24504
+			}
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			militancy = 4
+			consciousness = 5
+		}
         ai_chance = { factor = 100 }
-    }
-    option = {
-        name = "It is unneccessery, get this edict off my sight!"
-        prestige = -15
-        ai_chance = { factor = 0 }
     }
 }
 country_event = {
@@ -948,14 +970,9 @@ country_event = {
 
     option = {
         name = "This is preposterous!"
-
-        add_country_modifier = {
-            name = stamp_act_on_colonies
-            duration = 9125
-        }
-
         any_pop = {
-            militancy = 1
+            militancy = 4
+			consciousness = 4
         }
     }
 }
@@ -967,14 +984,19 @@ country_event = {
     picture = english_parliment
 
     trigger = {
-        tag = GBR
+        primary_culture = british
         year = 1773
-        THC = {
-            vassal_of = GBR
-        }
-        NOT = {
-            has_country_flag = stamp_act_passed
-        }
+        OR = {
+			THC = {
+				OR = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
     }
     mean_time_to_happen = {
         days = 30
@@ -982,21 +1004,22 @@ country_event = {
 
     option = {
         name = "Introduce it immediatly"
-        relation = {
-            who = THC
-            value = -50
-        }
+        random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24505
+			}
+		}
         money = 20000
-        THC = {
-            country_event = 24505
-        }
-        set_country_flag = stamp_act_passed
         ai_chance = { factor = 100 }
-    }
-    option = {
-        name = "It is unneccessery, get this edict off my sight!"
-        prestige = -15
-        ai_chance = { factor = 0 }
     }
 }
 country_event = {
@@ -1009,12 +1032,9 @@ country_event = {
 
     option = {
         name = "This is preposterous!"
-        add_country_modifier = {
-            name = tea_act_on_colonies
-            duration = 6205
-        }
         any_pop = {
-            militancy = 1
+            militancy = 3
+			consciousness = 3
         }
     }
 }
@@ -1027,6 +1047,9 @@ country_event = {
 
     option = {
         name = "A horrible act of barbarity"
+		any_pop = {
+			consciousness = 1
+		}
         set_country_flag = boston_tea_party_happened
     }
 }
@@ -1038,14 +1061,19 @@ country_event = {
     picture = english_parliment
 
     trigger = {
-        tag = GBR
+        primary_culture = british
         has_country_flag = boston_tea_party_happened
-        THC = {
-            vassal_of = GBR
-        }
-        NOT = {
-            has_country_flag = intolerable_act_passed
-        }
+		OR = {
+			THC = {
+				OR = {
+				vassal_of = THIS
+				substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
     }
     mean_time_to_happen = {
         days = 30
@@ -1053,14 +1081,30 @@ country_event = {
 
     option = {
         name = "Introduce it immediatly"
-        relation = {
-            who = THC
-            value = -50
-        }
         money = 20000
-        THC = {
-            country_event = 24506
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				THC = {
+					country_event = 24506
+				}
+			}
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			militancy = 4
+			consciousness = 5
+		}
         set_country_flag = intolerable_act_passed
         ai_chance = { factor = 100 }
     }
@@ -1089,7 +1133,8 @@ country_event = {
             value = -250
         }
         any_pop = {
-            militancy = 1
+            militancy = 6
+			consciousness = 6
         }
     }
 }
@@ -1100,13 +1145,9 @@ country_event = {
     id = 171000
     title = "The Great Debt"
     desc = "EVTDESC171000"
-    picture = english_parliment
-    fire_only_once = yes
-
-    trigger = {
-        owns = 300
-        year = 1710
-    }
+    picture = new_world
+    is_triggered_only = yes
+	
     mean_time_to_happen = {
         months = 2
     }
@@ -1117,23 +1158,30 @@ country_event = {
             name = the_great_debt
             duration = -1
         }
-        money = -50000
     }
 }
 country_event = {
     id = 171001
     title = "The South Sea Company"
     desc = "EVTDESC171001"
-    picture = english_parliment
+    picture = south_sea_company
     fire_only_once = yes
 
     trigger = {
         owns = 300
-        year = 1711
+		OR = {
+			year = 1711
+			has_country_modifier = in_bankrupcy
+			war_with = SPC
+		}
         has_country_modifier = the_great_debt
     }
     mean_time_to_happen = {
-        months = 2
+        months = 6
+		modifier = {
+			factor = 3
+			war_with = SPC
+		}
     }
 
     option = {
@@ -1153,20 +1201,20 @@ country_event = {
     id = 171002
     title = "The South Sea Company Act"
     desc = "EVTDESC171002"
-    picture = english_parliment
+    picture = south_sea_company
     fire_only_once = yes
 
     trigger = {
-        owns = 300
-        year = 1715
+        primary_culture = british
         has_country_modifier = the_south_sea_company
     }
+
     mean_time_to_happen = {
-        months = 2
+        months = 60
     }
 
     option = {
-        name = "The Company will controll the stocks"
+        name = "The Company Will Controll The Stocks"
         remove_country_modifier = the_south_sea_company
         add_country_modifier = {
             name = the_south_sea_company_1
@@ -1175,89 +1223,117 @@ country_event = {
         money = 25000
     }
     option = {
-        name = "The government should control the prices"
+        name = "The Government Should Control The Prices"
         remove_country_modifier = the_south_sea_company
         add_country_modifier = {
             name = the_south_sea_company_2
             duration = -1
         }
         money = 10000
-        prestige = -10
+        prestige = -5
     }
 }
 country_event = {
     id = 171003
-    title = "The South Sea Company Crash!"
+    title = "The South Sea Bubble Bursts!"
     desc = "EVTDESC171003"
     major = yes
     fire_only_once = yes
 
     trigger = {
-        owns = 300
-        year = 1720
-        has_country_modifier = the_south_sea_company_1
+        primary_culture = british
+		OR = {
+			has_country_modifier = the_south_sea_company_2
+			has_country_modifier = the_south_sea_company_1
+		}
+		OR = {
+			2217 = { NOT = { controlled_by = THIS } }
+			has_recently_lost_wars = yes
+		}
     }
     mean_time_to_happen = {
-        months = 2
+        months = 12
     }
 
     option = {
         name = "Oh."
-        remove_country_modifier = the_south_sea_company_1
-        add_country_modifier = {
-            name = stock_market_crash
-            duration = 7300
-        }
+		random_owned = {
+			limit = {
+				has_country_modifier = the_south_sea_company_1
+			}
+			owner = {
+				remove_country_modifier = the_south_sea_company_1
+				add_country_modifier = {
+					name = stock_market_crash
+					duration = 7300
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+				has_country_modifier = the_south_sea_company_2
+				}
+			}
+			owner = {
+				remove_country_modifier = the_south_sea_company_2
+				add_country_modifier = {
+					name = stock_market_crash
+					duration = 1825
+				}
+			}
+		}
     }
 }
-country_event = {
-    id = 171004
-    title = "Walpole's solution"
-    desc = "EVTDESC171004"
-    picture = ssbubble
-    fire_only_once = yes
-
-    trigger = {
-        owns = 300
-        year = 1720
-        has_country_modifier = the_south_sea_company_1
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "Fallow Wolpole's Plan"
-        set_country_flag = walpole_minister
-    }
-
-    option = {
-        name = "We'll figure it our ourselves!"
-    }
-}
-country_event = {
-    id = 171005
-    title = "Walpole's solution"
-    desc = "EVTDESC171005"
-    picture = ssbubble
-    fire_only_once = yes
-
-    trigger = {
-        owns = 300
-        has_country_flag = walpole_minister
-    }
-    mean_time_to_happen = {
-        months = 2
-    }
-
-    option = {
-        name = "Oh thank God!"
-        remove_country_modifier = stock_market_crash
-    }
-}
+#country_event = {
+#    id = 171004
+#    title = "Walpole's solution"
+#    desc = "EVTDESC171004"
+#    picture = ssbubble
+#    fire_only_once = yes
+#
+#    trigger = {
+#        owns = 300
+#        year = 1720
+#        has_country_modifier = the_south_sea_company_1
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#
+#    option = {
+#        name = "Fallow Wolpole's Plan"
+#        set_country_flag = walpole_minister
+#    }
+#
+#    option = {
+#        name = "We'll figure it our ourselves!"
+#    }
+#}
+#country_event = {
+#    id = 171005
+#    title = "Walpole's solution"
+#    desc = "EVTDESC171005"
+#    picture = ssbubble
+#    fire_only_once = yes
+#
+#    trigger = {
+#        owns = 300
+#        has_country_flag = walpole_minister
+#    }
+#    mean_time_to_happen = {
+#        months = 2
+#    }
+#
+#    option = {
+#        name = "Oh thank God!"
+#        remove_country_modifier = stock_market_crash
+#		clr_country_flag = walpole_minister
+#    }
+#}
 country_event = {
     id = 171006
-    title = "The Great debt Stabilized"
+    title = "The Great Debt Stabilized"
     desc = "EVTDESC171006"
     picture = english_parliment
     fire_only_once = yes
@@ -1266,7 +1342,7 @@ country_event = {
         owns = 300
         has_country_flag = the_great_debt
         OR = {
-            year = 1750
+            year = 1735
             AND = {
                 stock_exchange = 1
                 central_bank_money_bill_printing = 1
@@ -1286,10 +1362,10 @@ country_event = {
     option = {
         name = "Oh thank God!"
         remove_country_modifier = the_great_debt
-        add_country_modifier = {
-            name = the_great_debt_1
-            duration = -1
-        }
+        #add_country_modifier = {
+        #    name = the_great_debt_1
+        #    duration = -1
+        #}
     }
 }
 #####East India Company####
@@ -1393,7 +1469,7 @@ country_event = {
 #}
 country_event = {
     id = 171008
-    title = "A notable general"
+    title = "A Notable general"
     desc = "EVTDESC171008"
     picture = english_parliment
     fire_only_once = yes
@@ -1412,124 +1488,124 @@ country_event = {
     option = {
         name = "He will achieve great things!"
         define_general = {
-            name = "Prince Frederick, Duke of York"
-            personality = defence_5.1
+            name = "Prince Frederick"
+            personality = defence_3.1
             background = attack_3.1
         }
     }
 }
-country_event = {
-    id = 171009
-    title = "French War of Independence"
-    desc = "EVTDESC171009"
-    fire_only_once = yes
-    major = yes
+#country_event = {
+#    id = 171009
+#    title = "French War of Independence"
+#    desc = "EVTDESC171009"
+#    fire_only_once = yes
+#    major = yes
+#
+#    trigger = {
+#        tag = EFM
+#        owns = 425
+#        average_militancy = 6
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#
+#    option = {
+#        name = "Horrible News"
+#        prestige = -10
+#        all_core = {
+#            limit = {
+#                is_core = BOR
+#            }
+#            secede_province = BOR
+#        }
+#        425 = {
+#            owner = {
+#                war = {
+#                    target = EFM
+#                    attacker_goal = { casus_belli = humiliate }
+#                    defender_goal = { casus_belli = acquire_all_cores }
+#                    call_ally = no
+#                }
+#            }
+#        }
+#    }
+#}
+#country_event = {
+#    id = 171010
+#    title = "Loss of France"
+#    desc = "EVTDESC171010"
+#    picture = english_parliment
+#    fire_only_once = yes
+#    major = yes
+#
+#    trigger = {
+#        tag = EFM
+#        NOT = { owns = 425 }
+#        OR = {
+#            BOR = {
+#                exists = yes
+#            }
+#            FRA = {
+#                exists = yes
+#            }
+#        }
+#        war = no
+#        average_militancy = 6
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#    option = {
+#        name = "Oh well..."
+#        prestige = -60
+#        any_country = {
+#            limit = {
+#                SCO = {
+#                    vassal_of = THIS
+#                }
+#                THIS = {
+#                    owns = 300
+#                    has_country_flag = jacobism_prevails
+#                }
+#            }
+#            change_tag = GBJ
+#        }
+#        any_country = {
+#            limit = {
+#                SCO = {
+#                    vassal_of = THIS
+#                }
+#                THIS = {
+#                    owns = 300
+#                }
+#            }
+#            change_tag = ENG
+#        }
+#    }
+#}
 
-    trigger = {
-        tag = EFM
-        owns = 425
-        average_militancy = 6
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "Horrible News"
-        prestige = -10
-        all_core = {
-            limit = {
-                is_core = BOR
-            }
-            secede_province = BOR
-        }
-        425 = {
-            owner = {
-                war = {
-                    target = EFM
-                    attacker_goal = { casus_belli = humiliate }
-                    defender_goal = { casus_belli = acquire_all_cores }
-                    call_ally = no
-                }
-            }
-        }
-    }
-}
-country_event = {
-    id = 171010
-    title = "Loss of France"
-    desc = "EVTDESC171010"
-    picture = english_parliment
-    fire_only_once = yes
-    major = yes
-
-    trigger = {
-        tag = EFM
-        NOT = { owns = 425 }
-        OR = {
-            BOR = {
-                exists = yes
-            }
-            FRA = {
-                exists = yes
-            }
-        }
-        war = no
-        average_militancy = 6
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-    option = {
-        name = "Oh well..."
-        prestige = -60
-        any_country = {
-            limit = {
-                SCO = {
-                    vassal_of = THIS
-                }
-                THIS = {
-                    owns = 300
-                    has_country_flag = jacobism_prevails
-                }
-            }
-            change_tag = GBJ
-        }
-        any_country = {
-            limit = {
-                SCO = {
-                    vassal_of = THIS
-                }
-                THIS = {
-                    owns = 300
-                }
-            }
-            change_tag = ENG
-        }
-    }
-}
-
-country_event = {
-    id = 171011
-    title = "Society of Antiquaries of London"
-    desc = "EVTDESC171011"
-    picture = english_parliment
-    fire_only_once = yes
-
-    trigger = {
-        year = 1707
-        owns = 300
-    }
-    option = {
-        name = "Amazing, ladies and gentelmens"
-        300 = {
-            add_province_modifier = {
-                name = antiquaries_of_london
-                duration = -1
-            }
-        }
-    }
-}
+#country_event = {
+#    id = 171011
+#    title = "Society of Antiquaries of London"
+#    desc = "EVTDESC171011"
+#    picture = english_parliment
+#    fire_only_once = yes
+#
+#    trigger = {
+#        year = 1707
+#        owns = 300
+#    }
+#    option = {
+#        name = "Amazing, ladies and gentelmens"
+#        300 = {
+#            add_province_modifier = {
+#                name = antiquaries_of_london
+#                duration = -1
+#            }
+#        }
+#    }
+#}
 country_event = {
     id = 171012
     title = "The Storming of the Tower of London"
@@ -1599,10 +1675,7 @@ country_event = {
 
     trigger = {
         year = 1731
-        OR = {
-        tag = GBR
-        tag = GBJ
-        }
+        primary_culture = british
     }
     option = {
         name = "Use it as an excuse for War"
@@ -1772,5 +1845,40 @@ country_event = {
 			value = 0.3
 		}
 		set_country_flag = jacobite_path
+	}
+}
+country_event = {
+    id = 171018
+    title = "Company Rule In India"
+    desc = "EVTDESC171018"
+    picture = william_of_orange
+    is_triggered_only = yes
+	
+	option = {
+		name = "Great!"
+		any_owned = {
+			limit = {
+				is_core = HND
+			}
+			add_province_modifiers = {
+				name = colonial_exploitation
+				duration = 365
+			}
+		}
+		casus_belli = {
+			target = JAP
+			type = demand_concession_casus_belli
+			months = 12
+		}
+		casus_belli = {
+			target = MUG
+			type = demand_concession_casus_belli
+			months = 12
+		}
+		casus_belli = {
+			target = TKG
+			type = demand_concession_casus_belli
+			months = 12
+		}
 	}
 }

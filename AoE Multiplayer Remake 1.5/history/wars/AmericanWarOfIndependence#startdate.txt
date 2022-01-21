@@ -1,0 +1,18 @@
+name = "The American War of Independence"
+
+1775.4.19 = {
+    add_attacker = THC
+    add_defender = GBR
+
+    war_goal = {
+        casus_belli = become_independent
+        actor = THC
+        receiver = GBR
+    }
+
+}
+
+1783.9.3 = {
+    rem_attacker = THC
+    rem_defender = GBR
+}

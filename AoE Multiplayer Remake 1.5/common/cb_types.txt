@@ -599,10 +599,13 @@ partition_cb = {
             }
         }
 		OR = {
-			ai = no
+			THIS = { ai = no }
+			THIS = { NOT = { tag = AUS } }
 			AND = {
-				ai = yes
-				tag = AUS
+				THIS = {
+					ai = yes
+					tag = AUS
+				}
 				OR = {
 					region = RUS_710
 					region = AUS_702

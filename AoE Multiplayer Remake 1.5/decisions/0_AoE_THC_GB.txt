@@ -73,8 +73,14 @@ political_decisions = {
             is_greater_power = yes
             exists = USA
 			NOT = { tag = USA }
+			NOT = { primary_culture = british }
 			USA = {
-				war = yes
+				OR = {
+					war_with = GBJ
+					war_with = ENL
+					war_with = ENG
+					war_with = GBR
+				} 
 			}
 			num_of_ports = 10
 			NOT = { has_global_flag = supported_us_independence }

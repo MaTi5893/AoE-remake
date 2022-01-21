@@ -82,7 +82,7 @@ immigration_focus =
 	forcefull_assimilation = {
 		assimilation_rate = 1
 		pop_militancy_modifier = 0.05
-		icon = 3
+		icon = 18
 		limit = {
 			owner = { ai = no }
 			NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }

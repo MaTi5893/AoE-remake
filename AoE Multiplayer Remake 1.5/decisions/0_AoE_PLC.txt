@@ -171,11 +171,17 @@ political_decisions = {
             primary_culture = polish
             NOT = { has_country_flag = revise_the_treaty_of_andrusovo }
             exists = yes
+			owns = 946
         }
         allow = {
             is_greater_power = yes
-            #military_score = 100
-            war_policy  = jingoism
+            state_n_government = 1
+			1008 = {
+				owner = {
+					NOT = { is_sphere_leader_of = THIS }
+					NOT = { alliance_with = THIS }
+				}
+			}
         }
         effect = {
             set_country_flag = revise_the_treaty_of_andrusovo
@@ -215,13 +221,33 @@ political_decisions = {
 					badboy = 15
 				}
 			}
-
             relation = {
                 who = RUS
                 value = -250
             }
         }
-        ai_will_do = { factor = 1 }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						relation = {
+							who = RUS
+							value = 100
+						}
+						exists = RUS
+					}
+					AND = {
+						relation = {
+							who = TOR
+							value = 100
+						}
+						exists = TOR
+					}
+				}
+			}
+		}
     }
 
     vassalize_ducal_prussia = {
@@ -303,21 +329,42 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            706 = {
-                has_building = railroad
-                has_building = fort
-            }
+			OR = {
+				706 = {
+					has_building = railroad
+					has_building = fort
+				}
+				NOT = { owns = 703 }
+			}
             OR = {
                 realism = 1
                 year = 1733
+				NOT = { owns = 703 }
             }
         }
         effect = {
             capital = 706
             prestige = 15
-            706 = {
-                life_rating = 5
-            }
+			random_owned = {
+				limit = {
+					owner = {
+						706 = { life_rating = 35 }
+					}
+				}
+				706 = {
+					life_rating = 5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						706 = { life_rating = 33 }
+					}
+				}
+				706 = {
+					life_rating = 7
+				}
+			}
         }
         ai_will_do = { factor = 1 }
 

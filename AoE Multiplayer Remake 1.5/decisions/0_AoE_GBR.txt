@@ -1,7 +1,7 @@
 political_decisions = {
 
     unite_great_britain = {
-        picture = become_gb
+        picture = map_britain
         potential = {
             tag = ENL
             NOT = { exists = GBR }
@@ -122,61 +122,164 @@ political_decisions = {
         }
     }
 
-    agricultural_revolution = {
-        picture = agriculture_rev
-        potential = {
-            OR = {
-                tag = GBJ
-                tag = ENL
-                tag = ENG
-                tag = GBR
-            }
-            NOT = { has_country_flag = agricultural_revolution }
-            exists = yes
-        }
-        allow = {
-            war = no
-            compound_steam_engines = 1
-            semi_automatization = 1
-            hot_blast = 1
-            early_railroad = 1
-        }
-        effect = {
-            add_country_modifier = {
-                name = agriculture_revolution
-                duration = 1825
-            }
-            set_country_flag = agricultural_revolution
-        }
-    }
-
-    begin_encolsure = {
-        picture = encolsure
-        potential = {
-            OR = {
-                tag = GBJ
-                tag = ENL
-                tag = ENG
-                tag = GBR
-            }
-            NOT = { has_country_flag = encolsure }
-            exists = yes
-        }
-        allow = {
-            steam_turbine = 1
-            has_country_modifier = agriculture_revolution
-        }
-        effect = {
-            add_country_modifier = {
-                name = encolsure
-                duration = 365
-            }
-			any_pop = {
-				money = 5000
+	premiership_of_robert_walpole = {
+		picture = walpole
+		potential = {
+			primary_culture = british
+			NOT = { has_country_flag = premiership_of_robert_walpole }
+			government = hms_government
+		}
+		allow = {
+			state_n_government = 1
+			ruling_party_ideology = liberal		
+		}
+		effect = {
+			set_country_flag = premiership_of_robert_walpole
+			upper_house = {
+				ideology = liberal
+				value = 0.35
 			}
-            set_country_flag = encolsure
-        }
-    }
+			remove_country_modifier = the_great_debt
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = non_socialist
+					}
+				}
+				owner = {
+					political_reform = all_trade_unions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = state_controlled
+					}
+				}
+				owner = {
+					political_reform = non_socialist
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = no_trade_unions
+					}
+				}
+				owner = {
+					political_reform = state_controlled
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = debtors_prisons
+					}
+				}
+				owner = {
+					political_reform = bankruptcy
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = peonage
+					}
+				}
+				owner = {
+					political_reform = debtors_prisons
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = serfdom
+					}
+				}
+				owner = {
+					political_reform = peonage
+				}
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = liberal
+				}
+				militancy = -3
+				consciousness = -3
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = conservative
+				}
+				militancy = 2
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = stock_market_crash
+					}
+				}
+				owner = {
+					remove_country_modifier = stock_market_crash
+				}
+			}
+		}
+	}
+    #agricultural_revolution = {
+    #    picture = agriculture_rev
+    #    potential = {
+    #        OR = {
+    #            tag = GBJ
+    #            tag = ENL
+    #            tag = ENG
+    #            tag = GBR
+    #        }
+    #        NOT = { has_country_flag = agricultural_revolution }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        war = no
+    #        compound_steam_engines = 1
+    #        semi_automatization = 1
+    #        hot_blast = 1
+    #        early_railroad = 1
+    #    }
+    #    effect = {
+    #        add_country_modifier = {
+    #            name = agriculture_revolution
+    #            duration = 1825
+    #        }
+    #        set_country_flag = agricultural_revolution
+    #    }
+    #}
+	#
+    #begin_encolsure = {
+    #    picture = encolsure
+    #    potential = {
+    #        OR = {
+    #            tag = GBJ
+    #            tag = ENL
+    #            tag = ENG
+    #            tag = GBR
+    #        }
+    #        NOT = { has_country_flag = encolsure }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        steam_turbine = 1
+    #        has_country_modifier = agriculture_revolution
+    #    }
+    #    effect = {
+    #        add_country_modifier = {
+    #            name = encolsure
+    #            duration = 365
+    #        }
+	#		any_pop = {
+	#			money = 5000
+	#		}
+    #        set_country_flag = encolsure
+    #    }
+    #}
 
     duke_of_york_reforms = {
         picture = duke_of_york
@@ -230,6 +333,7 @@ political_decisions = {
     }
 
     act_of_union_ire = {
+		picture = map_britain
         potential = {
             tag = GBR
             NOT = { exists = ENG }
@@ -240,9 +344,17 @@ political_decisions = {
                     owned_by = THIS
                 }
             }
-            political_thought_7 = 1
             war = no
-            average_militancy = 4
+			OR = {
+				AND = {
+					average_militancy = 4
+					political_thought_7 = 1
+				}
+				FRA = {
+					exists = yes
+					government = proletarian_dictatorship
+				}
+			}
         }
         effect = {
             all_core = {
@@ -256,6 +368,13 @@ political_decisions = {
             }
             add_accepted_culture = irish
         }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1801 }
+			}
+		}
     }
 
     britannia_rules_the_waves = {
@@ -403,4 +522,29 @@ political_decisions = {
             }
         }
     }
+	
+	company_rule_in_india = {
+		picture = eic
+		potential = {
+			primary_culture = british
+			NOT = {
+				has_country_flag = company_rule_in_india
+			}
+		}
+		allow = {
+			war = no
+			BNG = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			owns = 3262
+			owns = 3264
+			owns = 3261
+		}
+		effect = {
+			set_country_flag = company_rule_in_india
+			country_event = 171018
+		}
+	}
 }

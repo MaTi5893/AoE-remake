@@ -549,4 +549,41 @@ country_event = {
 country_event = {
 	id = 178908
 	title = "End of The Reign Of Terror"
-	desc = "EVTDESC178907
+	desc = "EVTDESC178908"
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { government = proletarian_dictatorship }
+				has_country_modifier = reign_of_terror
+			}
+			AND = {
+				NOT = { has_country_modifier = reign_of_terror }
+				has_country_flag = had_reign_of_terror
+				government = proletarian_dictatorship
+			}
+		}
+	}
+	
+	option = {
+		name = "Finally Peace.."
+		prestige = 5
+		any_pop = {
+			miltancy = -1
+			consciousness = 2
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					government = proletarian_dictatorship
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = nation_state
+					duaration = -1
+				}
+			}
+		}
+	}
+}

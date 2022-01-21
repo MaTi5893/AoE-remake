@@ -1179,3 +1179,76 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 15730066
+	title = "$CAPITAL$ Convention"
+	desc = "EVTDESC15730066"
+	fire_only_once = yes
+	major = yes
+	news = yes
+	
+	trigger = {
+		NOT = { exists = PLC }
+		NOT = { exists = POL }
+		any_owned_province = {
+			is_core = PLC
+		}
+		is_greater_power = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			rank = 1
+		}
+		modifier = {
+			factor = 0.6
+			rank = 1
+		}
+		modifier = {
+			factor = 0.7
+			rank = 1
+		}
+		modifier = {
+			factor = 0.8
+			rank = 1
+		}
+		modifier = {
+			factor = 0.9
+			rank = 5
+		}
+	}
+	
+	option = {
+		name = "EVTOPT15730066NAME"
+		PLC = {
+			all_core = {
+				remove_core = PLC
+			}
+		}
+		prestige = 15
+		any_pop = {
+			limit = {
+				culture = polish
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		PRU_701 = {
+			add_core = CPL
+		}
+		RUS_710 = {
+			add_core = CPL
+		}
+		RUS_706 = {
+			add_core = CPL
+		}
+		RUS_712 = {
+			add_core = CPL
+		}
+		703 = {
+			add_core = CPL
+		}
+	}
+}
