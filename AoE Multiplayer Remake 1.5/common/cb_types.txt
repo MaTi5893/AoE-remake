@@ -1113,6 +1113,7 @@ dethrone_peter = {
 		THIS = { NOT = { has_country_modifier = neutrality } }
         NOT = { is_our_vassal = THIS }
         tag = RUS
+		tag = TOR
         THIS = {
             tag = SWE
         }
