@@ -48,106 +48,106 @@ leader = {
 
 army = {
     name = "Activo Oajaca"
-    location = 2163
+    location = 2208
     regiment = {
         name= "1.Oajaca y Tlaxcala"
         type = infantry
-        home = 2177
+        home = 2379
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
         type = infantry
-        home = 2177
+        home = 2379
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
         type = infantry
-        home = 2177
+        home = 2379
     }
 	
     regiment = {
         name= "1.Division Comonfort"
         type = infantry
-        home = 2176
+        home = 2349
     }
 
     regiment = {
         name= "2.Division Comonfort"
         type = infantry
-        home = 2176
+        home = 2349
     }
 
 }
 
 army = {
     name = "Ejército del Ciudad Mejico"
-    location = 2164
+    location = 2204
     regiment = {
         name= "1.Oajaca y Tlaxcala"
         type = infantry
-        home = 2191
+        home = 2349
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
         type = infantry
-        home = 2186
+        home = 2295
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
         type = infantry
-        home = 133
+        home = 2295
     }
 	
     regiment = {
         name= "1.Division Comonfort"
         type = infantry
-        home = 137
+        home = 2348
     }
 
     regiment = {
         name= "2.Division Comonfort"
         type = infantry
-        home = 2167
+        home = 2348
     }
 }
 
 army = {
     name = "Ejército del Ciudad Mejico"
-    location = 2115
+    location = 1723
     regiment = {
         name= "1.Division Comonfort"
         type = artillery
-        home = 2267
+        home = 2348
     }
     regiment = {
         name= "1.Division Comonfort"
         type = artillery
-        home = 2264
+        home = 2347
     }
     regiment = {
         name= "1.Division Comonfort"
         type = artillery
-        home = 2264
+        home = 2344
     }
     regiment = {
         name= "1.Division Comonfort"
         type = artillery
-        home = 2268
+        home = 2330
     }
     regiment = {
         name= "1.Division Comonfort"
         type = artillery
-        home = 2271
+        home = 2325
     }
 }
 
 navy = {
     name = "Armada de Mexico"
-    location = 2162
+    location = 2204
     ship = {
         name= "Vencedor del Alamo"
         type = frigate
