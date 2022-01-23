@@ -190,128 +190,125 @@ political_decisions = {
 			}
 		}
 	    effect = {
-		random_owned = {
-		limit = { owner = { APC = { all_core = { owned_by = THIS } } } }
-		owner = { APC = { all_core = { remove_core = APC } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { COM = { all_core = { owned_by = THIS } } } }
-		owner = { COM = { all_core = { remove_core = COM } } }
-	    }
-		
-	    random_owned = {
-		limit = { owner = { KIW = { all_core = { owned_by = THIS } } } }
-		owner = { KIW = { all_core = { remove_core = KIW } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { WIC = { all_core = { owned_by = THIS } } } }
-		owner = { WIC = { all_core = { remove_core = WIC } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { OSG = { all_core = { owned_by = THIS } } } }
-		owner = { OSG = { all_core = { remove_core = OSG } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { COD = { all_core = { owned_by = THIS } } } }
-		owner = { COD = { all_core = { remove_core = COD } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { NTC = { all_core = { owned_by = THIS } } } }
-		owner = { NTC = { all_core = { remove_core = NTC } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { ISK = { all_core = { owned_by = THIS } } } }
-		owner = { ISK = { all_core = { remove_core = ISK } } }
-	    }
-		
-        random_owned = {
-		limit = { owner = { QUA = { all_core = { owned_by = THIS } } } }
-		owner = { QUA = { all_core = { remove_core = QUA } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { YCH = { all_core = { owned_by = THIS } } } }
-		owner = { YCH = { all_core = { remove_core = YCH } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { ILL = { all_core = { owned_by = THIS } } } }
-		owner = { ILL = { all_core = { remove_core = ILL } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { FOX = { all_core = { owned_by = THIS } } } }
-		owner = { FOX = { all_core = { remove_core = FOX } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { MIS = { all_core = { owned_by = THIS } } } }
-		owner = { MIS = { all_core = { remove_core = MIS } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { BXJ = { all_core = { owned_by = THIS } } } }
-		owner = { BXJ = { all_core = { remove_core = BXJ } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { SUX = { all_core = { owned_by = THIS } } } }
-		owner = { SUX = { all_core = { remove_core = SUX } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { CHT = { all_core = { owned_by = THIS } } } }
-		owner = { CHT = { all_core = { remove_core = CHT } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { CHS = { all_core = { owned_by = THIS } } } }
-		owner = { CHS = { all_core = { remove_core = CHS } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { MIA = { all_core = { owned_by = THIS } } } }
-		owner = { MIA = { all_core = { remove_core = MIA } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { OTT = { all_core = { owned_by = THIS } } } }
-		owner = { OTT = { all_core = { remove_core = OTT } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { SHE = { all_core = { owned_by = THIS } } } }
-		owner = { SHE = { all_core = { remove_core = SHE } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { CRK = { all_core = { owned_by = THIS } } } }
-		owner = { CRK = { all_core = { remove_core = CRK } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { CHE = { all_core = { owned_by = THIS } } } }
-		owner = { CHE = { all_core = { remove_core = CHE } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { IQS = { all_core = { owned_by = THIS } } } }
-		owner = { IQS = { all_core = { remove_core = IQS } } }
-	    }
-		
-		random_owned = {
-		limit = { owner = { LNP = { all_core = { owned_by = THIS } } } }
-		owner = { LNP = { all_core = { remove_core = LNP } } }
-	    }
-		
-		}
-		
+			random_owned = {
+			limit = { owner = { APC = { all_core = { owned_by = APC } } } }
+			owner = { APC = { all_core = { remove_core = APC } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { COM = { all_core = { owned_by = COM } } } }
+			owner = { COM = { all_core = { remove_core = COM } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { KIW = { all_core = { owned_by = KIW } } } }
+			owner = { KIW = { all_core = { remove_core = KIW } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { WIC = { all_core = { owned_by = WIC } } } }
+			owner = { WIC = { all_core = { remove_core = WIC } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { OSG = { all_core = { owned_by = OSG } } } }
+			owner = { OSG = { all_core = { remove_core = OSG } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { COD = { all_core = { owned_by = COD } } } }
+			owner = { COD = { all_core = { remove_core = COD } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { NTC = { all_core = { owned_by = NTC } } } }
+			owner = { NTC = { all_core = { remove_core = NTC } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { ISK = { all_core = { owned_by = ISK } } } }
+			owner = { ISK = { all_core = { remove_core = ISK } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { QUA = { all_core = { owned_by = QUA } } } }
+			owner = { QUA = { all_core = { remove_core = QUA } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { YCH = { all_core = { owned_by = YCH } } } }
+			owner = { YCH = { all_core = { remove_core = YCH } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { ILL = { all_core = { owned_by = ILL } } } }
+			owner = { ILL = { all_core = { remove_core = ILL } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { FOX = { all_core = { owned_by = FOX } } } }
+			owner = { FOX = { all_core = { remove_core = FOX } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { MIS = { all_core = { owned_by = MIS } } } }
+			owner = { MIS = { all_core = { remove_core = MIS } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { BXJ = { all_core = { owned_by = BXJ } } } }
+			owner = { BXJ = { all_core = { remove_core = BXJ } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { SUX = { all_core = { owned_by = SUX } } } }
+			owner = { SUX = { all_core = { remove_core = SUX } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { CHT = { all_core = { owned_by = CHT } } } }
+			owner = { CHT = { all_core = { remove_core = CHT } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { CHS = { all_core = { owned_by = CHS } } } }
+			owner = { CHS = { all_core = { remove_core = CHS } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { MIA = { all_core = { owned_by = MIA } } } }
+			owner = { MIA = { all_core = { remove_core = MIA } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { OTT = { all_core = { owned_by = OTT } } } }
+			owner = { OTT = { all_core = { remove_core = OTT } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { SHE = { all_core = { owned_by = SHE } } } }
+			owner = { SHE = { all_core = { remove_core = SHE } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { CRK = { all_core = { owned_by = CRK } } } }
+			owner = { CRK = { all_core = { remove_core = CRK } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { CHE = { all_core = { owned_by = CHE } } } }
+			owner = { CHE = { all_core = { remove_core = CHE } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { IQS = { all_core = { owned_by = IQS } } } }
+			owner = { IQS = { all_core = { remove_core = IQS } } }
+			}
+			
+			random_owned = {
+			limit = { owner = { LNP = { all_core = { owned_by = LNP } } } }
+			owner = { LNP = { all_core = { remove_core = LNP } } }
+			}
+		}	
     }
-
 }
