@@ -14,6 +14,12 @@ political_decisions = {
 		}
 		effect = {
 			capital = 2447
+			2447 = {
+				add_province_modifier = {
+					name = baby_boom
+					duration = 365
+				}
+			}
 			set_country_flag = move_capital_to_rio
 		}
 	}
