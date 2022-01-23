@@ -2,7 +2,7 @@ political_decisions = {
     violate_pragmatic_sanction = {
         picture = austria_coa
         potential = {
-            has_country_flag = accepted_sanction
+            has_country_flag = refused_sanction
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
@@ -14,11 +14,13 @@ political_decisions = {
             AUS = { has_country_modifier = maria_theresa }
         }
         allow = {
-            war = no
+			OR = {
+				war = no
+				war_with = AUS
+			}
         }
         effect = {
             set_country_flag = disputed_austrian_succ
-            clr_country_flag = accepted_sanction
             casus_belli = {
                 target = AUS
                 type = acquire_state
@@ -47,10 +49,14 @@ political_decisions = {
             NOT = { has_global_flag = disputed_austrian_succ }
             AUS = { has_country_modifier = maria_theresa }
             NOT = { has_country_flag = accepted_sanction }
+			NOT = { has_country_flag = refused_sanction }
             has_global_flag = austrian_succession_crisis
         }
         allow = {
-            war = no
+			OR = {
+				war = no
+				war_with = AUS
+			}
             NOT = {
                 relation = {
                     who = AUS
