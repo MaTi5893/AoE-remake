@@ -11,26 +11,34 @@ political_decisions = {
         }
         allow = {
             has_country_modifier = maria_theresa
-            NOT = {
-                OR = {
-                    health_care = no_health_care
-                    health_care = trinket_health_care
-                    health_care = low_health_care
-                }
-            }
             health_care = good_health_care
-            social_alienation = 1
         }
         effect = {
             add_country_modifier = {
                 name = codex_theresianus
                 duration = -1
             }
+			any_pop = {
+				limit = {
+					NOT = { culture = south_german }
+					NOT = { culture = north_german }
+				}
+				militancy = 2
+			}
             set_country_flag = enacted_codex_theresianus
-            add_country_modifier = {
-                name = constitutio_criminalis_theresiana
-                duration = -1
-            }
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = SIE
+						is_core = SLS
+						is_core = SER
+					}
+				}
+				add_province_modifier = {
+					name = constitutio_criminalis_theresiana
+					duration = 1825
+				}
+			}
             random_country = {
                 limit = {
                     tag = HUN
@@ -41,7 +49,7 @@ political_decisions = {
             set_country_flag = constitutio_criminalis_theresiana
         }
         ai_will_do = {
-        factor = 1
+			factor = 1
         }
     }
     establish_theresian_military_academy = {
@@ -55,7 +63,6 @@ political_decisions = {
         }
         allow = {
             army_nco_training = 1
-            ruling_party_ideology = reactionary
             has_country_modifier = maria_theresa
             NOT = { pensions = no_pensions }
         }
@@ -106,7 +113,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            political_thought_7 = 1
+            mass_politics = 1
             ruling_party_ideology = reactionary
             NOT = { has_country_modifier = maria_theresa }
         }
@@ -145,15 +152,8 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            private_bank_money_bill_printing = 1
-            ruling_party_ideology = conservative
-            NOT = { has_country_modifier = maria_theresa }
-            NOT = {
-                OR = {
-                    health_care = good_health_care
-                    health_care = acceptable_health_care
-                }
-            }
+			idealism = 1
+			literacy = 0.32
             war = no
         }
         effect = {
@@ -163,6 +163,7 @@ political_decisions = {
                 }
                 militancy = -2
             }
+			years_of_research = 0.8
             prestige = 5
             social_reform = acceptable_health_care
             set_country_flag = joseph_i_bureacracy
@@ -209,26 +210,26 @@ political_decisions = {
                 has_country_flag = austrian_court
             }
             exists = yes
+			NOT = { has_country_modifier = maria_theresa }
         }
         allow = {
-            impressionism = 1
-            NOT = { has_country_modifier = maria_theresa }
-            387 = {
-                owned_by = THIS
-            }
+			OR = {
+				state_n_government = 1
+				AND = {
+					owns = 387
+					owns = 754
+				}
+				AND = {
+					owns = 654
+					owns = 652
+				}
+			}
         }
         effect = {
-            prestige = 20
-            capital_scope = {
-                any_pop = {
-                    literacy = 0.05
-                }
-                any_pop = {
-                    limit = {
-                        strata = rich
-                    }
-                    money = 5000
-                }
+            prestige = 15
+            any_pop = {
+                literacy = 0.05
+				consciousness = -3
             }
             set_country_flag = austrian_court
         }
@@ -247,8 +248,7 @@ political_decisions = {
         }
         allow = {
             mass_politics = 1
-            has_country_modifier = maria_theresa
-            rank = 4
+			is_greater_power = yes
             BAV = {
                 in_sphere = THIS
             }
@@ -303,7 +303,7 @@ political_decisions = {
             set_country_flag = ambitions_in_bavaria
         }
         ai_will_do = {
-        factor = 1
+			factor = 1
         }
     }
     declare_the_austrian_empire = {

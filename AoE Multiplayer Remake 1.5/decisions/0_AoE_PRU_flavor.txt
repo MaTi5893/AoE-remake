@@ -345,57 +345,9 @@ political_decisions = {
         }
 
         effect = {
-            random_owned = {
-                limit = {
-                    province_id = 682 #Ost-Rhineland
-                    state_scope = {
-                        NOT = { has_building = steel_factory }
-                    }
-                }
-                owner = {
-                    capital = 682
-                    build_factory_in_capital_state = steel_factory
-                }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 549 #Berlin
-                    owned_by = PRU
-                }
-                owner = { capital = 549 }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 706 #Warsaw
-                    owned_by = PLC
-                }
-                owner = { capital = 706 }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 549 #Berlin
-                    owned_by = GER
-                    owner = { primary_culture = north_german }
-                }
-                owner = { capital = 549 }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 619 #Vienna
-                    owned_by = AUS
-                }
-                owner = { capital = 619 }
-            }
-            random_owned = {
-                limit = {
-                    province_id = 619 #Vienna
-                    owned_by = NNN
-                }
-                owner = { capital = 619 }
-            }
             add_country_modifier = {
                 name = silesia_boom
-                duration = 3650
+                duration = 1825
             }
             add_country_modifier = {
                 name = global_baby_boom_small
