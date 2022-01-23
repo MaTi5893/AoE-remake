@@ -655,29 +655,32 @@ claim_emperorship = {
         NOT = { is_our_vassal = THIS }
         NOT = { has_global_flag = hre_dismantled }
         THIS = {
-            OR = {
-                war_policy = jingoism
-                war_policy = pro_military
-            }
             has_country_flag = hre_member
             NOT = { tag = NNN }
-            is_greater_power = yes
+			OR = {
+				is_greater_power = yes
+				AND = {
+					has_country_flag = coronation_of_charles_vi
+					tag = BAV
+					NOT = { year = 1745 }
+				}
+				AND = {
+					AUS = {
+						has_country_flag = hre_emperor
+						has_country_modifier = maria_thersa 
+						NOT = { has_country_flag = issued_pragmatic_sanction }
+					}
+				}
+			}
             capital_scope = {
                 continent = europe
             }
         }
-
         NOT = { has_country_modifier = neutrality }
         NOT = { in_sphere = THIS }
         THIS = { NOT = { has_country_modifier = neutrality } }
         has_country_flag = hre_emperor
         THIS = { NOT = { has_country_modifier = punitive_effects } }
-        THIS = {
-            NOT = {
-                has_country_flag = in_great_war
-                has_country_modifier = no_more_war
-            }
-        }
     }
 
     po_remove_prestige = yes

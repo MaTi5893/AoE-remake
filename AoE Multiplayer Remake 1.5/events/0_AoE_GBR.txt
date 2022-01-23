@@ -2,12 +2,13 @@ country_event = {
     id = 171401
     title = "Coronation of King George I"
     desc = "EVTDESC171401"
-
+	fire_only_once = yes
     major = yes
 	
 	trigger = {
         primary_culture = british
         year = 1714
+		owns = 300
 		NOT = { has_country_flag = jacobite_path }
         OR = {
             government = absolute_monarchy
