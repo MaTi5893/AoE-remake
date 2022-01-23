@@ -386,7 +386,50 @@ army = {
         type = artillery
         home = 267
     }
-}
+	
+    }
+	
+army = {
+    name = "Colonial Army"
+    location = 223
+    regiment = {
+        name= "1.3rd Division"
+        type = hussar
+        home = 205
+    }
+
+    regiment = {
+        name= "2.3rd Division"
+        type = artillery
+        home = 211
+    }
+
+    regiment = {
+        name= "3.3rd Division"
+        type = artillery
+        home = 223
+    }
+
+    regiment = {
+        name= "1.4th Division"
+        type = artillery
+        home = 241
+    }
+
+    regiment = {
+        name= "2.4th Division"
+        type = artillery
+        home = 243
+    }
+	
+    regiment = {
+        name= "2.4th Division"
+        type = artillery
+        home = 2217
+    }
+	
+    }
+	
 navy = {
     name = "Channel Fleet"
     location = 303
