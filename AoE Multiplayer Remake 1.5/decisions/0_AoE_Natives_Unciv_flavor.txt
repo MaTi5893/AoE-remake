@@ -123,4 +123,168 @@ political_decisions = {
             set_country_flag = prophetstown
         }
     }
+	
+		natives_trolled = {
+		picture = "native_persecution"
+		alert = no
+		potential = {
+            any_owned_province = { continent = north_america }
+			civilized = yes
+		}
+	
+	    allow = {
+	    war = no
+	    nationalism_n_imperialism = 1
+		OR = {
+	    APC = { exists = no }
+		COM = { exists = no }
+		KIW = { exists = no }
+		WIC = { exists = no }
+		OSG = { exists = no }
+		CDD = { exists = no }
+		NTC = { exists = no }
+		ISK = { exists = no }
+		QUA = { exists = no }
+		YCH = { exists = no }
+		ILL = { exists = no }
+		FOX = { exists = no }
+		MIS = { exists = no }
+		BXJ = { exists = no }
+		SUX = { exists = no }
+		CHT = { exists = no }
+		CHS = { exists = no }
+		MIA = { exists = no }
+		OTT = { exists = no }
+		SHE = { exists = no }
+		CRK = { exists = no }
+		CHE = { exists = no }
+		IQS = { exists = no }
+		LNP = { exists = no }
+	    }
+		
+		}
+	
+	    effect = {
+		random_owned = {
+		limit = { owner = { APC = { all_core = { owned_by = APC } } } }
+		owner = { APC = { all_core = { remove_core = APC } } }
+	    }
+		
+		random_owned = {
+		limit = { owner = { COM = { all_core = { owned_by = COM } } } }
+		owner = { COM = { all_core = { remove_core = COM } } }
+	    }
+		
+	    		random_owned = {
+		limit = { owner = { KIW = { all_core = { owned_by = KIW } } } }
+		owner = { KIW = { all_core = { remove_core = KIW } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { WIC = { all_core = { owned_by = WIC } } } }
+		owner = { WIC = { all_core = { remove_core = WIC } } }
+	    }
+		
+		random_owned = {
+		limit = { owner = { OSG = { all_core = { owned_by = OSG } } } }
+		owner = { OSG = { all_core = { remove_core = OSG } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { COD = { all_core = { owned_by = COD } } } }
+		owner = { COD = { all_core = { remove_core = COD } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { NTC = { all_core = { owned_by = NTC } } } }
+		owner = { NTC = { all_core = { remove_core = NTC } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { ISK = { all_core = { owned_by = ISK } } } }
+		owner = { ISK = { all_core = { remove_core = ISK } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { QUA = { all_core = { owned_by = QUA } } } }
+		owner = { QUA = { all_core = { remove_core = QUA } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { YCH = { all_core = { owned_by = YCH } } } }
+		owner = { YCH = { all_core = { remove_core = YCH } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { ILL = { all_core = { owned_by = ILL } } } }
+		owner = { ILL = { all_core = { remove_core = ILL } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { FOX = { all_core = { owned_by = FOX } } } }
+		owner = { FOX = { all_core = { remove_core = FOX } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { MIS = { all_core = { owned_by = MIS } } } }
+		owner = { MIS = { all_core = { remove_core = MIS } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { BXJ = { all_core = { owned_by = BXJ } } } }
+		owner = { BXJ = { all_core = { remove_core = BXJ } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { SUX = { all_core = { owned_by = SUX } } } }
+		owner = { SUX = { all_core = { remove_core = SUX } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { CHT = { all_core = { owned_by = CHT } } } }
+		owner = { CHT = { all_core = { remove_core = CHT } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { CHS = { all_core = { owned_by = CHS } } } }
+		owner = { CHS = { all_core = { remove_core = CHS } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { MIA = { all_core = { owned_by = MIA } } } }
+		owner = { MIA = { all_core = { remove_core = MIA } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { OTT = { all_core = { owned_by = OTT } } } }
+		owner = { OTT = { all_core = { remove_core = OTT } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { SHE = { all_core = { owned_by = SHE } } } }
+		owner = { SHE = { all_core = { remove_core = SHE } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { CRK = { all_core = { owned_by = CRK } } } }
+		owner = { CRK = { all_core = { remove_core = CRK } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { CHE = { all_core = { owned_by = CHE } } } }
+		owner = { CHE = { all_core = { remove_core = CHE } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { IQS = { all_core = { owned_by = IQS } } } }
+		owner = { IQS = { all_core = { remove_core = IQS } } }
+	    }
+		
+				random_owned = {
+		limit = { owner = { LNP = { all_core = { owned_by = LNP } } } }
+		owner = { LNP = { all_core = { remove_core = LNP } } }
+	    }
+		}
+		
+    }
 }
