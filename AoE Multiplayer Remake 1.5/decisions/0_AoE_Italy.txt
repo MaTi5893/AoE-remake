@@ -426,7 +426,6 @@ political_decisions = {
             AUS_734 = { add_core = THIS }
 			AUS_736 = { add_core = THIS }
 			AUS_780 = { add_core = THIS }
-			774 = { add_core = THIS }
 			854 = { add_core = THIS }
 			random_owned = {
 				limit = {
@@ -435,7 +434,6 @@ political_decisions = {
 							owns = AUS_734
 							owns = AUS_736
 							owns = AUS_780
-							owns = 774
 						}
 					}
 				}
