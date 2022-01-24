@@ -191,123 +191,303 @@ political_decisions = {
 		}
 	    effect = {
 			random_owned = {
-			limit = { owner = { APC = { all_core = { owned_by = APC } } } }
-			owner = { APC = { all_core = { remove_core = APC } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = LNP }
+						NOT = { exists = LNP }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = LNP
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { COM = { all_core = { owned_by = COM } } } }
-			owner = { COM = { all_core = { remove_core = COM } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CMN }
+						NOT = { exists = CMN }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CMN
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { KIW = { all_core = { owned_by = KIW } } } }
-			owner = { KIW = { all_core = { remove_core = KIW } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = KIW }
+						NOT = { exists = KIW }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = KIW
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { WIC = { all_core = { owned_by = WIC } } } }
-			owner = { WIC = { all_core = { remove_core = WIC } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = WIC }
+						NOT = { exists = WIC }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = WIC
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { OSG = { all_core = { owned_by = OSG } } } }
-			owner = { OSG = { all_core = { remove_core = OSG } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = OSG }
+						NOT = { exists = OSG }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = OSG
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { COD = { all_core = { owned_by = COD } } } }
-			owner = { COD = { all_core = { remove_core = COD } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CDD }
+						NOT = { exists = CDD }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CDD
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { NTC = { all_core = { owned_by = NTC } } } }
-			owner = { NTC = { all_core = { remove_core = NTC } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = NTC }
+						NOT = { exists = NTC }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = NTC
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { ISK = { all_core = { owned_by = ISK } } } }
-			owner = { ISK = { all_core = { remove_core = ISK } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = ISK }
+						NOT = { exists = ISK }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = ISK
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { QUA = { all_core = { owned_by = QUA } } } }
-			owner = { QUA = { all_core = { remove_core = QUA } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = QUA }
+						NOT = { exists = QUA }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = QUA
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { YCH = { all_core = { owned_by = YCH } } } }
-			owner = { YCH = { all_core = { remove_core = YCH } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = YCH }
+						NOT = { exists = YCH }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = YCH
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { ILL = { all_core = { owned_by = ILL } } } }
-			owner = { ILL = { all_core = { remove_core = ILL } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = ILL }
+						NOT = { exists = ILL }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = ILL
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { FOX = { all_core = { owned_by = FOX } } } }
-			owner = { FOX = { all_core = { remove_core = FOX } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = FOX }
+						NOT = { exists = FOX }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = FOX
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { MIS = { all_core = { owned_by = MIS } } } }
-			owner = { MIS = { all_core = { remove_core = MIS } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = MIS }
+						NOT = { exists = MIS }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = MIS
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { BXJ = { all_core = { owned_by = BXJ } } } }
-			owner = { BXJ = { all_core = { remove_core = BXJ } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = BXJ }
+						NOT = { exists = BXJ }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = BXJ
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { SUX = { all_core = { owned_by = SUX } } } }
-			owner = { SUX = { all_core = { remove_core = SUX } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = SUX }
+						NOT = { exists = SUX }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = SUX
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { CHT = { all_core = { owned_by = CHT } } } }
-			owner = { CHT = { all_core = { remove_core = CHT } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CHT }
+						NOT = { exists = CHT }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CHT
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { CHS = { all_core = { owned_by = CHS } } } }
-			owner = { CHS = { all_core = { remove_core = CHS } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CHS }
+						NOT = { exists = CHS }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CHS
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { MIA = { all_core = { owned_by = MIA } } } }
-			owner = { MIA = { all_core = { remove_core = MIA } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = MIA }
+						NOT = { exists = MIA }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = MIA
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { OTT = { all_core = { owned_by = OTT } } } }
-			owner = { OTT = { all_core = { remove_core = OTT } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = OTT }
+						NOT = { exists = OTT }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = OTT
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { SHE = { all_core = { owned_by = SHE } } } }
-			owner = { SHE = { all_core = { remove_core = SHE } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = SHE }
+						NOT = { exists = SHE }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = SHE
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { CRK = { all_core = { owned_by = CRK } } } }
-			owner = { CRK = { all_core = { remove_core = CRK } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CRK }
+						NOT = { exists = CRK }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CRK
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { CHE = { all_core = { owned_by = CHE } } } }
-			owner = { CHE = { all_core = { remove_core = CHE } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = CHE }
+						NOT = { exists = CHE }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = CHE
+					}
+				}
 			}
-			
 			random_owned = {
-			limit = { owner = { IQS = { all_core = { owned_by = IQS } } } }
-			owner = { IQS = { all_core = { remove_core = IQS } } }
-			}
-			
-			random_owned = {
-			limit = { owner = { LNP = { all_core = { owned_by = LNP } } } }
-			owner = { LNP = { all_core = { remove_core = LNP } } }
+				limit = {
+					owner = {
+						any_owned_province = { is_core = IQS }
+						NOT = { exists = IQS }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = IQS
+					}
+				}
 			}
 		}	
     }

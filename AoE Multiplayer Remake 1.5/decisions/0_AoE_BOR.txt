@@ -956,6 +956,38 @@ political_decisions = {
         effect = {
             set_global_flag = created_confed_rhein
             prestige = 10
+			random_owned = {
+				limit = {
+					owner = {
+						any_sphere_member = {
+							capital_scope = { continent = europe }
+							is_culture_group = germanic
+							NOT = { tag = PRU }
+							NOT = { tag = AUS }
+							ai = no
+						}
+					}
+				}
+				owner = {
+					random_country = {
+						limit = {
+							is_culture_group = germanic
+							ai = no
+							in_sphere = THIS
+							capital_scope = { continent = europe }
+							NOT = { tag = PRU }
+							NOT = { tag = AUS }
+						}
+						all_core = {
+							add_core = GCF
+							change_tag = GCF
+						}
+						any_pop = {
+							militancy = -3
+						}
+					}
+				}
+			}
             any_country = {	
                 limit = {
 				    capital_scope = { continent = europe }
@@ -965,12 +997,11 @@ political_decisions = {
                 all_core = { add_core = GCF }
                 annex_to = GCF
             }
-				create_vassal = GCF
-
-                    diplomatic_influence = {
-						who = GCF
-						value = 300
-					}
+			create_vassal = GCF
+            diplomatic_influence = {
+				who = GCF
+				value = 300
+			}
         }
 
 
@@ -978,6 +1009,5 @@ political_decisions = {
             factor = 1
         }
 
-    }	
-
+    }
 }
