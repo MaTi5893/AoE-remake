@@ -168,3 +168,67 @@ country_event = {
 		}
 	}
 }
+country_event = {
+    id = 800009
+    title = "Rise Of German Nationalism"
+    desc = "EVTDESC800009"
+	major = yes
+	fire_only_once = yes
+	news = yes
+	
+	trigger = {
+		has_global_flag = hre_dismantled
+		is_culture_group = germanic
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.7
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = 0.6
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 0.5
+			ruling_party_ideology = communist
+		}
+	}
+	
+	option = {
+		name = "EVTOPT800009"
+		any_country = {
+			limit = {
+				is_culture_group = germanic
+				capital_scope = {
+					continent = europe
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						primary_culture = south_german
+						NOT = { accepted_culture = north_german }
+					}
+				}
+				owner = {
+					add_accepted_culture = north_german
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						primary_culture = north_german
+						NOT = { accepted_culture = south_german }
+					}
+				}
+				owner = {
+					add_accepted_culture = south_german
+				}
+			}
+		}
+	}
+}

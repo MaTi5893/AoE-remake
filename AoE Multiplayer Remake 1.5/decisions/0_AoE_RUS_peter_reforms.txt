@@ -20,7 +20,14 @@ political_decisions = {
 				remove_core = TOR
 			}
 			change_tag = RUS
-            add_accepted_culture = ukrainian
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = perpetual_peace_TUR }
+					}
+				}
+				add_accepted_culture = ukrainian
+			}
             prestige = 25
 			random_owned = {
 				limit = {
@@ -528,12 +535,6 @@ political_decisions = {
 				}
 			}
 			years_of_research = 1
-			all_core = {
-				limit = {
-					life_rating = 33
-				}
-				life_rating = 2
-			}
 			tech_school = pogonya_za_zapadom
 			set_country_flag = catharine_the_great_reforms
 		}
@@ -608,9 +609,9 @@ political_decisions = {
 	perpetual_peace_PLC = {
 		picture = ruthenia
 		potential = {
-		OR = {
-			tag = TOR
-			tag = RUS
+			OR = {
+				tag = TOR
+				tag = RUS
 			}
 			ai = no
 			PLC = { ai = no }
@@ -623,6 +624,14 @@ political_decisions = {
 		effect = {
 			set_country_flag = perpetual_peace_PLC
 			PLC = { country_event = 15730067 }
+			random_owned = {
+				limit = {
+					owner = {
+						accepted_culture = ukrainian
+					}
+				}
+				remove_accepted_culture = ukrainian
+			}
 			any_owned = {
 				limit = {
 					is_core = THIS
@@ -643,9 +652,9 @@ political_decisions = {
 	perpetual_peace_TUR = {
 		picture = crimea
 		potential = {
-		OR = {
-			tag = TOR
-			tag = RUS
+			OR = {
+				tag = TOR
+				tag = RUS
 			}
 			ai = no
 			TUR = { ai = no }

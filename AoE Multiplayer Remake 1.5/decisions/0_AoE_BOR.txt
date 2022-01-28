@@ -928,9 +928,10 @@ political_decisions = {
     create_confed_rhein = {
         picture = napoleon
         potential = {
-            OR = { 
-                tag = FRA
-                tag = BOR
+            tag = FRA
+			OR = {
+                government = proletarian_dictatorship
+                government = fascist_dictatorship
             }
             NOT = {
                 exists = GCF

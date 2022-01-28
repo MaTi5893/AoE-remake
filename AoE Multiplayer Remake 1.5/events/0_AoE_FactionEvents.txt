@@ -2196,6 +2196,7 @@ country_event = {
             limit = {
                 owner = {
                     wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {
@@ -2206,7 +2207,6 @@ country_event = {
             limit = {
                 owner = {
                     wage_reform = trinket_wage
-					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {
@@ -2285,6 +2285,7 @@ country_event = {
             limit = {
                 owner = {
                     safety_regulations = low_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {
@@ -2295,7 +2296,6 @@ country_event = {
             limit = {
                 owner = {
                     safety_regulations = trinket_safety
-					NOT = { has_country_flag = clergy_and_nobility_domination }
                 }
             }
             owner = {

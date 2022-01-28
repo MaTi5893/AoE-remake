@@ -807,7 +807,6 @@ social_reforms = {
 
             allow = {
                 NOT = { has_country_flag = theocratic_government }
-                NOT = { has_country_flag = clergy_and_nobility_domination }
             }
         }
         acceptable_minimum_wage = { #marginally relevant
@@ -817,7 +816,9 @@ social_reforms = {
             minimum_wage = 0.6
 
             rich_vote = 0.05
-
+			allow = {
+				NOT = { has_country_flag = clergy_and_nobility_domination }
+            }
         }
         good_minimum_wage = { #irrelevant
             tax_efficiency = 0.05
@@ -916,9 +917,6 @@ social_reforms = {
 
             rich_vote = 0.10
 
-            allow = {
-				NOT = { has_country_flag = clergy_and_nobility_domination }
-            }
         }
         acceptable_safety = { #marginally relevant
             tax_efficiency = 0.025
@@ -928,7 +926,10 @@ social_reforms = {
             factory_maintenance = 0.10
 			mobilisation_size = -0.01
             rich_vote = 0.05
-
+			
+			allow = {
+				NOT = { has_country_flag = clergy_and_nobility_domination }
+            }
         }
         good_safety = { #irrelevant
             tax_efficiency = 0.05

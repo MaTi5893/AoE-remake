@@ -172,10 +172,36 @@ political_decisions = {
         }
         effect = {
             set_country_flag = made_royal_spanish_academy
-            add_country_modifier = {
-                name = new_royal_spanish_academy
-                duration = 1825
-            }
+            random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = no_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
+			}
         }
         ai_will_do = {
         factor = 1

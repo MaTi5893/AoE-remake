@@ -5159,9 +5159,7 @@ frederick_grosse = {
 }
 ###Spain refrom bonuses###
 renovated_armada = {
-    prestige = 0.01
-    naval_unit_start_experience = 10
-    naval_organisation = 0.05
+    navy_tech_research_bonus = 0.15
     icon = 15
 }
 the_cadastre_tax_and_the_spanish_bank = {
@@ -5173,15 +5171,6 @@ royal_academy_of_the_fine_arts = {
     culture_tech_research_bonus = 0.05
     influence_modifier = 0.1
     icon = 13
-}
-new_royal_spanish_academy = {
-    army_tech_research_bonus = 0.05
-    land_organisation = 0.025
-    supply_consumption = 0.05
-    org_regain = 0.05
-    land_unit_start_experience = 5
-    min_military_spending = 0.10
-    icon = 15
 }
 ###Ottoman reforms and debuffs###
 janisseries_angry = {
