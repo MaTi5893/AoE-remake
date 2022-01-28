@@ -23,7 +23,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						NOT = { has_country_flag = perpetual_peace_TUR }
+						NOT = { has_country_flag = perpetual_peace_PLC }
 					}
 				}
 				add_accepted_culture = ukrainian
