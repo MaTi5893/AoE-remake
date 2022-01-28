@@ -612,6 +612,7 @@ political_decisions = {
 			tag = TOR
 			tag = RUS
 			}
+			ai = no
 			PLC = { ai = no }
 			NOT = { has_country_flag = perpetual_peace_PLC }
 			NOT = { has_country_flag = perpetual_peace_TUR }
@@ -646,6 +647,7 @@ political_decisions = {
 			tag = TOR
 			tag = RUS
 			}
+			ai = no
 			TUR = { ai = no }
 			NOT = { has_country_flag = perpetual_peace_PLC }
 			NOT = { has_country_flag = perpetual_peace_TUR }
