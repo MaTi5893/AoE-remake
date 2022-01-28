@@ -370,14 +370,6 @@ own_panama_canal = {
     tax_efficiency = 0.5
     prestige = 0.02
 }
-elective_monarchy = {
-	trigger = {
-		government = elective_monarchy_oligarchy
-		exists = yes
-	}
-	icon = 9
-	mobilisation_size = 0.02
-}
 unciv_civ_nerf = {
 	trigger = {
 		ai = yes
