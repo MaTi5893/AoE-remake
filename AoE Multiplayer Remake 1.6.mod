@@ -1,0 +1,6 @@
+name = "AoE Multiplayer Remake Version 1.6"
+path = "mod/AoE Multiplayer Remake 1.6"
+user_dir = "AoE Multiplayer Remake 1.6"
+replace_path = "history/provinces"
+replace_path = "events"
+replace_path = "decisions"
