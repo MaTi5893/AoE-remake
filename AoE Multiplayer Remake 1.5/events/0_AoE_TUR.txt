@@ -660,4 +660,17 @@ country_event = {
 		remove_country_modifier = hussein_pasha
 		prestige = -5
 	}
+
+country_event = {
+	id = 42069
+	title = "Treaty of Perpetual Peace"
+	desc = "EVTDESC42069"
+	picture = sejm
+
+	option = {
+		name = "Eternal Friendship"	
+		prestige = 5
+	}
+    }
+
 }

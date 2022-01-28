@@ -1251,4 +1251,16 @@ country_event = {
 			add_core = CPL
 		}
 	}
+	
+country_event = {
+	id = 4206969
+	title = "Treaty of Perpetual Peace"
+	desc = "EVTDESC4206969"
+	picture = sejm
+
+	option = {
+		name = "Eternal Friendship"	
+		prestige = 5
+	}
+    }
 }

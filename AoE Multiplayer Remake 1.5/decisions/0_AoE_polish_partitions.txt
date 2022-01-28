@@ -15,6 +15,7 @@ political_decisions = {
                 }
             }
             NOT = { has_country_flag = polish_partition_one }
+			NOT = { has_country_flag = perpetual_peace_PLC }
             exists = yes
         }
         allow = {

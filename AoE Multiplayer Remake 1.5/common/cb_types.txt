@@ -573,6 +573,7 @@ partition_cb = {
         primary_culture = polish
         NOT = { has_country_modifier = neutrality }
         NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_flag = perpetual_peace_PLC } }
         THIS = { NOT = { has_country_modifier = neutrality } }
         THIS = { NOT = { has_country_modifier = punitive_effects } }
         THIS = {
