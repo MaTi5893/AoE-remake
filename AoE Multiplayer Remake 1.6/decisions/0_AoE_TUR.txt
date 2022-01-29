@@ -30,12 +30,12 @@ political_decisions = {
 		allow = {
             OR = {
 				owns = 793
-				AND {
+				AND = {
 					war_policy = jingoism
 					military_score = 50
 					is_greater_power = yes
 					NOT = { has_country_modifier = janisseries_influence }
-					}
+				}
             }
 		}
 		effect = {

@@ -421,6 +421,7 @@ country_event = {
 			name = mob_army
 			duration = 2190
 		}
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -436,6 +437,7 @@ country_event = {
 			name = mob_army
 			duration = 2190
 		}
+		ai_chance = { factor = 0 }
 	}
 }
 country_event = {
@@ -455,7 +457,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 24
 		modifier = {
 			factor = 2
 			war = no

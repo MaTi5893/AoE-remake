@@ -34,32 +34,32 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    pressure_bukhara = {
-            picture = commodities_in_central_asia
-            potential = {
-            tag = DZN
-            has_country_flag = reintegrated_moghulistan
-            NOT = {
-                has_country_flag = attacked_bukhara
-            }
-            exists = yes
-        }
-
-        allow = {
-            1594 = {
-                owned_by = THIS
-            }
-        }
-
-        effect = {
-            set_country_flag = attacked_bukhara
-            BUK = { country_event = 6083 }
-            prestige = 15
-            add_accepted_culture = kirgiz
-            }
-
-        ai_will_do = { factor = 1 }
-    }
+    #pressure_bukhara = {
+    #        picture = commodities_in_central_asia
+    #        potential = {
+    #        tag = DZN
+    #        has_country_flag = reintegrated_moghulistan
+    #        NOT = {
+    #            has_country_flag = attacked_bukhara
+    #        }
+    #        exists = yes
+    #    }
+	#
+    #    allow = {
+    #        1594 = {
+    #            owned_by = THIS
+    #        }
+    #    }
+	#
+    #    effect = {
+    #        set_country_flag = attacked_bukhara
+    #        BUK = { country_event = 6083 }
+    #        prestige = 15
+    #        add_accepted_culture = kirgiz
+    #        }
+	#
+    #    ai_will_do = { factor = 1 }
+    #}
 
     qinghai_uprising = {
             picture = claim_greater_mongolia

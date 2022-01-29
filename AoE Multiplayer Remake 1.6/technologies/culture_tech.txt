@@ -333,6 +333,7 @@ mass_politics = {
     cost = 21600
 
     max_national_focus = 1
+	diplomatic_points = 0.25
     ai_chance = {
         factor = 2
     }
@@ -343,7 +344,7 @@ political_thought_7 = {
     cost = 25200
 
     max_national_focus = 1
-    diplomatic_points = 0.25
+	cb_creation_speed = 0.1
     ai_chance = {
         factor = 35
     }

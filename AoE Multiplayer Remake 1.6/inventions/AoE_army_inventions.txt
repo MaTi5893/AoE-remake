@@ -253,7 +253,7 @@ goose_step = {
         cuirassier = {
             default_organisation = 7.5
             attack = 1.75
-            defence = 2
+            defence = 1.5
         }
         cavalry = {
             default_organisation = 7.5
@@ -267,7 +267,7 @@ goose_step = {
         }
         dragoon = {
             default_organisation = 7.5
-            attack = 2
+            attack = 1.5
             defence = 1.75
         }
         engineer = {
