@@ -62,10 +62,8 @@ political_decisions = {
 			has_country_modifier = peter_the_great
 		}
 		allow = {
-			owns = 994
-			owns = 1047
-			war = no
-			is_greater_power = yes
+			994 = { controlled_by = THIS }
+			1047 = { controlled_by = THIS }
 			ruling_party_ideology = reactionary
 		}
 		effect = {
@@ -73,14 +71,9 @@ political_decisions = {
 				name = improved_administration
 				duration = -1
 			}
-			add_country_modifier = {
-				name = petes_conscription
-				duration = 1825
-			}
 			research_points = 150
 			political_reform = open_borders
 			remove_country_modifier = streltsi_rebellion
-			tech_school = pogonya_za_zapadom
 			activate_technology = naval_design_bureaus
 			activate_technology = alphabetic_flag_signaling
 			activate_technology = the_command_principle
@@ -111,6 +104,16 @@ political_decisions = {
 				change_province_name = "St.Petersburg"
 			}
 			country_event = 1700251
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = peter_the_great
+					}
+				}
+				owner = {
+					tech_school = pogonya_za_zapadom
+				}
+			}
 			prestige = 5
 			set_country_flag = begun_construction_sp
 		}
