@@ -121,6 +121,7 @@ political_decisions = {
 				has_country_flag = our_sea
 			}
 			NOT = { has_country_flag = no_ita }
+			NOT = { has_country_flag = perpetual_peace_spa }
 			exists = yes
 		}
 		

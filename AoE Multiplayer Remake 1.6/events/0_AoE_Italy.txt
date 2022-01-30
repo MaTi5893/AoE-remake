@@ -496,6 +496,17 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 1755016
+	title = "Treaty Of Perpetual Peace"
+	desc = "EVNDESC1755016"
+	picture = harbour
+	is_triggered_only = yes
+	
+	option = {
+		name = "That's very good."
+	}
+}
 ############################
 #######    Naples   ########
 ############################

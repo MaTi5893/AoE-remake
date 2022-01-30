@@ -146,6 +146,7 @@ political_decisions = {
 				limit = {
 					owner = {
 					NOT = { primary_culture = arpitan }
+					NOT = { has_country_flag = perpetual_peace_spa }
 					owns = 762
 					}
 				}
@@ -379,5 +380,52 @@ political_decisions = {
 			capital = 465
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	perpetual_peace_spa = {
+		potential = {
+			OR = {
+			tag = SVY
+			tag = SAR
+			}
+			ai = no
+			OR = {
+				SPA = {
+					exists = yes
+					ai = no
+				}
+				SPC = {
+					exists = yes
+					ai = no
+				}
+			}
+			NOT = { has_country_flag = perpetual_peace_spa }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = perpetual_peace_spa
+			random_owned = {
+				limit = {
+					owner = {
+						exists = SPA
+					}
+				}
+				owner = {
+					SPA = { country_event = 1755016 }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = SPC
+					}
+				}
+				owner = {
+					SPC = { country_event = 1755016 }
+				}
+			}
+		}
 	}
 }
