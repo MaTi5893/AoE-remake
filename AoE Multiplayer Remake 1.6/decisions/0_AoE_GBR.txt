@@ -438,7 +438,7 @@ political_decisions = {
             NOT = { has_country_flag = disputed_spanish_succession }
         }
         allow = {
-            war = no
+            exists = yes
         }
         effect = {
             random_country = {
