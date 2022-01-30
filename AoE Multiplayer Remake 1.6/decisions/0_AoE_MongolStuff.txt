@@ -32,6 +32,35 @@ political_decisions = {
         }
     }
 
+     end_nomadic_lifestyle = {
+        picture = steppes_cossack
+        potential = {
+            exists = yes
+            government = khanate
+            NOT = {
+                has_country_flag = ended_nomadic_lifestyle
+            }
+        }
+        allow = {
+            civilized = yes
+        }
+        effect = {
+            remove_country_modifier = horde_society
+	    militancy = 9
+	    consciousness = 3
+            prestige = 10
+      	    add_country_modifier = {
+		name = academic_confusion
+		duration = 3650
+			}
+            set_country_flag = ended_nomadic_lifestyle
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
     form_yuan = {
         picture = chinese_capital_pic
         potential = {
@@ -55,7 +84,23 @@ political_decisions = {
         }
         effect = {
             government = absolute_monarchy
+	    remove_country_modifier = horde_society
             QNG = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    XIN = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    DZN = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    TIB = {
                 all_core = {
                     add_core = THIS
                 }
@@ -64,7 +109,105 @@ political_decisions = {
                 add_core = CHI
                 remove_core = THIS
             }
+	    add_accepted_culture = beifaren
+	    add_accepted_culture = miao
+	    add_accepted_culture = oirat
+	    add_accepted_culture = uighur
+	    add_accepted_culture = mongol
+	    add_accepted_culture = tibetan
             change_tag = CHI
+            capital = 1616
+            prestige = 80
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    form_mongol_empire = {
+        picture = genghis_khan
+        potential = {
+            exists = yes
+             OR = {
+            	government = khanate
+		tag = CHI
+		}
+            NOT = {
+                exists = MGE
+            }
+        }
+        allow = {
+            is_vassal = no
+            owns = 1600
+	    owns = 1557  
+	    owns = 1533 
+	    owns = 1587
+	    owns = 1594
+            owns = 1181
+	    owns = 1191
+	    owns = 1198
+	    owns = 1202
+            owns = 1468
+            owns = 2207
+            owns = 1532
+	    owns = 1616
+        }
+        effect = {
+            government = absolute_monarchy
+	    remove_country_modifier = horde_society
+            CHI = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    DZN = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    TIB = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    XIN = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    BUK = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    KAZ = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+	    KHI = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            all_core = {
+                add_core = MGE
+                remove_core = THIS
+            }
+	    add_accepted_culture = beifaren
+	    add_accepted_culture = miao
+	    add_accepted_culture = oirat
+	    add_accepted_culture = uighur
+	    add_accepted_culture = mongol
+	    add_accepted_culture = tibetan
+	    add_accepted_culture = manchu
+	    add_accepted_culture = kirgiz
+	    add_accepted_culture = uzbek
+	    add_accepted_culture = tajik
+	    add_accepted_culture = tatar
+	    add_accepted_culture = kazak
+	    add_accepted_culture = turkmen
+            change_tag = MGE
             capital = 1616
             prestige = 80
         }

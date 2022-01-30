@@ -1,6 +1,5 @@
 capital = 1191
 primary_culture = uzbek
-culture = qaraqalpaq
 culture = persian
 religion = sunni
 civilized = no
@@ -53,6 +52,8 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
+
+decision = horde_setup
 
 # Technologies
 flintlock_rifles = 1
