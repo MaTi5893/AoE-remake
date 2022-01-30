@@ -143,10 +143,6 @@ political_decisions = {
             prestige = 50
             MGL = { country_event = 6069 }
             QNG = { country_event = 6067 }
-            1490 = { secede_province = QNG }
-            1491 = { secede_province = QNG }
-            1492 = { secede_province = QNG }
-            1489 = { secede_province = QNG }
         }
 
         ai_will_do = { factor = 1 }

@@ -230,43 +230,43 @@
 #        XBI = { all_core = { add_core = DZN } }
 #    }
 #}
-#country_event = {
-#    id = 6069
-#    title = "Khalka succesion to Dzungaria"
-#    desc = "EVTDESC6069"
-#    is_triggered_only = yes
-#    fire_only_once = yes
-#
-#    option = {
-#        name = "We are no longer able to resist."
-#        relation = {
-#            who = DZN
-#            value = 200
-#        }
-#        2608 = { secede_province = DZN }
-#        1468 = { secede_province = DZN }
-#        1469 = { secede_province = DZN }
-#        2678 = { secede_province = DZN }
-#        1466 = { secede_province = DZN }
-#        1465 = { secede_province = DZN }
-#        2207 = { secede_province = DZN }
-#        1467 = { secede_province = DZN }
-#        2679 = { secede_province = DZN }
-#        1535 = { secede_province = DZN }
-#        1532 = { secede_province = DZN }
-#        1534 = { secede_province = DZN }
-#        1599 = { secede_province = DZN }
-#    }
-#}
-#country_event = {
-#    id = 6067
-#    title = "Price for peace with Dzungars"
-#    desc = "EVTDESC6067"
-#    is_triggered_only = yes
-#    fire_only_once = yes
-#
-#    option = {
-#        name = "We are no longer able to resist the hordes. We must abandon Mongolia."
-#        prestige = -25
-#    }
-#}
+country_event = {
+    id = 6069
+    title = "Khalka succesion to Dzungaria"
+    desc = "EVTDESC6069"
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "We are no longer able to resist."
+        relation = {
+            who = DZN
+            value = 200
+        }
+        2608 = { secede_province = DZN }
+        1468 = { secede_province = DZN }
+        1469 = { secede_province = DZN }
+        2678 = { secede_province = DZN }
+        1466 = { secede_province = DZN }
+        1465 = { secede_province = DZN }
+        2207 = { secede_province = DZN }
+        1467 = { secede_province = DZN }
+        2679 = { secede_province = DZN }
+        1535 = { secede_province = DZN }
+        1532 = { secede_province = DZN }
+        1534 = { secede_province = DZN }
+        1599 = { secede_province = DZN }
+    }
+}
+country_event = {
+    id = 6067
+    title = "Price for peace with Dzungars"
+    desc = "EVTDESC6067"
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = "We are no longer able to resist the hordes. We must abandon Mongolia."
+        prestige = -25
+    }
+}
