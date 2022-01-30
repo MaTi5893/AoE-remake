@@ -1253,7 +1253,7 @@ artisan_steel = {
     }
 
     output_goods = steel         #94
-    value = 20
+    value = 24
 
     owner = {
         poptype = artisans
@@ -1311,7 +1311,7 @@ artisan_small_arms = {
         steel = 3.0        #14.1        total input+maint = 44.9
     }
     output_goods = small_arms
-    value = 2            #50
+    value = 2.2            #50
 
     owner = {
         poptype = artisans

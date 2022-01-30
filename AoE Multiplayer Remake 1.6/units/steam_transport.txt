@@ -15,7 +15,7 @@ steam_transport = { #East Indiamen
     max_strength = 100
     default_organisation = 30
     maximum_speed = 8
-    weighted_value = 4.0
+    weighted_value = 1.0
     can_build_overseas = yes
 
     #Building Costs
@@ -30,7 +30,7 @@ steam_transport = { #East Indiamen
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 1
+        clipper_convoy = 0.35
     }
 
     #Naval Abilties
