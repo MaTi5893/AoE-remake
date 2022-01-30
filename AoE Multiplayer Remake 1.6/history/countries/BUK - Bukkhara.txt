@@ -1,12 +1,11 @@
 capital = 1198
-primary_culture = sart
-culture = uzbek
+primary_culture = uzbek
 culture = tajik
 religion = sunni
 civilized = no
 government = khanate
 plurality = 0.0
-nationalvalue = nv_tradition
+nationalvalue = nv_order
 literacy = 0.01  non_state_culture_literacy = 0.01
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 
@@ -50,6 +49,8 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
+
+decision = horde_setup
 
 # Technologies
 flintlock_rifles = 1
