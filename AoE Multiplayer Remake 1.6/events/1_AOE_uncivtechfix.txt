@@ -455,6 +455,18 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					has_country_flag = malthusian_thought_flag
+					NOT = { malthusian_thought = 1 }
+				}
+			}
+			owner = {
+            activate_technology = malthusian_thought
+			clr_country_flag = malthusian_thought_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
 					government = tribal_democracy
 				}
 			}
