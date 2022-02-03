@@ -182,7 +182,7 @@ political_decisions = {
             realism = 1
         }
         effect = {
-            add_country_modifier = { name = berlin_academy_of_sciences duration = -1}
+            add_country_modifier = { name = berlin_academy_of_sciences duration = 1825 }
             set_country_flag = funded_prussian_academy
         }
         ai_will_do = {

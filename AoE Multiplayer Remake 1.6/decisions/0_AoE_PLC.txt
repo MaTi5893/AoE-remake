@@ -379,14 +379,12 @@ political_decisions = {
         }
         allow = {
             owns = 958
+			owns = 945
+			owns = 702
 			OR = {
 				revolution_n_counterrevolution = 1
 				has_country_flag = infante_rule
-				average_militancy = 4
 			}
-            PLC = {
-                all_core = { owned_by = THIS }
-            }
         }
         effect = {
             set_country_flag = second_union_of_hadiach
@@ -454,7 +452,6 @@ political_decisions = {
             NOT = {
                 has_country_modifier = targowica
             }
-            has_recently_lost_war = no
             OR = {
                 is_greater_power = yes
                 all_core = {
@@ -489,6 +486,7 @@ political_decisions = {
                     owns = 690
                     owns = 968
                 }
+				has_country_flag = poniatowski_rule
             }
         }
         effect = {
@@ -511,9 +509,8 @@ political_decisions = {
                     political_reform = peonage
                 }
             }
-            any_owned = {
+            all_core = {
                 limit = {
-                    is_core = THIS
                     life_rating = 33
                 }
                 life_rating = 2

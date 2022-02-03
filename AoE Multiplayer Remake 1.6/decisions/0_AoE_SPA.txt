@@ -64,16 +64,14 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            expressionism = 1
+            realism = 1
         }
         effect = {
             set_country_flag = made_royal_academy
             prestige = 20
-			any_pop = {
-				limit = {
-					is_accepted_culture = yes
-				}
-				literacy = 0.05
+			add_country_modifier = {
+				name = education_buff
+				duration = 3650
 			}
         }
         ai_will_do = {

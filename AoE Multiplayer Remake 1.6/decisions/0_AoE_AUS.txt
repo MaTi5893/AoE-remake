@@ -227,10 +227,10 @@ political_decisions = {
         }
         effect = {
             prestige = 15
-            any_pop = {
-                literacy = 0.05
-				consciousness = -3
-            }
+            add_country_modifier = {
+				name = education_buff
+				duration = 3650
+			}
             set_country_flag = austrian_court
         }
         ai_will_do = {

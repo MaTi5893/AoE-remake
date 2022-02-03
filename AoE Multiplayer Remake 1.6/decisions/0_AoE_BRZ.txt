@@ -29,6 +29,7 @@ political_decisions = {
 		potential = {
 			primary_culture = brazilian
 			NOT = { has_country_flag = proclaimed_the_empire_of_brazil }
+			POR = { ai = yes }
 		}
 		allow = {
 			OR = {
@@ -68,12 +69,12 @@ political_decisions = {
 				}
 				owner = {
 					overlord = {
-						release_vassal = THIS
 						war = {
 							target = BRZ
 							attacker_goal = { casus_belli = make_puppet }
 							defender_goal = { casus_belli = become_independent }
 						}
+						release_vassal = THIS
 					}
 				}
 			}

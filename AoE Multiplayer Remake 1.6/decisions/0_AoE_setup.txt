@@ -561,12 +561,21 @@ political_decisions = {
 			any_country = {
 				limit = {
 					NOT = { tag = AUS }
+					is_culture_group = germanic
 				}
 				any_pop = {
 					limit = {
 						is_culture_group = germanic
 					}
 					literacy = -0.3
+				}
+			}
+			PLC = {
+				any_pop = {
+					limit = {
+						is_culture_group = germanic
+					}
+					literacy = 0.3
 				}
 			}
 		}

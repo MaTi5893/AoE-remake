@@ -47,7 +47,6 @@ country_event = {
     title = "Jacobites Prevail!" #Jacobism Prevails
     desc = "EVTDESC171402"
 	major = yes
-    is_triggered_only = yes
 
 	trigger = {
         primary_culture = british

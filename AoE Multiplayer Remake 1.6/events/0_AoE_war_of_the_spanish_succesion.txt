@@ -1,16 +1,10 @@
-##death of charles II
 country_event = {
     id = 93000
-    title = "EVTNAME93000"
+    title = "EVTNAME93000" ##death of charles II
     desc = "EVTDESC93000"
+    fire_only_once = yes
     major = yes
     news = yes
-    news_desc_long = "EVTDESC93000_NEWS_LONG"
-    news_desc_medium = "EVTDESC93000_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC93000_NEWS_SHORT"
-    picture = "spanish_king"
-
-    fire_only_once = yes
 
     trigger = {
         tag = SPA
@@ -40,6 +34,11 @@ country_event = {
         name = "EVTNAME93000OPTA"
         set_global_flag = support_bourbon_heir_spa
         create_alliance = BOR
+		all_core = {
+            add_core = SPC
+            remove_core = SPA
+        }
+        change_tag = SPC
         AUS = {
             casus_belli = {
             target = THIS
@@ -47,11 +46,6 @@ country_event = {
             months = 2
             }
         }
-        all_core = {
-            add_core = SPC
-            remove_core = SPA
-        }
-        change_tag = SPC
         relation = {
             who = BOR
             value = 300
@@ -122,17 +116,4 @@ country_event = {
             factor = 0.15
         }
     }
-
-    #option = { #Bastard Child
-    #    name = "Surely there must be a bastard child of some sort! Even illegitimacy is better than subservience."
-    #    set_global_flag = spanish_succesion_resolved
-    #    set_global_flag = bastard_child
-    #    add_country_modifier = {
-    #        name = illegitimate_heir
-    #        duration = 10950
-    #    }
-    #     ai_chance = {
-    #        factor = 0
-    #    }
-    #}
 }
