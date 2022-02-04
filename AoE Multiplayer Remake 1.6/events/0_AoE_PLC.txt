@@ -689,15 +689,6 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { owner = { primary_culture = polish } }
-			owner = {
-				add_accepted_culture = byelorussian
-			}
-			LIT = {
-				all_core = { add_core = PLC }
-			}
-		}
-		random_owned = {
 			limit = {
 				owner = { debt_law = serfdom }
 			}
@@ -1219,7 +1210,6 @@ country_event = {
 			rank = 5
 		}
 	}
-}
 	
 	option = {
 		name = "EVTOPT15730066NAME"
@@ -1252,7 +1242,7 @@ country_event = {
 			add_core = CPL
 		}
 	}
-	
+}
 country_event = {
 	id = 15730067
 	title = "Treaty of Perpetual Peace"

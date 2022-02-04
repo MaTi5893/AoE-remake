@@ -1248,7 +1248,7 @@ country_event = {
 		}
 		OR = {
 			2217 = { NOT = { controlled_by = THIS } }
-			has_recently_lost_wars = yes
+			has_recently_lost_war = yes
 		}
     }
     mean_time_to_happen = {
@@ -1860,7 +1860,7 @@ country_event = {
 			limit = {
 				is_core = HND
 			}
-			add_province_modifiers = {
+			add_province_modifier = {
 				name = colonial_exploitation
 				duration = 365
 			}

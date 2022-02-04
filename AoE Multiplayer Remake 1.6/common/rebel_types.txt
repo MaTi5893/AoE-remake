@@ -27,16 +27,16 @@ reactionary_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        french_bourbon = french_bourbon
+        #french_bourbon = #french_bourbon
         dominion = presidential_dictatorship
         democracy = presidential_dictatorship
-        federal_democracy = presidential_dictatorship
+        #federal_democracy = presidential_dictatorship
         theocracy = theocracy
         colonial_company = absolute_monarchy
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = absolute_monarchy
-        federal_democracy = presidential_dictatorship
+        #federal_democracy = presidential_dictatorship
         tribal_democracy = tribal_democracy
         oligarchic_republic = presidential_dictatorship
         khanate = khanate
@@ -216,7 +216,6 @@ reactionary_rebels = {
                     government = prussian_constitutionalism
                     government = absolute_monarchy
                     government = democracy
-                    government = federal_democracy
                 }
             }
             OR = {
@@ -338,16 +337,16 @@ traditionalist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        french_bourbon = french_bourbon
+        #french_bourbon = #french_bourbon
         dominion = presidential_dictatorship
         democracy = presidential_dictatorship
-        federal_democracy = presidential_dictatorship
+        #federal_democracy = presidential_dictatorship
         theocracy = theocracy
         colonial_company = colonial_company
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -530,7 +529,6 @@ traditionalist_rebels = {
                     government = prussian_constitutionalism
                     government = absolute_monarchy
                     government = democracy
-                    government = federal_democracy
                 }
             }
             OR = {
@@ -659,7 +657,7 @@ fascist_rebels = {
         absolute_monarchy = fascist_dictatorship
         prussian_constitutionalism = fascist_dictatorship
         hms_government = fascist_dictatorship
-        french_bourbon = fascist_dictatorship
+        #french_bourbon = fascist_dictatorship
         dominion = fascist_dictatorship
         democracy = fascist_dictatorship
         theocracy = fascist_dictatorship
@@ -667,7 +665,7 @@ fascist_rebels = {
 
         #archduchy = fascist_dictatorship
         elective_monarchy_oligarchy = fascist_dictatorship
-        federal_democracy = fascist_dictatorship
+        #federal_democracy = fascist_dictatorship
         tribal_democracy = fascist_dictatorship
         oligarchic_republic = fascist_dictatorship
         khanate = fascist_dictatorship
@@ -956,7 +954,7 @@ communist_rebels = {
         absolute_monarchy = proletarian_dictatorship
         prussian_constitutionalism = proletarian_dictatorship
         hms_government = proletarian_dictatorship
-        french_bourbon = proletarian_dictatorship
+        #french_bourbon = proletarian_dictatorship
         dominion = proletarian_dictatorship
         democracy = proletarian_dictatorship
         theocracy = proletarian_dictatorship
@@ -964,7 +962,7 @@ communist_rebels = {
 
         #archduchy = proletarian_dictatorship
         elective_monarchy_oligarchy = proletarian_dictatorship
-        federal_democracy = proletarian_dictatorship
+        #federal_democracy = proletarian_dictatorship
         tribal_democracy = proletarian_dictatorship
         oligarchic_republic = proletarian_dictatorship
         khanate = proletarian_dictatorship
@@ -1274,7 +1272,7 @@ communist_rebels = {
 #        absolute_monarchy = bourgeois_dictatorship
 #        prussian_constitutionalism = bourgeois_dictatorship
 #        hms_government = bourgeois_dictatorship
-#        french_bourbon = bourgeois_dictatorship
+#        #french_bourbon = bourgeois_dictatorship
 #        dominion = bourgeois_dictatorship
 #        democracy = bourgeois_dictatorship
 #        theocracy = bourgeois_dictatorship
@@ -1282,7 +1280,7 @@ communist_rebels = {
 #
 #        #archduchy = bourgeois_dictatorship
 #        elective_monarchy_oligarchy = bourgeois_dictatorship
-#        federal_democracy = bourgeois_dictatorship
+#        #federal_democracy = bourgeois_dictatorship
 #        tribal_democracy = bourgeois_dictatorship
 #        absolute_monarchy = bourgeois_dictatorship
 #        oligarchic_republic = bourgeois_dictatorship
@@ -1602,7 +1600,7 @@ nationalist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -1610,7 +1608,7 @@ nationalist_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -1974,7 +1972,7 @@ pan_nationalist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = hms_government
         democracy = democracy
         theocracy = theocracy
@@ -1982,7 +1980,7 @@ pan_nationalist_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -2414,7 +2412,7 @@ carlist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        french_bourbon = absolute_monarchy
+        #french_bourbon = absolute_monarchy
         dominion = absolute_monarchy
         democracy = absolute_monarchy
         theocracy = theocracy
@@ -2422,7 +2420,7 @@ carlist_rebels = {
 
         #archduchy = absolute_monarchy
         elective_monarchy_oligarchy = absolute_monarchy
-        federal_democracy = absolute_monarchy
+        #federal_democracy = absolute_monarchy
         tribal_democracy = absolute_monarchy
         oligarchic_republic = absolute_monarchy
         khanate = absolute_monarchy
@@ -2685,7 +2683,7 @@ szlachta_rebels = {
         absolute_monarchy = elective_monarchy_oligarchy
         prussian_constitutionalism = elective_monarchy_oligarchy
         hms_government = elective_monarchy_oligarchy
-        french_bourbon = elective_monarchy_oligarchy
+        #french_bourbon = elective_monarchy_oligarchy
         dominion = elective_monarchy_oligarchy
         democracy = elective_monarchy_oligarchy
         theocracy = theocracy
@@ -2694,7 +2692,7 @@ szlachta_rebels = {
 
         #archduchy = elective_monarchy_oligarchy
         #elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = elective_monarchy_oligarchy
+        #federal_democracy = elective_monarchy_oligarchy
         tribal_democracy = elective_monarchy_oligarchy
         oligarchic_republic = elective_monarchy_oligarchy
         khanate = elective_monarchy_oligarchy
@@ -2951,7 +2949,7 @@ christino_rebels = {
         absolute_monarchy = hms_government
         prussian_constitutionalism = hms_government
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = hms_government
         democracy = hms_government
         theocracy = theocracy
@@ -2959,7 +2957,7 @@ christino_rebels = {
 
         #archduchy = hms_government
         elective_monarchy_oligarchy = hms_government
-        federal_democracy = hms_government
+        #federal_democracy = hms_government
         tribal_democracy = tribal_democracy
         absolute_monarchy = hms_government
         oligarchic_republic = hms_government
@@ -3205,7 +3203,7 @@ boxer_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        french_bourbon = absolute_monarchy
+        #french_bourbon = absolute_monarchy
         dominion = absolute_monarchy
         democracy = absolute_monarchy
         theocracy = theocracy
@@ -3213,7 +3211,7 @@ boxer_rebels = {
 
         #archduchy = absolute_monarchy
         elective_monarchy_oligarchy = absolute_monarchy
-        federal_democracy = absolute_monarchy
+        #federal_democracy = absolute_monarchy
         tribal_democracy = absolute_monarchy
         oligarchic_republic = absolute_monarchy
         khanate = absolute_monarchy
@@ -3484,7 +3482,7 @@ red_shirts = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = hms_government
         democracy = democracy
         theocracy = democracy
@@ -3492,7 +3490,7 @@ red_shirts = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -3735,7 +3733,7 @@ indian_sepoys = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -3743,7 +3741,7 @@ indian_sepoys = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -3946,7 +3944,7 @@ indian_nationalists = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -3954,7 +3952,7 @@ indian_nationalists = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -4173,7 +4171,7 @@ liberal_rebels = {
         absolute_monarchy = hms_government
         prussian_constitutionalism = hms_government
         hms_government = democracy
-        french_bourbon = democracy
+        #french_bourbon = democracy
         dominion = democracy
         democracy = democracy
         theocracy = democracy
@@ -4181,7 +4179,7 @@ liberal_rebels = {
 
         #archduchy = hms_government
         elective_monarchy_oligarchy = hms_government
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = hms_government
         khanate = hms_government
@@ -4630,7 +4628,7 @@ unciv_reactionary_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        french_bourbon = absolute_monarchy
+        #french_bourbon = absolute_monarchy
         dominion = absolute_monarchy
         democracy = absolute_monarchy
         theocracy = absolute_monarchy
@@ -4638,7 +4636,7 @@ unciv_reactionary_rebels = {
 
         #archduchy = hms_government
         elective_monarchy_oligarchy = absolute_monarchy
-        federal_democracy = presidential_dictatorship
+        #federal_democracy = presidential_dictatorship
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = absolute_monarchy
@@ -4936,7 +4934,7 @@ separatist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -4944,7 +4942,7 @@ separatist_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -5205,7 +5203,7 @@ socialist_rebels = {
         absolute_monarchy = proletarian_dictatorship
         prussian_constitutionalism = democracy
         hms_government = democracy
-        french_bourbon = democracy
+        #french_bourbon = democracy
         dominion = proletarian_dictatorship
         democracy = proletarian_dictatorship
         theocracy = proletarian_dictatorship
@@ -5213,7 +5211,7 @@ socialist_rebels = {
 
         #archduchy = democracy
         elective_monarchy_oligarchy = democracy
-        federal_democracy = democracy
+        #federal_democracy = democracy
         tribal_democracy = democracy
         oligarchic_republic = democracy
         khanate = democracy
@@ -5696,7 +5694,7 @@ independence_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -5704,7 +5702,7 @@ independence_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -5878,7 +5876,7 @@ turkish_nationalist_rebels = {
         absolute_monarchy = democracy
         prussian_constitutionalism = democracy
         hms_government = democracy
-        french_bourbon = democracy
+        #french_bourbon = democracy
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -5886,7 +5884,7 @@ turkish_nationalist_rebels = {
 
         #archduchy = democracy
         elective_monarchy_oligarchy = democracy
-        federal_democracy = democracy
+        #federal_democracy = democracy
         tribal_democracy = democracy
         absolute_monarchy = democracy
         oligarchic_republic = democracy
@@ -6133,7 +6131,7 @@ native_rebels = {
         absolute_monarchy = democracy
         prussian_constitutionalism = democracy
         hms_government = democracy
-        french_bourbon = democracy
+        #french_bourbon = democracy
         dominion = democracy
         democracy = democracy
         theocracy = democracy
@@ -6141,7 +6139,7 @@ native_rebels = {
 
         #archduchy = democracy
         elective_monarchy_oligarchy = democracy
-        federal_democracy = democracy
+        #federal_democracy = democracy
         tribal_democracy = democracy
         absolute_monarchy = democracy
         oligarchic_republic = democracy
@@ -6330,7 +6328,7 @@ sioux_nation = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -6338,7 +6336,7 @@ sioux_nation = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -6464,7 +6462,7 @@ apache = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = democracy
@@ -6472,7 +6470,7 @@ apache = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -6602,7 +6600,7 @@ jacobite_rebels = {
         absolute_monarchy = prussian_constitutionalism
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = prussian_constitutionalism
-        french_bourbon = prussian_constitutionalism
+        #french_bourbon = prussian_constitutionalism
         dominion = prussian_constitutionalism
         democracy = prussian_constitutionalism
         theocracy = theocracy
@@ -6610,7 +6608,7 @@ jacobite_rebels = {
 
         #archduchy = prussian_constitutionalism
         elective_monarchy_oligarchy = prussian_constitutionalism
-        federal_democracy = prussian_constitutionalism
+        #federal_democracy = prussian_constitutionalism
         tribal_democracy = prussian_constitutionalism
         oligarchic_republic = prussian_constitutionalism
         khanate = prussian_constitutionalism
@@ -6853,15 +6851,12 @@ peasant_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = french_bourbon
         dominion = dominion
         democracy = democracy
         theocracy = theocracy
         colonial_company = colonial_company
 
-        #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -6920,18 +6915,8 @@ peasant_rebels = {
             factor = 0.8
         }
         modifier = {
-            factor = 2
+            factor = 0.8
             has_country_modifier = peasant_turmoil
-        }
-        modifier = {
-            factor = 2
-            OR = {
-                has_country_modifier = lower_class_unrest_5
-                has_country_modifier = lower_class_unrest_4
-                has_country_modifier = lower_class_unrest_3
-                has_country_modifier = lower_class_unrest_2
-                has_country_modifier = lower_class_unrest_1
-            }
         }
     }
 
@@ -6976,6 +6961,14 @@ peasant_rebels = {
             units_in_province = 1
             NOT = { is_capital = yes }
         }
+		modifier = {
+			factor = 0
+			is_colonial = yes
+		}
+		modifier = {
+			factor = 0
+			is_overseas = yes
+		}
         modifier = {
             factor = 0.001
             controlled_by = REB
@@ -7179,15 +7172,12 @@ noble_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = french_bourbon
 		dominion = dominion
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = colonial_company
 		
-		#archduchy = archduchy
 		elective_monarchy_oligarchy = elective_monarchy_oligarchy
-		federal_democracy = federal_democracy
 		tribal_democracy = tribal_democracy 
 		
 		oligarchic_republic = oligarchic_republic
@@ -7275,10 +7265,6 @@ noble_rebels = {
 			}
 			factor = 35
 		}
-		modifier = {
-			civilized = no
-			factor = 0
-		}
 	}
 
 	
@@ -7290,6 +7276,14 @@ noble_rebels = {
 		modifier = {
 			factor = -2
 			pop_majority_ideology = communist
+		}
+		modifier = {
+			factor = 0
+			country = { safety_regulations = no_safety }
+		}
+		modifier = {
+			factor = 0
+			country = { civilized = no }
 		}
 		modifier = {
 			location = {
@@ -7553,7 +7547,7 @@ slave_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = french_bourbon
+        #french_bourbon = #french_bourbon
         dominion = dominion
         democracy = democracy
         theocracy = theocracy
@@ -7561,7 +7555,7 @@ slave_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic
@@ -7730,7 +7724,7 @@ american_patriot_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = hms_government
+        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
@@ -7738,7 +7732,7 @@ american_patriot_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -7959,7 +7953,7 @@ janissery_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        french_bourbon = french_bourbon
+        #french_bourbon = #french_bourbon
         dominion = dominion
         democracy = democracy
         theocracy = theocracy
@@ -7967,7 +7961,7 @@ janissery_rebels = {
 
         #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        federal_democracy = federal_democracy
+        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
 
         oligarchic_republic = oligarchic_republic

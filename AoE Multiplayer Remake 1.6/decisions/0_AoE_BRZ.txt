@@ -64,7 +64,10 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						is_independent = no
+						OR = {
+							is_substate = yes
+							is_vassal = yes
+						}
 					}
 				}
 				owner = {

@@ -17,7 +17,7 @@ country_event = {
 			government = hms_government
 		}
 		OR = {
-		has_recently_lost_wars = yes
+		has_recently_lost_war = yes
 		war = yes
 		}
 		OR = {
@@ -573,7 +573,7 @@ country_event = {
 		set_country_flag = terror_end
 		prestige = 5
 		any_pop = {
-			miltancy = -1
+			militancy = -1
 			consciousness = 2
 		}
 		random_owned = {
@@ -585,7 +585,7 @@ country_event = {
 			owner = {
 				add_country_modifier = {
 					name = nation_state
-					duaration = -1
+					duration = -1
 				}
 			}
 		}

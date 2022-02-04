@@ -87,10 +87,12 @@ political_decisions = {
 						HYD = { owns = 1286 }
 					}
 				}
-				inherit = BIJ
-				BIJ = {
-					all_core = {
-						remove_core = BIJ
+				owner = {
+					BIJ = {
+						annex_to = THIS
+						all_core = {
+							remove_core = BIJ
+						}
 					}
 				}
 			}

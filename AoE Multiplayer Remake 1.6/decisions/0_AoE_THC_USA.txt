@@ -135,10 +135,7 @@ political_decisions = {
                 government = absolute_monarchy
                 AND = {
                     ruling_party_ideology = reactionary
-                    OR = {
-                        government = democracy
-                        government = federal_democracy
-                    }
+                    government = democracy
                     NOT = {
                         OR = {
                         upper_house_composition  = party_appointed
@@ -545,7 +542,6 @@ political_decisions = {
         }
         allow = {
             OR = {
-                government = federal_democracy
                 government = democracy
                 government = hms_government
             }
