@@ -4,7 +4,7 @@ religion = protestant
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = nv_order
-literacy = 0.8
+literacy = 0.4
 civilized = yes
 prestige = 5
 
@@ -40,7 +40,6 @@ colonial_policy = no_colonies
 set_country_flag = protestant_country
 set_country_flag = exempt_from_vassal_contribution
 set_country_flag = hre_member
-decision = pru_setup
 
 ruling_party = "Nobility Faction"
 upper_house = {
@@ -53,7 +52,7 @@ upper_house = {
     communist = 0
 }
 
-
+decision = pru_setup
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1

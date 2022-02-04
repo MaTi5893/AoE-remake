@@ -30,7 +30,7 @@ name = "The Beaver War"
     #}
 
     war_goal = {
-        casus_belli = cut_down_to_size
+        casus_belli = add_to_sphere
         actor = BOR
         receiver = IQS
     }

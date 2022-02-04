@@ -26,7 +26,9 @@ political_decisions = {
 						NOT = { has_country_flag = perpetual_peace_PLC }
 					}
 				}
-				add_accepted_culture = ukrainian
+				owner = {
+					add_accepted_culture = ukrainian
+				}
 			}
             prestige = 25
 			random_owned = {

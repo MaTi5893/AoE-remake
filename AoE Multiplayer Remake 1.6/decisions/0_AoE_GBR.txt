@@ -500,7 +500,7 @@ political_decisions = {
         allow = {
             war = no
             ruling_party_ideology = reactionary
-            trade_unions = no_trade_unions
+			state_n_government = 1
             NOT = { average_militancy = 3 }
         }
         effect = {

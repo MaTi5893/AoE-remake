@@ -231,7 +231,6 @@ restore_austrian_empire = {
                 is_core = GLM
                 region = AUS_771
                 region = AUS_780
-                region = AUS_777
                 region = AUS_654
                 #region = AUS_652
                 region = AUS_657
@@ -274,7 +273,6 @@ restore_austrian_empire = {
                 is_core = HUN
                 region = AUS_702
                 region = AUS_771
-                region = AUS_777
                 region = AUS_654
                 #region = AUS_652
                 region = AUS_657
@@ -668,7 +666,7 @@ claim_emperorship = {
 				AND = {
 					AUS = {
 						has_country_flag = hre_emperor
-						has_country_modifier = maria_thersa 
+						has_country_modifier = maria_theresa 
 						NOT = { has_country_flag = issued_pragmatic_sanction }
 					}
 				}
@@ -677,11 +675,9 @@ claim_emperorship = {
                 continent = europe
             }
         }
-        NOT = { has_country_modifier = neutrality }
         NOT = { in_sphere = THIS }
-        THIS = { NOT = { has_country_modifier = neutrality } }
         has_country_flag = hre_emperor
-        THIS = { NOT = { has_country_modifier = punitive_effects } }
+
     }
 
     po_remove_prestige = yes
@@ -2366,17 +2362,12 @@ total_war_conquest = {
 		THIS = { ai = no }
 		has_global_flag = world_wars_enabled
 		NOT = { 
-			OR = { 
-				has_country_modifier = neutrality
-				has_country_modifier = generic_neutrality
-			}
+			has_country_modifier = neutrality
 		}
-		THIS = { NOT = {
-				OR = {
-					has_country_modifier = neutrality
-					has_country_modifier = generic_neutrality
-				}
-			 } 
+		THIS = { 
+			NOT = {
+				has_country_modifier = neutrality
+			} 
 		}
 		any_greater_power = { #MP cb only
 			NOT = { tag = THIS }

@@ -44,6 +44,11 @@ colonial_policy = settlement
 
 set_country_flag = protestant_country
 
+govt_flag = {
+    government = proletarian_dictatorship
+    flag = theocracy
+}
+
 ruling_party = "Nobility Faction"
 last_election = 1832.5.3
 upper_house = {
