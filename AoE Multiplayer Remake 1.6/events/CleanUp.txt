@@ -82,7 +82,6 @@ country_event = {
         civilized = yes
         OR = {
               government = democracy
-              government = federal_democracy
               government = tribal_democracy
         }
         ruling_party_ideology = reactionary
@@ -553,7 +552,6 @@ country_event = {
     trigger = {
         OR = {
               government = democracy
-              government = federal_democracy
               government = tribal_democracy
               government = oligarchic_republic
         }
@@ -690,7 +688,6 @@ country_event = {
     trigger = {
         OR = {
               government = democracy
-              government = federal_democracy
               government = tribal_democracy
         }
         vote_franschise = none_voting

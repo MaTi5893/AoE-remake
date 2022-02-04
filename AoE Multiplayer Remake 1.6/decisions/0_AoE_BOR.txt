@@ -995,9 +995,22 @@ political_decisions = {
                     in_sphere = THIS
                     is_culture_group = germanic
                 }
-                all_core = { add_core = GCF }
-                annex_to = GCF
+                all_core = {
+					limit = {
+						NOT = {
+							owned_by = THIS
+						}
+					}
+					add_core = GCF 
+				}
+                annex_to = THIS #gets french tech
             }
+			any_owned = {
+				limit = {
+					is_core = GCF
+				}
+				secede_province = GCF
+			}
 			create_vassal = GCF
             diplomatic_influence = {
 				who = GCF

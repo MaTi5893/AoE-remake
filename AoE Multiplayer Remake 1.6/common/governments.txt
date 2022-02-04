@@ -143,21 +143,6 @@ democracy = {
     flagType = republic
 }
 
-federal_democracy = {
-    liberal = yes
-    socialist = yes
-    conservative = yes
-    #reactionary = yes
-    communist = yes
-    #anarcho_liberal = yes
-    #fascist = yes
-
-    election = yes
-    duration = 48
-    appoint_ruling_party = no
-    flagType = republic
-}
-
 tribal_democracy = {
     liberal = yes
     socialist = yes
@@ -179,17 +164,6 @@ theocracy = {
     conservative = yes
 
     election = no
-    appoint_ruling_party = yes
-}
-
-french_bourbon = {
-    #liberal = yes
-    conservative = yes
-    reactionary = yes
-    #socialist = yes
-
-    election = no
-    duration = 48
     appoint_ruling_party = yes
 }
 
@@ -233,29 +207,3 @@ khanate = {
 #    appoint_ruling_party = yes
 #    flagType = monarchy
 #}
-
-hms_government_empire = {
-    liberal = yes
-    socialist = yes
-    conservative = yes
-    reactionary = yes
-    communist = yes
-    anarcho_liberal = yes
-    fascist = yes
-
-
-    election = yes
-    duration = 48
-    appoint_ruling_party = no
-    flagType = republic
-}
-
-pirate_republic = {
-    liberal = yes
-    conservative = yes
-    #anarcho_liberal = yes
-    #socialist = yes
-    election = yes
-    appoint_ruling_party = no
-    flagType = republic
-}

@@ -259,10 +259,7 @@ political_decisions = {
     form_ruthenia = {
         picture = cossak_state
         potential = {
-            OR = {
             primary_culture = ukrainian
-            primary_culture = byelorussian
-            }
             NOT = { exists = RUT }
         }
         allow = {
@@ -294,7 +291,6 @@ political_decisions = {
                     add_core = RUT
                 }
             }
-            add_accepted_culture = byelorussian
             add_accepted_culture = ukrainian
             change_tag = RUT
             government = absolute_monarchy

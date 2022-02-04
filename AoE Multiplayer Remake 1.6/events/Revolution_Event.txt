@@ -1194,6 +1194,7 @@ country_event = {
         random_country = {
             limit = {
                 is_sphere_leader_of = THIS
+				NOT = { tag = THIS }
                 NOT = { is_our_vassal = THIS }
                 NOT = {
                     OR = {

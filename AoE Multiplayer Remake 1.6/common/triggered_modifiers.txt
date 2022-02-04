@@ -667,20 +667,30 @@ indian_treaty_port_bonus = {
 	}
 	research_points_modifier = 0.15
 }
-britannia_rules_the_waves = {
-    trigger = {
-        is_greater_power = yes
-        NOT = {
-            any_greater_power = {
-                military_score = THIS
-            }
-        }
-        total_amount_of_ships = 200
-        has_country_flag = britannia_rules_the_waves
-    }
-    naval_organisation = 0.1
-    navy_tech_research_bonus = 0.05
-    naval_unit_start_expirience = 0.3
-    supply_consumption = 0.1
-    icon = 15
+
+vassal_nation = {
+	trigger = {
+		exists = yes
+		is_vassal = yes
+		is_substate = no
+	}
+	icon = 10
+	prestige = -0.1
+}
+
+substate_nation = {
+	trigger = {
+		exists = yes
+		is_substate = yes
+		civilized = yes
+	}
+	
+	prestige = -0.25
+	max_loan_modifier = -1.0
+	min_tax = 0.4
+	max_military_spending = -0.25
+	min_tariff = 1.2
+	tax_efficiency = 0.5
+	
+	icon = 10
 }

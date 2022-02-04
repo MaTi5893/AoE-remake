@@ -184,10 +184,7 @@ political_decisions = {
             all_core = {
                 owned_by = THIS
             }
-            OR = {
-                government = absolute_monarchy
-                government = french_bourbon
-            }
+            government = absolute_monarchy
             OR = {
                 is_vassal = no
                 vassal_of = BOR
