@@ -47,9 +47,11 @@ country_event = {
     title = "Jacobites Prevail!" #Jacobism Prevails
     desc = "EVTDESC171402"
 	major = yes
+	fire_only_once = yes
 
 	trigger = {
         primary_culture = british
+		tag = GBR
         year = 1714
 		has_country_flag = jacobite_path
         OR = {
@@ -167,7 +169,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        days = 1
+        days = 12
     }
 
     option = {

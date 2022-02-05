@@ -295,7 +295,7 @@ social_reformed_nation = {
             school_reforms = good_schools
         }
 
-    social_reform_desire = -0.5
+    social_reform_desire = -0.8
     icon = 13
 }
 
@@ -532,15 +532,6 @@ save_the_nation5 = {
     mobilization_impact = 1
     mobilization_economy_impact = -0.66
     icon = 9
-}
-excellent_healthcare = {
-	trigger = {
-		exists = yes
-		health_care = good_health_care
-		administration_spending = 0.5
-	}
-	global_population_growth = 0.001
-	icon = 19
 }
 
 low_schools_fully_funded = {
