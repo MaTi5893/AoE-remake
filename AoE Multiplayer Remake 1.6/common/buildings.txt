@@ -717,3 +717,17 @@ railroad = {
     pop_build_factory = yes
     spawn_railway_track = yes
 }
+
+river_check = {
+    type = fort
+	cost = 999999999
+    goods_cost =
+    {
+
+    }
+    time = 365
+    visibility = no
+    onmap = no
+    max_level = 1
+    province = yes
+}

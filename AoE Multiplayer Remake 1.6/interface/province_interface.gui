@@ -1150,8 +1150,8 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 					position = { x= 195 y = 312 }
-			}	
-			
+			}
+
 			iconType = {
 				name = "build_icon_fort"
 				spriteType = "GFX_province_fort_strip"
@@ -1159,13 +1159,14 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
+
+			
 			iconType = {
 				name = "build_icon_navalbase"
 				spriteType = "GFX_province_navalbase_strip"
 				position = { x= 223 y = 88 }
 				Orientation = "UPPER_LEFT"
 			}
-
 			
 			iconType = {
 				name = "build_icon_infra"
@@ -1173,6 +1174,8 @@ guiTypes = {
 				position = { x= 270 y = 88 }
 				Orientation = "UPPER_LEFT"
 			}
+
+
 			### progressbar when investing in railroad.
 			windowType = {
 				name = "infra_progress_win"
@@ -1192,6 +1195,12 @@ guiTypes = {
 				}
 			}
 			#####
+			iconType = {
+				name = "build_icon_river"
+				spriteType = "GFX_province_river_strip_2"
+				position = { x= 200 y = -99 }
+				Orientation = "UPPER_LEFT"
+			}
 			
 			guiButtonType = {
 				name = "invest_build_infra"
@@ -1488,6 +1497,13 @@ guiTypes = {
 			name = "build_icon2"
 			spriteType = "GFX_province_infra_strip"
 			position = { x= 23 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "build_icon3"
+			spriteType = "GFX_province_river_strip"
+			position = { x= 40 y = -375 }
 			Orientation = "UPPER_LEFT"
 		}
 		

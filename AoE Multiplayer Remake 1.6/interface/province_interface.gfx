@@ -94,6 +94,16 @@ spriteTypes = {
 		noOfFrames = 7
 	}
 	spriteType = {
+		name = "GFX_province_river_strip"
+		textureFile = "gfx\\interface\\province_river_strip.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_province_river_strip_2"
+		textureFile = "gfx\\interface\\province_river_strip_2.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
 		name = "GFX_province_expanding"
 		texturefile = "gfx\\interface\\province_expanding.dds"
 	}
