@@ -412,7 +412,36 @@ hyperinflation = {
     }
 }
 #eary_classical_theory
-
+furniture_activation = {
+    limit = { early_classical_theory_and_critique = 1 }
+    news = no
+    chance = {
+        base = 5
+    }
+    effect = {
+        activate_building = furniture_factory 
+    }
+}
+luxury_furniture_activation = {
+    limit = { early_classical_theory_and_critique = 1 }
+    news = no
+    chance = {
+        base = 5
+    }
+    effect = {
+		activate_building = luxury_furniture_factory 
+    }
+}
+paper_mill_activation = {
+    limit = { early_classical_theory_and_critique = 1 }
+    news = no
+    chance = {
+        base = 5
+    }
+    effect = {
+		activate_building = paper_mill 
+    }
+}
 #late_classical_theory
 
 #collectivist_theory
