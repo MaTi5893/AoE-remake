@@ -322,6 +322,7 @@ political_decisions = {
                             in_sphere = THIS
                             vassal_of = THIS
                         }
+						NOT = { tag = THIS }
                     }
                 }
                 owner = {
@@ -335,6 +336,7 @@ political_decisions = {
                             in_sphere = THIS
                             vassal_of = THIS
                         }
+						NOT = { tag = THIS }
                     }
                 }
                 owner = {
@@ -348,6 +350,7 @@ political_decisions = {
                             in_sphere = THIS
                             vassal_of = THIS
                         }
+						NOT = { tag = THIS }
                     }
                 }
                 owner = {
