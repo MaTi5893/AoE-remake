@@ -56,7 +56,7 @@ political_decisions = {
 			set_country_flag = last_expedition
 			casus_belli = {
 				target = TUN
-				type = conquest_low
+				type = establish_protectorate_casus_belli
 				months = 12
 			}
 			casus_belli = {

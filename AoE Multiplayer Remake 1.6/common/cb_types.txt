@@ -223,20 +223,28 @@ restore_austrian_empire = {
         }
         any_owned_province = {
             OR = {
-                is_core = VEN
                 is_core = SLO
                 is_core = SLV
                 is_core = BOH
                 is_core = HUN
                 is_core = GLM
                 region = AUS_771
-                region = AUS_780
                 region = AUS_654
                 #region = AUS_652
                 region = AUS_657
+				AND = {
+					region = AUS_729
+					THIS = { has_country_flag = backstabbed_venice }
+				}
+				AND = {
+					region = AUS_726
+					THIS = { has_country_flag = backstabbed_venice }
+				}
+				AND = {
+					region = AUS_780
+					THIS = { has_country_flag = backstabbed_venice }
+				}
             }
-            NOT = { is_core = PLC }
-            NOT = { is_core = VEN }
         }
         OR = {
             NOT = { tag = ITA }
