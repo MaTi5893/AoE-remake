@@ -6985,7 +6985,7 @@ immunity_from_influenza = {
 	icon = 7
 }
 tornogrod_confederation = {
-	core_pop_militancy_modifier = 0.01
+	pop_militancy_modifier = 0.03
 	icon = 18	
 }
 qing_golden_age = {
@@ -7001,15 +7001,15 @@ japanese_absolutism = {
 mameluke_influence_egypt = {
 	local_ruling_party_support = 0.1
 	local_artisan_output = -0.1
-	non_accepted_pop_consciousness_modifier = -0.1
-	non_accepted_pop_militancy_modifier = -0.1
+	pop_consciousness_modifier = -0.1
+	pop_militancy_modifier = -0.1
 	icon = 14
 }
 ottoman_control_egypt = {
 	local_ruling_party_support = -0.1
 	local_artisan_output = 0.15
-	non_accepted_pop_consciousness_modifier = 0.1
-	non_accepted_pop_militancy_modifier = 0.1
+	pop_consciousness_modifier = 0.1
+	pop_militancy_modifier = 0.1
 	icon = 13
 }
 salutary_neglect = {

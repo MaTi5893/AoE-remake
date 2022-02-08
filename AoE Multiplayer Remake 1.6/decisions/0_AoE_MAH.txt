@@ -170,12 +170,10 @@ political_decisions = {
                     value = 100
                 }
             }
-            money = 50000
         }
         effect = {
             set_country_flag = modernize_our_weaponary
-            money = -50000
-            years_of_research = 0.15
+            years_of_research = 1
         }
     }
 
