@@ -359,6 +359,7 @@ political_decisions = {
 				limit = {
 					owner = {
 						706 = { life_rating = 33 }
+						706 = { NOT = { life_rating = 35 } }
 					}
 				}
 				706 = {

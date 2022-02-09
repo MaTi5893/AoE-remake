@@ -2,7 +2,7 @@ political_decisions = {
 	
 	show_aoe_options_menu = {
 		alert = no
-		picture = claim_greater_albania
+		picture = aoe
 		potential = {
 			ai = no
 			NOT = { has_country_flag = showing_aoe_options }
@@ -16,7 +16,7 @@ political_decisions = {
 	
 	hide_aoe_options_menu = {
 		alert = no
-		picture = claim_greater_albania
+		picture = aoe
 		potential = {
 			ai = no
 			has_country_flag = showing_aoe_options
