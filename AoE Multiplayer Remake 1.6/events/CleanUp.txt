@@ -1019,39 +1019,6 @@ country_event = {
     }
 }
 
-#Occitania Cleanup Event
-country_event = {
-    id = 6016807
-    title = "EVTNAME6016807"
-    desc = "EVTDESC6016807"
-
-    is_triggered_only = yes
-
-    immediate = {
-        any_owned = {
-            limit = {
-                is_core = OCC
-                NOT = { province_id = 464 }
-                NOT = { province_id = 460 }
-            }
-            assimilate = yes
-        }
-    }
-
-    option = {
-        name = "EVT6016807PTA"
-        random_owned = {
-            limit = { exists = FRA }
-            owner = { annex_to = FRA }
-        }
-        random_owned = {
-            limit = { exists = BOR }
-            owner = { annex_to = BOR }
-        }
-    }
-
-}
-
 #Totalitarian modifiers in a non totalitarian regime
 
 #Cleaning after international zones

@@ -128,7 +128,9 @@ political_decisions = {
 						promotion_laws = privlage_benefits
 					}
 				}
-				political_reform = nepotism
+				owner = {
+					social_reform = nepotism
+				}
 			}
 			set_country_flag = established_ecole_militire 
 		}
@@ -981,8 +983,8 @@ political_decisions = {
 						}
 						all_core = {
 							add_core = GCF
-							change_tag = GCF
 						}
+						change_tag = GCF
 						any_pop = {
 							militancy = -3
 						}

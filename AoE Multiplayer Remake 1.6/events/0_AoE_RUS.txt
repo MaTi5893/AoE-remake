@@ -628,15 +628,15 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.8
-			revolt_percentage = 0.20
+			owner = { revolt_percentage = 0.20 }
 		}
 		modifier = {
 			factor = 0.7
-			revolt_percentage = 0.30
+			owner = { revolt_percentage = 0.30 }
 		}
 		modifier = {
 			factor = 0.6
-			revolt_percentage = 0.40
+			owner = { revolt_percentage = 0.40 }
 		}
 	}
 	
@@ -910,10 +910,9 @@ country_event = {
 			}
 			militancy = 2
 			consciousness = 4
-			move_issue_percentage = { 
-				from = pluralism 
-				to = moralism
-				value = 0.1
+			dominant_issue = {
+				value = moralism
+				factor = 0.1
 			}
 		}
 	}

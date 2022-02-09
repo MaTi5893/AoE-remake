@@ -25,39 +25,6 @@ political_decisions = {
         }
     }
 
-    macedonia_stronk = {
-        picture = greater_macedonia
-        potential = {
-            tag = MCD
-            NOT = {
-                has_country_flag = macedonia_kingdom
-            }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-            is_vassal = no
-        }
-        effect = {
-            TUR_819 = {
-                add_core = THIS
-            }
-            TUR_819 = {
-                add_core = THIS
-            }
-            808 = {
-                add_core = THIS
-            }
-            add_accepted_culture = greek
-            set_country_flag = macedonia_kingdom
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     mosquito_bite = {
         picture = moskito_coast_reserve
         potential = {
@@ -436,7 +403,7 @@ political_decisions = {
             }
             set_country_flag = grand_lithuania
             prestige = 15
-            add_accepted_culture = byelorussian
+            add_accepted_culture = ukrainian
         }
         ai_will_do = {
             factor = 1
@@ -640,52 +607,6 @@ political_decisions = {
             }
             set_country_flag = became_greater_armenia
             badboy = 15
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    armenia_pontic = {
-        picture = unite_with_greece
-        potential = {
-            exists = yes
-            tag = ARM
-            NOT = {
-                has_country_flag = pontic_armenians
-            }
-        }
-        allow = {
-            owns = 882
-        }
-        effect = {
-            ARM = {
-                add_accepted_culture = pontic
-            }
-            set_country_flag = pontic_armenians
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    armenia_cappadocian = {
-        picture = unite_with_greece
-        potential = {
-            exists = yes
-            tag = ARM
-            NOT = {
-                has_country_flag = cappadocian_armenians
-            }
-        }
-        allow = {
-            owns = 879
-        }
-        effect = {
-            ARM = {
-                add_accepted_culture = cappadocian
-            }
-            set_country_flag = cappadocian_armenians
         }
         ai_will_do = {
             factor = 1

@@ -46,12 +46,14 @@ political_decisions = {
         }
         effect = {
             remove_country_modifier = horde_society
-	    militancy = 9
-	    consciousness = 3
+			any_pop = {
+				militancy = 9
+				consciousness = 3
+			}
             prestige = 10
       	    add_country_modifier = {
-		name = academic_confusion
-		duration = 3650
+				name = academic_confusion
+				duration = 3650
 			}
             set_country_flag = ended_nomadic_lifestyle
         }

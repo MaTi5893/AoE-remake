@@ -48,60 +48,48 @@ country_event = {
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
 		}
 		random_owned = {
 			limit = {
-				occupied_by = THIS
-				any_pop = {
-					pop_majority_culture = catalan
-				}
+				controlled_by = THIS
+				pop_majority_culture = catalan
 				NOT = { country_units_in_province = THIS }
 			}
 			change_controller = REB
@@ -234,7 +222,6 @@ country_event = {
 							}
 						}
 					}
-					release_vassal = VLP
 					random_owned = {
 						limit = {
 							owner = {

@@ -1136,17 +1136,6 @@ turko_semitic = {
 caucasian = {
     leader = russian
     unit = RussianGC
-        #north_caucasian = {
-        #color = {252 255 161}
-        #first_names = {
-        #    Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil Abatiy Bate Belatse Blaneshu Dzeghaschte Discheshu Foqwe Ghwaze Hebale Hezeishe Hetezchiqwe #Jatawe Lawirsen Lhostenasch Mamish Nartschawe Nart Pschibiy Pagwe Psebide Qideghaze Qwbatiy Qwsh Zhanqeit Yapenes Wezrej Tsatsu Teimbolet
-        #}
-        #
-        #last_names = {
-        #    Mollah Bek Aghwrbiyç Alijiqwe Dzuneç Gushina Gushipsaç Dzadzooç Hatsiquaç Jirandiqua Mashiquaç Naly Nartby Shoomaquaç Tsikira Zhambora
-        #}
-        #radicalism = 10
-        #}
 
     dagestani = {
         color = {134 100 49}
@@ -1182,16 +1171,6 @@ caucasian = {
             Neghwey al-Shishani Shapsug Zhaney Temirgoy Natukhai Syupako Abadzehs Kerzedzh Kuytsuk Khatirame Birdzh Cherch Ubykhs Mamkhegh Kabarday Cherkess Hatuqwai Bzhedug Kabardi Adyghe
         }
         radicalism = 20
-    }
-    north_caucasian = {
-        color = {252 255 161}
-        first_names = {
-            Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil
-            }
-
-        last_names = {
-            Mollah Bek
-            }
     }
 }
 
@@ -2860,15 +2839,6 @@ central_african = {
         }
 
         last_names = { Kasang Nambing Kalong Mukaz Ditend Yaava Namwan Naweej Kamong Isot Kat Muteba
-        }
-    }
-	
-    african_minor = {
-        color = { 63 32 10 }
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife #Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Mussa Mutato Bowelle Makeda Nzinga Sundiata
         }
     }
 }

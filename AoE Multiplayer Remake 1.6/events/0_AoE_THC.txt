@@ -233,7 +233,7 @@ country_event = {
     option = {
         name = "Sell it."
         money = 500000
-        ai_chance = { factor = 95 }
+		money = 500000
         FROM = { country_event = 180500003 }
         prestige = -5
 		relation = {
@@ -244,17 +244,17 @@ country_event = {
 			badboy = -5
 			money = -500000
 		}
-		money = 500000
+		ai_chance = { factor = 95 }
     }
 
     option = {
         name = "No!"
-        ai_chance = { factor = 5 }
 		prestige = 5
 		relation = {
 			who = USA
 			value = -25
 		}
+		ai_chance = { factor = 5 }
     }
 }
 country_event = {

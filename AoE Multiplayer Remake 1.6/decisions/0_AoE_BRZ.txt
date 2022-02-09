@@ -34,11 +34,15 @@ political_decisions = {
 		allow = {
 			OR = {
 				AND = {
-					is_independent = yes
+					is_vassal = no
+					is_substate = no
 					average_militancy = 6
 				}
 				AND = {
-					is_independent = no
+					OR = {
+						is_vassal = yes
+						is_substate = yes
+					}
 					OR = {
 						overlord = {
 							NOT = { government = hms_government }
