@@ -464,7 +464,7 @@ political_decisions = {
 	
 	show_tech_school_menu = {
 		alert = no
-		picture = academy
+		picture = gtfo
 		potential = {
 			ai = no
 			NOT = { has_country_flag = showing_tech_school_changes }
@@ -478,7 +478,7 @@ political_decisions = {
 	
 	hide_tech_school_menu = {
 		alert = no
-		picture = academy
+		picture = gtfo
 		potential = {
 			ai = no
 			has_country_flag = showing_tech_school_changes

@@ -105,124 +105,125 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    form_our_empire = {
-        picture = peacock_throne
-        potential = {
-            is_culture_group = south_asian
-            NOT = { has_country_flag = founded_new_empire }
-            NOT = { tag = DLH }
-            NOT = { tag = MUG }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                owns = 1236
-                1236 = {
-                    owner = {
-                        in_sphere = THIS
-                    }
-                }
-            }
-            OR = {
-                owns = 1251
-                1251 = {
-                    owner = {
-                        in_sphere = THIS
-                    }
-                }
-            }
-            OR = {
-                owns = 1297
-                1297 = {
-                    owner = {
-                        in_sphere = THIS
-                    }
-                }
-            }
-            OR = {
-                owns = 1283
-                1283 = {
-                    owner = {
-                        in_sphere = THIS
-                    }
-                }
-            }
-            MUG = {
-                is_greater_power = no
-                NOT = { number_of_states = 2 }
-            }
-            is_greater_power = yes
-        }
-        effect = {
-            set_country_flag = founded_new_empire
-            HND = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
-            random_owned = {
-                1251 = {
-                    limit = {
-                        NOT = { owned_by = THIS }
-                        owner = { in_sphere = THIS }
-                        capital_scope = {
-                            is_core = HND
-                        }
-                    }
-                    owner = {
-                        annex_to = THIS
-                    }
-                }
-            }
-            random_owned = {
-                1236 = {
-                    limit = {
-                        NOT = { owned_by = THIS }
-                        owner = { in_sphere = THIS }
-                        capital_scope = {
-                            is_core = HND
-                        }
-                    }
-                    owner = {
-                        annex_to = THIS
-                    }
-                }
-            }
-            random_owned = {
-                1297 = {
-                    limit = {
-                        NOT = { owned_by = THIS }
-                        owner = { in_sphere = THIS }
-                        capital_scope = {
-                            is_core = HND
-                        }
-                    }
-                    owner = {
-                        annex_to = THIS
-                    }
-                }
-            }
-            random_owned = {
-                1283 = {
-                    limit = {
-                        NOT = { owned_by = THIS }
-                        owner = { in_sphere = THIS }
-                        capital_scope = {
-                            is_core = HND
-                        }
-                    }
-                    owner = {
-                        annex_to = THIS
-                    }
-                }
-            }
-            1236 = {
-                secede_province = MUG
-            }
-            create_vassal = MUG
-        }
-        ai_will_do = { factor = 1 }
-    }
+    #form_our_empire = {
+    #    picture = peacock_throne
+    #    potential = {
+    #        is_culture_group = south_asian
+    #        NOT = { has_country_flag = founded_new_empire }
+    #        NOT = { tag = DLH }
+    #        NOT = { tag = MUG }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        OR = {
+    #            owns = 1236
+    #            1236 = {
+    #                owner = {
+    #                    in_sphere = THIS
+    #                }
+    #            }
+    #        }
+    #        OR = {
+    #            owns = 1251
+    #            1251 = {
+    #                owner = {
+    #                    in_sphere = THIS
+    #                }
+    #            }
+    #        }
+    #        OR = {
+    #            owns = 1297
+    #            1297 = {
+    #                owner = {
+    #                    in_sphere = THIS
+    #                }
+    #            }
+    #        }
+    #        OR = {
+    #            owns = 1283
+    #            1283 = {
+    #                owner = {
+    #                    in_sphere = THIS
+    #                }
+    #            }
+    #        }
+    #        MUG = {
+    #            is_greater_power = no
+    #            NOT = { number_of_states = 2 }
+    #        }
+    #        is_greater_power = yes
+    #    }
+    #    effect = {
+    #        set_country_flag = founded_new_empire
+    #        HND = {
+    #            all_core = {
+    #                add_core = THIS
+    #            }
+    #        }
+    #        random_owned = {
+    #            1251 = {
+    #                limit = {
+    #                    NOT = { owned_by = THIS }
+    #                    owner = { in_sphere = THIS NOT = { tag}
+    #                    capital_scope = {
+    #                        is_core = HND
+    #                    }
+	#					
+    #                }
+    #                owner = {
+    #                    annex_to = THIS
+    #                }
+    #            }
+    #        }
+    #        random_owned = {
+    #            1236 = {
+    #                limit = {
+    #                    NOT = { owned_by = THIS }
+    #                    owner = { in_sphere = THIS }
+    #                    capital_scope = {
+    #                        is_core = HND
+    #                    }
+    #                }
+    #                owner = {
+    #                    annex_to = THIS
+    #                }
+    #            }
+    #        }
+    #        random_owned = {
+    #            1297 = {
+    #                limit = {
+    #                    NOT = { owned_by = THIS }
+    #                    owner = { in_sphere = THIS }
+    #                    capital_scope = {
+    #                        is_core = HND
+    #                    }
+    #                }
+    #                owner = {
+    #                    annex_to = THIS
+    #                }
+    #            }
+    #        }
+    #        random_owned = {
+    #            1283 = {
+    #                limit = {
+    #                    NOT = { owned_by = THIS }
+    #                    owner = { in_sphere = THIS }
+    #                    capital_scope = {
+    #                        is_core = HND
+    #                    }
+    #                }
+    #                owner = {
+    #                    annex_to = THIS
+    #                }
+    #            }
+    #        }
+    #        1236 = {
+    #            secede_province = MUG
+    #        }
+    #        create_vassal = MUG
+    #    }
+    #    ai_will_do = { factor = 1 }
+    #}
 
     form_rajputana = {
         picture = become_rajputana
