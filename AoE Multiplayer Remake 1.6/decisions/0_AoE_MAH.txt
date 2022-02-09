@@ -84,7 +84,8 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						HYD = { owns = 1286 }
+						exists = BIJ
+						BIJ = { part_of_sphere = no }
 					}
 				}
 				owner = {
