@@ -69,60 +69,60 @@ country_event = {
         }
     }
 }
-country_event = {
-    id = 114301
-    title = "People flee to the colonys!"
-    desc = "EVTDESC114301"
-    picture = colonization
-    fire_only_once = yes
-
-    trigger = {
-        tag = POR
-        year = 1701
-    }
-
-    mean_time_to_happen = {
-        months = 4
-    }
-
-    option = {
-        name = "Discourage the migration"
-        POR_518 = {
-            add_province_modifier = {
-                name = small_emigration_boom
-                duration = 3650
-            }
-        }
-        PBZ = {
-            add_country_modifier = {
-                name = small_immigration_boom
-                duration = 7300
-            }
-        }
-        ai_chance = {
-            factor = 99
-        }
-    }
-
-    option = {
-        name = "Encourage the migration"
-        POR_518 = {
-            add_province_modifier = {
-                name = emigration_boom
-                duration = 1825
-            }
-        }
-        PBZ = {
-            add_country_modifier = {
-                name = immigration_boom
-                duration = 7300
-            }
-        }
-        ai_chance = {
-            factor = 1
-        }
-    }
-}
+#country_event = {
+#    id = 114301
+#    title = "People flee to the colonys!"
+#    desc = "EVTDESC114301"
+#    picture = colonization
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = POR
+#        year = 1701
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 4
+#    }
+#
+#    option = {
+#        name = "Discourage the migration"
+#        POR_518 = {
+#            add_province_modifier = {
+#                name = small_emigration_boom
+#                duration = 3650
+#            }
+#        }
+#        PBZ = {
+#            add_country_modifier = {
+#                name = small_immigration_boom
+#                duration = 7300
+#            }
+#        }
+#        ai_chance = {
+#            factor = 99
+#        }
+#    }
+#
+#    option = {
+#        name = "Encourage the migration"
+#        POR_518 = {
+#            add_province_modifier = {
+#                name = emigration_boom
+#                duration = 1825
+#            }
+#        }
+#        PBZ = {
+#            add_country_modifier = {
+#                name = immigration_boom
+#                duration = 7300
+#            }
+#        }
+#        ai_chance = {
+#            factor = 1
+#        }
+#    }
+#}
 
 country_event = {
     id = 114302
