@@ -101,7 +101,7 @@ political_decisions = {
 			add_country_modifier = {
 				name = craftsmen_fix_cooldown
 				duration = 3650
-				}
+			}
 				
 				
 			any_pop = {
@@ -109,47 +109,10 @@ political_decisions = {
 					is_primary_culture = no
 					is_accepted_culture = no
 					type = bureaucrats
-					location = {
-						OR = {
-							trade_goods = fish
-							trade_goods = cattle
-							trade_goods = fruit
-							trade_goods = wool
-							trade_goods = cotton
-							trade_goods = tea
-							trade_goods = coffee
-							trade_goods = tobacco
-							trade_goods = silk
-							trade_goods = opium
-							trade_goods = dye
-							trade_goods = grain
-						}
-					}
 				}
-				pop_type = farmers		
+				pop_type = artisans		
 			}
 			
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-					type = bureaucrats
-					location = {
-						OR = {
-							trade_goods = coal
-							trade_goods = iron
-							trade_goods = tropical_wood
-							trade_goods = sulphur
-							trade_goods = precious_metal
-							#trade_goods = precious_goods
-							trade_goods = oil
-							trade_goods = timber
-							trade_goods = rubber
-						}
-					}
-				}
-				pop_type = labourers		
-			}
 		}
 		ai_will_do = {
 			factor = 0

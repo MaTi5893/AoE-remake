@@ -166,48 +166,6 @@ machine_parts_factory = {
     strategic_factory = yes
 }
 
-synthetic_oil_factory = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 800
-        steel = 1000
-        cement = 1000
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = synthetic_oil_factory
-    pop_build_factory = yes
-    strategic_factory = yes
-}
-
-fuel_refinery = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = fuel_refinery
-    pop_build_factory = yes
-    strategic_factory = yes
-}
-
 ############# NAVAL FACTORIES
 
 steamer_shipyard = {

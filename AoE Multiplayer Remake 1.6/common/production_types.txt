@@ -410,38 +410,7 @@ machine_parts_factory = {
     }
 }
 
-synthetic_oil_factory = {
-    template = synthetics_factory_template
-    input_goods = {
-        coal = 4.9        #11.25    total input+maint = 20.65
-    }
-    output_goods = oil
-    value = 1            #12
-    bonus = {
-        trigger = { trade_goods_in_state = coal }
-        value = 0.15
-    }
-}
-
 ############# ADVANCED FACTORIES
-
-fuel_refinery = {
-    template = advanced_factory_template
-    input_goods = {
-        oil = 2.5            #30    total input+maint = 40
-    }
-    output_goods = fuel
-    value = 3            #45
-    bonus = {
-        trigger = {
-            OR = {
-                trade_goods_in_state = oil
-                has_building = synthetic_oil_factory
-                }
-            }
-        value = 0.25
-    }
-}
 
 steamer_shipyard = {
     template = factory_template
@@ -467,8 +436,9 @@ steamer_shipyard = {
 luxury_clothes_factory = {
     template = factory_template
     input_goods = {
+		regular_clothes = 0.9
         dye = 0.25    #3
-        silk = 5        #50    total input+maint = 62.825
+        silk = 4        #50    total input+maint = 62.825
     }
     output_goods = luxury_clothes
     value = 2.5            #75
@@ -483,8 +453,16 @@ luxury_clothes_factory = {
     }
     bonus = {
         trigger = { trade_goods_in_state = silk }
-        value = 0.15
+        value = 0.1
     }
+	bonus = {
+		trigger = { trade_goods_in_state = fur }
+		value = 0.1
+	}
+	bonus = {
+		trigger = { has_building = regular_clothes_factory }
+		value = 0.15
+	}
 }
 
 luxury_furniture_factory = {
@@ -943,11 +921,11 @@ iron_mine = {
     mine = yes
 }
 
-oil_rig = {
-    template = RGO_template_labourers
-    output_goods = oil
-    value = 1
-    mine = yes
+fur_farm = {
+    template = RGO_template_farmers
+    output_goods = fur
+    value = 2
+    farm = yes
 }
 
 opium_plantation = {
@@ -1209,8 +1187,9 @@ artisan_steamer = {
 
 artisan_luxury_clothes = {
     input_goods = {
+        regular_clothes = 0.9
         dye = 0.25    #3
-        silk = 5.0        #50    total input+maint = 53
+        silk = 4       #50    total input+maint = 53
     }
     output_goods = luxury_clothes
     value = 2.2            #66
