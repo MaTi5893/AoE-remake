@@ -33,6 +33,17 @@ furriers = {
     }
 }
 
+fur_factory_invention = {
+	limit = {
+		freedom_of_trade = 1
+	}
+	news = no
+	chance = { base = 100 }
+	effect = {
+		activate_building = luxury_clothes_fur_factory
+	}
+}
+
 #organized_factories
 work_classification = {
     limit = { organized_factories = 1 }

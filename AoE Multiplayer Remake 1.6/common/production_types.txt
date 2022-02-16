@@ -246,6 +246,31 @@ cheap_military_factory_template = {
     workforce = 7500
 }
 
+automobile_factory = {
+    template = machine_part_user_template
+    input_goods = {
+        machine_parts = 1.05    #38.325
+        lumber = 1.5    #21
+        cattle = 0.5        #3.5
+        steel = 3        #14.1    total input+maint = 84.925
+    }
+
+    output_goods = automobiles
+    value = 3.1            #93
+    bonus = {
+        trigger = { has_building = machine_parts_factory }
+        value = 0.1
+    }
+    bonus = {
+        trigger = { has_building = steel_factory }
+        value = 0.1
+    }
+    bonus = {
+        trigger = { has_building = electric_gear_factory }
+        value = 0.05
+    }
+}
+
 ############# STRATEGIC FACTORIES
 
 machine_parts_factory = {
@@ -295,6 +320,38 @@ luxury_clothes_factory = {
 		regular_clothes = 0.9
         dye = 0.25    #3
         silk = 4        #50    total input+maint = 62.825
+    }
+    output_goods = luxury_clothes
+    value = 2.5            #75
+    bonus = {
+        trigger = {
+            OR = {
+                has_building = dye_factory
+                trade_goods_in_state = dye
+            }
+        }
+        value = 0.1
+    }
+    bonus = {
+        trigger = { trade_goods_in_state = silk }
+        value = 0.1
+    }
+	bonus = {
+		trigger = { trade_goods_in_state = fur }
+		value = 0.1
+	}
+	bonus = {
+		trigger = { has_building = regular_clothes_factory }
+		value = 0.15
+	}
+}
+
+luxury_clothes_fur_factory = {
+    template = factory_template
+    input_goods = {
+		regular_clothes = 0.9
+        dye = 0.25    #3
+        fur = 4        #50    total input+maint = 62.825
     }
     output_goods = luxury_clothes
     value = 2.5            #75
@@ -876,6 +933,27 @@ tropical_wood_lodge = {
 
 ### Artisans #####################################################################################
 
+artisan_automobile = {
+    input_goods = {
+        machine_parts = 1.05    #36.5
+        cattle = 1.5    #24
+        lumber = 0.5        #7
+        steel = 3        #10.58    total input+maint = 89
+    }
+
+    output_goods = automobiles
+    value = 1.43            #100
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 20000
+}
+
 ############# STRATEGIC FACTORIES
 
 artisan_machine_parts = {
@@ -897,23 +975,6 @@ artisan_machine_parts = {
 }
 
 ############# ADVANCED FACTORIES
-
-artisan_fuel = {
-    input_goods = {
-        oil = 1.6            #19.2    total input+maint = 19.2
-    }
-    output_goods = fuel
-    value = 1.5            #22.5
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
 
 artisan_steamer = {
     input_goods = {
@@ -943,6 +1004,26 @@ artisan_luxury_clothes = {
         regular_clothes = 0.9
         dye = 0.25    #3
         silk = 4       #50    total input+maint = 53
+    }
+    output_goods = luxury_clothes
+    value = 2.2            #66
+
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_luxury_fur_clothes = {
+    input_goods = {
+        regular_clothes = 0.9
+        dye = 0.25    #3
+        fur = 4       #50    total input+maint = 53
     }
     output_goods = luxury_clothes
     value = 2.2            #66

@@ -8,6 +8,30 @@
 # cost = x #==> extra construction cost (added to goods cost estimations)
 # time = x #==> number of days to build.
 #
+
+automobile_factory = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        #electric_gear = 200
+        steel = 400
+        cement = 400
+        #livestock = 400
+        #lumber = 400
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = automobile_factory
+    pop_build_factory = yes
+    advanced_factory = yes
+}
+
 ############# STRATEGIC FACTORIES
 
 machine_parts_factory = {
@@ -92,6 +116,26 @@ luxury_clothes_factory = {
     onmap = no
 
     production_type = luxury_clothes_factory
+    pop_build_factory = yes
+}
+
+luxury_clothes_fur_factory = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = luxury_clothes_fur_factory
     pop_build_factory = yes
 }
 
