@@ -65,8 +65,14 @@ political_decisions = {
 		
 		allow = {
 			OR = {
-			year = 1736
-			nationalism_n_imperialism = 1
+				AND = {
+					year = 1736
+					war = no
+				}
+				AND = {
+					nationalism_n_imperialism = 1
+					war = no
+				}
 			}
 			1008 = {
 				controlled_by = THIS
@@ -86,6 +92,9 @@ political_decisions = {
 			set_country_flag = removed_russian_claims
 			all_core = {
 				remove_core = RUS
+			}
+			all_core = {
+				remove_core = TOR
 			}
 			prestige = 20
 		}
@@ -351,7 +360,7 @@ political_decisions = {
 			994 = {
 				add_province_modifier = {
 					name = recently_built_city
-					duration = 1825
+					duration = 365
 				}
 				life_rating = 5
 				change_province_name = "St. Erikborg"
@@ -360,12 +369,10 @@ political_decisions = {
 			}
 			354 = {
 				life_rating = 5
-				naval_base = 1
 				fort = 2
 			}
 			349 = {
 				life_rating = 5
-				naval_base = 1
 				fort = 2
 			}
 			add_accepted_culture = latvian
