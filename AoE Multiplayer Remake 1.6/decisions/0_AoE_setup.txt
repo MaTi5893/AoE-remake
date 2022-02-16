@@ -105,7 +105,7 @@ political_decisions = {
 				limit = {
 					culture = tatar
 				}
-				reduce_pop = 1.5
+				reduce_pop = 3
 			}
 			TOR = {
 				any_pop = {
@@ -498,7 +498,7 @@ political_decisions = {
 						NOT = { region = CHI_1481 }
 						NOT = { region = CHI_2562 }
 					}
-					reduce_pop = 0.4
+					reduce_pop = 0.45
 				}
 			}
 		}
