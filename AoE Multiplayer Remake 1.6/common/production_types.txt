@@ -246,151 +246,7 @@ cheap_military_factory_template = {
     workforce = 7500
 }
 
-############# LATE GAME FACTORIES
-
-aeroplane_factory = {
-    template = machine_part_user_template
-    input_goods = {
-        machine_parts = 1.07    #39.055
-        electric_gear = 2.5    #35
-        rubber = 0.2          #1.4
-        lumber = 5.45         #5.995    total input+maint = 89
-    }
-    output_goods = aeroplanes
-    value = 1.4            #98
-    bonus = {
-        trigger = { has_building = machine_parts_factory }
-        value = 0.10
-    }
-    bonus = {
-        trigger = { has_building = electric_gear_factory }
-        value = 0.10
-    }
-    bonus = {
-        trigger = { has_building = lumber_mill }
-        value = 0.05
-    }
-}
-
-barrel_factory = {
-    template = machine_part_user_template
-    input_goods = {
-        automobiles = 1.2    #36
-        machine_parts = 0.85    #31
-        electric_gear = 1    #14
-        #rubber = 1        #7
-    }
-    output_goods = barrels
-    value = 1.4            #98    total input+maint = 89
-    bonus = {
-        trigger = { has_building = automobile_factory }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { has_building = machine_parts_factory }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { has_building = electric_gear_factory }
-        value = 0.05
-    }
-}
-
-automobile_factory = {
-    template = machine_part_user_template
-    input_goods = {
-        machine_parts = 1.05    #38.325
-        lumber = 1.5    #21
-        cattle = 0.5        #3.5
-        steel = 3        #14.1    total input+maint = 84.925
-    }
-
-    output_goods = automobiles
-    value = 3.1            #93
-    bonus = {
-        trigger = { has_building = machine_parts_factory }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { has_building = steel_factory }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { has_building = electric_gear_factory }
-        value = 0.05
-    }
-}
-
-radio_factory = {
-    template = advanced_factory_template
-    input_goods = {
-        glass = 9.65         #28
-        electric_gear = 3.25    #45.5      total input+maint = 87
-        lumber = 0.25        #0.5
-    }
-    output_goods = radio
-    value = 6.0            #96
-    bonus = {
-        trigger = { has_building = electric_gear_factory }
-        value = 0.15
-    }
-        bonus = {
-        trigger = { has_building = glass_factory }
-        value = 0.075
-    }
-        bonus = {
-        trigger = { has_building = lumber_mill }
-        value = 0.025
-    }
-}
-
-telephone_factory = {
-    template = advanced_factory_template
-    input_goods = {
-        glass = 9.4         #28
-        electric_gear = 3.25    #45.5     total input+maint = 87
-        steel = 0.25            #1.2
-    }
-    output_goods = telephones
-    value = 6.0            #96
-        bonus = {
-        trigger = { has_building = electric_gear_factory }
-        value = 0.15
-    }
-    bonus = {
-        trigger = { has_building = glass_factory }
-        value = 0.075
-    }
-        bonus = {
-        trigger = { has_building = steel_factory }
-        value = 0.025
-    }
-}
-
 ############# STRATEGIC FACTORIES
-
-electric_gear_factory = {
-    template = advanced_factory_template
-    input_goods = {
-        rubber = 5        #35
-        coal = 2        #4.6
-        steel = 3.75        #17.6    total input+maint = 67
-    }
-    output_goods = electric_gear
-    value = 5.5            #77
-    bonus = {
-        trigger = { trade_goods_in_state = rubber }
-        value = 0.05
-    }
-    bonus = {
-        trigger = { trade_goods_in_state = coal }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { has_building = steel_factory }
-        value = 0.05
-    }
-}
 
 machine_parts_factory = {
     template = machine_part_user_template
@@ -864,6 +720,19 @@ RGO_template_labourers = {
     workforce = 40000
 }
 
+sugar_plantation = {
+	template = RGO_template_farmers
+	output_goods = sugar
+	value = 1
+	farm = yes
+}
+
+ivory_hunting_grounds = {
+	template = RGO_template_farmers
+	output_goods = ivory
+	value = 1
+	farm = yes
+}
 
 cattle_ranch = {
     template = RGO_template_farmers
@@ -1007,123 +876,7 @@ tropical_wood_lodge = {
 
 ### Artisans #####################################################################################
 
-artisan_aeroplane = {
-    input_goods = {
-        machine_parts = 1.06    #38.69
-        electric_gear = 2.36    #32
-        rubber = 0.25          #7
-        lumber = 3.5         #3.3    total input+maint = 90
-    }
-    output_goods = aeroplanes
-    value = 0.91            #100
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
-
-artisan_barrel = {
-    input_goods = {
-        automobiles = 0.4    #21
-        machine_parts = 0.8    #29.2
-        electric_gear = 1    #16
-        #rubber = 1        #7
-    }
-    output_goods = barrels
-    value = 1.0            #98    total input+maint = 83
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
-
-artisan_automobile = {
-    input_goods = {
-        machine_parts = 1.05    #36.5
-        cattle = 1.5    #24
-        lumber = 0.5        #7
-        steel = 3        #10.58    total input+maint = 89
-    }
-
-    output_goods = automobiles
-    value = 1.43            #100
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
-
-artisan_radio = {
-    input_goods = {
-        glass = 10         #29
-        electric_gear = 3    #48      total input+maint = 87
-    }
-    output_goods = radio
-    value = 6.5            #104
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
-
-artisan_telephone = {
-    input_goods = {
-        glass = 15         #43.5
-        electric_gear = 2.5    #40     total input+maint = 93.5
-    }
-    output_goods = telephones
-    value = 6.5            #104
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
-
 ############# STRATEGIC FACTORIES
-
-artisan_electric_gear = {
-    input_goods = {
-        rubber = 4        #28
-        coal = 5        #11.5
-        steel = 3.75        #17.5    total input+maint = 67
-    }
-    output_goods = electric_gear
-    value = 5            #80
-
-    owner = {
-        poptype = artisans
-        effect = output
-    }
-
-    type = artisan
-
-    workforce = 20000
-}
 
 artisan_machine_parts = {
     input_goods = {

@@ -20,19 +20,17 @@ military_goods = {
         cost = 10.00
         color = { 255 39 12 }
     }
-    barrels = {
-        cost = 70.00
-        color = { 55 41 9 }
-        available_from_start = no
-    }
-    aeroplanes = {
-        cost = 70.00
-        color = { 221 213 182 }
-        available_from_start = no
-    }
 }
 
 raw_material_goods = {
+	ivory = {
+        cost = 70.00
+        color = { 55 41 9 }
+    }
+	sugar = {
+        cost = 70.00
+        color = { 221 213 182 }
+    }
     cotton = {
         cost = 2.0
         color = { 255 255 255 }

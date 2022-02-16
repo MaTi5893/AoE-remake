@@ -537,25 +537,6 @@ electric_machinery = {
         }
     }
 }
-oil_pumping_machinery = {
-    limit = { pneumatic_and_hydraulics = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            iron_railroad = 1
-        }
-        modifier = {
-            factor = 2
-            bessemer_process = 1
-        }
-    }
-    effect = {
-        factory_goods_output = {
-            oil = 0.1
-        }
-    }
-}
 drying_techniques = {
     limit = { pneumatic_and_hydraulics = 1 }
     chance = {
@@ -1288,25 +1269,7 @@ chemical_wood_pulp_process = {
         }
     }
 }
-rubber_vulcanization = {
-    limit = { inorganic_chemistry = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            combustion_engine = 1
-        }
-        modifier = {
-            factor = 2
-            business_banks = 1
-        }
-    }
-    effect = {
-        factory_goods_output = {
-            rubber = 1
-        }
-    }
-}
+
 catalytic_fermentative_process = {
     limit = { inorganic_chemistry = 1 }
     chance = {
@@ -1436,25 +1399,7 @@ edison_light_bulb = {
     effect = {
     }
 }
-bell_n_greys_telephones = {
-    limit = { electricity = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            electrical_power_generation = 1
-        }
-        modifier = {
-            factor = -6
-            NOT = {
-                invention = edison_light_bulb
-            }
-        }
-    }
-    effect = {
-        factory_goods_output = { electric_gear = 0.03 }
-    }
-}
+
 electrical_lighting = {
     limit = { electricity = 1 }
     chance = {
@@ -1532,26 +1477,6 @@ scientific_surgery = {
     }
 }
 
-vacuum_tube = {
-    limit = {
-        electricity = 1
-        electrical_power_generation = 1
-    }
-    chance = {
-        base = 1
-        modifier = {
-            factor = 5
-            invention = direct_current
-        }
-        modifier = {
-            factor = 5
-            invention = alternating_current
-        }
-    }
-    effect = {
-        factory_goods_output = { electric_gear = 0.03 }
-    }
-}
 #
 vaccination = {
     limit = { chemistry_and_electricity_8 = 1 }
@@ -1627,26 +1552,6 @@ rotherham_plough = {
     }
 }
 
-telephone_switchboard = {
-    limit = {
-        electricity = 1
-    }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 5
-            invention = bell_n_greys_telephones
-        }
-        modifier = {
-            factor = 5
-            invention = edison_light_bulb
-        }
-    }
-    effect = {
-        factory_goods_output = { electric_gear = 0.03 }
-    }
-}
-
 cotton_gin = {
     limit = {
         high_pressure_steam_engine = 1
@@ -1706,9 +1611,7 @@ carl_bosch = {
     }
     effect = {
         factory_goods_output = { sulphur = 0.2 }
-        factory_goods_output = { oil = 0.2 }
         factory_goods_output = { fertilizer = 0.2 }
-        factory_goods_output = { fuel = 0.2 }
     }
 }
 
