@@ -1,0 +1,58 @@
+sprite = 13
+strata = poor
+allowed_to_vote = no
+is_artisan = yes
+is_slave = yes
+color = { 53 53 53 }
+unemployment = no
+
+rebel =
+{
+    cavalry = 0.0
+    artillery = 0.0
+    cuirassier = 0.0
+    dragoon = 0.0
+    guard = 0.0
+    hussar = 0.0
+    infantry = 0.0
+    irregular = 1
+}
+
+
+everyday_needs = {
+    coal = 1
+}
+
+luxury_needs = {
+    opium = 1
+}
+
+ideologies = {
+    liberal = {
+        factor = 4
+    }
+    conservative = {
+        factor = 1
+    }
+}
+issues = {
+    full_citizenship =  {
+        factor = 3
+    }
+    no_slavery = {
+        factor = 5
+    }
+    yes_slavery = {
+        factor = 2
+    }
+}
+promote_to =
+{
+	slaves = {
+		factor = 0.01
+		modifier = {
+			factor = 1
+            NOT = { literacy = 1 }
+		}
+	}
+}

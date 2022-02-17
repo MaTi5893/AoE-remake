@@ -117,7 +117,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 4000
+        size = 2000
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 2000
     }
 }
 #Dinguiraye (180000/45000 POPS)
@@ -390,7 +396,12 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 5000
+        size = 2500
     }
 
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 2500
+    }
 }

@@ -116,7 +116,13 @@
     slaves = {
         culture = somali
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = somali
+        religion = animist
+        size = 550
     }
 }
 #uncolonized/ruled by the Sultan of Geledi in 1836
@@ -393,5 +399,4 @@
         religion = sunni
         size = 3625
     }
-
 }

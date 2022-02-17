@@ -176,7 +176,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 7000
+        size = 3500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 3500
     }
 }
 #Jallon Region (384000) #see Guinea.txt for balance of Region
@@ -276,7 +282,12 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 13000
+        size = 6500
     }
 
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 6500
+    }
 }

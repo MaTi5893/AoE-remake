@@ -2624,7 +2624,7 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 200
+        size = 100
     }
 
     aristocrats = {
@@ -2655,6 +2655,12 @@
         culture = native_american_minor
         religion = animist
         size = 900
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 100
     }
 }
 #Okmulgee (8000/2000 POPS)
@@ -2710,7 +2716,7 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 50
+        size = 25
     }
 
     soldiers = {
@@ -2729,6 +2735,12 @@
         culture = native_american_minor
         religion = animist
         size = 1800
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 25
     }
 }
 #Texas Region (67400)
@@ -2774,7 +2786,7 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 750
+        size = 375
     }
 
     aristocrats = {
@@ -2806,9 +2818,15 @@
         religion = animist
         size = 225
     }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 375
+    }
 }
-133 = {
 #Austin (14000/3500 POPS)
+133 = {
     aristocrats = {
         culture = spanish_american
         religion = catholic
@@ -2849,105 +2867,6 @@
         culture = spanish_american
         religion = catholic
         size = 2220
-    }
-
-    slaves = {
-        culture = afro_american
-        religion = protestant
-        size = 500
-    }
-
-    aristocrats = {
-        culture = native_american_minor
-        religion = animist
-        size = 2
-    }
-
-    clergymen = {
-        culture = native_american_minor
-        religion = animist
-        size = 3
-    }
-
-    artisans = {
-        culture = native_american_minor
-        religion = animist
-        size = 15
-    }
-
-    soldiers = {
-        culture = native_american_minor
-        religion = animist
-        size = 5
-    }
-
-    farmers = {
-        culture = native_american_minor
-        religion = animist
-        size = 225
-    }
-
-    aristocrats = {
-        culture = mexican
-        religion = catholic
-        size = 2
-    }
-
-    clergymen = {
-        culture = mexican
-        religion = catholic
-        size = 3
-    }
-
-    artisans = {
-        culture = mexican
-        religion = catholic
-        size = 15
-    }
-
-    soldiers = {
-        culture = mexican
-        religion = catholic
-        size = 5
-    }
-
-    farmers = {
-        culture = mexican
-        religion = catholic
-        size = 225
-    }
-}
-
-#San Antonio (10000/2500 POPS)
-137 = {
-    aristocrats = {
-        culture = spanish_american
-        religion = catholic
-        size = 25
-    }
-
-    clergymen = {
-        culture = spanish_american
-        religion = catholic
-        size = 25
-    }
-
-    artisans = {
-        culture = spanish_american
-        religion = catholic
-        size = 100
-    }
-
-    soldiers = {
-        culture = spanish_american
-        religion = catholic
-        size = 1100
-    }
-
-    farmers = {
-        culture = spanish_american
-        religion = catholic
-        size = 1575
     }
 
     slaves = {
@@ -3014,6 +2933,116 @@
         culture = mexican
         religion = catholic
         size = 225
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 250
+    }
+}
+#San Antonio (10000/2500 POPS)
+137 = {
+    aristocrats = {
+        culture = spanish_american
+        religion = catholic
+        size = 25
+    }
+
+    clergymen = {
+        culture = spanish_american
+        religion = catholic
+        size = 25
+    }
+
+    artisans = {
+        culture = spanish_american
+        religion = catholic
+        size = 100
+    }
+
+    soldiers = {
+        culture = spanish_american
+        religion = catholic
+        size = 1100
+    }
+
+    farmers = {
+        culture = spanish_american
+        religion = catholic
+        size = 1575
+    }
+
+    slaves = {
+        culture = afro_american
+        religion = protestant
+        size = 125
+    }
+
+    aristocrats = {
+        culture = native_american_minor
+        religion = animist
+        size = 2
+    }
+
+    clergymen = {
+        culture = native_american_minor
+        religion = animist
+        size = 3
+    }
+
+    artisans = {
+        culture = native_american_minor
+        religion = animist
+        size = 15
+    }
+
+    soldiers = {
+        culture = native_american_minor
+        religion = animist
+        size = 5
+    }
+
+    farmers = {
+        culture = native_american_minor
+        religion = animist
+        size = 225
+    }
+
+    aristocrats = {
+        culture = mexican
+        religion = catholic
+        size = 2
+    }
+
+    clergymen = {
+        culture = mexican
+        religion = catholic
+        size = 3
+    }
+
+    artisans = {
+        culture = mexican
+        religion = catholic
+        size = 15
+    }
+
+    soldiers = {
+        culture = mexican
+        religion = catholic
+        size = 5
+    }
+
+    farmers = {
+        culture = mexican
+        religion = catholic
+        size = 225
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 125
     }
 }
 #Laredo (6000/1500 POPS)
@@ -3332,7 +3361,13 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = afro_antillean
+        religion = catholic
+        size = 2500
     }
 }
 #Baton Rouge (72000/18000 POPS)
@@ -3554,6 +3589,7 @@
         religion = animist
         size = 75
     }
+
     farmers = {
         culture = native_american_minor
         religion = animist
@@ -3565,31 +3601,37 @@
         religion = animist
         size = 50
     }
+
     bureaucrats = {
         culture = native_american_minor
         religion = animist
         size = 25
     }
+
     officers = {
         culture = native_american_minor
         religion = animist
         size = 10
     }
+
     clergymen = {
         culture = native_american_minor
         religion = animist
         size = 15
     }
+
     artisans = {
         culture = native_american_minor
         religion = animist
         size = 200
     }
+
     soldiers = {
         culture = native_american_minor
         religion = animist
         size = 75
     }
+
     farmers = {
         culture = native_american_minor
         religion = animist
@@ -3647,21 +3689,25 @@
         religion = animist
         size = 2000
     }
+
     clergymen = {
         culture = native_american_minor
         religion = animist
         size = 35
     }
+
     artisans = {
         culture = native_american_minor
         religion = animist
         size = 100
     }
+
     soldiers = {
         culture = native_american_minor
         religion = animist
         size = 25
     }
+
     farmers = {
         culture = native_american_minor
         religion = animist
@@ -4073,7 +4119,6 @@
         religion = animist
         size = 1200
     }
-
 
     farmers = {
         culture = native_american_minor
@@ -4704,7 +4749,6 @@
         religion = animist
         size = 1040
     }
-
 }
 #Springfield (36000/9000 POPS)
 167 = {
@@ -5041,7 +5085,6 @@
         religion = animist
         size = 1840
     }
-
 
     craftsmen = {
         culture = french_canadian
@@ -6075,7 +6118,6 @@
         size = 1004
     }
 
-
     farmers = {
         culture = cherokee
         religion = animist
@@ -6163,7 +6205,6 @@
         religion = animist
         size = 1650
     }
-
 
     soldiers = {
         culture = native_american_minor
@@ -6304,7 +6345,13 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 800
+        size = 400
+    }
+
+    slave_artisans = {
+        culture = afro_antillean
+        religion = catholic
+        size = 400
     }
 }
 #Alabama Region (576000)
@@ -6573,7 +6620,7 @@
         size = 150
     }
 
-        bureaucrats = {
+    bureaucrats = {
         culture = spanish_american
         religion = catholic
         size = 25
@@ -6910,7 +6957,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 20300
+        size = 10150
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 10150
     }
 }
 #Columbia (340000/85000 POPS)
@@ -7036,7 +7089,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 7600
+        size = 3800
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 3800
     }
 }
 #Raleigh (156000/39000 POPS)
@@ -7104,7 +7163,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 9400
+        size = 4700
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 4700
     }
 }
 #Charlotte (136000/34000 POPS)
@@ -7336,7 +7401,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 28000
+        size = 14000
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 14000
     }
 }
 #Manassas (68000/17000 POPS)
@@ -7392,7 +7463,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 9750
+        size = 4875
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 4875
     }
 }
 #Fredericksburg (116000/29000 POPS)
@@ -7448,7 +7525,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 12875
+        size = 6437
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 6438
     }
 }
 #Norfolk (108000/27000 POPS)
@@ -7534,7 +7617,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 10225
+        size = 5112
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 5113
     }
 }
 #Staunton (60000/15000 POPS)
@@ -7590,7 +7679,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 6400
+        size = 3200
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 3200
     }
 }
 #Roanoke (120000/30000 POPS)
@@ -7847,7 +7942,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 22600
+        size = 11300
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 11300
     }
 }
 #Washington (184000/46000 POPS)
@@ -7909,7 +8010,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 26000
+        size = 13000
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 13000
     }
 }
 #Hagerstown (56000/14000 POPS)
@@ -8035,7 +8142,13 @@
     slaves = {
         culture = afro_american
         religion = protestant
-        size = 500
+        size = 250
+    }
+
+    slave_artisans = {
+        culture = afro_american
+        religion = protestant
+        size = 250
     }
 }
 #Pennsylvania Region (1536000)
@@ -9606,5 +9719,4 @@
         religion = protestant
         size = 725
     }
-
 }

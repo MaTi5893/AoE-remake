@@ -276,7 +276,6 @@
         religion = animist
         size = 6000
     }
-
 }
 #Congo Region (116000) #see Congo-Zaire.txt for balance of region
 #uncolonized in 1836/tradepost for Portugal
@@ -315,7 +314,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 5000
+        size = 2500
     }
 
     aristocrats = {
@@ -348,8 +347,12 @@
         size = 15225
     }
 
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 2500
+    }
 }
-
 #Angola - Mbundu (440000)
 #Uncolonized in 1836
 #Benguela (116000/29000 POPS)
@@ -425,7 +428,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 5800
+        size = 2900
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 2900
     }
 }
 #Huambo (208000/52000 POPS)
@@ -463,9 +472,14 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 11000
+        size = 5500
     }
 
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 5500
+    }
 }
 #Angola - Bihe (264000)
 #Uncolonized in 1836
@@ -616,7 +630,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 600
+        size = 300
     }
 
     aristocrats = {
@@ -652,9 +666,20 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 1250
+        size = 625
     }
 
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 300
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 625
+    }
 }
 #Angola - Kwango (232000)
 #Uncolonized in 1836
@@ -915,5 +940,4 @@
         religion = animist
         size = 1100
     }
-
 }

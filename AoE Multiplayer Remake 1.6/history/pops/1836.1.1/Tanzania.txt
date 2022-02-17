@@ -115,7 +115,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 6000
+        size = 3000
     }
 
     aristocrats = {
@@ -146,6 +146,12 @@
         culture = bantu
         religion = sunni
         size = 2650
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 3000
     }
 }
 #Kilwa (188000/47000 POPS)
@@ -321,13 +327,25 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 3000
+        size = 1500
     }
 
     slaves = {
         culture = bantu
         religion = animist
-        size = 2000
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1000
     }
 }
 #Masasi (132000/33000 POPS)
@@ -395,7 +413,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 8000
+        size = 4000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 4000
     }
 }
 #Iringa (300000/75000 POPS)
@@ -697,7 +721,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 24000
+        size = 12000
     }
 
     aristocrats = {
@@ -788,6 +812,12 @@
         culture = bantu
         religion = animist
         size = 2700
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 12000
     }
 }
 #Morogoro (232000/58000 POPS)
@@ -885,7 +915,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 14000
+        size = 7000
     }
 
     aristocrats = {
@@ -916,6 +946,12 @@
         culture = bantu
         religion = animist
         size = 2700
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 7000
     }
 }
 #Ujiji (336000/84000 POPS)
@@ -1213,5 +1249,4 @@
         religion = animist
         size = 8000
     }
-
 }

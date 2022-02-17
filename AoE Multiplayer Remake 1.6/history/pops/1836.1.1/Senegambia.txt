@@ -478,7 +478,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 2500
     }
 }
 #Casamance Region (224000) #see Guinea Bissau.txt and Guinea.txt for balance of Region
@@ -558,5 +564,4 @@
         religion = animist
         size = 4000
     }
-
 }

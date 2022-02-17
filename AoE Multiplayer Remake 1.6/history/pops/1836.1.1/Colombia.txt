@@ -71,7 +71,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1250
+        size = 625
     }
 
     clergymen = {
@@ -96,6 +96,12 @@
         culture = native_american_minor
         religion = catholic
         size = 3700
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 625
     }
 }
 #Ibaque (88000/22000 POPS)
@@ -157,7 +163,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 250
+        size = 125
     }
 
     clergymen = {
@@ -182,6 +188,12 @@
         culture = native_american_minor
         religion = catholic
         size = 1850
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 125
     }
 }
 #Tunja (56000/14000 POPS)
@@ -401,7 +413,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 3000
+        size = 1500
     }
 
     clergymen = {
@@ -426,6 +438,12 @@
         culture = native_american_minor
         religion = catholic
         size = 2800
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 1500
     }
 }
 #Quibdo (48000/12000 POPS)
@@ -487,7 +505,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 2500
     }
 }
 #Cartagena de Indias (144000/36000 POPS)
@@ -549,7 +573,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 4000
+        size = 2000
     }
 
     clergymen = {
@@ -574,6 +598,12 @@
         culture = guajiro
         religion = catholic
         size = 1850
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 2000
     }
 }
 #Barranquilla (132000/33000 POPS)
@@ -635,7 +665,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 3000
+        size = 1500
     }
 
     clergymen = {
@@ -660,6 +690,12 @@
         culture = guajiro
         religion = catholic
         size = 930
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 1500
     }
 }
 #Cauca Region (300000)
@@ -735,7 +771,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 750
+        size = 375
     }
 
     clergymen = {
@@ -760,6 +796,12 @@
         culture = native_american_minor
         religion = animist
         size = 2775
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 375
     }
 }
 #Popayan (68000/17000 POPS)
@@ -877,7 +919,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 2500
     }
 }
 #Pasto (80000/20000 POPS)
@@ -1133,7 +1181,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1250
+        size = 625
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 625
     }
 }
 #El Encanto (12000/3000 POPS)
@@ -1167,5 +1221,4 @@
         religion = animist
         size = 2700
     }
-
 }

@@ -4199,7 +4199,13 @@
     slaves = {
         culture = afro_brazilian
         religion = catholic
-        size = 3500
+        size = 1750
+    }
+
+    slave_artisans = {
+        culture = afro_brazilian
+        religion = catholic
+        size = 1750
     }
 }
 #Alegrete (64000/16000 POPS)
@@ -4347,5 +4353,4 @@
         religion = animist
         size = 2700
     }
-
 }

@@ -71,7 +71,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 4000
+        size = 2000
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 2000
     }
 }
 #Cumana (24000/6000 POPS)
@@ -133,7 +139,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 300
+        size = 150
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 150
     }
 }
 #San Felipe (44000/11000 POPS)
@@ -195,7 +207,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 400
+        size = 200
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 200
     }
 }
 #Guiria (40000/10000 POPS)
@@ -327,7 +345,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 400
+        size = 200
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 200
     }
 }
 #Calabozo (40000/10000 POPS)
@@ -389,7 +413,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 500
+        size = 250
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 250
     }
 }
 #Barinas (32000/8000 POPS)
@@ -451,7 +481,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 400
+        size = 200
     }
 
     clergymen = {
@@ -476,6 +506,12 @@
         culture = native_american_minor
         religion = catholic
         size = 1850
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 200
     }
 }
 #Zulia Region (378000)
@@ -551,7 +587,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 2000
+        size = 1000
     }
 
     clergymen = {
@@ -576,6 +612,12 @@
         culture = guajiro
         religion = catholic
         size = 930
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 1000
     }
 }
 #Valera (128000/32000 POPS)
@@ -637,7 +679,7 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1100
+        size = 550
     }
 
     clergymen = {
@@ -662,6 +704,12 @@
         culture = native_american_minor
         religion = catholic
         size = 930
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 550
     }
 }
 #Coro (56000/14000 POPS)
@@ -723,7 +771,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 550
     }
 }
 #Barquisimento (96000/24000 POPS)
@@ -785,7 +839,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 550
     }
 }
 #Orinoco Region (152000)
@@ -923,7 +983,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 550
     }
 }
 #under "rule" of Venezuela 1836
@@ -1020,5 +1086,4 @@
         religion = animist
         size = 900
     }
-
 }

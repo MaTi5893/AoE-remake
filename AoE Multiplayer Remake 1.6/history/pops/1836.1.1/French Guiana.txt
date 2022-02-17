@@ -65,7 +65,7 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 2950
+        size = 1475
     }
 
     aristocrats = {
@@ -96,6 +96,12 @@
         culture = amazonian
         religion = animist
         size = 230
+    }
+
+    slave_artisans = {
+        culture = afro_antillean
+        religion = catholic
+        size = 1475
     }
 }
 #Maripasoula (3000/750 POPS)
@@ -129,5 +135,4 @@
         religion = animist
         size = 680
     }
-
 }

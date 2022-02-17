@@ -311,7 +311,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1500
     }
 }
 #Jinja (208000/52000 POPS)
@@ -381,5 +387,4 @@
         religion = protestant
         size = 6000
     }
-
 }

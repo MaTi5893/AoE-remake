@@ -1545,7 +1545,13 @@
     slaves = {
         culture = nilotic
         religion = animist
-        size = 10000
+        size = 5000
+    }
+
+    slave_artisans = {
+        culture = nilotic
+        religion = animist
+        size = 5000
     }
 }
 #Yambio (140000/35000 POPS)
@@ -1711,7 +1717,13 @@
     slaves = {
         culture = nilotic
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = nilotic
+        religion = animist
+        size = 550
     }
 }
 #Kapoeta (140000/35000 POPS)
@@ -1775,5 +1787,4 @@
         religion = animist
         size = 6375
     }
-
 }

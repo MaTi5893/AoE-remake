@@ -1001,7 +1001,7 @@
     slaves = {
         culture = ethiopian
         religion = animist
-        size = 7000
+        size = 3500
     }
 
     aristocrats = {
@@ -1037,7 +1037,19 @@
     slaves = {
         culture = somali
         religion = animist
-        size = 19000
+        size = 9500
+    }
+
+    slave_artisans = {
+        culture = ethiopian
+        religion = animist
+        size = 3500
+    }
+
+    slave_artisans = {
+        culture = somali
+        religion = animist
+        size = 9500
     }
 }
 #Ogaden Region (786000)
@@ -1188,7 +1200,7 @@
     slaves = {
         culture = ethiopian
         religion = animist
-        size = 5000
+        size = 2500
     }
 
     aristocrats = {
@@ -1249,6 +1261,12 @@
         culture = somali
         religion = sunni
         size = 13675
+    }
+
+    slave_artisans = {
+        culture = ethiopian
+        religion = animist
+        size = 2500
     }
 }
 #Werder (328000/82000 POPS)
@@ -1316,7 +1334,12 @@
     slaves = {
         culture = ethiopian
         religion = animist
-        size = 4000
+        size = 2000
     }
 
+    slave_artisans = {
+        culture = ethiopian
+        religion = animist
+        size = 2000
+    }
 }

@@ -47,7 +47,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 14000
+        size = 7000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 7000
     }
 }
 #Buea (224000/56000 POPS)
@@ -85,7 +91,13 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 12000
+        size = 6000
+    }
+
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 6000
     }
 }
 #Kribi (176000/44000 POPS)
@@ -199,7 +211,7 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 9000
+        size = 4500
     }
 
     aristocrats = {
@@ -235,7 +247,19 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 14000
+        size = 7000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 4500
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 7000
     }
 }
 #Bafoussam (276000/69000 POPS)
@@ -307,7 +331,6 @@
         religion = catholic
         size = 65025
     }
-
 }
 #Kwararafa Region (372000) #see Nigeria.txt for balance of region
 #uncolonized in 1836
@@ -346,7 +369,13 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 22000
+        size = 11000
+    }
+
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 11000
     }
 }
 #Adamawa Region (268000) #see Nigeria.txt for balance of region
@@ -428,7 +457,13 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 4000
+        size = 2000
+    }
+
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 2000
     }
 }
 #uncolonized/under the rule of Borno 1836
@@ -557,7 +592,12 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 3000
+        size = 1500
     }
 
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 1500
+    }
 }
