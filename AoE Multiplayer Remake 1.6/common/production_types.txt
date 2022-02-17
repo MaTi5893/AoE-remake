@@ -780,14 +780,14 @@ RGO_template_labourers = {
 sugar_plantation = {
 	template = RGO_template_farmers
 	output_goods = sugar
-	value = 1
+	value = 1.3
 	farm = yes
 }
 
 ivory_hunting_grounds = {
 	template = RGO_template_farmers
 	output_goods = ivory
-	value = 1
+	value = 1.5
 	farm = yes
 }
 
@@ -1248,6 +1248,26 @@ artisan_canned_food = {
     workforce = 10000
 }
 
+artisan_canned_food_sugar = {
+    input_goods = {
+        iron = 1         #3.5
+        cattle = 4.5        #9
+        grain = 4.5        #9.9
+        sugar = 1        #3.75    total input+maint = 26.15
+    }
+    output_goods = canned_food
+    value = 4            #30
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
 artisan_liquor = {
     input_goods = {
         grain = 10        #22
@@ -1255,6 +1275,25 @@ artisan_liquor = {
     }
     output_goods = liquor
     value = 10            #64
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_liquor_sugar = {
+    input_goods = {
+		sugar = 1
+        grain = 10        #22
+        glass = 8        #23.2    total input+maint = 55
+    }
+    output_goods = liquor
+    value = 15            #64
 
     owner = {
         poptype = artisans
@@ -1274,6 +1313,26 @@ artisan_winery = {
     }
     output_goods = wine
     value = 7            #67.9
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_winery_sugar = {
+
+    input_goods = {
+		sugar = 1
+        fruit = 10        #18
+        glass = 10        #29    total input+maint = 57
+    }
+    output_goods = wine
+    value = 10            #67.9
 
     owner = {
         poptype = artisans

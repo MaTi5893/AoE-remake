@@ -60,12 +60,12 @@ tractors = {
         }
     }
     effect = {
-        factory_goods_output = { cotton = 0.03 }
-        factory_goods_output = { coffee = 0.05 }
-        factory_goods_output = { grain = 0.03 }
-        factory_goods_output = { opium = 0.03 }
-        factory_goods_output = { fruit = 0.03 }
-        factory_goods_output = { cattle = 0.03 }
+        rgo_goods_output = { cotton = 0.03 }
+        rgo_goods_output = { coffee = 0.05 }
+        rgo_goods_output = { grain = 0.03 }
+        rgo_goods_output = { opium = 0.03 }
+        rgo_goods_output = { fruit = 0.03 }
+        rgo_goods_output = { cattle = 0.03 }
     }
 }
 
@@ -181,10 +181,10 @@ sharp_n_roberts_power_loom = {
     }
     effect = {
         factory_goods_throughput = { fabric = 0.1 }
-        factory_goods_output = {
+        rgo_goods_output = {
             cotton = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             wool = 0.2
         }
     }
@@ -258,10 +258,10 @@ mechanical_saw = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             timber = 0.15
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             tropical_wood = 0.1
         }
     }
@@ -280,7 +280,7 @@ mechanical_precision_saw = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             timber = 0.15
         }
     }
@@ -299,13 +299,13 @@ hussey_n_mccormicks_reaping_machine = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             grain = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             fruit = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             tea = 0.1
         }
     }
@@ -324,15 +324,16 @@ pitts_threshing_machine = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             grain = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             fruit = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             tea = 0.2
         }
+		
     }
 }
 mechanized_slaughtering_block = {
@@ -349,10 +350,10 @@ mechanized_slaughtering_block = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             cattle = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             wool = 0.2
         }
     }
@@ -376,10 +377,10 @@ vaucanson_loom = {
         # factory_goods_output = {
             # cotton = 0.2
         # }
-        factory_goods_output = {
+        rgo_goods_output = {
             wool = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             silk = 0.05
         }
         factory_goods_throughput = {
@@ -500,7 +501,7 @@ steam_powered_silk_reels = {
         }
     }
     effect = {
-        factory_goods_output = { silk = 0.2 }
+        rgo_goods_output = { silk = 0.2 }
     }
 }
 
@@ -529,7 +530,7 @@ electric_machinery = {
     }
     effect = {
         factory_cost = 0.05
-        factory_goods_output = {
+        rgo_goods_output = {
             timber = 0.15
         }
         factory_goods_output = {
@@ -551,13 +552,13 @@ drying_techniques = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             tea = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             coffee = 0.3
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             opium = 0.2
         }
     }
@@ -597,13 +598,13 @@ cartwright_loom = {
         # }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             cotton = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             wool = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             silk = 0.2
         }
         factory_goods_throughput = {
@@ -688,13 +689,13 @@ refrigerator_technology = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             cattle = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             fruit = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             fish = 0.2
         }
         factory_goods_output = {
@@ -720,10 +721,10 @@ jacquard_power_loom = {
         # }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             wool = 0.2
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             silk = 0.2
         }
         factory_goods_output = {
@@ -815,7 +816,7 @@ pit_coal = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             coal = 0.8
         }
     }
@@ -834,7 +835,7 @@ coke = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             coal = 1.5
         }
     }
@@ -854,7 +855,7 @@ advanced_ore_roasting_processes = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             iron = 0.4
         }
     }
@@ -873,7 +874,7 @@ advanced_ore_grinding_processes = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             iron = 0.3
         }
     }
@@ -892,7 +893,7 @@ advanced_ore_smelting_processes = {
         }
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             iron = 0.3
         }
     }
@@ -916,7 +917,7 @@ bessemer_steel = {
         factory_goods_throughput = {
             steel = 0.05
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             iron = 0.3
         }
     }
@@ -994,7 +995,7 @@ steel_alloys = {
         }
     }
     effect = {
-        factory_goods_output = { precious_metal = 0.05 }
+        rgo_goods_output = { precious_metal = 0.05 }
         factory_goods_output = { steel = 0.02 }
     }
 }
@@ -1220,13 +1221,13 @@ artificial_fertilizers = {
         }
     }
     effect = {
-        factory_goods_output = { cotton = 0.02 }
-        factory_goods_output = { tobacco = 0.02 }
-        factory_goods_output = { coffee = 0.1 }
-        factory_goods_output = { grain = 0.02 }
-        factory_goods_output = { opium = 0.02 }
-        factory_goods_output = { cattle = 0.02 }
-        factory_goods_output = { fruit = 0.02 }
+        rgo_goods_output = { cotton = 0.02 }
+        rgo_goods_output = { tobacco = 0.02 }
+        rgo_goods_output = { coffee = 0.1 }
+        rgo_goods_output = { grain = 0.02 }
+        rgo_goods_output = { opium = 0.02 }
+        rgo_goods_output = { cattle = 0.02 }
+        rgo_goods_output = { fruit = 0.02 }
         factory_goods_output = { fertilizer = 0.05 }
     }
 }
@@ -1338,13 +1339,13 @@ carbon_soil_enrichment = {
         }
     }
     effect = {
-        factory_goods_output = { cotton = 0.05 }
-        factory_goods_output = { tobacco = 0.05 }
-        factory_goods_output = { coffee = 0.1 }
-        factory_goods_output = { grain = 0.05 }
-        factory_goods_output = { opium = 0.05 }
-        factory_goods_output = { cattle = 0.05 }
-        factory_goods_output = { fruit = 0.05 }
+        rgo_goods_output = { cotton = 0.05 }
+        rgo_goods_output = { tobacco = 0.05 }
+        rgo_goods_output = { coffee = 0.1 }
+        rgo_goods_output = { grain = 0.05 }
+        rgo_goods_output = { opium = 0.05 }
+        rgo_goods_output = { cattle = 0.05 }
+        rgo_goods_output = { fruit = 0.05 }
     }
 }
 #cracking = {
@@ -1383,22 +1384,6 @@ carbon_soil_enrichment = {
         # land_attrition = -0.02
     # }
 # }
-edison_light_bulb = {
-    limit = { electricity = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 0
-            invention = direct_current
-        }
-        modifier = {
-            factor = 0
-            electrical_power_generation = 1
-        }
-    }
-    effect = {
-    }
-}
 
 electrical_lighting = {
     limit = { electricity = 1 }
@@ -1528,13 +1513,13 @@ tulls_seed_drill = {
     }
     effect = {
         activate_building =  fabric_factory
-        factory_goods_output = {
+        rgo_goods_output = {
             grain = 0.1
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             fruit = 0.1
         }
-        factory_goods_output = {
+        rgo_goods_output = {
             coffee = 0.1
         }
     }
@@ -1546,7 +1531,7 @@ rotherham_plough = {
         base = 6
     }
     effect = {
-        factory_goods_output = {
+        rgo_goods_output = {
             grain = 0.2
         }
     }
@@ -1565,7 +1550,7 @@ cotton_gin = {
         base = 6
     }
     effect = {
-        factory_goods_output = { cotton = 1.0 }
+        rgo_goods_output = { cotton = 1.0 }
     }
 }
 
@@ -1610,7 +1595,7 @@ carl_bosch = {
         }
     }
     effect = {
-        factory_goods_output = { sulphur = 0.2 }
+        rgo_goods_output = { sulphur = 0.2 }
         factory_goods_output = { fertilizer = 0.2 }
     }
 }
