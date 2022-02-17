@@ -35,7 +35,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 2000
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1000
     }
 }
 #Madingou (16000/4000 POPS)
@@ -73,7 +79,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 550
     }
 }
 #Loango (32000/8000 POPS)
@@ -111,7 +123,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 2000
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1000
     }
 }
 #uncolonized in 1836
@@ -178,5 +196,4 @@
         religion = animist
         size = 7300
     }
-
 }

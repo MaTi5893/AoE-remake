@@ -65,7 +65,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 7000
+        size = 3500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 3500
     }
 }
 #Atakpane (128000/32000 POPS)
@@ -163,7 +169,13 @@
     slaves = {
         culture = nigerian
         religion = animist
-        size = 2000
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = nigerian
+        religion = animist
+        size = 1000
     }
 }
 #Sokode (24000/6000 POPS)
@@ -227,5 +239,4 @@
         religion = sunni
         size = 1800
     }
-
 }

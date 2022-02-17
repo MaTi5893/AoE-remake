@@ -233,7 +233,7 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 7000
+        size = 3500
     }
 
     aristocrats = {
@@ -264,6 +264,12 @@
         culture = nigerian
         religion = sunni
         size = 19700
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 3500
     }
 }
 #Worodugu Region (320000)
@@ -375,7 +381,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 2500
     }
 }
 #Orodaro (180000/45000 POPS)
@@ -503,7 +515,12 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 6000
+        size = 3000
     }
 
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 3000
+    }
 }

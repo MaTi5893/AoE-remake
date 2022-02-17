@@ -73,7 +73,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 2000
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1000
     }
 }
 #Sekondi (88000/22000 POPS) #Dutch Tradepost in 1836
@@ -269,7 +275,7 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 3000
+        size = 1500
     }
 
     aristocrats = {
@@ -300,6 +306,12 @@
         culture = western_african
         religion = animist
         size = 5425
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1500
     }
 }
 #Tamale (60000/15000 POPS)
@@ -407,7 +419,7 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 2000
+        size = 1000
     }
 
     aristocrats = {
@@ -443,7 +455,19 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 5000
+        size = 2500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1000
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 2500
     }
 }
 #uncolonized in 1836/under the rule of Asante
@@ -482,7 +506,12 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 2000
+        size = 1000
     }
 
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1000
+    }
 }

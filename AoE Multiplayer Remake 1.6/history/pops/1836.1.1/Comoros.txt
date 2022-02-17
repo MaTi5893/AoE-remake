@@ -65,7 +65,13 @@
     slaves = {
         culture = malagasy
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = malagasy
+        religion = animist
+        size = 1500
     }
 }
 #Mayotte (8000/2000 POPS)
@@ -133,7 +139,12 @@
     slaves = {
         culture = malagasy
         religion = animist
-        size = 500
+        size = 250
     }
 
+    slave_artisans = {
+        culture = malagasy
+        religion = animist
+        size = 250
+    }
 }

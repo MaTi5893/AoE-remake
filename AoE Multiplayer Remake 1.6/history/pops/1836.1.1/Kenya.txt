@@ -157,7 +157,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 550
     }
 }
 #Nakuru (128000/32000 POPS)
@@ -255,7 +261,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 1500
     }
 }
 #uncolonized in 1836/under influence of Buganda
@@ -324,7 +336,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 7000
+        size = 3500
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 3500
     }
 }
 #Tana Region (324000)
@@ -426,7 +444,13 @@
     slaves = {
         culture = bantu
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = bantu
+        religion = animist
+        size = 550
     }
 }
 #Garissa (172000/43000 POPS)
@@ -721,5 +745,4 @@
         religion = animist
         size = 23725
     }
-
 }

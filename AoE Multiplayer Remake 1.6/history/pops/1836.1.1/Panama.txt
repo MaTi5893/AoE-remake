@@ -59,10 +59,15 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 500
+        size = 250
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 250
     }
 }
-
 #Panama City (52000/13000 POPS)
 2204 = {
     aristocrats = {
@@ -134,7 +139,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 550
     }
 }
 #David (28000/7000 POPS)
@@ -196,7 +207,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 250
+        size = 125
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 125
     }
 }
 #Penonome (24000/6000 POPS)
@@ -258,7 +275,13 @@
     slaves = {
         culture = afro_caribeno
         religion = catholic
-        size = 250
+        size = 125
+    }
+
+    slave_artisans = {
+        culture = afro_caribeno
+        religion = catholic
+        size = 125
     }
 }
 #Yaviza (12000/3000 POPS)
@@ -352,5 +375,4 @@
         religion = animist
         size = 900
     }
-
 }

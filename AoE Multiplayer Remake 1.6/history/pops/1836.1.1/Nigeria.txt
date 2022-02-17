@@ -221,7 +221,13 @@
     slaves = {
         culture = volta
         religion = animist
-        size = 20000
+        size = 10000
+    }
+
+    slave_artisans = {
+        culture = volta
+        religion = animist
+        size = 10000
     }
 }
 #Ilorin (248000/62000 POPS) african_Minor includes Nupe
@@ -570,7 +576,7 @@
     slaves = {
         culture = volta
         religion = animist
-        size = 3000
+        size = 1500
     }
 
     aristocrats = {
@@ -636,7 +642,19 @@
     slaves = {
         culture = volta
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = volta
+        religion = animist
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = volta
+        religion = animist
+        size = 1500
     }
 }
 #Oil Rivers Region (1580000)
@@ -830,7 +848,13 @@
     slaves = {
         culture = volta
         religion = animist
-        size = 23000
+        size = 11500
+    }
+
+    slave_artisans = {
+        culture = volta
+        religion = animist
+        size = 11500
     }
 }
 #Tukari (176000/44000 POPS)
@@ -868,7 +892,13 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 8000
+        size = 4000
+    }
+
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 4000
     }
 }
 #Borgu Region (56000) #see Benin.txt for balance of region
@@ -2060,7 +2090,7 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 1100
+        size = 550
     }
 
     aristocrats = {
@@ -2126,7 +2156,19 @@
     slaves = {
         culture = nigerian
         religion = animist
-        size = 4000
+        size = 2000
+    }
+
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = nigerian
+        religion = animist
+        size = 2000
     }
 }
 #Borno Region (636000)
@@ -2284,7 +2326,7 @@
     slaves = {
         culture = bantoid
         religion = animist
-        size = 9000
+        size = 4500
     }
 
     aristocrats = {
@@ -2317,4 +2359,9 @@
         size = 1800
     }
 
+    slave_artisans = {
+        culture = bantoid
+        religion = animist
+        size = 4500
+    }
 }

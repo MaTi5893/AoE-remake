@@ -1,7 +1,6 @@
 sprite = 10
 strata = poor
 allowed_to_vote = no
-is_artisan = yes
 is_slave = yes
 color = { 17 17 17 }
 unemployment = yes
@@ -45,4 +44,14 @@ issues = {
     yes_slavery = {
         factor = 2
     }
+}
+promote_to =
+{
+	slave_artisans = {
+		factor = 0.1
+		modifier = {
+			factor = 1
+            NOT = { literacy = 1 }
+		}
+	}
 }

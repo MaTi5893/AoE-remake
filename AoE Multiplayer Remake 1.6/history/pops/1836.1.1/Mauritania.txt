@@ -47,7 +47,13 @@
     slaves = {
         culture = berber
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = berber
+        religion = animist
+        size = 1500
     }
 }
 #Rosso (72000/18000 POPS)
@@ -368,5 +374,4 @@
         religion = sunni
         size = 2700
     }
-
 }

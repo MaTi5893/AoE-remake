@@ -303,7 +303,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1500
     }
 }
 #uncolonized in 1836/ruled by Sultan of Macina
@@ -708,7 +714,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 3000
+        size = 1500
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 1500
     }
 }
 #Worodugu Region (172000)  #see Burkina.txt and Ivory Coast.txt for balance of region
@@ -1194,7 +1206,13 @@
     slaves = {
         culture = western_african
         religion = animist
-        size = 1100
+        size = 550
+    }
+
+    slave_artisans = {
+        culture = western_african
+        religion = animist
+        size = 550
     }
 }
 #Araouane (12000/3000 POPS)
@@ -1234,5 +1252,4 @@
         religion = animist
         size = 500
     }
-
 }

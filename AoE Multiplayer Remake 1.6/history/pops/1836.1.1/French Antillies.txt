@@ -65,7 +65,13 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 20000
+        size = 10000
+    }
+
+    slave_artisans = {
+        culture = afro_antillean
+        religion = catholic
+        size = 10000
     }
 }
 #Guadeloupe (128400/32100 POPS)
@@ -127,7 +133,12 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 24000
+        size = 12000
     }
 
+    slave_artisans = {
+        culture = afro_antillean
+        religion = catholic
+        size = 12000
+    }
 }
