@@ -39,13 +39,38 @@ country_event = {
             remove_core = SPA
         }
         change_tag = SPC
-        AUS = {
-            casus_belli = {
-            target = THIS
-            type = dispute_succession_aus
-            months = 2
-            }
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					truce_with = AUS
+				}
+			}
+			owner = {
+				AUS = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_aus
+						months = 62 #5 years for truce running out + 2 months
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { truce_with = AUS }
+				}
+			}
+			owner = {
+				AUS = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_aus
+						months = 2
+					}
+				}
+			}
+		}
         relation = {
             who = BOR
             value = 300
@@ -92,13 +117,38 @@ country_event = {
         name = "EVTNAME93000OPTB"
         set_global_flag = support_habsburg_heir_spa
         create_alliance = AUS
-        BOR = {
-            casus_belli = {
-            target = THIS
-            type = dispute_succession_bor
-            months = 2
-            }
-        }
+		random_owned = {
+			limit = {
+				owner = {
+					truce_with = BOR
+				}
+			}
+			owner = {
+				BOR = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_bor
+						months = 62
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { truce_with = BOR }
+				}
+			}
+			owner = {
+				BOR = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_bor
+						months = 2
+					}
+				}
+			}
+		}
         relation = {
             who = BOR
             value = -200
