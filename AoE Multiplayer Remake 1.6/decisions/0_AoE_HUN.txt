@@ -1,0 +1,274 @@
+political_decisions = {
+    crown_of_hungary = {
+        potential = {
+            tag = HUN
+            NOT = { government = colonial_company }
+            vassal_of = AUS
+        }
+        allow = {
+            exists = yes
+        }
+        effect = {
+            government = colonial_company
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    rakoczi_war_of_independence = {
+        picture = rakoczi
+        potential = {
+            tag = SIE
+            NOT = { has_country_flag = rakoczi_tried }
+			ai = yes
+            OR = {
+                NOT = { has_global_flag = spanish_succesion_resolved }
+                NOT = { year = 1711 }
+            }
+        }
+        allow = {
+            exists = yes
+            OR = {
+                has_global_flag = spanish_succesion_crisis
+                AND = {
+                    year = 1704
+                    is_secondary_power = yes
+                }
+            }
+            NOT = { year = 1711 }
+        }
+        effect = {
+            set_country_flag = rakoczi_tried
+            AUS = { country_event = 10225 }
+			AUS = {
+				diplomatic_influence = {
+					who = SIE
+					value = -300
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = { year = 1704 }
+            }
+            modifier = {
+                factor = 0
+                AUS = {
+                    war = yes
+                }
+            }
+			modifier = {
+                factor = 0
+                AUS = {
+                    ai = yes
+                }
+				619 = { NOT = { country_units_in_province = AUS } }
+            }
+        }
+    }
+
+    down_the_danube = {
+        picture = passarowitz
+        potential = {
+            tag = HUN
+            NOT = { has_country_flag = down_the_danube }
+        }
+        allow = {
+            exists = yes
+            NOT = { is_vassal = yes }
+            war_policy = jingoism
+            owns = 653
+            owns = 792
+        }
+        effect = {
+            set_country_flag = down_the_danube
+            794 = { add_core = THIS }
+            796 = { add_core = THIS }
+            795 = { add_core = THIS }
+            666 = { add_core = THIS }
+            665 = { add_core = THIS }
+            badboy = 10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    down_the_danube_aus = {
+        picture = passarowitz
+        potential = {
+            tag = AUS
+            OR = {
+            HUN = {
+                vassal_of = AUS
+            }
+            owns = 641
+            }
+            NOT = { has_country_flag = down_the_danube_aus }
+        }
+        allow = {
+            war_policy = jingoism
+            653 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            792 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+        }
+        effect = {
+            set_country_flag = down_the_danube_aus
+            HUN = {
+                set_country_flag = down_the_danube
+                794 = { add_core = HUN }
+                796 = { add_core = HUN }
+                795 = { add_core = HUN }
+                666 = { add_core = HUN }
+                665 = { add_core = HUN }
+            }
+            badboy = 10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    proclaim_ind_hun = {
+        picture = become_hungary
+        potential = {
+            tag = HUN
+            government = colonial_company
+            is_vassal = no
+        }
+        allow = {
+            exists = yes
+            is_vassal = no
+            war = no
+        }
+        effect = {
+            government = absolute_monarchy
+        }
+    }
+	
+	proclaim_kingdom_of_hungary = {
+		picture = become_hungary
+		potential = {
+			tag = SIE
+			NOT = { exists = HUN }
+		}
+		allow = {
+			owns = 641
+		}
+		effect = {
+			all_core = {
+				add_core = HUN
+				remove_core = THIS
+			}
+			change_tag = HUN
+			primary_culture = hungarian
+			remove_accepted_culture = romanian
+			prestige = 20
+			relation = {
+				who = AUS
+				value = -100
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = kuruc
+					}
+				}
+				owner = {
+					remove_country_modifier = kuruc
+				}
+			}
+		}
+	}
+	
+	form_romania_sie = {
+		picture = micheal_the_brave
+		potential = {
+			tag = SIE
+			NOT = { exists = ROM }
+		}
+		allow = {
+			ROM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			all_core = {
+				add_core = ROM
+				remove_core = THIS
+			}
+			change_tag = ROM
+			primary_culture = romanian
+			remove_accepted_culture = hungarian
+			prestige = 20
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					primary_culture = romanian
+				}
+				annex_to = THIS
+			}
+			any_country = {
+				limit = {
+					in_sphere = THIS
+					any_owned_province = { is_core = ROM }
+				}
+				any_owned = {
+					limit = {
+						is_core = ROM
+					}
+					secede_province = THIS
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = kuruc
+					}
+				}
+				owner = {
+					remove_country_modifier = kuruc
+				}
+			}
+		}
+	}
+	
+	kuruc = {
+		picture = kuruc
+		potential = {
+			tag = SIE
+			NOT = { has_country_flag = kuruc }
+		}
+		allow = {
+			war = yes
+		}
+		effect = {
+			set_country_flag = kuruc
+			add_country_modifier = {
+				name = kuruc
+				duration = 5475
+			}
+		}
+	}
+}

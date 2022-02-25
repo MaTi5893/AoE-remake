@@ -1,0 +1,104 @@
+capital = 375
+primary_culture = dutch
+culture = flemish
+culture = british
+culture = scottish
+culture = boer
+religion = protestant
+government = oligarchic_republic
+plurality = 30
+nationalvalue = nv_productivity
+literacy = 0.70
+civilized = yes
+
+#GreaterPowers = prestige
+prestige = 10
+
+# Political reforms
+slavery = yes_slavery
+upper_house_composition = state_equal_weight
+vote_franschise = wealth_weighted_voting
+public_meetings = yes_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
+political_parties = underground_parties
+
+# Social Reforms
+wage_reform = acceptable_minimum_wage #marginally relevant church
+work_hours = ten_hours #influential gentry
+safety_regulations = good_safety #irrelevant nobility
+unemployment_subsidies = good_subsidies #very influential burghers
+pensions = trinket_pensions #marginally relevant army
+health_care = trinket_pensions #marginally relevant bureaucracy
+
+school_reforms = no_schools
+
+# New Reforms
+conscription = two_year_draft
+debt_law = serfdom
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+border_policy = open_borders
+centralization = unitary
+colonial_policy = exploitation
+
+set_country_flag = protestant_country
+
+ruling_party = "Dutch States Party"
+upper_house = {
+    fascist = 0
+    liberal = 40
+    conservative = 40
+    reactionary = 20
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
+}
+
+decision = literacy_NET
+decision = merchant_republic_setup
+govt_flag = {
+    government = proletarian_dictatorship
+    flag = theocracy
+}
+# Technologies
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+military_staff_system = 1
+army_command_principle = 1
+post_nelsonian_thought = 1
+clipper_design = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+malthusian_thought = 1
+enlightenment_thought = 1
+introspectionism = 1
+private_banks = 1
+stock_exchange = 1
+no_standard = 1
+early_classical_theory_and_critique = 1
+freedom_of_trade = 1
+guild_based_production = 1
+piston_steam_engine = 1
+mechanical_production = 1
+mechanized_mining = 1
+basic_chemistry = 1
+
+#Inventions
+
+# Starting Consciousness
+consciousness = 3
+nonstate_consciousness = 1
+
+oob = "NET_oob.txt"
+
+foreign_investment = {
+    GNG = 5000
+    SAT = 10000
+}

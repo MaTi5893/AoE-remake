@@ -1,0 +1,306 @@
+country_event = {
+    id = 1516001
+    title = "Giblartar regained!"
+    desc = "We have regained the straits of giblartar!"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        OR = { tag = SPA tag = SPC }
+        war = no
+        has_country_flag = lost_gib
+        owns = 517
+    }
+
+    option = {
+        name = "Fantastic!"
+        517 = {
+            add_core = THIS
+            remove_core = GBR
+            remove_core = GBJ
+            remove_core = ENG
+        }
+    }
+}
+country_event = {
+	id = 1516002
+	title = "Habsburg Supporters in Aragon"
+    desc = "EVTDESC1516002"
+    picture = "catalonia"
+    fire_only_once = yes
+	
+	trigger = {
+		exists = SPC
+		tag = SPC
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "We'll deal with them"
+		any_pop = {
+			limit = {
+				culture = catalan
+			}
+			militancy = 7.5
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+		random_owned = {
+			limit = {
+				controlled_by = THIS
+				pop_majority_culture = catalan
+				NOT = { country_units_in_province = THIS }
+			}
+			change_controller = REB
+		}
+	}
+}
+country_event = {
+	id = 1516003
+	title = "Charles III chosen as Emperor!"
+    desc = "EVTDESC1516003"
+    picture = "austrian_empire"
+    fire_only_once = yes
+	
+	trigger = {
+		year = 1711
+		tag = SPA
+		exists = SPA
+		AUS = {
+			ai = yes
+		}
+	}
+	
+	option = {
+		name = "We'll take what's rightfully mine with sword in hand!"
+		badboy = 28
+		casus_belli = {
+			target = AUS
+			type = unify_habsburg_monarchy
+			months = 12
+		}
+		prestige = 25
+		any_greater_power = {
+			relation = {
+				who = THIS
+				value = -80
+			}
+		}
+	}
+
+	option = {
+		name = "Resign from claiming the Emperorship"
+		any_greater_power = {
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		prestige = -25
+	}
+}
+country_event = {
+	id = 1516004
+	title = "Treasury Fleet"
+    desc = "EVTDESC1516004"
+    picture = "new_world"
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		is_substate = yes
+		OR = {
+			tag = VNS
+			tag = VNG
+			tag = VOP
+			tag = VLP
+		}
+		money = 1000000
+	}
+	
+	option = {
+		name = "Send the treasury fleet"
+		overlord = {
+			money = 500000
+		}
+		money = -500000
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "That's our money!"
+		overlord = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = 1516005
+	title = "Breakup of the Viceroyality"
+    desc = "EVTDESC151605"
+    picture = "new_world"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Terrible!"
+		random_owned = {
+			limit = {
+				owner = {
+					tag = PEU
+					any_owned_province = {
+						OR = {
+						is_core = VNG
+						is_core = VLP
+						}
+					}
+				}
+			}
+			owner = {
+				THIS = {
+					release_vassal = VNG
+					release_vassal = VLP
+					random_owned = {
+						limit = {
+							owner = {
+								exists = SPA
+							}
+						}
+						owner = {
+							SPA = {
+								create_vassal = VNG
+								create_vassal = VLP
+							}
+						}
+					}
+					random_owned = {
+						limit = {
+							owner = {
+								exists = SPC
+							}
+						}
+						owner = {
+							SPC = {
+								create_vassal = VNG
+								create_vassal = VLP
+							}
+						}
+					}
+					all_core = {
+						limit = {
+							OR = {
+								is_core = VNG
+								is_core = VLP
+							}
+						}
+						remove_core = THIS
+					}
+					remove_accepted_culture = north_andean
+					remove_accepted_culture = platinean
+				}
+			}
+		}
+		all_core = {
+			limit = {
+				OR = {
+					is_core = VNG
+					is_core = VLP
+				}
+			}
+			remove_core = PEU
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = VNS
+				}
+			}
+			owner = {
+				VNS = {
+					any_owned= {
+						limit = {
+							OR = {
+								is_core = VNG
+								is_core = GCO
+							}
+						}
+						add_core = VNG
+						remove_core = VNS
+						secede_province = THIS
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					any_owned_province = {
+						is_core = VNG
+					}
+				}
+			}
+			owner = {
+				limit = {
+					any_owned_province = {
+						is_core = VNG
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = VNG
+					}
+					secede_province = VNG
+				}
+			}
+		}
+	}
+}

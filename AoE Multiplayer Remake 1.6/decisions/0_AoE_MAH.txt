@@ -1,0 +1,206 @@
+political_decisions = {
+    mughal_conquest = {
+        picture = west_india_mah
+        potential = {
+            tag = MAH
+            NOT = { has_country_flag = absolute_mughal_conquest }
+            exists = yes
+        }
+        allow = {
+            military_score = 50
+            OR = {
+                pensions = acceptable_pensions
+                pensions = good_pensions
+            }
+            owns = 1291
+        }
+        effect = {
+            prestige = 30
+            badboy = 7.5
+            set_country_flag = absolute_mughal_conquest
+            NAG_1277 = {
+                add_core = THIS
+            }
+            ENG_1275 = {
+                add_core = THIS
+            }
+            1269 = {
+                add_core = THIS
+            }
+            1264 = {
+                add_core = THIS
+            }
+            1268 = {
+                add_core = THIS
+            }
+            1305 = {
+                add_core = THIS
+            }
+            1279 = {
+                add_core = THIS
+            }
+            ENG_1261 = {
+                add_core = THIS
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+	return_of_shahu_bhosale = {
+		picture = shahu_bhosale
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = return_of_shahu_bhosale }
+		}
+		allow = {
+			OR = {
+				has_global_flag = death_of_aurangzeb 
+				is_independant = yes
+			}
+		}
+		effect = {
+			set_country_flag = return_of_shahu_bhosale
+			random_owned = {
+				limit = {
+					owner = {
+						is_independant = no
+					}
+				}
+				owner = {
+					overlord = {
+						release_vassal = THIS
+						casus_belli = {
+							target = THIS
+							type = annex_core_country
+							months = 12
+						}
+						relation = {
+							who = THIS
+							value = -200
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = BIJ
+						BIJ = { part_of_sphere = no }
+					}
+				}
+				owner = {
+					BIJ = {
+						annex_to = THIS
+						all_core = {
+							remove_core = BIJ
+						}
+					}
+				}
+			}
+			country_event = 170777
+		}
+	}
+
+    maratha_empire = {
+        picture = maratha_empire
+        potential = {
+            tag = MAH
+            NOT = { has_country_flag = claimed_maratha_empire }
+            exists = yes
+        }
+        allow = {
+            is_greater_power = yes
+            OR = {
+                pensions = acceptable_pensions
+                pensions = good_pensions
+            }
+            HYD_1283 = {
+                owned_by = THIS
+            }
+            ENG_1261 = {
+                owned_by = THIS
+            }
+            OR = {
+                AND = {
+                    ENG_1251 = {
+                        owned_by = THIS
+                    }
+                    ENG_1252 = {
+                        owned_by = THIS
+                    }
+                }
+                BNG = {
+                    vassal_of = THIS
+                }
+            }
+            any_core = {
+                owned_by = THIS
+            }
+            MUG = {
+                exists = no
+            }
+        }
+
+        effect = {
+            prestige = 30
+            set_country_flag = claimed_maratha_empire
+            add_country_modifier = {
+                name = indian_raj
+                duration = -1
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    modernize_our_weaponary = {
+        picture = new_world_militia
+        potential = {
+            tag = MAH
+            NOT = { has_country_flag = modernize_our_weaponary }
+            exists = yes
+        }
+        allow = {
+            foreign_weapons = foreign_weapons_two
+            OR = {
+                relation = {
+                    who = GBR
+                    value = 100
+                }
+                relation = {
+                    who = BOR
+                    value = 100
+                }
+            }
+        }
+        effect = {
+            set_country_flag = modernize_our_weaponary
+            years_of_research = 1
+        }
+    }
+
+    government_reform_mah = {
+        picture = maratha_empire
+        potential = {
+            tag = MAH
+            NOT = { has_country_flag = government_reformed_mah }
+            exists = yes
+        }
+        allow = {
+            OR = {
+                health_care = acceptable_health_care
+                health_care = good_health_care
+            }
+            OR = {
+                safety_regulations = acceptable_safety
+                safety_regulations = good_safety
+            }
+            money = 100000
+        }
+        effect = {
+            political_reform = unitary
+            add_accepted_culture = oriya
+            add_accepted_culture = telegu
+            set_country_flag = government_reformed_mah
+        }
+    }
+}

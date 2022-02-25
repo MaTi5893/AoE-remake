@@ -1,0 +1,498 @@
+country_event = {
+	id = 99955
+	title = "Unciv Technologies"
+	desc = "We're given back our tech, make sure to restart/ask for a rehost!"
+	picture = "Unite"
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = mechanized_mining_flag
+					NOT = { mechanized_mining = 1 }
+				}
+			}
+			owner = {
+			clr_country_flag = mechanized_mining_flag
+			activate_technology = mechanized_mining
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = piston_steam_engine_flag
+					NOT = { piston_steam_engine = 1 }
+				}
+			}
+			owner = {
+			clr_country_flag = piston_steam_engine_flag
+			activate_technology = piston_steam_engine
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = freedom_of_trade_flag
+					NOT = { freedom_of_trade = 1 }
+				}
+			}
+			owner = {
+			activate_technology = freedom_of_trade
+			clr_country_flag = freedom_of_trade_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = high_pressure_steam_engine_flag
+					NOT = { high_pressure_steam_engine = 1 }
+				}
+			}
+			owner = {
+            activate_technology = high_pressure_steam_engine
+			clr_country_flag = high_pressure_steam_engine_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = no_standard_flag
+					NOT = { no_standard = 1 }
+				}
+			}
+			owner = {
+            activate_technology = no_standard
+			clr_country_flag = no_standard_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = ad_hoc_money_bill_printing_flag
+					NOT = { ad_hoc_money_bill_printing = 1 }
+				}
+			}
+			owner = {
+            activate_technology = ad_hoc_money_bill_printing
+			clr_country_flag = ad_hoc_money_bill_printing_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = private_banks_flag
+					NOT = { private_banks = 1 }
+				}
+			}
+			owner = {
+            activate_technology = private_banks
+			clr_country_flag = private_banks_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = early_classical_theory_and_critique_flag
+					NOT = { early_classical_theory_and_critique = 1 }
+				}
+			}
+			owner = {
+            activate_technology = early_classical_theory_and_critique
+			clr_country_flag = early_classical_theory_and_critique_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = stock_exchange_flag
+					NOT = { stock_exchange = 1 }
+				}
+			}
+			owner = {
+            activate_technology = stock_exchange
+			clr_country_flag = stock_exchange_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = malthusian_thought_flag
+					NOT = { malthusian_thought = 1 }
+				}
+			}
+			owner = {
+            activate_technology = malthusian_thought
+			clr_country_flag = malthusian_thought_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = positivism_flag
+					NOT = { positivism = 1 }
+				}
+			}
+			owner = {
+            activate_technology = positivism
+			clr_country_flag = positivism_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = experimental_railroad_flag
+					NOT = { experimental_railroad = 1 }
+				}
+			}
+			owner = {
+            activate_technology = experimental_railroad
+			clr_country_flag = experimental_railroad_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = early_railroad_flag
+					NOT = { early_railroad = 1 }
+				}
+			}
+			owner = {
+            activate_technology = early_railroad
+			clr_country_flag = early_railroad_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = guild_based_production_flag
+					NOT = { guild_based_production = 1 }
+				}
+			}
+			owner = {
+            activate_technology = guild_based_production
+			clr_country_flag = guild_based_production_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = organized_factories_flag
+					NOT = { organized_factories = 1 }
+				}
+			}
+			owner = {
+            activate_technology = organized_factories
+			clr_country_flag = organized_factories_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = late_enlightenment_philosophy_flag
+					NOT = { late_enlightenment_philosophy = 1 }
+				}
+			}
+			owner = {
+            activate_technology = late_enlightenment_philosophy
+			clr_country_flag = late_enlightenment_philosophy_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = basic_chemistry_flag
+					NOT = { basic_chemistry = 1 }
+				}
+			}
+			owner = {
+            activate_technology = basic_chemistry
+			clr_country_flag = basic_chemistry_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = medicine_flag
+					NOT = { medicine = 1 }
+				}
+			}
+			owner = {
+            activate_technology = medicine
+			clr_country_flag = medicine_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = post_napoleonic_thought_flag
+					NOT = { post_napoleonic_thought = 1 }
+				}
+			}
+			owner = {
+            activate_technology = post_napoleonic_thought
+			clr_country_flag = post_napoleonic_thought_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = strategic_mobility_flag
+					NOT = { strategic_mobility = 1 }
+				}
+			}
+			owner = {
+            activate_technology = strategic_mobility
+			clr_country_flag = strategic_mobility_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = flintlock_rifles_flag
+					NOT = { flintlock_rifles = 1 }
+				}
+			}
+			owner = {
+            activate_technology = flintlock_rifles
+			clr_country_flag = flintlock_rifles_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = flintlock_rifles_flag
+					NOT = { flintlock_rifles = 1 }
+				}
+			}
+			owner = {
+            activate_technology = flintlock_rifles
+			clr_country_flag = flintlock_rifles_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = muzzle_loaded_rifles_flag
+					NOT = { muzzle_loaded_rifles = 1 }
+				}
+			}
+			owner = {
+            activate_technology = muzzle_loaded_rifles
+			clr_country_flag = muzzle_loaded_rifles_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = bronze_muzzle_loaded_artillery_flag
+					NOT = { bronze_muzzle_loaded_artillery = 1 }
+				}
+			}
+			owner = {
+            activate_technology = bronze_muzzle_loaded_artillery
+			clr_country_flag = bronze_muzzle_loaded_artillery_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = iron_muzzle_loaded_artillery_flag
+					NOT = { iron_muzzle_loaded_artillery = 1 }
+				}
+			}
+			owner = {
+            activate_technology = iron_muzzle_loaded_artillery
+			clr_country_flag = iron_muzzle_loaded_artillery_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = army_command_principle_flag
+					NOT = { army_command_principle = 1 }
+				}
+			}
+			owner = {
+            activate_technology = army_command_principle
+			clr_country_flag = army_command_principle_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = army_professionalism_flag
+					NOT = { army_professionalism = 1 }
+				}
+			}
+			owner = {
+            activate_technology = army_professionalism
+			clr_country_flag = army_professionalism_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = military_staff_system_flag
+					NOT = { military_staff_system = 1 }
+				}
+			}
+			owner = {
+            activate_technology = military_staff_system
+			clr_country_flag = military_staff_system_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = military_plans_flag
+					NOT = { military_plans = 1 }
+				}
+			}
+			owner = {
+            activate_technology = military_plans
+			clr_country_flag = military_plans_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = post_nelsonian_thought_flag
+					NOT = { post_nelsonian_thought = 1 }
+				}
+			}
+			owner = {
+            activate_technology = post_nelsonian_thought
+			clr_country_flag = post_nelsonian_thought_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alphabetic_flag_signaling_flag
+					NOT = { alphabetic_flag_signaling = 1 }
+				}
+			}
+			owner = {
+            activate_technology = alphabetic_flag_signaling
+			clr_country_flag = alphabetic_flag_signaling_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = battleship_column_doctrine_flag
+					NOT = { battleship_column_doctrine = 1 }
+				}
+			}
+			owner = {
+            activate_technology = battleship_column_doctrine
+			clr_country_flag = battleship_column_doctrine_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = naval_design_bureaus_flag
+					NOT = { naval_design_bureaus = 1 }
+				}
+			}
+			owner = {
+            activate_technology = naval_design_bureaus
+			clr_country_flag = naval_design_bureaus_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = clipper_design_flag
+					NOT = { clipper_design = 1 }
+				}
+			}
+			owner = {
+            activate_technology = clipper_design
+			clr_country_flag = clipper_design_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = steamers_flag
+					NOT = { steamers = 1 }
+				}
+			}
+			owner = {
+            activate_technology = steamers
+			clr_country_flag = steamers_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = the_command_principle_flag
+					NOT = { the_command_principle = 1 }
+				}
+			}
+			owner = {
+            activate_technology = the_command_principle
+			clr_country_flag = the_command_principle_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = naval_professionalism_flag
+					NOT = { naval_professionalism = 1 }
+				}
+			}
+			owner = {
+            activate_technology = naval_professionalism
+			clr_country_flag = naval_professionalism_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = malthusian_thought_flag
+					NOT = { malthusian_thought = 1 }
+				}
+			}
+			owner = {
+            activate_technology = malthusian_thought
+			clr_country_flag = malthusian_thought_flag
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					government = tribal_democracy
+				}
+			}
+			owner = {
+				government = democracy
+			}
+		}
+		clr_country_flag = unciv
+		
+			remove_country_modifier = educational_reform
+			remove_country_modifier = military_reform
+			remove_country_modifier = western_influences
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = trade_restrictions
+			remove_country_modifier = sayings_of_the_dutch
+			remove_country_modifier = extraterritoriality_granted
+			#remove_country_modifier = meiji_restoration_boost
+			any_owned = {
+				remove_province_modifier = western_presence
+				remove_province_modifier = foreign_smugglers
+				remove_province_modifier = foreign_trading_post
+				remove_province_modifier = local_opium_habit
+				remove_province_modifier = european_military_mission
+				remove_province_modifier = legation_quarter
+				remove_province_modifier = kettler_denkmal
+			}
+	}
+}
+###Reno your prev system was trash, here's a flex on redditor-100-event-civ, you're free to copy it only if you suck my dick

@@ -1,0 +1,729 @@
+#Sphere of Influence
+
+#Europe
+MON = {
+	value = 25
+	level = 3
+	influence_value = 0
+}
+
+PLC = {
+	value = 100
+	level = 4
+	influence_value = 4
+}
+ZZH = {
+	value = 25
+	level = 5
+	influence_value = 5
+}
+SWE = {
+	value = -75
+}
+GRE = {
+	value = 100
+	level = 4
+	influence_value = 0
+}
+KRA = {
+	value = 125
+	level = 4
+	influence_value = 0
+}
+DNN = {
+	value = 125
+	level = 4
+	influence_value = 0
+}
+MOL = {
+	value = 105
+	level = 4
+	influence_value = 0
+}
+WAL = {
+	value = 45
+	level = 3
+	influence_value = 0
+}
+
+#Asia
+MGL = {
+	value = -10
+}
+
+PER = {
+	value = -50
+	level = 0
+	influence_value = 0
+}
+CIR = {
+	value = -200
+	level = 1
+	influence_value = 1
+}
+
+#Other GP's
+#GPs
+ENL = { value = -75 }
+FRA = { value = -10 }
+AUS = { value = 25 }
+USA = { value = 0 }
+PRU = { value = 100 }
+TUR = { value = -125 }
+SPA = { value = 0 }
+TUR = {
+	truce_until = 1705.1.1
+}
+army = {
+	name = "2-i Armeiskii Korpus"
+	location = 1011
+	
+	regiment = {
+		name= "5.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = cuirassier
+		home = 1008
+	}
+	
+	regiment = {
+		name= "5.2-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = artillery
+		home = 1012
+	}
+
+	regiment = {
+		name= "5.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1025
+	}
+
+	regiment = {
+		name= "5.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1044
+	}
+	
+	regiment = {
+		name= "5.3-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1034
+	}
+	
+	regiment = {
+		name= "5.3-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 998
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1008
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1018
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 999
+	}
+	
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1003
+	}
+}
+
+army = {
+	name = "3-i Armeiskii Korpus" #Vilna/Marijampole - Baltic Army
+	location = 1036
+
+	regiment = {
+		name = "3.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 989
+	}
+
+	regiment = {
+		name = "3.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 989
+	}
+	
+	regiment = {
+		name = "3.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 989
+	}
+	
+	regiment = {
+		name = "3.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 989
+	}
+	
+	regiment = {
+		name = "3.5-ya Pekhotnaya Diviziya"
+		type = dragoon
+		home = 981
+	}
+	
+	regiment = {
+		name = "3.6-ya Pekhotnaya Diviziya"
+		type = artillery
+		home = 981
+	}
+	
+	regiment = {
+		name = "3.1-ya Gvardeiskaya Kavaleriiskaya Diviziya"
+		type = artillery
+		home = 1045
+	}
+
+	regiment = {
+		name = "3.1-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 978
+	}
+	
+	regiment = {
+		name = "3.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 980
+	}
+	
+	regiment = {
+		name = "3.2-ya Artilleriiskii Diviziya"
+		type = artillery
+		home = 1012
+	}
+}
+
+army = {
+	name = "6-i Armeiskii Korpus" #Crimean Army
+	location = 979
+	regiment = {
+		name= "6.1-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1009
+	}
+
+	regiment = {
+		name= "6.2-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1010
+	}
+
+	regiment = {
+		name= "6.3-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1040
+	}
+
+	regiment = {
+		name= "6.4-ya Pekhotnaya Diviziya"
+		type = infantry
+		home = 1025
+	}
+
+	regiment = {
+		name= "6.5-ya Pekhotnaya Diviziya"
+		type = cavalry
+		home = 1014
+	}
+
+	regiment = {
+		name= "6.2-ya Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1015
+	}
+	
+	regiment = {
+		name= "6.3-ya Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1050
+	}
+
+	regiment = {
+		name= "8.6-ya Pekhotnaya Diviziya"
+		type = artillery
+		home = 1028
+	}
+	
+	regiment = {
+		name= "8.9-ya Pekhotnaya Diviziya"
+		type = artillery
+		home = 977
+	}
+	
+	regiment = {
+		name= "8.1-ya Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1019
+	}
+}
+
+army = {
+	name = "1-i Kavkazskii Korpus"
+	location = 1047
+	
+	regiment = {
+		name= "1.1-ya Kavkazskii Pekhotnaya Diviziya"
+		type = infantry
+		home = 1022
+	}
+
+	regiment = {
+		name= "1.2-ya Kavkazskii Pekhotnaya Diviziya"
+		type = infantry
+		home = 1011
+	}
+
+	regiment = {
+		name= "1.3-ya Kavkazskii Pekhotnaya Diviziya"
+		type = infantry
+		home = 1011
+	}
+
+	regiment = {
+		name= "1.4-ya Kavkazskii Pekhotnaya Diviziya"
+		type = infantry
+		home = 1035
+	}
+
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1037
+	}
+
+	regiment = {
+		name= "1.1-ya Kavkazskii Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1017
+	}
+
+	regiment = {
+		name= "1.2-ya Kavkazskii Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1020
+	}
+
+	regiment = {
+		name= "1.3-ya Kavkazskii Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1013
+	}
+
+	regiment = {
+		name= "1.1-ya Kavkazskii Artilleriiskii Diviziya"
+		type = artillery
+		home = 1039
+	}
+	
+	regiment = {
+		name= "1.1-ya Kavkazskii Artilleriiskii Diviziya"
+		type = artillery
+		home = 1001
+	}
+}
+
+army = {
+	name = "1-i Sibirskii Korpus" #Siberian Army
+	location = 1050
+	
+	regiment = {
+		name = "1.1-ya Sibirskii Pekhotnaya Diviziya"
+		home = 1039
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Sibirskii Pekhotnaya Diviziya"
+		type = artillery
+		home = 1019
+	}
+	
+	regiment = {
+		name= "1.3-ya Sibirskii Pekhotnaya Diviziya"
+		type = artillery
+		home = 1019
+	}
+
+	regiment = {
+		name= "1.1-ya Sibirskii Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1021
+	}
+
+	regiment = {
+		name= "1.2-ya Sibirskii Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1050
+	}
+
+}
+
+army = {
+	name = "1-i Novgorod Korpus" #Novgorod Army
+	location = 1003
+	
+	regiment = {
+		name = "1.1-ya Novgorod Pekhotnaya Diviziya"
+		home = 997
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
+		type = artillery
+		home = 1006
+	}
+	
+	regiment = {
+		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
+		type = artillery
+		home = 1008
+	}
+
+	regiment = {
+		name= "1.1-ya Novgorod Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1015
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Kavalerijskaya Diviziya"
+		type = artillery
+		home = 991
+	}
+
+	regiment = {
+		name= "1.1-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 1019
+	}
+
+	regiment = {
+		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 978
+	}
+
+	regiment = {
+		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 1739
+	}
+
+	regiment = {
+		name= "1.4-ya Novgorod Pekhotnaya Diviziya"
+		type = infantry
+		home = 980
+	}
+	
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1030
+	}
+}
+
+army = {
+	name = "1-i Smolensk Korpus" #Smolensk Army
+	location = 943
+	
+	regiment = {
+		name = "1.1-ya Smolensk Pekhotnaya Diviziya"
+		home = 3257
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Pekhotnaya Diviziya"
+		type = artillery
+		home = 1041
+	}
+	
+	regiment = {
+		name= "1.3-ya Smolensk Pekhotnaya Diviziya"
+		type = artillery
+		home = 1036
+	}
+
+	regiment = {
+		name= "1.1-ya Smolensk Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1038
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1030
+	}
+
+	regiment = {
+		name= "1.1-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1031
+	}
+
+	regiment = {
+		name= "1.2-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1042
+	}
+
+	regiment = {
+		name= "1.3-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1029
+	}
+
+	regiment = {
+		name= "1.4-ya Smolensk Pekhotnaya Diviziya"
+		type = infantry
+		home = 1026
+	}
+	
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1030
+	}
+}
+
+RUS = {
+    value = 100
+}
+
+army = {
+    name = "Army of the Hetmanat"
+    location = 963
+    regiment = {
+        name= "Poltava Polk"
+        type = hussar
+        home = 963
+    }
+
+    regiment = {
+        name= "Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "Kiev Polk"
+        type = artillery
+        home = 963
+    }
+
+    regiment = {
+        name= "3nd Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "2nd Chernigov Polk"
+        type = artillery
+        home = 962
+    }
+
+    regiment = {
+        name= "Bryansk Polk"
+        type = artillery
+        home = 1016
+    }
+}
+
+leader = {
+    name = "Ivan Mazepa"
+    date = 1700.1.1
+    type = land
+    personality = defence_2.4
+    background = attack_2.5
+    prestige = 0.3
+}
+
+
+leader = {
+	name = "Peter I Romanov"
+	picture = peter_the_great
+	date = 1685.1.1
+	type = land
+	personality = attack_2.2
+	background = defence_3.1
+	prestige = 0.5
+}
+
+leader = {
+	name = "Alexander Menshikov"
+	picture = rus_gen_vorontsov
+	date = 1684.1.1
+	type = land
+	personality = attack_3.1
+	background = defence_3.1
+	prestige = 0.3
+}
+
+leader = {
+	name = "Boris Shermetev"
+	picture = rus_gen_chicherin
+	date = 1675.1.1
+	type = land
+	personality = attack_5.1
+	background = defence_2.2
+	prestige = 0.4
+}
+
+leader = {
+	name = "Fyodor Apraksin"
+	picture = rus_gen_chernyshev
+	date = 1671.1.1
+	type = land
+	personality = attack_1.1
+	background = defence_1.2
+	prestige = 0.1
+}
+
+leader = {
+	name = "Carl Ewald von Ronne"
+	picture = rus_gen_paskevich
+	date = 1692.1.1
+	type = land
+	personality = attack_3.2
+	background = defence_1.2
+	prestige = 0.3
+}
+
+leader = {
+	name = "Jacob Bruce"
+	picture = rus_gen_khrapovitsky
+	date = 1675.1.1
+	type = land
+	personality = attack_2.1
+	background = defence_2.1
+	prestige = 0.1
+}
+
+leader = {
+	name = "Matvei Zmayevich"
+	picture = rus_gen_muravievkarsky
+	date = 1827.1.1
+	type = land
+	personality = attack_minus_2.1
+	background = defence_2.1
+	prestige = 0.1
+}
+
+leader = {
+	name = "Pyotr Volkonsky"
+	picture = rus_gen_volkonsky
+	date = 1812.1.1
+	type = land
+	personality = attack_2.2
+	background = defence_2.2
+	prestige = 0.3
+}
+
+leader = {
+	name = "Pavel Grabbe"
+	date = 1676.1.1
+	type = land
+	personality = attack_2.1
+	background = defence_minus_2.1
+	prestige = 0.0
+}
+
+leader = {
+	name = "Vasily Bebutov"
+	picture = rus_gen_bebutov
+	date = 1825.1.1
+	type = land
+	personality = attack_minus_1.2
+	background = defence_minus_1.2
+	prestige = 0.1
+}
+
+leader = {
+	name = "Fyodor von Berg"
+	picture = rus_gen_berg
+	date = 1836.1.1
+	type = land
+	personality = attack_minus_1.2
+	background = defence_2.1
+	prestige = 0.1
+}
+
+leader = {
+	name = "Mikhail Gorchakov"
+	#picture = rus_gen_gorchakov
+	date = 1830.1.1
+	type = land
+	personality = attack_minus_1.2
+	background = defence_minus_1.1
+}
+
+leader = {
+	name = "Pyotr Gorchakov"
+	picture = rus_gen_gorchakovpyotr
+	date = 1820.1.1
+	type = land
+	personality = attack_minus_1.1
+	background = defence_minus_2.2
+}
+
+leader = {
+	name = "Dimitry von der Osten-Sacken"
+	picture = rus_gen_ostensacken
+	date = 1824.1.1
+	type = land
+	personality = attack_2.3
+	background = defence_minus_3.3
+}
+
+leader = {
+	name = "Vladimir Sievers"
+	picture = rus_gen_sievers
+	date = 1823.1.1
+	type = land
+	personality = attack_3.2
+	background = defence_minus_2.1
+}
+
+leader = {
+	name = "Alexander von Lüders"
+	picture = rus_gen_lueders
+	date = 1829.1.1
+	type = land
+	personality = attack_2.2
+	background = defence_1.1
+}
+
+leader = {
+	name = "Nikolay Read"
+	picture = rus_gen_read
+	date = 1835.1.1
+	type = land
+	personality = attack_3.1
+	background = defence_0.1
+}
+
+leader = {
+	name = "Nikokay Sukhozanet"
+	picture = rus_gen_sukhozanet
+	date = 1824.1.1
+	type = land
+	personality = attack_0.2
+	background = defence_2.5
+}
+
+
+

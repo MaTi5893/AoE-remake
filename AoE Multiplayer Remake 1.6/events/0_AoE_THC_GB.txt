@@ -1,0 +1,139 @@
+country_event = {
+    id = 176401
+    title = "The Navigation Acts"
+    desc = "EVTDESC176401"
+    picture = boston_tea
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = salutary_neglect
+			}
+		}
+		any_owned_province = {
+			is_core = THC
+		}
+		primary_culture = british
+	}
+
+    option = {
+        name = "Those colonials will get over it."
+        THC = {
+			all_core = {
+				add_province_modifier = {
+					name = american_smugglers
+					duration = 5475
+				}
+				add_province_modifier = {
+					name = navigation_acts_enforced
+					duration = 7300
+				}
+			}
+		}
+		THC = { all_core = { remove_province_modifier = salutary_neglect } }
+		set_country_flag = colonists_enraged
+    }
+}
+country_event = {
+	id = 176402
+	title = "The American Revolution"
+	desc = "EVTDESC176402"
+	is_triggered_only = yes
+	major = yes
+	news = yes
+	
+	option = {
+		name = "Time to put down those pesky colonists"	
+		badboy = 10
+		remove_accepted_culture = yankee
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = THC
+					is_core = USA
+				}
+			}
+			add_core = USA
+			remove_core = THC
+			secede_province = USA
+		}
+		USA = {
+			capital = 223
+			government = colonial_company
+			ruling_party_ideology = conservative
+		}
+		war = {
+            target = USA
+            attacker_goal = { casus_belli = annex_core_country }
+            defender_goal = { casus_belli = status_quo }
+            call_ally = no
+        }
+		relation = {
+            who = USA
+            value = -200
+        }
+		set_global_flag = american_revolution_has_happened
+	}
+
+	option = {
+		name = "Let them be"
+		prestige = -15
+		relation = {
+            who = USA
+            value = 100
+        }
+		remove_accepted_culture = yankee
+	}
+}
+
+country_event = {
+	id = 176403
+	title = "The Revolution Subdued!"
+	desc = "EVTDESC176403"
+	picture = britbong_army
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = british
+		has_global_flag = american_revolution_has_happened
+		USA = { exists = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Order has finally been restored"	
+		prestige = 20
+		add_accepted_culture = yankee
+		clr_global_flag = american_revolution_has_happened
+	}	
+}
+
+country_event = {
+	id = 176404
+	title = "The Revolution Succeeds!"
+	desc = "EVTDESC176404"
+	picture = seige_peace
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = british
+		has_global_flag = american_revolution_has_happened
+		NOT = { war_with = USA }
+		truce_with = USA
+		USA = { exists = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "We must accept that we can no longer control the colonies"	
+		prestige = -20
+		clr_global_flag = american_revolution_has_happened
+	}	
+}

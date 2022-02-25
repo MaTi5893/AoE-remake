@@ -1,0 +1,169 @@
+country_event = {
+    id = 93000
+    title = "EVTNAME93000" ##death of charles II
+    desc = "EVTDESC93000"
+    fire_only_once = yes
+    major = yes
+    news = yes
+
+    trigger = {
+        tag = SPA
+        year = 1701
+        exists = yes
+        BOR = { exists = yes }
+        AUS = { exists = yes }
+        NOT = {
+            OR = {
+                has_global_flag = support_bourbon_heir_spa
+                has_global_flag = support_habsburg_heir_spa
+                has_global_flag = bastard_child
+            }
+        }
+        NOT = { has_global_flag = disabled_succession_wars }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_global_flag = spanish_succesion_crisis
+    }
+
+    option = { #Choose Bourbon Heir
+        name = "EVTNAME93000OPTA"
+        set_global_flag = support_bourbon_heir_spa
+        create_alliance = BOR
+		all_core = {
+            add_core = SPC
+            remove_core = SPA
+        }
+        change_tag = SPC
+		random_owned = {
+			limit = {
+				owner = {
+					truce_with = AUS
+				}
+			}
+			owner = {
+				AUS = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_aus
+						months = 62 #5 years for truce running out + 2 months
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { truce_with = AUS }
+				}
+			}
+			owner = {
+				AUS = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_aus
+						months = 2
+					}
+				}
+			}
+		}
+        relation = {
+            who = BOR
+            value = 300
+        }
+        relation = {
+            who = AUS
+            value = -200
+        }
+		random_owned = {
+			limit = {
+				owner = {
+					AUS = { ai = yes }
+				}
+			}
+			owner = {
+				AUS = {
+					relation = {
+						who = ENL
+						value = 100
+					}
+					relation = {
+						who = NET
+						value = 100
+					}
+					war = {
+						target = SPC
+						attacker_goal = { casus_belli = dispute_succession_aus }
+						call_ally = yes
+					}
+				}
+			}
+		}
+        define_general = {
+            name = "Philip V Bourbon"
+            personality = defence_3.1
+            background = attack_3.1
+        }
+        ai_chance = {
+            factor = 0.85
+        }
+    }
+
+    option = { #Choose Habsburg Heir
+        name = "EVTNAME93000OPTB"
+        set_global_flag = support_habsburg_heir_spa
+        create_alliance = AUS
+		random_owned = {
+			limit = {
+				owner = {
+					truce_with = BOR
+				}
+			}
+			owner = {
+				BOR = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_bor
+						months = 62
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { truce_with = BOR }
+				}
+			}
+			owner = {
+				BOR = {
+					casus_belli = {
+						target = THIS
+						type = dispute_succession_bor
+						months = 2
+					}
+				}
+			}
+		}
+        relation = {
+            who = BOR
+            value = -200
+        }
+        relation = {
+            who = AUS
+            value = 300
+        }
+        define_general = {
+            name = "Leopold I Habsburg"
+            personality = defence_2.1
+            background = attack_3.1
+        }
+        ai_chance = {
+            factor = 0.15
+        }
+    }
+}

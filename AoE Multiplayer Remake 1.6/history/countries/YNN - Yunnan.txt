@@ -1,0 +1,71 @@
+#Liao dynasty
+capital = 1616
+primary_culture = sinitic
+culture = hanhui
+culture = miao
+culture = nanfaren
+religion = taoist
+civilized = no
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_order
+literacy = 0.01  non_state_culture_literacy = 0.01
+#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+
+# Political reforms
+slavery = yes_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = jefferson_method
+political_parties = underground_parties
+
+# Social Reforms
+wage_reform = good_minimum_wage #irrelevant church
+work_hours = ten_hours #influential gentry
+safety_regulations = low_safety #slightly influential nobility
+unemployment_subsidies = no_subsidies #irrelevant burghers
+pensions = low_pensions #slightly influential army
+health_care = good_health_care #very influential bureaucracy
+
+school_reforms = no_schools
+
+# New Reforms
+conscription = no_draft
+debt_law = serfdom
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
+border_policy = closed_borders
+centralization = regionalism
+colonial_policy = no_colonies
+
+set_country_flag = taoist_country
+ruling_party = "Nobility Faction"
+upper_house = {
+    fascist = 0
+    liberal = 0
+    conservative = 75
+    reactionary = 25
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
+}
+
+
+# Technologies
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+piston_steam_engine = 1
+
+# Inventions
+asia_balance = yes
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0

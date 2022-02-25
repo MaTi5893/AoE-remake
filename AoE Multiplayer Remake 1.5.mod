@@ -1,6 +1,0 @@
-name = "AoE Multiplayer Remake Version 1.5"
-path = "mod/AoE Multiplayer Remake 1.5"
-user_dir = "AoE Multiplayer Remake 1.5"
-replace_path = "history/provinces"
-replace_path = "events"
-replace_path = "decisions"

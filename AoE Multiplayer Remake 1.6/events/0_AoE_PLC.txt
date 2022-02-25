@@ -1,0 +1,1363 @@
+country_event = {
+	id = 156900
+	title = "Integration of Ducal Prussia"
+	desc = "EVTDESC156900"
+	picture = szlachta
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = polish
+		is_our_vassal = DPR
+	}
+	
+	mean_time_to_happen = {
+		months = 20
+	}
+	
+	option = {
+		name = "Integrate them"	
+		DPR = {
+			all_core = { add_core = PLC }
+		}
+		inherit = DPR
+		badboy = 7
+		prestige = 20
+	}	
+	option = {
+		name = "Let them be"
+		prestige = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = 156901
+	title = "Polish-Lithuanian policies vetoed"
+	desc = "EVTDESC156901"
+	picture = sejm
+
+	trigger = {
+		primary_culture = polish
+		government = elective_monarchy_oligarchy
+		rich_tax = 0.9
+		NOT = { has_country_modifier = mercantilism }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "They're all idiots"	
+		election = yes
+		add_country_modifier = {
+			name = szlachta_taxes
+			duration = 1825
+		}
+		prestige = -5
+	}	
+}
+country_event = {
+	id = 1569011
+	title = "Polish-Lithuanian policies vetoed"
+	desc = "EVTDESC156901"
+	picture = sejm
+
+	trigger = {
+		government = elective_monarchy_oligarchy
+		primary_culture = polish
+		rich_tax = 0.7
+		NOT = { has_country_modifier = mercantilism }
+		year = 1740
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "They're all idiots"	
+		election = yes
+		add_country_modifier = {
+			name = szlachta_taxes
+			duration = 1825
+		}
+		prestige = -5
+	}	
+}
+country_event = {
+	id = 1569012
+	title = "Polish-Lithuanian policies vetoed"
+	desc = "EVTDESC156901"
+	picture = sejm
+
+	trigger = {
+		government = elective_monarchy_oligarchy
+		primary_culture = polish
+		rich_tax = 0.6
+		has_country_modifier = noble_democracy
+		NOT = { has_country_modifier = mercantilism }
+		year = 1760
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "They're all idiots"	
+		election = yes
+		add_country_modifier = {
+			name = szlachta_taxes
+			duration = 1825
+		}
+		prestige = -5
+	}	
+}
+country_event = {
+	id = 156902
+	title = "Polish-Lithuanian policies vetoed"
+	desc = "EVTDESC156902"
+	picture = sejm
+
+	trigger = {
+		government = elective_monarchy_oligarchy
+		primary_culture = polish
+		OR = { safety_regulations = low_safety safety_regulations = acceptable_safety }
+		average_militancy = 1.5
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "They're all idiots"	
+		election = yes
+		safety_regulations = no_safety
+		add_country_modifier = {
+			name = szlachta_pissed
+			duration = 1825
+		}
+		prestige = -5
+	}	
+}
+country_event = {
+	id = 156903
+	title = "Tax Law Passed"
+	desc = "EVTDESC156903"
+	picture = sejm
+
+	trigger = {
+		government = elective_monarchy_oligarchy
+		primary_culture = polish
+		war_exhaustion = 5
+		war = yes
+		NOT = { has_country_modifier = szlachta_war_taxes }
+		NOT = { has_country_modifier = noble_democracy }
+		NOT = { has_country_modifier = policy_approved }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "They're taking Coins out of MY treasury?!"	
+		election = yes
+		money = -7500
+		add_country_modifier = {
+			name = szlachta_war_taxes
+			duration = 1825
+		}
+		prestige = -5
+	}	
+}
+country_event = {
+	id = 156905
+	title = "Tornogrod Confederation"
+	desc = "EVTDESC156905"
+	picture = wettin_rule
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fools!"
+		any_owned = {
+			limit = {
+				pop_majority_culture = polish
+			}
+			add_province_modifier = {
+				name = tornogrod_confederation
+				duration = 1095
+			}
+		}
+		add_country_modifier = {
+			name = great_statesman
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				NOT = { agree_with_ruling_party = 0.7 }
+			}
+			militancy = 3
+		}
+		clr_country_flag = elective_monarchy
+		prestige = -5
+	}
+}
+country_event = {
+	id = 156904
+	title = "Szlachta reinstitutes the elective monarchy"
+	desc = "EVTDESC156904"	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "We were on the verge of greatness..."
+		government = elective_monarchy_oligarchy
+		election = yes
+	}
+}
+
+country_event = {
+	id = 1573000040
+	title = "Royal Election of 1733"
+	desc = "EVTDESC1573000"	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+		tag = PLC
+		tag = PLR
+		}
+		NOT = { has_country_flag = lesczynski_rule }
+		government = elective_monarchy_oligarchy
+		year = 1733
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Stanislaw Leszczynski will become our King!"
+		set_country_flag = lesczynski_rule
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		BOR = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		create_alliance = BOR
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
+		any_country = {
+			limit = {
+				tag = SAX
+				NOT = { has_global_flag = disabled_succession_wars }
+			}
+			country_event = 15730010
+		}
+		relation = {
+			who = LOR
+			value = 100
+		}
+		diplomatic_influence = {
+			who = PLC
+			value = 200
+		}
+		random_owned = { limit = { owner = { vassal_of = SAX } } owner = { overlord = { leave_alliance = PLC release_vassal = PLC relation = { who = PLC value = -200 } } } }
+		random_owned = { limit = { owner = { is_our_vassal = SAX } } owner = { leave_alliance = SAX release_vassal = SAX relation = { who = SAX value = -200 } } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				alliance_with = BOR
+			}
+			modifier = {
+				factor = 6
+				in_sphere = BOR
+			}
+			modifier = {
+				factor = 8
+				BOR = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 4
+				BOR = {
+					relation = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				BOR = {
+					relation = {
+						who = THIS
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "Friedrich August III of Saxony is the best choice!"
+		set_country_flag = saxon_rule
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		relation = {
+			who = SAX
+			value = 100
+		}
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		create_vassal = SAX
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 1
+				alliance_with = RUS
+			}
+			modifier = {
+				factor = 1
+				in_sphere = RUS
+			}
+			modifier = {
+				factor = 4
+				RUS = {
+					relation = {
+						who = THIS
+						value = 160
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				part_of_sphere = no
+			}
+		}
+	}
+	option = {
+		name = "Infante Manuel, the Count of Ourem, is the obvious choice!"
+		set_country_flag = infante_rule
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		AUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
+		relation = {
+			who = POR
+			value = 100
+		}
+		relation = {
+			who = AUS
+			value = 100
+		}
+		create_alliance = AUS
+		random_owned = { limit = { owner = { vassal_of = SAX } } owner = { overlord = { leave_alliance = PLC release_vassal = PLC relation = { who = PLC value = -200 } } } }
+		random_owned = { limit = { owner = { is_our_vassal = SAX } } owner = { leave_alliance = SAX release_vassal = SAX relation = { who = SAX value = -200 } } }
+		
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 2
+				alliance_with = AUS
+			}
+			modifier = {
+				factor = 6
+				in_sphere = AUS
+			}
+			modifier = {
+				factor = 8
+				AUS = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 4
+				AUS = {
+					relation = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				POR = {
+					relation = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 15730031
+	title = "Treaty of Warsaw"
+	desc = "..."	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "A Historical Victory for our nation!"
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
+		HET = {
+			limit = {
+				vassal_of = RUS
+			}
+			country_event = 15730131
+		}
+		ZZH = {
+			limit = {
+				vassal_of = RUS
+			}
+			country_event = 15730131
+		}
+		prestige = 25
+		clr_global_flag = polish_succesion_crisis
+	}
+}
+country_event = {
+	id = 15730131
+	title = "Treaty of Warsaw"
+	desc = "..."	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A Historical Victory for our nation!"
+		annex_to = PLC
+	}
+}
+####Royal Election of 1764####
+country_event = {
+	id = 15730040
+	title = "Royal Election of $YEAR#"
+	desc = "EVTDESC1573004"	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+		tag = PLC
+		tag = PLR
+		}
+		government = elective_monarchy_oligarchy
+		OR = {
+			AND = {
+				year = 1764
+				has_country_flag = saxon_rule
+			}
+			year = 1766
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Stanislaw August Poniatowski will bring great reforms to our country!"
+		set_country_flag = poniatowski_rule
+		ruling_party_ideology = liberal
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		random_owned = { limit = { owner = { vassal_of = SAX } } owner = { overlord = { leave_alliance = THIS release_vassal = THIS relation = { who = THIS value = -200 } } } }
+		random_owned = { limit = { owner = { is_our_vassal = SAX } } owner = { leave_alliance = SAX release_vassal = SAX relation = { who = SAX value = -200 } } }
+		random_owned = { limit = { owner = { is_our_vassal = LOR } } owner = { leave_alliance = LOR release_vassal = LOR relation = { who = LOR value = -200 } } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "Jan Klemens Branicki, will lead us to greatness"
+		set_country_flag = branicki_rule
+		ruling_party_ideology = conservative
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		random_owned = { limit = { owner = { vassal_of = SAX } } owner = { overlord = { leave_alliance = PLC release_vassal = PLC relation = { who = PLC value = -200 } } } }
+		random_owned = { limit = { owner = { is_our_vassal = SAX } } owner = { leave_alliance = SAX release_vassal = SAX relation = { who = SAX value = -200 } } }
+		random_owned = { limit = { owner = { is_our_vassal = LOR } } owner = { leave_alliance = LOR release_vassal = LOR relation = { who = LOR value = -200 } } }
+	}
+
+	option = {
+		name = "Adam Kazimierz Czartoryski will rule us!"
+		set_country_flag = czartoryski_rule
+		ruling_party_ideology = liberal
+		sphere_owner = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		random_owned = { limit = { owner = { vassal_of = SAX } } owner = { overlord = { leave_alliance = PLC release_vassal = PLC relation = { who = PLC value = -200 } } } }
+		random_owned = { limit = { owner = { is_our_vassal = SAX } } owner = { leave_alliance = SAX release_vassal = SAX relation = { who = SAX value = -200 } } }
+		random_owned = { limit = { owner = { is_our_vassal = LOR } } owner = { leave_alliance = LOR release_vassal = LOR relation = { who = LOR value = -200 } } }
+	}
+}
+country_event = {
+	id = 15730041
+	title = "Constitution of 3rd May"
+	desc = "EVTDESC15730041"	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PLC
+		government = elective_monarchy_oligarchy
+		year = 1791
+		ruling_party_ideology = liberal
+		NOT = { has_country_flag = enacted_3rd_may_constitution }
+		in_sphere = RUS
+		exists = yes
+		NOT = { has_country_modifier = noble_democracy }
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "A great day for our nation!"
+		set_country_flag = poniatowski_rule
+		RUS = {
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
+		set_country_flag = enacted_3rd_may_constitution
+		prestige = 50
+		political_reform = wealth_weighted_voting
+		random_owned = {
+			limit = {
+				owner = { political_parties = underground_parties }
+			}
+			owner = {
+				political_reform = harassment
+			}
+		}	
+		random_owned = {
+			limit = {
+				owner = { debt_law = peonage }
+			}
+			owner = {
+				political_reform = debtors_prisons
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { debt_law = serfdom }
+			}
+			owner = {
+				political_reform = debtors_prisons
+			}
+		}
+		inherit = KUR	
+		random_owned = {
+			limit = {
+				owner = { ai = yes }
+			}
+			owner = {
+				treasury = 150000
+			}
+		}
+
+		government = hms_government
+		any_pop = { militancy = -2 }
+	}
+}
+###Targowica stuff###
+country_event = {
+	id = 15730042
+	title = "Targowica Confederation"
+	desc = "EVTDESC15730042"
+	picture = veto
+	is_triggered_only = yes
+	
+	option = {
+		name = "Worrisome."
+		RUS = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		sphere_owner = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -101
+			}
+		}
+		add_country_modifier = {
+			name = targowica
+			duration = 5475
+		}
+	}
+}
+#
+country_event = {
+	id = 15730044
+	title = "Glos Wolny Wolnosc Ubezpieczajacy"
+	desc = "EVTDESC15730044"
+	picture = glos
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PLC
+		government = elective_monarchy_oligarchy
+		has_country_flag = lesczynski_rule
+		war = no
+		year = 1734
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "Enact the reforms!"
+		add_country_modifier = {
+			name = noble_democracy
+			duration = -1
+		}
+		social_reform = ten_hours
+		social_reform = acceptable_subsidies
+		social_reform = low_pensions
+		political_reform = wealth_voting
+		remove_country_modifier = magnate_oligarchy
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Strengthening the sejm? Over my dead body!"
+		prestige = -15
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 15730061
+	title = "Comission of National Education"
+	desc = "EVTDESC15730061"
+	picture = sejm
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+	
+	trigger = {
+		primary_culture = polish
+		has_country_flag = great_sejm
+		#year = 1773
+	}
+	
+	option = {
+		name = "Enlightenment for all!"
+		add_country_modifier = {
+			name = commision_of_national_education
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = 15730062
+	title = "Corps of Cadets"
+	desc = "EVTDESC15730062"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+	
+	trigger = {
+		primary_culture = polish
+		exists = yes
+		has_country_flag = great_sejm
+		#year = 1765
+	}
+	
+	option = {
+		name = "Enlightenment for all!"
+		add_country_modifier = {
+			name = corps_of_cadets
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 15730063
+	title = "The Black Procession"
+	desc = "EVTDESC15730063"
+	picture = sejm
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+
+	trigger = {
+		primary_culture = polish
+		exists = yes
+		has_country_flag = great_sejm
+		#year = 1765
+	}
+	
+	option = {
+		name = "We will consider their propositions."
+		any_pop = {
+			militancy = -3
+		}
+		social_reform = eight_hours
+		social_reform = good_subsidies
+		prestige = 15
+	}
+	
+	option = {
+		name = "REVOLUTIONAIRES!"
+		any_pop = {
+			militancy = 3
+		}
+		prestige = -15
+		set_country_flag = refused_black_procession
+	}
+}
+country_event = {
+	id = 15730064
+	title = "The Great Sejm"
+	desc = "EVTDESC15730064"
+	picture = sejm
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will reform and strengthen the position of the king."
+		badboy = -4
+		years_of_research = 0.1
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = middle
+			}
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				OR = {
+				pop_majority_ideology = liberal
+				pop_majority_ideology = reactionary
+				pop_majority_ideology = socialist
+				}
+			}
+			militancy = -2
+			consciousness = -1
+		}
+	}
+	
+	option = {
+		name = "The king is a fool, consider that in the reforms!"
+		badboy = -4
+		years_of_research = 0.1
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = middle
+			}
+			militancy = -2
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = conservative
+			}
+			militancy = -2
+			consciousness = -1
+		}
+		government = oligarchic_republic
+		political_reform = landed_voting
+		prestige = -15
+	}
+}
+country_event = {
+	id = 15730065
+	title = "Royale Castle's Coup!"
+	desc = "EVTDESC15730065"
+	major = yes
+	news = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 2.5
+			average_consciousness = 2.5
+		}
+		modifier = {
+			factor = 4.5
+			average_militancy = 4.5
+		}
+	}
+
+	trigger = {
+		primary_culture = polish
+		exists = yes
+		has_country_flag = refused_black_procession
+		is_ideology_enabled = communist
+		#year = 1765
+	}
+	
+	option = {
+		name = "Jeszcze Polska nie zginela!"
+				random_owned = {
+			limit = {
+				is_capital = yes
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
+}
+country_event = {
+	id = 15730066
+	title = "$CAPITAL$ Convention"
+	desc = "EVTDESC15730066"
+	fire_only_once = yes
+	major = yes
+	news = yes
+	
+	trigger = {
+		NOT = { exists = PLC }
+		NOT = { exists = POL }
+		any_owned_province = {
+			is_core = PLC
+		}
+		is_greater_power = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 0.5
+			rank = 1
+		}
+		modifier = {
+			factor = 0.6
+			rank = 1
+		}
+		modifier = {
+			factor = 0.7
+			rank = 1
+		}
+		modifier = {
+			factor = 0.8
+			rank = 1
+		}
+		modifier = {
+			factor = 0.9
+			rank = 5
+		}
+	}
+	
+	option = {
+		name = "EVTOPT15730066NAME"
+		PLC = {
+			all_core = {
+				remove_core = PLC
+			}
+		}
+		prestige = 15
+		any_pop = {
+			limit = {
+				culture = polish
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		PRU_701 = {
+			add_core = CPL
+		}
+		RUS_710 = {
+			add_core = CPL
+		}
+		RUS_706 = {
+			add_core = CPL
+		}
+		RUS_712 = {
+			add_core = CPL
+		}
+		703 = {
+			add_core = CPL
+		}
+	}
+}
+country_event = {
+	id = 15730067
+	title = "Treaty of Perpetual Peace"
+	desc = "EVTDESC15730067"
+	picture = sejm
+	fire_only_once = yes
+
+	option = {
+		name = "Eternal Friendship"	
+		prestige = 5
+	}
+}
+country_event = {
+	id = 15730068
+	title = "The Silent Sejm"
+	desc = "EVTDESC15730068"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = polish
+		government = elective_monarchy_oligarchy
+		year = 1717
+	}
+	
+	option = {
+		name = "Adopt the reforms"
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = low_health_care
+				}
+			}
+			owner = {
+				social_reform = acceptable_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = trinket_health_care
+				}
+			}
+			owner = {
+				social_reform = low_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = trinket_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = low_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = acceptable_safety
+                }
+            }
+            owner = {
+                social_reform = trinket_safety
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = good_safety
+                }
+            }
+            owner = {
+                social_reform = low_safety
+            }
+        }
+		any_pop = {
+			militancy = -3
+			consciousness = 4
+		}
+		any_pop = {
+			limit = {
+				culture = polish
+				type = soldiers
+			}
+			reduce_pop = 1.1
+		}
+		any_pop = {
+			limit = {
+				culture = polish
+				type = bureaucrats
+			}
+			reduce_pop = 1.1
+		}
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = yes
+                }
+            }
+            owner = {
+                sphere_owner = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = no
+					exists = TOR
+                }
+            }
+            owner = {
+                TOR = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = no
+					exists = RUS
+                }
+            }
+            owner = {
+                RUS = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		prestige = -15
+	}
+	
+	option = {
+		name = "A foregin power won't dictate our actions!"
+		prestige = 15
+		
+		any_pop = {
+			militancy = 3
+			consciousness = 3
+		}
+	}
+}
+country_event = {
+	id = 15730069
+	title = "Anegdota historyczna"
+	desc = "EVTDESC15730069"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = polish
+		has_country_flag = poniatowski_rule
+	}
+
+	mean_time_tp_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "A decent start."
+		years_of_research = 0.5
+	}
+	
+	option = {
+		name = "begin implementing it immedietly!"
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = low_health_care
+				}
+			}
+			owner = {
+				social_reform = acceptable_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = trinket_health_care
+				}
+			}
+			owner = {
+				social_reform = low_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+	}
+}

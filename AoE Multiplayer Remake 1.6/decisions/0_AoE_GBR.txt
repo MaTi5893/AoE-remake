@@ -1,0 +1,550 @@
+political_decisions = {
+
+    unite_great_britain = {
+        picture = map_britain
+        potential = {
+            tag = ENL
+            NOT = { exists = GBR }
+            SCO = {
+                OR = {
+                    ai = yes
+                    exists = no
+                }
+            }
+            exists = yes
+            NOT = { war_with = SCO }
+        }
+
+        allow = {
+            #war = no
+            owns = 300
+            OR = {
+                ideological_thought = 1
+                year = 1707
+            }
+            269 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+            273 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+            254 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { in_sphere = THIS }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 20
+            all_core = {
+                add_core = GBR
+                remove_core = THIS
+            }
+            SCO = {
+                all_core = {
+                    add_core = GBR
+                }
+            }
+            change_tag = GBR
+            add_accepted_culture = scottish
+            any_country = {
+                limit = {
+                    tag = SCO
+                    exists = yes
+                    ai = yes
+                }
+                SCO = { all_core = { add_core = THIS } }
+                THIS = { inherit = SCO }
+            }
+            any_country = {
+                limit = {
+                    in_sphere = THIS
+                    NOT = {
+                        tag = THIS
+                        tag = SCO
+                    }
+                }
+                any_owned = {
+                    limit = {
+                        OR = {
+                            is_core = SCO
+                            is_core = WHA
+                            region = ENG_254
+                        }
+                    }
+                    secede_province = THIS
+                }
+            }
+        }
+
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1707 }
+			}
+		}
+    }
+
+    land_to_thc = {
+        potential = {
+            primary_culture = british
+            any_owned_province = {
+                is_core = THC
+            }
+            OR = {
+                is_our_vassal = THC
+                THC = { substate_of = THIS }
+            }
+            exists = THC
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            THIS = {
+                any_owned = {
+                    limit = {
+                        is_core = THC
+                        owned_by = THIS
+                    }
+                    secede_province = THC
+                }
+            }
+        }
+    }
+
+	premiership_of_robert_walpole = {
+		picture = walpole
+		potential = {
+			primary_culture = british
+			NOT = { has_country_flag = premiership_of_robert_walpole }
+			government = hms_government
+		}
+		allow = {
+			state_n_government = 1
+			ruling_party_ideology = liberal		
+		}
+		effect = {
+			set_country_flag = premiership_of_robert_walpole
+			upper_house = {
+				ideology = liberal
+				value = 0.35
+			}
+			remove_country_modifier = the_great_debt
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = non_socialist
+					}
+				}
+				owner = {
+					political_reform = all_trade_unions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = state_controlled
+					}
+				}
+				owner = {
+					political_reform = non_socialist
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						trade_unions = no_trade_unions
+					}
+				}
+				owner = {
+					political_reform = state_controlled
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = debtors_prisons
+					}
+				}
+				owner = {
+					political_reform = bankruptcy
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = peonage
+					}
+				}
+				owner = {
+					political_reform = debtors_prisons
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						debt_law = serfdom
+					}
+				}
+				owner = {
+					political_reform = peonage
+				}
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = liberal
+				}
+				militancy = -3
+				consciousness = -3
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = conservative
+				}
+				militancy = 2
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_modifier = stock_market_crash
+					}
+				}
+				owner = {
+					remove_country_modifier = stock_market_crash
+				}
+			}
+		}
+	}
+    #agricultural_revolution = {
+    #    picture = agriculture_rev
+    #    potential = {
+    #        OR = {
+    #            tag = GBJ
+    #            tag = ENL
+    #            tag = ENG
+    #            tag = GBR
+    #        }
+    #        NOT = { has_country_flag = agricultural_revolution }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        war = no
+    #        compound_steam_engines = 1
+    #        semi_automatization = 1
+    #        hot_blast = 1
+    #        early_railroad = 1
+    #    }
+    #    effect = {
+    #        add_country_modifier = {
+    #            name = agriculture_revolution
+    #            duration = 1825
+    #        }
+    #        set_country_flag = agricultural_revolution
+    #    }
+    #}
+	#
+    #begin_encolsure = {
+    #    picture = encolsure
+    #    potential = {
+    #        OR = {
+    #            tag = GBJ
+    #            tag = ENL
+    #            tag = ENG
+    #            tag = GBR
+    #        }
+    #        NOT = { has_country_flag = encolsure }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        steam_turbine = 1
+    #        has_country_modifier = agriculture_revolution
+    #    }
+    #    effect = {
+    #        add_country_modifier = {
+    #            name = encolsure
+    #            duration = 365
+    #        }
+	#		any_pop = {
+	#			money = 5000
+	#		}
+    #        set_country_flag = encolsure
+    #    }
+    #}
+
+    duke_of_york_reforms = {
+        picture = duke_of_york
+        potential = {
+            OR = {
+                tag = GBJ
+                tag = ENL
+                tag = ENG
+                tag = GBR
+            }
+            NOT = { has_country_flag = duke_of_york_reforms }
+            exists = yes
+        }
+        allow = {
+			OR = {
+            has_country_flag = duke_of_york
+			army_leadership_7 = 1
+			}
+            is_greater_power = yes
+        }
+        effect = {
+            set_country_flag = duke_of_york_reforms
+			all_core = {
+				any_pop = {
+					limit = {
+						culture = british
+						type = soldiers
+					}					
+					reduce_pop = 1.25
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						army_leadership_7 = 1
+					}
+				}
+				owner = {
+					all_core = {
+						any_pop = {
+							limit = {
+								culture = british
+								type = soldiers
+							}					
+							reduce_pop = 1.1
+						}
+					}
+				}
+			}
+        }
+    }
+
+    act_of_union_ire = {
+		picture = map_britain
+        potential = {
+            tag = GBR
+            NOT = { exists = ENG }
+        }
+        allow = {
+            IRE = {
+                all_core = {
+                    owned_by = THIS
+                }
+            }
+            war = no
+			OR = {
+				AND = {
+					average_militancy = 4
+					political_thought_7 = 1
+				}
+				FRA = {
+					exists = yes
+					government = proletarian_dictatorship
+				}
+			}
+        }
+        effect = {
+            all_core = {
+                add_core = ENG
+                remove_core = THIS
+            }
+            change_tag = ENG
+            prestige = 15
+            any_pop = {
+                militancy = -1
+            }
+            add_accepted_culture = irish
+        }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1801 }
+			}
+		}
+    }
+
+    britannia_rules_the_waves = {
+        picture = british_empire
+        potential = {
+            primary_culture = british
+            NOT = { has_country_flag = britannia_rules_the_waves }
+        }
+        allow = {
+            is_greater_power = yes
+			revolution_n_counterrevolution = 1
+            war = no
+            owns = 517
+			owns = 65
+			owns = 46
+			owns = 204
+			owns = 195
+			owns = 190
+			owns = 238
+			BNG = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			IQS = { exists = no }
+        }
+        effect = {
+            set_country_flag = britannia_rules_the_waves
+			FCA = {
+				all_core = {
+					limit = {
+						owned_by = THIS
+					}
+					add_core = CAN
+					remove_core = FCA
+				}
+			}
+			THC = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CAN = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			RPL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+            prestige = 15
+        }
+    }
+    dispute_spanish_succession_gbr = {
+        picture = crown
+        potential = {
+            has_global_flag = spanish_succesion_crisis
+            primary_culture = british
+            NOT = { has_country_flag = disputed_spanish_succession }
+        }
+        allow = {
+            exists = yes
+        }
+        effect = {
+            random_country = {
+                limit = {
+                    primary_culture = spanish
+                    OR = {
+                        tag = SPA
+                        tag = SPC
+                    }
+                    exists = yes
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+            }
+			THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPA
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+			THIS = {
+				casus_belli = {
+					target = SPC
+					type = place_in_the_sun
+					months = 12
+				}
+			}
+            add_core = 517
+            badboy = 2
+            set_country_flag = disputed_spanish_succession
+        }
+    }
+
+    the_leviathan = {
+        picture = union_act
+        potential = {
+            tag = GBJ
+            NOT = {
+                has_country_modifier = jacobite_absolutism
+            }
+        }
+        allow = {
+            war = no
+            ruling_party_ideology = reactionary
+			state_n_government = 1
+            NOT = { average_militancy = 3 }
+        }
+        effect = {
+            add_country_modifier = {
+                name = jacobite_absolutism
+                duration = -1
+            }
+            prestige = 15
+            political_reform = none_voting
+            government = absolute_monarchy
+            plurality = -25
+            political_reform = totalitarianism
+            add_country_modifier = {
+                name = totalitarian_system
+                duration = -1
+            }
+            any_pop = {
+                militancy = 4
+            }
+        }
+    }
+	
+	company_rule_in_india = {
+		picture = eic
+		potential = {
+			primary_culture = british
+			NOT = {
+				has_country_flag = company_rule_in_india
+			}
+		}
+		allow = {
+			war = no
+			BNG = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			owns = 3262
+			owns = 3264
+			owns = 3261
+		}
+		effect = {
+			set_country_flag = company_rule_in_india
+			country_event = 171018
+		}
+	}
+}

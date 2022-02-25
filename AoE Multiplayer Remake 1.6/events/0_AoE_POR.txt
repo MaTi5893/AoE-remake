@@ -1,0 +1,557 @@
+country_event = {
+    id = 114300
+    title = "The Methuen Treaty"
+    desc = "EVTDESC114300"
+    picture = treaty_signing
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        year = 1703
+		is_greater_power = no
+    }
+
+    mean_time_to_happen = {
+        months = 11
+    }
+
+    option = {
+        name = "Sign the Treaty"
+        add_country_modifier = {
+            name = methuen_treaty
+            duration = -1
+        }
+        300 = {
+            owner = {
+                relation = {
+                    who = POR
+                    value = 150
+                }
+                diplomatic_influence = {
+                    who = POR
+                    value = 150
+                }
+                create_alliance = POR
+            }
+
+        }
+        random_country = {
+            limit = {
+                tag = AUS
+                war_with = BOR
+                war_with = SPA
+            }
+            create_alliance = POR
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "Refuse"
+        300 = {
+            owner = {
+                relation = {
+                    who = POR
+                    value = -150
+                }
+                diplomatic_influence = {
+                    who = POR
+                    value = -80
+                }
+                leave_alliance = POR
+            }
+
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+#country_event = {
+#    id = 114301
+#    title = "People flee to the colonys!"
+#    desc = "EVTDESC114301"
+#    picture = colonization
+#    fire_only_once = yes
+#
+#    trigger = {
+#        tag = POR
+#        year = 1701
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 4
+#    }
+#
+#    option = {
+#        name = "Discourage the migration"
+#        POR_518 = {
+#            add_province_modifier = {
+#                name = small_emigration_boom
+#                duration = 3650
+#            }
+#        }
+#        PBZ = {
+#            add_country_modifier = {
+#                name = small_immigration_boom
+#                duration = 7300
+#            }
+#        }
+#        ai_chance = {
+#            factor = 99
+#        }
+#    }
+#
+#    option = {
+#        name = "Encourage the migration"
+#        POR_518 = {
+#            add_province_modifier = {
+#                name = emigration_boom
+#                duration = 1825
+#            }
+#        }
+#        PBZ = {
+#            add_country_modifier = {
+#                name = immigration_boom
+#                duration = 7300
+#            }
+#        }
+#        ai_chance = {
+#            factor = 1
+#        }
+#    }
+#}
+
+country_event = {
+    id = 114302
+    title = "Portugese Sun King"
+    desc = "EVTDESC114302"
+    picture = john_v
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        year = 1706
+    }
+
+    mean_time_to_happen = {
+        days = 340
+    }
+
+    option = {
+        name = "Let this Sun never have it's dawn!"
+        add_country_modifier = {
+            name = john_v_por
+            duration = -1
+        }
+    }
+}
+
+country_event = {
+    id = 114303
+    title = "Death of John the V"
+    desc = "EVTDESC114303"
+    picture = john_v
+    fire_only_once = yes
+
+    trigger = {
+        has_country_modifier = john_v_por
+        OR = {
+            year = 1750
+            AND = {
+                NOT = { government = absolute_monarchy }
+                NOT = { government = hms_government }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = absolute_monarchy }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 150
+    }
+
+    option = {
+        name = "The Sun has met it's dawn..."
+        remove_country_modifier = john_v_por
+    }
+}
+
+country_event = {
+    id = 114304
+    title = "The Marquis of Pombal"
+    desc = "EVTDESC114304"
+    picture = pombal
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        year = 1750
+        NOT = {
+            has_country_modifier = john_v_por
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = {
+        name = "Employ him!"
+        prestige = 15
+        add_country_modifier = {
+            name = marquis_pombal
+            duration = -1
+        }
+    }
+
+    option = {
+        name = "Disregard him."
+        prestige = -5
+    }
+}
+
+country_event = {
+    id = 114305
+    title = "Ascension of Queen Maria I"
+    desc = "EVTDESC114305"
+    picture = pombal
+    fire_only_once = yes
+
+    trigger = {
+        tag = POR
+        has_country_modifier = marquis_pombal
+        year = 1777
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Oh well"
+        remove_country_modifier = marquis_pombal
+        any_owned = {
+            owner = {
+                limit = {
+                    has_country_modifier = pombaline_economic_reform
+                }
+                remove_country_modifier = pombaline_economic_reform
+            }
+        }
+        add_country_modifier = {
+            name = turnabout
+            duration = 3650
+        }
+    }
+}
+
+country_event = {
+    id = 114306
+    title = "Lisbon Earthquake of 1755"
+    desc = "EVTDESC114306"
+    picture = por_1755
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        owns = 521
+        year = 1755
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_country_flag = earthquake_happened
+    }
+
+    option = {
+        name = "Spare no efforts in rebuilding our capital!"
+        treasury = -250000
+        521 = {
+            add_province_modifier = {
+                name = natural_disaster
+                duration = 365
+            }
+            any_pop = { reduce_pop = 0.97 }
+        }
+    }
+
+    option = {
+        name = "We cannot spare the resources required to rebuild Lisbon."
+        521 = {
+            add_province_modifier = {
+                name = natural_disaster
+                duration = 1825
+            }
+            any_pop = { reduce_pop = 0.67 }
+            life_rating = -10
+        }
+        prestige = -15
+    }
+}
+country_event = {
+    id = 114307
+    title = "Lisbon Reborn"
+    desc = "EVTDESC114307"
+    picture = lisbon_2
+    fire_only_once = yes
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    trigger = {
+        owns = 521
+        has_country_flag = earthquake_happened
+        521 = {
+            NOT = { has_province_modifier = natural_disaster }
+        }
+    }
+
+    option = {
+        name = "An amazing feat of human architecture."
+        501 = {
+            add_province_modifier = {
+                name = rebuilding_city
+                duration = 1825
+            }
+        }
+    }
+}
+country_event = {
+    id = 114308
+    title = "General Company of Commerce for Grao Para and Maranhao"
+    desc = "EVTDESC114308"
+    picture = merchants
+    is_triggered_only = yes
+
+    option = {
+        name = "The magic of free market."
+        2424 = {
+            add_province_modifier = {
+                name = colonial_exploitation
+                duration = 7300
+            }
+            add_province_modifier = {
+                name = trade_city
+                duration = 7300
+            }
+        }
+        2426 = {
+            add_province_modifier = {
+                name = colonial_exploitation
+                duration = 7300
+            }
+            add_province_modifier = {
+                name = trade_city
+                duration = 7300
+            }
+        }
+        2429 = {
+            add_province_modifier = {
+                name = colonial_exploitation
+                duration = 7300
+            }
+            add_province_modifier = {
+                name = trade_city
+                duration = 7300
+            }
+        }
+        2410 = {
+            add_province_modifier = {
+                name = colonial_exploitation
+                duration = 7300
+            }
+            add_province_modifier = {
+                name = trade_city
+                duration = 7300
+            }
+        }
+    }
+}
+country_event = {
+    id = 114309
+    title = "The Expulsion of Jesuits"
+    desc = "EVTDESC114309"
+    picture = jesuits_expulsion
+    is_triggered_only = yes
+
+    option = {
+        name = "Nobody expected Jesuit inquisition!"
+        add_country_modifier = {
+            name = mercantilism
+            duration = 7300
+        }
+        add_country_modifier = {
+            name = jesuits_expelled
+            duration = 7300
+        }
+    }
+}
+
+country_event = {
+    id = 114310
+    title = "The Question of Zanzibar"
+    desc = "What should be our ultimatum?"
+    is_triggered_only = yes
+
+    option = {
+        name = "The entire coast shall be back ours!"
+        OMA = {
+            country_event = 114311
+        }
+        ai_chance = {
+            factor = 0.2
+        }
+    }
+
+    option = {
+        name = "The south and the isle will do"
+        OMA = {
+            country_event = 114312
+        }
+        ai_chance = {
+            factor = 0.2
+        }
+    }
+
+    option = {
+        name = "We only want Zanzibar itself"
+        OMA = {
+            country_event = 114313
+        }
+        ai_chance = {
+            factor = 0.6
+        }
+    }
+}
+
+country_event = {
+    id = 114311
+    title = "Portugal demands African coast"
+    desc = "Shall we cede any land?"
+    is_triggered_only = yes
+
+    option = {
+        name = "Very well then"
+        prestige = 25
+        relation = {
+            who = POR
+            value = 100
+        }
+        all_core = {
+            limit = {
+                is_core = ZAN
+            }
+            secede_province = POR
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+
+    option = {
+        name = "Ridiculous"
+        badboy = 5
+        relation = {
+            who = POR
+            value = -100
+        }
+        POR = {
+            add_core = 2048
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+}
+
+country_event = {
+    id = 114312
+    title = "Portugal demands Zanzibar coast"
+    desc = "Shall we cede any land?"
+    is_triggered_only = yes
+
+    option = {
+        name = "Very well then"
+        prestige = 20
+        relation = {
+            who = POR
+            value = 75
+        }
+        all_core = {
+            limit = {
+                is_core = ZAN
+                NOT = {
+                    OR = {
+                        province_id = 2030
+                        province_id = 2029
+                    }
+                }
+            }
+            secede_province = POR
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+
+    option = {
+        name = "Or what?"
+        badboy = 5
+        relation = {
+            who = POR
+            value = -75
+        }
+        POR = {
+            add_core = 2048
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+}
+
+country_event = {
+    id = 114313
+    title = "Portugal demands Zanzibar isle"
+    desc = "Shall we cede it?"
+    is_triggered_only = yes
+
+    option = {
+        name = "Fine"
+        prestige = 25
+        relation = {
+            who = POR
+            value = 50
+        }
+        all_core = {
+            limit = {
+                province_id = 2048
+            }
+            secede_province = POR
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+
+    option = {
+        name = "Cede your mom"
+        badboy = 5
+        relation = {
+            who = POR
+            value = -50
+        }
+        POR = {
+            add_core = 2048
+        }
+        ai_chance = {
+            factor = 0.5
+        }
+    }
+}

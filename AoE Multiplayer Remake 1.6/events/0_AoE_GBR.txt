@@ -1,0 +1,1886 @@
+country_event = {
+    id = 171401
+    title = "Coronation of King George I"
+    desc = "EVTDESC171401"
+	fire_only_once = yes
+    major = yes
+	
+	trigger = {
+        primary_culture = british
+        year = 1714
+		owns = 300
+		NOT = { has_country_flag = jacobite_path }
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
+        NOT = { year = 1750 }
+    }
+    mean_time_to_happen = {
+        months = 1
+        modifier = {
+            factor = 0.1
+            month = 5
+            NOT = { month = 7 }
+        }
+    }
+
+    option = {
+        name = "God save the King!"
+		random_owned = { limit = { owner = { is_sphere_leader_of = NET } } owner = { leave_alliance = NET release_vassal = NET relation = { who = NET value = -200 } } }
+		random_country = {
+			limit = {
+				exists = HAN
+				tag = GBR
+			}
+			relation = { who = HAN value = 400 }
+			create_vassal = HAN
+		}
+        prestige = 10
+        set_country_flag = house_of_hannover
+    }
+}
+####Jacobite stuff###
+country_event = {
+    id = 171402
+    title = "Jacobites Prevail!" #Jacobism Prevails
+    desc = "EVTDESC171402"
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+        primary_culture = british
+		tag = GBR
+        year = 1714
+		has_country_flag = jacobite_path
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
+        NOT = { year = 1750 }
+    }
+
+    option = {
+        name = "Long live the king"
+        prestige = -25
+        set_country_flag = jacobism_prevails
+        #government = absolute_monarchy
+        all_core = {
+            add_core = GBJ
+            remove_core = THIS
+        }
+        change_tag = GBJ
+        add_country_modifier = {
+            name = national_confusion
+            duration = 365
+        }
+        set_variable = {
+            which = jacobite_provinces
+            value = 0
+        }
+        THIS = {
+        ruling_party_ideology  = reactionary
+        }
+        capital_scope = {
+            any_pop = {
+                ideology = { factor = 0.1 value = reactionary }
+            }
+        }
+        any_pop = {
+            limit = {
+                OR = {
+                    is_primary_culture = yes
+                    is_accepted_culture = yes
+                }
+                OR = {
+                    pop_majority_ideology = conservative
+                    pop_majority_ideology = reactionary
+                }
+            }
+            ideology = { factor = 0.1 value = reactionary }
+        }
+        any_pop = {
+            scaled_militancy = {
+                ideology = reactionary
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -3
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = 8
+            }
+            scaled_militancy = {
+                ideology = anarcho_liberal
+                factor = 3
+            }
+        }
+        any_owned = {
+            remove_province_modifier = jacobite_sympathies
+            remove_province_modifier = labor_union
+            remove_province_modifier = militant_trade_union
+            remove_province_modifier = worker_union
+            remove_province_modifier = strike_solution
+            remove_province_modifier = province_strike
+            remove_province_modifier = may_day
+        }
+        random_country = {
+            limit = {
+                is_sphere_leader_of = THIS
+                NOT = { is_our_vassal = THIS }
+            }
+            leave_alliance = THIS
+            country_event = 800056
+        }
+        random_country = {
+            limit = { is_our_vassal = THIS }
+            leave_alliance = THIS
+            country_event = 800055
+        }
+        any_country = {
+            limit = {
+                neighbour = THIS
+                NOT = { government = absolute_monarchy }
+            }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = reactionary
+                    factor = 6
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = 171403
+    title = "The Jacobites" #The Jacobites
+    desc = "EVTDESC37711"
+    picture = "jacobites"
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = GBR
+        has_country_flag = house_of_hannover
+    }
+
+    mean_time_to_happen = {
+        days = 12
+    }
+
+    option = {
+        name = "EVT37711OPTA"
+		clr_country_flag = house_of_hannover
+        set_country_flag = jacobite_rebellion
+        any_owned = {
+            limit = {
+                OR = {
+                    controlled_by = REB
+                    region = ENG_266
+                    region = ENG_271
+                }
+            }
+            any_pop = {
+                ideology = {
+                    value = conservative
+                    factor = 0.6
+                }
+                ideology = {
+                    value = reactionary
+                    factor = 0.3
+                }
+            }
+        }
+        any_owned = {
+            limit = {
+                OR = {
+                    region = ENG_266
+                    region = ENG_271
+                }
+            }
+            add_province_modifier = {
+                name = jacobite_sympathies
+                duration = -1
+            }
+            any_pop = {
+                limit = {
+                        has_pop_culture = scottish
+                }
+                militancy = 5
+                consciousness = 5
+                ideology = {
+                    value = reactionary
+                    factor = 0.3
+                }
+            }
+        }
+        set_variable = {
+            which = jacobite_sympathies
+            value = 6
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+country_event = {
+    id = 171404
+    title = "Return of the Jacobites" #Return of the Jacobites
+    desc = "EVTDESC171404"
+    picture = "jacobites"
+
+    trigger = {
+        tag = GBR
+        NOT = { has_global_flag = jacobites_pacified }
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+            government = democracy
+        }
+        NOT = {
+            any_owned_province = { has_province_modifier = jacobite_sympathies }
+        }
+        any_owned_province = {
+            is_colonial = no
+            is_core = THIS
+            OR = {
+                culture = scottish
+                AND = {
+                    reactionary = 25
+                    NOT = { region = ENG_300 }
+                }
+            }
+        }
+        year = 1745
+    }
+
+    mean_time_to_happen = {
+        months = 1
+        modifier = {
+            factor = 0.8
+            any_owned_province = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    reactionary = 25
+                }
+                average_militancy = 3
+            }
+        }
+        modifier = {
+            factor = 0.8
+            any_owned_province = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    reactionary = 25
+                }
+                average_militancy = 4
+            }
+        }
+        modifier = {
+            factor = 0.8
+            any_owned_province = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    reactionary = 25
+                }
+                average_militancy = 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_province = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    reactionary = 25
+                }
+                average_militancy = 6
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_country_flag = 1st_jacobite_rebellion
+        }
+        modifier = {
+            factor = 1.5
+            has_country_flag = 2nd_jacobite_rebellion
+        }
+        modifier = {
+            factor = 1.5
+            has_country_flag = 3rd_jacobite_rebellion
+        }
+    }
+
+    immediate = {
+        change_variable = {
+            which = jacobite_sympathies
+            value = 1
+        }
+    }
+
+    option = {
+        name = "EVT37713OPTA"
+        prestige = -2
+        random_owned = {
+            limit = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    region = ENG_266
+                    AND = {
+                        reactionary = 25
+                        NOT = { region = ENG_300 }
+                    }
+                }
+            }
+            add_province_modifier = {
+                name = jacobite_sympathies
+                duration = -1
+            }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = reactionary
+                    factor = 6
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT37713OPTB"
+        random_owned = {
+            limit = {
+                is_colonial = no
+                is_core = THIS
+                OR = {
+                    culture = scottish
+                    region = ENG_266
+                    AND = {
+                        reactionary = 25
+                        NOT = { region = ENG_300 }
+                    }
+                }
+            }
+            add_province_modifier = {
+                name = jacobite_sympathies
+                duration = -1
+            }
+            any_pop = {
+                ideology = {
+                    value = reactionary
+                    factor = 0.3
+                }
+            }
+            state_scope = {
+                any_pop = {
+                    ideology = {
+                        value = reactionary
+                        factor = 0.1
+                    }
+                }
+            }
+        }
+    }
+}
+
+province_event = {
+    id = 171405
+    title = "Jacobite Propaganda" #Jacobite Propaganda
+    desc = "EVTDESC37743"
+
+    trigger = {
+        owner = {
+            tag = GBR
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = democracy
+            }
+        }
+        NOT = { year = 1745 }
+        NOT = { has_global_flag = jacobites_pacified }
+        any_neighbor_province = { has_province_modifier = jacobite_sympathies }
+        NOT = { has_province_modifier = jacobite_sympathies }
+        NOT = { region = ENG_300 }
+        is_core = GBR
+        is_colonial = no
+        controlled_by = GBR
+        NOT = { reactionary = 30 }
+        any_pop = {
+            OR = {
+                has_pop_culture = scottish
+                AND = {
+                    is_culture_group = british
+                    has_pop_religion = catholic
+                    militancy = 3
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 40
+        modifier = {
+            factor = 0.8
+                culture = scottish
+            
+        }
+        modifier = {
+            factor = 2.5
+            owner = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 9
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { average_militancy = 1 }
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 30
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 40
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 50
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 20
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 30
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 40
+        }
+        modifier = {
+            factor = 0.9
+            average_militancy = 2
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 3
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 0.7
+            average_militancy = 5
+        }
+        modifier = {
+            factor = 0.7
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.2
+            owner = { has_country_flag = jacobite_rebellion }
+        }
+    }
+
+    option = {
+        name = "EVT377435PTA"
+        owner = { prestige = -2 }
+        random_pop = {
+            limit = {
+                OR = {
+                    culture = scottish
+                    militancy = 3
+                }
+            }
+            reduce_pop = 0.99
+            militancy = 6
+        }
+        poor_strata = {
+            limit = { is_culture_group = british }
+            militancy = 4
+            consciousness = 2
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
+        }
+    }
+
+    option = {
+        name = "EVT37743OPTB"
+        any_pop = {
+            limit = {
+                OR = {
+                    has_pop_culture = scottish
+                    AND = {
+                        is_culture_group = british
+                        has_pop_religion = catholic
+                        militancy = 3
+                    }
+                }
+            }
+            ideology = {
+                value = reactionary
+                factor = 0.2
+            }
+        }
+        state_scope = {
+            any_pop = {
+                limit = {
+                    OR = {
+                        has_pop_culture = scottish
+                        AND = {
+                            is_culture_group = british
+                            has_pop_religion = catholic
+                            militancy = 3
+                        }
+                    }
+                }
+                consciousness = 2
+                ideology = {
+                    value = reactionary
+                    factor = 0.1
+                }
+            }
+        }
+    }
+}
+
+
+province_event = {
+    id = 171406
+    title = "Jacobite Sympathies" #Jacobite Sympathies
+    desc = "EVTDESC37714"
+
+    trigger = {
+        NOT = { has_global_flag = jacobites_pacified }
+        owner = {
+            tag = GBR
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = democracy
+            }
+            NOT = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 10
+                }
+            }
+        }
+        NOT = { year = 1745 }
+        any_neighbor_province = { has_province_modifier = jacobite_sympathies }
+        NOT = { has_province_modifier = jacobite_sympathies }
+        is_core = GBR
+        is_colonial = no
+        controlled_by = GBR
+        OR = {
+            reactionary = 30
+            AND = {
+                reactionary = 20
+                average_militancy = 4
+            }
+            AND = {
+                culture = scottish
+                average_militancy = 4
+            }
+            AND = {
+                culture = catalan
+                average_militancy = 4
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 40
+        modifier = {
+            factor = 2
+            owner = { has_country_modifier = rebel_cell_discovered }
+        }
+        modifier = {
+            factor = 1.5
+            owner = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 5
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            owner = {
+                NOT = {
+                    check_variable = {
+                        which = jacobite_sympathies
+                        value = 3
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+                culture = scottish          
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { average_militancy = 1 }
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 30
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 40
+        }
+        modifier = {
+            factor = 0.8
+            reactionary = 50
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 20
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 30
+        }
+        modifier = {
+            factor = 1.2
+            liberal = 40
+        }
+        modifier = {
+            factor = 0.9
+            average_militancy = 2
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 3
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 0.7
+            average_militancy = 5
+        }
+        modifier = {
+            factor = 0.7
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.2
+            owner = { has_country_flag = jacobite_rebellion }
+        }
+    }
+
+    option = {
+        name = "This isn't good"
+        add_province_modifier = {
+            name = jacobite_sympathies
+            duration = -1
+        }
+        owner = {
+            change_variable = {
+                which = jacobite_sympathies
+                value = 1
+            }
+        }
+    }
+}
+
+province_event = {
+    id = 171407
+    title = "Jacobite Cell Discovered!" #Jacobite Cell Discovered!
+    desc = "EVTDESC171407"
+
+    trigger = {
+        owner = { tag = GBR }
+        has_province_modifier = jacobite_sympathies
+        controlled_by = GBR
+    }
+
+    mean_time_to_happen = {
+        months = 50
+        modifier = {
+            factor = 0.5
+            owner = { has_country_modifier = rebel_cell_discovered }
+        }
+        modifier = {
+            factor = 0.8
+            owner = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            owner = {
+                check_variable = {
+                    which = jacobite_sympathies
+                    value = 8
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            culture = scottish
+        }
+        modifier = {
+            factor = 3
+            NOT = {
+                any_neighbor_province = {
+                    is_core = GBR
+                    NOT = { has_province_modifier = jacobite_sympathies }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            liberal = 20
+        }
+        modifier = {
+            factor = 0.8
+            liberal = 30
+        }
+        modifier = {
+            factor = 0.8
+            liberal = 40
+        }
+        modifier = {
+            factor = 1.2
+            reactionary = 20
+        }
+        modifier = {
+            factor = 1.2
+            reactionary = 30
+        }
+        modifier = {
+            factor = 1.2
+            reactionary = 40
+        }
+        modifier = {
+            factor = 1.2
+            reactionary = 50
+        }
+        modifier = {
+            factor = 1.2
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 1.2
+            average_militancy = 5
+        }
+        modifier = {
+            factor = 1.2
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.5
+            NOT = { average_militancy = 2 }
+        }
+        modifier = {
+            factor = 0.5
+            country_units_in_province = GBR
+        }
+        modifier = {
+            factor = 0.4
+            owner = { has_country_flag = jacobite_rebellion }
+        }
+    }
+
+    option = {
+        name = "Kill them all!"
+        remove_province_modifier = jacobite_sympathies
+        any_pop = {
+            militancy = -5
+        }
+        owner = {
+            add_country_modifier = {
+                name = rebel_cell_discovered
+                duration = 180
+            }
+            change_variable = {
+                which = jacobite_sympathies
+                value = -1
+            }
+        }
+    }
+}
+######American Militancy Raise######
+country_event = {
+    id = 177500
+    title = "Sugar act of 1764"
+    desc = "EVT177500DESC"
+    fire_only_once = yes
+    picture = english_parliment
+
+    trigger = {
+        primary_culture = british
+        year = 1764
+		OR = {
+			THC = {
+				OR = {
+				vassal_of = GBR
+				substate_of = GBR
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Introduce it immediatly"
+        money = 20000
+        random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24502
+			}
+		}
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = 24502
+    title = "Sugar Act of 1764"
+    desc = "EVTDESC24502"
+    picture = english_parliment
+
+    is_triggered_only = yes
+
+    option = {
+        name = "This is preposterous!"
+
+        add_country_modifier = {
+            name = sugar_act_on_colonies
+            duration = -1
+        }
+
+        any_pop = {
+            militancy = 1
+        }
+    }
+}
+country_event = {
+    id = 177501
+    title = "Stamp Act of 1765"
+    desc = "EVT177501DESC"
+    fire_only_once = yes
+    picture = english_parliment
+
+    trigger = {
+        primary_culture = british
+        year = 1765
+        OR = {
+			THC = {
+				OR = {
+				vassal_of = THIS
+				substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Introduce it immediatly"
+        money = 20000
+		 random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24504
+			}
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			militancy = 4
+			consciousness = 5
+		}
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = 24504
+    title = "Stamp Act of 1765"
+    desc = "EVTDESC24504"
+    picture = english_parliment
+
+    is_triggered_only = yes
+
+    option = {
+        name = "This is preposterous!"
+        any_pop = {
+            militancy = 4
+			consciousness = 4
+        }
+    }
+}
+country_event = {
+    id = 177502
+    title = "Tea Act of 1773"
+    desc = "EVT177502DESC"
+    fire_only_once = yes
+    picture = english_parliment
+
+    trigger = {
+        primary_culture = british
+        year = 1773
+        OR = {
+			THC = {
+				OR = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Introduce it immediatly"
+        random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				country_event = 24505
+			}
+		}
+        money = 20000
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = 24505
+    title = "Tea Act of 1773"
+    desc = "EVTDESC24505"
+    picture = english_parliment
+
+    is_triggered_only = yes
+
+    option = {
+        name = "This is preposterous!"
+        any_pop = {
+            militancy = 3
+			consciousness = 3
+        }
+    }
+}
+country_event = {
+    id = 177506
+    title = "Boston Tea Party"
+    desc = "EVT177506DESC"
+    picture = boston_tea
+    is_triggered_only = yes
+
+    option = {
+        name = "A horrible act of barbarity"
+		any_pop = {
+			consciousness = 1
+		}
+        set_country_flag = boston_tea_party_happened
+    }
+}
+country_event = {
+    id = 177507
+    title = "Boston Tea Party Retaliation"
+    desc = "EVT177506DESC"
+    fire_only_once = yes
+    picture = english_parliment
+
+    trigger = {
+        primary_culture = british
+        has_country_flag = boston_tea_party_happened
+		OR = {
+			THC = {
+				OR = {
+				vassal_of = THIS
+				substate_of = THIS
+				}
+			}
+			any_owned_province = {
+				is_core = THC
+			}
+		}
+    }
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "Introduce it immediatly"
+        money = 20000
+		random_owned = {
+			limit = {
+				owner = {
+					exists = THC
+				}
+			}
+			owner = {
+				relation = {
+					who = THC
+					value = -50
+				}
+				THC = {
+					country_event = 24506
+				}
+			}
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			militancy = 4
+			consciousness = 5
+		}
+        set_country_flag = intolerable_act_passed
+        ai_chance = { factor = 100 }
+    }
+    option = {
+        name = "It is unneccessery, get this edict off my sight!"
+        prestige = -65
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = {
+    id = 24506
+    title = "Intolerable acts"
+    desc = "EVTDESC24506"
+    picture = english_parliment
+
+    is_triggered_only = yes
+
+    option = {
+        name = "This is preposterous!"
+        add_country_modifier = {
+            name = intoreable_act_on_colonies
+            duration = 6205
+        }
+        relation = {
+            who = GBR
+            value = -250
+        }
+        any_pop = {
+            militancy = 6
+			consciousness = 6
+        }
+    }
+}
+######################
+###South Sea Bubble###
+######################
+country_event = {
+    id = 171000
+    title = "The Great Debt"
+    desc = "EVTDESC171000"
+    picture = new_world
+    is_triggered_only = yes
+	
+    mean_time_to_happen = {
+        months = 2
+    }
+
+    option = {
+        name = "How are we going to make up for this?"
+        add_country_modifier = {
+            name = the_great_debt
+            duration = -1
+        }
+    }
+}
+country_event = {
+    id = 171001
+    title = "The South Sea Company"
+    desc = "EVTDESC171001"
+    picture = south_sea_company
+    fire_only_once = yes
+
+    trigger = {
+        owns = 300
+		OR = {
+			year = 1711
+			has_country_modifier = in_bankrupcy
+			war_with = SPC
+		}
+        has_country_modifier = the_great_debt
+    }
+    mean_time_to_happen = {
+        months = 6
+		modifier = {
+			factor = 3
+			war_with = SPC
+		}
+    }
+
+    option = {
+        name = "Damnit we need the money!"
+        add_country_modifier = {
+            name = the_south_sea_company
+            duration = -1
+        }
+        money = 25000
+    }
+    option = {
+        name = "This can't possibly end well, shut it all down"
+        prestige = -10
+    }
+}
+country_event = {
+    id = 171002
+    title = "The South Sea Company Act"
+    desc = "EVTDESC171002"
+    picture = south_sea_company
+    fire_only_once = yes
+
+    trigger = {
+        primary_culture = british
+        has_country_modifier = the_south_sea_company
+    }
+
+    mean_time_to_happen = {
+        months = 60
+    }
+
+    option = {
+        name = "The Company Will Controll The Stocks"
+        remove_country_modifier = the_south_sea_company
+        add_country_modifier = {
+            name = the_south_sea_company_1
+            duration = -1
+        }
+        money = 25000
+    }
+    option = {
+        name = "The Government Should Control The Prices"
+        remove_country_modifier = the_south_sea_company
+        add_country_modifier = {
+            name = the_south_sea_company_2
+            duration = -1
+        }
+        money = 10000
+        prestige = -5
+    }
+}
+country_event = {
+    id = 171003
+    title = "The South Sea Bubble Bursts!"
+    desc = "EVTDESC171003"
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        primary_culture = british
+		OR = {
+			has_country_modifier = the_south_sea_company_2
+			has_country_modifier = the_south_sea_company_1
+		}
+		OR = {
+			2217 = { NOT = { controlled_by = THIS } }
+			has_recently_lost_war = yes
+		}
+    }
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    option = {
+        name = "Oh."
+		random_owned = {
+			limit = {
+				has_country_modifier = the_south_sea_company_1
+			}
+			owner = {
+				remove_country_modifier = the_south_sea_company_1
+				add_country_modifier = {
+					name = stock_market_crash
+					duration = 7300
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+				has_country_modifier = the_south_sea_company_2
+				}
+			}
+			owner = {
+				remove_country_modifier = the_south_sea_company_2
+				add_country_modifier = {
+					name = stock_market_crash
+					duration = 1825
+				}
+			}
+		}
+    }
+}
+#country_event = {
+#    id = 171004
+#    title = "Walpole's solution"
+#    desc = "EVTDESC171004"
+#    picture = ssbubble
+#    fire_only_once = yes
+#
+#    trigger = {
+#        owns = 300
+#        year = 1720
+#        has_country_modifier = the_south_sea_company_1
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#
+#    option = {
+#        name = "Fallow Wolpole's Plan"
+#        set_country_flag = walpole_minister
+#    }
+#
+#    option = {
+#        name = "We'll figure it our ourselves!"
+#    }
+#}
+#country_event = {
+#    id = 171005
+#    title = "Walpole's solution"
+#    desc = "EVTDESC171005"
+#    picture = ssbubble
+#    fire_only_once = yes
+#
+#    trigger = {
+#        owns = 300
+#        has_country_flag = walpole_minister
+#    }
+#    mean_time_to_happen = {
+#        months = 2
+#    }
+#
+#    option = {
+#        name = "Oh thank God!"
+#        remove_country_modifier = stock_market_crash
+#		clr_country_flag = walpole_minister
+#    }
+#}
+country_event = {
+    id = 171006
+    title = "The Great Debt Stabilized"
+    desc = "EVTDESC171006"
+    picture = english_parliment
+    fire_only_once = yes
+
+    trigger = {
+        owns = 300
+        has_country_flag = the_great_debt
+        OR = {
+            year = 1735
+            AND = {
+                stock_exchange = 1
+                central_bank_money_bill_printing = 1
+                NOT = {
+                    OR = {
+                        unemployment_subsidies = no_subsidies
+                        unemployment_subsidies = trinket_subsidies
+                    }
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Oh thank God!"
+        remove_country_modifier = the_great_debt
+        #add_country_modifier = {
+        #    name = the_great_debt_1
+        #    duration = -1
+        #}
+    }
+}
+#####East India Company####
+#country_event = {
+#    id = 171007
+#    title = "East India Company Demands Land!"
+#    desc = "EVTDESC171007"
+#    picture = english_parliment
+#
+#    trigger = {
+#        owns = 300
+#        300 = {
+#            is_capital = yes
+#        }
+#        year = 1770
+#        any_owned_province = {
+#            OR = {
+#                region = KAL_1221
+#                region = PAN_1224
+#                region = PAN_1227
+#                region = SIN_1288
+#                region = ENG_1236
+#                region = NEP_1327
+#                region = ENG_1247
+#                region = ENG_1251
+#                region = ENG_1252
+#                region = ENG_1258
+#                region = ENG_1261
+#                region = ENG_1275
+#                region = NAG_1277
+#                region = ENG_1264
+#                region = HYD_1283
+#                region = ENG_1291
+#                region = ENG_1297
+#                region = ENG_1304
+#                region = ENG_1305
+#                region = MYS_1314
+#                region = ENG_1317
+#                region = ENG_1321
+#                region = TIB_1591
+#                region = BUR_1330
+#                region = BUR_1334
+#                region = BUR_1339
+#                region = ENG_1343
+#                region = ENG_2125
+#            }
+#        }
+#    }
+#    mean_time_to_happen = {
+#        days = 1
+#    }
+#
+#    option = {
+#        name = "Give the land to the company"
+#        any_owned = {
+#            limit = {
+#                NOT = { province_id = 3263 }
+#                OR = {
+#                    region = KAL_1221
+#                    region = PAN_1224
+#                    region = PAN_1227
+#                    region = SIN_1288
+#                    region = ENG_1236
+#                    region = NEP_1327
+#                    region = ENG_1247
+#                    region = ENG_1251
+#                    region = ENG_1252
+#                    region = ENG_1258
+#                    region = ENG_1261
+#                    region = ENG_1275
+#                    region = NAG_1277
+#                    region = ENG_1264
+#                    region = HYD_1283
+#                    region = ENG_1291
+#                    region = ENG_1297
+#                    region = ENG_1304
+#                    region = ENG_1305
+#                    region = MYS_1314
+#                    region = ENG_1317
+#                    region = ENG_1321
+#                    region = TIB_1591
+#                    region = BUR_1330
+#                    region = BUR_1334
+#                    region = BUR_1339
+#                    region = ENG_1343
+#                    region = ENG_2125
+#                }
+#            }
+#            secede_province = EIC
+#        }
+#    }
+#
+#    option = {
+#        name = "We will keep it for ourselves."
+#        badboy = 7
+#        relation = {
+#            who = EIC
+#            value = -75
+#        }
+#    }
+#}
+country_event = {
+    id = 171008
+    title = "A Notable general"
+    desc = "EVTDESC171008"
+    picture = english_parliment
+    fire_only_once = yes
+
+    trigger = {
+        owns = 300
+        300 = {
+            is_capital = yes
+        }
+        year = 1793
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "He will achieve great things!"
+        define_general = {
+            name = "Prince Frederick"
+            personality = defence_3.1
+            background = attack_3.1
+        }
+    }
+}
+#country_event = {
+#    id = 171009
+#    title = "French War of Independence"
+#    desc = "EVTDESC171009"
+#    fire_only_once = yes
+#    major = yes
+#
+#    trigger = {
+#        tag = EFM
+#        owns = 425
+#        average_militancy = 6
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#
+#    option = {
+#        name = "Horrible News"
+#        prestige = -10
+#        all_core = {
+#            limit = {
+#                is_core = BOR
+#            }
+#            secede_province = BOR
+#        }
+#        425 = {
+#            owner = {
+#                war = {
+#                    target = EFM
+#                    attacker_goal = { casus_belli = humiliate }
+#                    defender_goal = { casus_belli = acquire_all_cores }
+#                    call_ally = no
+#                }
+#            }
+#        }
+#    }
+#}
+#country_event = {
+#    id = 171010
+#    title = "Loss of France"
+#    desc = "EVTDESC171010"
+#    picture = english_parliment
+#    fire_only_once = yes
+#    major = yes
+#
+#    trigger = {
+#        tag = EFM
+#        NOT = { owns = 425 }
+#        OR = {
+#            BOR = {
+#                exists = yes
+#            }
+#            FRA = {
+#                exists = yes
+#            }
+#        }
+#        war = no
+#        average_militancy = 6
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#    option = {
+#        name = "Oh well..."
+#        prestige = -60
+#        any_country = {
+#            limit = {
+#                SCO = {
+#                    vassal_of = THIS
+#                }
+#                THIS = {
+#                    owns = 300
+#                    has_country_flag = jacobism_prevails
+#                }
+#            }
+#            change_tag = GBJ
+#        }
+#        any_country = {
+#            limit = {
+#                SCO = {
+#                    vassal_of = THIS
+#                }
+#                THIS = {
+#                    owns = 300
+#                }
+#            }
+#            change_tag = ENG
+#        }
+#    }
+#}
+
+#country_event = {
+#    id = 171011
+#    title = "Society of Antiquaries of London"
+#    desc = "EVTDESC171011"
+#    picture = english_parliment
+#    fire_only_once = yes
+#
+#    trigger = {
+#        year = 1707
+#        owns = 300
+#    }
+#    option = {
+#        name = "Amazing, ladies and gentelmens"
+#        300 = {
+#            add_province_modifier = {
+#                name = antiquaries_of_london
+#                duration = -1
+#            }
+#        }
+#    }
+#}
+country_event = {
+    id = 171012
+    title = "The Storming of the Tower of London"
+    desc = "EVTDESC171012"
+    major = yes
+    news = yes
+    fire_only_once = yes
+
+    trigger = {
+        has_country_flag = arrested_wilkes
+        is_ideology_enabled = communist
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+
+    option = {
+        name = "For Wilkes and Liberty!"
+        random_owned = {
+            limit = {
+                is_capital = yes
+                controlled_by_rebels = yes
+            }
+            change_controller = THIS
+        }
+        government = proletarian_dictatorship
+        ruling_party_ideology = communist
+        political_reform = universal_voting
+        political_reform = population_equal_weight
+        political_reform = yes_meeting
+        political_reform = free_press
+        any_country = {
+            limit = {
+                alliance_with = THIS
+                NOT = {
+                    vassal_of = THIS
+                    substate_of = THIS
+                    in_sphere = THIS
+                }
+            }
+            relation = { who = THIS value = -100 }
+            leave_alliance = THIS
+        }
+        any_country = {
+            limit = {
+                OR = {
+                      government = democracy
+                      government = proletarian_dictatorship
+                      government = fascist_dictatorship
+                }
+                NOT = {
+                    vassal_of = THIS
+                    substate_of = THIS
+                    in_sphere = THIS
+                }
+            }
+            relation = { who = THIS value = 200 }
+        }
+    }
+}
+country_event = {
+    id = 171013
+    title = "Captain Jenkin's Ear"
+    desc = "EVTDESC171013"
+    picture = desant
+    fire_only_once = yes
+
+    trigger = {
+        year = 1731
+        primary_culture = british
+    }
+    option = {
+        name = "Use it as an excuse for War"
+        random_owned = {
+            limit = {
+                owner = {
+                    SPA = { exists = yes }
+                }
+            }
+            owner = {
+                casus_belli = {
+                    target = SPA
+                    type = place_in_the_sun
+                    months = 12
+                }
+                relation = {
+                    who = SPA
+                    value = -50
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    SPC = { exists = yes }
+                }
+            }
+            owner = {
+                casus_belli = {
+                    target = SPC
+                    type = place_in_the_sun
+                    months = 12
+                }
+                relation = {
+                    who = SPA
+                    value = -50
+                }
+            }
+        }
+        prestige = 15
+    }
+    option = {
+        name = "Try not to severe our relation too much"
+        prestige = -1
+    }
+}
+##Wilkes stuff
+country_event = {
+    id = 171014
+    title = "John Wilkes"
+    desc = "EVTDESC171014"
+    picture = wilkes
+    fire_only_once = yes
+
+    trigger = {
+        primary_culture = british
+        tag = GBJ
+        has_country_modifier = jacobite_absolutism
+        NOT = { government = proletarian_dictatorship }
+    }
+
+    mean_time_to_happen = {
+        months = 200
+        modifier = {
+            factor = 0.9
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 5
+        }
+        modifier = {
+            factor = 0.7
+            average_militancy = 4
+        }
+    }
+
+    option = {
+        name = "Arrest him!"
+        prestige = 5
+        set_country_flag = arrested_wilkes
+    }
+
+    option = {
+        name = "Leave him be"
+        prestige = -15
+    }
+}
+country_event = {
+    id = 171016
+    title = "Carolonia Colonized"
+    desc = "We colonized the south"
+    picture = harbour
+    fire_only_once = yes
+
+    trigger = {
+       206 = { empty = no }
+	   209 = { empty = no }
+	   216 = { empty = no }
+	   owns = 216
+    }
+	
+	option = {
+		name = "Ok"
+		216 = { add_core = THC add_core = IQS add_core = CHE }
+		2555 = { add_core = THC add_core = CRK }
+		204 = { add_core = THC add_core = CRK }
+		210 = { add_core = THC }
+		209 = { add_core = THC add_core = CHE }
+		206 = { add_core = THC }
+	}
+}
+country_event = {
+    id = 171017
+    title = "The Act of Settlement"
+    desc = "EVTDESC171017"
+    picture = william_of_orange
+    fire_only_once = yes
+	
+	trigger = {
+		primary_culture = british
+		year = 1701
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "Better a German prince than a French one. (Sign The Act)"
+		any_pop = {
+			limit = {
+				culture = british
+			}
+			militancy = -1
+			consciousness = -2
+		}
+		any_pop = {
+			limit = {
+				culture = scottish
+			}
+			consciousness = 2
+		}
+		upper_house = {
+			ideology = conservative
+			value = 0.3
+		}
+	}
+	
+	option = {
+		name = "Better a Catholic then a Fool. (Refuse To Sign The Act)"
+		any_pop = {
+			limit = {
+				culture = british
+			}
+			militancy = 2
+			consciousness = 5
+		}
+		any_pop = {
+			limit = {
+				culture = scottish
+			}
+			consciousness = -2
+		}
+		upper_house = {
+			ideology = liberal
+			value = 0.3
+		}
+		set_country_flag = jacobite_path
+	}
+}
+country_event = {
+    id = 171018
+    title = "Company Rule In India"
+    desc = "EVTDESC171018"
+    picture = william_of_orange
+    is_triggered_only = yes
+	
+	option = {
+		name = "Great!"
+		any_owned = {
+			limit = {
+				is_core = HND
+			}
+			add_province_modifier = {
+				name = colonial_exploitation
+				duration = 365
+			}
+		}
+		casus_belli = {
+			target = JAP
+			type = demand_concession_casus_belli
+			months = 12
+		}
+		casus_belli = {
+			target = MUG
+			type = demand_concession_casus_belli
+			months = 12
+		}
+		casus_belli = {
+			target = TKG
+			type = demand_concession_casus_belli
+			months = 12
+		}
+	}
+}

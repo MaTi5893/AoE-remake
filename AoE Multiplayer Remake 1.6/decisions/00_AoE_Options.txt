@@ -1,0 +1,666 @@
+political_decisions = {
+	
+	show_aoe_options_menu = {
+		alert = no
+		picture = aoe
+		potential = {
+			ai = no
+			NOT = { has_country_flag = showing_aoe_options }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = showing_aoe_options
+		}
+	}
+	
+	hide_aoe_options_menu = {
+		alert = no
+		picture = aoe
+		potential = {
+			ai = no
+			has_country_flag = showing_aoe_options
+		}
+		allow = {
+		}
+		effect = {
+			clr_country_flag = showing_aoe_options
+		}
+	}
+	
+	change_colonial_policy_aoe = {
+		picture = merchant_navy
+		alert = no
+		potential = {
+			ai = no
+			any_owned_province = {
+				is_colonial = yes
+			}
+			exists = yes
+			NOT = { has_country_modifier = change_colonial_policy }
+			has_country_flag = showing_aoe_options
+		}
+		allow = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = national_confusion
+				duration = 365
+			}
+			add_country_modifier = {
+				name = change_colonial_policy
+				duration = 14600
+			}
+			country_event = 170214
+			set_country_flag = chosen_colonial_policy
+		}
+	}
+	
+	rgo_change_mining = {
+		picture = alsace_lorraine_mines
+			potential = {
+				NOT = { has_country_modifier = rgo_changed }
+				ai = no
+				has_country_flag = showing_aoe_options
+			}
+			allow = {
+				NOT = { war = yes }
+				NOT = { has_country_flag = rgo_changed_flag }
+			}
+			effect = {
+				country_event = 199936
+			}
+	}
+
+	rgo_change_agriculture = {
+		picture = tea_production
+			potential = {
+				NOT = { has_country_modifier = rgo_changed }
+				ai = no
+				has_country_flag = showing_aoe_options
+			}
+			allow = {
+				NOT = { war = yes }
+				NOT = { has_country_flag = rgo_changed_flag }
+			}
+			effect = {
+				country_event = 199937
+			}
+	}
+	
+	demote_crats = {
+		alert = no
+		potential = {
+			NOT = { has_country_modifier = craftsmen_fix_cooldown }
+			has_country_flag = showing_aoe_options
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = craftsmen_fix_cooldown
+				duration = 3650
+				}
+				
+				
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					type = bureaucrats
+					location = {
+						OR = {
+							trade_goods = fish
+							trade_goods = cattle
+							trade_goods = fruit
+							trade_goods = wool
+							trade_goods = cotton
+							trade_goods = tea
+							trade_goods = coffee
+							trade_goods = tobacco
+							trade_goods = silk
+							trade_goods = opium
+							trade_goods = dye
+							trade_goods = grain
+						}
+					}
+				}
+				pop_type = farmers		
+			}
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					type = bureaucrats
+					location = {
+						OR = {
+							trade_goods = coal
+							trade_goods = iron
+							trade_goods = tropical_wood
+							trade_goods = sulphur
+							trade_goods = precious_metal
+							#trade_goods = precious_goods
+							trade_goods = oil
+							trade_goods = timber
+							trade_goods = rubber
+						}
+					}
+				}
+				pop_type = labourers		
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	craftsmen_fix = {
+        alert = no
+        potential = {
+            ai = no
+            NOT = { has_country_modifier = craftsmen_fix_cooldown }
+            civilized = yes
+			has_country_flag = showing_aoe_options
+        }
+        allow = {
+            NOT = { has_country_modifier = craftsmen_fix_cooldown }
+            ai = no
+        }
+        effect = {
+            country_event = {id = 9999901 days = 0}
+            country_event = {id = 9999902 days = 3}
+            add_country_modifier = {
+                name = craftsmen_fix_cooldown
+                duration = 3650
+            }
+        }
+    }
+	
+	vassal_interactions = {
+        picture = gtfo
+        alert = no
+        potential = {
+			ai = no
+            num_of_vassals_no_substates = 1
+            is_vassal = no
+			has_country_flag = showing_aoe_options
+        }
+        allow = { civilized = yes }
+        effect = {
+			random_country = {
+				limit = {
+					exists = yes
+					vassal_of = THIS
+				}
+				country_event = 477877793
+			}
+		}
+    }
+	
+	reform_the_local_government = {
+        picture = kaitakushi
+        alert = no
+        potential = {
+            civilized = yes
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = showing_aoe_options
+				}
+			}
+            any_owned_province = {
+                any_core = {
+                    exists = no
+                    capital_scope = { owned_by = THIS }
+                    OR = {
+                        AND =  {
+                            NOT = { political_parties = underground_parties }
+                            THIS = { political_parties = underground_parties }
+                        }
+                        AND =  {
+                            NOT = { political_parties = harassment }
+                            THIS = { political_parties = harassment }
+                        }
+                        AND =  {
+                            NOT = { political_parties = gerrymandering }
+                            THIS = { political_parties = gerrymandering }
+                        }
+                        AND =  {
+                            NOT = { political_parties = non_secret_ballots }
+                            THIS = { political_parties = non_secret_ballots }
+                        }
+                        AND =  {
+                            NOT = { political_parties = secret_ballots }
+                            THIS = { political_parties = secret_ballots }
+                        }
+                    }
+                }
+            }
+        }
+
+        allow = { war = no }
+
+        effect = {
+
+            random_owned = {
+                limit = { owner = { slavery = no_slavery } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_slavery
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { public_meetings = no_meeting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_meeting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { public_meetings = yes_meeting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = yes_meeting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { debt_law = peonage } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = peonage
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { OR = { debt_law = debtors_prisons debt_law = bankruptcy } } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = debtors_prisons
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = state_press } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = state_press
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = censored_press } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = censored_press
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = free_press } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = free_press
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = first_past_the_post } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = first_past_the_post
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = jefferson_method } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = jefferson_method
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = proportional_representation } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = proportional_representation
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = none_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = none_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = landed_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = landed_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = wealth_weighted_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = wealth_weighted_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = wealth_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = wealth_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_weighted_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = universal_weighted_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = universal_voting
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = underground_parties } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = underground_parties
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = harassment } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = harassment
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = gerrymandering } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = gerrymandering
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = non_secret_ballots } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = non_secret_ballots
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = secret_ballots } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = secret_ballots
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = party_appointed } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = party_appointed
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = appointed } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = appointed
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = state_equal_weight } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = state_equal_weight
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = population_equal_weight } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = population_equal_weight
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = { month = 1 }
+            }
+        }
+    }
+	
+	show_tech_school_menu = {
+		alert = no
+		picture = gtfo
+		potential = {
+			ai = no
+			NOT = { has_country_flag = showing_tech_school_changes }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = showing_tech_school_changes
+		}
+	}
+	
+	hide_tech_school_menu = {
+		alert = no
+		picture = gtfo
+		potential = {
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+		}
+		effect = {
+			clr_country_flag = showing_tech_school_changes
+		}
+	}
+	
+	switch_to_traditional_academic_option = {
+		alert = no
+		potential = {
+			NOT = { tech_school = traditional_academic }
+			civilized = yes
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = traditional_academic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	switch_to_army_tech = {
+		alert = no
+		potential = {
+			civilized = yes
+			tech_school = traditional_academic
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+			military_score = 100
+			jingoism = 5
+			pro_military = 5
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = fascist
+			}
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = army_tech_school
+		}
+	}
+	switch_to_navy_tech = {
+		alert = no
+		potential = {
+			civilized = yes
+			tech_school = traditional_academic
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+			military_score = 100
+			total_amount_of_ships = 30
+			pro_military = 5
+			laissez_faire = 5
+			any_owned_province = { is_overseas = yes }
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = naval_tech_school
+		}
+	}
+	switch_to_culture_tech = {
+		alert = no
+		potential = {
+			civilized = yes
+			tech_school = traditional_academic
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+			average_consciousness = 4
+			pacifism = 5
+			secularized = 5
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = fascist
+				ruling_party_ideology = communist
+			}
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = culture_tech_school
+		}
+	}
+	switch_to_trade_tech = {
+		alert = no
+		potential = {
+			civilized = yes
+			tech_school = traditional_academic
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+			industrial_score = 100
+			laissez_faire = 5
+			free_trade = 5
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = commerce_tech_school
+		}
+	}
+	switch_to_industry_tech = {
+		alert = no
+		potential = {
+			civilized = yes
+			tech_school = traditional_academic
+			ai = no
+			has_country_flag = showing_tech_school_changes
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+			prestige = 45
+			industrial_score = 100
+			interventionism = 5
+			protectionism = 5
+			OR = {
+				ruling_party_ideology = conservative
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist
+			}
+		}
+		effect = {
+			prestige = -15
+			add_country_modifier = {
+				name = academic_confusion
+				duration = 1825
+			}
+			tech_school = industrial_tech_school
+		}
+	}
+
+}

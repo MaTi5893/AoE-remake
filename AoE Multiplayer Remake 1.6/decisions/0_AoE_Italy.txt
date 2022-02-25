@@ -1,0 +1,482 @@
+political_decisions = {
+	
+	####################
+	###   Tuscany   ####
+	####################
+	
+	enact_agrarian_reform = {
+		picture = encolsure
+		potential = {
+			OR = {
+				tag = TUS
+				AND = {
+					tag = ITA
+					has_country_flag = ita_tus
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				OR = {
+					wage_reform = no_minimum_wage
+					wage_reform = trinket_wage
+				}
+			}
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = reactionary
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = economic_boom
+				duration = 10950
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						wage_reform = low_minimum_wage
+					}
+					social_reform = acceptable_minimum_wage
+				}
+			}
+			random_owned = {
+				owner = {
+					limit = {
+						wage_reform = acceptable_minimum_wage
+					}
+					social_reform = good_minimum_wage
+				}
+			}
+			PAP = {
+				relation = {
+					value = -150
+					who = THIS
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = good_safety
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = acceptable_safety
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = low_safety
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = trinket_safety
+					}
+				}
+				owner = {
+					social_reform = no_safety
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	tuscan_constitutionalism = {
+		picture = leopold_ii
+		potential = {
+			OR = {
+				tag = TUS
+				AND = {
+					tag = ITA
+					has_country_flag = ita_tus
+				}
+			}
+			NOT = { has_country_flag = tuscan_constitution }
+		}
+		allow = {
+			government = absolute_monarchy
+			OR = {
+				ruling_party_ideology = socialist
+				AND = {
+					has_country_modifier = leopold_ii
+					ruling_party_ideology = liberal
+				}
+			}
+		}
+		effect = {
+			set_country_flag = tuscan_constitution
+			add_country_modifier = {
+				name = new_constitution
+				duration = 10950
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							vote_franschise = none_voting
+							vote_franschise = landed_voting
+						}
+					}
+				}
+				owner = {
+					political_reform = wealth_weighted_voting
+				}
+			}
+			government = hms_government
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = good_safety
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = acceptable_safety
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = low_safety
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						safety_regulations = trinket_safety
+					}
+				}
+				owner = {
+					social_reform = no_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						work_hours = ten_hours
+					}
+				}
+				owner = {
+					social_reform = eight_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						work_hours = twelve_hours
+					}
+				}
+				owner = {
+					social_reform = ten_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						work_hours = fourteen_hours
+					}
+				}
+				owner = {
+					social_reform = twelve_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						work_hours = no_work_hour_limit
+					}
+				}
+				owner = {
+					social_reform = fourteen_hours
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	etruscan_legacy = {
+		picture = etruria
+		potential = {
+			tag = TUS
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+			}
+			NOT = { has_country_flag = etruscan_legacy }
+		}
+		allow = {
+			is_vassal = no
+			part_of_sphere = no
+		}
+		effect = {
+			set_country_flag = etruscan_legacy
+			country_event = 175506
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	####################
+	###    Naples    ###
+	####################
+	
+	unite_two_sicilies = {
+		picture = become_two_sicilies
+		potential = {
+			OR = {
+				tag = NAP
+				tag = SYC
+			}
+			NOT = { SIC = { exists = yes } }
+		}
+		allow = {
+			is_vassal = no
+			part_of_sphere = no
+			prestige = 55
+			owns = 762
+			owns = 754
+		}
+		effect = {
+			NAP = { all_core = { add_core = THIS } }
+			SYC = { all_core = { add_core = THIS } }
+			all_core = {
+				add_core = SIC
+				remove_core = THIS
+			}
+			change_tag = SIC
+			prestige = 35
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	####################
+	###    Milan     ###
+	####################
+	
+	decide_on_our_gov = {
+		picture = palace_commune
+		potential = {
+			tag = LOM
+			exists = yes
+			NOT = { has_country_flag = par_meet }
+		}
+		allow = {
+			is_vassal = no
+		}
+		effect = {
+			prestige = 15
+			country_event = 1755010
+			set_country_flag = par_meet
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_lombardy = {
+		picture = lombardy
+		potential = {
+			tag = LOM
+			exists = yes
+			NOT = { has_country_flag = claimed_lombardy }
+		}
+		allow = {
+			is_vassal = no
+			war_policy = jingoism
+		}
+		effect = {
+			AUS_726 = { add_core = THIS }
+			prestige = 15
+			set_country_flag = claimed_lombardy
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	form_cisalpine_republic = {
+		picture = become_cisalpine
+		potential = {
+			OR = {
+				tag = LOM
+				tag = MNT
+				tag = MOD
+				tag = RMG
+				tag = SAR
+				tag = SVY
+				tag = VEN
+			}
+			NOT = { CIS = { exists = yes } }
+		}
+		allow = {
+			is_vassal = no
+			state_n_government = 1
+			OR = {
+				owns = 728
+				owns = 726
+			}
+			OR = {
+				owns = 741
+				owns = 744
+			}
+			OR = {
+				AND = {
+					owns = 729
+					owns = 720	
+				}
+				AND = {
+					NOT = { tag = SVY }
+					NOT = { tag = SAR }
+					NOT = { tag = VEN }
+				}
+			}
+		}
+		effect = {
+			AUS_726 = { add_core = THIS }
+			PAP_741 = { add_core = THIS }
+			MOD_739 = { add_core = THIS }
+			SAR_720 = { add_core = THIS }
+			AUS_729 = { add_core = THIS }
+			TUS_744 = { add_core = THIS }
+			all_core = {
+				add_core = CIS
+				remove_core = THIS
+			}
+			change_tag = CIS
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+						}
+						NOT = { is_ideology_enabled = communist }
+					}
+				}
+				owner = {
+					government = oligarchic_republic
+					election = yes
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+						}
+						is_ideology_enabled = communist
+					}
+				}
+				owner = {
+					government = proletarian_dictatorship
+					ruling_party_ideology = communist
+				}
+			}
+			prestige = 35
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	unify_eastern_claims = {
+        picture = conquest_adriatic2
+        potential = {
+                tag = ITA
+                NOT = {
+                has_country_flag = unify_eastern_claims
+            }
+        }
+	
+        allow = {
+		    war = no
+		    all_core = { owned_by = THIS }
+			
+        }
+		
+        effect = {
+            set_country_flag = unify_eastern_claims
+            prestige = 10
+            AUS_734 = { add_core = THIS }
+			AUS_736 = { add_core = THIS }
+			AUS_780 = { add_core = THIS }
+			854 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							owns = AUS_734
+							owns = AUS_736
+							owns = AUS_780
+						}
+					}
+				}
+				owner = {
+					badboy = 10
+				}
+			}
+			
+        }
+    }
+	
+	claim_greater_venice = {
+	    picture = aegean
+        potential = {
+            tag = ITA
+	        has_country_flag = unify_eastern_claims
+            NOT = {
+            has_country_flag = claim_greater_venice
+            }
+        }
+		
+		    allow = {
+		    war = no
+		    all_core = { owned_by = THIS }
+			
+        }
+		
+		
+        effect = {
+            set_country_flag = claim_greater_venice
+            prestige = 10
+			TUR_853 = { add_core = THIS }
+			TUR_819 = { add_core = THIS }
+			TUR_832 = { add_core = THIS }
+			GRE_837 = { add_core = THIS }
+			GRE_826 = { add_core = THIS }
+			EGY_843 = { add_core = THIS }
+			TUR_855 = { add_core = THIS }
+			800 = { add_core = THIS }
+			badboy = 15
+		
+		}
+	
+	}	
+
+}
