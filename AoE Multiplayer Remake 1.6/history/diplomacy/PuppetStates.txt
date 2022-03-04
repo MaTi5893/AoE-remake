@@ -1,10 +1,3 @@
-#Russia - Bashkirs
-vassal = {  #substate
-	first = TOR
-	second = BSK
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 
 #Ottoman - Acre
 vassal = {  #substate
@@ -61,14 +54,6 @@ vassal = {  #substate
 	second = JER
 	start_date = 1700.1.1
 	end_date = 2000.1.1
-}
-
-#Russia - Hetmanate
-substate = {  #substate
-	first = TOR
-	second = HET
-	start_date = 1700.1.1
-	end_date = 1756.1.1
 }
 
 #Mughal - Nagpur
@@ -156,17 +141,6 @@ substate = {  #substate
 	start_date = 1707.1.1
 	end_date = 2000.1.1
 }
-
-#Russian Khanti-Mansi
-
-vassal = {  #substate
-	first = TOR
-	second = KNI
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-
-#Kartli-Kakheti
 
 vassal = {  #substate
 	first = PER
@@ -344,35 +318,6 @@ vassal = {
 }
 
 
-#Russia-Finland
-vassal = {
-	first = TOR
-	second = FIN
-	start_date = 1815.1.1
-	end_date = 1863.1.1
-}
-
-vassal = {
-	first = TOR
-	second = SVA
-	start_date = 1815.1.1
-	end_date = 1863.1.1
-}
-
-vassal = {
-	first = TOR
-	second = MIG
-	start_date = 1815.1.1
-	end_date = 1870.1.1
-}
-
-#vassal = {
-#	first = TOR
-#	second = AKH
-#	start_date = 1815.1.1
-#	end_date = 1863.1.1
-#}
-
 ##Sokoto - Adamawa Emirate
 vassal = {
 	first = SOK
@@ -441,30 +386,6 @@ vassal = {
 	second = NOR
 	start_date = 1815.11.9
 	end_date = 1905.1.1
-}
-
-#Russia - Transcaucasia Namestnik
-vassal = {  #substate
-	first = TOR
-	second = TCA
-	start_date = 1801.1.1
-	end_date = 1881.1.1
-}
-
-#Russia - Baltic Governorate
-vassal = {  #substate
-	first = TOR
-	second = UBD
-	start_date = 1801.1.1
-	end_date = 1881.1.1
-}
-
-#Russia - Abkhazia
-vassal = {
-	first = TOR
-	second = ABK
-	start_date = 1801.1.1
-	end_date = 1865.1.1
 }
 
 #Ottoman Empire-Wallachia

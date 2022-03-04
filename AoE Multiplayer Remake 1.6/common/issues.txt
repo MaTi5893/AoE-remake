@@ -1222,7 +1222,7 @@ economic_reforms = {
             global_pop_militancy_modifier = -0.005
         }
         yes_land_reform = {
-            technology_cost = 4000 #was 8000
+            technology_cost = 000 #was 8000
             civilization_progress_modifier = 0.05 #was 0.15
 
             on_execute = {
@@ -1657,7 +1657,7 @@ military_reforms = {
                     global_pop_militancy_modifier = -0.005
         }
         yes_foreign_training = {
-            technology_cost = 4000 #was 8000
+            technology_cost = 8000 #was 8000
             #unit stats improve
             land_organisation = 0.1
             civilization_progress_modifier = 0.05
@@ -1686,7 +1686,7 @@ military_reforms = {
             }
         }
         foreign_training_two = {
-            technology_cost = 6000
+            technology_cost = 8000
             land_organisation = 0.15
             civilization_progress_modifier = 0.10
             research_points_on_conquer = 0.10
@@ -1719,7 +1719,7 @@ military_reforms = {
             global_pop_militancy_modifier = -0.005
         }
         yes_foreign_weapons = {
-            technology_cost = 4000 #was 10000
+            technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
             research_points_on_conquer = 0.05 #0.25
 
@@ -1745,7 +1745,7 @@ military_reforms = {
             }
         }
         foreign_weapons_two = {
-            technology_cost = 6000
+            technology_cost = 10000
             civilization_progress_modifier = 0.10
             research_points_on_conquer = 0.10
             on_execute = {
@@ -1776,7 +1776,7 @@ military_reforms = {
                 global_pop_militancy_modifier = -0.005
         }
         yes_military_constructions = {
-            technology_cost = 4000 #10000
+            technology_cost = 8000 #10000
             civilization_progress_modifier = 0.05
             on_execute = {
                 effect = {
@@ -1800,7 +1800,7 @@ military_reforms = {
             }
         }
         military_constructions_two = {
-            technology_cost = 6000
+            technology_cost = 8000
             civilization_progress_modifier = 0.10
 
             on_execute = {
@@ -1836,7 +1836,7 @@ military_reforms = {
         }
         yes_foreign_officers = {
             leadership_modifier = 0.10
-            technology_cost = 4000 #was 10000
+            technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
             research_points_on_conquer = 0.10 #was 0.25
 
@@ -1863,7 +1863,7 @@ military_reforms = {
         }
         foreign_officers_two = { #new
             leadership_modifier = 0.20
-            technology_cost = 6000
+            technology_cost = 8000
             civilization_progress_modifier = 0.10
             research_points_on_conquer = 0.15
 
@@ -1897,7 +1897,7 @@ military_reforms = {
         }
         yes_army_schools = {
             land_unit_start_experience = 10
-            technology_cost = 4000 #was 10000
+            technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
 
             on_execute = {
@@ -1923,7 +1923,7 @@ military_reforms = {
         }
         army_schools_two = { #new
             land_unit_start_experience = 10
-            technology_cost = 6000
+            technology_cost = 10000
             civilization_progress_modifier = 0.10
 
             on_execute = {
@@ -1955,7 +1955,7 @@ military_reforms = {
         }
         yes_foreign_naval_officers = {
             tariff_efficiency_modifier = 0.10 #was 0.20
-            technology_cost = 4000 #was 10000
+            technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
             research_points_on_conquer = 0.05 #new
 
@@ -1984,7 +1984,7 @@ military_reforms = {
         }
         foreign_naval_officers_two = { #new
             tariff_efficiency_modifier = 0.20
-            technology_cost = 6000
+            technology_cost = 10000
             civilization_progress_modifier = 0.10
             research_points_on_conquer = 0.10
 
@@ -2018,7 +2018,7 @@ military_reforms = {
         yes_foreign_navies = {
             naval_attack_modifier = 0.2
             naval_defense_modifier = 0.2
-            technology_cost = 4000 #10000
+            technology_cost = 8000 #10000
             civilization_progress_modifier = 0.05 #was 0.10
             research_points_on_conquer = 0.05 #new
 
@@ -2048,7 +2048,7 @@ military_reforms = {
         foreign_navies_two = {
             naval_attack_modifier = 0.4
             naval_defense_modifier = 0.4
-            technology_cost = 6000 #10000
+            technology_cost = 10000 #10000
             civilization_progress_modifier = 0.1
             research_points_on_conquer = 0.10
 
@@ -2081,7 +2081,7 @@ military_reforms = {
         }
         yes_naval_schools = {
             naval_unit_start_experience = 10
-            technology_cost = 4000 #was 10000
+            technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
 
             on_execute = {
@@ -2104,7 +2104,7 @@ military_reforms = {
             }
         }
         naval_schools_two = { #new
-            technology_cost = 6000 #because player can skip level 1, cost is for both levels
+            technology_cost = 10000 #because player can skip level 1, cost is for both levels
             civilization_progress_modifier = 0.10
 
             on_execute = {
