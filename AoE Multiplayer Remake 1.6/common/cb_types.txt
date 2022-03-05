@@ -3214,11 +3214,6 @@ demand_concession_casus_belli = {
 		THIS = {
 			civilized = yes
 		}
-		OR = {
-		NOT = { total_pops = 500000 }
-		NOT = { capital_scope = { is_core = HND } }
-		year = 1715
-		}
 		civilized = no
 		number_of_states = 2
 	}
@@ -3270,11 +3265,6 @@ demand_concession_casus_belli_for_puppet = {
 		NOT = { is_our_vassal = THIS }
 		THIS = {
 			civilized = yes
-		}
-		OR = {
-		NOT = { total_pops = 500000 }
-		NOT = { capital_scope = { is_core = HND } }
-		year = 1715
 		}
 		civilized = no
 		number_of_states = 2
@@ -3470,13 +3460,6 @@ demand_concession_capital = {
 		THIS = { NOT = { has_country_modifier = neutrality } }
         NOT = { is_our_vassal = THIS }
         #number_of_states = 2 # annex if you want their last state
-        OR = {
-        AND = {
-        NOT = { total_pops = 500000 }
-        NOT = { capital_scope = { is_core = HND } }
-        }
-        year = 1715
-        }
         any_owned_province = {
             not = { is_core = THIS }
             is_colonial = no

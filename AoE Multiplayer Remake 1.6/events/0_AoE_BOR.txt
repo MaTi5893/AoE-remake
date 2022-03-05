@@ -649,6 +649,7 @@ country_event = {
 	title = "Nouvelle-France Flurishes"
 	desc = "EVTDESC171119"
 	picture = north_america
+	fire_only_once = yes
 	
 	trigger = {
 		has_country_flag = secured_fr_na
