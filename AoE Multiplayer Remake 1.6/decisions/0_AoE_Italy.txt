@@ -478,5 +478,23 @@ political_decisions = {
 		}
 	
 	}	
-
+	
+	annex_the_kinghts = {
+		picture = knights
+        potential = {
+            exists = MLT
+			MLT = { government = theocracy ai = yes }
+			NOT = { tag = MLT }
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+        }
+		allow = {
+			MLT = { in_sphere = THIS }
+			mass_politics = 1
+		}
+		effect = {
+			badboy = 1
+			inherit = MLT
+		}
+	}
 }

@@ -49,6 +49,7 @@ political_decisions = {
             has_country_flag = hre_member
             NOT = { has_global_flag = hre_dismantled }
             exists = yes
+			NOT = { exists = NNN }
         }
         allow = {
             NOT = { relation = { who = AUS value = -10 } }
@@ -113,12 +114,14 @@ political_decisions = {
                 limit = {
                     owner = {
                         has_country_flag = hre_member
+						NOT = { tag = THIS }
                     }
                 }
                 owner = {
                     annex_to = NNN
                 }
             }
+			clr_country_flag = hre_member
         }
         ai_will_do = {
             factor = 1

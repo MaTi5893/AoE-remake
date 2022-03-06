@@ -1138,121 +1138,104 @@ province_event = {
 		}
 	}	
 }
-
 province_event = {
-	id = 2601
-	title = "EVTNAME2601"
-	desc = "EVTDESC2601"
+	id = 2560
+	title = "EVTNAME2560"
+	desc = "EVTDESC2560"
 	
 	trigger = {
-		has_province_modifier = core_integration
-		owner = { NOT = { has_country_modifier = preparations_to_kill } NOT = { any_owned_province = { has_province_modifier = genocide } } }
-		is_core = THIS
-	}
-	
-	mean_time_to_happen = {
-		days = 3
-	}
-	
-	option = {
-		name = "EVT2601OPTA"
-		state_scope = {
-			any_owned = {
-				limit = {
-					has_province_modifier = core_integration
-					is_core = THIS
+		NOT = { is_core = THIS }
+		controlled_by = THIS
+		is_colonial = no
+		is_overseas = no
+		OR = {
+			AND = {
+				is_primary_culture = yes
+				any_neighbor_province = {
+					AND = {
+						is_core = THIS
+						controlled_by = THIS
+					}
 				}
-				remove_province_modifier = core_integration
+			}
+			AND = {
+				is_accepted_culture = yes
+				any_neighbor_province = {
+					AND = {
+						is_core = THIS
+						controlled_by = THIS
+					}
+				}
+				OR = {
+					owner = { political_rights = culture_voting_only }
+					owner = { political_rights = all_voting_pops }
+				}
+			}
+			AND = {
+				any_neighbor_province = {
+					AND = {
+						is_core = THIS
+						controlled_by = THIS
+					}
+				}
+				owner = { political_rights = all_voting_pops }
 			}
 		}
-	}
-}
-	
-province_event = {
-	id = 2605
-	title = "EVTNAME2605" #$PROVINCENAME$ Integrated into $COUNTRY$
-	desc = "EVTDESC2605"
-	
-	trigger = {
-		owner = { NOT = { has_country_modifier = preparations_to_kill } NOT = { any_owned_province = { has_province_modifier = genocide } } }
-		has_province_modifier = core_integration
-		NOT = {
-			is_core = THIS
-			has_province_modifier = nationalist_agitation
-		}
-		controlled_by = THIS
-		owned_by = THIS
-		is_colonial = no
-		OR = {
-			is_primary_culture = yes
-			is_accepted_culture = yes
-		}
-		OR = { 
-			any_neighbor_province = { is_core = THIS }
-			is_overseas = yes
-		}
 		owner = {
+			tag = THIS
 			civilized = yes
+			is_vassal = no
 			war = no
+			health_care = good_health_care #v. infl 'crats
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 180
+		months = 240
 		modifier = {
 			factor = 0.5
-			owner = { has_country_flag = new_world_nation }
+			is_primary_culture = yes
 		}
 		modifier = {
-			factor = 0.75
-			owner = { primary_culture = russian }
-		}
-		modifier = {
-			factor = 0.5
-			owner = { nationalism_n_imperialism = 1 }
-		}
-		modifier = {
-			factor = 0.75
-			owner = { revolution_n_counterrevolution = 1 }
-		}
-		modifier = {
-			factor = 0.75
-			owner = { 
-				is_culture_group = germanic
+			factor = 0.95
+			owner = {
 				nationalism_n_imperialism = 1
 			}
 		}
 		modifier = {
-			factor = 0.75
-			owner = { colonial_policy = settlement }
+			factor = 0.8
+			owner = {
+				centralization = admin_parliment
+			}
 		}
 		modifier = {
-			factor = 1.5
-			is_primary_culture = no
-			is_accepted_culture = yes
+			factor = 0.9
+			NOT = {
+				average_militancy = 1
+			}
 		}
 		modifier = {
-			factor = 1.2
-			average_militancy = 2
+			factor = 0.9
+			NOT = {
+				average_militancy = 2
+			}
 		}
 		modifier = {
-			factor = 1.2
-			average_militancy = 3
+			factor = 0.95
+			NOT = {
+				average_militancy = 3
+			}
 		}
 		modifier = {
-			factor = 1.2
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.2
-			average_militancy = 5
+			factor = 0.9
+			NOT = {
+				average_consciousness = 4
+			}
 		}
 	}
 	
 	option = {
-		name = "EVT2605OPTA"
-		owner = { prestige = 2 }
-		remove_province_modifier = core_integration
+		name = "EVTOPTA2560"
 		add_core = THIS
 	}
 }

@@ -396,7 +396,7 @@ promote_to =
             NOT = { is_primary_culture = yes }
         }
 		modifier = {
-            factor = -8
+            factor = -15
             debt_law = serfdom
         }
         group = {
@@ -589,6 +589,20 @@ promote_to =
             factor = 16
             wage_reform = good_minimum_wage
         }
+		
+		modifier = {
+			factor = 8
+			colonial_policy = settlement
+			location = { life_rating = 25 }
+			state_scope = { total_pops = 135000 }
+		}
+		
+		modifier = {
+			factor = -12
+			colonial_policy = settlement
+			location = { life_rating = 25 }
+			state_scope = { NOT = { total_pops = 55000 } }
+		}
 
         group = {
             modifier = {

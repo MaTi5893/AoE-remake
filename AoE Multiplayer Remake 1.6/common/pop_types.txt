@@ -94,10 +94,16 @@ promotion_chance =
         factor = -0.1
         not = { culture = this }
     }
-    modifier = {
-        factor = -0.1
-        country = { slavery = yes_slavery }
-    }
+	modifier = {
+		factor = -0.15
+		country = { 
+			OR = {
+				slavery = yes_slavery 
+				slavery = freedom_of_womb
+				debt_law = serfdom
+			}
+		}
+	}
     modifier = {
         factor = -0.05
         state_scope = {
@@ -125,16 +131,16 @@ demotion_chance =
         state_scope = { is_colonial = yes }
         strata = poor
     }
-    modifier = {
-        factor = -0.05
-        country = {
-            has_country_flag = serfdom_not_abolished
-        }
-    }
-    modifier = {
-        factor = -0.1
-        country = { slavery = yes_slavery }
-    }
+	modifier = {
+		factor = -0.1
+		country = { 
+			OR = {
+				slavery = yes_slavery
+				slavery = freedom_of_womb
+				debt_law = serfdom
+			}
+		}
+	}
     modifier = {
         factor = -0.05
         state_scope = {
