@@ -587,33 +587,6 @@ guiTypes = {
 			########################		
 			### political
 			########################
-			
-			windowType = {
-			name = "conscription"
-			backGround =""
-			position = { x = 691 y = 142 }
-			size = { x=151 y= 92}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
-			
-				iconType = {
-				name = "politics_conscription"
-				spriteType = "GFX_politics_conscription"
-				position = { x= 6 y = 12 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-					}
-				instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
-				font = "vic_18" #WAS "vic_18"
-				text = "REFORM_NAME"
-				maxWidth = 100
-				maxHeight = 20	
-					}
-				}
 				
 		windowType = {
 			name = "citizens_rights"
@@ -730,7 +703,7 @@ guiTypes = {
 			windowType = {
 				name = "vote_franschise"
 				backGround =""
-				position = { x = 691 y = 235 }
+				position = { x = 691 y = 142 }
 				size = { x = 151 y = 120 }
 				moveable = 0
 				dontRender = ""
@@ -760,7 +733,7 @@ guiTypes = {
 			windowType = {
 				name = "voting_system"
 				backGround =""
-				position = { x = 691 y = 342 }
+				position = { x = 691 y = 249 }
 				size = { x=151 y=72 }
 				moveable = 0
 				dontRender = ""
@@ -788,7 +761,7 @@ guiTypes = {
 			windowType = {
 				name = "public_meetings"
 				backGround =""
-				position = { x = 843 y = 365 }
+				position = { x = 691 y = 314 }
 				size = { x=151 y=100 }
 				moveable = 0
 				dontRender = ""

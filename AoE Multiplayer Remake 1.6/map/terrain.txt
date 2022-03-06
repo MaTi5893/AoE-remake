@@ -150,6 +150,18 @@ categories =  {
         mine_rgo_eff = 0.0
         supply_limit = 2
     }
+
+	treaty_port = {
+        movement_cost = 1.2
+        color = { 205 0 255  }
+
+        farm_rgo_size = 0.2
+        farm_rgo_eff = 0.0
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 10
+		min_build_naval_base = 3
+    }
 }
 
 

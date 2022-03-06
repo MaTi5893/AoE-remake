@@ -662,5 +662,37 @@ political_decisions = {
 			tech_school = industrial_tech_school
 		}
 	}
+	
+	delete_africa = {
+		alert = no
+		picture = aoe
+		potential = {
+			ai = no
+			has_country_flag = showing_aoe_options
+			NOT = { has_country_flag = delete_africa }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = delete_africa
+			any_country = {
+				limit = {
+					capital_scope = {
+						continent = africa
+					}
+					NOT = { primary_culture = maghrebi }
+					NOT = { primary_culture = ethiopian }
+					NOT = { tag = SUD }
+				}
+				any_owned = {
+					limit = {
+						life_rating = 35
+					}
+					life_rating = -10
+				}
+				annex_to = #empty so they disappear
+			}
+		}
+	}
 
 }

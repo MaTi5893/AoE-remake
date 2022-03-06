@@ -14,7 +14,7 @@ country = {
     GREAT_NATIONS_COUNT = 8,
     GREATNESS_DAYS = 365,        -- how many days until country risks losing status as great nation
     BADBOY_LIMIT = 25,
-    MAX_BUREAUCRACY_PERCENTAGE = 0.01, -- More than max percent bureaucrats of poplation will give no additional benefits
+    MAX_BUREAUCRACY_PERCENTAGE = 0.015, -- More than max percent bureaucrats of poplation will give no additional benefits
     BUREAUCRACY_PERCENTAGE_INCREMENT = 0.001, -- For each social administrative reform level, this is added to MAX_BUREAUCRACY_PERCENTAGE
     MIN_CRIMEFIGHT_PERCENT = 0.2,
     MAX_CRIMEFIGHT_PERCENT = 0.99,
@@ -662,7 +662,7 @@ pops = {
 
     POP_SAVINGS = 0.018,
 
-    STATE_CREATION_ADMIN_LIMIT = 0.01,
+    STATE_CREATION_ADMIN_LIMIT = 0.02,
     MIL_TO_JOIN_REBEL = 7, -- Rebels over this will join a faction
     MIL_TO_JOIN_RISING = 8, -- Rebels over this will join a general rising
     MIL_TO_AUTORISE = 9, -- Rebels over this rise no matter what
