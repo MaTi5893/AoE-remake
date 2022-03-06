@@ -94,6 +94,7 @@ negotiated_transfer
 #steal_puppet
 conquest_tiny
 conquest_tribal
+acquire_core_substate_region
 }
 
 gunboat = {
@@ -1546,6 +1547,63 @@ acquire_substate_region = {
         owner = { NOT = { in_sphere = THIS } }
         any_owned_province = {
             not = {    is_core = THIS }
+            is_colonial = no
+        }
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_TAKE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+
+# Gain control of core Substate region
+acquire_core_substate_region = {
+    sprite_index = 6
+    is_triggered_only = yes
+    months = 12
+    crisis = no
+	constructing_cb = no
+	always = yes
+
+    badboy_factor = 0
+    prestige_factor = 1.5
+    peace_cost_factor = 1
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 0
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        num_of_substates = 1 # if has any substate
+        any_substate = {
+            number_of_states = 1
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+            }
+        }
+    }
+
+    allowed_substate_regions = {
+        #is_colonial = no
+        owner = { NOT = { in_sphere = THIS } }
+        any_owned_province = {
+            is_core = THIS
             is_colonial = no
         }
     }
