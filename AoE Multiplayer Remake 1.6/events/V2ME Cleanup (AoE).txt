@@ -72,7 +72,6 @@ country_event = {
 				civilized = no
 				any_state = { is_colonial = yes }
 				NOT = {
-					tag = EIC
 					tag = EGY
 					UTI = { exists = yes }
 				}

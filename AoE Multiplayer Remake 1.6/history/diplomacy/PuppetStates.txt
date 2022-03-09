@@ -225,28 +225,6 @@ vassal = {
 	end_date = 2000.1.1
 }
 
-#Monaco
-vassal = {
-	first = SAR
-	second = MNC
-	start_date = 1814.11.1
-	end_date = 1860.1.1
-}
-
-vassal = {
-	first = BOR
-	second = MNC
-	start_date = 1860.1.1
-	end_date = 1936.1.1
-}
-
-vassal = {
-	first = BOR
-	second = MNC
-	start_date = 1870.1.1
-	end_date = 1936.1.1
-}
-
 vassal = {
 	first = TUR
 	second = ALD
@@ -510,22 +488,6 @@ vassal = {  #substate
 	first = QNG
 	second = MCK
 	start_date = 1636.1.1
-	end_date = 1937.1.1
-}
-
-#China - Guizhou
-vassal = {  #substate
-	first = QNG
-	second = GUI
-	start_date = 1636.1.1
-	end_date = 1937.1.1
-}
-
-#China - Inner Mongolia
-vassal = {  #substate
-	first = QNG
-	second = IMG
-	start_date = 1691.1.1
 	end_date = 1937.1.1
 }
 
