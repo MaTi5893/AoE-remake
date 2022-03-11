@@ -217,7 +217,7 @@ political_decisions = {
 	}
 	
 	begin_agricilture_reforms = {
-		picture = industry_rev
+		picture = encolsure
 		potential = {
 			owns = 322
 			322 = { is_capital = yes }
@@ -245,87 +245,19 @@ political_decisions = {
 				name = agriculture_reform
 				duration = 1825
 			}
-			any_pop = {
-				limit = {
-					culture = swedish
-				}
-				money = 2500
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	commodity_act = {
-		picture = trade_center
-		potential = {
-			owns = 322
-			322 = { is_capital = yes }
-			NOT = { has_country_flag = commodity_act } 
-			exists = yes
-		}
-		allow = {
-			war = no
-			NOT = {
-				health_care = no_health_care
-			}
-			has_country_modifier = agriculture_reform
-			trade_policy = protectionism
-			money = 20000
-		}
-		effect = {
-			set_country_flag = commodity_act
-			money = -20000
-			add_country_modifier = {
-				name = commodity_act
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	begin_great_partition = {
-		picture = farm_rev
-		potential = {
-			owns = 322
-			322 = { is_capital = yes }
-			NOT = { has_country_flag = great_partition } 
-			exists = yes
-		}
-		allow = {
-			war = no
-			NOT = {
-				health_care = no_health_care
-			}
-			industrial_score = 100
-			has_country_modifier = agriculture_reform
-			trade_policy = protectionism
-			money = 20000
-		}
-		effect = {
-			set_country_flag = great_partition
-			money = -20000
-			add_country_modifier = {
-				name = great_partition
-				duration = -1
-			}
-			any_pop = {
-				limit = {
-					culture = swedish
-					strata = poor
-				}
-				money = 2500
-			}
 			tech_school = industrial_tech_school
+			any_pop = {
+				limit = {
+					culture = swedish
+				}
+				money = 2500
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
+
 	renovate_the_baltic = {
 		picture = baltic
 		potential = {

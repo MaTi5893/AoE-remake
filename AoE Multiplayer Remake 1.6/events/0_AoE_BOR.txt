@@ -1,121 +1,37 @@
 country_event = {
-	id = 19000
-	title = "Estates General on taxation" #Estates general
-	desc = "EVTDESC19000"
-	picture = estates_general
+	id = 171136
+	title = "Estates General of $YEAR$" #Estates general
+	desc = "EVTDESC171136"
+	major = yes
+	news = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA19000
+		name = "Shall We Begin?"
 		prestige = 15
-		set_country_flag = neglecting_the_third_estate
-		country_event = 19001
-		any_pop = { 
-			limit = { 
-				type = aristocrats
-			}
-			militancy = -2 
-			consciousness = -4
-		}
-		any_pop = { 
-			limit = { 
-				type = clergymen
-			}
-			militancy = 2 
-			consciousness = 4
-		}
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = 2 
-			consciousness = 4
-		}
+		country_event = 171137
 		ai_chance = { factor = 1 }
-	}
-	
-	option = {
-		name = EVTOPTB19000
-		prestige = 5
-		set_country_flag = neglecting_the_third_estate
-		PAP = {
-			relation = { who = BOR value = 30 }
-		}
-		any_pop = { 
-			limit = { 
-				type = aristocrats
-			}
-			militancy = 2 
-			consciousness = 4
-		}
-		any_pop = { 
-			limit = { 
-				type = clergymen
-			}
-			militancy = -2 
-			consciousness = -4
-		}
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = 2 
-			consciousness = 4
-		}
-		country_event = 19001
-		ai_chance = { factor = 0 }
-	}
-	
-	option = {
-		name = EVTOPTC19000
-		prestige = -40
-		add_country_modifier = {
-			name = poor_tax_laws
-			duration = 3650
-		}
-		any_pop = { 
-			limit = { 
-				type = aristocrats
-			}
-			militancy = 2 
-			consciousness = 4
-		}
-		any_pop = { 
-			limit = { 
-				type = clergymen
-			}
-			militancy = 2 
-			consciousness = 4
-		}
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = -2 
-			consciousness = -4
-		}
-		country_event = 19001
-		ai_chance = { factor = 0 }
-		political_reform = bankruptcy
 	}
 }
 country_event = {
-	id = 19001
-	title = "Estates general on conscription laws" #Estates general
-	desc = "EVTDESC19000"
+	id = 171137
+	title = "Estates general on Taxation" #Estates general
+	desc = "EVTDESC171137"
 	picture = estates_general
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA19000
+		name = "Favor The First Estate"
 		prestige = 15
 		any_pop = { 
 			limit = { 
 				type = aristocrats
 			}
+			money = 500
 			militancy = -2 
 			consciousness = -4
 		}
+		money = -10000
 		any_pop = { 
 			limit = { 
 				type = clergymen
@@ -130,12 +46,12 @@ country_event = {
 			militancy = 2 
 			consciousness = 4
 		}
-		country_event = 19002
+		country_event = 171138
 		set_country_flag = neglecting_the_third_estate
 		ai_chance = { factor = 0 }
 	}
 	option = {
-		name = EVTOPTB19000
+		name = "Favor The Second Estate"
 		prestige = 5
 		PAP = {
 			relation = { who = BOR value = 30 }
@@ -151,9 +67,11 @@ country_event = {
 			limit = { 
 				type = clergymen
 			}
+			money = 500
 			militancy = -2 
 			consciousness = -4
 		}
+		money = -10000
 		any_pop = {
 			limit = { 
 				strata = poor
@@ -162,18 +80,17 @@ country_event = {
 			consciousness = 4
 		}
 		set_country_flag = neglecting_the_third_estate
-		country_event = 19002
+		country_event = 171138
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
-		name = EVTOPTC19000
+		name = "Favor The Third Estate"
 		add_country_modifier = {
 			name = poor_conscript_laws
 			duration = 3650
 		}
-		political_reform = two_year_draft
 		any_pop = { 
 			limit = { 
 				type = aristocrats
@@ -197,18 +114,18 @@ country_event = {
 		}
 		prestige = -40
 		ai_chance = { factor = 0 }
-		country_event = 19002
+		country_event = 171138
 	}
 }
 country_event = {
-	id = 19002
-	title = "Estate general on our Monarchy" #Estates general
+	id = 171138
+	title = "Estate General on Parliament" #Estates general
 	desc = "EVTDESC19002"
 	picture = estates_general
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA19000
+		name = "Favor The First Estate"
 		prestige = 15
 		set_country_flag = neglecting_the_third_estate
 		any_pop = { 
@@ -237,7 +154,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB19000
+		name = "Favor The Second Estate"
 		prestige = 5
 		set_country_flag = neglecting_the_third_estate
 		PAP = {
@@ -269,12 +186,12 @@ country_event = {
 		}
 	}
 	option = {
-		name = EVTOPTC19000
-		prestige = -60
-		government = prussian_constitutionalism
+		name = "Favor The Third Estate"
+		prestige = -15
+		government = hms_government
 		political_reform = jefferson_method
 		political_reform = appointed
-		political_reform = landed_voting
+		political_reform = wealth_weighted_voting
 		political_reform = harassment
 		any_pop = { 
 			limit = { 
@@ -297,13 +214,12 @@ country_event = {
 			militancy = -2 
 			consciousness = -4
 		}
-		add_country_modifier = {
-			name = peasant_in_government
-			duration = 3650
-		}
 		ai_chance = {
 			factor = 0
 		}
+	}
+	option = {
+		name = "Dissolve The Essembly!"
 	}
 }
 country_event = {
@@ -1316,5 +1232,23 @@ country_event = {
 			}
 		}
 		clr_global_flag = haiti_happened
+	}
+}
+country_event = {
+	id = 171140
+	title = "Buring Of The Versallies Palace"
+	desc = "EVTDESC171140"
+	is_triggered_only = yes
+	major = yes
+	news = yes
+	
+	option = {
+		name = "Mon Dieu!"
+		425 = {
+			remove_province_modifier = palace_of_versallis
+			any_pop = {
+				reduce_pop = 0.99
+			}
+		}
 	}
 }

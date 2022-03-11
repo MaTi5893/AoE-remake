@@ -274,15 +274,6 @@ fairer_taxation = {
     max_tax = 0.8
     icon = 9
 }
-
-tariff_efficiency_boost = {
-    trigger = {
-        exists = yes
-    }
-    tariff_efficiency_modifier = 0.1
-    icon = 9
-}
-
 social_reformed_nation = {
         trigger = {
             exists = yes

@@ -193,24 +193,20 @@ party_issues = {
     }
     social_policy = { #Estate policy
         no_state_interference = { #Despotic Dominance
-            max_social_spending = 0.5
             core_pop_consciousness_modifier = -0.1
             core_pop_militancy_modifier = -0.16
         }
         colonial_spending_policy = { #Colonial Subjects
-            cb_generation_speed_modifier = 0.1
             mobilisation_size = 0.01
             non_accepted_pop_consciousness_modifier = -0.05
         }
         no_position_set = {
         }
         populist_welfare = { #Philosopher court
-            min_social_spending = 0.15
 			core_pop_consciousness_modifier = 0.01 
             research_points_modifier = 0.15
         }
         welfare_state = { #Revolutionary Thought
-            min_social_spending = 0.33
             cb_generation_speed_modifier = 0.33
             core_pop_militancy_modifier = 0.01
         }
@@ -575,53 +571,6 @@ political_reforms = {
         }
     }
 
-    border_policy = {
-        closed_borders = {
-            global_immigrant_attract = -8
-            badboy = 0.01
-            literacy_con_impact = -0.1
-            administrative_multiplier = 6
-            global_pop_militancy_modifier = 0.01
-            allow = {
-                vote_franschise = none_voting
-                NOT = { press_rights = free_press }
-                citizenship_policy = residency
-                OR = {
-                    has_country_flag = clean_up_colonial_government
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = communist_gov
-                    has_country_flag = fascist_gov
-                    has_country_flag = presidential_dictatorship_gov
-                    has_country_flag = theocratic_government
-                }
-            }
-        }
-        quota_immigration = {
-            administrative_multiplier = 2
-            global_immigrant_attract = -0.02
-            core_pop_militancy_modifier = -0.01
-            allow = {
-                OR = {
-                    is_culture_group = latin_american_cultures
-                    is_culture_group = american_cultures
-                    is_culture_group = african_diaspora_cultures
-                    is_culture_group = native_american
-                    primary_culture = australian
-                    primary_culture = anglo_canadian
-                    primary_culture = french_canadian
-                }
-                NOT = { has_country_flag = unciv }
-                
-            }
-        }
-        open_borders = {
-            allow = {
-                NOT = { has_country_flag = unciv }
-                
-            }
-        }
-    }
-
     colonial_policy = {
 		next_step_only = yes
 		settlement = {
@@ -668,105 +617,44 @@ political_reforms = {
 	}
 
     centralization = {
-        totalitarianism = {
-            global_immigrant_attract = -1
-            global_assimilation_rate = 0.05
-            tax_efficiency = 0.05
-            mobilisation_size = 0.01
-            cb_generation_speed_modifier = 0.25
-            badboy = 0.005
-            suppression_points_modifier = 0.2
-            allow = {
-                has_global_flag = revolution_n_counter_researched
-                OR = {
-                    has_country_flag = communist_gov
-                    has_country_flag = fascist_gov
-                    AND = {
-                        ruling_party_ideology = reactionary
-                        OR = {
-                            has_country_flag = clean_up_colonial_government
-                            has_country_flag = absolute_monarchy_gov
-                            has_country_flag = presidential_dictatorship_gov
-                            has_country_flag = theocratic_government
-                        }
-                    }
-                }
-                
-            }
+		no_parliment = {
+            suppression_points_modifier = 0.25
+            literacy_con_impact = -0.15
+            cb_generation_speed_modifier = 0.15
         }
-        confederalism = {
-            global_assimilation_rate = -0.05
-            global_pop_militancy_modifier = -0.05
-            tax_efficiency = -0.05
-            diplomatic_points_modifier = -0.05
-            suppression_points_modifier = -0.30
-            education_efficiency_modifier = -0.05
-            leadership_modifier = -0.05
-            administrative_efficiency_modifier = -0.05
-            mobilisation_size = -0.01
-            cb_generation_speed_modifier = -0.15
-            supply_consumption = -0.1
-            allow = {
-                OR = {
-                    AND = {
-                        number_of_states = 2
-                        can_create_vassals = yes
-                        is_disarmed = yes
-                        is_cultural_union = yes
-                        is_greater_power = no
-                        num_of_revolts = 1
-                        average_militancy = 7
-                    }
-                    has_country_flag = is_swiss
-                }
-                
-            }
+        admin_parliment = {
+			administrative_efficiency_modifier = 0.05
+			tax_efficiency = 0.05
+			pension_level = 0.40
+			cb_generation_speed_modifier = 0.05
         }
-        regionalism = {
-            tax_efficiency = -0.02
-            global_assimilation_rate = -0.05
-            administrative_efficiency_modifier = -0.03
-            leadership_modifier = -0.1
-            diplomatic_points_modifier = -0.1
-            cb_generation_speed_modifier = -0.05
-            education_efficiency_modifier = -0.1
-            mobilisation_size = -0.01
-            allow = {
-                number_of_states = 2
-                OR = {
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = theocratic_government
-                }
-                debt_law = serfdom
-                has_country_flag = serfdom_not_abolished
-                
-            }
+        legislative_parliment = {
+			leadership_modifier = 0.05
+			core_pop_militancy_modifier = -0.05
+			tax_efficiency = 0.01
+			literacy_con_impact = 0.05
+			pension_level = 0.40
+			cb_generation_speed_modifier = -0.05
+			allow = {
+				NOT = { upper_house_composition = party_appointed }
+                NOT = { vote_franschise = none_voting }
+			}
         }
-        federalism = {
+		national_parliment = {
             leadership_modifier = 0.05
             core_pop_militancy_modifier = -0.05
-            allow = {
-                number_of_states = 2
-                is_cultural_union = yes
-                can_create_vassals = yes
-                is_vassal = no
-                NOT = { has_country_flag = the_slavery_debate }
-            }
+            literacy_con_impact = 0.15
+            cb_generation_speed_modifier = -0.15
+			allow = {
+				NOT = { upper_house_composition = party_appointed }
+                NOT = { vote_franschise = none_voting }
+			}
         }
-        unitary = {
-            leadership_modifier = 0.05
-            administrative_efficiency_modifier = 0.05
-            tax_efficiency = 0.01
-            allow = {
-                has_global_flag = revolution_n_counter_researched
-                NOT = { num_of_substates = 1 }
-                OR = {
-                    is_cultural_union = no
-                    has_country_flag = france
-                }
-                NOT = { has_country_flag = dual_monarchy }
-            }
-        }
+		theocratic_council = {
+            suppression_points_modifier = 0.25
+            literacy_con_impact = -0.15
+            cb_generation_speed_modifier = 0.15
+		}
     }
 }
 
@@ -839,7 +727,7 @@ social_reforms = {
             factory_throughput = 0.025
             research_points_modifier  = 0.05
             goods_demand = 0.05
-            minimum_wage = 0.1
+            pension_level = 0.20
             global_immigrant_attract = 0.1
 
             middle_vote = 0.02
@@ -849,7 +737,7 @@ social_reforms = {
             factory_throughput = 0.05
             research_points_modifier = 0.10
             goods_demand = 0.10
-            minimum_wage = 0.15
+            pension_level = 0.30
             global_immigrant_attract = 0.15
 
             middle_vote = 0.04
@@ -860,7 +748,7 @@ social_reforms = {
             factory_throughput = 0.075
             research_points_modifier = 0.15
             goods_demand = 0.15
-            minimum_wage = 0.20
+           pension_level = 0.40
             global_immigrant_attract = 0.2
 			core_pop_consciousness_modifier = 0.01
 
@@ -872,7 +760,7 @@ social_reforms = {
             factory_throughput = 0.10
             research_points_modifier = 0.20
             goods_demand = 0.20
-            minimum_wage = 0.30
+            pension_level = 0.50
             global_immigrant_attract = 0.25
 			core_pop_consciousness_modifier = 0.015
 
@@ -948,14 +836,14 @@ social_reforms = {
         trinket_subsidies = { #marginally relevant
             tax_efficiency = 0.025
             RGO_throughput = 0.075
-            unemployment_benefit = 0.50
+            pension_level = 0.20
 
             middle_vote = 0.02
             poor_vote = 0.01
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
-            unemployment_benefit = 1.0
+            pension_level = 0.30
             tariff_efficiency_modifier = -0.025
             artisan_throughput = 0.05
 
@@ -963,7 +851,7 @@ social_reforms = {
             poor_vote = 0.02
         }
         acceptable_subsidies = { #influential
-            unemployment_benefit = 2.0
+            pension_level = 0.40
             tariff_efficiency_modifier = -0.05
             artisan_throughput = 0.15
 
@@ -973,7 +861,7 @@ social_reforms = {
         }
         good_subsidies = { #very influential
 			RGO_throughput = 0.1
-            unemployment_benefit = 3.0
+            pension_level = 0.50
             tariff_efficiency_modifier = -0.1
             artisan_throughput = 0.25
 		    

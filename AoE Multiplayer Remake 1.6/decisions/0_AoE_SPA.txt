@@ -1,83 +1,4 @@
 political_decisions = {
-    renovate_the_armada = {
-        picture = armada
-        potential = {
-            OR = {
-                tag = SPA
-                tag = SPC
-            }
-            NOT = { has_country_flag = renovated_the_armada }
-            exists = yes
-        }
-        allow = {
-            money = 20000000
-            steam_turbine_ships = 1
-            advanced_naval_design = 1
-        }
-        effect = {
-            set_country_flag = renovated_the_armada
-            add_country_modifier = {
-                name = renovated_armada
-                duration = 1825
-            }
-        }
-        ai_will_do = {
-        factor = 1
-        }
-    }
-
-    introduce_the_cadastre_tax_and_banks = {
-        picture = cadastre
-        potential = {
-            OR = {
-                tag = SPA
-                tag = SPC
-            }
-            NOT = { has_country_flag = introduced_the_cadastre_tax }
-            exists = yes
-        }
-        allow = {
-            central_bank_money_bill_printing = 1
-            money = 300000
-        }
-        effect = {
-            set_country_flag = introduced_the_cadastre_tax
-            add_country_modifier = {
-                name = the_cadastre_tax_and_the_spanish_bank
-                duration = -1
-            }
-            treasury = -300000
-        }
-        ai_will_do = {
-        factor = 1
-        }
-    }
-
-    royal_academy_of_the_fine_arts = {
-        picture = academy
-        potential = {
-            OR = {
-                tag = SPA
-                tag = SPC
-            }
-            NOT = { has_country_flag = made_royal_academy }
-            exists = yes
-        }
-        allow = {
-            realism = 1
-        }
-        effect = {
-            set_country_flag = made_royal_academy
-            prestige = 20
-			add_country_modifier = {
-				name = education_buff
-				duration = 3650
-			}
-        }
-        ai_will_do = {
-        factor = 1
-        }
-    }
 
     bourbon_claims_on_italy = {
         picture = become_two_sicilies
@@ -154,22 +75,23 @@ political_decisions = {
             factor = 1
         }
     }
-    royal_spanish_academy = {
-        picture = spanish_academy
-        potential = {
+
+	spanish_military_reform = {	
+		picture = spanish_academy
+		potential = {
             OR = {
                 tag = SPA
                 tag = SPC
             }
-            NOT = { has_country_flag = made_royal_spanish_academy }
+            NOT = { has_country_flag = spanish_military_reform }
             exists = yes
         }
         allow = {
-            army_nco_training = 1
-            military_directionism = 1
+			war = no
+			invention = goose_step
         }
         effect = {
-            set_country_flag = made_royal_spanish_academy
+            set_country_flag = spanish_military_reform
             random_owned = {
 				limit = {
 					owner = {
@@ -200,12 +122,15 @@ political_decisions = {
 					social_reform = trinket_pensions
 				}
 			}
+			add_country_modifier = {
+                name = the_cadastre_tax_and_the_spanish_bank
+                duration = -1
+            }
         }
         ai_will_do = {
         factor = 1
         }
-    }
-
+	}
     reforms_of_giullo_alberoni = {
         picture = giulio_alberoni
         potential = {
@@ -257,38 +182,6 @@ political_decisions = {
         }
     }
 
-    galicia_claim_leon = {
-        picture = armada
-        potential = {
-            tag = GLC
-            NOT = { has_country_flag = claimed_leon }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                is_vassal = no
-                is_secondary_power = yes
-            }
-        }
-        effect = {
-            475 = {
-                add_core = THIS
-            }
-            477 = {
-                add_core = THIS
-            }
-            482 = {
-                add_core = THIS
-            }
-            set_country_flag = claimed_leon
-            add_accepted_culture = spanish
-            badboy = 5
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     nueva_planta_decrees = {
         picture = nueva_planta
         potential = {
@@ -297,27 +190,23 @@ political_decisions = {
                 tag = SPC
             }
             NOT = { has_country_flag = nueva_planta_decrees }
-            exists = yes
-            ARN = {
-                exists = yes
-                ai = yes
-            }
         }
         allow = {
-            ARN = {
-                vassal_of = THIS
-            }
             ideological_thought = 1
             NOT = { safety_regulations = no_safety }
+			NOT = { safety_regulations = trinket_safety }
+			NOT = { safety_regulations = low_safety }
         }
         effect = {
-            ARN = {
-                all_core = {
-                    add_core = THIS
-                    remove_core = ARN
-                }
-            }
-            inherit = ARN
+			add_country_modifier = {
+				name = nueva_planta_decrees
+				duration = 1825
+			}
+			upper_house = {
+				ideology = reactionary
+				value = 0.30
+			}
+			politcal_reform = appointed
             set_country_flag = nueva_planta_decrees
             prestige = 25
         }
@@ -326,39 +215,6 @@ political_decisions = {
         }
     }
 
-    aragonese_italy = {
-        picture = merchant_navy
-        potential = {
-            tag  = ARN
-            is_vassal = no
-            NOT = { has_country_flag = aragon_sicily }
-            owns = 503
-            exists = yes
-        }
-        allow = {
-            war = no
-            is_vassal = no
-        }
-        effect = {
-            SIC_754 = {
-                add_core = THIS
-            }
-            SIC_753 = {
-                add_core = THIS
-            }
-            SIC_763 = {
-                add_core = THIS
-            }
-            SAR_765 = {
-                add_core = THIS
-            }
-            set_country_flag = aragon_sicily
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-	
 	reforms_of_charles_iii = {
 		picture = charles_iii
 		potential = {
