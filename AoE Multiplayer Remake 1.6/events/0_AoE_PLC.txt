@@ -442,64 +442,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 15730030
-	title = "August III returns to Poland Lithuania"
-	desc = "..."	
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		owns = 706
-		war_with = RUS
-		PLC = {
-			national_provinces_occupied = 0.9
-		}
-		war_exhaustion = 45
-		has_global_flag = polish_succesion_crisis
-	}
-	
-	option = {
-		name = "And he shall be known as the one who ruled with an iron fist"
-		create_vassal = SAX
-		SAX = {
-			government = absolute_monarchy
-		}
-		prestige = -50
-		relation = { who = SAX value = 200 }
-		ruling_party_ideology = conservative
-		random_owned = { limit = { owner = { is_our_vassal = LOR } } owner = { leave_alliance = LOR release_vassal = LOR relation = { who = LOR value = -200 } } }
-		RUS = {
-			diplomatic_influence = {
-				who = THIS
-				value = 400
-			}
-		}
-		any_country = {
-			limit = {
-				exists = yes
-				war_with = PLC
-				capital_scope = {
-					continent = europe
-				}
-			}
-			end_war = PLC
-		}
-		any_country = {
-			limit = {
-				exists = yes
-				war_with = RUS
-				capital_scope = {
-					continent = europe
-				}
-			}
-			end_war = RUS
-		}
-		clr_country_flag = lesczynski_rule
-		set_country_flag = saxon_rule
-		clr_global_flag = polish_succesion_crisis
-	}
-}
-country_event = {
 	id = 15730031
 	title = "Treaty of Warsaw"
 	desc = "..."	
@@ -783,140 +725,6 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-#country_event = {
-#	id = 15730043
-#	title = "Polish Folwark System"
-#	desc = "EVTDESC15730043"
-#	picture = peasants
-#	fire_only_once = yes
-#	
-#	trigger = {
-#		tag = PLC
-#		year = 1700
-#	}
-#	
-#	mean_time_to_happen = {
-#		months = 1
-#	}
-#	
-#	option = {
-#		name = "It isn't that bad...."
-#		add_country_modifier = {
-#			name = folwark_serf_economy
-#			duration = -1
-#		}
-#		set_country_flag = serfdom_not_abolished
-#	}
-#}
-country_event = {
-	id = 15730045
-	title = "Noble Corruption"
-	desc = "EVTDESC15730045"
-	picture = nobles
-	fire_only_once = yes
-	
-	trigger = {
-		tag = PLC
-		government = elective_monarchy_oligarchy
-		NOT = {
-			in_sphere = RUS
-		}
-		NOT = {
-			war_with = RUS
-		}
-		NOT = {
-			is_greater_power = yes
-		}
-		RUS = {
-			has_country_flag = plc_bribes
-			is_greater_power = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "We'll accept it"
-		RUS = {
-			diplomatic_influence = {
-				who = THIS
-				value = 150
-			}
-		}
-		treasury = 50000
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		name = "Are you crazy??"
-		RUS = {
-			diplomatic_influence = {
-				who = THIS
-				value = -5
-			}
-		}
-		RUS = {
-			relation = {
-				who = PLC
-				value = -5
-			}
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-country_event = {
-	id = 15730058
-	title = "Sejm votes in new taxes"
-	desc = "EVTDESC15730058"
-	picture = sejm
-	
-	trigger = {
-		NOT = { has_country_flag = asking_for_funds }
-		NOT = { has_country_modifier = mercantilism }
-		NOT = { has_country_modifier = law_changed_by_force }
-		primary_culture = polish
-		government = elective_monarchy_oligarchy
-		NOT = { average_militancy = 2 }
-		NOT = { has_country_modifier = szlachta_opposition }
-		has_country_modifier = in_bankrupcy
-		OR = {
-			has_unclaimed_cores = yes
-			trade_policy = protectionism
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 30
-		modifier = {
-			trade_policy = protectionism
-			factor = 0.8
-		}
-		modifier = {
-			has_unclaimed_cores = yes
-			factor = 0.6
-		}
-		modifier = {
-			trade_policy = free_trade
-			factor = 1.2
-		}
-		modifier = {
-			has_country_modifier = szlachta_pissed
-			factor = 2
-		}
-	}
-	
-	option = {
-		name = "They've done something usefull for once."
-		add_country_modifier = {
-			name = mercantilism
-			duration = 912
-		}
-		prestige = 5
-	}
-}
-
 country_event = {
 	id = 15730061
 	title = "Comission of National Education"
@@ -1253,5 +1061,303 @@ country_event = {
 	option = {
 		name = "Eternal Friendship"	
 		prestige = 5
+	}
+}
+country_event = {
+	id = 15730068
+	title = "The Silent Sejm"
+	desc = "EVTDESC15730068"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = polish
+		government = elective_monarchy_oligarchy
+		year = 1717
+	}
+	
+	option = {
+		name = "Adopt the reforms"
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = low_health_care
+				}
+			}
+			owner = {
+				social_reform = acceptable_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = trinket_health_care
+				}
+			}
+			owner = {
+				social_reform = low_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = trinket_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = low_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = acceptable_safety
+                }
+            }
+            owner = {
+                social_reform = trinket_safety
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = good_safety
+                }
+            }
+            owner = {
+                social_reform = low_safety
+            }
+        }
+		any_pop = {
+			militancy = -3
+			consciousness = 4
+		}
+		any_pop = {
+			limit = {
+				culture = polish
+				type = soldiers
+			}
+			reduce_pop = 1.1
+		}
+		any_pop = {
+			limit = {
+				culture = polish
+				type = bureaucrats
+			}
+			reduce_pop = 1.1
+		}
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = yes
+                }
+            }
+            owner = {
+                sphere_owner = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = no
+					exists = TOR
+                }
+            }
+            owner = {
+                TOR = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    part_of_sphere = no
+					exists = RUS
+                }
+            }
+            owner = {
+                RUS = {
+					diplomatic_influence = {
+						who = THIS
+						value = 100
+					}
+				}
+            }
+        }
+		prestige = -15
+	}
+	
+	option = {
+		name = "A foregin power won't dictate our actions!"
+		prestige = 15
+		
+		any_pop = {
+			militancy = 3
+			consciousness = 3
+		}
+	}
+}
+country_event = {
+	id = 15730069
+	title = "Anegdota historyczna"
+	desc = "EVTDESC15730069"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = polish
+		has_country_flag = poniatowski_rule
+	}
+
+	mean_time_tp_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "A decent start."
+		years_of_research = 0.5
+	}
+	
+	option = {
+		name = "begin implementing it immedietly!"
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = low_health_care
+				}
+			}
+			owner = {
+				social_reform = acceptable_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = trinket_health_care
+				}
+			}
+			owner = {
+				social_reform = low_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					health_care = no_health_care
+				}
+			}
+			owner = {
+				social_reform = trinket_health_care
+			}
+		}
 	}
 }

@@ -396,7 +396,7 @@ promote_to =
             NOT = { is_primary_culture = yes }
         }
 		modifier = {
-            factor = -15
+            factor = -8
             debt_law = serfdom
         }
         group = {
@@ -530,18 +530,6 @@ promote_to =
         }
         modifier = {
             factor = 4
-            school_reforms = low_schools
-        }
-        modifier = {
-            factor = 8
-            school_reforms = acceptable_schools
-        }
-        modifier = {
-            factor = 12
-            school_reforms = good_schools
-        }
-        modifier = {
-            factor = 4
             safety_regulations = trinket_safety
         }
         modifier = {
@@ -555,39 +543,6 @@ promote_to =
         modifier = {
             factor = 16
             safety_regulations = good_safety
-        }
-
-        modifier = {
-            factor = 4
-            work_hours = fourteen_hours
-        }
-        modifier = {
-            factor = 8
-            work_hours = twelve_hours
-        }
-        modifier = {
-            factor = 12
-            work_hours  = ten_hours
-        }
-        modifier = {
-            factor = 16
-            work_hours = eight_hours
-        }
-        modifier = {
-            factor = 4
-            wage_reform = trinket_wage
-        }
-        modifier = {
-            factor = 8
-            wage_reform = low_minimum_wage
-        }
-        modifier = {
-            factor = 12
-            wage_reform  = acceptable_minimum_wage
-        }
-        modifier = {
-            factor = 16
-            wage_reform = good_minimum_wage
         }
 		
 		modifier = {
@@ -603,7 +558,6 @@ promote_to =
 			location = { life_rating = 25 }
 			state_scope = { NOT = { total_pops = 55000 } }
 		}
-
         group = {
             modifier = {
                 factor = 2

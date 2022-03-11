@@ -19,7 +19,11 @@ political_decisions = {
         }
         effect = {
             set_country_flag = estates_general_summoned
-            country_event = 19000
+            country_event = 171136
+			any_pop = {
+				consciousness = 3
+				militancy = -1
+			}
         }
 
         ai_will_do = {

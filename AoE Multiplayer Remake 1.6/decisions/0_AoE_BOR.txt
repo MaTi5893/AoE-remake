@@ -1026,4 +1026,31 @@ political_decisions = {
         }
 
     }
+	
+	burn_down_versallies = {
+        picture = versallies
+        potential = {
+            NOT = { 425 = { is_core = THIS } }
+            exists = yes
+            425 = {
+				controlled_by = THIS
+				has_province_modifier = palace_of_versallis
+            }
+        }
+        allow = {
+            425 = { controlled_by = THIS }
+        }
+        effect = {
+            set_global_flag = white_house_burned
+			425 = {
+			owner = {
+            country_event = 171140
+			}
+			}
+            badboy = 5
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

@@ -101,6 +101,15 @@ political_decisions = {
                 duration = 3650
             }
             government = hms_government
+			random_owned = {
+                limit = {
+                    owner = { has_country_modifier = magnate_oligarchy }
+                }
+                owner = {
+                    remove_country_modifier = magnate_oligarchy
+                }
+            }
+			 
             any_pop = { militancy = -2 }
         }
 
@@ -408,7 +417,7 @@ political_decisions = {
         potential = {
             is_greater_power = yes
             KUR = {
-                ai = no
+                ai = yes
                 exists = yes
                 neighbour = THIS
             }
@@ -550,6 +559,7 @@ political_decisions = {
                     inherit = LAT
                 }
             }
+			add_accepted_culture = latvian
             354 = { add_core = THIS }
             355 = { add_core = THIS }
             352 = { add_core = THIS }

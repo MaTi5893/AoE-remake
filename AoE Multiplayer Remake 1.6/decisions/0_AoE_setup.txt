@@ -368,6 +368,12 @@ political_decisions = {
 					}
 					reduce_pop = 0.88
 				}
+				425 = {
+					add_province_modifier = {
+						name = palace_of_versallis
+						duration = -1
+					}
+				}
 			}
 		}
 	}
