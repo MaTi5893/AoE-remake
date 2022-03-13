@@ -192,15 +192,6 @@ substate = {  #substate
 	end_date = 2000.1.1
 }
 
-
-#AOG
-vassal = {  #substate
-	first = GER
-	second = AOG
-	start_date = 1815.1.1
-	end_date = 1936.1.1
-}
-
 #Saxo-polish union
 vassal = {  #substate
 	first = PLC
@@ -215,14 +206,6 @@ vassal = {  #substate
 	second = FCA
 	start_date = 1700.1.2
 	end_date = 1763.1.1
-}
-
-#Switzerland - NCT/VAL/THL/ASG/CSG/GSU/MLH/ROT
-vassal = {
-	first = SWI
-	second = NCT
-	start_date = 1700.1.1
-	end_date = 2000.1.1
 }
 
 vassal = {
@@ -271,26 +254,10 @@ vassal = {
 	end_date = 1936.1.1
 }
 
-#Netherlands-Riau-Lingga Sultanate
-vassal = {
-	first = NET
-	second = RIA
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
 #Netherlands-Banjar Sultanate
 vassal = {
 	first = NET
 	second = KLM
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-#Netherlands-Sambas Sultanate
-vassal = {
-	first = NET
-	second = SBS
 	start_date = 1836.1.1
 	end_date = 1936.1.1
 }
@@ -571,14 +538,6 @@ vassal = {
 	end_date = 1936.1.1
 }
 
-# Siam - Terengganu 
-#vassal = {
-#	first = SIA
-#	second = TER
-#	start_date = 1826.1.1
-#	end_date = 1975.1.1
-#}
-
 # Siam - Kedah 
 #vassal = {
 #	first = SIA
@@ -591,22 +550,6 @@ vassal = {
 vassal = {
 	first = SIA
 	second = PAT
-	start_date = 1826.1.1
-	end_date = 1975.1.1
-}
-
-# Siam - Kelantan 
-#vassal = {
-#	first = SIA
-#	second = KEL
-#	start_date = 1826.1.1
-#	end_date = 1975.1.1
-#}
-
-# Johore - Pahang 
-vassal = {
-	first = JOH
-	second = PHG
 	start_date = 1826.1.1
 	end_date = 1975.1.1
 }

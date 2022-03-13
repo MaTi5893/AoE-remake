@@ -1783,15 +1783,6 @@ nationalist_rebels = {
         }
         modifier = {
             factor = 0
-            location = {
-                OR = {
-                    is_core = ANT
-                    is_core = TST
-                }
-            }
-        }
-        modifier = {
-            factor = 0
             OR = {
                 location = {
                     is_core = NNN
