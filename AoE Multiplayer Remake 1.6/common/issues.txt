@@ -647,11 +647,13 @@ political_reforms = {
 			cb_generation_speed_modifier = 0.15
         }
         admin_parliment = {
+			pension_level = 0.50
 			administrative_efficiency_modifier = 0.05
 			tax_efficiency = 0.05
 			cb_generation_speed_modifier = 0.05
         }
         legislative_parliment = {
+			pension_level = 0.50
 			leadership_modifier = 0.05
 			core_pop_militancy_modifier = -0.05
 			tax_efficiency = 0.01
@@ -663,6 +665,7 @@ political_reforms = {
             }
         }
         national_parliment = {
+			pension_level = 0.50
             leadership_modifier = 0.05
             core_pop_militancy_modifier = -0.05
 			literacy_con_impact = 0.15
@@ -704,7 +707,6 @@ social_reforms = {
             RGO_throughput = 0.15
             factory_throughput = 0.025
             core_pop_consciousness_modifier = -0.01
-            minimum_wage = 0.2
             rich_vote = 0.15
 
             allow = {
@@ -714,7 +716,6 @@ social_reforms = {
         low_minimum_wage = { #silghtly influential
             RGO_throughput = 0.10
             factory_throughput = 0.05
-            minimum_wage = 0.4
 
             rich_vote = 0.10
 
@@ -726,7 +727,6 @@ social_reforms = {
             tax_efficiency = 0.025
             RGO_throughput = 0.05
             factory_throughput = 0.075
-            minimum_wage = 0.6
 
             rich_vote = 0.05
 			allow = {
@@ -752,7 +752,7 @@ social_reforms = {
             factory_throughput = 0.025
             research_points_modifier  = 0.05
             goods_demand = 0.05
-            minimum_wage = 0.1
+            pension_level = 0.20
             global_immigrant_attract = 0.1
 
             middle_vote = 0.02
@@ -762,7 +762,7 @@ social_reforms = {
             factory_throughput = 0.05
             research_points_modifier = 0.10
             goods_demand = 0.10
-            minimum_wage = 0.15
+           pension_level = 0.30
             global_immigrant_attract = 0.15
 
             middle_vote = 0.04
@@ -773,7 +773,7 @@ social_reforms = {
             factory_throughput = 0.075
             research_points_modifier = 0.15
             goods_demand = 0.15
-            minimum_wage = 0.20
+            pension_level = 0.40
             global_immigrant_attract = 0.2
 			core_pop_consciousness_modifier = 0.01
 
@@ -785,7 +785,7 @@ social_reforms = {
             factory_throughput = 0.10
             research_points_modifier = 0.20
             goods_demand = 0.20
-            minimum_wage = 0.30
+           pension_level = 0.50
             global_immigrant_attract = 0.25
 			core_pop_consciousness_modifier = 0.015
 
@@ -861,14 +861,14 @@ social_reforms = {
         trinket_subsidies = { #marginally relevant
             tax_efficiency = 0.025
             RGO_throughput = 0.075
-            unemployment_benefit = 0.50
+            pension_level = 0.2
 
             middle_vote = 0.02
             poor_vote = 0.01
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
-            unemployment_benefit = 1.0
+            pension_level = 0.3
             tariff_efficiency_modifier = -0.025
             artisan_throughput = 0.05
 
@@ -876,7 +876,7 @@ social_reforms = {
             poor_vote = 0.02
         }
         acceptable_subsidies = { #influential
-            unemployment_benefit = 2.0
+            pension_level = 0.4
             tariff_efficiency_modifier = -0.05
             artisan_throughput = 0.15
 
@@ -886,7 +886,7 @@ social_reforms = {
         }
         good_subsidies = { #very influential
 			RGO_throughput = 0.1
-            unemployment_benefit = 3.0
+            pension_level = 0.50
             tariff_efficiency_modifier = -0.1
             artisan_throughput = 0.25
 		    
@@ -1135,7 +1135,7 @@ economic_reforms = {
             global_pop_militancy_modifier = -0.005
         }
         yes_land_reform = {
-            technology_cost = 000 #was 8000
+            technology_cost = 6000 #was 8000
             civilization_progress_modifier = 0.05 #was 0.15
 
             on_execute = {
