@@ -737,10 +737,6 @@ country_event = {
             sphere_owner = { state_n_government = 1 }
             NOT = { is_culture_group = american_cultures }
         }
-        OR = {
-            NOT = { tag = BAN }
-            sphere_owner = { neighbour = THIS }
-        }
         AND = {
             OR = {
                 NOT = { tag = NEN }
@@ -755,15 +751,11 @@ country_event = {
             tag = DNB
             tag = CSA
             tag = DES
-            tag = FSA
-            tag = UIL
-            tag = UNB
             tag = UBD
             tag = INO
             tag = IRE
             tag = BRT
             tag = SIE
-            tag = BAN
             AND = {
                 tag = RHI
                 is_culture_group = french
