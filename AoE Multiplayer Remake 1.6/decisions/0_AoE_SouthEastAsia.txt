@@ -1,0 +1,116 @@
+political_decisions = {
+
+	form_siam = {
+		picture = SIAM
+		potential = {
+			tag = AYO
+			NOT = { exisits = SIA }
+		}
+		allow = {
+			OR = {
+				AND = {
+					civilized = yes
+					war = no
+				}
+				war_exhaustion = 35
+			}
+		}
+		effect = {
+			all_core = {
+				add_core = SIA
+				remove_core = AYO
+			}
+			change_tag = SIA
+			1347 = {
+				change_province_name = "Sia-Yut'hia"
+				add_province_modifier = {
+					name = recently_built_city
+					duration = 365
+				}
+			}
+			define_general = {
+                name = "Rama I"
+                personality = defence_3.1
+                background = attack_3.1
+            }
+			add_core = 1366
+			add_core = 1364
+			add_core = 1367
+			add_core = 1359
+			add_core = 1358
+			add_core = 1360
+			add_core = 1361
+			add_core = 1355
+			add_core = 2572
+			add_core = 1363
+			add_accepted_culture = khmer
+			add_accepted_culture = shan
+			add_accepted_culture = lao
+			prestige = 25
+		}
+	}
+	
+	indochinese_empire = {
+		picture = map_east_indies
+		potential = {
+			tag = SIA
+			NOT = { has_country_flag = claimed_indochina }
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			SIA_1366 = { add_core = THIS }
+			ANN_1383 = { add_core = THIS }
+			LUA_1356 = { add_core = THIS }
+			ANN_1371 = { add_core = THIS }
+			ANN_1374 = { add_core = THIS }
+			ENG_1384 = { add_core = THIS }
+			add_core = 1392
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1366 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1383 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1356 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1371 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1374 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1384 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			random_owned = {
+				limit = {
+					owner = { NOT = { owns = 1392 } }
+				}
+				owner = { badboy = 2.5 }
+			}
+			set_country_flag = claimed_indochina
+		}
+	}
+}

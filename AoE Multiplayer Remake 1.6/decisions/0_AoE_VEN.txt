@@ -126,16 +126,18 @@ political_decisions = {
 		allow = {
 			prestige = 45
 			war = no
-			ITA = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
-					}
-				}
-			}
+			owns = 720
+			owns = 724
+			owns = 726
+			owns = 728
+			owns = 729
+			owns = 741
+			owns = 739
+			owns = 744
+			owns = 749
+			owns = 754
+			owns = 753
+			owns = 738
 		}
 		
 		effect = {

@@ -4,6 +4,7 @@ nv_order = {
 	org_regain = 0.05
 	land_unit_start_experience = 5
 	naval_unit_start_experience = 5
+	mobilisation_size = 0.01
 	mobilisation_economy_impact = 0.75
 }
 
@@ -38,7 +39,7 @@ nv_tradition = {
 	social_reform_desire = -0.2
 	issue_change_speed = -0.2
 	ruling_party_support = 0.25
-	mobilisation_size = 0.04
+	mobilisation_size = 0.02
 	mobilisation_economy_impact = 1.0
 }
 
@@ -48,6 +49,6 @@ nv_productivity = {
 	RGO_throughput = 0.05
 	artisan_throughput = 0.05
 	commerce_tech_research_bonus = 0.05
-	mobilisation_size = 0.04
+	mobilisation_size = 0.01
 	mobilisation_economy_impact = 0.5
 }
