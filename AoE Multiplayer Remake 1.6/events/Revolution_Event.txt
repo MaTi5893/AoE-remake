@@ -1619,12 +1619,6 @@ country_event = {
         }
         random_owned = {
             limit = {
-                owner = { tag = LBY }
-            }
-            owner = { primary_culture = maghrebi }
-        }
-        random_owned = {
-            limit = {
                 owner = { tag = NZL }
             }
             owner = {
