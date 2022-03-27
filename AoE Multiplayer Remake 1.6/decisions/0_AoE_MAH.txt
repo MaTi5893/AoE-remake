@@ -7,11 +7,8 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            military_score = 50
-            OR = {
-                pensions = acceptable_pensions
-                pensions = good_pensions
-            }
+			war = no
+            civilization_progress = 0.75
             owns = 1291
         }
         effect = {
@@ -98,109 +95,26 @@ political_decisions = {
 				}
 			}
 			country_event = 170777
+			any_owned = {
+				remove_core = MUG
+			}
 		}
 	}
-
-    maratha_empire = {
-        picture = maratha_empire
-        potential = {
-            tag = MAH
-            NOT = { has_country_flag = claimed_maratha_empire }
-            exists = yes
-        }
-        allow = {
-            is_greater_power = yes
-            OR = {
-                pensions = acceptable_pensions
-                pensions = good_pensions
-            }
-            HYD_1283 = {
-                owned_by = THIS
-            }
-            ENG_1261 = {
-                owned_by = THIS
-            }
-            OR = {
-                AND = {
-                    ENG_1251 = {
-                        owned_by = THIS
-                    }
-                    ENG_1252 = {
-                        owned_by = THIS
-                    }
-                }
-                BNG = {
-                    vassal_of = THIS
-                }
-            }
-            any_core = {
-                owned_by = THIS
-            }
-            MUG = {
-                exists = no
-            }
-        }
-
-        effect = {
-            prestige = 30
-            set_country_flag = claimed_maratha_empire
-            add_country_modifier = {
-                name = indian_raj
-                duration = -1
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
-
-    modernize_our_weaponary = {
-        picture = new_world_militia
-        potential = {
-            tag = MAH
-            NOT = { has_country_flag = modernize_our_weaponary }
-            exists = yes
-        }
-        allow = {
-            foreign_weapons = foreign_weapons_two
-            OR = {
-                relation = {
-                    who = GBR
-                    value = 100
-                }
-                relation = {
-                    who = BOR
-                    value = 100
-                }
-            }
-        }
-        effect = {
-            set_country_flag = modernize_our_weaponary
-            years_of_research = 1
-        }
-    }
-
-    government_reform_mah = {
-        picture = maratha_empire
-        potential = {
-            tag = MAH
-            NOT = { has_country_flag = government_reformed_mah }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                health_care = acceptable_health_care
-                health_care = good_health_care
-            }
-            OR = {
-                safety_regulations = acceptable_safety
-                safety_regulations = good_safety
-            }
-            money = 100000
-        }
-        effect = {
-            political_reform = unitary
-            add_accepted_culture = oriya
-            add_accepted_culture = telegu
-            set_country_flag = government_reformed_mah
-        }
-    }
+	
+	nana_phadnavis = {
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = nana_phadnavis }
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+			war = no
+		}
+		effect = {
+			badboy = -5
+			add_accepted_culture = oriya
+			add_accepted_culture = telegu
+			set_country_flag = nana_phadnavis
+		}
+	}
 }

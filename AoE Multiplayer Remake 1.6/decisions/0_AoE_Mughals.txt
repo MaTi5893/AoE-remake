@@ -37,6 +37,60 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
+	mughal_reforms = {
+		picture = mughal_emperor
+		potential = {
+			tag = MUG
+			NOT = { has_country_flag = mughal_reforms } 
+		}
+		allow = {
+			war = no
+			civilization_progress = 0.5
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						AWA = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = AWA
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						PNJ = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = PNJ
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						RAJ = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = RAJ
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BNG = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = BNG
+				}
+			}
+			set_country_flag = mughal_reforms
+		}
+	}
 	###########################
 	###Mughal Substate Stuff###
 	###########################

@@ -1244,11 +1244,10 @@ country_event = {
 
     trigger = {
         has_country_modifer = new_schools_of_thought
-        OR = {
-            vote_franschise = none_voting
-            vote_franschise = universal_weighted_voting
-            vote_franschise = universal_voting
-        }
+			
+		NOT = {	vote_franschise = none_voting }
+		NOT = {	vote_franschise = universal_weighted_voting }
+		NOT = {	vote_franschise = universal_voting }
         any_state = {
             is_colonial = no
             liberal = 10

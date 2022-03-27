@@ -1,0 +1,67 @@
+political_decisions = {
+	
+	deestablish_aussa_immamate = {
+		picture = ethiopia
+		potential = {
+			tag = ETH
+			exists = HAR
+			TUR = { is_our_vassal = HAR }
+		}
+		allow = {
+			war = no
+			relation = {
+				who = HAR
+				value = 200
+			}
+			NOT = { spHARe_owner = TUR }
+			civilization_progress = 0.75
+		}
+		effect = {
+			inHARit = HAR
+			prestige = 15
+			relation = {
+				who = TUR
+				value = -150
+			}
+			TUR = {
+				casus_belli = {
+					type = demand_concession
+					target = THIS
+					duration = 365
+				}
+				casus_belli = {
+					type = create_protectorate
+					target = THIS
+					duration = 365
+				}
+			}
+		}
+	}
+	
+	end_princes_era = {
+		picture = ethiopia
+		potential = {
+			tag = ETH
+			NOT = { has_country_flag = end_princes_era }
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		effect = {
+			1864 = { secede_province = THIS }
+			1866 = { secede_province = THIS }
+			1867 = { secede_province = THIS }
+			add_accepted_culture = nilosaharan
+			add_accepted_culture = somali
+			SHK = { all_core = { add_core = THIS } }
+			SUD = { all_core = { add_core = THIS } }
+			WRL = { all_core = { add_core = THIS } }
+			MAJ = { all_core = { add_core = THIS } }
+			GEL = { all_core = { add_core = THIS } }
+			set_country_flag = end_princes_era
+			prestige = 15
+			militancy = -3
+		}
+	}
+}

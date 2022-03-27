@@ -185,6 +185,7 @@ political_decisions = {
 				CHE = { exists = no any_core = { owned_by = THIS } }
 				IQS = { exists = no any_core = { owned_by = THIS } }
 				LNP = { exists = no any_core = { owned_by = THIS } }
+				ABB = { exists = no any_core = { owned_by = THIS } }
 			}
 		}
 	    effect = {
@@ -484,6 +485,19 @@ political_decisions = {
 				owner = {
 					any_owned = {
 						remove_core = IQS
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = { is_core = ABB }
+						NOT = { exists = ABB }
+					}
+				}
+				owner = {
+					any_owned = {
+						remove_core = ABB
 					}
 				}
 			}

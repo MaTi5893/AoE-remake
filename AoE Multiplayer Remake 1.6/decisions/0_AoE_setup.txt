@@ -597,6 +597,17 @@ political_decisions = {
 		}
 	}
 	
+	eth_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			country_event = 170600
+		}
+	}
 	canals_setup = {
 		potential = {
 			always = no

@@ -1,0 +1,33 @@
+country_event = {
+	id = 170600
+	title = "Iyasu the Great"
+	desc = "EVTDESC170600"
+	picture = ethiopia
+	is_triggered_only = yes
+	
+	option = {
+		name = "Exceptional Man"
+		add_country_modifier = {
+			name = iyasu_i
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = 170601
+	title = "Death of Iyasu I"
+	desc = "EVTDESC170600"
+	picture = ethiopia
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = iyasu_i
+		year = 1706
+	}
+	
+	option = {
+		name = "Such a shame..."
+		remove_country_modifier = iyasu_i
+		any_pop = { militancy = 2 }
+	}
+}
