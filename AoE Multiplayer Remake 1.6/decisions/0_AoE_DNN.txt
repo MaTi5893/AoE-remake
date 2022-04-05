@@ -114,20 +114,6 @@ political_decisions = {
                 limit = {
                     owner = {
                         OR = {
-                            conscription = mandatory_service
-                            conscription = four_year_draft
-                            conscription = two_year_draft
-                        }
-                    }
-                }
-                owner = {
-                    political_reform = one_year_draft
-                }
-            }
-            random_owned = {
-                limit = {
-                    owner = {
-                        OR = {
                             debt_law = serfdom
                             debt_law = peonage
                         }

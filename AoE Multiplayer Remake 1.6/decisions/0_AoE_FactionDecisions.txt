@@ -108,35 +108,6 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-    adopt_proper_administration = {
-        picture = administration
-        potential = {
-            NOT = { has_country_flag = adopted_proper_administration }
-            OR = {
-                health_care = acceptable_health_care
-                health_care = good_health_care
-            }
-            centralization = regionalism
-            NOT = { tag = RUS }
-            NOT = { tag = AUS }
-            NOT = { tag = TUR }
-            NOT = { tech_school = unciv_tech_school }
-            exists = yes
-            civilized = yes
-        }
-        allow = {
-            OR = {
-                health_care = acceptable_health_care
-                health_care = good_health_care
-            }
-            NOT = { tech_school = unciv_tech_school }
-        }
-        effect = {
-            set_country_flag = adopted_proper_administration
-            political_reform = unitary
-        }
-        ai_will_do = { factor = 1 }
-    }
     restablish_aristocratic_titles = {
         picture = crown
         potential = {

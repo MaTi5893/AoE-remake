@@ -13,11 +13,11 @@ political_decisions = {
 				who = HAR
 				value = 200
 			}
-			NOT = { spHARe_owner = TUR }
+			NOT = { sphere_owner = TUR }
 			civilization_progress = 0.75
 		}
 		effect = {
-			inHARit = HAR
+			inherit = HAR
 			prestige = 15
 			relation = {
 				who = TUR
@@ -25,14 +25,14 @@ political_decisions = {
 			}
 			TUR = {
 				casus_belli = {
-					type = demand_concession
+					type = demand_concession_casus_belli
 					target = THIS
-					duration = 365
+					months = 12
 				}
 				casus_belli = {
-					type = create_protectorate
+					type = establish_protectorate_casus_belli
 					target = THIS
-					duration = 365
+					months = 12
 				}
 			}
 		}
@@ -61,7 +61,7 @@ political_decisions = {
 			GEL = { all_core = { add_core = THIS } }
 			set_country_flag = end_princes_era
 			prestige = 15
-			militancy = -3
+			any_pop = { militancy = -3 }
 		}
 	}
 }

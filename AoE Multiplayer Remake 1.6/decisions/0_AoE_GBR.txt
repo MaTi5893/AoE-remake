@@ -426,6 +426,36 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = CAN
+					}
+				}
+				owner = {
+					inherit = CAN
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = RPL
+					}
+				}
+				owner = {
+					inherit = RPL
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = THC
+					}
+				}
+				owner = {
+					inherit = THC
+				}
+			}
             prestige = 15
         }
     }
@@ -511,7 +541,6 @@ political_decisions = {
             political_reform = none_voting
             government = absolute_monarchy
             plurality = -25
-            political_reform = totalitarianism
             add_country_modifier = {
                 name = totalitarian_system
                 duration = -1

@@ -1135,7 +1135,7 @@ economic_reforms = {
             global_pop_militancy_modifier = -0.005
         }
         yes_land_reform = {
-            technology_cost = 6000 #was 8000
+            technology_cost = 7000 #was 8000
             civilization_progress_modifier = 0.05 #was 0.15
 
             on_execute = {
@@ -1162,7 +1162,7 @@ economic_reforms = {
             }
         }
         land_reform_two = {
-            technology_cost = 6000
+            technology_cost = 7000
             civilization_progress_modifier = 0.10
 
             on_execute = {
@@ -1195,7 +1195,7 @@ economic_reforms = {
                 global_pop_militancy_modifier = -0.005
         }
         yes_admin_reform = {
-            technology_cost = 4000 #was 10000
+            technology_cost = 6000 #was 10000
             civilization_progress_modifier = 0.05
 
             on_execute = {
@@ -1220,7 +1220,7 @@ economic_reforms = {
             }
         }
         admin_reform_two = { #new
-            technology_cost = 6000
+            technology_cost = 7000
             civilization_progress_modifier = 0.10
 
             on_execute = {
@@ -1252,7 +1252,7 @@ economic_reforms = {
             global_pop_militancy_modifier = -0.005
         }
         yes_finance_reform = {
-            technology_cost = 4000 #was 7000
+            technology_cost = 6000 #was 7000
             civilization_progress_modifier = 0.05 #was 0.15
             max_loan_modifier = -1.0 # no loan 4 u
 
@@ -1278,7 +1278,7 @@ economic_reforms = {
             }
         }
         finance_reform_two = {
-            technology_cost = 6000
+            technology_cost = 7000
             civilization_progress_modifier = 0.10 #was 0.35
 
             max_loan_modifier = -0.2 # 80% loans
@@ -1314,7 +1314,7 @@ economic_reforms = {
 
         }
         yes_education_reform = {
-            technology_cost = 4000 #was 10000
+            technology_cost = 6000 #was 10000
             education_efficiency_modifier = 0.10
             civilization_progress_modifier = 0.05
 
@@ -1340,7 +1340,7 @@ economic_reforms = {
             }
         }
         education_reform_two = { #new
-            technology_cost = 6000
+            technology_cost = 7000
             education_efficiency_modifier = 0.10
             civilization_progress_modifier = 0.10
 
@@ -1377,7 +1377,7 @@ economic_reforms = {
 
         }
         yes_transport_improv = {
-            technology_cost = 4000 #was 10000
+            technology_cost = 6000 #was 10000
             farm_rgo_eff = 0.20
             mine_rgo_eff = 0.20
             civilization_progress_modifier = 0.05 #was 0.15
@@ -1414,7 +1414,7 @@ economic_reforms = {
             }
         }
         transport_improv_two = {
-            technology_cost = 6000
+            technology_cost = 7000
             farm_rgo_eff = 0.40
             mine_rgo_eff = 0.40
             civilization_progress_modifier = 0.10
@@ -1448,7 +1448,7 @@ economic_reforms = {
 
         }
         yes_pre_indust = {
-            technology_cost = 4000 #was 15000
+            technology_cost = 6000 #was 15000
             civilization_progress_modifier = 0.05 #was 0.10
             on_execute = {
                 trigger = {
@@ -1477,7 +1477,7 @@ economic_reforms = {
             }
         }
         yes_industrial_construction = { #was in own category
-            technology_cost = 6000
+            technology_cost = 7000
             civilization_progress_modifier = 0.10
             on_execute = {
                 effect = {
@@ -1510,7 +1510,7 @@ economic_reforms = {
 
         }
         yes_western_science = {
-            technology_cost = 4000
+            technology_cost = 6000
             civilization_progress_modifier = 0.05
             on_execute = {
                 effect = {
@@ -1536,7 +1536,7 @@ economic_reforms = {
             }
         }
         western_science_two = {
-            technology_cost = 6000
+            technology_cost = 7000
             civilization_progress_modifier = 0.10
             on_execute = {
                 effect = {
