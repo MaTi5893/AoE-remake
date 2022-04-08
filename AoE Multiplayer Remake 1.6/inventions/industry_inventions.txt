@@ -11,12 +11,6 @@ daimlers_automobile = {
             factor = 2
             average_consciousness = 3
         }
-        modifier = {
-            factor = -6
-            NOT = {
-                invention = edison_light_bulb
-            }
-        }
     }
     effect = {
         factory_goods_output = {
@@ -25,26 +19,6 @@ daimlers_automobile = {
     }
 }
 
-# wright_n_langleys_aeroplanes = {
-    # limit = { combustion_engine = 1 }
-    # chance = {
-        # base = 2
-        # modifier = {
-            # factor = 2
-            # electricity = 1
-        # }
-        # modifier = {
-            # factor = 2
-            # average_consciousness = 4
-        # }
-        # modifier = {
-            # factor = -6
-            # NOT = {
-                # invention = edison_light_bulb
-            # }
-        # }
-    # }
-# }
 
 tractors = {
     limit = { combustion_engine = 1 }
@@ -76,10 +50,6 @@ direct_current = {
         base = 2
         modifier = {
             factor = 2
-            invention = edison_light_bulb
-        }
-        modifier = {
-            factor = 2
             ruling_party_ideology = liberal
         }
     }
@@ -92,10 +62,6 @@ alternating_current = {
     limit = { electrical_power_generation = 1 }
     chance = {
         base = 3
-        modifier = {
-            factor = 2
-            invention = edison_light_bulb
-        }
         modifier = {
             factor = 3
             invention = direct_current
@@ -110,10 +76,6 @@ polyphase_system = {
     limit = { electrical_power_generation = 1 }
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            invention = edison_light_bulb
-        }
         modifier = {
             factor = 2
             average_consciousness = 3
@@ -396,10 +358,6 @@ whitney_n_colts_standardized_small_arms = {
         modifier = {
             factor = 2
             breech_loaded_rifles = 1
-        }
-        modifier = {
-            factor = 2
-            invention = manifest_destiny
         }
     }
     effect = {
@@ -1391,10 +1349,6 @@ electrical_lighting = {
         base = 2
         modifier = {
             factor = 2
-            invention = edison_light_bulb
-        }
-        modifier = {
-            factor = 2
             invention = gaslights
         }
         modifier = {
@@ -1430,10 +1384,6 @@ bakelite = {
     limit = { synthetic_polymers = 1 }
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            invention = bell_n_greys_telephones
-        }
         modifier = {
             factor = 2
             time_saving_measures = 1
@@ -1554,37 +1504,6 @@ cotton_gin = {
     }
 }
 
-# haber_process = {
-    # limit = { electricity = 1 }
-    # chance = {
-        # base = 2
-        # modifier = {
-            # factor = 2
-            # invention = edison_light_bulb
-        # }
-        # modifier = {
-            # factor = 2
-            # electrical_power_generation = 1
-        # }
-        # modifier = {
-            # factor = -6
-            # NOT = { steam_turbine = 1 }
-        # }
-        # modifier = {
-            # factor = -6
-            # NOT = { pneumatic_and_hydraulics = 1 }
-        # }
-        # modifier = {
-            # factor = -6
-            # NOT = {
-                # invention = edison_light_bulb
-            # }
-        # }
-    # }
-    # effect = {
-        # activate_building = synthetic_sulphur_factory
-    # }
-# }
 carl_bosch = {
     limit = { electricity = 1 }
     chance = {
@@ -1600,9 +1519,3 @@ carl_bosch = {
     }
 }
 
-#early_electrical_telegraph = {
-#    limit = { high_pressure_steam_engine = 1 }
-#        chance = { base = 1 }
-#
-#    effect = {  }
-#}

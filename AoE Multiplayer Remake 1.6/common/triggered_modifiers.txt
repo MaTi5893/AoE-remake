@@ -16,17 +16,20 @@ ai_revolutionary_buff = {
 		OR = {
 			government = fascist_dictatorship
 			government = proletarian_dictatorship
+			tag = PRU
 		}
 		OR = {
 			is_greater_power = yes
 			tag = FRA
+			tag = PRU
 		}
 	}
-	mobilisation_size = 0.05
+	mobilisation_size = 0.1
 	global_pop_militancy_modifier = -0.4
 	tax_efficiency = 0.2
 	supply_consumption = -0.2
 	land_organisation = 0.2
+	land_unit_start_experience = 0.25
 }
 dreams_of_liberty = {
 	trigger = {
@@ -366,7 +369,7 @@ unciv_civ_nerf = {
 		ai = yes
 		civilized = no
 	}
-	research_points_modifier = -0.75
+	research_points_modifier = -0.85
 }
 save_the_nation0.5 = {
     trigger = {

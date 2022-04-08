@@ -2314,7 +2314,153 @@ issues =
         }
     }
 
+	admin_parliment = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = {
+                    is_next_reform = admin_parliment
+                }
+                NOT = { consciousness = 6 }
+                luxury_needs =  1.0
+                NOT = { life_needs = 0.7 }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 1 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.90 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.80 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.70 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.60 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.50 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.40 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.30 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.20 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.10 }
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
 
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+    }
+
+	legislative_parliment = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = {
+                    is_next_reform = legislative_parliment
+                }
+                NOT = { consciousness = 6 }
+                luxury_needs =  1.0
+                NOT = { life_needs = 0.7 }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 1 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.90 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.80 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.70 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.60 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.50 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.40 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.30 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.20 }
+        }
+        modifier = {
+            factor = 1.25
+            NOT = { agree_with_ruling_party = 0.10 }
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+    }
 
 
 

@@ -271,7 +271,6 @@ political_reforms = {
             allow = {
                 NOT = { election = yes }
                 NOT = { has_country_flag = the_elective_monarchy }
-                NOT = { government = elective_monarchy_oligarchy }
             }
             cb_generation_speed_modifier = 0.15
         }
@@ -281,13 +280,9 @@ political_reforms = {
             poor_vote = 0
             global_immigrant_attract = 0.01
             allow = {
-                
-                OR = {
-                    has_country_flag = liberal_revolution_in_progress
-                    has_country_flag = had_liberal_revolution
-                    year = 1850
-                    ai = no
-                }
+                #NOT = { centralization = no_parliment }
+				#NOT = { centralization = admin_parliment }
+				#NOT = { centralization = theocratic_council }
                 NOT = { has_country_flag = theocratic_government }
             }
             cb_generation_speed_modifier = 0.1
@@ -548,53 +543,6 @@ political_reforms = {
         }
     }
 
-    border_policy = {
-        closed_borders = {
-            global_immigrant_attract = -8
-            badboy = 0.01
-            literacy_con_impact = -0.1
-            administrative_multiplier = 6
-            global_pop_militancy_modifier = 0.01
-            allow = {
-                vote_franschise = none_voting
-                NOT = { press_rights = free_press }
-                citizenship_policy = residency
-                OR = {
-                    has_country_flag = clean_up_colonial_government
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = communist_gov
-                    has_country_flag = fascist_gov
-                    has_country_flag = presidential_dictatorship_gov
-                    has_country_flag = theocratic_government
-                }
-            }
-        }
-        quota_immigration = {
-            administrative_multiplier = 2
-            global_immigrant_attract = -0.02
-            core_pop_militancy_modifier = -0.01
-            allow = {
-                OR = {
-                    is_culture_group = latin_american_cultures
-                    is_culture_group = american_cultures
-                    is_culture_group = african_diaspora_cultures
-                    is_culture_group = native_american
-                    primary_culture = australian
-                    primary_culture = anglo_canadian
-                    primary_culture = french_canadian
-                }
-                NOT = { has_country_flag = unciv }
-                
-            }
-        }
-        open_borders = {
-            allow = {
-                NOT = { has_country_flag = unciv }
-                
-            }
-        }
-    }
-
     colonial_policy = {
 		next_step_only = yes
 		settlement = {
@@ -661,7 +609,6 @@ political_reforms = {
 			cb_generation_speed_modifier = -0.05
             allow = {
 				NOT = { upper_house_composition = party_appointed }
-				NOT = { vote_franschise = none_voting }
             }
         }
         national_parliment = {

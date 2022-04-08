@@ -27,16 +27,12 @@ reactionary_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
-        #french_bourbon = #french_bourbon
         dominion = presidential_dictatorship
         democracy = presidential_dictatorship
-        #federal_democracy = presidential_dictatorship
         theocracy = theocracy
         colonial_company = absolute_monarchy
 
-        #archduchy = archduchy
         elective_monarchy_oligarchy = absolute_monarchy
-        #federal_democracy = presidential_dictatorship
         tribal_democracy = tribal_democracy
         oligarchic_republic = presidential_dictatorship
         khanate = khanate
@@ -113,10 +109,6 @@ reactionary_rebels = {
             factor = 0
             country = { civilized = no }
         }
-        # modifier = {
-            # factor = 1.05
-            # NOT = { literacy = 0.30 }
-        # }
         modifier = {
             factor = 0.5
             literacy = 0.50
@@ -150,6 +142,12 @@ reactionary_rebels = {
             factor = 0
             is_primary_culture = no
             is_accepted_culture = no
+        }
+		modifier = {
+            factor = 0
+            location = {
+				is_colonial = yes
+			}
         }
         modifier = {
             factor = 0.01
@@ -187,30 +185,9 @@ reactionary_rebels = {
             factor = 0
             country = { government = absolute_monarchy }
         }
-        # modifier = {
-            # factor = 0.2
-            # country = { government = presidential_dictatorship }
-        # }
         modifier = {
             factor = 1.015
             country = { NOT = { plurality = 35 } }
-        }
-        modifier = {
-            factor = 0.1
-            country = {
-                tag = SPA
-                NOT = { has_global_flag = carlists_pacified }
-                OR = {
-                    government = hms_government
-                    government = prussian_constitutionalism
-                    government = absolute_monarchy
-                    government = democracy
-                }
-            }
-            OR = {
-                pop_majority_ideology = reactionary
-                pop_majority_ideology = conservative
-            }
         }
     }
 
@@ -488,22 +465,11 @@ traditionalist_rebels = {
             factor = 1.015
             country = { NOT = { plurality = 35 } }
         }
-        modifier = {
-            factor = 0.1
-            country = {
-                tag = SPA
-                NOT = { has_global_flag = carlists_pacified }
-                OR = {
-                    government = hms_government
-                    government = prussian_constitutionalism
-                    government = absolute_monarchy
-                    government = democracy
-                }
-            }
-            OR = {
-                pop_majority_ideology = reactionary
-                pop_majority_ideology = conservative
-            }
+		modifier = {
+            factor = -100
+            location = {
+				is_colonial = yes
+			}
         }
     }
 
@@ -625,15 +591,12 @@ communist_rebels = {
         absolute_monarchy = proletarian_dictatorship
         prussian_constitutionalism = proletarian_dictatorship
         hms_government = proletarian_dictatorship
-        #french_bourbon = proletarian_dictatorship
         dominion = proletarian_dictatorship
         democracy = proletarian_dictatorship
         theocracy = proletarian_dictatorship
         colonial_company = proletarian_dictatorship
 
-        #archduchy = proletarian_dictatorship
         elective_monarchy_oligarchy = proletarian_dictatorship
-        #federal_democracy = proletarian_dictatorship
         tribal_democracy = proletarian_dictatorship
         oligarchic_republic = proletarian_dictatorship
         khanate = proletarian_dictatorship
@@ -731,6 +694,12 @@ communist_rebels = {
                     pop_majority_ideology = reactionary
                 }
             }
+        }
+		modifier = {
+            factor = 0
+            location = {
+				is_colonial = yes
+			}
         }
         modifier = {
             factor = 1.3
@@ -934,15 +903,12 @@ nationalist_rebels = {
         absolute_monarchy = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
-        #french_bourbon = hms_government
         dominion = democracy
         democracy = democracy
         theocracy = theocracy
         colonial_company = democracy
 
-        #archduchy = archduchy
         elective_monarchy_oligarchy = elective_monarchy_oligarchy
-        #federal_democracy = #federal_democracy
         tribal_democracy = tribal_democracy
         oligarchic_republic = oligarchic_republic
         khanate = khanate
@@ -1750,11 +1716,6 @@ liberal_rebels = {
             pop_majority_ideology = conservative
             consciousness = 6.0
         }
-        #modifier = {
-        #    factor = 1.03
-        #    pop_majority_ideology = conservative
-        #    literacy = 0.50
-        #}
         modifier = {
             factor = 0.01
             country = {
@@ -1762,26 +1723,6 @@ liberal_rebels = {
                 government = hms_government
             }
         }
-        #modifier = {
-        #    factor = 0.1
-        #    OR = {
-        #        pop_majority_ideology = communist
-        #        pop_majority_ideology = liberal
-        #    }
-        #    OR = {
-        #        NOT = { consciousness = 3.0 }
-        #        NOT = { literacy = 0.30 }
-        #    }
-        #    country = {
-        #        is_ideology_enabled = socialist
-        #        #NOT = {
-        #        #    OR = {
-        #        #        has_country_modifier = global_liberal_agitation
-        #        #        has_country_modifier = springtime_of_nations
-        #        #    }
-        #        #}
-        #    }
-        #}
         modifier = {
             factor = 1.15
             OR = {
@@ -1834,7 +1775,6 @@ liberal_rebels = {
                     upper_house_composition = population_equal_weight
                 }
                 NOT = { debt_law = serfdom }
-                NOT = { border_policy = closed_borders }
                 public_meetings = yes_meeting
                 press_rights = free_press
                 slavery = no_slavery
@@ -1845,10 +1785,6 @@ liberal_rebels = {
             factor = 1.15
             pop_majority_ideology = liberal
         }
-        #modifier = {
-        #    factor = 1.05
-        #    pop_majority_ideology = anarcho_liberal
-        #}
         modifier = {
             factor = 1.015
             political_reform_want = 0.05
@@ -1933,6 +1869,12 @@ liberal_rebels = {
                 }
                 NOT = { has_country_flag = wants_to_unify }
             }
+        }
+		modifier = {
+            factor = -100
+            location = {
+				is_colonial = yes
+			}
         }
     }
 
@@ -2383,482 +2325,6 @@ unciv_reactionary_rebels = {
     }
 }
 
-###################################
-# Militant Socialists    Reformists
-###################################
-socialist_rebels = {
-    icon = 10
-
-    area = nation                     # Stays within the nation
-    break_alliance_on_win = no
-
-    # <this is the government in the country> = <this is what the rebels want>
-    government = {
-        proletarian_dictatorship = democracy
-        presidential_dictatorship = democracy
-        bourgeois_dictatorship = democracy
-        fascist_dictatorship = democracy
-        absolute_monarchy = proletarian_dictatorship
-        prussian_constitutionalism = democracy
-        hms_government = democracy
-        #french_bourbon = democracy
-        dominion = proletarian_dictatorship
-        democracy = proletarian_dictatorship
-        theocracy = proletarian_dictatorship
-        colonial_company = democracy
-
-        #archduchy = democracy
-        elective_monarchy_oligarchy = democracy
-        #federal_democracy = democracy
-        tribal_democracy = democracy
-        oligarchic_republic = democracy
-        khanate = democracy
-    }
-
-
-    defection = none                    # Will defect to the "best" alternative.
-    independence = none                # Does not strive for independence
-    defect_delay = 18
-
-    ideology = socialist
-
-    allow_all_cultures = yes
-    allow_all_religions = yes
-    allow_all_ideologies = yes
-
-    resilient = yes                    # Disbands on retreat
-    reinforcing = yes                # Does not receive reinforcements
-    general = yes                    # Does not use generals
-    smart = yes                        # Does not assault forts, tactically withdraw from battle, etc.
-    unit_transfer = no                # Units do not remain after enforcing demands.
-
-    occupation_mult = 1.0            # The amount of strength this rebel gains from taking provinces
-
-    # triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
-    will_rise = {
-        factor = 0.5
-        modifier = {
-            war = yes
-            factor = 0.8
-        }
-        modifier = {
-            war_exhaustion = 4
-            factor = 0.95
-        }
-        modifier = {
-            war_exhaustion = 6
-            factor = 0.95
-        }
-        modifier = {
-            war_exhaustion = 8
-            factor = 0.95
-        }
-    }
-
-    # The rebel type with the highest modifier for this pop gets picked
-    spawn_chance = {
-
-        factor = 1.02
-        modifier = {
-            factor = 0
-            country = { civilized = no }
-        }
-        # modifier = {
-            # factor = 0
-            # political_movement = yes
-        # }
-        modifier = {
-            factor = 0
-            NOT = { is_ideology_enabled = socialist }
-        }
-        modifier = {
-            factor = 0
-            NOT = {
-                OR = {
-                    pop_majority_ideology = communist
-                    pop_majority_ideology = socialist
-                    pop_majority_ideology = liberal
-                    pop_majority_ideology = conservative
-                }
-            }
-        }
-        modifier = {
-            factor = 1.05
-            pop_majority_ideology = communist
-        }
-        modifier = {
-            factor = 1.2
-            pop_majority_ideology = socialist
-        }
-        modifier = {
-            factor = 1.02
-            political_reform_want = 0.05
-        }
-        modifier = {
-            factor = 1.02
-            political_reform_want = 0.1
-        }
-        modifier = {
-            factor = 1.02
-            political_reform_want = 0.15
-        }
-
-        modifier = {
-            factor = 0
-            country = {
-                OR = {
-                    government = democracy
-                    government = hms_government
-                }
-                OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
-                }
-                OR = {
-                    upper_house_composition = state_equal_weight
-                    upper_house_composition = population_equal_weight
-                }
-                OR = {
-                    wage_reform = acceptable_minimum_wage
-                    wage_reform = good_minimum_wage
-                }
-                OR = {
-                    work_hours = ten_hours
-                    work_hours = eight_hours
-                }
-                OR = {
-                    safety_regulations = acceptable_safety
-                    safety_regulations = good_safety
-                }
-                OR = {
-                    unemployment_subsidies = acceptable_subsidies
-                    unemployment_subsidies = good_subsidies
-                }
-                OR = {
-                    pensions = acceptable_pensions
-                    pensions = good_pensions
-                }
-                trade_unions = all_trade_unions
-                NOT = { debt_law = serfdom }
-                NOT = { border_policy = closed_borders }
-                public_meetings = yes_meeting
-                press_rights = free_press
-                slavery = no_slavery
-                ruling_party_ideology = socialist
-            }
-        }
-        modifier = {
-            factor = 0.75
-            country = {
-                OR = {
-                    government = democracy
-                    government = hms_government
-                }
-                OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
-                }
-                OR = {
-                    upper_house_composition = state_equal_weight
-                    upper_house_composition = population_equal_weight
-                }
-                OR = {
-                    wage_reform = acceptable_minimum_wage
-                    wage_reform = good_minimum_wage
-                }
-                OR = {
-                    work_hours = ten_hours
-                    work_hours = eight_hours
-                }
-                OR = {
-                    safety_regulations = acceptable_safety
-                    safety_regulations = good_safety
-                }
-                OR = {
-                    unemployment_subsidies = acceptable_subsidies
-                    unemployment_subsidies = good_subsidies
-                }
-                OR = {
-                    pensions = acceptable_pensions
-                    pensions = good_pensions
-                }
-                trade_unions = all_trade_unions
-                NOT = { debt_law = serfdom }
-                NOT = { border_policy = closed_borders }
-                public_meetings = yes_meeting
-                press_rights = free_press
-                slavery = no_slavery
-                NOT = { ruling_party_ideology = socialist }
-            }
-        }
-        modifier = {
-            factor = 0
-            is_primary_culture = no
-            is_accepted_culture = no
-            location = {
-                any_core = {
-                    is_cultural_union = no
-                    is_primary_culture = THIS
-                    exists = no
-                }
-            }
-        }
-        modifier = {
-            factor = 0.01
-            is_primary_culture = yes
-            location = {
-                NOT = { is_core = THIS }
-                any_core = {
-                    is_primary_culture = THIS
-                    is_cultural_union = no
-                    exists = no
-                }
-            }
-        }
-        modifier = {
-            factor = 0.5
-            is_primary_culture = no
-            is_accepted_culture = no
-            NOT = {
-                location = {
-                    any_core = { is_primary_culture = THIS }
-                }
-            }
-        }
-        modifier = {
-            factor = 0.5
-            is_culture_group = germanic
-            country = {
-                is_greater_power = no
-                is_culture_group = germanic
-                NOT = { tag = GER }
-                NOT = { tag = AUS }
-                NOT = { tag = KUK }
-                NOT = { has_country_flag = wants_to_unify }
-            }
-        }
-        modifier = {
-            factor = 0.5
-            is_culture_group = italian
-            country = {
-                is_greater_power = no
-                is_culture_group = italian
-                OR = {
-                    has_global_flag = italian_call_to_union
-                    has_global_flag = garibaldi_redshirts
-                }
-                NOT = { has_country_flag = wants_to_unify }
-            }
-        }
-        modifier = {
-            factor = 0
-            location = {
-                is_colonial = yes
-            }
-        }
-    }
-
-     #This is checked for EACH province in the Area of Operations
-    movement_evaluation = {
-        factor = 1
-        modifier = {
-            factor = 0.1
-            units_in_province = 1
-            NOT = { is_capital = yes }
-        }
-        modifier = {
-            factor = 0.001
-            controlled_by = REB
-            NOT = { is_capital = yes }
-        }
-        modifier = {
-            factor = 1.5
-            average_militancy = 4
-        }
-        modifier = {
-            factor = 1.5
-            average_militancy = 6
-        }
-        modifier = {
-            factor = 1.5
-            average_militancy = 8
-        }
-        modifier = {
-            factor = 5.0
-            is_capital = yes
-        }
-    }
-
-     # Province Scope
-     siege_won_trigger = {
-        NOT = { has_province_modifier = war_torn }
-     }
-
-    siege_won_effect = {
-        add_province_modifier = {
-            name = war_torn
-            duration = 365
-        }
-        any_pop = {
-            ideology = {
-                value = socialist
-                factor = 0.05
-            }
-        }
-        owner = { war_exhaustion = 2.5 }
-    }
-
-
-    # Country scope
-    demands_enforced_trigger = {
-        OR = {
-            capital_scope = {
-                controlled_by = REB
-                province_control_days = 90
-            }
-            NOT = {
-                any_owned_province = {
-                    is_colonial = no
-                    controlled_by = THIS
-                }
-            }
-        }
-    }
-    demands_enforced_effect = {
-        clr_country_flag = theocratic_government
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-
-        ruling_party_ideology = socialist
-        political_reform = universal_voting
-        political_reform = population_equal_weight
-        political_reform = yes_meeting
-        political_reform = free_press
-        political_reform = all_trade_unions
-        political_reform = no_slavery
-        political_reform = proportional_representation
-        political_reform = all_voting_pops
-        political_reform = open_borders
-
-        random_owned = { limit = { owner = { NOT = { debt_law = bankruptcy } } } owner = { political_reform = debtors_prisons } }
-
-        random_owned = { limit = { owner = { political_parties = non_secret_ballots } } owner = { political_reform = secret_ballots } }
-
-        random_owned = { limit = { owner = { political_parties = gerrymandering } } owner = { political_reform = non_secret_ballots } }
-
-        random_owned = {
-            limit = {
-                owner = {
-                    OR = {
-                        political_parties = underground_parties
-                        political_parties = harassment
-                    }
-                }
-            }
-            owner = { political_reform = gerrymandering }
-        }
-
-        #Minimum Wage
-            random_owned = {
-                limit = { owner = { wage_reform = acceptable_minimum_wage } }
-                owner = { social_reform = good_minimum_wage }
-            }
-            random_owned = {
-                limit = { owner = { wage_reform = low_minimum_wage } }
-                owner = { social_reform = acceptable_minimum_wage }
-            }
-            random_owned = {
-                limit = { owner = { wage_reform = trinket_wage } }
-                owner = { social_reform = low_minimum_wage }
-            }
-            random_owned = {
-                limit = { owner = { wage_reform = no_minimum_wage } }
-                owner = { social_reform = trinket_wage }
-            }
-        #Work Hours
-            random_owned = {
-                limit = { owner = { work_hours = ten_hours } }
-                owner = { social_reform = eight_hours }
-            }
-            random_owned = {
-                limit = { owner = { work_hours = twelve_hours } }
-                owner = { social_reform = ten_hours }
-            }
-            random_owned = {
-                limit = { owner = { work_hours = fourteen_hours } }
-                owner = { social_reform = twelve_hours }
-            }
-            random_owned = {
-                limit = { owner = { work_hours = no_work_hour_limit } }
-                owner = { social_reform = fourteen_hours }
-            }
-        #Safety Regulations
-            random_owned = {
-                limit = { owner = { safety_regulations = acceptable_safety } }
-                owner = { social_reform = good_safety }
-            }
-            random_owned = {
-                limit = { owner = { safety_regulations = low_safety } }
-                owner = { social_reform = acceptable_safety }
-            }
-            random_owned = {
-                limit = { owner = { safety_regulations = trinket_safety } }
-                owner = { social_reform = low_safety }
-            }
-            random_owned = {
-                limit = { owner = { safety_regulations = no_safety } }
-                owner = { social_reform = trinket_safety }
-            }
-        #Unemployment Subsides
-            random_owned = {
-                limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
-                owner = { social_reform = good_subsidies }
-            }
-            random_owned = {
-                limit = { owner = { unemployment_subsidies = low_subsidies } }
-                owner = { social_reform = acceptable_subsidies }
-            }
-            random_owned = {
-                limit = { owner = { unemployment_subsidies = trinket_subsidies } }
-                owner = { social_reform = low_subsidies }
-            }
-            random_owned = {
-                limit = { owner = { unemployment_subsidies = no_subsidies } }
-                owner = { social_reform = trinket_subsidies }
-            }
-        #Pensions
-            random_owned = {
-                limit = { owner = { pensions = acceptable_pensions } }
-                owner = { social_reform = good_pensions }
-            }
-            random_owned = {
-                limit = { owner = { pensions = low_pensions } }
-                owner = { social_reform = acceptable_pensions }
-            }
-            random_owned = {
-                limit = { owner = { pensions = trinket_pensions } }
-                owner = { social_reform = low_pensions }
-            }
-            random_owned = {
-                limit = { owner = { pensions = no_pensions } }
-                owner = { social_reform = trinket_pensions }
-            }
-        add_country_modifier = {
-            name = national_confusion
-            duration = 1095
-        }
-        prestige_factor = -0.3
-        plurality = -10
-        country_event = 810056
-    }
-}
-
 jacobite_rebels = {
     icon = 16
 
@@ -2874,15 +2340,12 @@ jacobite_rebels = {
         absolute_monarchy = prussian_constitutionalism
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = prussian_constitutionalism
-        #french_bourbon = prussian_constitutionalism
         dominion = prussian_constitutionalism
         democracy = prussian_constitutionalism
         theocracy = theocracy
         colonial_company = prussian_constitutionalism
-
-        #archduchy = prussian_constitutionalism
+		
         elective_monarchy_oligarchy = prussian_constitutionalism
-        #federal_democracy = prussian_constitutionalism
         tribal_democracy = prussian_constitutionalism
         oligarchic_republic = prussian_constitutionalism
         khanate = prussian_constitutionalism
@@ -3136,8 +2599,6 @@ peasant_rebels = {
     defection = none
     independence = none                # Does not strive for independence
     defect_delay = 18
-
-    ideology = communist
 
     allow_all_cultures = yes
     allow_all_religions = yes

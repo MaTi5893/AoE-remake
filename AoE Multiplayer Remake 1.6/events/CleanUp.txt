@@ -57,10 +57,6 @@ country_event = {
         political_reform = no_slavery
         political_reform = debtors_prisons
         political_reform = culture_voting_only
-        #social_reform = good_minimum_wage
-        #social_reform = eight_hours
-        #social_reform = good_subsidies
-        #social_reform = good_pensions
         prestige_factor = -0.1
         country_event = 800052
     }
@@ -151,77 +147,6 @@ country_event = {
         }
         prestige_factor = -0.1
         country_event = 800050
-    }
-}
-
-country_event = {
-    id = 60020
-    title = "EVTNAME60020"
-    desc = "EVTDESC60020"
-    news = yes
-    news_title = "EVTNAME60020_NEWS_TITLE"
-    news_desc_long = "EVTDESC60020_NEWS_LONG"
-    news_desc_medium = "EVTDESC60020_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC60020_NEWS_SHORT"
-    picture = "election"
-
-    trigger = {
-        is_vassal = no
-        civilized = yes
-        NOT = { government = bourgeois_dictatorship }
-        ruling_party_ideology = anarcho_liberal
-        average_militancy = 3
-        OR = {
-            num_of_revolts = 1
-            national_provinces_occupied = .10
-            is_disarmed = yes
-            anarcho_liberal = 20
-            average_militancy = 5
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 24
-        modifier = {
-            factor = 0.8
-            average_militancy = 4
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 5
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 6
-        }
-        modifier = {
-            factor = 0.5
-            revolt_percentage = .25
-        }
-    }
-    major = yes
-    option = {
-        name = "EVTOPTA60020"
-        prestige_factor = -0.1
-        government = bourgeois_dictatorship
-        political_reform = none_voting
-        political_reform = party_appointed
-        political_reform = yes_meeting
-        political_reform = free_press
-        political_reform = all_trade_unions
-        political_reform = underground_parties
-        #social_reform = no_minimum_wage
-        #social_reform = no_work_hour_limit
-        #social_reform = no_safety
-        #social_reform = no_subsidies
-        #social_reform = no_pensions
-        #social_reform = no_health_care
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
-        country_event = 800053
     }
 }
 
@@ -384,10 +309,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-				OR = {
-				centralization = legislative_parliment
-				centralization = national_parliment
-				}
+					OR = {
+						centralization = legislative_parliment
+						centralization = national_parliment
+					}
 				}
 			}
 			owner = {
@@ -447,6 +372,7 @@ country_event = {
 				}
 				has_country_flag = army_angery
 			}
+			NOT = { vote_franschise = none_voting }
 		}
         civilized = yes
     }
