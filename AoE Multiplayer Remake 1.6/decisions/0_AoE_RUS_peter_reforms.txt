@@ -211,15 +211,17 @@ political_decisions = {
 	}
 	
 	claim_crimea_south_ukrine = {
-		picture = crimea
+		picture = potiomkin
 		potential = {
 			tag = RUS
 			NOT = { has_country_flag = claimed_crimea_south_ukrine }
 			NOT = { has_country_flag = perpetual_peace_TUR }
-			exists = yes
+			OR = {
+				owns = 964
+				has_country_modifier = catharine_the_great
+			}
 		}
 		allow = {
-			is_greater_power = yes
 			war_policy  = jingoism
 			OR = {
 				AND = {
@@ -234,37 +236,30 @@ political_decisions = {
 			set_country_flag = claimed_crimea_south_ukrine
 			CRI = {
 				all_core = {
-					add_core = THIS
-				}
-			}
-			RUS_676 = { add_core = THIS }
-			add_core = 1049
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							owns = 965
-							owns = 973
-						}
+					limit = {
+						owned_by = THIS
 					}
-				}
-				owner = {
-					badboy = 10
+					add_province_modifier = { name = deez_nuts_headass duration = 3650 }
 				}
 			}
-			random_owned = {
+			any_pop = {
 				limit = {
-					owner = {
-						OR = {
-							owns = 965
-							owns = 973
-						}
-					}
+					culture = tatar
 				}
-				owner = {
-					badboy = 4
-				}
+				militancy = 1.5
+				consciousness = 2
 			}
+			prestige = 15
+			976 = { change_province_name = Mariupol }
+			975 = { change_province_name = Yuzovka }
+			973 = { change_province_name = Melitopol }
+			965 = { change_province_name = Cherson }
+			970 = { change_province_name = Nikolaev }
+			969 = { change_province_name = Pervomaisk }
+			968 = { change_province_name = Odessa }
+			964 = { change_province_name = Simferopol }
+			966 = { change_province_name = Kerch }
+			967 = { change_province_name = Sevastopol }
 		}
 		ai_will_do = { factor = 1 }	
 	}

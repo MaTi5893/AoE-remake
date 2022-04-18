@@ -7,6 +7,10 @@ fascist_group = { #fascist_group = absolutist faction
 
         add_political_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
             group = {
                 modifier = {
                     factor = 0.05
@@ -75,12 +79,24 @@ fascist_group = { #fascist_group = absolutist faction
         }
         remove_political_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         add_social_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_social_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
 
         add_military_reform = {
@@ -144,6 +160,10 @@ conservative_group = { #traditionalist faction
 
         add_political_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
             group = {
                 modifier = {
                     factor = 0.05
@@ -212,10 +232,17 @@ conservative_group = { #traditionalist faction
         }
         remove_political_reform = {
             base = 0.5
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         add_social_reform = {
             base = 0
-
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
             group = {
                 modifier = {
                     factor = 0.05
@@ -285,6 +312,10 @@ conservative_group = { #traditionalist faction
         }
         remove_social_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
 
         add_military_reform = {
@@ -306,15 +337,31 @@ socialist_group = {
 
         add_political_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_political_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         add_social_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_social_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
     }
 
@@ -325,15 +372,31 @@ socialist_group = {
 
         add_political_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_political_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         add_social_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_social_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
     }
 }
@@ -346,12 +409,24 @@ liberal_group = {
 
         add_political_reform = {
             base = 1
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         remove_political_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
         add_social_reform = { #Rework this later btw
             base = 0.5
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
             group = {
                 modifier = {
                     factor = 0.05
@@ -420,6 +495,10 @@ liberal_group = {
         }
         remove_social_reform = {
             base = 0
+			modifier = {
+				factor = 0.17
+				has_country_flag = executive_activated
+			}
         }
 
         add_military_reform = {

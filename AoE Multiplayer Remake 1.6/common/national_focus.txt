@@ -47,7 +47,7 @@ rail_focus =
 		icon = 32
 		local_artisan_output = 0.25
 		local_RGO_output = 0.05
-		population_growth = 0.001
+		population_growth = 0.0001
 		pop_militancy_modifier = 0.25
 		immigrant_attract = -0.50
 		limit = {
@@ -161,6 +161,13 @@ promotion_focus =
         bureaucrats = 0.20 #20% more likeley to become this type
         icon = 7
         outliner_show_as_percent = yes
+		limit = {
+			NOT = { state_scope = { bureaucrats = 0.040 } }
+			OR = {
+				state_scope = { any_owned_province = { any_pop = { OR = { is_accepted_culture = yes is_primary_culture = yes } } } }
+				owner = { centralization = admin_parliment }
+			}
+		}
     }
 
     promote_capitalists =
