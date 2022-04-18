@@ -153,7 +153,6 @@ political_decisions = {
         }
         allow = {
 			idealism = 1
-			literacy = 0.32
             war = no
         }
         effect = {
@@ -163,7 +162,8 @@ political_decisions = {
                 }
                 militancy = -2
             }
-			years_of_research = 0.8
+			add_accepted_culture = slovak
+			years_of_research = 0.5
             prestige = 5
             social_reform = acceptable_health_care
             set_country_flag = joseph_i_bureacracy
@@ -221,7 +221,7 @@ political_decisions = {
 				}
 				AND = {
 					owns = 654
-					owns = 652
+					owns = 792
 				}
 			}
         }

@@ -16,7 +16,6 @@ political_decisions = {
         }
 
         allow = {
-            #war = no
             owns = 300
             OR = {
                 ideological_thought = 1
