@@ -586,13 +586,13 @@
     craftsmen = {
         culture = wallonian
         religion = catholic
-        size = 2000
+        size = 1000
     }
 
     artisans = {
         culture = wallonian
         religion = catholic
-        size = 3000
+        size = 1500
     }
 
     soldiers = {
@@ -604,7 +604,51 @@
     farmers = {
         culture = wallonian
         religion = catholic
-        size = 45800
+        size = 22900
+    }
+}
+#Sisak (116000/29000 POPS)
+772 = {
+     aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 550
+    }
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 550
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 100
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 1000
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 1500
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 1100
+    }
+
+    farmers = {
+        culture = wallonian
+        religion = catholic
+        size = 22900
     }
 }
 #Spa (144000/36000 POPS)

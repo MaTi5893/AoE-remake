@@ -16,6 +16,7 @@ political_decisions = {
             PBZ = {
                 exists = no
             }
+			nationalism_n_imperialism = 1
         }
 
         effect = {
@@ -33,6 +34,7 @@ political_decisions = {
             }
             change_tag = UPB
             add_accepted_culture = brazilian
+			add_accepted_culture = afro_brazilian
             prestige = 5
         }
 
@@ -45,8 +47,13 @@ political_decisions = {
             tag = POR
             NOT = { has_country_flag = moved_capital_to_brazil }
             PBZ = {
-                vassal_of = POR
-                ai = yes
+				OR = {
+					AND = {
+						vassal_of = POR
+						ai = yes
+					}
+					THIS = { any_owned_province = { is_core = PBZ }
+				}
             }
             exists = yes
         }
@@ -75,6 +82,7 @@ political_decisions = {
         effect = {
             inherit = PBZ
             capital = 2447
+			add_core = 2447
             set_country_flag = moved_capital_to_brazil
         }
 
@@ -155,7 +163,10 @@ political_decisions = {
                 vassal_of = THIS
                 exists = yes
             }
-            year = 1759
+			OR = {
+				year = 1759
+				revolution_n_counterrevolution = 1
+			}
         }
 
         effect = {

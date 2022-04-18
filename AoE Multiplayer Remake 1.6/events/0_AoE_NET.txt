@@ -20,7 +20,6 @@ country_event = {
 			name =  stadtholderless_period
 			duration = -1
 		}
-		political_reform = federalism
 		any_pop = {
 			limit = {
 				pop_majority_ideology = conservative
@@ -36,71 +35,71 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = "We need to Return to Britain!"
-		any_pop = {
-			militancy = 8
-			consciousness = 6
-		}
-		plurality = -2
-		random_owned = {
-			limit = {
-				owner = {
-					tag = NET
-					part_of_sphere = yes
-				}
-			}
-			owner = {
-				sphere_owner = {
-					diplomatic_influence = {
-						who = NET
-						value = -200
-					}
-					relation = {
-						who = NET
-						value = -100
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					tag = NET
-					ENL = { exists = yes }
-				}
-			}
-			owner = {
-				casus_belli = {
-					target = ENL
-					type = restore_anglo_dutch_union
-					months = 120
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					tag = NET
-					GBR = { exists = yes }
-				}
-			}
-			owner = {
-				casus_belli = {
-					target = GBR
-					type = restore_anglo_dutch_union
-					months = 12
-				}
-			}
-		}
-		poor_strata = {
-			ideology = {
-				value = reactionary
-				factor = 0.05
-			}
-		}
-		badboy = 25
-	}
+	#option = {
+	#	name = "We need to Return to Britain!"
+	#	any_pop = {
+	#		militancy = 8
+	#		consciousness = 6
+	#	}
+	#	plurality = -2
+	#	random_owned = {
+	#		limit = {
+	#			owner = {
+	#				tag = NET
+	#				part_of_sphere = yes
+	#			}
+	#		}
+	#		owner = {
+	#			sphere_owner = {
+	#				diplomatic_influence = {
+	#					who = NET
+	#					value = -200
+	#				}
+	#				relation = {
+	#					who = NET
+	#					value = -100
+	#				}
+	#			}
+	#		}
+	#	}
+	#	random_owned = {
+	#		limit = {
+	#			owner = {
+	#				tag = NET
+	#				ENL = { exists = yes }
+	#			}
+	#		}
+	#		owner = {
+	#			casus_belli = {
+	#				target = ENL
+	#				type = restore_anglo_dutch_union
+	#				months = 120
+	#			}
+	#		}
+	#	}
+	#	random_owned = {
+	#		limit = {
+	#			owner = {
+	#				tag = NET
+	#				GBR = { exists = yes }
+	#			}
+	#		}
+	#		owner = {
+	#			casus_belli = {
+	#				target = GBR
+	#				type = restore_anglo_dutch_union
+	#				months = 12
+	#			}
+	#		}
+	#	}
+	#	poor_strata = {
+	#		ideology = {
+	#			value = reactionary
+	#			factor = 0.05
+	#		}
+	#	}
+	#	badboy = 25
+	#}
 }
 country_event = {
 	id = 158103

@@ -313,63 +313,63 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = 174509
-	title = "The Hungarian Diet"
-	desc = "EVTDESC174509"
-	picture = sejm
-	fire_only_once = yes
-	
-	trigger = {
-		tag = AUS
-		NOT = { exists = HUN }
-		government = hms_government
-		owns = 641
-	}
-	
-	mean_time_to_happen = {
-		months = 15
-	}
-	
-	option = {
-		name = "Allow the diet to convene"
-		random_list = {
-			50 = {
-				add_accepted_culture = hungarian
-			}
-			50 = {
-				any_pop = {
-					limit = {
-						culture = hungarian
-					}
-					militancy = -5
-				}
-			}
-		}
-	}
-	option = {
-		name = "Prohibit from partaking in the diet"
-		any_pop = {
-			limit = {
-				culture = hungarian
-			}
-			militancy = 5
-		}
-		HUN = {
-			all_core = {
-				any_pop = {
-					limit = {
-						OR = {
-							culture = south_german
-							culture = north_german
-						}
-					}
-					reduce_pop = 1.05
-				}
-			}
-		}
-	}
-}
+#country_event = {
+#	id = 174509
+#	title = "The Hungarian Diet"
+#	desc = "EVTDESC174509"
+#	picture = sejm
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = AUS
+#		NOT = { exists = HUN }
+#		government = hms_government
+#		owns = 641
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 15
+#	}
+#	
+#	option = {
+#		name = "Allow the diet to convene"
+#		random_list = {
+#			50 = {
+#				add_accepted_culture = hungarian
+#			}
+#			50 = {
+#				any_pop = {
+#					limit = {
+#						culture = hungarian
+#					}
+#					militancy = -5
+#				}
+#			}
+#		}
+#	}
+#	option = {
+#		name = "Prohibit from partaking in the diet"
+#		any_pop = {
+#			limit = {
+#				culture = hungarian
+#			}
+#			militancy = 5
+#		}
+#		HUN = {
+#			all_core = {
+#				any_pop = {
+#					limit = {
+#						OR = {
+#							culture = south_german
+#							culture = north_german
+#						}
+#					}
+#					reduce_pop = 1.05
+#				}
+#			}
+#		}
+#	}
+#}
 #####################
 ##Habsburg Monarchy##
 #####################

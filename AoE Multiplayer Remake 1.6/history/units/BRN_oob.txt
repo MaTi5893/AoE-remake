@@ -304,6 +304,46 @@ army = {
 
 }
 
+army = {
+    name = "III Army"
+    location = 695
+    regiment = {
+        name= "1. Artillery"
+        type = artillery
+        home = 695
+    }
+
+    regiment = {
+        name= "2. Artillery"
+        type = artillery
+        home = 695
+    }
+	
+	regiment = {
+        name= "3. Artillery"
+        type = artillery
+        home = 3252
+    }
+
+    regiment = {
+        name= "4. Artillery"
+        type = artillery
+        home = 3256
+    }
+	
+	regiment = {
+        name= "5. Artillery"
+        type = artillery
+        home = 698
+    }
+
+    regiment = {
+        name= "1. Cruissier"
+        type = cuirassier
+        home = 698
+    }
+}
+
 navy = {
     name = "Königlich Preußische Marine"
     location = 680

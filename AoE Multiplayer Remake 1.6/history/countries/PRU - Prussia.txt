@@ -4,7 +4,7 @@ religion = protestant
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = nv_order
-literacy = 0.10
+literacy = 0.7
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.25
 civilized = yes
 is_releasable_vassal = no
@@ -24,30 +24,30 @@ voting_system = first_past_the_post
 political_parties = underground_parties
 
 #Social Reforms
-wage_reform = low_minimum_wage #slightly influential church
-work_hours = ten_hours #influential gentry
-safety_regulations = low_safety #slightly influential nobility
-unemployment_subsidies = low_subsidies #slightly influential burghers
-pensions = good_pensions #very influential army
-health_care = acceptable_health_care #influential bureaucracy
-
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = acceptable_pensions
 school_reforms = no_schools
 
 #New Reforms
 conscription = mandatory_service
-debt_law = serfdom
+debt_law = debtors_prisons
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
-border_policy = open_borders
-centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = protestant_country
 set_country_flag = support_habsburg_heir
 set_country_flag = hre_member
 
-ruling_party = "Nobility Faction"
+decision = literacy_PRU
+decision = silesia_rename_german
+
+ruling_party = "Junkerfraktion"
 upper_house = {
     fascist = 0
     liberal = 35
@@ -87,6 +87,7 @@ romanticism = 1
 high_pressure_steam_engine = 1
 
 
+
 govt_flag = {
     government = proletarian_dictatorship
     flag = theocracy
@@ -100,4 +101,4 @@ nonstate_consciousness = 1
 
 schools = army_tech_school
 
-oob = "PRU_oob.txt"
+oob = "BRN_oob.txt"

@@ -23,18 +23,16 @@ ironclad = { #Three-decker
     #Building Costs
     build_time = 360
     build_cost = {
-        clipper_convoy = 25
-        artillery = 15
-        canned_food = 10
-        explosives = 5
+        steamer_convoy = 24  #24 warship
+        artillery = 20
     }
     min_port_level = 3
     limit_per_port = 3
-    supply_consumption_score = 3
+    supply_consumption_score = 0
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 0.5  #24
+        steamer_convoy = 0.5  #24 warship
         artillery = 0.2      #12
         #canned_food = 0.2     #2  total 38
     }
