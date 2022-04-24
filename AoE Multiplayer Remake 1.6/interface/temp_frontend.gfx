@@ -55,6 +55,11 @@ spriteTypes = {
 		loadType = "FRONTEND"
 	}
 	spriteType = {
+		name = "GFX_frontend_aoe"
+		texturefile = "gfx\\interface\\mm_aoe.dds"
+		loadType = "FRONTEND"
+	}
+	spriteType = {
 		name = "GFX_frontend_tutorial_image_1"
 		texturefile = "gfx\\interface\\frontend_tutorial_image_1.dds"
 		loadType = "FRONTEND"

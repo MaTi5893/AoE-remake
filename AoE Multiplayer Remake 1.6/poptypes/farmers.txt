@@ -604,6 +604,10 @@ promote_to =
     soldiers =
     {
         factor = 0.01
+		modifier = {
+			factor = 5
+			nationalvalue = pm_militarist
+		}
         group = {
             modifier = {
                 factor = -4
@@ -1261,11 +1265,11 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
         }
         modifier = {
             factor = 0.9
@@ -1309,7 +1313,7 @@ ideologies = {
         factor = 1
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             NOT = { ruling_party_ideology = communist }
         }
         modifier = {
@@ -1501,7 +1505,7 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
         }
         modifier = {
             factor = 1.1
@@ -1913,6 +1917,10 @@ issues =
                 military_score = THIS
             }
         }
+		modifier = {
+            factor = 1.3
+            nationalvalue = pm_militarist
+        }
     }
     pro_military = {
         factor = 1
@@ -2237,27 +2245,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 9
         }
         modifier = {
@@ -2282,27 +2290,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 9
         }
         modifier = {
@@ -2322,27 +2330,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 9
         }
         modifier = {

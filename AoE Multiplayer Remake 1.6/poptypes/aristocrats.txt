@@ -888,6 +888,10 @@ ideologies = {
             factor = 1.2
             ruling_party_ideology = reactionary
         }
+		modifier = {
+            factor = 1.2
+            trade_unions = no_trade_unions
+        }
         modifier = {
             factor = 1.2
             NOT = { literacy = 0.30 }

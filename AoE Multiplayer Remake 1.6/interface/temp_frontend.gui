@@ -334,6 +334,13 @@ guiTypes = {
 			fullscreen=no
 			Orientation = "CENTER"
 			
+			iconType =
+			{
+				name ="frontend_aoe"
+				spriteType = "GFX_frontend_aoe"
+				position = { x= -524 y = 44 }
+				Orientation = "CENTER"
+			}
 			
 			guiButtonType = {
 				name = "single_player_button"

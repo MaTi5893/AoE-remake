@@ -635,7 +635,10 @@ promote_to =
                 recruited_percentage = 0.60
             }
         }
-
+		modifier = {
+			factor = 5
+			nationalvalue = pm_militarist
+		}
         group = {
             modifier = {
                 factor = 2

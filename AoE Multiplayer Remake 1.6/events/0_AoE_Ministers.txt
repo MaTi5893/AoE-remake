@@ -1,0 +1,32 @@
+country_event = {
+    id = 170217
+	title = "$COUNTRY_ADJ$ Lead Minister"
+    desc = ""
+	picture = ministers
+	is_triggered_only = yes
+	
+	option = {
+		name = "A Clergyman"
+		nationalvalue = pm_clergyman
+	}
+	
+	option = {
+		name = "A Reformist"
+		nationalvalue = pm_reformists
+	}
+	
+	option = {
+		name = "A Nobleman"
+		nationalvalue = pm_nobleman
+	}
+	
+	option = {
+		name = "A Gentry"
+		nationalvalue = pm_gentry
+	}
+	
+	option = {
+		name = "A Militarist"
+		nationalvalue = pm_militarist
+	}
+}

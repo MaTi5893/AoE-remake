@@ -488,6 +488,10 @@ promote_to =
                 clergymen = 0.036
             }
         }
+		modifier = {
+			factor = 5
+			nationalvalue = pm_gentry
+		}
         group = {
             modifier = {
                 factor = 1

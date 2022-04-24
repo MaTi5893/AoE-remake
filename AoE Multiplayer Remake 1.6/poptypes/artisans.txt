@@ -348,6 +348,10 @@ promote_to =
                 state_scope = { bureaucrats = 0.05 }
             }
         }
+		modifier = {
+			factor = 5
+			nationalvalue = pm_gentry
+		}
         group = {
         modifier = {
             factor = 2
@@ -1122,6 +1126,10 @@ ideologies = {
         modifier = {
             factor = 1.2
             ruling_party_ideology = reactionary
+        }
+		modifier = {
+            factor = 1.2
+            trade_unions = no_trade_unions
         }
         modifier = {
             factor = 1.2

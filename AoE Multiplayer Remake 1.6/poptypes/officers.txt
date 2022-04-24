@@ -818,7 +818,10 @@ soldiers =
             factor = 10
             luxury_needs = 1
         }
-
+		modifier = {
+            factor = 5
+            nationalvalue = pm_gentry
+        }
         modifier = {
             factor = 2
             not = { literacy = 0.50 }

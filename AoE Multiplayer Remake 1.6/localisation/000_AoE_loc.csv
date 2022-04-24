@@ -353,13 +353,13 @@ natral_talent;Naturally Talented;;;;;;;;;;;;;
 mercantilism_1;Mercantilism;;;;;;;;;;;;;
 trade_unions;Executive Power;;;;;;;;;;;;;
 no_trade_unions;One Man To Rule;;;;;;;;;;;;;
-no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!\n;;;;;;;;;;;;;
+no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YIncreases §PAbsolutist§Y Ideology in Pops§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!;;;;;;;;;;;;;
 state_controlled;Advisor Council;;;;;;;;;;;;;
 state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G10§Y years.§!;;;;;;;;;;;;;
 non_socialist;Delegated Ministers;;;;;;;;;;;;;
 non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G7.5§Y years.§!;;;;;;;;;;;;;
 all_trade_unions;Mandatory Cabinet;;;;;;;;;;;;;
-all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the executive powers.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G5§Y years.\nThis reform reduces your Plead Estates For War Support §RCooldown§Y to §G3§Y years.§W\n;;;;;;;;;;;;;
+all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the executive powers.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G5§Y years.\nThis reform reduces your Plead Estates For War Support §RCooldown§Y to §G3§Y years.§!;;;;;;;;;;;;;
 MAY_GAS_ATTACK;Unlocks Napoleonic Warfare;;;;;;;;;;;;;
 MAY_GAS_DEFEND;Can defend against Napoleonic Warfare;;;;;;;;;;;;;
 gas_attack;Napoleonic Warfare;;;;;;;;;;;;;
@@ -447,4 +447,14 @@ DIST_SOCIAL;Public Maintenance;;;;;;;;;;;;;
 nepotism_allowed;§YCan Take The "Nepotism" Career Progress Reform§!;x
 skill_and_merit_allowed;§YCan Take The "Based On Skill and Merit" Career Progress Reform§!;x
 nana_phadnavis;Nana Phadnavis;;;;;;;;;;;;;
-cock_and_balls;Cock and Balls;;;;;;;;;;;;;
+pm_militarist;Militarist\n§WIncreases Jingoism Popularity§!\n§WSligthly Increases Soldier Promotion§!;;;;;;;;;;;;;
+pm_gentry;Gentry\n§WIncreases Aristocrat Promotion (If Monarchy)\nMore Pop Types Can Promote to Aristocrat (If Monarchy)\nSlightly Increases Clerk Promotion\nSlightly Increases Craftsmen Promotion§!;;;;;;;;;;;;;
+pm_nobleman;Nobleman\n§WDecreases Rebel Spawn chance\nIncreases Aristocrat Promotion\nIncreases §YTraditionalist§! Ideology in Pops§!;;;;;;;;;;;;;
+pm_reformists;Reformist\n§WIncrease §YParlamentarian§! Ideology in Pops§!;;;;;;;;;;;;;
+pm_clergyman;Clergyman\n§WMajorly Decreases Rebel Spawn Chance§!\n§WMajorly Increases Pop Conversion Chance§!;;;;;;;;;;;;;
+pm_no_minister;§R[-]§!;;;;;;;;;;;;;
+POLITICS_NATIONALVALUE_TOOLTIP;Our Leading Minister is a §Y$NATIONALVALUE$§!\n;;;;;;;;;;;x
+LEDGER_COUNTRY_NATIONALVALUE;Leading Minister;;;;;;;;;;;x
+NOT_HAS_NATIONAL_VALUE;Leading Minister is NOT a §Y$NATIONALVALUE$§!.;;;;;;;;;;;x
+CHANGE_NATIONALVALUE;Our Newly Appointed Leading Minister will be a §Y$NATIONALVALUE$§!.\n;;;;;;;;;;;x
+HAS_NATIONAL_VALUE;Leading Minister is a §Y$NATIONALVALUE$§!.;;;;;;;;;;;x

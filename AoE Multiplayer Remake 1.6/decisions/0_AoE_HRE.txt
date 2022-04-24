@@ -48,6 +48,7 @@ political_decisions = {
         potential = {
             has_country_flag = hre_member
             NOT = { has_global_flag = hre_dismantled }
+			NOT = { has_country_flag = hre_emperor }
             exists = yes
 			NOT = { exists = NNN }
         }

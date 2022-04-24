@@ -238,6 +238,38 @@ migration_target =
 
 promote_to =
 {
+	aristocrats =
+    {
+        factor = 0.01
+
+        modifier = {
+            factor = -100
+            state_scope = {
+                aristocrats = 0.02
+            }
+			OR = {
+			nationalvalue = pm_gentry
+			nationalvalue = pm_noblemen
+			}
+        }
+
+        modifier = {
+            factor = -100
+            NOT = { luxury_needs = 0.10 }
+        }
+        modifier = {
+            factor = 10
+            luxury_needs = 1
+        }
+		modifier = {
+            factor = 5
+            nationalvalue = pm_gentry
+        }
+        modifier = {
+            factor = 2
+            not = { literacy = 0.50 }
+        }
+    }
 
     bureaucrats =
     {
