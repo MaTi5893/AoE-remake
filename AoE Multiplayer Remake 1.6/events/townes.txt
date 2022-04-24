@@ -2,7 +2,7 @@ country_event = {
 	id  = 777796
 	title = EVTNAME777796
 	desc = EVTDESC777796
-	picture = asian_administration
+	picture = english_parliment
 	
 	trigger = {
 		NOT = { has_country_flag = executive_activated }
@@ -21,7 +21,7 @@ country_event = {
 	}
 	
 	option = {
-		name = The President can issue an executive order
+		name = "We can issue an executive order"
 		set_country_flag = executive_activated
 	}
 }
@@ -30,7 +30,7 @@ country_event = {
 	id  = 777797
 	title = EVTNAME777797
 	desc = EVTDESC777797
-	picture = asian_administration
+	picture = english_parliment
 	
 	trigger = {
 		has_country_flag = executive_activated
@@ -41,7 +41,7 @@ country_event = {
 	}
 	
 	option = {
-		name = The President has other priorities
+		name = "The President has other priorities"
 		clr_country_flag = executive_activated
 	}
 }

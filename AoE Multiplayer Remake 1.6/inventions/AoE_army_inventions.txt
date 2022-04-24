@@ -54,7 +54,7 @@ subject_hosts = {
         base = 3
     }
     effect = {
-        reinforce_rate = 0.01
+        mob = 0.01
     }
 }
 #strategic_mobility - Line Infantry
@@ -208,7 +208,7 @@ regimental_mustering = {
         base = 3
     }
     effect = {
-        reinforce_rate = 0.01
+        mobilisation_size = 0.01
     }
 }
 #deep_defense_system - Proffesional Army
