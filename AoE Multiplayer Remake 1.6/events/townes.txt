@@ -1,0 +1,47 @@
+country_event = {
+	id  = 777796
+	title = EVTNAME777796
+	desc = EVTDESC777796
+	picture = english_parliment
+	
+	trigger = {
+		NOT = { has_country_flag = executive_activated }
+		OR = {
+			centralization = legislative_parliment 
+			centralization = national_parliment
+		}
+	}
+	
+	mean_time_to_happen = { 
+		months = 48
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			centralization = legislative_parliment
+		}
+	}
+	
+	option = {
+		name = "We can issue an executive order"
+		set_country_flag = executive_activated
+	}
+}
+
+country_event = {
+	id  = 777797
+	title = EVTNAME777797
+	desc = EVTDESC777797
+	picture = english_parliment
+	
+	trigger = {
+		has_country_flag = executive_activated
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "The President has other priorities"
+		clr_country_flag = executive_activated
+	}
+}
