@@ -528,129 +528,129 @@ political_decisions = {
 #		}
 #	}
 	
-	dominus_mari_baltici = {
-		picture = baltic_sea
-		potential = {
-			is_culture_group = scandinavian
-			NOT = { has_country_flag = dominus_mare_baltici }
-			exists = yes
-		}
-		allow = {
-			war = no
-			OR = {
-				owns = 332
-				332 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 994
-				994 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 354
-				354 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 695
-				695 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 690
-				690 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 696
-				696 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 372
-				372 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 530
-				530 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 546
-				546 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 679
-				679 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 350
-				350 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 345
-				345 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			set_country_flag = dominus_mare_baltici
-			prestige = 100
-			add_country_modifier = {
-				name = fanatic_army
-				duration = 7300
-			}
-			THIS = {
-				all_core = {
-					remove_core = PRU
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	#dominus_mari_baltici = {
+	#	picture = baltic_sea
+	#	potential = {
+	#		is_culture_group = scandinavian
+	#		NOT = { has_country_flag = dominus_mare_baltici }
+	#		exists = yes
+	#	}
+	#	allow = {
+	#		war = no
+	#		OR = {
+	#			owns = 332
+	#			332 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 994
+	#			994 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 354
+	#			354 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 695
+	#			695 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 690
+	#			690 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 696
+	#			696 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 372
+	#			372 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 530
+	#			530 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 546
+	#			546 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 679
+	#			679 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 350
+	#			350 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#		OR = {
+	#			owns = 345
+	#			345 = {
+	#				owner = {
+	#					vassal_of = THIS
+	#				}
+	#			}
+	#		}
+	#	}
+	#	effect = {
+	#		set_country_flag = dominus_mare_baltici
+	#		prestige = 100
+	#		add_country_modifier = {
+	#			name = fanatic_army
+	#			duration = 7300
+	#		}
+	#		THIS = {
+	#			all_core = {
+	#				remove_core = PRU
+	#			}
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
 	
 	install_leszczynski = {
 		picture = install_leszczynski

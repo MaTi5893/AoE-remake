@@ -52,7 +52,7 @@ political_decisions = {
 						vassal_of = POR
 						ai = yes
 					}
-					THIS = { any_owned_province = { is_core = PBZ }
+					THIS = { any_owned_province = { is_core = PBZ } }
 				}
             }
             exists = yes

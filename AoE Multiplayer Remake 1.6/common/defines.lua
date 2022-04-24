@@ -189,10 +189,10 @@ military = {
     RECON_SIEGE_EFFECT = 0.5, -- multiplier to effect of recon on speeding up sieges
     SIEGE_ATTRITION = 2, -- fixed attrition on sieging units
     BASE_MILITARY_TACTICS = 1.5, -- base mil tactics before tech
-    NAVAL_LOW_SUPPLY_DAMAGE_SUPPLY_STATUS = 0.25, -- how little supply is acceptable before getting damage to STR
-    NAVAL_LOW_SUPPLY_DAMAGE_DAYS_DELAY = 30, -- delay in days before the STR will get damage due to no supplies. Sometimes supply status may jump bcoz of the market.
-    NAVAL_LOW_SUPPLY_DAMAGE_MIN_STR = 5.0, -- when low supply, the navy will supply STR damage but no less then X% to avoid destruction (value from 0 to 100.0)
-    NAVAL_LOW_SUPPLY_DAMAGE_PER_DAY = 0.25, -- damage to navies STR per day if totally 0% supplies (value from 0 to 100.0)
+    NAVAL_LOW_SUPPLY_DAMAGE_SUPPLY_STATUS = 0.80, -- how little supply is acceptable before getting damage to STR
+    NAVAL_LOW_SUPPLY_DAMAGE_DAYS_DELAY = 5, -- delay in days before the STR will get damage due to no supplies. Sometimes supply status may jump bcoz of the market.
+    NAVAL_LOW_SUPPLY_DAMAGE_MIN_STR = 1.0, -- when low supply, the navy will supply STR damage but no less then X% to avoid destruction (value from 0 to 100.0)
+    NAVAL_LOW_SUPPLY_DAMAGE_PER_DAY = 0.5, -- damage to navies STR per day if totally 0% supplies (value from 0 to 100.0)
 },
 
 diplomacy = {

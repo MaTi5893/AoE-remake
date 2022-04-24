@@ -485,36 +485,36 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = "Add in Manchuria as well!"
-		RUS_1469 = { add_core = THIS }
-		1081 = {
-			add_core = RUS
-		}
-		2697 = {
-			add_core = RUS
-		}
-		CHI_1082 = {
-			add_core = RUS
-		}
-		CHI_1553 = {
-			add_core = RUS
-		}
-		badboy = 15
-		relation = {
-			who = QNG
-			value = -100
-		}
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 5
-				QNG = {
-					war_exhaustion = 50
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = "Add in Manchuria as well!"
+	#	RUS_1469 = { add_core = THIS }
+	#	1081 = {
+	#		add_core = RUS
+	#	}
+	#	2697 = {
+	#		add_core = RUS
+	#	}
+	#	CHI_1082 = {
+	#		add_core = RUS
+	#	}
+	#	CHI_1553 = {
+	#		add_core = RUS
+	#	}
+	#	badboy = 15
+	#	relation = {
+	#		who = QNG
+	#		value = -100
+	#	}
+	#	ai_chance = {
+	#		factor = 0
+	#		modifier = {
+	#			factor = 5
+	#			QNG = {
+	#				war_exhaustion = 50
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 country_event = {

@@ -447,6 +447,7 @@ steamer_shipyard = {
     template = factory_template
     input_goods = {
         steel = 26.8        #120
+		clipper_shipyard = 3
         lumber = 8        #8 (huhuh huhuh) total input+maint = 140
     }
     output_goods = steamer_convoy
@@ -548,7 +549,7 @@ clipper_shipyard = {
     template = factory_template
     input_goods = {
         fabric = 70        #162
-        timber = 85        #81
+        lumber = 100        #81
         steel = 20        #94        total input+maint = 346.825
     }
     output_goods = clipper_convoy
@@ -575,11 +576,11 @@ clipper_shipyard = {
 small_arms_factory = {
     template = factory_template
     input_goods = {
-        lumber = 25.0    #25
+        lumber = 20.0    #25
         steel = 3.0        #14.1        total input+maint = 48.925
     }
     output_goods = small_arms
-    value = 2.4            #60
+    value = 2.8 #60
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.15
@@ -897,7 +898,7 @@ cattle_ranch = {
 coal_mine = {
     template = RGO_template_labourers
     output_goods = coal
-    value = 2.62 #was 2.4 9% boost
+    value = 4 #was 2.4 9% boost
     mine = yes
 }
 
@@ -918,7 +919,7 @@ cotton_plantation = {
 dye_plantation = {
     template = RGO_template_farmers
     output_goods = dye
-    value = 0.22
+    value = 0.44
     farm = yes
 }
 
@@ -981,7 +982,7 @@ rubber_lodge = {
 sheep_ranch = {
     template = RGO_template_farmers
     output_goods = wool
-    value = 5
+    value = 7
     farm = yes
 }
 
@@ -1009,7 +1010,7 @@ tea_plantation = {
 timber_lodge = {
     template = RGO_template_labourers
     output_goods = timber
-    value = 8
+    value = 16
     farm = yes
 }
 
@@ -1187,6 +1188,7 @@ artisan_fuel = {
 artisan_steamer = {
     input_goods = {
         steel = 22        #103.4
+		clipper_convoy = 3
         lumber = 6        #6.6
         machine_parts = 0.05    #1.825 total input+maint = 112
     }
@@ -1248,12 +1250,12 @@ artisan_luxury_furniture = {
 
 artisan_steel = {
     input_goods = {
-        iron = 20        #70
-        coal = 5        #11.5    total input+maint = 81.5
+        iron = 22        #70
+        coal = 6       #11.5    total input+maint = 81.5
     }
 
     output_goods = steel         #94
-    value = 24
+    value = 30
 
     owner = {
         poptype = artisans
@@ -1268,11 +1270,11 @@ artisan_steel = {
 
 artisan_artillery = {
     input_goods = {
-        explosives = 0.5        #18
-        steel = 4        #37.6   total input+maint = 55.6
+        explosives = 2        #18
+        steel = 8        #37.6   total input+maint = 55.6
     }
     output_goods = artillery
-    value = 2.2        #65
+    value = 2        #65
 
     owner = {
         poptype = artisans
@@ -1287,8 +1289,8 @@ artisan_artillery = {
 artisan_clipper = {
     input_goods = {
         fabric = 25        #54
-        timber = 54        #54
-        steel = 10        #47        total input+maint = 155
+        lumber = 100        #54
+        steel = 30        #47        total input+maint = 155
     }
     output_goods = clipper_convoy
     is_coastal = yes
@@ -1311,7 +1313,7 @@ artisan_small_arms = {
         steel = 3.0        #14.1        total input+maint = 44.9
     }
     output_goods = small_arms
-    value = 2.2            #50
+    value = 2.5            #50
 
     owner = {
         poptype = artisans
@@ -1476,7 +1478,7 @@ artisan_winery = {
 
 artisan_lumber = {
     input_goods = {
-        timber = 100        #90    total input+maint = 100
+        timber = 150        #90    total input+maint = 100
     }
     output_goods = lumber
 

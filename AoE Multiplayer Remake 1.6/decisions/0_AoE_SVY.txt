@@ -142,19 +142,19 @@ political_decisions = {
 					}
 				}
 			}
-			random_owned = {
-				limit = {
-					owner = {
-					NOT = { primary_culture = arpitan }
-					NOT = { has_country_flag = perpetual_peace_spa }
-					owns = 762
-					}
-				}
-				owner = {
-					add_accepted_culture = south_italian
-					set_country_flag = NO_FRENCHIES
-				}
-			}
+			#random_owned = {
+			#	limit = {
+			#		owner = {
+			#		NOT = { primary_culture = arpitan }
+			#		NOT = { has_country_flag = perpetual_peace_spa }
+			#		owns = 762
+			#		}
+			#	}
+			#	owner = {
+			#		add_accepted_culture = south_italian
+			#		set_country_flag = NO_FRENCHIES
+			#	}
+			#}
 		}
 
 		ai_will_do = {

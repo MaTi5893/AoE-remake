@@ -568,16 +568,6 @@ emigration_chance =
     }
 
     modifier = {
-        factor = -100
-        OR = {
-            state_scope = { is_colonial = yes }
-            NOT = { location = { total_pops = 1000 } }
-            NOT = { location = { controlled_by = owner } }
-			country = { border_policy = closed_borders }
-        }
-    }
-
-    modifier = {
         factor = -0.1
         country = {
             colonial_policy = settlement
