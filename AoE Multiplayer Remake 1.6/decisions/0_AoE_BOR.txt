@@ -338,7 +338,6 @@ political_decisions = {
 				}
 			}
 			NOT = { has_country_modifier = no_more_war }
-			NOT = { has_country_modifier = peasant_turmoil }
 			has_recently_lost_war = no
 		}
 		effect = {

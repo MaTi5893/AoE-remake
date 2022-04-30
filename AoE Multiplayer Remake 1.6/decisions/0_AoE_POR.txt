@@ -12,7 +12,6 @@ political_decisions = {
         }
 
         allow = {
-            has_country_flag = moved_capital_to_brazil
             PBZ = {
                 exists = no
             }
@@ -36,54 +35,6 @@ political_decisions = {
             add_accepted_culture = brazilian
 			add_accepted_culture = afro_brazilian
             prestige = 5
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-    move_capital_to_brazil = {
-        picture = brasil
-        potential = {
-            tag = POR
-            NOT = { has_country_flag = moved_capital_to_brazil }
-            PBZ = {
-				OR = {
-					AND = {
-						vassal_of = POR
-						ai = yes
-					}
-					THIS = { any_owned_province = { is_core = PBZ } }
-				}
-            }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                AND = {
-                    capital_scope = {
-                        NOT = {
-                            controlled_by = THIS
-                        }
-                    }
-                    war_exhaustion = 40
-                    war = yes
-                }
-                AND = {
-                    state_n_government = 1
-                    war = no
-                    ai = no
-                    all_core = {
-                        owned_by = THIS
-                    }
-                }
-            }
-        }
-
-        effect = {
-            inherit = PBZ
-            capital = 2447
-			add_core = 2447
-            set_country_flag = moved_capital_to_brazil
         }
 
         ai_will_do = { factor = 1 }
