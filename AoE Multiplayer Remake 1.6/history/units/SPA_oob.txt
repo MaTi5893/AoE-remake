@@ -324,69 +324,7 @@ army = {
         home = 1457
     }
 }
-army = {
-    name = "Ejército Cristino del Centro"
-    location = 754
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 2567
-    }
 
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = infantry
-        home = 754
-    }
-
-    regiment = {
-        name= "3. Guardia Real"
-        type = infantry
-        home = 753
-    }
-
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 757
-    }
-
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = cuirassier
-        home = 755
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 761
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 756
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 758
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 760
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 759
-    }
-}
 army = {
     name = "Ejército Cristino del Centro"
     location = 388
@@ -450,65 +388,104 @@ army = {
         home = 763
     }
 }
+
+
 army = {
-    name = "Ejército del Norte"
-    location = 387
-
+    name = "Activo Oajaca"
+    location = 2163
     regiment = {
-        name= "4. Brigada de Infantería 'San Jorge'"
+        name= "1.Oajaca y Tlaxcala"
         type = infantry
-        home = 498
+        home = 2177
     }
 
     regiment = {
-        name= "1. Brigada de Artillería"
+        name= "2.Oajaca y Tlaxcala"
         type = infantry
-        home = 476
+        home = 2177
     }
 
     regiment = {
-        name= "5. Brigada de Infantería"
+        name= "3.Oajaca y Tlaxcala"
         type = infantry
-        home = 482
+        home = 2177
     }
-
+	
     regiment = {
-        name= "6. Brigada de Infantería 'La Granja'"
+        name= "1.Division Comonfort"
         type = infantry
-        home = 483
+        home = 2176
     }
 
     regiment = {
-        name= "7. Brigada de Infantería"
-        type = cuirassier
-        home = 390
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 2176
     }
-        regiment = {
-        name= "2. Granaderos del Rey"
-        type = artillery
-        home = 489
+
+}
+
+army = {
+    name = "Ejército del Ciudad Mejico"
+    location = 2164
+    regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2191
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 389
+        name= "2.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2186
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3.Oajaca y Tlaxcala"
+        type = infantry
+        home = 133
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 137
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 2167
+    }
+}
+
+army = {
+    name = "Ejército del Ciudad Mejico"
+    location = 2115
+    regiment = {
+        name= "1.Division Comonfort"
         type = artillery
-        home = 388
+        home = 2267
     }
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "1.Division Comonfort"
         type = artillery
-        home = 393
+        home = 2264
     }
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "1.Division Comonfort"
         type = artillery
-        home = 394
+        home = 2264
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2268
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2271
     }
 }
 

@@ -67,25 +67,25 @@ army = {
     location = 521
     regiment = {
         name= "1. Brigada de Infantaria"
-        type = infantry
+        type = artillery
         home = 521
     }
 
     regiment = {
         name= "2. Brigada de Infantaria"
-        type = infantry
+        type = artillery
         home = 524
     }
 
     regiment = {
         name= "3. Brigada de Infantaria"
-        type = infantry
+        type = artillery
         home = 518
     }
 
     regiment = {
         name= "4. Brigada de Infantaria"
-        type = infantry
+        type = artillery
         home = 520
     }
 
@@ -104,34 +104,69 @@ army = {
 }
 
 army = {
+	name = "2. Exército de Brazil Ocidental"
+	location = 2447
+	regiment = {
+		name= "1. Brigada de Artilharia"
+		type = artillery
+		home = 2447
+	}
+
+	regiment = {
+		name= "2. Brigada de Artilharia"
+		type = artillery
+		home = 2450
+	}
+
+	regiment = {
+		name= "3. Brigada de Artilharia"
+		type = artillery
+		home = 2436
+	}
+
+	regiment = {
+		name= "1. Brigada de Artilharia"
+		type = cuirassier
+		home = 2429
+	}
+}
+
+army = {
+	name = "1.Exército de Brazil Ocidental"
+	location = 2463
+	regiment = {
+		name= "4. Brigada de Infantaria"
+		type = artillery
+		home = 2463
+	}
+
+	regiment = {
+		name= "5. Brigada de Infantaria"
+		type = artillery
+		home = 2457
+	}
+
+}
+
+army = {
     name = "Exército de Africa Ocidental"
-    location = 1999
+    location = 523
 
     regiment = {
         name = "1. Divisão Colonial"
-        type = infantry
+        type = artillery
         home = 525
     }
-}
-
-army = {
-    name = "Exército de Africa Oriental"
-    location = 2059
 
     regiment = {
         name = "2. Divisão Colonial"
-        type = infantry
+        type = artillery
         home = 2134
     }
-}
-
-army = {
-    name = "Exército da Índia"
-    location = 1303
-
+	
     regiment = {
         name = "3. Divisão Colonial"
-        type = infantry
+        type = artillery
         home = 1303
     }
 }
@@ -188,6 +223,57 @@ navy = {
         name= "Maria II"
         type = manowar
     }
+	
+	   ship = {
+        name= "Rainha de Portugal"
+        type = manowar
+    }
+
+    ship = {
+        name= "Dom João VI"
+        type = manowar
+    }
+
+    ship = {
+        name= "Nossa Senhora da Conceição"
+        type = manowar
+    }
+
+    ship = {
+        name= "São Sebastião"
+        type = manowar
+    }
+
+    ship = {
+        name= "Amazônia"
+        type = manowar
+    }
+
+    ship = {
+        name= "Princesa Carlota"
+        type = manowar
+    }
+
+    ship = {
+        name= "Teresa"
+        type = manowar
+    }
+
+    ship = {
+        name= "Príncipe do Brasil"
+        type = manowar
+    }
+
+    ship = {
+        name= "Algarves"
+        type = manowar
+    }
+
+    ship = {
+        name= "Maria II"
+        type = manowar
+    }
+
 
     ship = {
         name= "1o Navios de Transporte"

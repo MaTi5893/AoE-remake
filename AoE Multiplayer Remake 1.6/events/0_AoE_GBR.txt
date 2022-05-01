@@ -67,6 +67,7 @@ country_event = {
         prestige = -25
         set_country_flag = jacobism_prevails
         #government = absolute_monarchy
+		nationalvalue = nv_autocracy
         all_core = {
             add_core = GBJ
             remove_core = THIS
@@ -1783,6 +1784,33 @@ country_event = {
 			target = TKG
 			type = demand_concession_casus_belli
 			months = 12
+		}
+	}
+}
+country_event = {
+    id = 171019
+	title = "Industrialised Society"
+    desc = "Our life rating will go down"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1730
+		primary_culture = english
+		exists = yes
+	}
+	
+	option = {
+		name = "NOOOO"
+		all_core = {
+			limit = {
+				NOT = {
+					is_core = SCO
+				}
+				NOT = {
+					is_core = IRE
+				}
+			}
+			life_rating = -5
 		}
 	}
 }

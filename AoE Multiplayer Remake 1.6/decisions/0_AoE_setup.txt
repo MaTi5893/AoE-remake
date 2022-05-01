@@ -215,6 +215,16 @@ political_decisions = {
 					}
 				}
 			}
+			ENL = {
+				all_core = {
+					limit = {
+						NOT = {
+							is_core = IRE
+						}
+					}
+					life_rating = 5
+				}
+			}
 		}
 	}
 

@@ -3,7 +3,7 @@
 warship_convoys = {
 	limit = { battleship_column_doctrine = 1 }
     chance = {
-        base = 0
+        base = 1
         modifier = {
             factor = 5
 			OR = {

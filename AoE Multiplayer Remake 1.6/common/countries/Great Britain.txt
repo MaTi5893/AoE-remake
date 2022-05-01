@@ -49,6 +49,22 @@ party = {
 }
 
 party = {
+    name = "Junta Whigs"
+    start_date = 1600.1.1
+    end_date = 1721.1.1
+
+    ideology = liberal
+
+    social_policy = colonial_spending_policy
+    economic_policy = state_capitalism
+    trade_policy = protectionism
+    religious_policy = pluralism
+    citizenship_policy = full_citizenship
+    war_policy = jingoism
+}
+
+
+party = {
     name = "Reformists"
     start_date = 1600.1.1
     end_date = 2000.1.1

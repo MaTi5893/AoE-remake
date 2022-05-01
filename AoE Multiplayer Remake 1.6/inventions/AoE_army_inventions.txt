@@ -928,7 +928,7 @@ hussar_activation = {
 fine_breed = {
     limit = { military_plans = 1 }
     chance = {
-        base = 2
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -949,7 +949,7 @@ fine_breed = {
 cav_upgrade_i = {
     limit = { military_plans = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -995,7 +995,7 @@ horse_messenging_coordination = {
 cav_upgrade_ii = {
     limit = { military_statistics = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -1058,7 +1058,7 @@ logistical_calculations = {
 cav_upgrade_iii = {
     limit = { military_logistics = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -1104,7 +1104,7 @@ replenishment_transport_organisation = {
 cav_upgrade_iv = {
     limit = { military_directionism = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -1129,7 +1129,7 @@ cav_upgrade_iv = {
 mounted_armnament_i = {
     limit = { aeronautics = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
@@ -1154,7 +1154,7 @@ mounted_armnament_i = {
 mounted_armnament_ii = {
     limit = { military_science_7 = 1 }
     chance = {
-        base = 5
+        base = 100
     }
     effect = {
         cuirassier = {
