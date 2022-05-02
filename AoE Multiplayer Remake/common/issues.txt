@@ -878,13 +878,6 @@ social_reforms = {
 			culture_tech_research_bonus = -0.15
             mobilisation_size = 0.025
 
-
-            allow = {
-				has_country_flag = skill_and_merit_allowed
-				#NOT = {	work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = { health_care = good_health_care } #v infl beurocracy
-            }
         }
     }
 
@@ -938,12 +931,6 @@ social_reforms = {
 			navy_tech_research_bonus = -0.1
 			army_tech_research_bonus = -0.1
 			
-            allow = {
-                has_country_flag = skill_and_merit_allowed
-				#NOT = { work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = {	pensions = good_pensions } #v infl army
-            }
         }
     }
 
