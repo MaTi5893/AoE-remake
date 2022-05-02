@@ -75,7 +75,7 @@ monthly_payment_made = {
 total_reform = {
     education_efficiency_modifier = 0.75
     administrative_efficiency_modifier = 0.3
-    land_organisation = 0.05
+    land_organisation = 0.01
     land_unit_start_experience = 1
     mobilisation_size = 0.01
     icon = 3
@@ -125,7 +125,7 @@ open_homesteading = {
 
 boer_commandos_modifier = {
     org_regain = 0.1
-    land_organisation = 0.1
+    land_organisation = 0.02
     mobilisation_economy_impact = -0.25
     land_unit_start_experience = 5
     supply_consumption = -0.05
@@ -371,16 +371,16 @@ divided_society = {
 }
 
 corrupt_army = {
-    land_organisation = -0.05
+    land_organisation = -0.01
     goods_demand = -0.3
-    naval_organisation = -0.05
+    naval_organisation = -0.01
     org_regain = -0.05
     supply_consumption = 0.1
     icon = 18
 }
 
 fanatic_army = {
-    land_organisation = 0.15
+    land_organisation = 0.03
     war_exhaustion = -0.05
     org_regain = 0.2
     land_unit_start_experience = 5
@@ -618,7 +618,7 @@ francia_utopia = {
     max_loan_modifier = -1
     research_points_modifier = -0.6
     supply_consumption = -0.2
-    land_organisation = -0.2
+    land_organisation = -0.04
     diplomatic_points_modifier = -2.0
     political_reform_desire = -1.0
     global_immigrant_attract = -4.0
@@ -671,7 +671,7 @@ north_coalition = {
 
 the_big_army = {
     mobilisation_size = 0.04
-    land_organisation = 0.2
+    land_organisation = 0.04
     supply_consumption = -0.2
     org_regain = 0.2
     icon = 1
@@ -713,8 +713,8 @@ bad_badboy = {
     non_accepted_pop_militancy_modifier = 0.4
     political_reform_desire = 0.8
     org_regain = -0.1
-    land_organisation = -0.1
-    naval_organisation = -0.1
+    land_organisation = -0.02
+    naval_organisation = -0.02
     prestige = -0.06
     war_exhaustion = 0.9
     research_points_modifier = -0.2
@@ -819,7 +819,7 @@ bazaari_strike = {
 
 submarine_warfare = {
     leadership_modifier = 0.1
-    naval_organisation = 0.15
+    naval_organisation = 0.03
     navy_tech_research_bonus = 0.1
     icon = 17
 }
@@ -827,7 +827,7 @@ submarine_warfare = {
 exemplary_troops = {
     org_regain = 0.05
     leadership_modifier = 0.05
-    land_organisation = 0.05
+    land_organisation = 0.01
     icon = 15
 }
 
@@ -1074,7 +1074,7 @@ loyal_askaris = {
 
 muhammad_alis_reforms = {
     org_regain = 0.2
-    land_organisation = 0.2
+    land_organisation = 0.04
     mobilisation_size = 0.06
     war_exhaustion = -0.2
     tax_efficiency = 0.05
@@ -1200,8 +1200,6 @@ beer_hall_putsch = {
 ##### Civilization & Gunboats #####
 local_opium_habit = {
     local_RGO_throughput = -0.15
-    land_organisation = -0.005
-    naval_organisation = -0.005
     pop_consciousness_modifier = -0.05
     icon = 20
 }
@@ -1386,7 +1384,7 @@ the_slavery_debate = {
 the_bonnie_blue_flag = {
     org_regain = 0.1
     leadership = 2
-    land_organisation = 0.1
+    land_organisation = 0.02
     land_unit_start_experience = 5
     mobilisation_economy_impact = -0.3
     mobilisation_size = 0.05
@@ -1561,7 +1559,7 @@ land_reform_pru = {
 }
 prussian_general_staff = {
     org_regain = 0.25
-    land_organisation = 0.15
+    land_organisation = 0.03
     mobilisation_economy_impact = -0.25
     land_unit_start_experience = 10
     supply_consumption = -0.05
@@ -1876,7 +1874,7 @@ dar_al_funun = {
 fight_the_power = {
     global_pop_militancy_modifier = 0.01
     global_pop_consciousness_modifier = 0.03
-    land_organisation = -0.2
+    land_organisation = -0.04
     mobilisation_size = -0.02
     prestige = -0.01
     icon = 16
@@ -2143,7 +2141,7 @@ minor_flood = {
 }
 
 taiping_draft = {
-    land_organisation = -0.1
+    land_organisation = -0.02
     org_regain = -0.1
     mobilisation_size = 0.05
     prestige = -0.02
@@ -2153,7 +2151,7 @@ taiping_draft = {
 ### Panjab ###
 shastar_vidya = {
     org_regain = 0.1
-    land_organisation = 0.1
+    land_organisation = 0.02
     land_unit_start_experience = 5
     mobilisation_size = 0.03
     icon = 11
@@ -2163,8 +2161,8 @@ shastar_vidya = {
 sakoku = {
     prestige = 0.01
     research_points_modifier = -0.05
-    land_organisation = -0.05
-    naval_organisation = -0.1
+    land_organisation = -0.01
+    naval_organisation = -0.02
     global_pop_militancy_modifier = -0.05
     war_exhaustion = -0.1
     cb_generation_speed_modifier = -1.25
@@ -2203,8 +2201,8 @@ fukoku_kyohei = {
 line_of_advantage = {
     org_regain = 0.25
     leadership_modifier = 0.2
-    land_organisation = 0.1
-    naval_organisation = 0.1
+    land_organisation = 0.02
+    naval_organisation = 0.02
     cb_generation_speed_modifier = 0.2
     icon = 15
 }
@@ -2266,7 +2264,7 @@ exploiting_the_land = {
 
 tewodros_reforms = {
     mobilisation_size = 0.02
-    land_organisation = 0.15
+    land_organisation = 0.03
     supply_consumption = -0.25
     land_unit_start_experience = 10
     org_regain = 0.1
@@ -2277,8 +2275,8 @@ tewodros_reforms = {
 }
 
 disunited_country = {
-    land_organisation = -0.2
-    naval_organisation = -0.2
+    land_organisation = -0.04
+    naval_organisation = -0.04
     supply_consumption = -0.3
     research_points_modifier = -0.15
     prestige = -0.7
@@ -2299,7 +2297,7 @@ tewodros_ii = {
 
 yohannes_iv = {
     land_unit_start_experience = 10
-    land_organisation = 0.05
+    land_organisation = 0.01
     org_regain = 0.1
     research_points = 0.1
     global_pop_militancy_modifier = -0.01
@@ -2470,7 +2468,7 @@ king_cotton = {
 ottoman_oppression = {
     prestige = -0.15
     mobilisation_size = -0.02
-    land_organisation = -0.05
+    land_organisation = -0.01
     global_assimilation_rate = -0.2
     tax_efficiency = 0.15
     #non_accepted_pop_militancy_modifier = 0.05
@@ -2635,13 +2633,13 @@ landed_gentleman = {
 
 military_man = {
     org_regain = 0.1
-    land_organisation = 0.05
+    land_organisation = 0.01
     icon = 17
 }
 
 lord_admiral = {
     org_regain = 0.1
-    naval_organisation = 0.05
+    naval_organisation = 0.01
     icon = 17
 }
 
@@ -2753,7 +2751,7 @@ louis_napoleon_iii = {
     ruling_party_support = 1.0
     core_pop_militancy_modifier = -0.05
     core_pop_consciousness_modifier = -0.05
-    land_organisation = -0.05
+    land_organisation = -0.01
     icon = 17
 }
 
@@ -2844,16 +2842,16 @@ party_scandal_evidence = {
 coup_risk = {
     core_pop_militancy_modifier = 0.05
     leadership_modifier = -0.2
-    land_organisation = -0.1
-    naval_organisation = -0.1
+    land_organisation = -0.02
+    naval_organisation = -0.02
     icon = 16
 }
 
 military_strife = {
     core_pop_militancy_modifier = 0.05
     leadership_modifier = -0.5
-    land_organisation = -0.25
-    naval_organisation = -0.25
+    land_organisation = -0.05
+    naval_organisation = -0.05
     icon = 16
 }
 
@@ -2872,8 +2870,8 @@ french_cultural_unity = {
 emergency_tax_measures1 = {
     tax_efficiency = 0.05
     ruling_party_support = -0.50
-    land_organisation = -0.1
-    naval_organisation = -0.1
+    land_organisation = -0.02
+    naval_organisation = -0.02
     global_pop_consciousness_modifier = 0.05
     global_pop_militancy_modifier = 0.05
     icon = 10
@@ -2882,8 +2880,8 @@ emergency_tax_measures1 = {
 emergency_tax_measures2 = {
     tax_efficiency = 0.10
     ruling_party_support = -0.75
-    land_organisation = -0.2
-    naval_organisation = -0.2
+    land_organisation = -0.04
+    naval_organisation = -0.04
     global_pop_consciousness_modifier = 0.10
     global_pop_militancy_modifier = 0.10
     icon = 10
@@ -4082,13 +4080,13 @@ qing_ai_boost = {
 
 qing_substate_boost = {
     org_regain = 0.15
-    land_organisation = 0.1
+    land_organisation = 0.02
     icon = 15
 }
 
 ever_victorious_army = {
     org_regain = 0.2
-    land_organisation = 0.1
+    land_organisation = 0.02
     land_unit_start_experience = 5
     supply_consumption = -0.1
     war_exhaustion = -5
@@ -4098,15 +4096,15 @@ ever_victorious_army = {
 the_xiang_army = {
     war_exhaustion = -5
     org_regain = 0.1
-    land_organisation = 0.05
+    land_organisation = 0.01
     supply_consumption = -0.1
     global_pop_militancy_modifier = -0.05
     icon = 15
 }
 
 the_eight_banners = {
-    land_organisation = -0.05
-    naval_organisation = -0.25
+    land_organisation = -0.01
+    naval_organisation = -0.05
     administrative_efficiency_modifier = -0.05
     min_military_spending = 0.25
     pension_level = 0.05
@@ -4124,7 +4122,7 @@ the_eight_banners = {
 }
 
 taiping_draft = {
-    land_organisation = -0.1
+    land_organisation = -0.02
     org_regain = -0.1
     mobilisation_size = 0.05
     prestige = -0.02
@@ -4188,8 +4186,8 @@ yuan_shikai = {
     prestige = 0.01
     ruling_party_support = 0.25
     supply_consumption = -0.15
-    land_organisation = 0.05
-    naval_organisation = 0.05
+    land_organisation = 0.01
+    naval_organisation = 0.01
     org_regain = 0.05
     administrative_efficiency_modifier = 0.05
     icon = 17
@@ -4208,7 +4206,7 @@ rama_v = {
     global_pop_consciousness_modifier = -0.05
     global_pop_militancy_modifier = -0.1
     diplomatic_points_modifier = 0.1
-    land_organisation = 0.1
+    land_organisation = 0.02
     supply_consumption = -0.05
     icon = 5
 }
@@ -4238,7 +4236,7 @@ eic_balance2_ai = {
 }
 
 sepoy_mutiny = {
-    land_organisation = -0.75
+    land_organisation = -0.15
     org_regain = -0.15
     non_accepted_pop_consciousness_modifier = 0.03
     non_accepted_pop_militancy_modifier = 0.01
@@ -4266,7 +4264,7 @@ pax_britannica = {
     prestige = 0.01
     navy_tech_research_bonus = 0.05
     naval_unit_start_experience = 5
-    naval_organisation = 0.05
+    naval_organisation = 0.01
     diplomatic_points_modifier = 0.5
     badboy = -0.05
     influence_modifier = 0.05
@@ -4300,7 +4298,7 @@ white_rajah = {
 
 military_aid = {
     org_regain = 0.1
-    land_organisation = 0.05
+    land_organisation = 0.01
     land_defense_modifier = 0.05
     supply_consumption = -0.05
     icon = 15
@@ -4316,7 +4314,7 @@ foreign_weapons_imported = {
 ###Sweden###
 swedish_caroleans = {
     org_regain = 0.25
-    land_organisation = 0.15
+    land_organisation = 0.03
     supply_consumption = -0.05
     icon = 15
 }
@@ -4425,7 +4423,7 @@ josephism = {
 }
 theresian_military_academy = {
     army_tech_research_bonus = 0.05
-    land_organisation = 0.05
+    land_organisation = 0.01
     supply_consumption = 0.1
     org_regain = 0.05
     land_unit_start_experience = 5
@@ -4489,7 +4487,7 @@ british_general_staff = {
     icon = 15
 }
 fief_and_drum = {
-    land_organisation = 0.10
+    land_organisation = 0.02
     supply_consumption = -0.1
     icon = 15
 }
@@ -4818,7 +4816,7 @@ intrigue_game = {
 }
 corruption_1 = {
     factory_cost = 0.1
-    land_organisation = -0.1
+    land_organisation = -0.02
     global_pop_militancy_modifier = 0.01
     min_social_spending = 0.1
     research_points_modifier = -0.1
@@ -4826,7 +4824,7 @@ corruption_1 = {
 }
 corruption_2 = {
     factory_cost = 0.3
-    land_organisation = -0.2
+    land_organisation = -0.04
     global_pop_militancy_modifier = 0.05
     min_social_spending = 0.25
     research_points_modifier = -0.25
@@ -4834,7 +4832,7 @@ corruption_2 = {
 }
 corruption_3 = {
     factory_cost = 0.5
-    land_organisation = -0.3
+    land_organisation = -0.06
     global_pop_militancy_modifier = 0.1
     min_social_spending = 0.5
     research_points_modifier = -0.5
@@ -4974,7 +4972,7 @@ lower_class_unrest_1 = {
 
 army_unrest_5 = {
     tax_efficiency = -0.025
-    land_organisation = -0.4
+    land_organisation = -0.08
     leadership_modifier = -1.00
     supply_consumption = 1.00
     mobilisation_size = -0.05
@@ -4983,7 +4981,7 @@ army_unrest_5 = {
 
 army_unrest_4 = {
     tax_efficiency = -0.020
-    land_organisation = -0.3
+    land_organisation = -0.06
     leadership_modifier = -0.80
     supply_consumption = 0.80
     mobilisation_size = -0.04
@@ -4992,7 +4990,7 @@ army_unrest_4 = {
 
 army_unrest_3 = {
     tax_efficiency = -0.015
-    land_organisation = -0.2
+    land_organisation = -0.04
     leadership_modifier = -0.60
     supply_consumption = 0.60
     mobilisation_size = -0.03
@@ -5001,7 +4999,7 @@ army_unrest_3 = {
 
 army_unrest_2 = {
     tax_efficiency = -0.010
-    land_organisation = -0.1
+    land_organisation = -0.02
     leadership_modifier = -0.40
     supply_consumption = 0.40
     mobilisation_size = -0.02
@@ -5010,7 +5008,7 @@ army_unrest_2 = {
 
 army_unrest_1 = {
     tax_efficiency = -0.005
-    land_organisation = -0.05
+    land_organisation = -0.01
     leadership_modifier = -0.20
     supply_consumption = 0.20
     mobilisation_size = -0.01
@@ -5101,7 +5099,7 @@ berlin_academy_of_sciences = {
 retablissement = {
     education_efficiency_modifier = 0.15
     administrative_efficiency_modifier = 0.15
-    land_organisation = 0.05
+    land_organisation = 0.01
     land_unit_start_experience = 1
     mobilisation_size = 0.01
     icon = 3
@@ -5141,7 +5139,7 @@ janisseries_angry = {
     max_military_spending = 0.10
     army_tech_research_bonus = -0.05
     ruling_party_support = -0.05
-    land_organisation = -0.05
+    land_organisation = -0.01
     icon = 18
 }
 janisseries_furious = {
@@ -5149,7 +5147,7 @@ janisseries_furious = {
     max_military_spending = 0.10
     army_tech_research_bonus = -0.15
     ruling_party_support = -0.05
-    land_organisation = -0.1
+    land_organisation = -0.02
     icon = 18
 }
 imperial_navy_engieering_school = {
@@ -5158,13 +5156,13 @@ imperial_navy_engieering_school = {
     icon = 15
 }
 prussian_military_advisors = {
-    land_organisation = 0.05
+    land_organisation = 0.01
     army_tech_research_bonus = 0.25
     land_unit_start_experience = 5
     icon = 17
 }
 nizam_i_djedid = {
-    land_organisation = 0.1
+    land_organisation = 0.02
     supply_consumption = -0.1
     org_regain = 0.2
     land_unit_start_experience = 5
@@ -5184,7 +5182,7 @@ szlachta_war_taxes = {
     rgo_output = -0.05
     tax_efficiency = -0.025
     loan_interest = 0.15
-    land_organisation = 0.05
+    land_organisation = 0.01
     icon = 18
 }
 policy_approved = {
@@ -5223,7 +5221,7 @@ szlachta_opposition = {
     rgo_output = -0.15
     tax_efficiency = -0.05
     loan_interest = 0.5
-    land_organisation = -0.05
+    land_organisation = -0.01
     pop_militancy_modifier = 0.004
     non_accepted_pop_consciousness_modifier = 0.2
     ruling_party_support = -0.05
@@ -5317,7 +5315,6 @@ french_military_advisors = {
 }
 for_god_and_people = {
     prestige = 0.01
-    army_organisation = 0.05
     diplomatic_points_modifier = 0.5
     influence_modifier = 0.05
     min_military_spending = 0.25
@@ -5329,7 +5326,6 @@ reformed_scholarship = {
 }
 ####Unciv reform system####
 foreign_weapons = {
-    army_organisation = 0.1
     mobilisation_economy_impact = -0.25
 }
 western_values = {
@@ -5338,7 +5334,6 @@ western_values = {
     education_efficiency_modifier = 0.1
 }
 reformed_army = {
-    army_organisation = 0.1
     mobilisation_economy_impact = -0.25
     supply_consumption = -0.15
     mobilisation_size = 0.05
@@ -5355,14 +5350,13 @@ reformed_industry = {
 french_naval_school = {
     navy_tech_research_bonus = 0.05
     leadership_modifier = 0.01
-    naval_organisation = 0.10
+    naval_organisation = 0.02
     icon = 17
 }
 ####Netherlands####
 mercantile_society = {
     tariff_efficiency_modifier = 0.25
-    naval_organisation = 0.15
-    army_organisation = -0.15
+    naval_organisation = 0.03
     max_tax = -0.15
     icon = 17
 }
@@ -6041,7 +6035,6 @@ not_dictatorship = {
 decentralized_rule = {
     core_pop_militancy_modifier = 0.04
     org_regain = -0.45
-    army_organisation = -0.035
     admin_efficiency = -0.05
     mobilisation_size = -0.02
     icon = 3
@@ -6197,7 +6190,7 @@ mass_slave_revolt = {
     war_exhaustion = -0.05
     land_defense_modifier = 0.5
     land_attack_modifier = 0.5
-    land_organisation = 0.5
+    land_organisation = 0.1
     icon = 17
 }
 
@@ -6253,7 +6246,7 @@ mandate_of_heaven_2 = {
     administrative_efficiency_modifier = -0.30
     education_efficiency_modifier = -0.05
     social_reform_desire = 0.1
-    land_organisation = -0.05
+    land_organisation = -0.01
     global_pop_consciousness_modifier = 0.01
     global_pop_militancy_modifier = 0.01
     diplomatic_points_modifier = -0.5
@@ -6272,7 +6265,7 @@ mandate_of_heaven_3 = {
     leadership_modifier = -0.1
     administrative_efficiency_modifier = -0.60
     social_reform_desire = 0.2
-    land_organisation = -0.10
+    land_organisation = -0.02
     global_population_growth = -0.001
     global_pop_consciousness_modifier = 0.02
     global_pop_militancy_modifier = 0.02
@@ -6299,7 +6292,7 @@ blue_turbans = {
     tax_efficiency = 0.10
     mobilisation_size = 0.10
     org_regain = 0.10
-    land_organisation = -0.20
+    land_organisation = -0.04
     war_exhaustion = -0.5
     supply_consumption = -0.80
     land_unit_start_experience = -10
@@ -6312,7 +6305,7 @@ manchu_call_to_arms = {
     tax_efficiency = 0.10
     mobilisation_size = 0.25
     #org_regain = 0.10
-    #land_organisation = -0.20
+    #land_organisation = -0.04
     war_exhaustion = -0.25
     supply_consumption = -0.80
     icon = 7
@@ -6352,7 +6345,7 @@ gentry_pm = {
 }
 
 army_pm = {
-    land_organisation = 0.05
+    land_organisation = 0.01
     leadership_modifier = 0.10
     icon = 4
 }
@@ -6406,7 +6399,7 @@ order_of_the_dragon = {
     mobilisation_economy_impact = -0.35
     land_unit_start_experience = 5
     org_regain = 0.20
-    land_organisation = 0.15
+    land_organisation = 0.03
     supply_consumption = -0.15
     prestige = 0.05
     icon = 15
@@ -6466,7 +6459,7 @@ levee_en_masse_modifier = {
     mobilisation_size = 0.03
     war_exhaustion = -0.10
     org_regain = 0.05
-    land_organisation = -0.10
+    land_organisation = -0.02
     supply_consumption = -0.20
     land_unit_start_experience = -5
     icon = 18
@@ -6604,8 +6597,8 @@ piracy_tolerant = {
 
 pirate_republic = {
     global_immigrant_attract = 0.040
-    land_organisation = 0.2
-    naval_organisation = 0.4
+    land_organisation = 0.04
+    naval_organisation = 0.08
     max_military_spending = -0.5
     tax_efficiency = -0.4
     diplomatic_points_modifier = -0.3
@@ -6684,7 +6677,7 @@ nader_shah = {
     icon = 13
 }
 nader_shah_reforms = {
-	army_organisation = 0.2
+	land_organisation = 0.04
 	army_tech_research_bonus = 0.15
 	icon = 15
 }
@@ -6697,7 +6690,6 @@ mughal_treasury = {
 	icon = 9
 }
 quajar_army_reforms = {
-    army_organisation = 0.05
     org_regain = 0.15
     supply_consumption = 0.05
     mobilisation_economy_impact = -0.025
@@ -6724,7 +6716,6 @@ leopold_ii = {
     icon = 13
 }
 napoleon_bonaparte = {
-    army_organisation = 0.15
     org_regain = 0.5
     supply_consumption = 0.35
     core_pop_consciousness_modifier = -0.04
@@ -6735,7 +6726,6 @@ napoleon_bonaparte = {
 }
 ###Savoy###
 charles_emmanuel = {
-    army_organisation = 0.05
     org_regain = 0.15
     cb_generation_speed_modifier = -0.1
     badboy = -0.03
@@ -6747,7 +6737,6 @@ savoyard_law_code = {
     icon = 5
 }
 fredrican_army_model = {
-    army_organisation = 0.25
     org_regain = 0.1
     supply_consumption = -0.15
     icon = 15
@@ -6774,7 +6763,7 @@ janisseries_influence = {
     min_military_spending = 0.1
     army_tech_research_bonus = -0.15
     #supply_consumption = 0.1
-    land_organisation = 0.05
+    land_organisation = 0.01
     influence_modifier = -0.4
     icon = 16
 }
@@ -6804,8 +6793,8 @@ kinda_bad_badboy = {
     non_accepted_pop_consciousness_modifier = 0.8
     non_accepted_pop_militancy_modifier = 0.4
     org_regain = -0.2
-    land_organisation = -0.2
-    naval_organisation = -0.2
+    land_organisation = -0.04
+    naval_organisation = -0.04
     factory_throughput = -0.5
     RGO_throughput = -0.5
     prestige = -0.2
@@ -6827,8 +6816,8 @@ bad_badboy = {
     non_accepted_pop_consciousness_modifier = 0.8
     non_accepted_pop_militancy_modifier = 0.4
     org_regain = -0.2
-    land_organisation = -0.2
-    naval_organisation = -0.2
+    land_organisation = -0.04
+    naval_organisation = -0.04
     factory_throughput = -0.5
     RGO_throughput = -0.5
     prestige = -0.2
@@ -6854,7 +6843,7 @@ streltsi_rebellion = {
 army_with_a_state1 = {
     mobilization_economy_impact = -0.10
     org_regain = 0.25
-    land_organisation = 0.2
+    land_organisation = 0.04
     supply_consumption = -0.15
     mobilisation_size = 0.01
     icon = 15
@@ -6862,14 +6851,14 @@ army_with_a_state1 = {
 army_with_a_state2 = {
     mobilization_economy_impact = -0.05
     org_regain = 0.15
-    land_organisation = 0.1
+    land_organisation = 0.02
     supply_consumption = -0.1
     mobilisation_size = 0.005
     icon = 15
 }
 army_with_a_state3 = {
     org_regain = 0.1
-    land_organisation = 0.05
+    land_organisation = 0.01
     supply_consumption = -0.1
     icon = 15
 }
@@ -7012,7 +7001,7 @@ sugar_trade = {
 }
 army_works = {
 	org_regain = -0.2
-	land_organisation = -0.2
+	land_organisation = -0.04
 	mobilisation_size = -0.01
 	icon = 18
 }
@@ -7046,7 +7035,7 @@ reign_of_terror =  {
 }
 mob_army = {
 	org_regain = -0.2
-	land_organisation = -0.1
+	land_organisation = -0.02
 	icon = 13
 }
 enemies_of_revolution = {

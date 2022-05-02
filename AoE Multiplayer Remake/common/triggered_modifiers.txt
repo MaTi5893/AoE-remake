@@ -28,8 +28,19 @@ ai_revolutionary_buff = {
 	global_pop_militancy_modifier = -0.4
 	tax_efficiency = 0.2
 	supply_consumption = -0.2
-	land_organisation = 0.2
+	land_organisation = 0.04
 	land_unit_start_experience = 0.25
+}
+
+org_bug_fix = { #fixes the issue with reloading saves causing org to be reset
+	trigger = {
+		OR = {
+			ai = no
+			ai = yes
+		}
+	}
+	land_organisation = -0.76
+	naval_organisation = -0.76
 }
 dreams_of_liberty = {
 	trigger = {
@@ -392,7 +403,7 @@ save_the_nation0.5 = {
 
     suppression_points_modifier = 0.05
 
-    land_organisation = 0.0125
+    land_organisation = 0.0025
     mobilisation_size = 0.005
     supply_consumption = -0.025
     icon = 9
@@ -406,7 +417,7 @@ save_the_nation1 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.025
+    land_organisation = 0.005
     mobilisation_size = 0.01
     supply_consumption = -0.05
     icon = 9
@@ -420,7 +431,7 @@ save_the_nation1.5 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.05
+    land_organisation = 0.01
     mobilisation_size = 0.015
     supply_consumption = -0.1
     mobilization_impact = 0.125
@@ -436,7 +447,7 @@ save_the_nation2 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.075
+    land_organisation = 0.015
     mobilisation_size = 0.02
     supply_consumption = -0.15
     mobilization_impact = 0.25
@@ -452,7 +463,7 @@ save_the_nation2.5 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.0875
+    land_organisation = 0.0175
     mobilisation_size = 0.025
     supply_consumption = -0.175
     mobilization_impact = 0.375
@@ -468,7 +479,7 @@ save_the_nation3 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.1
+    land_organisation = 0.02
     mobilisation_size = 0.03
     supply_consumption = -0.20
     mobilization_impact = 0.5
@@ -484,7 +495,7 @@ save_the_nation3.5 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.15
+    land_organisation = 0.03
     mobilisation_size = 0.035
     supply_consumption = -0.25
     mobilization_impact = 0.75
@@ -500,7 +511,7 @@ save_the_nation4 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.2
+    land_organisation = 0.04
     mobilisation_size = 0.04
     supply_consumption = -0.30
     mobilization_impact = 1
@@ -516,7 +527,7 @@ save_the_nation4.5 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.225
+    land_organisation = 0.045
     land_unit_start_experience = 2.5
     mobilisation_size = 0.045
     supply_consumption = -0.30
@@ -532,7 +543,7 @@ save_the_nation5 = {
 
     suppression_points_modifier = 0.10
 
-    land_organisation = 0.25
+    land_organisation = 0.05
     land_unit_start_experience = 5
     mobilisation_size = 0.05
     supply_consumption = -0.30

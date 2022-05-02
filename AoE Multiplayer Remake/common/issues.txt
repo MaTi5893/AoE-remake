@@ -848,14 +848,14 @@ social_reforms = {
         no_pensions = { #irrelevant
         }
         trinket_pensions = { #marginally relevant
-            land_organisation = 0.05
+            land_organisation = 0.01
             leadership_modifier = 0.05
             supply_consumption = 0.10
             org_regain = 0.05
             mobilisation_size = 0.01
         }
         low_pensions = { #slightly influential
-            land_organisation = 0.10
+            land_organisation = 0.02
             leadership_modifier = 0.10
             supply_consumption = 0.20
             org_regain = 0.10
@@ -863,7 +863,7 @@ social_reforms = {
             mobilisation_size = 0.015
         }
         acceptable_pensions = { #influential
-            land_organisation = 0.15
+            land_organisation = 0.03
             leadership_modifier = 0.30
             supply_consumption = 0.45
             org_regain = 0.15
@@ -871,7 +871,7 @@ social_reforms = {
             mobilisation_size = 0.02
         }
         good_pensions = { #very influential
-            land_organisation = 0.20
+            land_organisation = 0.04
             leadership_modifier = 0.40
             supply_consumption = 0.60
             org_regain = 0.20
@@ -1515,7 +1515,7 @@ military_reforms = {
         yes_foreign_training = {
             technology_cost = 8000 #was 8000
             #unit stats improve
-            land_organisation = 0.1
+            land_organisation = 0.02
             civilization_progress_modifier = 0.05
             research_points_on_conquer = 0.05 #0.25
 
@@ -1543,7 +1543,7 @@ military_reforms = {
         }
         foreign_training_two = {
             technology_cost = 8000
-            land_organisation = 0.15
+            land_organisation = 0.03
             civilization_progress_modifier = 0.10
             research_points_on_conquer = 0.10
 			allow = {
