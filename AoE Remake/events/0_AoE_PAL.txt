@@ -1,0 +1,36 @@
+country_event = {
+	id = 171400
+	title = "Devestation Of The Left Bank"
+	desc = "EVTDESC171400"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Oh the misery!"
+		any_pop = {
+			consciousness = 2
+		}
+		all_core = {
+			life_rating = -2
+		}
+	}
+}
+country_event = {
+	id = 171401
+	title = "The Wittlesbach Union"
+	desc = "EVTDESC171401"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our Family will be a forced to be reckoned with."
+		BAV = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		inherit = BAV
+		relation = {
+			who = AUS
+			value = -50
+		}
+	}
+}

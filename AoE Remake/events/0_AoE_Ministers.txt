@@ -1,0 +1,3055 @@
+country_event = {
+    id = 170217
+	title = "$COUNTRY_ADJ$ Lead Minister"
+    desc = ""
+	picture = ministers
+	is_triggered_only = yes
+	
+	option = {
+		name = "A Clergyman"
+		nationalvalue = pm_clergyman
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = no_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+					wage_reform = good_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		clr_country_flag = choosing_minister
+	}
+	
+	option = {
+		name = "A Reformist"
+		nationalvalue = pm_reformists
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = good_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = no_subsidies
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		clr_country_flag = choosing_minister
+	}
+	
+	option = {
+		name = "A Nobleman"
+		nationalvalue = pm_nobleman
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = trinket_safety
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = no_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = low_safety
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = trinket_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = acceptable_safety
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = low_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = good_safety
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = acceptable_safety
+			}
+		}
+		clr_country_flag = choosing_minister
+	}
+	
+	option = {
+		name = "A Gentry"
+		nationalvalue = pm_gentry
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = eight_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = no_work_hour_limit
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		clr_country_flag = choosing_minister
+	}
+	
+	option = {
+		name = "A Militarist"
+		nationalvalue = pm_militarist
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+					has_country_flag = skill_and_merit_allowed
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = good_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+					NOT = { centralization = legislative_parliment }
+					NOT = { centralization = national_parliment }
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		clr_country_flag = choosing_minister
+	}
+}
+
+country_event = {
+    id = 170218
+	title = "$COUNTRY_ADJ$ Lead Minister"
+    desc = ""
+	picture = ministers
+	
+	trigger = {
+		exists = yes
+		trade_unions = all_trade_unions
+		NOT = { has_country_flag = minister_elect_evt_1 }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "Make Townes Proud"
+		set_country_flag = minister_elect_evt_1
+		random_owned = { #Traditionalist Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = conservative
+						value = 0.45
+					}
+					NOT = {
+						upper_house = {
+							ideology = liberal
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					25 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					25 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									nationalvalue = pm_clergyman
+									OR = {
+										centralization = legislative_parliment
+										centralization = national_parliment
+									}
+								}
+							}
+							owner = {
+								set_country_flag = 2_terms_limit
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					15 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									nationalvalue = pm_reformists
+									OR = {
+										centralization = legislative_parliment
+										centralization = national_parliment
+									}
+								}
+							}
+							owner = {
+								set_country_flag = 2_terms_limit
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					15 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									nationalvalue = pm_gentry
+									OR = {
+										centralization = legislative_parliment
+										centralization = national_parliment
+									}
+								}
+							}
+							owner = {
+								set_country_flag = 2_terms_limit
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Parlamentarian Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = liberal
+						value = 0.45
+					}
+					NOT = {
+						upper_house = {
+							ideology = conservative
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					15 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					15 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					25 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					25 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Parlamentarian & Trad Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = liberal
+						value = 0.45
+					}
+					upper_house = {
+						ideology = conservative
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					20 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					20 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					20 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Absolutist
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = reactionary
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					34 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					33 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					33 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Jacobin Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = communist
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					34 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					33 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					33 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { # NO Majority
+			limit = {
+				owner = {
+					NOT = {
+						upper_house = {
+							ideology = liberal
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = conservative
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = communist
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = reactionary
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					20 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					20 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					20 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = 170219
+	title = "$COUNTRY_ADJ$ Lead Minister"
+    desc = ""
+	picture = ministers
+	
+	trigger = {
+		exists = yes
+		trade_unions = all_trade_unions
+		has_country_flag = minister_elect_evt_1
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "Make Townes Proud"
+		clr_country_flag = minister_elect_evt_1
+		random_owned = { #Traditionalist Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = conservative
+						value = 0.45
+					}
+					NOT = {
+						upper_house = {
+							ideology = liberal
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					25 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					25 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					15 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					15 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Parlamentarian Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = liberal
+						value = 0.45
+					}
+					NOT = {
+						upper_house = {
+							ideology = conservative
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					15 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					15 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					25 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					25 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Parlamentarian & Trad Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = liberal
+						value = 0.45
+					}
+					upper_house = {
+						ideology = conservative
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					20 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					20 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					20 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Absolutist
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = reactionary
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					34 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					33 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					33 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { #Jacobin Majority
+			limit = {
+				owner = {
+					upper_house = {
+						ideology = communist
+						value = 0.45
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					34 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+									has_country_flag = 2_terms_limit
+									has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					33 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					33 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned = { # NO Majority
+			limit = {
+				owner = {
+					NOT = {
+						upper_house = {
+							ideology = liberal
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = conservative
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = communist
+							value = 0.45
+						}
+					}
+					NOT = {
+						upper_house = {
+							ideology = reactionary
+							value = 0.45
+						}
+					}
+				}
+			}
+			owner = {
+				random_list = {
+					20 = { #Noblemen
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_nobleman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_nobleman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_nobleman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_nobleman_dismissed
+									}
+									OR = { nationalvalue = pm_nobleman AND = { nationalvalue = pm_no_minister has_country_flag = pm_nobleman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_nobleman_dismissed
+							}
+						}
+					}
+					20 = { #Clergyman
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_clergyman_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_clergyman
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_clergyman
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_clergyman_dismissed
+									}
+									OR = { nationalvalue = pm_clergyman AND = { nationalvalue = pm_no_minister has_country_flag = pm_clergyman_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_reformists }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_clergyman_dismissed
+							}
+						}
+					}
+					20 = { #Reformist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_reformists_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_reformists
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_reformists
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_reformists_dismissed
+									}
+									OR = { nationalvalue = pm_reformists AND = { nationalvalue = pm_no_minister has_country_flag = pm_reformists_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_gentry }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_reformists_dismissed
+							}
+						}
+					}
+					20 = { #Gentry
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_gentry_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_gentry
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_gentry
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_gentry_dismissed
+									}
+									OR = { nationalvalue = pm_gentry AND = { nationalvalue = pm_no_minister has_country_flag = pm_gentry_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_militarist }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_gentry_dismissed
+							}
+						}
+					}
+					20 = { #Militarist
+						random_owned = {
+							limit = {
+								owner = {
+									NOT = { has_country_flag = 2_terms_limit }
+									NOT = { has_country_flag = pm_militarist_dismissed }
+								}
+							}
+							owner = {
+								random_owned = {
+									limit = {
+										owner = {
+											nationalvalue = pm_militarist
+											OR = {
+												centralization = legislative_parliment
+												centralization = national_parliment
+											}
+										}
+									}
+									owner = {
+										set_country_flag = 2_terms_limit
+									}
+								}
+								nationalvalue = pm_militarist
+							}
+						}
+						random_owned = {
+							limit = {
+								owner = {
+									OR = {
+										has_country_flag = 2_terms_limit
+										has_country_flag = pm_militarist_dismissed
+									}
+									OR = { nationalvalue = pm_militarist AND = { nationalvalue = pm_no_minister has_country_flag = pm_militarist_dismissed } }
+								}
+							}
+							owner = {
+								random_list = {
+									25 = { nationalvalue = pm_gentry }
+									25 = { nationalvalue = pm_clergyman }
+									25 = { nationalvalue = pm_nobleman }
+									25 = { nationalvalue = pm_reformists }
+								}
+								clr_country_flag = 2_terms_limit
+								clr_country_flag = pm_militarist_dismissed
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,675 @@
+country_event = {
+	id = 78883
+	title = "Taman Penninsula Ceded"
+	desc = "EVTDESC78883"
+	picture = janisseries_tur
+	is_triggered_only = yes
+	
+	option = {
+		name = "Recompensate their losses financially"
+		treasury = -1500
+	}
+}
+country_event = {
+	id = 173600
+	title = "Janissaries furious"
+	desc = "EVTDESC173600"
+	picture = janisseries_tur
+	
+	trigger = {
+		tag = TUR
+		NOT = { military_spending = 0.25 }
+		NOT = { has_country_modifier = janisseries_angry }
+		NOT = { has_country_modifier = janisseries_furious }
+		NOT = { has_country_flag = abolished_janisseries }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Recompensate their losses partially"
+		treasury = -1500
+		middle_strata = {
+			militancy = 1.5
+		}
+		add_country_modifier = {
+			name = janisseries_angry
+			duration = 1825
+		}
+	}
+	
+	option = {
+		name = "Don't bother me with those fools"
+		middle_strata = {
+			militancy = 3
+		}
+		add_country_modifier = {
+			name = janisseries_furious
+			duration = 1825
+		}
+	}
+}
+country_event = {
+	id = 173601
+	title = "Janissaries oppose new reforms"
+	desc = "EVTDESC173601"
+	picture = janisseries_tur
+	
+	trigger = {
+		tag = TUR
+		has_country_modifier = prussian_military_advisors
+		NOT = { has_country_modifier = janisseries_angry }
+		NOT = { has_country_modifier = janisseries_furious }
+		NOT = { has_country_flag = abolished_janisseries }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Pay them off partially"
+		treasury = -1000
+		middle_strata = {
+			militancy = 1.5
+		}
+		add_country_modifier = {
+			name = janisseries_angry
+			duration = 1825
+		}
+	}
+	
+	option = {
+		name = "Force them to obey reforms"
+		middle_strata = {
+			militancy = 3
+		}
+		add_country_modifier = {
+			name = janisseries_furious
+			duration = 1825
+		}
+	}
+}
+country_event = {
+	id = 173602
+	title = "Janissaries demand higher pay for war"
+	desc = "EVTDESC173602"
+	picture = janisseries_tur
+	
+	trigger = {
+		tag = TUR
+		war = yes
+		war_exhaustion = 4
+		NOT = { has_country_modifier = janisseries_angry }
+		NOT = { has_country_modifier = janisseries_furious }
+		NOT = { has_country_flag = abolished_janisseries }
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "Recompensate their losses fully"
+		treasury = -500000
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Pay them off partially"
+		treasury = -10000
+	}
+	
+	option = {
+		name = "Ignore them"
+		middle_strata = {
+			militancy = 1
+		}
+		add_country_modifier = {
+			name = janisseries_angry
+			duration = 1825
+		}
+	}
+}
+country_event = {
+	id = 173603
+	title = "The Great Sack of Vienna"
+	desc = "EVTDESC173603"
+	picture = vienna_boom
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "HA! Take that Habsburgs!"
+		treasury = 5000
+		619 = {
+			fort = -2
+			infrastructure = -2
+			any_pop = {
+				reduce_pop = 0.95
+			}
+		}
+		AUS = { country_event = 173604 }
+		prestige = 30
+		badboy = 1
+	}
+}
+
+country_event = {
+	id = 173604
+	title = "The Great Sack of Vienna"
+	desc = "EVTDESC173604"
+	picture = vienna_boom
+	major = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "Those saveges..."
+		treasury = -5000
+		prestige = -30
+	}
+}
+
+country_event = {
+	id = 173605
+	title = "Prussian military delegation to Turkey"
+	desc = "EVTDESC173605"
+	picture = conscription_marching
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "Send off the envoy immedietly"
+		money = 5000
+		TUR = {	country_event = 173606 }
+		prestige = 30
+		ai_chance = { factor = 1 }	
+	}
+	
+	option = {
+		name = "They're on their own"
+		TUR = {	country_event = 173607 }
+		prestige = 5
+	}
+}
+country_event = {
+	id = 173606
+	title = "Prussian advisors arrive"
+	desc = "EVTDESC173606"
+	picture = conscription_marching
+	is_triggered_only = yes
+	
+	option = {
+		name = "Great!"
+		money = -5000 
+		add_country_modifier = {
+			name = prussian_military_advisors
+			duration = 7300
+		}
+		years_of_research = 0.1
+	}
+}
+country_event = {
+	id = 173607
+	title = "Prussia refuses"
+	desc = "EVTDESC173607"
+	picture = conscription_marching
+	is_triggered_only = yes
+	
+	option = {
+		name = "Oh well..."
+		relation = {
+			who = PRU
+			value = -20
+		}
+	}
+}
+
+country_event = {
+	id = 173611
+	title = "Polish portectorate"
+	desc = "EVTDESC173611"
+	picture = veto
+	fire_only_once = yes
+	
+	trigger = {
+		is_greater_power = yes
+		tag = TUR
+		PLC = {
+			in_sphere = THIS
+			exists = yes
+		}
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "Demand their subjugation!"
+		955 = { add_core = THIS }
+		954 = { add_core = THIS }
+		960 = { add_core = THIS }
+		PLC = { country_event = 173612 }
+		badboy = 8
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "It's better to have them stay as our strong ally"
+		relation = {
+			who = PLC
+			value = 25
+		}
+		ai_chance = { factor = 0 }
+		prestige = 5
+	}
+}
+country_event = {
+	id = 173612
+	title = "Second treaty of Buchach"
+	desc = "EVTDESC173612"
+	picture = veto
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have no other choice but give in..."
+		955 = { secede_province = TUR }
+		954 = { secede_province = TUR }
+		960 = { secede_province = TUR }
+		TUR = {
+			diplomatic_influence = {
+				who = PLC
+				value = 100
+			}
+		}
+		prestige = -25
+	}
+	
+	option = {
+		name = "Over my dead body."
+		TUR = {
+			war = {
+				target = PLC
+				attacker_goal = { casus_belli = acquire_all_cores country = TUR }
+				call_ally = no
+			}
+		}
+		set_country_flag = declined_turkey
+	}
+}
+country_event = {
+	id = 173613
+	title = "Victory over Ottomans!"
+	desc = "EVTDESC173613"
+	picture = cavallery
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = declined_turkey
+		NOT = { war_with = TUR }
+		war = no
+		tag = PLC
+		owns = 954
+		owns = 955
+		owns = 960
+	}
+	
+	option = {
+		name = "Sobieski would be proud!"
+		all_core = {
+			remove_core = TUR
+		}
+		prestige = 50
+	}
+}
+
+country_event = {
+	id = 173614
+	title = "Talented governor"
+	desc = "EVTDESC173614"
+	picture = muhammad_ali
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	trigger = {
+		#tag = TUR
+		year = 1801
+		NOT = {
+			EGY = { exists = yes }
+		}
+		exists = yes
+		owns = 1745
+		war = no
+	}
+	
+	option = {
+		name = "I'm sure he'll achieve great many things"
+		set_country_flag = ali_in_egypt
+	}
+}
+
+country_event = {
+	id = 173615
+	title = "Unrest in Cairo"
+	desc = "EVTDESC173615"
+	picture = reinventing_egypt
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ali_in_egypt
+		#tag = TUR
+		owns = 1745
+		NOT = {
+			EGY = { exists = yes }
+		}
+		exists = no
+		OR = {
+			1745 = { NOT = { controlled_by = THIS } }
+			war_exhaustion = 30
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "I'm sure they'll figure it out shortly"
+		set_country_flag = egypt_unrest
+		clr_country_flag = ali_in_egypt
+	}
+}
+country_event = {
+	id = 173616
+	title = "Rise of Muhammed Ali"
+	desc = "EVTDESC173616"
+	picture = muhammad_ali
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = egypt_unrest
+			year = 1815
+		}
+		#tag = TUR
+		owns = 1745
+		NOT = {
+			EGY = { exists = yes }
+		}
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 17
+	}
+	
+	option = {
+		name = "He'll pay for this tretchery!"
+		release = EGY
+		relation = { who = EGY value = -100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -10
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+        EGY = {
+            capital = 1745
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            set_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            clr_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+        }
+	}
+	
+	option = {
+		name = "Grant him his wish."
+		release = EGY
+		relation = { who = EGY value = 100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -30
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -50
+				create_vassal = EGY
+            }
+        }
+        EGY = {
+            capital = 1745
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            set_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            clr_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+        }
+	}
+}
+country_event = {
+	id = 173617
+	title = "Conquest of Rome"
+	desc = "EVTDESC173617"
+	picture = rome
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		749 = {
+			owned_by = THIS
+		}
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Glorious day for our Empire!"
+		prestige = 25
+		any_country = {
+			limit = {
+				exists = yes
+				OR = {
+					has_country_flag = catholic_country
+					has_country_flag = orthodox_country
+					has_country_flag = protestant_country
+				}
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			relation = {
+				who = TUR
+				value = -200
+			}
+		}
+		any_owned = {
+			limit = {
+				province_id = 749
+			}
+			749 = {
+				change_province_name = "Roma"
+			}
+		}
+	}
+}
+country_event = {
+	id = 173618
+	title = "Deciding foreign policy"
+	desc = "EVTDESC173618"
+	picture = glos
+	is_triggered_only = yes
+	
+	option = {
+		name = "Focus on the west"
+		set_country_flag = tur_west_focus
+	}
+	
+	option = {
+		name = "Focus on the east"
+		set_country_flag = tur_east_focus
+	}
+}
+country_event = {
+	id = 173619
+	title = "Ottoman Sultan demands our submission!"
+	desc = "EVTDESC173619"
+	picture = glos
+	is_triggered_only = yes
+	
+	option = {
+		name = "They will ensure our safety"
+		TUR = {
+			create_vassal = ATJ
+		}
+		prestige = 25
+	}
+	
+	option = {
+		name = "We will never give up our freedom!"
+		TUR = {
+			war = {
+				target = ATJ
+				attacker_goal = { casus_belli = make_puppet }
+				call_ally = no
+			}
+		}
+	}
+}
+country_event = {
+	id = 173621
+	title = "EVTNAME173621"
+	desc = "EVTDESC173621"
+	picture = grand_vizier
+	fire_only_once = yes
+	trigger = {
+		tag = TUR
+		exists = yes
+		year = 1702
+	}
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "May Allah be kind to his soul"
+		remove_country_modifier = hussein_pasha
+		prestige = -5
+	}
+	
+}
+
+country_event = {
+	id = 173622
+	title = "Treaty of Perpetual Peace"
+	desc = "EVTDESC173622"
+	picture = veto
+	fire_only_once = yes	
+
+	option = {
+		name = "Eternal Friendship"	
+		prestige = 5
+	}
+}

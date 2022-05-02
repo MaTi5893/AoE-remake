@@ -1,0 +1,42 @@
+political_decisions = {
+	
+	kurpfalzischen_religionsdeklaration_and_recoverey = {
+		potential = {
+			tag = PAL
+			NOT = { has_country_flag = religionsdeklaration }
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			any_pop = {
+				consciousness = -2
+				militancy = -3
+			}
+			prestige = 15
+			set_country_flag = religionsdeklaration
+		}
+	}
+	
+	wittlesbach_union_pal = {
+		picture = wittlesbach
+		potential = {
+			tag = PAL
+			BAV = { exists = yes ai = yes }
+			NOT = { has_country_flag = wittlesbach_union_pal }
+		}
+		allow = {
+			mass_politics = 1
+			war = no
+			relation = {
+				who = BAV
+				value = 150
+			}
+		}
+		effect = {
+			prestige = 15
+			country_event = 171401
+			set_country_flag = wittlesbach_union_pal
+		}
+	}
+}

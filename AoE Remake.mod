@@ -1,0 +1,6 @@
+name = "AoE Remake Version 1.0"
+path = "mod/AoE Remake"
+user_dir = "AoE Remake"
+replace_path = "history/provinces"
+replace_path = "events"
+replace_path = "decisions"
