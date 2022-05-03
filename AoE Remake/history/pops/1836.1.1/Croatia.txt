@@ -105,7 +105,7 @@
     farmers = {
         culture = croat
         religion = catholic
-        size = 39250
+        size = 78250
     }
 
     aristocrats = {
@@ -147,7 +147,7 @@
     farmers = {
         culture = hungarian
         religion = catholic
-        size = 3250
+        size = 6450
     }
 
     bureaucrats = {
@@ -177,63 +177,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 6500
-    }
-}
-#Sisak (116000/29000 POPS)
-772 = {
-    aristocrats = {
-        culture = croat
-        religion = catholic
-        size = 350
-    }
-
-    clergymen = {
-        culture = croat
-        religion = catholic
-        size = 175
-    }
-
-    artisans = {
-        culture = croat
-        religion = catholic
-        size = 900
-    }
-
-    soldiers = {
-        culture = croat
-        religion = catholic
-        size = 175
-    }
-
-    farmers = {
-        culture = croat
-        religion = catholic
-        size = 16400
-    }
-
-    clergymen = {
-        culture = serb
-        religion = orthodox
-        size = 100
-    }
-
-    artisans = {
-        culture = serb
-        religion = orthodox
-        size = 550
-    }
-
-    soldiers = {
-        culture = serb
-        religion = orthodox
-        size = 125
-    }
-
-    farmers = {
-        culture = serb
-        religion = orthodox
-        size = 10225
+        size = 13000
     }
 }
 #Karlovac (184000/46000 POPS)
@@ -353,137 +297,31 @@
     aristocrats = {
         culture = croat
         religion = catholic
-        size = 200
+        size = 400
     }
 
     clergymen = {
         culture = croat
         religion = catholic
-        size = 175
+        size = 275
     }
 
     artisans = {
         culture = croat
         religion = catholic
-        size = 850
+        size = 1650
     }
 
     soldiers = {
         culture = croat
         religion = catholic
-        size = 175
+        size = 275
     }
 
     farmers = {
         culture = croat
         religion = catholic
-        size = 15600
-    }
-}
-#Bjelovar (52000/13000 POPS)
-776 = {
-    clergymen = {
-        culture = croat
-        religion = catholic
-        size = 50
-    }
-
-    artisans = {
-        culture = croat
-        religion = catholic
-        size = 150
-    }
-
-    soldiers = {
-        culture = croat
-        religion = catholic
-        size = 25
-    }
-
-    farmers = {
-        culture = croat
-        religion = catholic
-        size = 2675
-    }
-
-    clergymen = {
-        culture = serb
-        religion = orthodox
-        size = 50
-    }
-
-    artisans = {
-        culture = serb
-        religion = orthodox
-        size = 250
-    }
-
-    soldiers = {
-        culture = serb
-        religion = orthodox
-        size = 75
-    }
-
-    farmers = {
-        culture = serb
-        religion = orthodox
-        size = 4625
-    }
-
-    clergymen = {
-        culture = czech
-        religion = catholic
-        size = 50
-    }
-
-    artisans = {
-        culture = czech
-        religion = catholic
-        size = 250
-    }
-
-    soldiers = {
-        culture = czech
-        religion = catholic
-        size = 50
-    }
-
-    farmers = {
-        culture = czech
-        religion = catholic
-        size = 4650
-    }
-}
-#Pozega (80000/20000 POPS)
-777 = {
-    aristocrats = {
-        culture = croat
-        religion = catholic
-        size = 225
-    }
-
-    clergymen = {
-        culture = croat
-        religion = catholic
-        size = 200
-    }
-
-    artisans = {
-        culture = croat
-        religion = catholic
-        size = 1100
-    }
-
-    soldiers = {
-        culture = croat
-        religion = catholic
-        size = 200
-    }
-
-    farmers = {
-        culture = croat
-        religion = catholic
-        size = 18375
+        size = 30600
     }
 }
 #Fiume (52000/13000 POPS)
@@ -591,7 +429,7 @@
     farmers = {
         culture = croat
         religion = catholic
-        size = 24175
+        size = 48175
     }
 
     clergymen = {
@@ -615,7 +453,7 @@
     farmers = {
         culture = serb
         religion = orthodox
-        size = 6500
+        size = 13000
     }
 
     aristocrats = {
@@ -645,7 +483,7 @@
     farmers = {
         culture = hungarian
         religion = catholic
-        size = 5025
+        size = 10025
     }
 
     aristocrats = {
@@ -675,7 +513,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 5300
+        size = 2300
     }
 }
 #Dalmatia Region (320000) #see Montenegro.txt for balance of region
@@ -923,83 +761,4 @@
 }
 #Banat-Bacska Region (104000) #See Serbia.txt and Romania.txt for balance of region
 #under the rule of Austria in 1836
-#Vukovar (104000/26000 POPS) #part of Croatia today
-793 = {
-    clergymen = {
-        culture = croat
-        religion = catholic
-        size = 150
-    }
 
-    artisans = {
-        culture = croat
-        religion = catholic
-        size = 800
-    }
-
-    soldiers = {
-        culture = croat
-        religion = catholic
-        size = 175
-    }
-
-    farmers = {
-        culture = croat
-        religion = catholic
-        size = 14875
-    }
-
-    clergymen = {
-        culture = serb
-        religion = orthodox
-        size = 75
-    }
-
-    artisans = {
-        culture = serb
-        religion = orthodox
-        size = 350
-    }
-
-    soldiers = {
-        culture = serb
-        religion = orthodox
-        size = 100
-    }
-
-    farmers = {
-        culture = serb
-        religion = orthodox
-        size = 7475
-    }
-
-    aristocrats = {
-        culture = south_german
-        religion = catholic
-        size = 50
-    }
-
-    clergymen = {
-        culture = south_german
-        religion = catholic
-        size = 40
-    }
-
-    artisans = {
-        culture = south_german
-        religion = catholic
-        size = 100
-    }
-
-    soldiers = {
-        culture = south_german
-        religion = catholic
-        size = 25
-    }
-
-    farmers = {
-        culture = south_german
-        religion = catholic
-        size = 1785
-    }
-}

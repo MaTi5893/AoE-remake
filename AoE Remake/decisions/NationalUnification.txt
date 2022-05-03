@@ -121,14 +121,71 @@ political_decisions = {
         }
     }
 
-    #form_germany = {
-    #    potential = {
-    #        is_culture_group = germanic
-    #        GER = { exist = no }
-    #        NOT = { has_country_flag = hre_member }
-    #    }
-    #    allow = {
-    #        is_greater_power = yes
-    #    }
-    #}
+    form_italy = {
+		news = yes
+		news_desc_long = "form_italy_NEWS_LONG"
+		news_desc_medium = "form_italy_NEWS_MEDIUM"
+		news_desc_short = "form_italy_NEWS_SHORT"
+		potential = {
+			is_culture_group = italian
+			NOT = {
+			tag = GOD
+			}
+			NOT = {
+				exists = ITA
+			}
+			NOT = {
+				has_country_flag = our_sea
+			}
+			NOT = { has_country_flag = no_ita }
+			NOT = { has_country_flag = perpetual_peace_spa }
+			exists = yes
+		}
+		
+		allow = {
+			prestige = 45
+			war = no
+			owns = 720
+			owns = 724
+			owns = 726
+			owns = 728
+			owns = 729
+			owns = 741
+			owns = 739
+			owns = 744
+			owns = 749
+			owns = 754
+			owns = 753
+			owns = 738
+		}
+		
+		effect = {
+			prestige = 20
+			random_owned = { owner = { limit = { tag = TUS } set_country_flag = ita_tus } }
+			random_owned = { owner = { limit = { tag = CRS } set_country_flag = ita_cor } }
+			random_owned = { owner = { limit = { tag = NAP } set_country_flag = ita_nap } }
+			random_owned = { owner = { limit = { tag = SVY } set_country_flag = ita_svy } }
+			random_owned = { owner = { limit = { tag = SAR } set_country_flag = ita_sar } }
+			random_owned = { owner = { limit = { tag = GEN } set_country_flag = ita_gen } }
+			random_owned = { owner = { limit = { tag = LOM } set_country_flag = ita_lom } }
+			random_owned = { owner = { limit = { tag = VEN } set_country_flag = ita_ven } }
+			change_tag = ITA
+			capital = 749
+			add_accepted_culture = north_italian
+			add_accepted_culture = south_italian
+			any_country = {
+				limit = {
+						is_culture_group = italian
+						OR = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

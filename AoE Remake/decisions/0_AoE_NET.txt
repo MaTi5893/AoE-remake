@@ -1,31 +1,20 @@
 political_decisions = {
 		unite_the_netherlands = {
-			picture = map_netherlands
+			picture = become_ned
 			potential = {
 				primary_culture = dutch
 				NOT = { has_country_flag = united_the_netherlands }
 				exists = yes
 			}
 			allow = {
-				OR = {
-					AND = {
-						BEL_387 = {
-							owned_by = THIS
-						}
-						NET_397 = {
-							owned_by = THIS
-						}
-						BEL_394 = {
-							owned_by = THIS
-						}
-					}
-					AND = {
-						is_greater_power = yes
-						OR = {
-							pensions = acceptable_pensions
-							pensions = good_pensions
-						}
-					}
+				BEL_387 = {
+					owned_by = THIS
+				}
+				NET_397 = {
+					owned_by = THIS
+				}
+				BEL_394 = {
+					owned_by = THIS
 				}
 			}
 			effect = {
@@ -116,7 +105,7 @@ political_decisions = {
 		}
 		
 		embrace_a_heraditary_monarch_system = {
-			picture = crown
+			picture = become_ned
 			potential = {
 				primary_culture = dutch
 				NOT = { has_country_flag = embraced_a_heraditary_monarch_system }

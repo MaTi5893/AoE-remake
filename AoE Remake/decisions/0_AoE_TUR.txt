@@ -1,28 +1,6 @@
 political_decisions = {
-	recruit_prussian_military_advisors = {
-		picture = army_training
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = recruited_prussian_military_advisors }
-			exists = yes
-		}
-		allow = {
-			relation = { who = PRU value = 100 }
-			money = 5000
-		}
-		effect = {
-			set_country_flag = recruited_prussian_military_advisors
-			PRU = {
-				country_event = 173605
-			}
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
-	
 	recover_kanije = {
-		picture = tur_hungary
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = recovered_kanije }
@@ -39,14 +17,13 @@ political_decisions = {
             }
 		}
 		effect = {
-			AUS_793 = { add_core = THIS }
-			2538 = { add_core = THIS }
+			AUS_792 = { add_core = THIS }
 			set_country_flag = recovered_kanije
 		}
 	}
 	
 	expand_bosnia = {
-		picture = tur_hungary
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = expanded_bosnia }
@@ -64,7 +41,7 @@ political_decisions = {
 	}
 	
 	subjugate_montenegro = {
-		picture = tur_hungary
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			has_country_flag = expanded_bosnia
@@ -82,7 +59,7 @@ political_decisions = {
 	}
 	
 	capture_royal_croatia = {
-		picture = tur_hungary
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = captured_croatia }
@@ -101,7 +78,7 @@ political_decisions = {
 	}
 
 	recover_hungary = {
-		picture = tur_hungary
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = recovered_hungary }
@@ -130,7 +107,7 @@ political_decisions = {
 	}
 	
 	recover_morea = {
-		picture = morea
+		picture = ottoman_expansion
 		potential = {
 			tag = TUR
 			NOT = {
@@ -143,48 +120,11 @@ political_decisions = {
 			}
 		}
 		effect = {
-			prestige = 25
+			prestige = 15
 			any_pop = {
 				militancy = -3
 			}
 			set_country_flag = recovered_morea
-		}
-	}
-	
-	create_imperial_navy_engieering_school = {
-		picture = merchant_navy
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = imperial_navy_engieering_school }
-			exists = yes
-		}
-		allow = {
-			money = 50000
-			has_country_modifier = nizam_i_djedid
-		}
-		effect = {
-			set_country_flag = imperial_navy_engieering_school
-			random_owned = { 
-				limit = { owner = { ai = yes } }
-				owner = {
-					activate_technology = battleship_column_doctrine
-					activate_technology = raider_group_doctrine 
-					activate_technology = steamers
-					activate_technology = iron_steamers
-					treasury = -50000
-				}
-			}
-			random_owned = { 
-				limit = { owner = { ai = no } }
-				owner = {
-					activate_technology = battleship_column_doctrine
-					activate_technology = steamers
-					treasury = -75000
-				}
-			}
-		}
-		ai_will_do = {					
-			factor = 1
 		}
 	}
 	
@@ -249,42 +189,6 @@ political_decisions = {
 			}
 		}
 	}
-	
-	#the_cossack_subjects = {
-	#	potential = {
-	#		tag = TUR
-	#		NOT = { has_country_flag = the_cossack_subjects }
-	#	}
-	#	allow = {
-	#		ZZH = {
-	#			OR = {
-	#				all_core = {
-	#					controlled_by = THIS
-	#				}
-	#				any_owned_province = {
-	#					controlled_by = THIS
-	#				}
-	#			}
-	#		}
-	#	}
-	#	effect = {
-	#		random_country = {
-	#			limit = {
-	#				exists = ZZH
-	#				tag = ZZH
-	#			}
-	#			annex_to = THIS
-	#		}
-	#		any_owned = {
-	#			limit = {
-	#				is_core = ZZH
-	#			}
-	#			add_core = THIS
-	#		}
-	#		add_accepted_culture = cossack
-	#		set_country_flag = the_cossack_subjects
-	#	}
-	#}
 	
 	nizam-i_djedid_reforms = {
 		picture = nizam-i_djedid
@@ -689,37 +593,6 @@ political_decisions = {
 			HDJ = { all_core = { add_core = THIS } }
 			NYE = { all_core = { add_core = THIS } }
 			set_country_flag = hedjaz_integrated
-		}
-	}
-
-	anti_russo_persian_hugbox = {
-		potential = {
-			tag = TUR
-			war_with = RUS
-			war_with = TUR
-			NOT = { has_country_flag = anti_russo_persian_hugbox }
-			926 = {
-				owned_by = THIS
-			}
-		}
-		allow = {
-			war = yes
-			money = 5000
-		}
-		effect = {
-			926 = {
-				sub_unit = { type = infantry value = current }
-				sub_unit = { type = infantry value = current }
-				sub_unit = { type = infantry value = current }
-				sub_unit = { type = infantry value = current }
-				sub_unit = { type = cavalry value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-				sub_unit = { type = artillery value = current }
-			}
-			money = -5000
 		}
 	}
 }

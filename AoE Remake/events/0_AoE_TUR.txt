@@ -663,13 +663,65 @@ country_event = {
 
 country_event = {
 	id = 173622
-	title = "Treaty of Perpetual Peace"
+	title = "Edirne Vak'asi"
 	desc = "EVTDESC173622"
-	picture = veto
 	fire_only_once = yes	
-
+	major = yes
+	
+	trigger = {
+		year = 1703
+		tag = TUR
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
 	option = {
-		name = "Eternal Friendship"	
-		prestige = 5
+		name = "Horrible!"	
+		prestige = -15
+		random_owned = {
+            limit = {
+                owner = {
+                    pensions = acceptable_pensions
+                }
+            }
+            owner = {
+                social_reform = good_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = low_pensions
+                }
+            }
+            owner = {
+                social_reform = acceptable_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = trinket_pensions
+                }
+            }
+            owner = {
+                social_reform = low_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = no_pensions
+                }
+            }
+            owner = {
+                social_reform = trinket_pensions
+            }
+        }
+		any_pop = {
+			militancy = 3
+		}
 	}
 }
