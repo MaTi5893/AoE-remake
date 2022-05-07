@@ -2081,7 +2081,6 @@ country_event = {
             limit = {
                 owner = {
                     pensions = acceptable_pensions
-					has_country_flag = skill_and_merit_allowed
                 }
             }
             owner = {
@@ -2126,7 +2125,6 @@ country_event = {
             limit = {
                 owner = {
                     health_care = acceptable_health_care
-					has_country_flag = skill_and_merit_allowed
                 }
             }
             owner = {
