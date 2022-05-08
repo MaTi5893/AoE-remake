@@ -351,7 +351,7 @@ colonial_spending_policy_1;Colonial Subjects;;;;;;;;;;;;;
 pogonya_za_zapadom;Pogonya Za Zapodom!;;;;;;;;;;;;;
 natral_talent;Naturally Talented;;;;;;;;;;;;;
 mercantilism_1;Mercantilism;;;;;;;;;;;;;
-trade_unions;Executive Power;;;;;;;;;;;;;
+trade_unions;§YExecutive Power§!;;;;;;;;;;;;;
 no_trade_unions;One Man To Rule;;;;;;;;;;;;;
 no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YIncreases §PAbsolutist§Y Ideology in Pops§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!;;;;;;;;;;;;;
 state_controlled;Advisor Council;;;;;;;;;;;;;
@@ -427,7 +427,7 @@ industralisation_focus;Industrialization Focus;;;;;;;;;;;;;
 suppress_populace;Suppress Rebelious Populace;;;;;;;;;;;;;
 forcefull_assimilation;Forcefull Assimilation;;;;;;;;;;;;;
 poniatowski_rule;Stanislaw Poniatowski won the Royal election of 1764;;;;;;;;;;;;;
-centralization;Parliament;;;;;;;;;;;;;
+centralization;§YParliament§!;;;;;;;;;;;;;
 no_parliment;No Parliament;;;;;;;;;;;;;
 no_parliment_desc;We Have No Parliament;;;;;;;;;;;;;
 admin_parliment;Administrative Parliament;;;;;;;;;;;;;
@@ -460,3 +460,28 @@ CHANGE_NATIONALVALUE;Our Newly Appointed Leading Minister will be a §Y$NATIONALV
 HAS_NATIONAL_VALUE;Leading Minister is a §Y$NATIONALVALUE$§!.;;;;;;;;;;;x
 gas;Napoleonic Warfare;Napoleonic Warfare;Napoleonic Warfare;;Napoleonic Warfare;;;;;;;;x;;;
 COMBAT_GAS;Extensive artillery bombardment usage of corps system and supirior tactics, while the opponent lacks the technology to defend against them may be devastating.;;;;;;;;;;;x
+upper_house_composition;§YHead Of State§!;;;;;;;;;;;x
+appointed;Parliamentary Constraints;;;;;;;;;;;x
+appointed_desc;Our Head Of State is accountable to the Parliment, but still retains influence on our politics;;;;;;;;;;;x
+party_appointed;Independent Executive;;;;;;;;;;;x
+party_appointed_desc;Executive head is assigned absolute control over legislative process;;;;;;;;;;;x
+state_equal_weight;Figurehead;;;;;;;;;;;x
+state_equal_weight_desc;Our Head of State is accountable to the parliament and the few powers he possesses require a countersignature from our cabinet.;;;;;;;;;;;x
+political_parties;§YJudicial Appointment§!;;;;;;;;;;;x
+underground_parties;Decree;;;;;;;;;;;x
+underground_parties_desc;Our Head of State may issue decrees which act as an official sentance.;;;;;;;;;;;x
+harassment;Cabinet Approval;;;;;;;;;;;x
+harassment_desc;Judicial appointment requiers a countersignature from our cabinet.;;;;;;;;;;;x
+gerrymandering;Legislative Approval;;;;;;;;;;;x
+gerrymandering;Judicial appointment requiers a countersignature from our Legislative Branch.;;;;;;;;;;;x
+non_secret_ballots;Internal Selection;;;;;;;;;;;x
+non_secret_ballots_desc;Judicial appointment is done internally.;;;;;;;;;;;x
+voting_system;§YVoting System§!;;;;;;;;;;;x
+vote_franschise;§YVote Franchise§!;;;;;;;;;;;x
+witch_hunts;Witch Hunts;;;;;;;;;x;;;;
+desc_witch_hunts;A witch-hunt, or a witch purge, is a search for people who have been labeled witches or a search for evidence of witchcraft.;;;;;;;;;x;;;;
+foreign_service_pressing;Foreign Service Pressing;;;;;;;;;x;;;;
+desc_foreign_service_pressing;Foreign nations press our population into serving in their military\n§YReduces Soldier Promotion§!;;;;;;;;;x;;;;
+HAVE_CRIME;Province Suffers From §Y$NAME$§W;;;;;;;;;;;x
+fugative_peasants;Fugative Peasants;;;;;;;;;;;x
+desc_fugative_peasants;Our Peasants attempt to escape their misrable life of serfdom.;;;;;;;;;;;x

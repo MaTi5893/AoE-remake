@@ -681,6 +681,10 @@ promote_to =
                 military_spending = 0.99
             }
         }
+		modifier = {
+			factor = -10
+			has_crime = foreign_service_pressing
+		}
         group = {
             modifier = {
                 factor = -2
@@ -727,6 +731,24 @@ promote_to =
 					}
 				}
                 soldiers = 0.05
+            }
+        }
+		group = {
+            modifier = {
+                factor = 2
+                country = { pensions = trinket_pensions }
+            }
+            modifier = {
+                factor = 4
+                country = { pensions = low_pensions }
+            }
+            modifier = {
+                factor = 6
+                country = { pensions = acceptable_pensions }
+            }
+			modifier = {
+                factor = 8
+                country = { pensions = good_pensions }
             }
         }
 		modifier = {

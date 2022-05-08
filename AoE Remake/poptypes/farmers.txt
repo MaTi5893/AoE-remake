@@ -608,6 +608,10 @@ promote_to =
 			factor = 5
 			nationalvalue = pm_militarist
 		}
+		#modifier = {
+		#	factor = 5
+		#	has_province_flag = warsaw
+		#}
         group = {
             modifier = {
                 factor = -4
@@ -679,21 +683,25 @@ promote_to =
 		group = {
             modifier = {
                 factor = 2
-                pensions = trinket_pensions
+                country = { pensions = trinket_pensions }
             }
             modifier = {
                 factor = 4
-                pensions = low_pensions
+                country = { pensions = low_pensions }
             }
             modifier = {
                 factor = 6
-                pensions = acceptable_pensions
+                country = { pensions = acceptable_pensions }
             }
 			modifier = {
                 factor = 8
-                pensions = good_pensions
+                country = { pensions = good_pensions }
             }
         }
+		modifier = {
+			factor = -10
+			has_crime = foreign_service_pressing
+		}
         group = {
             modifier = {
                 factor = -2

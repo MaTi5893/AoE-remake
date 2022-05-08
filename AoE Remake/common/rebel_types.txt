@@ -114,6 +114,10 @@ reactionary_rebels = {
             literacy = 0.50
             NOT = { pop_majority_ideology = reactionary }
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
         modifier = {
             factor = 1.0105
             NOT = { consciousness = 1 }
@@ -392,6 +396,10 @@ traditionalist_rebels = {
             factor = 0.5
             literacy = 0.50
             NOT = { pop_majority_ideology = conservative }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
         modifier = {
             factor = 1.0105
@@ -700,6 +708,10 @@ communist_rebels = {
             location = {
 				is_colonial = yes
 			}
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
         modifier = {
             factor = 1.3
@@ -1024,6 +1036,10 @@ nationalist_rebels = {
             NOT = {
                 country = { num_of_cities = 2 }
             }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
         modifier = {
             factor = 1.01
@@ -1471,7 +1487,10 @@ pan_nationalist_rebels = {
             factor = 0
             pop_majority_ideology = anarcho_liberal
         }
-
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
         modifier = {
             factor = 0
             political_reform_want = 0.05
@@ -1722,6 +1741,10 @@ liberal_rebels = {
                 primary_culture = british
                 government = hms_government
             }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
         modifier = {
             factor = 1.15
@@ -2196,6 +2219,10 @@ unciv_reactionary_rebels = {
                 civilization_progress = 0.75
             }
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
         modifier = {
             factor = 0
             country = {
@@ -2460,6 +2487,10 @@ jacobite_rebels = {
             is_primary_culture = no
             is_accepted_culture = no
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
         modifier = {
             factor = 0
             country = { has_global_flag = jacobites_pacified }
@@ -2673,6 +2704,10 @@ peasant_rebels = {
         modifier = {
             factor = -2
             pop_majority_ideology = reactionary
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
 		modifier = {
 			factor = -100
@@ -3042,6 +3077,10 @@ noble_rebels = {
 			pop_majority_ideology = conservative
 		}
 		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
 			factor = -10
 			location = {
 				is_colonial = yes
@@ -3361,6 +3400,10 @@ slave_rebels = {
 				}
 			}
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
         modifier = {
             factor = 0
             location = {
@@ -3554,6 +3597,10 @@ american_patriot_rebels = {
 		modifier = {
             factor = 0
             NOT = { culture = yankee }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
         modifier = {
             factor = 1.3
@@ -3820,6 +3867,10 @@ janissery_rebels = {
         modifier = {
             factor = 1.1
             pop_majority_ideology = reactionary
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
         }
 		modifier = {
 			factor = -100

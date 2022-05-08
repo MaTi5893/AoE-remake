@@ -589,9 +589,28 @@ guiTypes = {
 			########################
 				
 		windowType = {
+			name = "absolutism"
+			backGround =""
+			position = { x = 3943 y = 3372 }
+			size = { x=151 y= 100}
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = "0"
+			verticalBorder = ""
+			fullScreen = no
+			instantTextBoxType = { 
+				name = "reform_name"
+				position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
+				font = "vic_18" #WAS "vic_18"
+				text = "REFORM_NAME"	
+				maxWidth = 100
+				maxHeight = 20	
+			}
+		}
+		windowType = {
 			name = "citizens_rights"
 			backGround =""
-			position = { x = 843 y = 300 }
+			position = { x = 843 y = 272 }
 			size = { x=151 y= 100}
 			moveable = 0
 			dontRender = ""
@@ -703,7 +722,7 @@ guiTypes = {
 			windowType = {
 				name = "vote_franschise"
 				backGround =""
-				position = { x = 691 y = 142 }
+				position = { x = 691 y = 114 }
 				size = { x = 151 y = 120 }
 				moveable = 0
 				dontRender = ""
@@ -733,7 +752,7 @@ guiTypes = {
 			windowType = {
 				name = "voting_system"
 				backGround =""
-				position = { x = 691 y = 249 }
+				position = { x = 691 y = 193 }
 				size = { x=151 y=72 }
 				moveable = 0
 				dontRender = ""
@@ -761,7 +780,7 @@ guiTypes = {
 			windowType = {
 				name = "public_meetings"
 				backGround =""
-				position = { x = 691 y = 314 }
+				position = { x = 691 y = 258 }
 				size = { x=151 y=100 }
 				moveable = 0
 				dontRender = ""
@@ -817,7 +836,7 @@ guiTypes = {
 			windowType = {
 			name = "centralization"
 			backGround =""
-			position = { x = 843 y = 207 }
+			position = { x = 691 y = 49 }
 			
 			size = { x=151 y= 100}
 			moveable = 0
@@ -902,7 +921,7 @@ guiTypes = {
 			windowType = {
 				name = "trade_unions"
 				backGround =""
-				position = { x = 843 y = 128 }
+				position = { x = 843 y = 114 }
 				size = { x=151 y=92 }
 				moveable = 0
 				dontRender = ""
@@ -931,7 +950,7 @@ guiTypes = {
 			windowType = {
 				name = "political_parties"
 				backGround =""
-				position = { x = 691 y = 49 }
+				position = { x = 843 y = 193 }
 				size = { x=151 y=92 }
 				moveable = 0
 				dontRender = ""
@@ -942,16 +961,16 @@ guiTypes = {
 				iconType = {
 				 name = "politics_polparties"
 				 spriteType = "GFX_politics_polparties"
-				 position = { x= 6 y = 12 }
+				 position = { x= 0 y = 12 }
 				 Orientation = "UPPER_LEFT"
 			 }
 				
 				instantTextBoxType = { 
 					name = "reform_name"
-					position = { x = 39 y = 20 }
+					position = { x = 29 y = 20 }
 					font = "vic_18"
 					text = "REFORM_NAME"	
-					maxWidth = 100
+					maxWidth = 150
 					maxHeight = 20	
 				}
 			}
