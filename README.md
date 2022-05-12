@@ -1,6 +1,6 @@
-# AoE-mp-remake
+# AoE-remake
 
-### Age Of Enlightenment is a mod for Victoria 2 that aims to recreate the period from 1700 to 1821 in a proper fashion. It's main base currently is Vanilla, though few things have been imported from mods such as igor_puir for better mp expirience. This Wiki's aim is to introduce players to the major changes that the mod brings, as well as provide basic information about flavor and country strategys to lay base for figuring out the meta of the mod.
+### Age Of Enlightenment is a mod for Victoria 2 that aims to recreate the period from 1700 to 1821 in a proper fashion. It's main base currently is Vanilla, though few things have been imported from mods such as igor_puir for better mp expirience. This Wiki's aim is to introduce players to the major changes that the mod brings, as well as provide basic information about flavor and country strategys to lay base for figuring out the meta of the mod. Github currently debided in 2 branches, main one being dedicated for mp purposes and a seprate branch for singleplayer version
 
 ### This wiki is an official AoE Wikipedia created by the mod's creator - MaTi5893 and other devs.
 
