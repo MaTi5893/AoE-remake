@@ -563,6 +563,16 @@ political_decisions = {
 				reduce_pop = 0.7
 			}
 			country_event = 171000
+			SPA = {
+				inherit = VNS
+				inherit = VOP
+			}
+			POR = {
+				inherit = PBZ
+			}
+			PAP = {
+				inherit = JER
+			}
 		}
 	}
 	

@@ -226,14 +226,19 @@ political_reforms = {
 
 	absolutism = {
 		no_absolutism = {
-			
+			allow = {
+				has_country_flag = never
+			}
 		}
 		yes_absolutism = {
 			rules = { same_as_ruling_party = yes }
+			allow = {
+				has_country_flag = never
+			}
 		}
 	}
     slavery = {
-
+		next_step_only = yes
         yes_slavery = {
             rules = { slavery_allowed = yes }
             allow = {

@@ -41,4 +41,262 @@ political_decisions = {
             }
         }
     }
+	
+	begin_absolute_rule = {
+		potential = {
+			exists = yes
+			government = absolute_monarchy
+			NOT = { absolutism = yes_absolutism }
+		}
+		allow = {
+			upper_house_composition = party_appointed 
+			trade_unions = no_trade_unions
+			nationalvalue = pm_no_minister
+		}
+		effect = {
+			political_reform = yes_absolutism
+			any_pop = {
+				consciousness = 3
+				militancy = 1
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						war = yes
+					}
+				}
+				owner = {
+					war_exhaustion = 5
+				}
+			}
+			##############################
+			###All Estates go down by 1###
+			##############################
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = acceptable_minimum_wage
+					}
+				}
+				owner = {
+					social_reform = good_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = low_minimum_wage
+						NOT = { has_country_flag = clergy_and_nobility_domination }
+					}
+				}
+				owner = {
+					social_reform = acceptable_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = trinket_wage
+					}
+				}
+				owner = {
+					social_reform = low_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = no_minimum_wage
+					}
+				}
+				owner = {
+					social_reform = trinket_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = fourteen_hours
+					}
+				}
+				owner = {
+					social_reform = no_work_hour_limit
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = twelve_hours
+					}
+				}
+				owner = {
+					social_reform = fourteen_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = ten_hours
+					}
+				}
+				owner = {
+					social_reform = twelve_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = eight_hours
+					}
+				}
+				owner = {
+					social_reform = ten_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = acceptable_safety
+					}
+				}
+				owner = {
+					social_reform = good_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = low_safety
+						NOT = { has_country_flag = clergy_and_nobility_domination }
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = trinket_safety
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = no_safety
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = trinket_subsidies
+					}
+				}
+				owner = {
+					social_reform = no_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = low_subsidies
+					}
+				}
+				owner = {
+					social_reform = trinket_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = acceptable_subsidies
+					}
+				}
+				owner = {
+					social_reform = low_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = good_subsidies
+					}
+				}
+				owner = {
+					social_reform = acceptable_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = no_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = acceptable_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = good_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+		}
+	}
+	
+	set_up_advisor_court = {
+		picture = ministers
+		potential = {
+			absolutism = yes_absolutism
+			trade_unions = no_trade_unions
+			government = absolute_monarchy
+			exists = yes
+		}
+		allow = {
+			exists = yes
+			absolutism = yes_absolutism
+		}
+		effect = {
+			political_reform = no_absolutism
+			political_reform = state_controlled
+			country_event = 170220
+			any_pop = {
+				consciousness = 2
+			}
+			prestige = -20
+		}
+	}
 }
