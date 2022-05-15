@@ -2546,6 +2546,9 @@ jacobite_rebels = {
     }
 
     demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
         GBR = {
             all_core = {
                 remove_core = GBR
@@ -2766,6 +2769,9 @@ peasant_rebels = {
     }
 
     demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
         random_owned = {
             limit = {
                 owner = {
@@ -3124,6 +3130,9 @@ noble_rebels = {
 	}
 	
 	demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
 		random_owned = { #Burghers#
             limit = {
                 owner = {
@@ -3434,6 +3443,9 @@ slave_rebels = {
     }
 
     demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
         political_reform = no_slavery
         prestige = -40
         plurality = -30
@@ -3650,6 +3662,9 @@ american_patriot_rebels = {
         }
     }
     demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
 		any_owned = {
 			limit = {
 				is_core = THC
@@ -3906,6 +3921,9 @@ janissery_rebels = {
     }
 
     demands_enforced_effect = {
+		any_pop = {
+			militancy = -8
+		}
         random_owned = { #Army#
             limit = {
                 owner = {
