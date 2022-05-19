@@ -238,7 +238,6 @@ reactionary_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
@@ -520,7 +519,6 @@ traditionalist_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
@@ -830,7 +828,6 @@ communist_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
 
@@ -1925,7 +1922,6 @@ liberal_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
 
@@ -2526,7 +2522,6 @@ jacobite_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
@@ -2749,7 +2744,6 @@ peasant_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
@@ -3110,7 +3104,6 @@ noble_rebels = {
 				factor = 0.05
 			}
 		}
-		owner = { war_exhaustion = 2.5 }
 	}
 
 	# Country scope
@@ -3423,7 +3416,6 @@ slave_rebels = {
             name = war_torn
             duration = 365
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
@@ -3901,7 +3893,6 @@ janissery_rebels = {
                 factor = 0.05
             }
         }
-        owner = { war_exhaustion = 2.5 }
     }
 
     # Country scope
