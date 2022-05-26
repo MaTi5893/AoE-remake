@@ -540,72 +540,72 @@ political_decisions = {
 		}
 	}
 	
-	propose_the_greek_plan = {
-		picture = latinempire
-		potential = {
-			tag = RUS
-			has_country_modifier = catharine_the_great
-			is_greater_power = yes
-			NOT = { has_country_flag = proposed_the_greek_plan }
-		}
-		allow = {
-			war = no
-			OR = {
-				alliance_with = AUS
-				AUS = { exists = no }
-				AUS = { ai = yes }
-			}
-			OR = {
-				alliance_with = VEN
-				VEN = { exists = no }
-				VEN = { ai = yes }
-			}
-			OR = {
-				alliance_with = ITA
-				ITA = { exists = no }
-				ITA = { ai = yes }
-			}
-			owns = 967
-			owns = 968
-			owns = 678
-			owns = 1049
-			owns = 1051
-		}
-		effect = {
-			set_country_flag = proposed_the_greek_plan
-			casus_belli = {
-				target = TUR
-				type = greek_plan_cb
-				months = 12
-			}
-			badboy = 20
-			random_country = {
-				limit = {
-					tag = AUS
-					alliance_with = THIS
-				}
-				badboy = 20
-			}
-			random_country = {
-				limit = {
-					tag = VEN
-					alliance_with = THIS
-				}
-				badboy = 15
-			}
-			random_country = {
-				limit = {
-					tag = ITA
-					alliance_with = THIS
-				}
-				badboy = 15
-			}
-			relation = {
-				who = TUR
-				value = -100
-			}
-		}
-	}
+	#propose_the_greek_plan = {
+	#	picture = latinempire
+	#	potential = {
+	#		tag = RUS
+	#		has_country_modifier = catharine_the_great
+	#		is_greater_power = yes
+	#		NOT = { has_country_flag = proposed_the_greek_plan }
+	#	}
+	#	allow = {
+	#		war = no
+	#		OR = {
+	#			alliance_with = AUS
+	#			AUS = { exists = no }
+	#			AUS = { ai = yes }
+	#		}
+	#		OR = {
+	#			alliance_with = VEN
+	#			VEN = { exists = no }
+	#			VEN = { ai = yes }
+	#		}
+	#		OR = {
+	#			alliance_with = ITA
+	#			ITA = { exists = no }
+	#			ITA = { ai = yes }
+	#		}
+	#		owns = 967
+	#		owns = 968
+	#		owns = 678
+	#		owns = 1049
+	#		owns = 1051
+	#	}
+	#	effect = {
+	#		set_country_flag = proposed_the_greek_plan
+	#		casus_belli = {
+	#			target = TUR
+	#			type = greek_plan_cb
+	#			months = 12
+	#		}
+	#		badboy = 20
+	#		random_country = {
+	#			limit = {
+	#				tag = AUS
+	#				alliance_with = THIS
+	#			}
+	#			badboy = 20
+	#		}
+	#		random_country = {
+	#			limit = {
+	#				tag = VEN
+	#				alliance_with = THIS
+	#			}
+	#			badboy = 15
+	#		}
+	#		random_country = {
+	#			limit = {
+	#				tag = ITA
+	#				alliance_with = THIS
+	#			}
+	#			badboy = 15
+	#		}
+	#		relation = {
+	#			who = TUR
+	#			value = -100
+	#		}
+	#	}
+	#}
 	#perpetual_peace_PLC = {
 	#	picture = ruthenia
 	#	potential = {

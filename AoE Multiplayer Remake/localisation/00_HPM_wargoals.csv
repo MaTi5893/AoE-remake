@@ -334,19 +334,19 @@ dispute_succession_bor_desc;Dispute the integrety of the Spanish Crown;;;;;;;;;;
 dispute_succession_aus_desc;Dispute the integrety of the Spanish Crown;;;;;;;;;;;;;
 annex_india;Conquest for India - Demand State;;;;;;;;;;;;;
 annex_india_desc;Force an §Yuncivilized country§W to secede territory to our trade company;;;;;;;;;;;;;
-annex_india_setup;Demand that $RECIPIENT$ secede territory to our trade company;;;;;;;;;;;;;
+annex_india_setup;Demand that $RECIPIENT$ secede territory to our trade company §RCosts 5 infamy per CB§!;;;;;;;;;;;;;
 annex_india_short;Demand $STATE$;;;;;;;;;;;;;
 annex_india_full;Conquest for India - Annex;;;;;;;;;;;;;
 annex_india_full_desc;Force an §Yuncivilized country§W to become a protectorate of our Trade Company;;;;;;;;;;;;;
-annex_india_full_setup;Annex $RECIPIENT$ to our trade company;;;;;;;;;;;;;
+annex_india_full_setup;Annex $RECIPIENT$ to our trade company §RCosts 5 infamy per CB§!;;;;;;;;;;;;;
 annex_india_full_short;Annex $RECIPIENT$;;;;;;;;;;;;;
 annex_na;Conquest for America - Demand State;;;;;;;;;;;;;
 annex_na_desc;Force an §Yuncivilized country§W to secede territory to our trade company;;;;;;;;;;;;;
-annex_na_setup;Demand that $RECIPIENT$ secede territory to our trade company;;;;;;;;;;;;;
+annex_na_setup;Demand that $RECIPIENT$ secede territory to our trade company §RCosts 5 infamy per CB§!;;;;;;;;;;;;;
 annex_na_short;Demand $STATE$;;;;;;;;;;;;;
 annex_na_full;Conquest for America - Annex;;;;;;;;;;;;;
 annex_na_full_desc;Force an §Yuncivilized country§W to become a protectorate of our Trade Company;;;;;;;;;;;;;
-annex_na_full_setup;Annex $RECIPIENT$ to our trade company;;;;;;;;;;;;;
+annex_na_full_setup;Annex $RECIPIENT$ to our trade company §RCosts 5 infamy per CB§!;;;;;;;;;;;;;
 annex_na_full_short;Annex $RECIPIENT$;;;;;;;;;;;;;
 dismantle_hre;Dismantle Holy Roman Empire;;;;;;;;;;;;;
 dismantle_hre_desc;Force the Emperoro to Dismantle the Holy Roman Empire;;;;;;;;;;;;;
@@ -477,3 +477,11 @@ convert_cb_short;Change the $RECIPIENT$ religion;;;;;;;;;;;;;
 convert_cb_desc;Change the $RECIPIENT$ religion;;;;;;;;;;;;;
 convert_cb_setup;Change the $RECIPIENT$ religion;;;;;;;;;;;;;
 NORMAL_WAR_TAKE_CORE_NAME_TOR_SWE;$ORDER$Northern War;;;;;;;;;;;;;
+3_way_transfer;3-way transfer;Peuple libre;Freies Volk;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+3_way_transfer_desc;Transfer a state from the target to any player;Libérer un §Ypays§W de ses oppresseurs;Befreien Sie ein §YLand§W von seinen Unterdrückern.;;;;;;;;;;;x,,,
+3_way_transfer_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+3_way_transfer_setup;Transfers $STATE$ to $THIRD$ from $RECIPIENT$;Prendre $STATE$ a $RECIPIENT$ pour le rendre a $THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zurück;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+seperate_truce;Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
+seperate_truce_desc;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
+seperate_truce_short;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
+seperate_truce_setup;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
