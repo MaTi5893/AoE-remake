@@ -5,6 +5,11 @@ add_core = GER
 add_core = NNN
 trade_goods = iron
 life_rating = 40
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
 1756.01.01 = {
 owner = PRU
 controller = PRU

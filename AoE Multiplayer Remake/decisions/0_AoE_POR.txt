@@ -181,35 +181,4 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
-
-    portuguese_zanzibar = {
-        picture = zanzibar_protectorate
-        potential = {
-            tag = POR
-            NOT = { has_country_flag = portuzanzi }
-            exists = yes
-        }
-
-        allow = {
-            OR = {
-                AND = {
-                    is_greater_power = yes
-                    is_sphere_leader_of = OMA
-                    OMA = {
-                        owns = 2048
-                    }
-                }
-                owns = 2060
-            }
-        }
-
-        effect = {
-            set_country_flag = portuzanzi
-            POR = {
-                country_event = 114310
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
 }

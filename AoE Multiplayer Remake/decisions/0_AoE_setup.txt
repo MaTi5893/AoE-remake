@@ -177,25 +177,25 @@ political_decisions = {
 		}
 	}
 	
-	thc_setup = {
-		potential = {
-			tag = ENL
-			always = no
-		}
-		allow = {
-			always = no
-		}
-		effect = {
-			any_owned = {
-				limit = {
-					is_core = THC
-				}
-				any_pop = {
-				reduce_pop = 0.6
-				}
-			}
-		}
-	}
+	#thc_setup = {
+	#	potential = {
+	#		tag = ENL
+	#		always = no
+	#	}
+	#	allow = {
+	#		always = no
+	#	}
+	#	effect = {
+	#		any_owned = {
+	#			limit = {
+	#				is_core = THC
+	#			}
+	#			any_pop = {
+	#			reduce_pop = 0.6
+	#			}
+	#		}
+	#	}
+	#}
 
 	navigation_acts_setup = {
 		potential = {
@@ -223,6 +223,52 @@ political_decisions = {
 						}
 					}
 					life_rating = 5
+				}
+			}
+		}
+	}
+	
+	america_pop_increase = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_country = {
+				limit = {
+					capital_scope = {
+						continent = north_america
+					}
+					NOT = { total_pops = 50000 }
+				}
+				any_pop = {
+					reduce_pop = 6
+				}
+			}
+			any_country = {
+				limit = {
+					capital_scope = {
+						continent = north_america
+					}
+					total_pops = 50000
+					NOT = { total_pops = 100000 }
+				}
+				any_pop = {
+					reduce_pop = 2
+				}
+			}
+			any_country = {
+				limit = {
+					capital_scope = {
+						continent = north_america
+					}
+					total_pops = 100000
+					NOT = { total_pops = 250000 }
+				}
+				any_pop = {
+					reduce_pop = 1.5
 				}
 			}
 		}
@@ -610,6 +656,40 @@ political_decisions = {
 					}
 					literacy = 0.3
 				}
+			}
+			AUS = {
+				any_pop = {
+					limit = {
+						NOT = { culture = hungarian }
+					}
+					literacy = 0.05
+				}
+			}
+		}
+	}
+	
+	spa_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					OR = {
+						culture = dutch
+						culture = flemish
+					}
+				}
+				literacy = 0.5
+			}
+			any_pop = {
+				limit = {
+					culture = wallonian
+				}
+				literacy = 0.5
 			}
 		}
 	}

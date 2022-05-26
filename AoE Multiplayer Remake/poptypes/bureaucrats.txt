@@ -69,7 +69,7 @@ life_needs = {
 country_migration_target =
 {
     factor = 1
-
+	
     modifier = {
         factor = 0.45
         NOT = { year = 1730 }
@@ -81,6 +81,99 @@ country_migration_target =
     modifier = {
         factor = 0.60
         NOT = { year = 1790 }
+    }
+	modifier = {
+        factor = 0.1
+		NOT = { social_spending = 0.03 }
+    }
+	modifier = {
+        factor = 0.2
+        social_spending = 0.02
+		NOT = { social_spending = 0.03 }
+    }
+	modifier = {
+        factor = 0.3
+        social_spending = 0.03
+		NOT = { social_spending = 0.04 }
+    }
+	modifier = {
+        factor = 0.4
+        social_spending = 0.04
+		NOT = { social_spending = 0.05 }
+    }
+	modifier = {
+        factor = 0.5
+        social_spending = 0.05
+		NOT = { social_spending = 0.06 }
+    }
+	modifier = {
+        factor = 0.6
+        social_spending = 0.06
+		NOT = { social_spending = 0.07 }
+    }
+	modifier = {
+        factor = 0.7
+        social_spending = 0.07
+		NOT = { social_spending = 0.08 }
+    }
+	modifier = {
+        factor = 0.8
+        social_spending = 0.08
+		NOT = { social_spending = 0.09 }
+    }
+	modifier = {
+        factor = 0.9
+        social_spending = 0.09
+		NOT = { social_spending = 0.1 }
+    }
+	modifier = {
+        factor = 2.0
+        social_spending = 1
+    }
+	modifier = {
+        factor = 1.05
+        social_spending = 0.1
+		NOT = { social_spending = 0.2 }
+    }
+	modifier = {
+        factor = 1.1
+        social_spending = 0.2
+		NOT = { social_spending = 0.3 }
+    }
+	modifier = {
+        factor = 1.15
+        social_spending = 0.3
+		NOT = { social_spending = 0.4 }
+    }
+	modifier = {
+        factor = 1.20
+        social_spending = 0.4
+		NOT = { social_spending = 0.5 }
+    }
+	modifier = {
+        factor = 1.25
+        social_spending = 0.5
+		NOT = { social_spending = 0.6 }
+    }
+	modifier = {
+        factor = 1.5
+        social_spending = 0.6
+		NOT = { social_spending = 0.7 }
+    }
+	modifier = {
+        factor = 1.75
+        social_spending = 0.7
+		NOT = { social_spending = 0.8 }
+    }
+	modifier = {
+        factor = 2
+        social_spending = 0.8
+		NOT = { social_spending = 0.9 }
+    }
+	modifier = {
+        factor = 8
+        social_spending = 0.9
+		NOT = { social_spending = 1 }
     }
     modifier = {
         factor = 0.9
@@ -488,6 +581,10 @@ promote_to =
                 clergymen = 0.036
             }
         }
+		modifier = {
+			factor = 5
+			nationalvalue = pm_gentry
+		}
         group = {
             modifier = {
                 factor = 1

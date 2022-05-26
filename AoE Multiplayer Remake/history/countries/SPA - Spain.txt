@@ -1,14 +1,13 @@
 capital = 487
 primary_culture = spanish
 culture = spanish_american
-culture = catalan
 culture = basque
 culture = galician
 religion = catholic
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = nv_order
-literacy = 0.13
+literacy = 0.16
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.1
 civilized = yes
 
@@ -61,6 +60,7 @@ upper_house = {
 }
 
 decision = literacy_SPA
+decision = spa_setup
 
 govt_flag = {
     government = presidential_dictatorship

@@ -6,7 +6,7 @@ religion = catholic
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = nv_productivity
-literacy = 0.18
+literacy = 0.25
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.02
 civilized = yes
 prestige = 35
@@ -42,6 +42,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = civilizing
 
+tech_school = commerce_tech_school
 set_country_flag = catholic_country
 set_country_flag = support_habsburg_heir
 

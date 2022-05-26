@@ -724,6 +724,14 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
+			all_core = {
+				limit = {
+					NOT = {
+						owned_by = THIS
+					}
+				}
+				remove_core = THIS
+			}
 		}
 		ai_will_do = {
 			factor = 1

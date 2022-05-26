@@ -30,6 +30,11 @@ political_decisions = {
 					add_accepted_culture = ukrainian
 				}
 			}
+			ZZH = {
+				all_core = {
+					add_core = THIS
+				}
+			}
             prestige = 25
 			random_owned = {
 				limit = {
@@ -135,13 +140,9 @@ political_decisions = {
 	
 		allow = {
 			OR = {
-			war = no
+			year = 1701
 			war_with = SWE
 			war_with = SCA
-			}
-			OR = {
-			owns = 1047
-			owns = 994
 			}
 		}
 	
@@ -168,6 +169,9 @@ political_decisions = {
 			352 = { add_core = THIS }
 			351 = { add_core = THIS }
 			add_core = 3251
+			add_core = 3253
+			add_core = 994
+			add_core = 996
 			random_owned = {
 				limit = {
 					owner = {
@@ -289,7 +293,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = table_of_ranks
-				duration = -1
+				duration = 1825
 			}
 			set_country_flag = enacted_the_table_of_ranks
 		}
@@ -297,49 +301,49 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	enact_nakaz = {
-		picture = nakaz
-		potential = {
-			tag = RUS
-			NOT = {
-				has_country_flag = enacted_nakaz
-			}
-			exists = yes
-		}
-		allow = {
-			has_country_modifier = catharine_the_great
-			NOT = {
-				OR = {
-					safety_regulations = no_safety
-					safety_regulations = trinket_safety
-				}
-			}
-			NOT = {
-				OR = {
-					health_care = no_health_care
-					health_care = trinket_health_care
-				}
-			}
-			OR = {
-				upper_house_composition = party_appointed
-				upper_house_composition = appointed
-			}
-			government = absolute_monarchy
-			ruling_party_ideology = reactionary
-			war = no
-		}
-		effect = {
-			political_reform = party_appointed
-			add_country_modifier = {
-				name = nakaz
-				duration = -1
-			}
-			set_country_flag = enacted_nakaz
-		}
-		ai_will_do = {					
-		factor = 1
-		}
-	}
+	#enact_nakaz = {
+	#	picture = nakaz
+	#	potential = {
+	#		tag = RUS
+	#		NOT = {
+	#			has_country_flag = enacted_nakaz
+	#		}
+	#		exists = yes
+	#	}
+	#	allow = {
+	#		has_country_modifier = catharine_the_great
+	#		NOT = {
+	#			OR = {
+	#				safety_regulations = no_safety
+	#				safety_regulations = trinket_safety
+	#			}
+	#		}
+	#		NOT = {
+	#			OR = {
+	#				health_care = no_health_care
+	#				health_care = trinket_health_care
+	#			}
+	#		}
+	#		OR = {
+	#			upper_house_composition = party_appointed
+	#			upper_house_composition = appointed
+	#		}
+	#		government = absolute_monarchy
+	#		ruling_party_ideology = reactionary
+	#		war = no
+	#	}
+	#	effect = {
+	#		political_reform = party_appointed
+	#		add_country_modifier = {
+	#			name = nakaz
+	#			duration = -1
+	#		}
+	#		set_country_flag = enacted_nakaz
+	#	}
+	#	ai_will_do = {					
+	#	factor = 1
+	#	}
+	#}
 	claim_ruthenia = {
 		picture = ruthenia
 		potential = {

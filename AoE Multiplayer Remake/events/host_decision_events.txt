@@ -1,0 +1,97 @@
+country_event = {
+	id = 999990
+	title = "Host Nation Picked!"
+	desc = "$FROMCOUNTRY$ is now the host nation!"
+	major = yes
+	picture = "greatpowers"
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Okay"
+	}
+}
+country_event = {
+	id = 999991
+	title = "You are the host nation now"
+	desc = "Host nation status has been transferred to you"
+	picture = "greatpowers"
+	is_triggered_only = yes
+	
+	immediate = {
+		CLN = {
+			country_event = 999990
+		}
+		FROM = {
+			clr_country_flag = host_nation
+		}
+	}
+
+	option = {
+		name = "Okay"
+	}
+}
+country_event = {
+	id = 999992
+	title = "GTFO"
+	desc = "ur kicked"
+	picture = "greatpowers"
+	is_triggered_only = yes
+	
+	immediate = {
+		add_country_modifier = {
+		name = youre_kicked_mate
+		duration = -1
+}
+	}
+
+	option = {
+		name = "rip"
+	}
+}
+country_event = {
+	id = 999993
+	title = "Unsiege"
+	desc = "You will be unsieged"
+	picture = "greatpowers"
+	is_triggered_only = yes
+	
+	immediate = {
+		any_owned = {
+			limit = {
+				controlled_by_rebels = no
+			}
+			change_controller = THIS
+		}
+	}
+
+	option = {
+		name = "Okay"
+	}
+}
+country_event = {
+	id = 999994
+	title = "Siege"
+	desc = "You will siege your enemies"
+	picture = "greatpowers"
+	is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				AND = {
+					NOT = { tag = FROM }
+					NOT = { military_access = FROM }
+				}
+			}
+			any_owned = {
+				change_controller = THIS
+			}			
+		}
+		clr_country_flag = siege_country
+	}
+
+	option = {
+		name = "Okay"
+	}
+}

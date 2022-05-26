@@ -1,0 +1,264 @@
+political_decisions = {
+	become_host_nation = {
+		picture = zombie_freak115
+		alert = no
+		potential = {
+			NOT = { has_global_flag = host_nation_picked }
+		}
+	
+		allow = {
+			NOT = { has_global_flag = host_nation_picked }
+		}
+		
+		effect = {
+			set_global_flag = host_nation_picked
+			set_country_flag = host_nation
+			CLN = {
+				country_event = 999990	
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	show_host_decisions = {
+		picture = zombie_freak115
+		potential = {
+			NOT = { has_country_flag = showing_host_decisions }
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			set_country_flag = showing_host_decisions
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	hide_host_decisions = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			clr_country_flag = showing_host_decisions
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ally_all_countries = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				create_alliance = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	unally_all_countries = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				leave_alliance = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	get_militaryaccess_with_all_countries = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				military_access = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	remove_militaryaccess_with_all_countries = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				end_military_access = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	transfer_host_nation = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { military_access = THIS }
+				
+				}
+				set_country_flag = host_nation
+				country_event = 999991
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kick_players_no_milaccess = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					NOT = { military_access = THIS }
+					ai = no
+				}
+				country_event = 999992
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	unsige_country_no_milaccess = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					NOT = { military_access = THIS }
+				}
+				country_event = 999993
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	choose_country_to_siege = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { military_access = THIS }
+				}
+				set_country_flag = siege_country
+				THIS = {
+					set_country_flag = has_chosen_siege_country
+				}
+				
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	siege_country = {
+		picture = zombie_freak115
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+			has_country_flag = has_chosen_siege_country
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					has_country_flag = siege_country
+				}
+				country_event = 999994
+			}
+			clr_country_flag = has_chosen_siege_country
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

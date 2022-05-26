@@ -89,6 +89,99 @@ country_migration_target =
         factor = 2.0
         has_pop_culture = THIS
     }
+	modifier = {
+        factor = 0.1
+		NOT = { social_spending = 0.03 }
+    }
+	modifier = {
+        factor = 0.2
+        social_spending = 0.02
+		NOT = { social_spending = 0.03 }
+    }
+	modifier = {
+        factor = 0.3
+        social_spending = 0.03
+		NOT = { social_spending = 0.04 }
+    }
+	modifier = {
+        factor = 0.4
+        social_spending = 0.04
+		NOT = { social_spending = 0.05 }
+    }
+	modifier = {
+        factor = 0.5
+        social_spending = 0.05
+		NOT = { social_spending = 0.06 }
+    }
+	modifier = {
+        factor = 0.6
+        social_spending = 0.06
+		NOT = { social_spending = 0.07 }
+    }
+	modifier = {
+        factor = 0.7
+        social_spending = 0.07
+		NOT = { social_spending = 0.08 }
+    }
+	modifier = {
+        factor = 0.8
+        social_spending = 0.08
+		NOT = { social_spending = 0.09 }
+    }
+	modifier = {
+        factor = 0.9
+        social_spending = 0.09
+		NOT = { social_spending = 0.1 }
+    }
+	modifier = {
+        factor = 2.0
+        social_spending = 1
+    }
+	modifier = {
+        factor = 1.05
+        social_spending = 0.1
+		NOT = { social_spending = 0.2 }
+    }
+	modifier = {
+        factor = 1.1
+        social_spending = 0.2
+		NOT = { social_spending = 0.3 }
+    }
+	modifier = {
+        factor = 1.15
+        social_spending = 0.3
+		NOT = { social_spending = 0.4 }
+    }
+	modifier = {
+        factor = 1.20
+        social_spending = 0.4
+		NOT = { social_spending = 0.5 }
+    }
+	modifier = {
+        factor = 1.25
+        social_spending = 0.5
+		NOT = { social_spending = 0.6 }
+    }
+	modifier = {
+        factor = 1.5
+        social_spending = 0.6
+		NOT = { social_spending = 0.7 }
+    }
+	modifier = {
+        factor = 1.75
+        social_spending = 0.7
+		NOT = { social_spending = 0.8 }
+    }
+	modifier = {
+        factor = 2
+        social_spending = 0.8
+		NOT = { social_spending = 0.9 }
+    }
+	modifier = {
+        factor = 8
+        social_spending = 0.9
+		NOT = { social_spending = 1 }
+    }
     modifier = {
         factor = 1.2
         is_greater_power = yes
@@ -604,6 +697,14 @@ promote_to =
     soldiers =
     {
         factor = 0.01
+		modifier = {
+			factor = 5
+			nationalvalue = pm_militarist
+		}
+		#modifier = {
+		#	factor = 5
+		#	has_province_flag = warsaw
+		#}
         group = {
             modifier = {
                 factor = -4
@@ -675,21 +776,25 @@ promote_to =
 		group = {
             modifier = {
                 factor = 2
-                pensions = trinket_pensions
+                country = { pensions = trinket_pensions }
             }
             modifier = {
                 factor = 4
-                pensions = low_pensions
+                country = { pensions = low_pensions }
             }
             modifier = {
                 factor = 6
-                pensions = acceptable_pensions
+                country = { pensions = acceptable_pensions }
             }
 			modifier = {
                 factor = 8
-                pensions = good_pensions
+                country = { pensions = good_pensions }
             }
         }
+		modifier = {
+			factor = -10
+			has_crime = foreign_service_pressing
+		}
         group = {
             modifier = {
                 factor = -2
@@ -1261,11 +1366,11 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
         }
         modifier = {
             factor = 0.9
@@ -1309,7 +1414,7 @@ ideologies = {
         factor = 1
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             NOT = { ruling_party_ideology = communist }
         }
         modifier = {
@@ -1501,7 +1606,7 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
         }
         modifier = {
             factor = 1.1
@@ -1913,6 +2018,10 @@ issues =
                 military_score = THIS
             }
         }
+		modifier = {
+            factor = 1.3
+            nationalvalue = pm_militarist
+        }
     }
     pro_military = {
         factor = 1
@@ -2237,27 +2346,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_noblemen
             consciousness = 9
         }
         modifier = {
@@ -2282,27 +2391,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 9
         }
         modifier = {
@@ -2322,27 +2431,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 9
         }
         modifier = {
