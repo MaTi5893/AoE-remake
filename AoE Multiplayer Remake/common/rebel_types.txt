@@ -2935,8 +2935,6 @@ noble_rebels = {
 	ideology = conservative
 	
 	allow_all_cultures = yes
-	allow_all_religions = yes
-	allow_all_ideologies = yes
 	
 	resilient = yes
 	reinforcing = yes				
@@ -3024,12 +3022,8 @@ noble_rebels = {
 			country = { safety_regulations = no_safety }
 		}
 		modifier = {
-			factor = -100
+			factor = 0
 			country = { civilized = no }
-		}
-		modifier = {
-			factor = -100
-			location = { is_colonial = yes }
 		}
 		modifier = {
 			location = {
@@ -3038,21 +3032,25 @@ noble_rebels = {
 			factor = 50
 		}
 		modifier = {
+			factor = 0
+			pop_majority_ideology = liberal
+		}
+		modifier = {
 			factor = 2
 			pop_majority_ideology = conservative
 		}
 		modifier = {
-			factor = -10
+			factor = 0
 			location = {
 				is_colonial = yes
 			}
 		}
 		modifier = {
-			factor = -2
+			factor = 0
 			pop_majority_ideology = reactionary
 		}
 		modifier = {
-			factor = -10
+			factor = 0
 			type = slaves
 		}
 	}

@@ -16,6 +16,7 @@ political_decisions = {
             set_country_flag = bourbon_claims_on_italy
         }
     }
+
     expel_the_jesuits = {
         picture = jesuits
         potential = {
@@ -207,6 +208,7 @@ political_decisions = {
 				value = 0.30
 			}
 			political_reform = appointed
+			add_accepted_culture = catalan
             set_country_flag = nueva_planta_decrees
             prestige = 25
         }
@@ -276,10 +278,6 @@ political_decisions = {
 							name = hispanic_unity
 							duration = 7300
 						}
-					}
-					add_country_modifier = {
-						name = education_buff
-						duration = 7300
 					}
 				}
 			}
