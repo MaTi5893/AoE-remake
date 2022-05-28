@@ -52,8 +52,8 @@ political_decisions = {
 			war_policy = jingoism
 		}
 		effect = {
-			badboy = 3
-			2583 = { add_core = THIS }
+			badboy = 1
+			MON = { all_core = { add_core = THIS } }
 			set_country_flag = subjugated_montenegro
 		}
 	}

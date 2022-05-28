@@ -7,7 +7,7 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				civilized = yes
+				state_n_government = 1
 				year = 1722
 				capital_scope = {
 					NOT = { controlled_by = THIS }
@@ -66,27 +66,22 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-            OR = {
-                military_score = 50
-                is_greater_power = yes
-                owns = 926
-            }
+            ideological_thought = 1
+            owns = 926
         }
         effect = {
             TUR_935 = {
                 add_core = THIS
             }
-            934 = { add_core = THIS }
-            929 = { add_core = THIS }
-            926 = { add_core = THIS }
+            923 = { add_core = THIS }
+            924 = { add_core = THIS }
+            925 = { add_core = THIS }
             927 = { add_core = THIS }
-            892 = { add_core = THIS }
-            add_core = 890
-            add_core = 892
-            TUR_923 = {
+	    928 = { add_core = THIS }
+            TUR_931 = {
                 add_core = THIS
             }
-            badboy = 10
+            badboy = 8
             set_country_flag = claimed_iraq
         }
         ai_will_do = { factor = 1 }
@@ -100,35 +95,72 @@ political_decisions = {
 				tag = PRQ
 				tag = PRA
 				tag = PRZ
-				AND = {
-					tag = HTK
-					has_country_flag = conquest_of_persia
-				}
             }
             NOT = { has_country_flag = indian_frontiers }
             exists = yes
         }
         allow = {
             war_policy = jingoism
-            OR = {
-                military_score = 60
-                AND = {
-                    AFG = { exists = no }
-                    1236 = {
-                        controlled_by = THIS
-                    }
-                }
-            }
+	    1218 = { owned_by = THIS }
+	    1209 = { owned_by = THIS }
+	    OR = {
+           	1236 = { controlled_by = THIS }
+	   		AND = {
+	   			1228 = { owned_by = THIS }
+	   			1288 = { owned_by = THIS }
+	   			1227 = { owned_by = THIS }
+	      			}
+	   	}
+	    AND = {
+	    	AFG = { exists = no }
+		HTK = { exists = no }
+		}
         }
         effect = {
-            KAL_1221 = {
-                add_core = THIS
-            }
-            #AFG_1209 = {
-            #    add_core = THIS
-            #}
-            AFG = { all_core = { add_core = THIS } }
-            badboy = 10
+            KAL_1221 = { add_core = THIS }
+	    AFG_1217 = { add_core = THIS }
+            SIN_1288 = { add_core = THIS }
+	    PAN_1227 = { add_core = THIS }
+	    PAN_1224 = { add_core = THIS }
+	    1265 = { add_core = THIS }
+	    1211 = { add_core = THIS }
+            badboy = 20
+            set_country_flag = indian_frontiers
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    indian_frontiers_hotak = {
+        picture = persia_map
+        potential = {
+            tag = HTK
+	    has_country_flag = conquest_of_persia	
+            NOT = { has_country_flag = indian_frontiers }
+            exists = yes
+        }
+        allow = {
+           war_policy = jingoism
+	   OR = {
+           	1236 = { controlled_by = THIS }
+	   		AND = {
+	   			1228 = { owned_by = THIS }
+	   			1288 = { owned_by = THIS }
+	   			1227 = { owned_by = THIS }
+	      			}
+	   	}
+           AFG = { exists = no }	
+        }
+        effect = {
+            KAL_1221 = { add_core = THIS }
+	    AFG_1217 = { add_core = THIS }
+            SIN_1288 = { add_core = THIS }
+	    PAN_1227 = { add_core = THIS }
+	    PAN_1224 = { add_core = THIS }
+	    1293 = { add_core = THIS }
+	    1265 = { add_core = THIS }
+	    1266 = { add_core = THIS }
+	    1267 = { add_core = THIS }
+            badboy = 16
             set_country_flag = indian_frontiers
         }
         ai_will_do = { factor = 1 }
@@ -303,43 +335,17 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-            civilized = yes
-            OR = {
-                owns = 1090
-                KAK = { vassal_of = THIS }
-            }
-            OR = {
-                owns = 1093
-                KKH = { vassal_of = THIS }
-            }
-            #owns = 2548
-            owns = 1100
+	    KAK = { all_core = { owned_by = THIS } }
+            KKH = { all_core = { owned_by = THIS } }
+            owns = 885
             owns = 1102
             owns = 1052
         }
         effect = {
-            random_owned = {
-                owner = {
-                    limit = {
-                        KAK = { vassal_of = THIS }
-                    }
-                    inherit = KAK
-                }
-            }
-            random_owned = {
-                owner = {
-                    limit = {
-                        KKH = { vassal_of = THIS }
-                    }
-                    inherit = KKH
-                }
-            }
-            KAK = { all_core = { add_core = THIS } }
-            KKH = { all_core = { add_core = THIS } }
+            GEO = { all_core = { add_core = THIS } }
             1053 = { add_core = THIS }
-            1052 = { add_core = THIS }
-            885 = { add_core = THIS }
-            badboy = 10
+            1055 = { add_core = THIS }
+            886 = { add_core = THIS }
             set_country_flag = persian_caucases
         }
         ai_will_do = { factor = 1 }
@@ -350,18 +356,14 @@ political_decisions = {
         potential = {
             tag = PER
             NOT = { has_country_flag = safavid_ambition }
+	    has_country_flag = claimed_iraq
             exists = yes
         }
         allow = {
             war_policy = jingoism
-            OR = {
-                military_score = 80
-                civilized = yes
-                AND = {
-                owns = 926
-                owns = 923
-                }
-            }
+	    owns = 926
+            owns = 923
+            TUR_885 = { owned_by = THIS }
         }
         effect = {
             904 = { add_core = THIS }
@@ -384,57 +386,38 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-            military_score = 80
-            is_greater_power = yes
+	    owns = 1131
             owns = 1218
             owns = 1221
             owns = 1213
-            1236 = {
-                owner = {
-                    OR = {
-                        AND = {
-                            is_greater_power = no
-                            is_secondary_power = no
-                            overlord = {
-                                is_greater_power = no
-                                is_secondary_power = no
-                            }
-                            sphere_owner = {
-                                is_greater_power = no
-                                is_secondary_power = no
-                            }
-                        }
-                        tag = THIS
-                    }
-                }
-            }
+	    owns = 1209
+	    AND = {
+	    	AFG = { exists = no }
+		HTK = { exists = no }
+		}
         }
         effect = {
-            SIN_1288 = {
-                add_core = THIS
-            }
-            PAN_1227 = {
-                add_core = THIS
-            }
-            AFG_1214 = {
-                add_core = THIS
-            }
-            RUS_1196 = {
-                add_core = THIS
-            }
-            #3278 = { add_core = THIS }
+	    KAL_1221 = { add_core = THIS }
+	    AFG_1209 = { add_core = THIS }
+	    RUS_1196 = { add_core = THIS }
+	    1265 = { add_core = THIS }
+	    1266 = { add_core = THIS }
+	    1267 = { add_core = THIS }
+	    1211 = { add_core = THIS }
+	    1194 = { add_core = THIS }
+            932 = { add_core = THIS }
             1164 = { add_core = THIS }
             1163 = { add_core = THIS }
             1162 = { add_core = THIS }
             1165 = { add_core = THIS }
-            #12 = { add_core = THIS }
+            935 = { add_core = THIS }
             1167 = { add_core = THIS }
-            #2664 = { add_core = THIS }
+            1168 = { add_core = THIS }
             1166 = { add_core = THIS }
             1169 = { add_core = THIS }
             1192 = { add_core = THIS }
             1191 = { add_core = THIS }
-            badboy = 20
+            badboy = 12
             set_country_flag = asfharid_ambition
         }
         ai_will_do = { factor = 1 }
