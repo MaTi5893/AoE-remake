@@ -54,7 +54,7 @@ political_decisions = {
 			add_core = 764
 			add_core = 763
             change_tag = SAR
-            add_accepted_culture = south_italian
+			#add_accepted_culture = south_italian
 			set_country_flag = NO_FRENCHIES
             any_pop = {
                 limit = { is_culture_group = italian }
@@ -333,54 +333,54 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	embrace_france = {
-		picture = embrace_france
-		potential = {
-			OR = {
-			tag = SVY
-			tag = SAR
-			}
-			NOT = { primary_culture = arpitan }
-			owns = 465
-			NOT = { has_country_flag = NO_FRENCHIES }
-		}
-		allow = {
-			war = no
-			state_n_government = 1
-			rank = 10
-		}
-		effect = {
-			primary_culture = arpitan
-			add_accepted_culture = north_italian
-			add_accepted_culture = occitan
-			add_accepted_culture = gascon
-			add_core = 454
-			add_core = 469
-			add_core = 471
-			add_core = 470
-			prestige = 5
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							tag = BOR
-							exists = BOR
-						}
-						AND = {
-							tag = FRA
-							exists = FRA
-						}
-					}
-				}
-				relation = {
-					who = SVY
-					value = -135
-				}
-			}
-			capital = 465
-		}
-		ai_will_do = { factor = 1 }
-	}
+	#embrace_france = {
+	#	picture = embrace_france
+	#	potential = {
+	#		OR = {
+	#		tag = SVY
+	#		tag = SAR
+	#		}
+	#		NOT = { primary_culture = arpitan }
+	#		owns = 465
+	#		NOT = { has_country_flag = NO_FRENCHIES }
+	#	}
+	#	allow = {
+	#		war = no
+	#		state_n_government = 1
+	#		rank = 10
+	#	}
+	#	effect = {
+	#		primary_culture = arpitan
+	#		add_accepted_culture = north_italian
+	#		add_accepted_culture = occitan
+	#		add_accepted_culture = gascon
+	#		add_core = 454
+	#		add_core = 469
+	#		add_core = 471
+	#		add_core = 470
+	#		prestige = 5
+	#		random_country = {
+	#			limit = {
+	#				OR = {
+	#					AND = {
+	#						tag = BOR
+	#						exists = BOR
+	#					}
+	#					AND = {
+	#						tag = FRA
+	#						exists = FRA
+	#					}
+	#				}
+	#			}
+	#			relation = {
+	#				who = SVY
+	#				value = -135
+	#			}
+	#		}
+	#		capital = 465
+	#	}
+	#	ai_will_do = { factor = 1 }
+	#}
 	
 	perpetual_peace_spa = {
 		potential = {

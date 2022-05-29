@@ -24,7 +24,12 @@ political_decisions = {
 					}
 				}
 				owner = {
-				badboy = 10
+					badboy = 10
+					add_casus_belli = {
+						target = KOR
+						type = conquest
+						months = 12
+					}
 				}
 			}
 			random_country = { 
@@ -35,11 +40,6 @@ political_decisions = {
 				annex_to = THIS
 			}
 			prestige = 15
-			KOR = {
-				all_core = {
-					add_core = THIS
-				}
-			}
 		}
 	}
 	

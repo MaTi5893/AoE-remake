@@ -186,7 +186,7 @@ small_nation = {
         NOT = {
             OR = {
                 #is_culture_group = germanic
-                #is_culture_group = scandinavian
+                is_culture_group = scandinavian
                 total_pops = 3750000 #3.75 million POPs/15 million population
             }
         }
@@ -238,22 +238,6 @@ average_nation = {
     #mobilisation_size = -0.01
     tax_efficiency = -0.05 #5% malus
     #max_tariff = -0.1 #10%
-    icon = 6
-}
-
-large_nation = {
-    trigger = {
-        year = 1730
-        civilized = yes
-        total_pops = 12500000 #12.5 million POPs/50 million population
-        ai = no
-    }
-    #global_population_growth = -0.001
-    supply_consumption = 0.1
-    #mobilisation_size = -0.02
-    tax_efficiency = -0.05 #5% malus
-    max_tariff = -0.05 #5% was 15%
-    mobilization_economy_impact = 0.1
     icon = 6
 }
 

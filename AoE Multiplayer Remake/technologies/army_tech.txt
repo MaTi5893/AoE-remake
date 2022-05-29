@@ -85,10 +85,12 @@ deep_defense_system = {
 }
 infiltration = {
     area = army_doctrine
-    year = 1750
+    year = 1755
     cost = 18000
     unciv_military = yes
     army_base = {
+		attack = 2
+		defence = 2
         supply_consumption = 0.20
     }
     #dig_in_cap = 1
@@ -260,11 +262,15 @@ machine_guns = {
 }
 bolt_action_rifles = {
     area = light_armament
-    year = 1750
+    year = 1755
     cost = 18000
     unciv_military = yes
     unit = 1
-
+	
+	army_base = {
+		attack = 2
+		defence = 2
+	}
     combat_width = -1
 
     ai_chance = {
@@ -434,7 +440,7 @@ steel_breech_loaded_artillery = {
 }
 indirect_artillery_fire = {
     area = heavy_armament
-    year = 1745
+    year = 1755
     cost = 20000
     unciv_military = yes
     artillery = {
@@ -453,7 +459,7 @@ indirect_artillery_fire = {
 }
 heavy_armament_dunno = {
     area = heavy_armament
-    year = 1760
+    year = 1770
     cost = 24200
     unciv_military = yes
     artillery = {
@@ -475,7 +481,7 @@ heavy_armament_dunno = {
 }
 heavy_armament_7 = {
     area = heavy_armament
-    year = 1775
+    year = 1790
     cost = 29200
     unciv_military = yes
     tank = {
@@ -491,7 +497,7 @@ heavy_armament_7 = {
 }
 heavy_armament_8 = {
     area = heavy_armament
-    year = 1790
+    year = 1805
     cost = 32200
     unciv_military = yes
     artillery = {
@@ -580,7 +586,7 @@ military_logistics = {
 }
 military_directionism = {
     area = military_science
-    year = 1750
+    year = 1755
     cost = 18000
     unciv_military = yes
 
@@ -708,7 +714,7 @@ army_risk_management = {
 }
 army_nco_training = {
     area = army_leadership
-    year = 1750
+    year = 1755
     cost = 18000
     unciv_military = yes
     morale = 0.25
@@ -743,7 +749,7 @@ great_war_experience = {
 }
 army_leadership_7 = {
     area = army_leadership
-    year = 1795
+    year = 1790
     cost = 25200
     unciv_military = yes
     morale = 0.5
