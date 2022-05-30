@@ -709,7 +709,12 @@ political_decisions = {
             change_tag = GER
             add_accepted_culture = north_german
             add_accepted_culture = south_german
-			country_event = 800002
+			any_country = {
+					limit = {
+						has_country_flag = hre_emperor
+					}
+					country_event = 800002
+				}
             any_country = {
                 limit = {
                     is_culture_group = germanic
@@ -728,13 +733,14 @@ political_decisions = {
     }
 
 	norddeutscher_bund = {
+	    picture = prussia_king
 
 		potential = {
-			culture = north_german
+			primary_culture = north_german
 			is_greater_power = yes
-			NOT = NNN
-			NOT = GER
-			NOT = has_country_flag = { norddeutscher_bund }
+			NOT = { tag = NNN }
+			NOT = { tag = GER }
+			NOT = { has_country_flag = norddeutscher_bund }
 		}
 
 		allow = {
@@ -748,7 +754,12 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = norddeutscher_bund
-			country_event = 800002
+				any_country = {
+					limit = {
+						has_country_flag = hre_emperor
+					}
+					country_event = 800002
+				}
 			PRU_546 = { add_core = THIS }
 			PRU_549 = { add_core = THIS }
 			SAX_556 = { add_core = THIS }
