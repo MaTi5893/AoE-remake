@@ -709,6 +709,7 @@ political_decisions = {
             change_tag = GER
             add_accepted_culture = north_german
             add_accepted_culture = south_german
+			country_event = 800002
             any_country = {
                 limit = {
                     is_culture_group = germanic
@@ -725,4 +726,70 @@ political_decisions = {
             factor = 1
         }
     }
+
+	norddeutscher_bund = {
+
+		potential = {
+			culture = north_german
+			is_greater_power = yes
+			NOT = NNN
+			NOT = GER
+			NOT = has_country_flag = { norddeutscher_bund }
+		}
+
+		allow = {
+			revolution_n_counterrevolution = 1
+			owns = 549
+			owns = 369
+			owns = 580
+			owns = 558
+			owns = 564
+		}
+
+		effect = {
+			set_country_flag = norddeutscher_bund
+			country_event = 800002
+			PRU_546 = { add_core = THIS }
+			PRU_549 = { add_core = THIS }
+			SAX_556 = { add_core = THIS }
+			SAX_558 = { add_core = THIS }
+			PRU_553 = { add_core = THIS }
+			HAM_528 = { add_core = THIS }
+			HOL_369 = { add_core = THIS }
+			PRU_544 = { add_core = THIS }
+			HAN_540 = { add_core = THIS }
+			PRU_581 = { add_core = THIS }
+			HAN_534 = { add_core = THIS }
+			HES_2560 = { add_core = THIS }
+			PRU_554 = { add_core = THIS }
+			PRU_578 = { add_core = THIS }
+			PRU_572 = { add_core = THIS }
+			PRU_575 = { add_core = THIS }
+			PRU_578 = { add_core = THIS }
+			random_owned = {
+					limit = {
+						owner = {
+							any_owned_province = { is_core = SWE is_core = THIS }
+						}
+					}
+				owner = {
+					all_core = {
+						remove_core = SWE
+					}
+				}
+			}
+			random_owned = {
+					limit = {
+						owner = {
+							any_owned_province = { is_core = DNN is_core = THIS }
+						}
+					}
+				owner = {
+					all_core = {
+						remove_core = DNN
+					}
+				}
+			}
+		}
+	}
 }
