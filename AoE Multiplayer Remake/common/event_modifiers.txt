@@ -684,39 +684,22 @@ caudillo_leaders = {
 }
 
 kinda_bad_badboy = {
-    import_cost = 2
-    loan_interest = 3
-    diplomatic_points_modifier = -0.3
-    factory_owner_cost = 0.3
-    global_immigrant_attract = -0.5
-    non_accepted_pop_consciousness_modifier = 0.4
-    non_accepted_pop_militancy_modifier = 0.2
-    political_reform_desire = 0.5
-    cb_generation_speed_modifier = -0.1
-    icon = 8
-}
-
-
-bad_badboy = {
-    import_cost = 4
-    loan_interest = 4
-    tariff_efficiency_modifier = -0.40
-    mobilisation_economy_impact = 1
-    diplomatic_points_modifier = -0.6
-    factory_owner_cost = 1
-    global_immigrant_attract = -2.0
-    global_pop_consciousness_modifier = 0.05
-    non_accepted_pop_consciousness_modifier = 0.8
-    non_accepted_pop_militancy_modifier = 0.4
-    political_reform_desire = 0.8
-    org_regain = -0.1
-    land_organisation = -0.02
-    naval_organisation = -0.02
-    prestige = -0.06
-    war_exhaustion = 0.9
-    research_points_modifier = -0.2
-    cb_generation_speed_modifier = -0.3
-    icon = 8
+	loan_interest = 4
+	tariff_efficiency_modifier = -0.40
+	mobilisation_economy_impact = 2
+	diplomatic_points_modifier = -0.6
+	factory_owner_cost = 1
+	global_immigrant_attract = -4.0
+	org_regain = -0.3
+	land_organisation = -0.3
+	naval_organisation = -0.3
+	factory_throughput = -0.5
+	RGO_throughput = -0.5
+	prestige = -0.2
+	war_exhaustion = 2
+	research_points_modifier = -0.4
+	cb_generation_speed_modifier = -0.3
+	icon = 8
 }
 
 the_big_ben = {
@@ -5370,7 +5353,7 @@ patriots_couse_trouble = {
     icon = 20
 }
 orangist_domination = {
-    bad_badboy = -0.05
+    badboy = -0.05
     ruling_party_support = 0.35
     prestige = 0.05
     global_pop_consciousness_modifier = 0.01
@@ -6075,7 +6058,7 @@ illegitimate_heir = {
 }
 ####Hre reforms###
 hre_mendling = {
-    bad_badboy = 0.02
+    badboy = 0.02
     icon = 6
 }
 education_buff = {
@@ -6088,7 +6071,7 @@ reichsregiment = {
 }
 the_hofgericht = {
     diplomatic_points_modifier = 0.1
-    bad_badboy = -0.02
+    badboy = -0.02
     icon = 5
 }
 erbkaisertum = {
@@ -6776,51 +6759,6 @@ proclamation_of_polaniec = {
 }
 craftsmen_fix_cooldown = {
     icon = 15
-}
-kinda_bad_badboy = {
-    import_cost = 4
-    loan_interest = 4
-    tariff_efficiency_modifier = -0.40
-    mobilisation_economy_impact = 2
-    diplomatic_points_modifier = -0.6
-    factory_owner_cost = 1
-    global_immigrant_attract = -4.0
-    global_pop_consciousness_modifier = 0.05
-    non_accepted_pop_consciousness_modifier = 0.8
-    non_accepted_pop_militancy_modifier = 0.4
-    org_regain = -0.2
-    land_organisation = -0.04
-    naval_organisation = -0.04
-    factory_throughput = -0.5
-    RGO_throughput = -0.5
-    prestige = -0.2
-    war_exhaustion = 2
-    research_points_modifier = -0.3
-    cb_generation_speed_modifier = -0.3
-    icon = 8
-}
-
-bad_badboy = {
-    import_cost = 4
-    loan_interest = 4
-    tariff_efficiency_modifier = -0.40
-    mobilisation_economy_impact = 2
-    diplomatic_points_modifier = -0.6
-    factory_owner_cost = 1
-    global_immigrant_attract = -4.0
-    global_pop_consciousness_modifier = 0.05
-    non_accepted_pop_consciousness_modifier = 0.8
-    non_accepted_pop_militancy_modifier = 0.4
-    org_regain = -0.2
-    land_organisation = -0.04
-    naval_organisation = -0.04
-    factory_throughput = -0.5
-    RGO_throughput = -0.5
-    prestige = -0.2
-    war_exhaustion = 2
-    research_points_modifier = -0.3
-    cb_generation_speed_modifier = -0.3
-    icon = 8
 }
 estates_help_plead_cooldown = {
     icon = 8
