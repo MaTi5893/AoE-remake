@@ -90,6 +90,7 @@ great_war_penalty_cb
 demand_concession_capital
 war_reparations
 take_capital
+take_capital_china
 conquest_low
 negotiated_transfer
 #steal_puppet
@@ -100,6 +101,7 @@ acquire_core_substate_region
 seperate_truce
 demand_concession_china
 demand_concession_capital_china
+acquire_state_china
 }
 
 gunboat = {
@@ -1645,6 +1647,7 @@ acquire_state = {
         number_of_states = 2 # annex if you want their last state
         any_owned_province = {
             not = { is_core = THIS }
+			NOT = { is_core = CHI }
             is_colonial = no
         }
         any_state = {
@@ -1689,6 +1692,106 @@ acquire_state = {
     allowed_states = {
         is_colonial = no
         any_owned_province = {
+            not = { is_core = THIS }
+			NOT = { is_core = CHI }
+            is_colonial = no
+        }
+        not = { any_owned_province = { is_capital = yes } }
+    }
+
+    allowed_states_in_crisis = {
+        any_owned_province = {
+            any_neighbor_province = {
+                owner = { tag = THIS }
+            }
+        }
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_TAKE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+
+# Gain control of State --- China
+acquire_state_china = {
+    sprite_index = 6
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 0.5
+
+    badboy_factor = 3.4
+    prestige_factor = 2
+    peace_cost_factor = 2.2
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 60
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        number_of_states = 2 # annex if you want their last state
+        any_owned_province = {
+            not = { is_core = THIS }
+			is_core = CHI
+            is_colonial = no
+        }
+        any_state = {
+            is_colonial = no
+            NOT = { any_owned_province = { is_capital = yes } }
+        }
+        OR = {
+            THIS = { civilized = no }
+            civilized = yes
+        }
+        THIS = { NOT = { has_country_modifier = neutrality } }
+		NOT = { has_country_modifier = neutrality }
+        OR = {
+            THIS = { government = fascist_dictatorship }
+            THIS = { government = proletarian_dictatorship }
+            THIS = { civilized = no }
+            war_with = THIS
+            NOT = { relation = { who = THIS value = 0 } }
+            THIS = { ai = no }
+        }
+        #AI anti-military will not use this
+        OR = {
+            THIS = { ai = no }
+            THIS = { NOT = { war_policy = anti_military } }
+        }
+        #AI will not use this CB when duking it out over hegemony
+        OR = {
+            THIS = { ai = no }
+            NOT = {
+                AND = {
+                    culture_has_union_tag = yes
+                    is_culture_group = THIS
+                    cultural_union = { exists = no }
+                    is_greater_power = yes
+                    THIS = { is_greater_power = yes }
+                }
+            }
+        }
+        #is_independant = yes
+    }
+
+    allowed_states = {
+        is_colonial = no
+        any_owned_province = {
+			is_core = CHI
             not = {    is_core = THIS }
             is_colonial = no
         }
@@ -3672,6 +3775,7 @@ demand_concession_casus_belli = {
 # Demand Concession china
 demand_concession_china = {
 	sprite_index = 7
+	is_triggered_only = yes
 	months = 0
 	construction_speed = 1.2
 	crisis = no
@@ -3878,6 +3982,90 @@ take_capital = {
             not = { is_core = THIS }
             is_colonial = no
         }
+		any_owned_province = {
+			is_capital = yes
+			NOT = { is_core = CHI }
+		}
+        OR = {
+            AND = {
+                civilized = yes
+                THIS = {
+                    civilized = yes
+                }
+            }
+            AND = {
+                civilized = no
+                THIS = {
+                    civilized = no
+                }
+            }
+        }
+    }
+
+    allowed_states = {
+        is_colonial = no
+        any_owned_province = {
+            not = { is_core = THIS }
+            is_colonial = no
+			NOT = { is_core = CHI }
+        }
+        any_owned_province = { is_capital = yes }
+    }
+
+    allowed_states_in_crisis = {
+        any_owned_province = {
+            any_neighbor_province = {
+                owner = { tag = THIS }
+            }
+        }
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_TAKE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+
+take_capital_china = {
+    sprite_index = 6
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 0.25
+
+    badboy_factor = 4
+    prestige_factor = 10
+    peace_cost_factor = 1
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 60
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+        NOT = { is_our_vassal = THIS }
+        number_of_states = 2 # annex if you want their last state
+        any_owned_province = {
+            not = { is_core = THIS }
+            is_colonial = no
+        }
+		any_owned_province = {
+			is_capital = yes
+			is_core = CHI
+		}
         OR = {
             AND = {
                 civilized = yes
@@ -3899,6 +4087,7 @@ take_capital = {
         any_owned_province = {
             not = {    is_core = THIS }
             is_colonial = no
+			is_core = CHI
         }
         any_owned_province = { is_capital = yes }
     }
@@ -3953,6 +4142,10 @@ demand_concession_capital = {
             not = { is_core = THIS }
             is_colonial = no
         }
+		any_owned_province = {
+			is_capital = yes
+			NOT = { is_core = CHI }
+		}
         civilized = no
         THIS = {
             civilized = yes
@@ -4020,6 +4213,10 @@ demand_concession_capital_china = {
             not = { is_core = THIS }
             is_colonial = no
         }
+		any_owned_province = {
+			is_capital = yes
+			is_core = CHI
+		}
         civilized = no
         THIS = {
             civilized = yes
