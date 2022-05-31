@@ -691,6 +691,15 @@ political_decisions = {
 				}
 				literacy = 0.5
 			}
+			any_pop = {
+				limit = {
+					OR = {
+					culture = north_italian
+					culture = south_italian
+					}
+				}
+				literacy = 0.3
+			}
 		}
 	}
 	

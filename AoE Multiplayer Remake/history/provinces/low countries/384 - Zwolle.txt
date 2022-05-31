@@ -4,3 +4,9 @@ add_core = NET
 trade_goods = fish
 life_rating = 35
 naval_base = 3
+state_building = {
+    level = 1
+    building = clipper_shipyard
+    upgrade = yes
+}
+

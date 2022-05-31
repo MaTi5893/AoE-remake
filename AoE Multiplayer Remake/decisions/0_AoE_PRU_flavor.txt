@@ -149,7 +149,7 @@ political_decisions = {
                 name = soldier_king_reforms
                 duration = -1
             }
-            set_country_flag = soldier_king_reforms
+            set_country_flag = allow_6_procent_soldiers
             any_owned = {
                 limit = {
                     OR = {
@@ -227,6 +227,7 @@ political_decisions = {
             692 = {
                 add_core = THIS
             }
+			add_core = 700
         }
         ai_will_do = {
         factor = 1

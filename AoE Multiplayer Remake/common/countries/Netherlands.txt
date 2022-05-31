@@ -62,6 +62,21 @@ party = {
 }
 
 party = {
+    name = "Reformists"
+    start_date = 1740.1.1
+    end_date = 2000.1.1
+
+    ideology = socialist
+
+    social_policy = welfare_state
+    economic_policy = state_capitalism
+    trade_policy = protectionism
+    religious_policy = pluralism
+    citizenship_policy = full_citizenship
+    war_policy = pacifism
+}
+
+party = {
     name = "Patriot Party"
     start_date = 1740.1.1
     end_date = 2000.1.1
@@ -83,7 +98,7 @@ party = {
 
     ideology = reactionary
 
-    social_policy = populist_welfare
+    social_policy = colonial_spending_policy
     economic_policy = state_capitalism
     trade_policy = free_trade
     religious_policy = moralism

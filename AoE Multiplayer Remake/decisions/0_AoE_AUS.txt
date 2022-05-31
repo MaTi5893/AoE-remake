@@ -325,6 +325,14 @@ political_decisions = {
             GLM = {
                 all_core = { add_core = THIS }
             }
+			any_owned = {
+				limit = {
+					any_pop = {
+						pop_majority_culture = south_german
+					}
+				}
+				add_core = THIS
+			}
 			random_owned = {
 				limit = {
 					owner = {
