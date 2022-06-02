@@ -114,6 +114,15 @@ holy_roman_emperor = {
     icon = 9
 }
 
+jacobin_hlr_emperor = {
+	trigger = {
+        has_country_flag = hre_emperor
+		is_ideology_enabled = communist
+    }
+	mobilisation_size = -0.02
+	diplomatic_influence = -0.15
+}
+
 townes_larp = {
 	trigger = {
 		OR = {

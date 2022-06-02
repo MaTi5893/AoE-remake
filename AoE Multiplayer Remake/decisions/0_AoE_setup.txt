@@ -498,12 +498,26 @@ political_decisions = {
 		}
 		effect = {
 			NET = {
-				any_pop = {
+				any_owned = {
 					limit = {
-						has_pop_culture = dutch
-						type = soldiers
+						is_core = THIS
 					}
-					reduce_pop = 4
+					any_pop = {
+						limit = {
+							culture = dutch
+							type = soldiers
+						}
+						reduce_pop = 4.5
+					}
+				}
+				capital_scope = {
+					any_pop = {
+						limit = {
+							culture = dutch
+							type = soldiers
+						}
+						reduce_pop = 4.5
+					}
 				}
 			}
 		}
@@ -699,6 +713,19 @@ political_decisions = {
 					}
 				}
 				literacy = 0.3
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						culture = north_italian
+						culture = south_italian
+						culture = wallonian
+						culture = dutch
+						culture = flemish
+					}
+					type = soldiers
+				}
+				reduce_pop = 0.45
 			}
 		}
 	}
