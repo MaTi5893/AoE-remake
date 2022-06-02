@@ -571,6 +571,26 @@ improved_heavy_first_rate_design_ii = {
 		}
 	}
 }
+improved_steamboat_design_ii = {
+	limit = {
+        naval_engineering_8 = 1
+    }
+    chance = {
+        base = 0
+		modifier = {
+            factor = 3
+            ship_construction_8 = 1
+			naval_science_8 = 1
+        }
+		
+    }
+    effect = {
+		commerce_raider = {
+			gun_power = 2
+			hull = 8
+		}
+	}
+}
 #alphabetic_flag_signaling - Seafaring Techniques
 #naval_plans - navigation Techniques
 boarding_techniques_i = {

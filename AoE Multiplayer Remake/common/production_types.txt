@@ -534,7 +534,7 @@ artillery_factory = {
         steel = 6.5        #30.55   total input+maint = 62.9
     }
     output_goods = artillery
-    value = 1.4            #65
+    value = 1.5           #65
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.15
@@ -1294,7 +1294,7 @@ artisan_clipper = {
     }
     output_goods = clipper_convoy
     is_coastal = yes
-    value = 10            #175
+    value = 7.5            #175
 
     owner = {
         poptype = artisans

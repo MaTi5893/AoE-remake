@@ -263,119 +263,23 @@ country_event = {
         prestige = -5
     }
 }
-#country_event = {
-#    id = 1740015
-#    title = "Army With A State"
-#    desc = "Our mil buffs have changed"
-#    picture = prussian_army
-#
-#    trigger = {
-#        has_country_flag = soldier_king_reforms
-#        exists = yes
-#        OR = {
-#            AND = {
-#                military_score = 500
-#                military_spending = 1
-#            }
-#            NOT = { number_of_states = 8 }
-#        }
-#
-#        NOT = { has_country_modifier = army_with_a_state1 }
-#		has_country_modifier = army_with_a_state2
-#        NOT = { has_country_modifier = army_with_a_state3 }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 4
-#    }
-#
-#    option = {
-#        name = "Ok"
-#        add_country_modifier = {
-#            name = army_with_a_state1
-#            duration = -1
-#        }
-#        remove_country_modifier = army_with_a_state3
-#        remove_country_modifier = army_with_a_state2
-#    }
-#}
-#country_event = {
-#    id = 1740016
-#    title = "Army With A State"
-#    desc = "Our mil buffs have changed"
-#    picture = prussian_army
-#
-#    trigger = {
-#        has_country_flag = soldier_king_reforms
-#        exists = yes
-#        OR = {
-#            AND = {
-#                military_score = 400
-#                NOT = { military_score = 500 }
-#                military_spending = 1
-#            }
-#            AND = {
-#                NOT = { number_of_states = 14 }
-#                number_of_states = 8
-#            }
-#        }
-#        NOT = { has_country_modifier = army_with_a_state2 }
-#		OR = {
-#			has_country_modifier = army_with_a_state3
-#			has_country_flag = army_with_a_state1
-#		}
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 4
-#    }
-#
-#    option = {
-#        name = "Ok"
-#        add_country_modifier = {
-#            name = army_with_a_state2
-#            duration = -1
-#        }
-#        remove_country_modifier = army_with_a_state3
-#        remove_country_modifier = army_with_a_state1
-#    }
-#}
-#country_event = {
-#    id = 1740017
-#    title = "Army With A State"
-#    desc = "Our mil buffs have changed"
-#    picture = prussian_army
-#
-#    trigger = {
-#        has_country_flag = soldier_king_reforms
-#        exists = yes
-#        OR = {
-#            AND = {
-#                NOT = { number_of_states = 16 }
-#                number_of_states = 14
-#            }
-#            AND = {
-#                military_score = 200
-#                NOT = { military_score = 400 }
-#                military_spending = 1
-#            }
-#        }
-#        NOT = { has_country_modifier = army_with_a_state1 }
-#		has_country_modifier = army_with_a_state2
-#        NOT = { has_country_modifier = army_with_a_state3 }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 4
-#    }
-#
-#    option = {
-#        name = "Ok"
-#        add_country_modifier = {
-#            name = army_with_a_state3
-#            duration = -1
-#        }
-#        remove_country_modifier = army_with_a_state1
-#        remove_country_modifier = army_with_a_state2
-#    }
-#}
+country_event = {
+    id = 1740015
+    title = "Corruption In Officer Ranks"
+    desc = "EVTDESC1740015"
+    picture = nooo_frederick
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = allow_6_procent_soldiers
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = "Dissapointing"
+		clr_country_flag = allow_6_procent_soldiers
+	}
+}

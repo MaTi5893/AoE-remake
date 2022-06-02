@@ -3069,8 +3069,9 @@ convert_cb = {
 		THIS = {
 			religious_policy = moralism
 			war_policy = jingoism
-			centralization = theocratic_council
+			exists = no
 		}
+		exists = no
 		NOT = {
 			AND = {
 				religion = catholic

@@ -310,15 +310,11 @@ political_decisions = {
 		potential = {
 			tag = BOR
 			NOT = { has_country_flag = louis_dream }
-			#exists = yes
+			exists = yes
 			OR = {
-				#government = absolute_monarchy
 				government = hms_government
 				government = prussian_constitutionalism
 				government = absolute_monarchy
-				#government = absolute_monarchy
-				#government = archduchy
-				#government = elective_monarchy_oligarchy
 			}
 		}
 		allow = {
@@ -335,8 +331,6 @@ political_decisions = {
 					war_policy = jingoism
 				}
 			}
-			NOT = { has_country_modifier = no_more_war }
-			has_recently_lost_war = no
 		}
 		effect = {
 			random_owned = {

@@ -13,3 +13,8 @@ controller = PRU
 add_core = PRU
 remove_core = BRN
 }
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}

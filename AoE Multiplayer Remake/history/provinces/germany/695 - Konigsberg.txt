@@ -10,3 +10,8 @@ owner = PRU
 controller = PRU
 add_core = PRU
 }
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}
