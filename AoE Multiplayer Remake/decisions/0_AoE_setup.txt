@@ -406,6 +406,14 @@ political_decisions = {
 		}
 		effect = {
 			country_event = 165700
+			any_owned = {
+				any_pop = {
+					limit = {
+						type = soldiers
+					}
+					reduce_pop = 3
+				}
+			}
 		}
 	}
 

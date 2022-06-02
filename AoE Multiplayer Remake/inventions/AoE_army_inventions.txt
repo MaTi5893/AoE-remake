@@ -252,7 +252,7 @@ goose_step = {
         }
         cuirassier = {
             default_organisation = 7.5
-            attack = 1.75
+            attack = 1.5
             defence = 1.5
         }
         cavalry = {
@@ -268,7 +268,7 @@ goose_step = {
         dragoon = {
             default_organisation = 7.5
             attack = 1.5
-            defence = 1.75
+            defence = 1.5
         }
         engineer = {
             default_organisation = 7.5
@@ -471,14 +471,6 @@ matchlock_musket_armament = {
             defence = 1
         }
         plane = {
-            attack = 1
-            defence = 1
-        }
-        cuirassier = {
-            attack = 1
-            defence = 1
-        }
-        dragoon = {
             attack = 1
             defence = 1
         }
@@ -765,12 +757,12 @@ trunnions = {
         artillery = {
             attack = 1.25
             defence = 0.5
-            #support = 0.1
+            support = 0.1
         }
         tank = {
             attack = 1.75
             defence = 0.5
-            #support = 0.1
+            support = 0.1
         }
     }
 }
@@ -805,7 +797,7 @@ artillery_supply_depot = {
             support = 0.1
         }
         tank = {
-            support = 0.1
+            support = 0.3
         }
     }
 }
@@ -1062,12 +1054,12 @@ cav_upgrade_iii = {
     }
     effect = {
         cuirassier = {
-            attack = 1
-            defence = 1
+            attack = 2
+            defence = 2
         }
         dragoon = {
-            attack = 1
-            defence = 1
+            attack = 2
+            defence = 2
         }
         hussar = {
             attack = 1
