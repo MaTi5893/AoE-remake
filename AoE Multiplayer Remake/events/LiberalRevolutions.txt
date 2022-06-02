@@ -150,149 +150,6 @@ country_event = {
     }
 }
 
-#
-##Springtime of Nations
-#country_event = {
-#    id = 10000
-#    title = "EVTNAME10000"
-#    desc = "EVTDESC10000"
-#    picture = "Revolution"
-#
-#    trigger = {
-#        has_country_modifier = new_schools_of_thought
-#        OR = {
-#            liberal = 15
-#            average_militancy = 2
-#        }
-#        NOT = {
-#            OR = {
-#                vote_franschise = universal_weighted_voting
-#                vote_franschise = universal_voting
-#            }
-#        }
-#        year = 1847
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 120
-#        modifier = {
-#            factor = 0.04
-#            has_global_flag = liberal_revolutions_should_now_fire
-#        }
-#        modifier = {
-#            factor = 0.1
-#            year = 1848
-#        }
-#        modifier = {
-#            factor = 1.5
-#            NOT = { liberal = 10 }
-#        }
-#        modifier = {
-#            factor = 0.9
-#            liberal = 10
-#        }
-#        modifier = {
-#            factor = 0.9
-#            liberal = 15
-#        }
-#        modifier = {
-#            factor = 0.9
-#            average_consciousness = 4
-#        }
-#        modifier = {
-#            factor = 0.9
-#            average_consciousness = 5
-#        }
-#        modifier = {
-#            factor = 1.5
-#            NOT = { average_militancy = 2 }
-#        }
-#        modifier = {
-#            factor = 0.9
-#            average_militancy = 4
-#        }
-#        modifier = {
-#            factor = 0.9
-#            political_reform_want = 0.07
-#        }
-#        modifier = {
-#            factor = 0.9
-#            political_reform_want = 0.09
-#        }
-#        modifier = {
-#            factor = 0.9
-#            political_reform_want = 0.11
-#        }
-#        modifier = {
-#            factor = 0.9
-#            political_reform_want = 0.13
-#        }
-#        modifier = {
-#            factor = 0.9
-#            political_reform_want = 0.15
-#        }
-#        modifier = {
-#            factor = 0.9
-#            num_of_revolts = 1
-#        }
-#        modifier = {
-#            factor = 0.8
-#            num_of_revolts = 5
-#        }
-#        modifier = {
-#            factor = 0.8
-#            num_of_revolts = 10
-#        }
-#        modifier = {
-#            factor = 0.4
-#            num_of_revolts = 15
-#        }
-#        modifier = {
-#            factor = 1.1
-#            prestige = 40
-#        }
-#        modifier = {
-#            factor = 1.1
-#            prestige = 50
-#        }
-#        modifier = {
-#            factor = 1.1
-#            has_country_modifier = anti_jacobin_tract
-#        }
-#        modifier = {
-#            factor = 1.1
-#            not = { political_reform_want = 0.05 }
-#        }
-#    }
-#    option = {
-#        name = "EVTOPTA10000"
-#        remove_country_modifier = global_liberal_agitation
-#        add_country_modifier = {
-#            name = springtime_of_nations
-#            duration = 365
-#        }
-#        any_owned = {
-#            limit = {
-#                OR = {
-#                    has_country_modifier = new_schools_of_thought
-#                    liberal = 20
-#                    average_consciousness = 4
-#                }
-#            }
-#            any_pop = {
-#                scaled_militancy = {
-#                    ideology = liberal
-#                    factor = 9
-#                }
-#            }
-#        }
-#        set_global_flag = liberal_revolutions_should_now_fire
-#        clr_country_flag = liberal_revolution_in_progress
-#        set_country_flag = liberal_revolution_fired
-#    }
-#}
-#
-#
 ##End of The Liberal Revolution
 country_event = {
     title = "The Unrest Calms"
@@ -386,7 +243,6 @@ country_event = {
             }
         }
         remove_country_modifier = new_schools_of_thought
-        remove_country_modifier = springtime_of_nations
         clr_country_flag = liberal_revolution_in_progress
         clr_country_flag = liberal_revolution_fired
         set_country_flag = had_liberal_revolution
@@ -980,13 +836,13 @@ country_event = {
     picture = "news"
 
     trigger = {
-        has_country_modifer = new_schools_of_thought
+        has_country_modifier = new_schools_of_thought
         NOT = { press_rights = free_press }
         any_state = {
             is_colonial = no
             liberal = 5
             any_owned_province = {
-                NOT = { has_country_modifier = new_schools_of_thought }
+                NOT = { has_province_modifier = liberal_agitation }
             }
         }
 		civilized = yes
@@ -1042,7 +898,7 @@ country_event = {
                 is_colonial = no
                 liberal = 5
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_pop = {
@@ -1121,7 +977,7 @@ country_event = {
                 is_colonial = no
                 liberal = 5
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_owned = {
@@ -1191,7 +1047,7 @@ country_event = {
                 is_colonial = no
                 liberal = 5
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_owned = {
@@ -1243,7 +1099,7 @@ country_event = {
     picture = "chartists"
 
     trigger = {
-        has_country_modifer = new_schools_of_thought
+        has_country_modifier = new_schools_of_thought
 			
 		NOT = {	vote_franschise = none_voting }
 		NOT = {	vote_franschise = universal_weighted_voting }
@@ -1252,7 +1108,7 @@ country_event = {
             is_colonial = no
             liberal = 10
             any_owned_province = {
-                NOT = { has_country_modifier = new_schools_of_thought }
+                NOT = { has_province_modifier = liberal_agitation }
             }
         }
 		civilized = yes
@@ -1315,7 +1171,7 @@ country_event = {
                 is_colonial = no
                 liberal = 10
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_pop = {
@@ -1458,7 +1314,7 @@ country_event = {
                 is_colonial = no
                 liberal = 10
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_owned = {
@@ -1510,14 +1366,14 @@ country_event = {
     picture = "luddites"
 
     trigger = {
-        has_country_flag = new_schools_of_thought
+        has_country_modifier = new_schools_of_thought
         any_state = {
             is_colonial = no
             has_building = factory
             NOT = { poor_strata_everyday_needs = 0.9 }
             any_owned_province = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
             }
         }
 		civilized = yes
@@ -1549,7 +1405,7 @@ country_event = {
                 NOT = { poor_strata_life_needs = 1.0 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
         }
@@ -1561,7 +1417,7 @@ country_event = {
                 NOT = { poor_strata_everyday_needs = 0.7 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
         }
@@ -1573,7 +1429,7 @@ country_event = {
                 NOT = { poor_strata_everyday_needs = 0.5 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
         }
@@ -1585,7 +1441,7 @@ country_event = {
                 average_militancy = 2
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
         }
@@ -1617,7 +1473,7 @@ country_event = {
                 NOT = { poor_strata_everyday_needs = 0.9 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
             random_pop = {
@@ -1687,7 +1543,7 @@ country_event = {
                 NOT = { poor_strata_everyday_needs = 0.9 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
             random_pop = {
@@ -1753,7 +1609,7 @@ country_event = {
                 NOT = { poor_strata_everyday_needs = 0.9 }
                 any_owned_province = {
                     controlled_by = THIS
-                    has_country_modifier = new_schools_of_thought
+                    has_province_modifier = liberal_agitation
                 }
             }
             any_pop = {
@@ -1822,7 +1678,7 @@ country_event = {
         any_state = {
             is_colonial = no
             any_owned_province = {
-                NOT = { has_country_modifier = new_schools_of_thought }
+                NOT = { has_province_modifier = liberal_agitation }
             }
         }
 		civilized = yes
@@ -1905,7 +1761,7 @@ country_event = {
             limit = {
                 is_colonial = no
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_owned = {
@@ -1954,7 +1810,7 @@ country_event = {
             limit = {
                 is_colonial = no
                 any_owned_province = {
-                    NOT = { has_country_modifier = new_schools_of_thought }
+                    NOT = { has_province_modifier = liberal_agitation }
                 }
             }
             any_pop = {
@@ -2014,16 +1870,13 @@ province_event = {
 
     trigger = {
         owner = {
-            OR = {
-                has_country_modifier = new_schools_of_thought
-                has_country_modifier = springtime_of_nations
-            }
+            has_country_modifier = new_schools_of_thought
         }
-        NOT = { has_country_modifier = new_schools_of_thought }
+        NOT = { has_province_modifier = liberal_agitation }
         is_colonial = no
         liberal = 20
         any_neighbor_province = {
-            has_country_modifier = new_schools_of_thought
+            has_province_modifier = liberal_agitation
         }
 		civilized = yes
     }
@@ -2052,10 +1905,6 @@ province_event = {
         modifier = {
             factor = 1.5
             has_country_flag = absolutist_path
-        }
-        modifier = {
-            factor = 0.5
-            owner = { has_country_modifier = springtime_of_nations }
         }
         modifier = {
             factor = 1.25
@@ -2178,7 +2027,7 @@ country_event = {
             has_country_modifier = anti_jacobin_tract
         }
         any_owned_province = {
-            has_country_modifier = new_schools_of_thought
+            has_province_modifier = liberal_agitation
         }
 		civilized = yes
     }
@@ -2188,10 +2037,6 @@ country_event = {
         modifier = {
             factor = 0.8
             war = yes
-        }
-        modifier = {
-            factor = 0.8
-            has_country_modifier = springtime_of_nations
         }
         modifier = {
             factor = 1.5
@@ -2276,10 +2121,10 @@ province_event = {
 
     trigger = {
         owner = {
-            NOT = { has_country_modifier = springtime_of_nations }
+            has_country_modifier = new_schools_of_thought
         }
 		civilized = yes
-        has_country_modifier = new_schools_of_thought
+        has_province_modifier = liberal_agitation
         OR = {
             conservative = 40
             reactionary = 10
@@ -2302,10 +2147,6 @@ province_event = {
             any_neighbor_province = {
                 controlled_by = REB
             }
-        }
-        modifier = {
-            factor = 2
-            owner = { has_country_modifier = springtime_of_nations }
         }
         modifier = {
             factor = 1.5
@@ -2414,10 +2255,6 @@ province_event = {
         modifier = {
             factor = 1.2
             owner = { has_country_modifier = anti_jacobin_tract }
-        }
-        modifier = {
-            factor = 0.8
-            has_country_modifier = springtime_of_nations
         }
         modifier = {
             factor = 0.8
@@ -2619,7 +2456,7 @@ country_event = {
 		civilized = yes
 		any_owned_province = {
             controlled_by = THIS
-            has_country_modifier = new_schools_of_thought
+            has_province_modifier = liberal_agitation
             liberal = 10
             reactionary = 10
         }
@@ -2636,10 +2473,6 @@ country_event = {
             num_of_revolts = 1
         }
         modifier = {
-            factor = 0.8
-            has_country_modifier = springtime_of_nations
-        }
-        modifier = {
             factor = 2
             has_country_flag = traditionalist_path
         }
@@ -2651,7 +2484,7 @@ country_event = {
             factor = 0.8
             any_owned_province = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 15
                 reactionary = 15
             }
@@ -2660,7 +2493,7 @@ country_event = {
             factor = 0.8
             any_owned_province = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 20
                 reactionary = 20
             }
@@ -2669,7 +2502,7 @@ country_event = {
             factor = 0.8
             any_owned_province = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 10
                 reactionary = 10
                 average_militancy = 1
@@ -2679,7 +2512,7 @@ country_event = {
             factor = 0.5
             any_owned_province = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 10
                 reactionary = 10
                 any_neighbor_province = {
@@ -2708,7 +2541,7 @@ country_event = {
         random_owned = {
             limit = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 10
                 reactionary = 10
             }
@@ -2741,7 +2574,7 @@ country_event = {
         random_owned = {
             limit = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 10
                 reactionary = 10
             }
@@ -2774,7 +2607,7 @@ country_event = {
         random_owned = {
             limit = {
                 controlled_by = THIS
-                has_country_modifier = new_schools_of_thought
+                has_province_modifier = liberal_agitation
                 liberal = 10
                 reactionary = 10
             }
@@ -2849,10 +2682,6 @@ province_event = {
             owner = { num_of_revolts = 1 }
         }
         modifier = {
-            factor = 0.8
-            owner = { has_country_modifier = springtime_of_nations }
-        }
-        modifier = {
             factor = 1.5
             NOT = { liberal = 50 }
         }
@@ -2920,21 +2749,17 @@ country_event = {
     trigger = {
         civilized = yes
         NOT = {
-            has_country_modifier = new_schools_of_thought
-            has_country_modifier = springtime_of_nations
-        }
-        any_owned_province = {
-            is_colonial = no
-            any_neighbor_province = {
-                is_colonial = no
-                owner = {
-                    OR = {
-                        has_country_modifier = new_schools_of_thought
-                        has_country_modifier = springtime_of_nations
-                    }
-                }
-            }
-        }
+			has_country_modifier = new_schools_of_thought
+		}
+		any_owned_province = {
+			is_colonial = no
+			any_neighbor_province = {
+				is_colonial = no
+				owner = {
+					has_country_modifier = new_schools_of_thought
+				}
+			}
+		}
         any_owned_province = {
             is_colonial = no
             is_primary_culture = no
@@ -2970,12 +2795,6 @@ country_event = {
                 any_neighbor_province = {
                     has_province_modifier = nationalist_agitation
                 }
-            }
-        }
-        modifier = {
-            factor = 0.5
-            any_neighbor_country = {
-                has_country_modifier = springtime_of_nations
             }
         }
         modifier = {
@@ -3054,10 +2873,7 @@ province_event = {
 
     trigger = {
         owner = {
-            OR = {
-                has_country_modifier = new_schools_of_thought
-                has_country_modifier = springtime_of_nations
-            }
+            has_country_modifier = new_schools_of_thought
 			civilized = yes
         }
         is_colonial = no
@@ -3072,7 +2888,7 @@ province_event = {
             }
         }
         liberal = 10
-        has_country_modifier = new_schools_of_thought
+        has_province_modifier = liberal_agitation
         NOT = { has_province_modifier = nationalist_agitation }
     }
 
@@ -3102,10 +2918,6 @@ province_event = {
         modifier = {
             factor = 0.8
             owner = { num_of_revolts = 1 }
-        }
-        modifier = {
-            factor = 0.8
-            owner = { has_country_modifier = springtime_of_nations }
         }
         modifier = {
             factor = 1.2
@@ -3296,10 +3108,6 @@ province_event = {
             any_neighbor_province = {
                 controlled_by = REB
             }
-        }
-        modifier = {
-            factor = 2
-            owner = { has_country_modifier = springtime_of_nations }
         }
         modifier = {
             factor = 0.8
@@ -3557,7 +3365,7 @@ country_event = {
         any_state = {
             any_owned_province = {
                 is_colonial = no
-                NOT = { has_country_modifier = new_schools_of_thought }
+                NOT = { has_province_modifier = liberal_agitation }
             }
         }
     }

@@ -185,22 +185,15 @@ country_migration_target =
     }
     modifier = {
         factor = 1.05
-        OR = {
         vote_franschise = wealth_voting
-        government = colonial_company
-        }
     }
     modifier = {
         factor = 1.25
         vote_franschise = universal_weighted_voting
-        government = colonial_company
     }
     modifier = {
         factor = 1.5
-        OR = {
         vote_franschise = universal_voting
-        government = colonial_company
-        }
     }
     modifier = {
         factor = 4.0

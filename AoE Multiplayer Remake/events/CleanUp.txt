@@ -209,8 +209,6 @@ country_event = {
         random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { government = hms_government } }
         random_owned = { limit = { owner = { NOT = { government = fascist_dictatorship } } } owner = { government = oligarchic_republic } }
         election = yes
-        random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-        random_owned = { limit = { owner = { centralization = totalitarianism } } owner = { political_reform = unitary } }
         add_country_modifier = { name = not_dictatorship duration = 3650 }
 
     }
@@ -263,8 +261,6 @@ country_event = {
         random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { government = hms_government } }
         random_owned = { limit = { owner = { NOT = { government = fascist_dictatorship } } } owner = { government = democracy } }
         election = yes
-        random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
-        random_owned = { limit = { owner = { centralization = totalitarianism } } owner = { political_reform = unitary } }
         add_country_modifier = { name = not_dictatorship duration = 3650 }
 
     }
@@ -305,7 +301,7 @@ country_event = {
         clr_country_flag = presidential_dictatorship_gov
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
-		politcal_reform = party_appointed
+		political_reform = party_appointed
 		random_owned = {
 			limit = {
 				owner = {
@@ -316,7 +312,7 @@ country_event = {
 				}
 			}
 			owner = {
-				politcal_reform = admin_parliment
+				political_reform = admin_parliment
 			}
 		}
         government = absolute_monarchy
@@ -367,8 +363,8 @@ country_event = {
 			}
 			AND = {
 				OR = {
-					pensions = no_safety
-					pensions = trinket_safety
+					pensions = no_pensions
+					pensions = trinket_pensions
 				}
 				has_country_flag = army_angery
 			}
@@ -403,11 +399,11 @@ country_event = {
         clr_country_flag = constitutional_monarchy_gov
         clr_country_flag = democracy_gov
         clr_country_flag = presidential_dictatorship_gov
-		clr_coutry_flag = nobles_angery
-		clr_coutry_flag = church_angery
-		clr_coutry_flag = gentry_angery
-		clr_coutry_flag = burghers_angery
-		clr_coutry_flag = army_angery
+		clr_country_flag = nobles_angery
+		clr_country_flag = church_angery
+		clr_country_flag = gentry_angery
+		clr_country_flag = burghers_angery
+		clr_country_flag = army_angery
     }
 }
 

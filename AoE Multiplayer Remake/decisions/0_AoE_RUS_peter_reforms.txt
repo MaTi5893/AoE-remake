@@ -80,7 +80,6 @@ political_decisions = {
 				duration = -1
 			}
 			research_points = 150
-			political_reform = open_borders
 			remove_country_modifier = streltsi_rebellion
 			activate_technology = naval_design_bureaus
 			activate_technology = alphabetic_flag_signaling
@@ -703,7 +702,6 @@ political_decisions = {
 		}
 		effect = {
 			years_of_research = 2
-			political_reform = open_borders
 			any_pop = {
 				militancy = 4
 				consciousness = 2
