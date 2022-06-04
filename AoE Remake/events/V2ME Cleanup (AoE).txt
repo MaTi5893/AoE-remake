@@ -343,6 +343,7 @@ country_event = {
 				exists = no
                 is_greater_power = no
                 capital_scope = { NOT = { province_control_days = 120 } }
+				NOT = { tag = REB }
                 OR = {
                     is_mobilised = yes
                     total_amount_of_ships = 1

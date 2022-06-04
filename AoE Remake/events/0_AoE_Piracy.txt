@@ -1,0 +1,324 @@
+country_event = {
+	id = 170200
+	title = "Pirate Raid!"
+	desc = "EVTDESC78883"
+	picture = piracy
+	
+	trigger = {
+		any_owned_province = {
+			has_crime = piracy
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 18
+		modifier = {
+			factor = 3
+			war = yes
+		}
+		modifier = {
+			factor = 0.8
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 6
+			year = 1725
+		}
+	}
+	
+	option = {
+		name = "Those damn rascals!"
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = TEX_132
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2961 }
+				sub_unit = { type = manowar value = 2961 }
+				sub_unit = { type = manowar value = 2961 }
+				sub_unit = { type = manowar value = 2961 }
+				sub_unit = { type = manowar value = 2961 }
+				sub_unit = { type = manowar value = 2961 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = MEX_2162
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2963 }
+				sub_unit = { type = manowar value = 2963 }
+				sub_unit = { type = manowar value = 2963 }
+				sub_unit = { type = manowar value = 2963 }
+				sub_unit = { type = manowar value = 2963 }
+				sub_unit = { type = manowar value = 2963 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = MEX_2146
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2962 }
+				sub_unit = { type = manowar value = 2962 }
+				sub_unit = { type = manowar value = 2962 }
+				sub_unit = { type = manowar value = 2962 }
+				sub_unit = { type = manowar value = 2962 }
+				sub_unit = { type = manowar value = 2962 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = MEX_2183
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2965 }
+				sub_unit = { type = manowar value = 2965 }
+				sub_unit = { type = manowar value = 2965 }
+				sub_unit = { type = manowar value = 2965 }
+				sub_unit = { type = manowar value = 2965 }
+				sub_unit = { type = manowar value = 2965 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = UCA_2186
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2966 }
+				sub_unit = { type = manowar value = 2966 }
+				sub_unit = { type = manowar value = 2966 }
+				sub_unit = { type = manowar value = 2966 }
+				sub_unit = { type = manowar value = 2966 }
+				sub_unit = { type = manowar value = 2966 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = UCA_2191
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2967 }
+				sub_unit = { type = manowar value = 2967 }
+				sub_unit = { type = manowar value = 2967 }
+				sub_unit = { type = manowar value = 2967 }
+				sub_unit = { type = manowar value = 2967 }
+				sub_unit = { type = manowar value = 2967 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = UCA_2201
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = CLM_1723
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = CLM_2251
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = CLM_2251
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+				sub_unit = { type = manowar value = 2968 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = VNZ_2234
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2972 }
+				sub_unit = { type = manowar value = 2972 }
+				sub_unit = { type = manowar value = 2972 }
+				sub_unit = { type = manowar value = 2972 }
+				sub_unit = { type = manowar value = 2972 }
+				sub_unit = { type = manowar value = 2972 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = VNZ_2265
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2973 }
+				sub_unit = { type = manowar value = 2973 }
+				sub_unit = { type = manowar value = 2973 }
+				sub_unit = { type = manowar value = 2973 }
+				sub_unit = { type = manowar value = 2973 }
+				sub_unit = { type = manowar value = 2973 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = VNZ_2278
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = SPA_2209
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2971 }
+				sub_unit = { type = manowar value = 2971 }
+				sub_unit = { type = manowar value = 2971 }
+				sub_unit = { type = manowar value = 2971 }
+				sub_unit = { type = manowar value = 2971 }
+				sub_unit = { type = manowar value = 2971 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = ENG_203
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				OR = {
+				province_id = 2213
+				province_id = 2215
+				}
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+				sub_unit = { type = manowar value = 2969 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				OR = {
+				province_id = 2216
+				province_id = 2214
+				}
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2974 }
+				sub_unit = { type = manowar value = 2974 }
+				sub_unit = { type = manowar value = 2974 }
+				sub_unit = { type = manowar value = 2974 }
+				sub_unit = { type = manowar value = 2974 }
+				sub_unit = { type = manowar value = 2974 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = ENG_2224
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2976 }
+				sub_unit = { type = manowar value = 2976 }
+				sub_unit = { type = manowar value = 2976 }
+				sub_unit = { type = manowar value = 2976 }
+				sub_unit = { type = manowar value = 2976 }
+				sub_unit = { type = manowar value = 2976 }
+			}
+			
+		}
+		random_owned = {
+			limit = {
+				has_crime = piracy
+				region = ENG_2228
+			}
+			REB = {
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+				sub_unit = { type = manowar value = 2975 }
+			}
+			
+		}
+	}
+}
+	

@@ -1,4 +1,4 @@
-name = "AoE Remake Version 1.0"
+name = "AoE Remake Version 1.0 'Blenheim'"
 path = "mod/AoE Remake"
 user_dir = "AoE Remake"
 replace_path = "history/provinces"
