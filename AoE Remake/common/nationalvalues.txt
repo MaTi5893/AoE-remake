@@ -1,25 +1,29 @@
 pm_militarist = {
 	min_military_spending = 0.2
+	mobilisation_size = 0.01
 }
 
 pm_gentry = {
 	min_social_spending = 0.2
+	mobilisation_size = 0.01
 }
 
 pm_nobleman = {
-
+	mobilisation_size = 0.01
 }
 
 pm_reformists = {
 	issue_change_speed = 0.10
 	social_reform_desire = 0.15
 	political_reform_desire = 0.15
+	mobilisation_size = 0.01
 }
 
 pm_clergyman = {
 	global_pop_consciousness_modifier = 0.01
+	mobilisation_size = 0.01
 }
 
 pm_no_minister = {
-
+	mobilisation_size = 0.01
 }
