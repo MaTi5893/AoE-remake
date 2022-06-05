@@ -607,6 +607,54 @@ political_decisions = {
 		}
 	}
 	
+	spa_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_pop = {
+				limit = {
+					OR = {
+						culture = dutch
+						culture = flemish
+					}
+				}
+				literacy = 0.5
+			}
+			any_pop = {
+				limit = {
+					culture = wallonian
+				}
+				literacy = 0.5
+			}
+			any_pop = {
+				limit = {
+					OR = {
+					culture = north_italian
+					culture = south_italian
+					}
+				}
+				literacy = 0.3
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						culture = north_italian
+						culture = south_italian
+						culture = wallonian
+						culture = dutch
+						culture = flemish
+					}
+					type = soldiers
+				}
+				reduce_pop = 0.45
+			}
+		}
+	}
+	
 	eth_setup = {
 		potential = {
 			always = no

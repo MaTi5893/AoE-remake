@@ -102,281 +102,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 158103
-	title = "The Orangist Revolution"
-	desc = "EVTDESC158103"
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = "The Republic will be reorganized into the first Dutch Emp-, kingdom"
-		add_country_modifier = {
-			name = orangist_domination
-			duration = -1
-		}
-		political_reform = unitary
-		any_pop = {
-			limit = {
-				pop_majority_ideology = liberal
-			}
-			militancy = 7
-			consciousness = 5
-		}
-		poor_strata = {
-			militancy = 5
-			consciousness = 5
-			ideology = {
-				value = liberal
-				factor = 0.05
-			}
-		}
-	}
-}
-province_event = {
-	id = 158102
-	title = "Patriot Sympathies"
-	desc = "EVTDESC158102"
-	
-	trigger = {
-		owner = {
-		primary_culture = dutch
-			NOT = { government = proletarian_dictatorship }
-			NOT = { has_country_flag = patriots_disbanded }
-		}
-		NOT = { has_province_modifier = patriots_couse_trouble }
-		is_core = NET
-		is_colonial = no
-		controlled_by = NET
-		OR = {
-			communist = 30
-			AND = {
-				communist = 20
-				average_militancy = 4
-			}
-			AND = {
-				culture = dutch
-				average_militancy = 4
-			}
-		}
-		year = 1740
-	}	
-
-	mean_time_to_happen = {
-		months = 40
-		modifier = {
-			factor = 2
-			owner = { has_country_modifier = rebel_cell_discovered }
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				check_variable = {
-					which = patriots_couse_trouble
-					value = 5
-				}
-			}
-		}
-		modifier = {
-			factor = 2
-			owner = {
-				check_variable = {
-					which = patriots_couse_trouble
-					value = 8
-				}
-			}
-		}
-		modifier = {
-			factor = 0.8
-			owner = {
-				NOT = {
-					check_variable = {
-						which = patriots_couse_trouble
-						value = 3
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { average_militancy = 1 }
-		}
-		modifier = {
-			factor = 0.8
-			communist = 30
-		}
-		modifier = {
-			factor = 0.8
-			communist = 40
-		}
-		modifier = {
-			factor = 0.8
-			communist = 50
-		}
-		modifier = {
-			factor = 1.2
-			liberal = 20
-		}
-		modifier = {
-			factor = 1.2
-			liberal = 30
-		}
-		modifier = {
-			factor = 1.2
-			liberal = 40
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 2
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 3
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.7
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.7
-			average_militancy = 6
-		}
-	}
-	
-	option = {
-		name = "This isn't good"
-		add_province_modifier = {
-			name = patriots_couse_trouble
-			duration =  1095
-		}
-	}
-}
-
-country_event = {
-	id = 1581051
-	title = "Patriots seek Support"
-	desc = "EVTDESC158105"
-	fire_only_once = yes
-	picture = revolution
-	
-	trigger = {
-		NET = {
-			has_country_modifier = stadtholderless_period
-			OR = {
-				militancy = 4
-				war_exhaustion = 1
-			}
-			NOT = {
-				has_country_flag = patriots_disbanded
-			}
-			NOT = { government = proletarian_dictatorship }
-			NOT = { government = fascist_dictatorship }
-		}
-		NOT = { tag = NET }
-		year = 1780
-		government = proletarian_dictatorship
-		capital_scope = {
-			continent = europe
-		}
-	}
-	mean_time_to_happen = {
-		months = 40
-		modifier = {
-			factor = 0.8
-			has_country_modifier = stadtholderless_period
-		}
-		modifier = {
-			factor = 0.7
-			militancy = 5
-		}
-		modifier = {
-			factor = 0.6
-			militancy = 4
-		}
-		modifier = {
-			factor = 0.5
-			militancy = 4
-			war_exhaustion = 8
-		}
-		modifier = {
-			factor = 0.4
-			militancy = 5
-			war_exhaustion = 10
-		}
-		modifier = {
-			factor = 0.3
-			militancy = 6
-			war_exhaustion = 15
-		}
-	}
-	
-	option = {
-		name = "Let's support our fellow revolutionaries!"
-		war = {
-			target = NET
-			attacker_goal = { casus_belli = install_communist_gov_cb }
-			defender_goal = { casus_belli = humiliate }
-			call_ally = yes
-		}
-		prestige = 5
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 6
-				NET = {
-					brigades_compare = 1
-				}
-			}
-			modifier = {
-				factor = 6
-				NOT = {
-					relation = {
-						who = NET
-						value = 150
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "We can't afford another war."
-		prestige = -25
-		any_pop = {
-			limit = {
-				pop_majority_ideology = communist
-			}
-			militancy = 2
-			consciousness = 5
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 7
-				NET = {
-					brigades_compare = 0.5
-				}
-			}
-			modifier = {
-				factor = 7
-				relation = {
-					who = NET
-					value = 150
-				}
-			}
-			modifier = {
-				factor = 6
-				NET = {
-					vassal_of = THIS
-				}
-			}
-		}
-	}
-}
-country_event = {
 	id = 1581052
 	title = "The Anglo-Dutch Union"
 	desc = ""
@@ -424,7 +149,7 @@ country_event = {
 	picture = patriots
 	
 	option = {
-		name = "Patriottentijd!"
+		name = "Patriottentijd! Revolution!"
 		random_owned = {
 			limit = {
 				is_capital = yes
@@ -465,5 +190,41 @@ country_event = {
 			}
 			relation = { who = THIS value = 200 }
 		}
+	}
+	
+	option = {
+		name = "Ask Prussians to restore order!"
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = underground_parties
+		political_reform = state_press
+		any_pop = {
+			militancy = -5
+			consciousness = -3
+		}
+		relation = { who = PRU value = 50 }
+	}
+}
+
+country_event = {
+	id = 1581054
+	title = "De Pruikentijd"
+	desc = "EVTDESC1581054"
+	picture = patriots
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = allow_6_procent_soldiers
+		tag = NET
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = "Complacency? Pfah!"
+		clr_country_flag = allow_6_procent_soldiers
 	}
 }

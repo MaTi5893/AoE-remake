@@ -332,43 +332,10 @@ country_event = {
 
     trigger = {
         government = absolute_monarchy
-        OR = {
-			AND = {
-				OR = {
-					safety_regulations = no_safety
-					safety_regulations = trinket_safety
-				}
-				has_country_flag = nobles_angery
-			}
-			AND = {
-				OR = {
-					wage_reform = no_minimum_wage
-					wage_reform = trinket_wage
-				}
-				has_country_flag = church_angery
-			}
-			AND = {
-				OR = {
-					work_hours = ten_hours
-					work_hours = eight_hours
-				}
-				has_country_flag = gentry_angery
-			}
-			AND = {
-				OR = {
-					unemployment_subsidies = acceptable_subsidies
-					unemployment_subsidies = good_subsidies
-				}
-				has_country_flag = burghers_angery
-			}
-			AND = {
-				OR = {
-					pensions = no_safety
-					pensions = trinket_safety
-				}
-				has_country_flag = army_angery
-			}
-			NOT = { vote_franschise = none_voting }
+		OR = {
+			centralization = legislative_parliment
+			upper_house_composition = state_equal_weight
+			non_secret_ballots = non_secret_ballots
 		}
         civilized = yes
     }
@@ -420,10 +387,7 @@ country_event = {
 
     trigger = {
         government = prussian_constitutionalism
-        OR = {
-            centralization = legislative_parliment
-            centralization = national_parliment
-        }
+        centralization = legislative_parliment
         civilized = yes
     }
 
@@ -500,137 +464,78 @@ country_event = {
         remove_country_modifier = preparations_to_kill
     }
 }
-
 country_event = {
     id = 60090
-    title = "EVTNAME60110"
-    desc = "EVTDESC60080"
-    news = yes
-    news_title = "EVTNAME60080_NEWS_TITLE"
-    news_desc_long = "EVTDESC60080_NEWS_LONG"
-    news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "communist_crowd"
-
-    trigger = {
-        OR = {
-        government = democracy
-        government = oligarchic_republic
-        }
-        vote_franschise = none_voting
-        ruling_party_ideology = anarcho_liberal
-        civilized = yes
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-    major = yes
-    option = {
-        name = "EVT60090OPTA"
-        government = bourgeois_dictatorship
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        set_country_flag = anarcho_liberal_gov
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
-    }
+    title = "$COUNTRY_ADJ$ Parliament"
+    desc = "EVTDESC60090"
+	picture = estates_general
+	
+	trigger = {
+		OR = {
+		centralization = admin_parliment
+		centralization = legislative_parliment
+		}
+		NOT = { has_country_flag = established_parliament } 
+	}
+	option = {
+		name = "Let's hope they won't prove to be too useless."
+		random_owned = {
+			limit = {
+				owner = {
+					centralization = legislative_parliment
+					vote_franschise = none_voting
+				}
+			}
+			owner = {
+				political_reform = landed_voting
+			}
+		}
+		set_country_flag = established_parliament
+	}
 }
-
-#country_event = {
-#    id = 60100
-#    title = "EVTNAME60110"
-#    desc = "EVTDESC60080"
-#    news = yes
-#    news_title = "EVTNAME60080_NEWS_TITLE"
-#    news_desc_long = "EVTDESC60080_NEWS_LONG"
-#    news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-#    news_desc_short = "EVTDESC60080_NEWS_SHORT"
-#    picture = "communist_crowd"
-#
-#    trigger = {
-#        government = democracy
-#        vote_franschise = none_voting
-#        ruling_party_ideology = communist
-#        civilized = yes
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 1
-#    }
-#    major = yes
-#    option = {
-#        name = "EVT60100OPTA"
-#        government = proletarian_dictatorship
-#        set_country_flag = communist_gov
-#        clr_country_flag = absolute_monarchy_gov
-#        clr_country_flag = semi_constitutional_monarchy_gov
-#        clr_country_flag = constitutional_monarchy_gov
-#        clr_country_flag = democracy_gov
-#        clr_country_flag = presidential_dictatorship_gov
-#        clr_country_flag = fascist_gov
-#        clr_country_flag = anarcho_liberal_gov
-#        clr_country_flag = everywhere_genocide_only
-#        clr_country_flag = non_colonial_genocide_only
-#        clr_country_flag = colonial_genocide_only
-#        clr_country_flag = preparations_to_kill
-#        remove_country_modifier = preparations_to_kill
-#    }
-#}
-
 country_event = {
-    id = 60110
-    title = "EVTNAME60110"
-    desc = "EVTDESC60080"
-    news = yes
-    news_title = "EVTNAME60080_NEWS_TITLE"
-    news_desc_long = "EVTDESC60080_NEWS_LONG"
-    news_desc_medium = "EVTDESC60080_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC60080_NEWS_SHORT"
-    picture = "emperor"
-
-    trigger = {
-        OR = {
-              government = democracy
-              government = tribal_democracy
-        }
-        vote_franschise = none_voting
-        ruling_party_ideology = fascist
-        civilized = yes
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    major = yes
-    option = {
-        name = "EVT60110OPTA"
-        government = fascist_dictatorship
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        set_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
-    }
+    id = 60091
+    title = "$COUNTRY_ADJ$ Parliament Dissolved!"
+    desc = "EVTDESC60091
+	picture = estates_general
+	
+	trigger = {
+		centralization = no_parliment
+		has_country_flag = established_parliament
+	}
+	option = {
+		name = "We're better off without them"
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { vote_franschise = none_voting }
+				}
+			}
+			owner = {
+				political_reform = none_voting
+			}
+		}
+		clr_country_flag = established_parliament
+	}
 }
-
+country_event = {
+    id = 60092
+    title = "End Of $COUNTRY_ADJ$ Political Absolutism"
+    desc = "EVTDESC60092"
+	picture = throne
+	
+	trigger = {
+		absolutism = yes_absolutism
+		OR = {
+			NOT = { upper_house_composition = party_appointed }
+			NOT = { political_parties = underground_parties }
+		}
+	}
+	option = {
+		name = "Ok"
+		political_reform = no_absolutism
+	}
+}
 # Annex SoIs
 country_event = {
     id = 60120

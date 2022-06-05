@@ -40,60 +40,63 @@ country_event = {
 	
 	option = {
 		name = "We'll deal with them"
+		any_owned = {
+			limit = {
+				pop_majority_culture = catalan
+			}
+			add_core = ARN
+			secede_province = ARN
+		}
+		ARN = {
+			war = {
+				target = SPC
+				attacker_goal = { casus_belli = civil_war }
+				defender_goal = { casus_belli = civil_war }
+			}
+			504 = {
+				sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = cavalry value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+			}
+		}
 		any_pop = {
 			limit = {
 				culture = catalan
 			}
 			militancy = 7.5
 		}
-		random_owned = {
+	}
+	
+	option = {
+		name = "Long live Charles III"
+		any_owned = {
 			limit = {
-				controlled_by = THIS
 				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
 			}
-			change_controller = REB
+			add_core = ARN
+			secede_province = ARN
 		}
-		random_owned = {
+		ARN = {
+			war = {
+				target = SPC
+				attacker_goal = { casus_belli = civil_war }
+				defender_goal = { casus_belli = civil_war }
+			}
+		}
+		any_pop = {
 			limit = {
-				controlled_by = THIS
-				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
+				culture = catalan
 			}
-			change_controller = REB
+			militancy = 7.5
 		}
-		random_owned = {
-			limit = {
-				controlled_by = THIS
-				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
-			}
-			change_controller = REB
-		}
-		random_owned = {
-			limit = {
-				controlled_by = THIS
-				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
-			}
-			change_controller = REB
-		}
-		random_owned = {
-			limit = {
-				controlled_by = THIS
-				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
-			}
-			change_controller = REB
-		}
-		random_owned = {
-			limit = {
-				controlled_by = THIS
-				pop_majority_culture = catalan
-				NOT = { country_units_in_province = THIS }
-			}
-			change_controller = REB
-		}
+		change_tag_no_core_switch = ARN
 	}
 }
 country_event = {
@@ -186,121 +189,49 @@ country_event = {
 }
 country_event = {
 	id = 1516005
-	title = "Breakup of the Viceroyality"
+	title = "The Dethroning of Philip V!"
     desc = "EVTDESC151605"
-    picture = "new_world"
-	is_triggered_only = yes
+    picture = "catalonia"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARN
+		OR = {
+			SPC = { exists = no }
+			487 = {
+				controlled_by = THIS
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
 	
 	option = {
-		name = "Terrible!"
+		name = "Long live Charles III!"
 		random_owned = {
 			limit = {
 				owner = {
-					tag = PEU
-					any_owned_province = {
-						OR = {
-						is_core = VNG
-						is_core = VLP
-						}
-					}
+					exists = SPC
 				}
 			}
 			owner = {
-				THIS = {
-					release_vassal = VNG
-					release_vassal = VLP
-					random_owned = {
-						limit = {
-							owner = {
-								exists = SPA
-							}
-						}
-						owner = {
-							SPA = {
-								create_vassal = VNG
-								create_vassal = VLP
-							}
-						}
-					}
-					random_owned = {
-						limit = {
-							owner = {
-								exists = SPC
-							}
-						}
-						owner = {
-							SPC = {
-								create_vassal = VNG
-								create_vassal = VLP
-							}
-						}
-					}
-					all_core = {
-						limit = {
-							OR = {
-								is_core = VNG
-								is_core = VLP
-							}
-						}
-						remove_core = THIS
-					}
-					remove_accepted_culture = north_andean
-					remove_accepted_culture = platinean
-				}
+				inherit = SPC
 			}
 		}
+		prestige = 25
 		all_core = {
-			limit = {
-				OR = {
-					is_core = VNG
-					is_core = VLP
-				}
-			}
-			remove_core = PEU
+			add_core = SPA
+			remove_core = SPC
+			remove_core = ARN
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					exists = VNS
-				}
-			}
-			owner = {
-				VNS = {
-					any_owned= {
-						limit = {
-							OR = {
-								is_core = VNG
-								is_core = GCO
-							}
-						}
-						add_core = VNG
-						remove_core = VNS
-						secede_province = THIS
-					}
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					any_owned_province = {
-						is_core = VNG
-					}
-				}
-			}
-			owner = {
-				limit = {
-					any_owned_province = {
-						is_core = VNG
-					}
-				}
-				any_owned = {
-					limit = {
-						is_core = VNG
-					}
-					secede_province = VNG
-				}
-			}
-		}
+		change_tag = SPA
+		primary_culture = spanish
+		add_accepted_culture = catalan
+		add_accepted_culture = basque
+		add_accepted_culture = galician
+		add_accepted_culture = spanish_american
+		capital = 487
 	}
 }

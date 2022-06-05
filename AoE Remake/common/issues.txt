@@ -280,6 +280,7 @@ political_reforms = {
             allow = {
                 NOT = { election = yes }
                 NOT = { has_country_flag = the_elective_monarchy }
+				NOT = { has_country_flag = established_parliament }
             }
             cb_generation_speed_modifier = 0.15
         }
@@ -290,6 +291,7 @@ political_reforms = {
             global_immigrant_attract = 0.01
             allow = {
                 NOT = { has_country_flag = theocratic_government }
+				NOT = { has_country_flag = established_parliament }
             }
             cb_generation_speed_modifier = 0.1
         }
@@ -312,29 +314,12 @@ political_reforms = {
             global_immigrant_attract = 0.08
             
         }
-        #universal_weighted_voting = {
-        #    rich_vote = 1.5
-        #    middle_vote = 1
-        #    poor_vote = 0.5
-        #    cb_generation_speed_modifier = -0.1
-        #    global_immigrant_attract = 0.30
-        #    
-        #}
-        #universal_voting = {
-        #    rich_vote = 1
-        #    middle_vote = 1
-        #    poor_vote = 1
-        #    cb_generation_speed_modifier = -0.15
-        #    global_immigrant_attract = 0.55
-        #    core_pop_militancy_modifier = -0.01
-        #    
-        #}
     }
 
     upper_house_composition = { #Head of State
         next_step_only = yes
         party_appointed = { #executive head
-            rules = { same_as_ruling_party = yes }
+            rules = { rich_only = yes }
             ruling_party_support = 0.05
         }
         appointed = { #house of lords
@@ -347,22 +332,8 @@ political_reforms = {
             rules = { state_vote = yes }
             rich_vote = 1.00
             middle_vote = 0.50
-            allow = {
-                NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government }
-            }
             global_immigrant_attract = 0.02
         }
-        #population_equal_weight = { #popular sovereignty
-        #    rules = { population_vote = yes }
-        #    rich_vote = 0.20
-        #    middle_vote = 0.10
-        #    poor_vote = 0.01
-        #    allow = {
-        #        NOT = { vote_franschise = none_voting }
-        #    }
-        #    global_immigrant_attract = 0.03
-        #}
     }
 
     voting_system = {
@@ -468,12 +439,6 @@ political_reforms = {
                 NOT = { vote_franschise = none_voting }
             }
         }
-        #secret_ballots = {
-        #    global_immigrant_attract = 0.05
-        #    allow = {
-        #        NOT = { vote_franschise = none_voting }
-        #    }
-        #}
     }
 
     citizens_rights = {
@@ -491,8 +456,6 @@ political_reforms = {
             global_assimilation_rate = 0.08
 			allow = {
                 NOT = { citizenship_policy = residency }
-               #NOT = { centralization = no_parliment }
-				#NOT = { centralization = theocracy }
             }
             
         }
@@ -503,8 +466,6 @@ political_reforms = {
             global_immigrant_attract = 0.08
 			allow = {
 				citizenship_policy = full_citizenship
-                #NOT = { centralization = no_parliment }
-				#NOT = { centralization = theocracy }
             }
             
         }
@@ -614,30 +575,7 @@ political_reforms = {
 			tax_efficiency = 0.01
 			literacy_con_impact = 0.05
 			cb_generation_speed_modifier = -0.05
-            allow = {
-				NOT = { upper_house_composition = party_appointed }
-            }
         }
-        #national_parliment = {
-		#	pension_level = 0.50
-        #    leadership_modifier = 0.05
-        #    core_pop_militancy_modifier = -0.05
-		#	literacy_con_impact = 0.15
-		#	administrative_multiplier = 10
-		#	cb_generation_speed_modifier = -0.15
-        #    allow = {
-		#		NOT = { upper_house_composition = party_appointed }
-		#		NOT = { vote_franschise = none_voting }
-        #    }
-        #}
-        #theocratic_council = {
-		#	suppression_points_modifier = 0.25
-		#	literacy_con_impact = -0.15
-		#	cb_generation_speed_modifier = 0.15
-        #    allow = {
-		#		#wage_reform = no_minimum_wage
-        #    }
-        #}
     }
 }
 

@@ -662,18 +662,4 @@ political_decisions = {
 			tech_school = industrial_tech_school
 		}
 	}
-	
-	pirates = {
-		potential = {
-			ai = no
-		}
-		allow = {
-		
-		}
-		effect = {
-			REB = {
-				 sub_unit = { type = manowar value = 2746 }
-			}
-		}
-	}
 }

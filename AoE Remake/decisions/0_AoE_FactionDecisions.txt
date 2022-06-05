@@ -232,7 +232,7 @@ political_decisions = {
             money = 100000
         }
         effect = {
-            #money = -100000
+            treasury = -100000
             any_pop = {
                 militancy = 5
             }
@@ -240,6 +240,54 @@ political_decisions = {
                 name = law_changed_by_force
                 duration = 5475
             }
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = trinket_safety
+						NOT = { centralization = legislative_parliment }
+						NOT = { centralization = national_parliment }
+					}
+				}
+				owner = {
+					social_reform = no_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = low_safety
+						NOT = { centralization = legislative_parliment }
+						NOT = { centralization = national_parliment }
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = acceptable_safety
+						NOT = { centralization = legislative_parliment }
+						NOT = { centralization = national_parliment }
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = good_safety
+						NOT = { centralization = legislative_parliment }
+						NOT = { centralization = national_parliment }
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
             capital_scope = {
                 sub_unit = { type = infantry value = current }
                 sub_unit = { type = infantry value = current }

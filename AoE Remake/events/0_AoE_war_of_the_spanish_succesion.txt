@@ -4,7 +4,6 @@ country_event = {
     desc = "EVTDESC93000"
     fire_only_once = yes
     major = yes
-    news = yes
 
     trigger = {
         tag = SPA
@@ -12,14 +11,6 @@ country_event = {
         exists = yes
         BOR = { exists = yes }
         AUS = { exists = yes }
-        NOT = {
-            OR = {
-                has_global_flag = support_bourbon_heir_spa
-                has_global_flag = support_habsburg_heir_spa
-                has_global_flag = bastard_child
-            }
-        }
-        NOT = { has_global_flag = disabled_succession_wars }
     }
 
     mean_time_to_happen = {
@@ -31,7 +22,7 @@ country_event = {
     }
 
     option = { #Choose Bourbon Heir
-        name = "EVTNAME93000OPTA"
+        name = "Follow Charles' will and proclaim a Bourbon King"
         set_global_flag = support_bourbon_heir_spa
         create_alliance = BOR
 		all_core = {
@@ -114,48 +105,38 @@ country_event = {
     }
 
     option = { #Choose Habsburg Heir
-        name = "EVTNAME93000OPTB"
+        name = "Follow the treaty of London"
         set_global_flag = support_habsburg_heir_spa
         create_alliance = AUS
-		random_owned = {
+		any_owned = {
 			limit = {
-				owner = {
-					truce_with = BOR
-				}
+				is_core = ITA
+				NOT = { is_core = SRD }
 			}
-			owner = {
-				BOR = {
-					casus_belli = {
-						target = THIS
-						type = dispute_succession_bor
-						months = 62
-					}
-				}
+			secede_province = BOR
+		}
+		492 = { secede_province = BOR add_core = BOR }
+		AUS = {
+			create_vassal = LOR
+			diplomatic_influence = {
+				who = LOR
+				value = 300
 			}
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { truce_with = BOR }
-				}
+		BOR = {
+			diplomatic_influence = {
+				who = LOR
+				value = -300
 			}
-			owner = {
-				BOR = {
-					casus_belli = {
-						target = THIS
-						type = dispute_succession_bor
-						months = 2
-					}
-				}
-			}
+			country_event = 93001
 		}
         relation = {
             who = BOR
-            value = -200
+            value = 50
         }
         relation = {
             who = AUS
-            value = 300
+            value = 25
         }
         define_general = {
             name = "Leopold I Habsburg"
@@ -166,4 +147,64 @@ country_event = {
             factor = 0.15
         }
     }
+}
+country_event = {
+    id = 93001
+    title = "Treaty Of London"
+    desc = "EVTDESC93001"
+    fire_only_once = yes
+
+	option = {
+		name = "Follow the treaty"
+		any_owned = {
+			limit = {
+				is_core = ITA
+				NOT = { is_core = LOM }
+			}
+			secede_province = SVY
+		}
+		SVY = {
+			466 = {
+				secede_province = BOR
+				add_core = BOR
+			}
+			465 = {
+				secede_province = BOR
+				add_core = BOR
+			}
+			472 = {
+				secede_province = BOR
+				add_core = BOR
+			}
+		}
+	}
+	
+	option = {
+		name = "Keep our new holdings!"
+		badboy = 20
+		any_greater_power = {
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 12
+			}
+			relation = {
+				who = THIS
+				value = -125
+			}
+		}
+		AUS = {
+			casus_belli = {
+				target = THIS
+				type = acquire_state
+				months = 12
+			}
+		}
+		SVY = {
+			relation = {
+				who = THIS
+				value = -125
+			}
+		}
+	}
 }

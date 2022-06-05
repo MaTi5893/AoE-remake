@@ -263,7 +263,7 @@ army = {
 
 army = {
     name = "Ejército Cristino del Centro"
-    location = 498
+    location = 479
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
@@ -385,130 +385,6 @@ army = {
         name= "3. Granaderos del Rey"
         type = artillery
         home = 759
-    }
-}
-army = {
-    name = "Ejército Cristino del Centro"
-    location = 388
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 398
-    }
-
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = infantry
-        home = 397
-    }
-
-    regiment = {
-        name= "3. Guardia Real"
-        type = infantry
-        home = 722
-    }
-
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 723
-    }
-
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = cuirassier
-        home = 726
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 766
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 765
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 762
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 764
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 763
-    }
-}
-army = {
-    name = "Ejército del Norte"
-    location = 387
-
-    regiment = {
-        name= "4. Brigada de Infantería 'San Jorge'"
-        type = infantry
-        home = 498
-    }
-
-    regiment = {
-        name= "1. Brigada de Artillería"
-        type = infantry
-        home = 476
-    }
-
-    regiment = {
-        name= "5. Brigada de Infantería"
-        type = infantry
-        home = 482
-    }
-
-    regiment = {
-        name= "6. Brigada de Infantería 'La Granja'"
-        type = infantry
-        home = 483
-    }
-
-    regiment = {
-        name= "7. Brigada de Infantería"
-        type = cuirassier
-        home = 390
-    }
-        regiment = {
-        name= "2. Granaderos del Rey"
-        type = artillery
-        home = 489
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 389
-    }
-
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 388
-    }
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 393
-    }
-    regiment = {
-        name= "3. Granaderos del Rey"
-        type = artillery
-        home = 394
     }
 }
 

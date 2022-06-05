@@ -1,4 +1,4 @@
-capital = 375
+capital = 376
 primary_culture = dutch
 culture = flemish
 #culture = frisian
@@ -6,12 +6,12 @@ culture = boer
 religion = protestant
 government = oligarchic_republic
 plurality = 30
-nationalvalue = pm_no_minister
+nationalvalue = pm_no_monister
 literacy = 0.60
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 10
+prestige = 30
 
 # Political reforms
 slavery = yes_slavery
@@ -39,7 +39,7 @@ debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = culture_voting_only
-
+border_policy = open_borders
 centralization = legislative_parliment
 colonial_policy = exploitation
 
@@ -55,15 +55,11 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
+tech_school = naval_tech_school
 
-decision = literacy_NET
 decision = merchant_republic_setup
 decision = net_setup
 
-govt_flag = {
-	government = absolute_monarchy
-	flag = democracy
-}
 govt_flag = {
 	government = proletarian_dictatorship
 	flag = theocracy
