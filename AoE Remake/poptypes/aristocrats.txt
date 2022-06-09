@@ -47,6 +47,11 @@ luxury_needs = {
     steamer_convoy = 2
 }
 
+luxury_needs_income =
+{
+    type = sneed
+    weight = 1
+}
 
 country_migration_target =
 {

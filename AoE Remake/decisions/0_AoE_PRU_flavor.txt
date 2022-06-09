@@ -133,6 +133,7 @@ political_decisions = {
         potential = {
             OR = { tag = PRU tag = BRN }
             NOT = { has_country_modifier = soldier_king_reforms }
+			NOT = { has_country_flag = soldier_king_reforms }
         }
         allow = {
             OR = {
@@ -149,6 +150,7 @@ political_decisions = {
                 name = soldier_king_reforms
                 duration = -1
             }
+			set_country_flag = allow_6_procent_soldiers
             set_country_flag = soldier_king_reforms
             any_owned = {
                 limit = {

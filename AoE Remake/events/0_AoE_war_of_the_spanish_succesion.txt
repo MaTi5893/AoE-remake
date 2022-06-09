@@ -22,7 +22,7 @@ country_event = {
     }
 
     option = { #Choose Bourbon Heir
-        name = "Follow Charles' will and proclaim a Bourbon King"
+        name = "Long live Philip V!"
         set_global_flag = support_bourbon_heir_spa
         create_alliance = BOR
 		all_core = {
@@ -152,6 +152,8 @@ country_event = {
     id = 93001
     title = "Treaty Of London"
     desc = "EVTDESC93001"
+	major = yes
+	news = yes
     fire_only_once = yes
 
 	option = {

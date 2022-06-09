@@ -836,7 +836,7 @@ promote_to =
                 factor = -1
 				country = {
 					OR = { 
-						has_country_flag = soldier_king_reforms
+						has_country_flag = allow_6_procent_soldiers
 						pensions = good_pensions
 					}
 				}
@@ -846,7 +846,7 @@ promote_to =
 		modifier = {
             factor = -100
 			country = {
-			NOT = { has_country_flag = soldier_king_reforms }
+			NOT = { has_country_flag = allow_6_procent_soldiers }
 			NOT = { pensions = good_pensions }
 			}
             soldiers = 0.05
@@ -855,7 +855,7 @@ promote_to =
             factor = -100
 			country = {
 			OR = { 
-				has_country_flag = soldier_king_reforms
+				has_country_flag = allow_6_procent_soldiers
 				pensions = good_pensions
 			}
 			}

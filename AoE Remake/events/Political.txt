@@ -1,0 +1,21 @@
+country_event = {
+	id = 4485
+	title = "EVTNAME4485"
+	desc = "EVTDESC4485"
+	picture = anti_slavery_movement
+	
+	trigger = {
+		OR = {
+			literacy = 0.75
+			invention = abolitionism
+		}
+	}
+	
+	option = {
+		name = "We'll see how the movement develops"
+		any_pop = {
+			consciousness = 1
+		}
+		set_country_flag = abolitionism_activated
+	}
+}

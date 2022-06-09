@@ -478,7 +478,7 @@ country_event = {
 		NOT = { has_country_flag = established_parliament } 
 	}
 	option = {
-		name = "Let's hope they won't prove to be too useless."
+		name = "EVTOPT60090"
 		random_owned = {
 			limit = {
 				owner = {
@@ -496,7 +496,7 @@ country_event = {
 country_event = {
     id = 60091
     title = "$COUNTRY_ADJ$ Parliament Dissolved!"
-    desc = "EVTDESC60091
+    desc = "EVTDESC60091"
 	picture = estates_general
 	
 	trigger = {
@@ -520,7 +520,7 @@ country_event = {
 }
 country_event = {
     id = 60092
-    title = "End Of $COUNTRY_ADJ$ Political Absolutism"
+    title = "EVTNAME60092"
     desc = "EVTDESC60092"
 	picture = throne
 	
@@ -699,29 +699,6 @@ country_event = {
     option = {
         name = "EVTOPTA60141"
         political_reform = state_controlled
-    }
-}
-
-country_event = {
-    id = 60150
-    title = "EVTNAME60150"
-    desc = "EVTDESC60150"
-    picture = "Unite"
-
-    trigger = {
-        has_country_modifier = female_suffrage
-        NOT = { vote_franschise = universal_weighted_voting }
-        NOT = {    vote_franschise = universal_voting }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "EVTOPTA60150"
-        war_exhaustion = 5
-        remove_country_modifier = female_suffrage
     }
 }
 
