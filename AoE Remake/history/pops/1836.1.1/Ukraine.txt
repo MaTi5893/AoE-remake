@@ -1937,7 +1937,7 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 314350
+        size = 214350
     }
 
     clergymen = {
@@ -1994,6 +1994,7 @@
         size = 275
     }
 }
+
 #Taurida Region (360000)
 #under the rule of Russia in 1836
 #Simferopol (126000/29000 POPS)
@@ -3824,4 +3825,40 @@
         size = 20000
     }
 
+}
+#Hadyach 
+3275 = {
+     aristocrats = {
+        culture = ukrainian
+        religion = orthodox
+        size = 290
+    }
+
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1325
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 2000
+    }
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 100000
+    }
+    soldiers = {
+        culture = cossack
+        religion = orthodox
+        size = 7550
+    }
+
+    farmers = {
+        culture = cossack
+        religion = orthodox
+        size = 28000
+    }
 }
