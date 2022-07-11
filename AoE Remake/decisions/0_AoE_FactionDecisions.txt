@@ -245,7 +245,6 @@ political_decisions = {
 					owner = {
 						safety_regulations = trinket_safety
 						NOT = { centralization = legislative_parliment }
-						NOT = { centralization = national_parliment }
 					}
 				}
 				owner = {
@@ -257,7 +256,6 @@ political_decisions = {
 					owner = {
 						safety_regulations = low_safety
 						NOT = { centralization = legislative_parliment }
-						NOT = { centralization = national_parliment }
 					}
 				}
 				owner = {
@@ -269,7 +267,6 @@ political_decisions = {
 					owner = {
 						safety_regulations = acceptable_safety
 						NOT = { centralization = legislative_parliment }
-						NOT = { centralization = national_parliment }
 					}
 				}
 				owner = {
@@ -281,7 +278,6 @@ political_decisions = {
 					owner = {
 						safety_regulations = good_safety
 						NOT = { centralization = legislative_parliment }
-						NOT = { centralization = national_parliment }
 					}
 				}
 				owner = {

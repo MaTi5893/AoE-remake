@@ -14,7 +14,7 @@ prestige = 95
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = state_press
@@ -34,10 +34,10 @@ school_reforms = no_schools
 
 
 #New Reforms
-conscription = mandatory_service
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only
 
 centralization = regionalism
@@ -116,4 +116,13 @@ oob = "AUS_oob.txt"
 
 foreign_investment = {
     GNG = 2500
+}
+1756.01.01 = {
+	set_country_flag = issued_pragmatic_sanction
+	decision = issued_pragmatic_sanction
+	decision = financial_reform_joseph
+	decision = joseph_i_bureacracy
+	decision = joseph_ii_reforms
+	decision = establish_theresian_military_academy
+	decision = enact_codex_theresianus
 }

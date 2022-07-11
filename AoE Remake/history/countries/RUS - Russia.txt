@@ -16,7 +16,7 @@ prestige = 40
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = state_press
@@ -35,10 +35,10 @@ health_care = no_health_care #irrelevant bureaucracy
 school_reforms = no_schools
 
 #New Reforms
-conscription = mandatory_service
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only
 border_policy = closed_borders
 centralization = regionalism
@@ -91,3 +91,6 @@ nonstate_consciousness = 1
 schools = army_tech_school
 
 oob = "RUS_oob.txt"
+1792.01.01 = {
+	decision = partition_poland
+}

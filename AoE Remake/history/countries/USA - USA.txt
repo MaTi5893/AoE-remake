@@ -15,7 +15,7 @@ prestige = 20
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = state_equal_weight
+upper_house_composition = appointed
 vote_franschise = universal_weighted_voting
 public_meetings = yes_meeting
 press_rights = free_press
@@ -26,21 +26,20 @@ political_parties = gerrymandering
 # Social Reforms
 wage_reform = trinket_wage
 work_hours = no_work_hour_limit
-safety_regulations = no_safety
-health_care = no_health_care
+safety_regulations = good_safety
+health_care = trinket_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = two_year_draft
+
 debt_law = debtors_prisons
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = culture_voting_only
 
-centralization = regionalism
-colonial_policy = settlement
+centralization = legislative_parliment
 
 set_country_flag = protestant_country
 
@@ -49,7 +48,7 @@ govt_flag = {
     flag = theocracy
 }
 
-ruling_party = "Nobility Faction"
+ruling_party = "Federalist Party"
 last_election = 1832.5.3
 upper_house = {
     fascist = 0

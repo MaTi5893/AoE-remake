@@ -12,10 +12,10 @@ prestige = 16
 # Political reforms
 slavery = no_slavery
 upper_house_composition = population_equal_weight
-vote_franschise = universal_weighted_voting
+vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
 press_rights = free_press
-trade_unions = no_trade_unions
+trade_unions = all_trade_unions_allowed
 voting_system = first_past_the_post
 political_parties = non_secret_ballots
 
@@ -30,14 +30,13 @@ school_reforms = no_schools
 
 
 #New Reforms
-conscription = one_year_draft
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = culture_voting_only
 
-centralization = unitary
-colonial_policy = no_colonies
+centralization = legislative_parliment
 
 set_country_flag = catholic_country
 

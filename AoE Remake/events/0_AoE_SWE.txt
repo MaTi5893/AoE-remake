@@ -10,6 +10,7 @@ country_event = {
     }
 
     trigger = {
+		NOT = { year = 1756 )
         owns = 322
         322 = { is_capital = yes }
         war = no

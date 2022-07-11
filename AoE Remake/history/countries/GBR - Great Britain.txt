@@ -4,7 +4,7 @@ culture = anglo_canadian
 religion = protestant
 government = hms_government
 plurality = 30
-nationalvalue = pm_no_minister
+nationalvalue = pm_gentry
 literacy = 0.55
 civilized = yes
 
@@ -18,7 +18,7 @@ upper_house_composition = appointed
 vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = censored_press
-trade_unions = non_socialist
+trade_unions = all_trade_unions
 voting_system = first_past_the_post
 political_parties = non_secret_ballots
 
@@ -31,6 +31,7 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
+centralization = legislative_parliment
 consciousness = 3
 nonstate_consciousness = 1
 
@@ -43,7 +44,7 @@ govt_flag = {
     flag = theocracy
 }
 
-ruling_party = "Nobility Faction"
+ruling_party = "Whigs"
 last_election = 1699.12.31
 upper_house = {
     fascist = 0

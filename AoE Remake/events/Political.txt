@@ -9,6 +9,7 @@ country_event = {
 			literacy = 0.75
 			invention = abolitionism
 		}
+		NOT = { has_country_flag = abolitionism_activated }
 	}
 	
 	option = {

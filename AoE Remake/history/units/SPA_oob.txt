@@ -5,34 +5,7 @@ POR = {
     level = 1
     influence_value = 0
 }
-JER = {
-    value = 50
-    level = 5
-    influence_value = 0
-}
 #North America
-VNS = {
-    value = 75
-    level = 5
-    influence_value = 0
-}
-VNG = {
-    value = 100
-    level = 5
-    influence_value = 0
-}
-
-#South America
-VOP = {
-    value = 100
-    level = 5
-    influence_value = 0
-}
-VLP = {
-    value = 200
-    level = 5
-    influence_value = 100
-}
 BOL = {
     value = 100
     level = 2
@@ -263,7 +236,7 @@ army = {
 
 army = {
     name = "Ejército Cristino del Centro"
-    location = 479
+    location = 498
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
@@ -324,67 +297,168 @@ army = {
         home = 1457
     }
 }
+
 army = {
     name = "Ejército Cristino del Centro"
-    location = 754
+    location = 388
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
-        home = 2567
+        home = 398
     }
 
     regiment = {
         name= "2. Granaderos del Rey"
         type = infantry
-        home = 754
+        home = 397
     }
 
     regiment = {
         name= "3. Guardia Real"
         type = infantry
-        home = 753
+        home = 722
     }
 
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
-        home = 757
+        home = 723
     }
 
     regiment = {
         name= "2. Granaderos del Rey"
         type = cuirassier
-        home = 755
+        home = 726
     }
 
     regiment = {
         name= "3. Granaderos del Rey"
         type = artillery
-        home = 761
+        home = 766
     }
 
     regiment = {
         name= "3. Granaderos del Rey"
         type = artillery
-        home = 756
+        home = 765
     }
 
     regiment = {
         name= "3. Granaderos del Rey"
         type = artillery
-        home = 758
+        home = 762
     }
 
     regiment = {
         name= "3. Granaderos del Rey"
         type = artillery
-        home = 760
+        home = 764
     }
 
     regiment = {
         name= "3. Granaderos del Rey"
         type = artillery
-        home = 759
+        home = 763
+    }
+}
+
+
+army = {
+    name = "Activo Oajaca"
+    location = 2163
+    regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2177
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2177
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2177
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 2176
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 2176
+    }
+
+}
+
+army = {
+    name = "Ejército del Ciudad Mejico"
+    location = 2164
+    regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2191
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2186
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = infantry
+        home = 133
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 137
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 2167
+    }
+}
+
+army = {
+    name = "Ejército del Ciudad Mejico"
+    location = 138
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2267
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2264
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2264
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2268
+    }
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2271
     }
 }
 
@@ -732,7 +806,7 @@ leader = {
     date = 1823.1.1
     type = land
     personality = defence_2.3
-    background = attack_4.2
+    background = attack_3.1
     prestige = 0.1
 }
 
@@ -740,7 +814,7 @@ leader = {
     name = "José Ramón Rodil"
     date = 1824.1.1
     type = land
-    personality = defence_4.1
+    personality = defence_3.1
     background = attack_2.3
     prestige = 0.1
 }

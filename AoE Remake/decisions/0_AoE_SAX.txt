@@ -1,0 +1,127 @@
+political_decisions = {
+	augusts_rule_from_sax = {
+		picture = sax_aug
+		potential = {
+			tag = SAX
+			NOT = { has_country_flag = augusts_rule_from_sax }
+			vassal_of = PLC
+			ai = no
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			PLC = { release_vassal = SAX }
+			create_vassal = PLC
+			PLC = { government = elective_monarchy_oligarchy }
+			set_country_flag = augusts_rule_from_sax
+			create_alliance = TOR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	von_vetting_coup_sax = {
+		picture = sax_aug
+		potential = {
+			tag = SAX
+			NOT = { has_country_flag = von_vetting_coup_sax }
+			is_our_vassal = PLC
+		}
+		allow = {
+			ideological_thought = 1
+			OR = {
+				owns = 354
+				PLC = { owns = 354 }
+			}
+			PLC = {
+				any_owned_province = {
+					province_id = 706
+					country_units_in_province = SAX
+				}
+				any_owned_province = {
+					province_id = 703
+					country_units_in_province = SAX
+				}
+			}
+		}
+		effect = {
+			release_vassal = PLC
+			casus_belli = {
+				target = PLC
+				type = conquest
+				months = 12
+			}
+			war = {
+				target = PLC
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = become_independent }
+				call_ally = no
+			}
+			PLC = {
+				any_owned = {
+					limit = {
+						country_units_in_province = THIS
+					}
+					change_controller = SAX
+				}
+			}
+			prestige = 15
+			badboy = 5
+			set_country_flag = von_vetting_coup_sax
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	dismantle_prussia = {
+		picture = pru_sax
+		potential = {
+			tag = SAX
+			NOT = { has_country_flag = dismantled_prussia }
+			exists = PRU
+			PRU = { ai = yes }
+		}
+		allow = {
+			state_n_government = 1
+			has_accepted_culture = polish
+			is_sphere_leader_of = PRU	
+		}
+		effect = {
+			PRU = {
+				552 = { secede_province = THIS remove_core = PRU }
+				698 = { secede_province = THIS remove_core = PRU }
+				695 = { secede_province = THIS remove_core = PRU }
+				3252 = { secede_province = THIS remove_core = PRU }
+				697 = { secede_province = THIS remove_core = PRU }
+			}
+			PRU = {
+				all_core = {
+					add_core = BRN
+					remove_core = PRU
+				}
+				change_tag = BRN
+			}
+			add_core = 552
+			add_core = 698
+			add_core = 695
+			add_core = 3252
+			add_core = 697
+			prestige = 25
+			create_vassal = BRN
+			set_country_flag = dismantled_prussia
+		}
+	}
+	
+	play_for_the_emperorship = {
+		potential = {
+			tag = SAX
+			NOT = { has_country_flag = played_for_the_emperorship }
+		}
+		allow = {
+			AUS = { has_country_modifier = maria_theresa }
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = played_for_the_emperorship
+		}
+	}
+}

@@ -8,7 +8,7 @@ country_event = {
 		NOT = { has_country_flag = executive_activated }
 		OR = {
 			centralization = legislative_parliment 
-			centralization = national_parliment
+			centralization = legislative_parliment
 		}
 	}
 	

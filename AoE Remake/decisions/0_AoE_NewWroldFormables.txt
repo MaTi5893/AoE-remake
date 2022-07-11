@@ -216,6 +216,9 @@ political_decisions = {
         potential = {
             is_vassal = no
             NOT = { tag = ORI }
+			capital_scope = {
+				OR = { continent = north_america continent = south_america }
+			}
             OR = {
                 government = colonial_company
                 government = dominion

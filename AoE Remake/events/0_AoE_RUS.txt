@@ -52,6 +52,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1762
+		NOT = { year = 1789 }
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -96,6 +97,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		has_country_modifier = peter_iii
+		NOT = { year = 1789 }
 	}
 	mean_time_to_happen = {
 		months = 7
@@ -124,6 +126,7 @@ country_event = {
 			has_country_flag = ignore_coup
 			has_country_flag = cathrine_coup
 		}
+		NOT = { year = 1789 }
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -161,6 +164,7 @@ country_event = {
 			is_greater_power = yes
 		}
 		year = 1712
+		NOT = { year = 1789 }
 	}
 	
 	mean_time_to_happen = {
@@ -217,6 +221,7 @@ country_event = {
 		RUS = {
 			is_greater_power = yes
 		}
+		NOT = { year = 1789 }
 	}
 	
 	mean_time_to_happen = {
@@ -266,6 +271,7 @@ country_event = {
 			is_greater_power = yes
 		}
 		year = 1730
+		NOT = { year = 1789 }
 	}
 	
 	option = {
@@ -366,6 +372,7 @@ country_event = {
 		#has_global_flag = great_northern_war
 		war_exhaustion = 10
 		war_with = SWE
+		NOT = { year = 1789 }
 	}
 	
 	mean_time_to_happen = {
@@ -439,6 +446,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1727
+		NOT = { year = 1789 }
 	}
 	
 	mean_time_to_happen = {
@@ -529,6 +537,7 @@ country_event = {
 		NOT = {
 			has_country_flag = kamchatka_war
 		}
+		NOT = { year = 1756 }
 	}
 	
 	mean_time_to_happen = {
@@ -1120,6 +1129,7 @@ country_event = {
 		exists = KUR
 		neighbour = KUR
 		year = 1726
+		NOT = { year = 1789 }
 	}
 	
 	option = {
@@ -1180,6 +1190,7 @@ country_event = {
 		exists = PER
 		neighbour = PER
 		year = 1722
+		NOT = { year = 1789 }
 	}
 	
 	option = {

@@ -1187,6 +1187,10 @@ province_event = {
 			is_vassal = no
 			war = no
 			OR = {
+			AND = {
+				health_care = acceptable_health_care
+				centralization = admin_parliment
+			}
 			health_care = good_health_care #v. infl 'crats
 			has_country_flag = nana_phadnavis
 			has_country_flag = mughal_reforms

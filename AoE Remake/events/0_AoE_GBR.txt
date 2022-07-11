@@ -29,13 +29,16 @@ country_event = {
     option = {
         name = "God save the King!"
 		random_owned = { limit = { owner = { is_sphere_leader_of = NET } } owner = { leave_alliance = NET release_vassal = NET relation = { who = NET value = -200 } } }
-		random_country = {
+		random_owned = {
 			limit = {
+				owner = {
 				exists = HAN
-				tag = GBR
+				}
 			}
-			relation = { who = HAN value = 400 }
-			create_vassal = HAN
+			owner = {
+				diplomatic_influence = { who = HAN value = 400 }
+				create_vassal = HAN
+			}
 		}
         prestige = 10
         set_country_flag = house_of_hannover

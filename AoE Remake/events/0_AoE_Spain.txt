@@ -32,6 +32,7 @@ country_event = {
 	trigger = {
 		exists = SPC
 		tag = SPC
+		NOT = { year = 1710 }
 	}
 	
 	mean_time_to_happen = {
@@ -191,7 +192,6 @@ country_event = {
 	id = 1516005
 	title = "The Dethroning of Philip V!"
     desc = "EVTDESC151605"
-    picture = "catalonia"
 	major = yes
 	fire_only_once = yes
 	
@@ -233,5 +233,559 @@ country_event = {
 		add_accepted_culture = galician
 		add_accepted_culture = spanish_american
 		capital = 487
+	}
+}
+#################################################
+####Latin American Wars Of Independence Chain####
+#################################################
+country_event = {
+	id = 1516006
+	title = "Latin American Wars Of Independence"
+    desc = "EVTDESC151606"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = spanish
+		any_owned_province = {
+			OR = {
+				continent = south_america
+				continent = north_america
+			}
+		}
+		OR = {
+			has_country_flag = enacted_new_constitution_spc
+			AND = {
+				is_ideology_enabled = communist
+				SPA_512 = { NOT = { controlled_by = THIS } }
+				SPA_513 = { NOT = { controlled_by = THIS } }
+				SPA_474 = { NOT = { controlled_by = THIS } }
+				SPA_477 = { NOT = { controlled_by = THIS } }
+				SPA_484 = { NOT = { controlled_by = THIS } }
+				SPA_487 = { NOT = { controlled_by = THIS } }
+				SPA_492 = { NOT = { controlled_by = THIS } }
+				SPA_503 = { NOT = { controlled_by = THIS } }
+				ai = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier =  {
+			factor = 0.5
+			war_exhaustion = 25
+		}
+		modifier =  {
+			factor = 2
+			war = no
+		}
+		modifier = {
+			factor = 0.4
+			exists = HAI
+		}
+		modifier = {
+			factor = 0.2
+			year = 1800
+		}
+	}
+	
+	option = {
+		name = "We WILL survive this crisis."
+		set_global_flag = latin_america_revolt
+		add_country_modifier = {
+			name = liberal_agitation
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				culture = spanish_american
+			}
+			militancy = 4
+			consciousness = 3
+		}
+	}
+}
+country_event = {
+	id = 1516007
+	title = "Paraguay Declares Independence!"
+    desc = "EVTDESC151607"
+	picture = ""
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = PRG }
+		any_owned_province = {
+			is_core = JER
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.8
+			exists = HAI
+			HAI = { war = no }
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+
+	option = {
+		name = "Ungratefull Maniacs!"
+		JER = {
+			all_core = {
+				add_core = PRG
+				remove_core = JER
+			}
+		}
+		war = {
+			target = PRG
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		any_owned = {
+			limit = {
+				is_core = PRG
+			}
+			secede_province = PRG
+		}
+		PRG = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516008
+	title = "Chile Declares Independence!"
+    desc = "EVTDESC151608"
+	picture = ""
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = latin_america_revolt
+		NOT = { exists = CHL }
+		primary_culture = spanish
+		any_owned_province = {
+			is_core = CHL
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 1.8
+			exists = LPL
+			LPL = { war = yes }
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = CHL
+			}
+			secede_province = CHL
+		}
+		war = {
+			target = CHL
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		CHL = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516009
+	title = "La Plata Declares Independence!"
+    desc = "EVTDESC151609"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+	
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = LPL }
+		any_owned_province = {
+			OR = {
+			is_core = LPL
+			is_core = VLP
+			}
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = VLP
+			}
+			add_core = LPL
+			remove_core = VLP
+		}
+		any_owned = {
+			limit = {
+				is_core = LPL
+			}
+			secede_province = LPL
+		}
+		war = {
+			target = LPL
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		LPL = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516010
+	title = "Peru Declares Independence!"
+    desc = "EVTDESC1516010"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 1.8
+			exists = LPL
+			LPL = { war = yes }
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+	
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = PEU }
+		any_owned_province = {
+			OR = {
+			is_core = PEU
+			is_core = VOP
+			}
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = VOP
+			}
+			add_core = PEU
+			remove_core = VOP
+		}
+		any_owned = {
+			limit = {
+				OR = {
+				is_core = VNG
+				is_core = GCO
+				}
+			}
+			remove_core = PEU
+		}
+		any_owned = {
+			limit = {
+				is_core = PEU
+			}
+			secede_province = PEU
+		}
+		war = {
+			target = PEU
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		PEU = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516011
+	title = "Gran Columbia Declares Independence!"
+    desc = "EVTDESC1516011"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 25
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = GCO }
+		any_owned_province = {
+			OR = {
+			is_core = GCO
+			is_core = VNG
+			}
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = VNG
+			}
+			add_core = GCO
+			remove_core = VNG
+		}
+		any_owned = {
+			limit = {
+				is_core = GCO
+			}
+			secede_province = GCO
+		}
+		war = {
+			target = GCO
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		GCO = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			define_general = {
+				name = "Simon Bolivar"
+				personality = defence_3.1
+				background = attack_4.1
+			}
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516012
+	title = "Mexico Declares Independence!"
+    desc = "EVTDESC1516012"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 1.8
+			exists = GCO
+			GCO = { war = yes }
+		}
+		modifier = {
+			factor = 2
+			NOT = { exists = GCO }
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = MEX }
+		any_owned_province = {
+			OR = {
+			is_core = MEX
+			is_core = VNS
+			}
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = VNS
+			}
+			add_core = MEX
+			remove_core = VNS
+		}
+		any_owned = {
+			limit = {
+				is_core = MEX
+			}
+			secede_province = MEX
+		}
+		war = {
+			target = MEX
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		MEX = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = 1516013
+	title = "Bolivia Declares Independence!"
+    desc = "EVTDESC1516013"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.8
+			exists = HAI
+		}
+		modifier = {
+			factor = 1.8
+			exists = LPL
+			LPL = { war = yes }
+		}
+		modifier = {
+			factor = 0.2
+			war = no
+		}
+	}
+
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		NOT = { exists = BOL }
+		any_owned_province = {
+			is_core = BOL
+		}
+	}
+	
+	option = {
+		name = "Ungratefull Maniacs!"
+		any_owned = {
+			limit = {
+				is_core = BOL
+			}
+			secede_province = BOL
+		}
+		war = {
+			target = BOL
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		BOL = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			add_country_modifier = {
+				name = fanatic_army
+				duration = 1825
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 1516013
+	title = "The End of Latin American Wars of Independence"
+    desc = "EVTDESC1516013"
+	picture = ""
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 45
+		modifier = {
+			factor = 1.2
+			exists = HAI
+		}
+	}
+
+	trigger = {
+		has_global_flag = latin_america_revolt
+		primary_culture = spanish
+		war = no
+		NOT = { exists = PRG }
+		NOT = { exists = PEU }
+		NOT = { exists = GCU }
+		NOT = { exists = LPL }
+		NOT = { exists = CHL }
+		NOT = { exists = BOL }
+		NOT = { exists = MEX }
+	}
+	
+	option = {
+		name = "Viva Espania!"
+		add_accepted_culture = spanish_american
 	}
 }

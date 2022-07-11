@@ -307,7 +307,7 @@ country_event = {
 				owner = {
 					OR = {
 						centralization = legislative_parliment
-						centralization = national_parliment
+						centralization = legislative_parliment
 					}
 				}
 			}
@@ -335,7 +335,7 @@ country_event = {
 		OR = {
 			centralization = legislative_parliment
 			upper_house_composition = state_equal_weight
-			non_secret_ballots = non_secret_ballots
+			political_parties = non_secret_ballots
 		}
         civilized = yes
     }
@@ -353,10 +353,10 @@ country_event = {
         remove_country_modifier = preparations_to_kill
 		random_owned = {
 			limit = {
-				owner = { upper_house_composition = party_appointed }
+				owner = { absolutism = yes_absolutism }
 			}
 			owner = {
-				political_reform = appointed
+				political_reform = no_absolutism
 			}
 		}
         government = prussian_constitutionalism
@@ -656,7 +656,7 @@ country_event = {
 
     trigger = {
         civilized = yes
-        upper_house_composition = party_appointed
+        absolutism = yes_absolutism
         OR = {
             ruling_party_ideology = liberal
             ruling_party_ideology = socialist
@@ -669,38 +669,38 @@ country_event = {
 
     option = {
         name = "EVTOPTA60140"
-        political_reform = appointed
+        political_reform = no_absolutism
     }
 }
 
-country_event = {
-    id = 60141
-    title = "EVTNAME60141"
-    desc = "EVTDESC60141"
-    picture = "communist_congress"
-
-    trigger = {
-        civilized = yes
-        trade_unions = no_trade_unions
-        revolution_n_counterrevolution = 1
-        OR = {
-            AND = {
-                ruling_party_ideology = communist
-                NOT = { government = proletarian_dictatorship }
-            }
-            ruling_party_ideology = socialist
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "EVTOPTA60141"
-        political_reform = state_controlled
-    }
-}
+#country_event = {
+#    id = 60141
+#    title = "EVTNAME60141"
+#    desc = "EVTDESC60141"
+#    picture = "communist_congress"
+#
+#    trigger = {
+#        civilized = yes
+#        trade_unions = no_trade_unions
+#        revolution_n_counterrevolution = 1
+#        OR = {
+#            AND = {
+#                ruling_party_ideology = communist
+#                NOT = { government = proletarian_dictatorship }
+#            }
+#            ruling_party_ideology = socialist
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#
+#    option = {
+#        name = "EVTOPTA60141"
+#        political_reform = state_controlled
+#    }
+#}
 
 # handling insolvent AI countries that cannot borrow money
 
@@ -802,35 +802,6 @@ country_event = {
 
 #Totalitarian modifiers in a non totalitarian regime
 
-#Cleaning after international zones
-country_event = {
-    id = 6016811
-    title = "EVTNAME6016811"
-    desc = "EVTDESC6016811"
-    picture = "deliberation"
-
-    trigger = {
-        year = 1890
-        OR = {
-            has_country_modifier = international_zone_modifier
-            has_country_flag = international_zone
-        }
-        OR = {
-            number_of_states = 2
-            government = proletarian_dictatorship
-            government = bourgeois_dictatorship
-            government = fascist_dictatorship
-        }
-    }
-
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = "EVT6016811OPTA"
-        remove_country_modifier = international_zone_modifier
-        clr_country_flag = international_zone
-    }
-}
 
 #Warship commission is ready
 country_event = {

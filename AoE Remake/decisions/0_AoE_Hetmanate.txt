@@ -1,67 +1,13 @@
 political_decisions = {
-    #annex_west_bank = {
-    #    picture = cossak_state
-    #
-    #    potential = {
-    #        tag = HET
-    #        vassal_of = RUS
-    #        NOT = {
-    #            has_country_flag = ukrainian_reunification
-    #        }
-    #        NOT = {
-    #            has_country_flag = end_of_paliy
-    #        }
-    #        has_country_flag = paliy_rebellion
-    #        exists = yes
-    #    }
-    #
-    #    allow = {
-    #        NOT = {
-    #            war_exhaustion = 20
-    #        }
-    #        AND = {
-    #            PLC = {
-    #                OR = {
-    #                    AND = {
-    #                        any_pop = {
-    #                            has_pop_culture = ukrainian
-    #                            militancy = 6
-    #                        }
-    #                        war_exhaustion = 30
-    #                    }
-    #                    AND = {
-    #                        war = yes
-    #                        NOT = {
-    #                            rank = 8
-    #                        }
-    #                        average_militancy = 4
-    #                    }
-    #                }
-    #            }
-    #            HET = {
-    #                money = 100000
-    #            }
-    #        }
-    #    }
-    #
-    #    effect = {
-    #        PLC = {
-    #            country_event = 178308
-    #        }
-    #        set_country_flag = ukrainian_reunification
-    #        badboy = 3
-    #    }
-    #
-    #    ai_will_do = { factor = 1 }
-    #}
 
     masepa_revolt = {
-        picture = cossak_state
+        picture = masepa
         potential = {
             tag = HET
-            HET = {
-                vassal_of = RUS
-            }
+			OR = {
+				vassal_of = TOR
+				vassal_of = RUS
+			}
             NOT = {
                 has_country_flag = masepa_revolt
             }
@@ -69,21 +15,29 @@ political_decisions = {
         }
 
         allow = {
-            RUS = {
-                war = yes
-            }
+			OR = {
+				RUS = {
+					war = yes
+				}
+				TOR = {
+					war = yes
+				}
+			}
             OR = {
                 is_secondary_power = yes
                 any_greater_power = {
-                    war_with = RUS
+					OR = {
+						war_with = RUS
+						war_with = TOR
+					}
                 }
             }
         }
 
         effect = {
             prestige = 10
-            RUS = {
-                country_event = 91241542
+            overlord = {
+                country_event = 178300
             }
             create_alliance = SWE
             set_country_flag = masepa_revolt
@@ -146,48 +100,6 @@ political_decisions = {
         }
     }
 
-    subsidize_cossak_rebellions = {
-        picture = cossak_state
-        potential = {
-            tag = HET
-            #vassal_of = RUS
-            PLC = {
-                average_militancy = 3
-            }
-            exists = yes
-            has_country_flag = subsidized_cossak_rebellions
-        }
-
-        allow = {
-            PLC = {
-                OR = {
-                    war = yes
-                    AND = {
-                        is_greater_power = no
-                        average_militancy = 3
-                    }
-                }
-            }
-            idealism = 1
-            money = 10000
-        }
-
-        effect = {
-            treasury = -10000
-            PLC = {
-                any_pop = {
-                    limit = {
-                        has_pop_culture = ukrainian
-                    }
-                    militancy = 1
-                }
-            }
-            set_country_flag = subsidized_cossak_rebellions
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
     fate_of_the_sich = {
         picture = zapizzha
 
@@ -223,39 +135,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    rise_of_cossak_nation = {
-        picture = steppes_cossack
-
-        potential = {
-            tag = HET
-            ZZH = {
-                exists = yes
-                ai = yes
-            }
-            exists = yes
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            state_n_government = 1
-        }
-
-        effect = {
-            badboy = 5
-            ZZH = {
-                annex_to = HET
-                overlord = {
-                    war = {
-                        target = HET
-                        attacker_goal = { casus_belli = liberate_country tag = ZZH }
-                    }
-                }
-            }
-        }
-        ai_will_do = { factor = 1 }
-    }
-
     form_ruthenia = {
         picture = cossak_state
         potential = {
@@ -276,16 +155,6 @@ political_decisions = {
                 add_core = RUT
                 remove_core = THIS
             }
-            BYE = {
-                all_core = {
-                    add_core = RUT
-                }
-            }
-            UKR = {
-                all_core = {
-                    add_core = RUT
-                }
-            }
             CRI = {
                 all_core = {
                     add_core = RUT
@@ -297,7 +166,7 @@ political_decisions = {
         }
     }
     mazepa_culture = {
-        picture = cossak_state
+        picture = masepa
 
         potential = {
             tag = HET
@@ -311,20 +180,13 @@ political_decisions = {
         }
 
         allow = {
-            romanticism = 1
+            idealism = 1
             money = 50000
         }
 
         effect = {
             prestige = 10
-            any_pop = {
-                limit = {
-                    is_primary_culture = yes
-                    is_accepted_culture = yes
-                }
-                consciousness = -2
-                literacy = 0.1
-            }
+            years_of_research = 0.7
             any_pop = {
                 limit = {
                     type = clergymen
@@ -341,9 +203,9 @@ political_decisions = {
 		picture = khmelnytsky_uprising
 		potential = {
 			tag = ZZH
-			NOT = { exists = HET }
 		}
 		allow = {
+			NOT = { exists = HET }
 			owns = 958
 		}
 		effect = {

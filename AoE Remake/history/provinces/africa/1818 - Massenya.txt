@@ -1,6 +1,11 @@
-owner = BRM
-controller = BRM
-add_core = BRM
-add_core = WAD
+owner = BOR
+controller = BOR
+add_core = BOR
 trade_goods = grain
-life_rating = 15
+life_rating = 35
+1792.01.01 = {
+owner = FRA
+controller = FRA
+add_core = FRA
+remove_core = BOR
+}

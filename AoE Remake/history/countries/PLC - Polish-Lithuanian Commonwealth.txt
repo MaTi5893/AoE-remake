@@ -33,13 +33,13 @@ school_reforms = no_schools
 
 
 #New Reforms
-conscription = two_year_draft
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = culture_voting_only
 
-centralization = national_parliment
+centralization = legislative_parliment
 colonial_policy = no_colonies
 
 set_country_flag = catholic_country
@@ -72,6 +72,10 @@ decision = plc_setup
 govt_flag = {
     government = proletarian_dictatorship
     flag = theocracy
+}
+govt_flag = {
+    government = absolute_monarchy
+    flag = colonial_company
 }
 
 #tech

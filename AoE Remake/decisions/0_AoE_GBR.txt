@@ -224,61 +224,6 @@ political_decisions = {
 			}
 		}
 	}
-    #agricultural_revolution = {
-    #    picture = agriculture_rev
-    #    potential = {
-    #        OR = {
-    #            tag = GBJ
-    #            tag = ENL
-    #            tag = ENG
-    #            tag = GBR
-    #        }
-    #        NOT = { has_country_flag = agricultural_revolution }
-    #        exists = yes
-    #    }
-    #    allow = {
-    #        war = no
-    #        compound_steam_engines = 1
-    #        semi_automatization = 1
-    #        hot_blast = 1
-    #        early_railroad = 1
-    #    }
-    #    effect = {
-    #        add_country_modifier = {
-    #            name = agriculture_revolution
-    #            duration = 1825
-    #        }
-    #        set_country_flag = agricultural_revolution
-    #    }
-    #}
-	#
-    #begin_encolsure = {
-    #    picture = encolsure
-    #    potential = {
-    #        OR = {
-    #            tag = GBJ
-    #            tag = ENL
-    #            tag = ENG
-    #            tag = GBR
-    #        }
-    #        NOT = { has_country_flag = encolsure }
-    #        exists = yes
-    #    }
-    #    allow = {
-    #        steam_turbine = 1
-    #        has_country_modifier = agriculture_revolution
-    #    }
-    #    effect = {
-    #        add_country_modifier = {
-    #            name = encolsure
-    #            duration = 365
-    #        }
-	#		any_pop = {
-	#			money = 5000
-	#		}
-    #        set_country_flag = encolsure
-    #    }
-    #}
 
     duke_of_york_reforms = {
         picture = duke_of_york
@@ -574,5 +519,152 @@ political_decisions = {
 			set_country_flag = company_rule_in_india
 			country_event = 171018
 		}
+	}
+	
+	plocate_colonies = {
+		picture = treaty_signing
+		potential = {
+			primary_culture = british
+			any_owned_province = {
+				is_core = THC
+			}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = salutary_neglect
+				}
+			}
+			check_variable = {
+				which = usa_rev
+				value = 2
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = THC
+				}
+				add_province_modifier = {
+					name = salutary_neglect
+					duration = 2190
+				}
+			}
+			prestige = -20
+			any_pop = {
+				limit = {
+					culture = yankee
+				}
+				consciousness = -2
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							check_variable = {
+								which = usa_rev
+								value = 2
+							}
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = usa_rev
+						value = 1
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = {
+							which = usa_rev
+							value = 2
+						}
+						NOT = {
+							check_variable = {
+								which = usa_rev
+								value = 3
+							}
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = usa_rev
+						value = 1
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = {
+							which = usa_rev
+							value = 3
+						}
+						NOT = {
+							check_variable = {
+								which = usa_rev
+								value = 4
+							}
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = usa_rev
+						value = 2
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = {
+							which = usa_rev
+							value = 4
+						}
+						NOT = {
+							check_variable = {
+								which = usa_rev
+								value = 5
+							}
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = usa_rev
+						value = 3
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = {
+							which = usa_rev
+							value = 5
+						}
+						NOT = {
+							check_variable = {
+								which = usa_rev
+								value = 6
+							}
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = usa_rev
+						value = 4
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
 	}
 }

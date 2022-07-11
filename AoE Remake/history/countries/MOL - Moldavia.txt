@@ -11,7 +11,7 @@ prestige = 4
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = landed_voting
 public_meetings = yes_meeting
 press_rights = state_press
@@ -30,10 +30,10 @@ school_reforms = no_schools
 
 
 # New Reforms
-conscription = two_year_draft
+
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only
 
 centralization = unitary

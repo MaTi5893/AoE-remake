@@ -19,7 +19,7 @@ prestige = 90
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = censored_press
@@ -37,10 +37,10 @@ pensions = no_pensions
 school_reforms = no_schools
 
 #New Reforms
-conscription = one_year_draft
+
 debt_law = debtors_prisons
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = culture_voting_only
 
 centralization = unitary
@@ -91,8 +91,8 @@ gendarmerie = yes
 consciousness = 3
 nonstate_consciousness = 1
 
-ruling_party = "Nobility Faction"
-last_election = 1834.6.21
+ruling_party = "Jacobins"
+last_election = 1789.6.21
 upper_house = {
     fascist = 0
     liberal = 12
@@ -108,4 +108,7 @@ decision = lorraine_rename
 
 set_country_flag = france
 
-oob = "FRA_oob.txt"
+oob = "BOR_oob.txt"
+1792.01.01 = {
+	invention = gas_attack_capability
+}

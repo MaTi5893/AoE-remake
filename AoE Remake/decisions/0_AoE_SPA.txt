@@ -40,6 +40,15 @@ political_decisions = {
             set_country_flag = expeled_the_jesuits
             treasury = 100000
             country_event = 114309
+			PAP = {
+				any_owned = {
+					limit = {
+						continent = south_america
+						PAP = { ai = yes }
+					}
+					secede_province = THIS
+				}
+			}
             any_country = {
                 limit = {
                     exists = yes
@@ -364,19 +373,6 @@ political_decisions = {
                     political_reform = wealth_voting
                 }
             }
-            FLO = {
-                all_core = {
-                    add_core = THIS
-                    remove_core = VNS
-                }
-            }
-            SPA_2209 = {
-                add_core = THIS
-            }
-            add_core = 2216
-            add_core = 2214
-            add_core = 2222
-            add_core = 2217
         }
     }
 }

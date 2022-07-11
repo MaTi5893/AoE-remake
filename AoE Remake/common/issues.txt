@@ -244,15 +244,18 @@ political_reforms = {
             allow = {
                 NOT = { has_country_flag = communist_gov }
                 NOT = { has_country_flag = fascist_gov }
-                NOT = { has_country_flag = slave_revolution }      
+                NOT = { has_country_flag = slave_revolution }    
+				NOT = { has_country_flag = parliment_discontent }				
             }
         }
 
-        freedom_of_womb = {
-            rules = { slavery_allowed = yes }
+        recompensation_period = {
+            rules = { slavery_allowed = no }
+			min_social_spending = 0.5
             allow = {
                 NOT = { has_country_flag = communist_gov }
                 NOT = { has_country_flag = slave_revolution }
+				NOT = { has_country_flag = parliment_discontent }
                 OR = {
 					has_country_flag = abolitionism_activated
                     year = 1780
@@ -280,7 +283,8 @@ political_reforms = {
             allow = {
                 NOT = { election = yes }
                 NOT = { has_country_flag = the_elective_monarchy }
-				NOT = { has_country_flag = established_parliament }
+				NOT = { has_country_flag = parliment_discontent }
+				has_country_flag = established_parliament
             }
             cb_generation_speed_modifier = 0.15
         }
@@ -291,7 +295,8 @@ political_reforms = {
             global_immigrant_attract = 0.01
             allow = {
                 NOT = { has_country_flag = theocratic_government }
-				NOT = { has_country_flag = established_parliament }
+				NOT = { has_country_flag = parliment_discontent }
+				has_country_flag = established_parliament
             }
             cb_generation_speed_modifier = 0.1
         }
@@ -302,7 +307,7 @@ political_reforms = {
             cb_generation_speed_modifier = 0.05
             global_immigrant_attract = 0.02
             allow = {
-                
+                NOT = { has_country_flag = parliment_discontent }
                 NOT = { government = elective_monarchy_oligarchy }
             }
         }
@@ -499,7 +504,7 @@ political_reforms = {
             }
         }
 
-        bankruptcy = {
+        abolished = {
             administrative_efficiency_modifier = 0.05
             tariff_efficiency_modifier = 0.05
             administrative_multiplier = 2
@@ -766,6 +771,7 @@ social_reforms = {
             poor_vote = 0.02
         }
         acceptable_subsidies = { #influential
+			RGO_throughput = 0.075
             pension_level = 0.4
             tariff_efficiency_modifier = -0.05
             artisan_throughput = 0.15
@@ -783,11 +789,8 @@ social_reforms = {
             middle_vote = 0.08
             poor_vote = 0.04
 
-            #allow = {
-			#	#NOT = { pensions = good_pensions } #v infl army
-            #    NOT = {	work_hours = eight_hours }
-			#	#NOT = { health_care = good_health_care }
-            #}
+            allow = {
+            }
         }
     }
 
@@ -828,10 +831,7 @@ social_reforms = {
 
 
             allow = {
-				has_country_flag = skill_and_merit_allowed
-				#NOT = {	work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = { health_care = good_health_care } #v infl beurocracy
+
             }
         }
     }
@@ -887,10 +887,7 @@ social_reforms = {
 			army_tech_research_bonus = -0.1
 			
             allow = {
-                has_country_flag = skill_and_merit_allowed
-				#NOT = { work_hours = eight_hours } #v infl gentry
-				#NOT = {	unemployment_subsidies = good_subsidies } #v infl burghers
-				#NOT = {	pensions = good_pensions } #v infl army
+
             }
         }
     }
@@ -914,7 +911,7 @@ social_reforms = {
             global_assimilation_rate = 0.005
             global_immigrant_attract = 0.03
             administrative_multiplier = 2
-            
+            allow = { has_country_flag = nepotism_allowed }
         }
         good_schools = {
             education_efficiency_modifier = 0.1

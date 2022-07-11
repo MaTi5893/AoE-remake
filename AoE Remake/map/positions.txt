@@ -29904,14 +29904,14 @@
 
 720 = {
     text_position = {
-        x = 2928.108333
-        y = 1527.266667
+        x = 2925.050000
+        y = 1532.600000
     }
 
     text_scale = 3.199999
     unit = {
-        x = 2924.000000
-        y = 1528.000000
+        x = 2924.950000
+        y = 1530.050000
     }
 
     city = {
@@ -74586,30 +74586,30 @@
 } # Massenya
 
 1818 = {
-    unit = {
-        x = 3067.000000
-        y = 952.000000
-    }
-
     text_position = {
-        x = 3066.800049
-        y = 942.799988
+        x = 2889.150000
+        y = 1516.793333
     }
 
-    text_scale = 3.699999
+    text_scale = 2.699999
+    unit = {
+        x = 2889.150000
+        y = 1514.906667
+    }
+
+    factory = {
+        x = 2891.980000
+        y = 1513.963333
+    }
+
     building_construction = {
         x = 3079.199951
         y = 934.200012
     }
 
     military_construction = {
-        x = 3066.399902
-        y = 939.200012
-    }
-
-    factory = {
-        x = 3055.000000
-        y = 956.000000
+        x = 2890.093333
+        y = 1509.246667
     }
 
     building_position = {
@@ -74623,36 +74623,36 @@
 } # Moundou
 
 1819 = {
-    unit = {
-        x = 3049.000000
-        y = 908.000000
-    }
-
     text_position = {
-        x = 3051.199951
-        y = 903.000000
+        x = 2873.700000
+        y = 1515.500000
     }
 
-    text_scale = 3.399999
-    building_construction = {
-        x = 3043.300049
-        y = 914.000000
-    }
-
-    military_construction = {
-        x = 3052.000000
-        y = 899.000000
+    text_scale = 2.399999
+    unit = {
+        x = 2874.050000
+        y = 1516.850000
     }
 
     factory = {
-        x = 3033.100098
-        y = 914.200012
+        x = 2867.050000
+        y = 1517.400000
+    }
+
+    building_construction = {
+        x = 2871.200000
+        y = 1511.400000
+    }
+
+    military_construction = {
+        x = 2878.650000
+        y = 1517.900000
     }
 
     building_position = {
         fort = {
-            x = 3060.000000
-            y = 891.000000
+            x = 2871.700000
+            y = 1520.050000
         }
 
     }
@@ -80352,15 +80352,15 @@
 
 1960 = {
     text_position = {
-        x = 2916.725000
-        y = 1526.683333
+        x = 2923.850000
+        y = 1519.350000
     }
 
-    text_rotation = 1.585795
+    text_rotation = 6.258065
     text_scale = 1.699999
     unit = {
-        x = 2917.133333
-        y = 1526.800000
+        x = 2925.150000
+        y = 1520.650000
     }
 
     factory = {
@@ -80380,8 +80380,8 @@
 
     building_position = {
         fort = {
-            x = 2916.900000
-            y = 1530.766667
+            x = 2917.750000
+            y = 1517.350000
         }
 
     }
@@ -105868,36 +105868,36 @@
 } # Mochudi
 
 2574 = {
-    unit = {
-        x = 3211.000000
-        y = 381.000000
-    }
-
     text_position = {
-        x = 3210.600098
-        y = 375.299988
+        x = 2934.900000
+        y = 1526.600000
     }
 
-    text_scale = 3.599999
-    building_construction = {
-        x = 3195.000000
-        y = 372.000000
-    }
-
-    military_construction = {
-        x = 3206.000000
-        y = 370.000000
+    text_scale = 1.599999
+    unit = {
+        x = 2935.050000
+        y = 1527.700000
     }
 
     factory = {
-        x = 3223.000000
-        y = 387.000000
+        x = 2936.550000
+        y = 1523.400000
+    }
+
+    building_construction = {
+        x = 2935.200000
+        y = 1529.450000
+    }
+
+    military_construction = {
+        x = 2938.000000
+        y = 1527.300000
     }
 
     building_position = {
         fort = {
-            x = 3218.000000
-            y = 368.000000
+            x = 2932.300000
+            y = 1528.050000
         }
 
     }
@@ -118677,9 +118677,8 @@
         naval_base = 6.273135
     }
 
-}
+} # Don River
 
-# Don River
 3266 = {
     text_position = {
         x = 3437.050000
@@ -118693,9 +118692,8 @@
         y = 1579.800000
     }
 
-}
+} # Lower Danube
 
-# Lower Danube
 3267 = {
     text_position = {
         x = 3201.025000
@@ -118709,9 +118707,8 @@
         y = 1513.615909
     }
 
-}
+} # Central Danube
 
-# Central Danube
 3268 = {
     text_position = {
         x = 3075.438333
@@ -118725,9 +118722,8 @@
         y = 1769.991667
     }
 
-}
+} # Upper Danube
 
-# Upper Danube
 3269 = {
     text_position = {
         x = 3047.930000
@@ -118741,9 +118737,8 @@
         y = 1725.210000
     }
 
-}
+} # Lower Mississippi
 
-# Lower Mississippi
 3270 = {
     text_position = {
         x = 1380.580000
@@ -118757,9 +118752,8 @@
         y = 1500.440000
     }
 
-}
+} # Upper Mississippi
 
-# Upper Mississippi
 3271 = {
     text_position = {
         x = 1410.515000

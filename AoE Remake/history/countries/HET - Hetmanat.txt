@@ -10,7 +10,7 @@ civilized = yes
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
 press_rights = state_press
@@ -29,10 +29,10 @@ school_reforms = no_schools
 
 
 #New Reforms
-conscription = four_year_draft
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only
 
 centralization = unitary
@@ -40,7 +40,7 @@ colonial_policy = no_colonies
 
 set_country_flag = orthodox_country
 
-ruling_party = "Nobility Faction"
+ruling_party = "Hetman's Faction"
 upper_house = {
     fascist = 0
     liberal = 15

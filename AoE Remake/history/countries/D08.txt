@@ -11,7 +11,7 @@ set_country_flag = dynamic_tag
 
 # Political reforms - inherit
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = censored_press
@@ -46,8 +46,8 @@ upper_house = { # inherit
     communist = 0
 }
 #New Reforms
-conscription = two_year_draft
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only

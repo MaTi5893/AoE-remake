@@ -1,0 +1,51 @@
+country_event = {
+	id = 169900
+	title = "Wettin's stand victorious!"
+	desc = "EVTDESC169900"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SAX
+		PLC = {
+			exists = no
+		}
+		owns = 706
+		owns = 703
+		has_country_flag = von_vetting_coup_sax
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "We will incorporate The Commonwealth into Saxony!"
+		add_accepted_culture = polish
+		add_accepted_culture = lithuanian
+		PLC = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		any_pop = {
+			militancy = 2
+		}
+	}
+	
+	option = {
+		name = "We will incorporate Saxony into The Commonwealth!"
+		add_accepted_culture = polish
+		add_accepted_culture = lithuanian
+		all_core = {
+			add_core = PLC
+		}
+		change_tag = PLC
+		any_pop = {
+			limit = {
+				culture = north_german
+			}
+			militancy = 2
+		}
+		government = absolute_monarchy
+	}
+}

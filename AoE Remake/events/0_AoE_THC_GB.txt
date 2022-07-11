@@ -33,15 +33,32 @@ country_event = {
 		}
 		THC = { all_core = { remove_province_modifier = salutary_neglect } }
 		set_country_flag = colonists_enraged
+		set_variable = {
+			which = usa_rev
+			value = 2
+		}
     }
 }
 country_event = {
 	id = 176402
 	title = "The American Revolution"
 	desc = "EVTDESC176402"
-	is_triggered_only = yes
 	major = yes
 	news = yes
+	
+	trigger = {
+		primary_culture = british
+		any_owned_province = {
+			OR = {
+			is_core = THC
+			is_core = USA
+			}
+		}
+		check_variable = {
+			which = usa_rev
+			value = 6
+		}
+	}
 	
 	option = {
 		name = "Time to put down those pesky colonists"	

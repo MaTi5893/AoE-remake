@@ -1139,13 +1139,16 @@ country_event = {
 	trigger = {
 		owns = 2215
 		owns = 2213
-		HAI = {
-			all_core = {
-				#limit = {
-				#	owned_by = THIS
-				#}
-				controlled_by = REB
+		OR = {
+			HAI = {
+				all_core = {
+					#limit = {
+					#	owned_by = THIS
+					#}
+					controlled_by = REB
+				}
 			}
+			has_global_flag = latin_america_revolt
 		}
 	}
 	mean_time_to_happen = {
@@ -1249,6 +1252,57 @@ country_event = {
 			remove_province_modifier = palace_of_versallis
 			any_pop = {
 				reduce_pop = 0.99
+			}
+		}
+	}
+}
+country_event = {
+	id = 171141
+	title = "The Annexation of Avignon"
+	desc = "EVTDESC171141"
+	fire_only_once = yes
+	picture = avignon
+	
+	trigger = {
+		capital = 425
+		primary_culture = french
+		government = proletarian_dictatorship
+		468 = { owned_by = PAP }
+	}
+	
+	mean_time_to_happen = {
+		months = 16
+	}
+	
+	option = {
+		name = "Take that Pope!"
+		random_owned = {
+			limit = {
+				owner = {
+					PAP = { ai = yes }
+				}
+			}
+			468 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+			relation = {
+				who = PAP
+				value = -100
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					PAP = { ai = no }
+				}
+			}
+			468 = {
+				add_core = THIS
+			}
+			relation = {
+				who = PAP
+				value = -100
 			}
 		}
 	}
