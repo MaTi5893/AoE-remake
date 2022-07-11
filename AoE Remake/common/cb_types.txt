@@ -3057,7 +3057,7 @@ convert_cb = {
 		THIS = {
 			religious_policy = moralism
 			war_policy = jingoism
-			centralization = theocratic_council
+			always = no
 		}
 		NOT = {
 			AND = {
@@ -3502,9 +3502,10 @@ install_communist_gov_cb = {
         NOT = {
             government = proletarian_dictatorship
         }
+		is_greater_power = no
     }
 
-    po_install_communist_gov_type = yes
+	po_make_puppet = yes
 
     war_name = WAR_NAME
 
@@ -3518,12 +3519,13 @@ install_communist_gov_cb = {
     }
 
     on_po_accepted = {
-        political_reform = universal_voting
+        political_reform = wealth_weighted_voting
         political_reform = party_appointed
         political_reform = no_meeting
         political_reform = state_press
         political_reform = state_controlled
         political_reform = underground_parties
+		political_reform = legislative_parliment
     }
 }
 
@@ -3576,7 +3578,6 @@ uninstall_communist_gov_cb = {
 		war_with = THIS
 		badboy = 10
 		}
-		is_greater_power = no
 		OR = { #SAME CONTINENT ONLY
 			AND = {
 				THIS = { capital_scope = { continent = europe } }

@@ -101,3 +101,12 @@ nonstate_consciousness = 1
 schools = army_tech_school
 
 oob = "PRU_oob.txt"
+
+1792.01.01 = {
+	prestige = 50
+	decision = claim_silesia
+	decision = soldier_king_reforms_dec
+	decision = prussia_united
+	decision = begin_retablissement
+	decision = encourage_protestant_migration
+}

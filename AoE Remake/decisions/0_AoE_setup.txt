@@ -378,6 +378,20 @@ political_decisions = {
 		}
 	}
 	
+	fra_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			invention = gas_attack_capability
+			country_event = 19355
+			country_event = 19356
+		}
+	}
+	
 	plc_setup = {
 		potential = {
 			always = no

@@ -257,6 +257,28 @@ political_decisions = {
 			add_core = 2023
 			add_core = 570
 			add_core = 1724
+			random_owned = {
+				limit = {
+					owner = {
+						SAR = { ai = yes }
+						is_our_vassal = SAR
+					}
+				}
+				owner = {
+					inherit = SAR
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NET = { ai = yes }
+						is_our_vassal = NET
+					}
+				}
+				owner = {
+					inherit = NET
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -321,13 +343,9 @@ political_decisions = {
 			NOT = { has_country_flag = louis_dream }
 			#exists = yes
 			OR = {
-				#government = absolute_monarchy
 				government = hms_government
 				government = prussian_constitutionalism
 				government = absolute_monarchy
-				#government = absolute_monarchy
-				#government = archduchy
-				#government = elective_monarchy_oligarchy
 			}
 		}
 		allow = {
@@ -1007,6 +1025,10 @@ political_decisions = {
 				    capital_scope = { continent = europe }
                     in_sphere = THIS
                     is_culture_group = germanic
+					NOT = { tag = PRU }
+					NOT = { tag = AUS }
+					NOT = { tag = SWI }
+					NOT = { tag = BAV }
                 }
                 all_core = {
 					limit = {

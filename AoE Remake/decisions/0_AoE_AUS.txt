@@ -420,6 +420,17 @@ political_decisions = {
 				who = VEN
 				value = -300
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						VEN = = { ai = yes war = no }
+					}
+				}
+				owner = {
+					inherit = VEN
+				}
+			}
 			leave_alliance = VEN
 		}
 	}

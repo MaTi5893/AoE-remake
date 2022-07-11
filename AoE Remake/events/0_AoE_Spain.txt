@@ -267,6 +267,12 @@ country_event = {
 				SPA_503 = { NOT = { controlled_by = THIS } }
 				ai = yes
 			}
+			AND = {
+				is_ideology_enabled = communist
+				ai = yes
+				FRA = { OR = { government = proletarian_dictatorship government = fascist_dictatorship } }
+				487 = { controlled_by = FRA }
+			}
 		}
 	}
 	
