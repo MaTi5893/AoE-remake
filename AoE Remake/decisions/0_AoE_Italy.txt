@@ -434,9 +434,9 @@ political_decisions = {
 				limit = {
 					owner = {
 						NOT = {
-							owns = AUS_734
-							owns = AUS_736
-							owns = AUS_780
+							AUS_734 = { owned_by = THIS }
+							AUS_736 = { owned_by = THIS }
+							AUS_780 = { owned_by = THIS }
 						}
 					}
 				}

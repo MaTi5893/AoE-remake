@@ -1,22 +1,19 @@
 country_event = {
 	id  = 777796
-	title = EVTNAME777796
+	title = "Parliment Session"
 	desc = EVTDESC777796
 	picture = english_parliment
 	
 	trigger = {
 		NOT = { has_country_flag = executive_activated }
-		OR = {
-			centralization = legislative_parliment 
-			centralization = legislative_parliment
-		}
+		centralization = legislative_parliment 
 	}
 	
 	mean_time_to_happen = { 
 		months = 48
 		modifier = {
 			factor = 0.5 #increase likelihood to happen
-			centralization = legislative_parliment
+			government = hms_government
 		}
 	}
 	
@@ -41,7 +38,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "The President has other priorities"
+		name = "Our Leader has other priorities"
 		clr_country_flag = executive_activated
 	}
 }

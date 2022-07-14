@@ -9,7 +9,6 @@ country_event = {
         civilized = yes
         capital_scope = { continent = europe }
         is_vassal = no
-        NOT = { has_country_modifier = louis_grande }
         year = 1715
         war = no
         NOT = {
@@ -17,24 +16,11 @@ country_event = {
             has_country_flag = liberal_revolution_fired
             has_country_flag = had_liberal_revolution
             is_ideology_enabled = socialist
-            vote_franschise = universal_weighted_voting
-            vote_franschise = universal_voting
-            government = democracy
         }
     }
 
     mean_time_to_happen = {
         months = 96
-        modifier = {
-            factor = 0.1
-            has_global_flag = discovered_enlightenment
-            NOT = { is_culture_group = scandinavian }
-        }
-        modifier = {
-            factor = 0.5
-            has_global_flag = discovered_enlightenment
-            is_culture_group = scandinavian
-        }
         modifier = {
             factor = 0.5
             any_neighbor_country = { has_country_modifier = new_schools_of_thought }
@@ -57,19 +43,19 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
         }
         modifier = {
             factor = 0.75
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
         }
         modifier = {
             factor = 1.25
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
         }
         modifier = {
             factor = 1.5
-            nationalvalue = nv_autocracy
+            nationalvalue = pm_clergyman
         }
     }
 
@@ -799,8 +785,8 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
     }
@@ -1029,8 +1015,8 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
     }
@@ -1303,8 +1289,8 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
     }
@@ -1592,15 +1578,15 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
         modifier = {
             factor = 1.5
             OR = {
-                nationalvalue = nv_order
-                nationalvalue = nv_autocracy
+                nationalvalue = pm_clergyman
+                nationalvalue = pm_militarist
                 }
         }
     }
@@ -1873,8 +1859,8 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
     }
@@ -2129,8 +2115,8 @@ province_event = {
             factor = 0.5
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
                 NOT = { is_culture_group = scandinavian    }
             }
@@ -2138,8 +2124,8 @@ province_event = {
         modifier = {
             factor = 1.5
             OR = {
-            owner = { nationalvalue = nv_order }
-            owner = { nationalvalue = nv_autocracy }
+            owner = { nationalvalue = pm_clergyman }
+            owner = { nationalvalue = pm_militarist }
             }
         }
         modifier = {
@@ -2357,8 +2343,8 @@ province_event = {
             factor = 1.25
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
             }
         }
@@ -2477,8 +2463,8 @@ province_event = {
             factor = 0.75
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
             }
         }
@@ -2486,8 +2472,8 @@ province_event = {
             factor = 1.5
             owner = {
                 OR = {
-                    nationalvalue = nv_order
-                    nationalvalue = nv_autocracy
+                    nationalvalue = pm_clergyman
+                    nationalvalue = pm_militarist
                 }
             }
         }
@@ -2690,15 +2676,15 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
         modifier = {
             factor = 1.25
             OR = {
-                nationalvalue = nv_order
-                nationalvalue = nv_autocracy
+                nationalvalue = pm_clergyman
+                nationalvalue = pm_militarist
                 }
         }
     }
@@ -2880,15 +2866,15 @@ province_event = {
             factor = 0.75
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
             }
         }
         modifier = {
             factor = 1.5
             owner = {
-                    nationalvalue = nv_order
+                    nationalvalue = pm_clergyman
             }
         }
     }
@@ -3143,8 +3129,8 @@ province_event = {
             factor = 0.75
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
             }
         }
@@ -3411,8 +3397,8 @@ province_event = {
             factor = 1.5
             owner = {
                 OR = {
-                    nationalvalue = nv_liberty
-                    nationalvalue = nv_equality
+                    nationalvalue = pm_reformists
+                    nationalvalue = pm_nobleman
                 }
             }
         }
@@ -3420,8 +3406,8 @@ province_event = {
             factor = 0.75
             owner = {
                 OR = {
-                nationalvalue = nv_autocracy
-                nationalvalue = nv_order
+                nationalvalue = pm_militarist
+                nationalvalue = pm_clergyman
                 }
             }
         }
@@ -3492,15 +3478,15 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
         modifier = {
             factor = 1.25
             OR = {
-                nationalvalue = nv_order
-                nationalvalue = nv_autocracy
+                nationalvalue = pm_clergyman
+                nationalvalue = pm_militarist
             }
         }
     }
@@ -3595,8 +3581,8 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
     }
@@ -4034,15 +4020,15 @@ country_event = {
         modifier = {
             factor = 0.75
             OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
+                nationalvalue = pm_reformists
+                nationalvalue = pm_nobleman
             }
         }
         modifier = {
             factor = 1.25
             OR = {
-                nationalvalue = nv_order
-                nationalvalue = nv_autocracy
+                nationalvalue = pm_clergyman
+                nationalvalue = pm_militarist
                 }
             }
         }

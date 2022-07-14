@@ -384,7 +384,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = claimed_ruthenia
 			RUS_958 = { add_core = THIS }
-			RUS_955 = { add_core = THIS }
+			#RUS_955 = { add_core = THIS }
 			RUS_707 = { add_core = THIS }
 			RUS_718 = { add_core = THIS }
 			RUS_947 = { add_core = THIS }
@@ -399,16 +399,16 @@ political_decisions = {
 					badboy = 2.5
 				}
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_955 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
+			#random_owned = {
+			#	limit = {
+			#		owner = {
+			#			RUS_955 = { NOT = { owned_by = THIS } }
+			#		}
+			#	}
+			#	owner = {
+			#		badboy = 2.5
+			#	}
+			#}
 			random_owned = {
 				limit = {
 					owner = {
@@ -698,7 +698,6 @@ political_decisions = {
 		}
 		effect = {
 			years_of_research = 2
-			political_reform = open_borders
 			any_pop = {
 				militancy = 4
 				consciousness = 2

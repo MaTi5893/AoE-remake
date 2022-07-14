@@ -614,30 +614,6 @@ country_event = {
 		set_country_flag = enacted_3rd_may_constitution
 		prestige = 50
 		political_reform = wealth_weighted_voting
-		random_owned = {
-			limit = {
-				owner = { political_parties = underground_parties }
-			}
-			owner = {
-				political_reform = harassment
-			}
-		}	
-		random_owned = {
-			limit = {
-				owner = { debt_law = peonage }
-			}
-			owner = {
-				political_reform = debtors_prisons
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { debt_law = serfdom }
-			}
-			owner = {
-				political_reform = debtors_prisons
-			}
-		}
 		inherit = KUR	
 		random_owned = {
 			limit = {
@@ -945,8 +921,8 @@ country_event = {
 		}
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
-		political_reform = universal_voting
-		political_reform = population_equal_weight
+		political_reform = wealth_weighted_voting
+		political_reform = state_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
 		any_country = {
@@ -1041,9 +1017,6 @@ country_event = {
 			add_core = CPL
 		}
 		RUS_706 = {
-			add_core = CPL
-		}
-		RUS_712 = {
 			add_core = CPL
 		}
 		703 = {

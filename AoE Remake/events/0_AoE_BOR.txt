@@ -745,8 +745,8 @@ country_event = {
 		}
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
-		political_reform = universal_voting
-		political_reform = population_equal_weight
+		political_reform = wealth_weighted_voting
+		political_reform = state_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
 		remove_country_modifier = clergy_and_nobility_domination
@@ -1304,6 +1304,34 @@ country_event = {
 				who = PAP
 				value = -100
 			}
+		}
+	}
+}
+country_event = {
+	id = 171142
+	title = "what if"
+	desc = "deadass?"
+	fire_only_once = yes
+	picture = avignon
+	
+	trigger = {
+		capital = 425
+		primary_culture = french
+		OR = {
+		government = proletarian_dictatorship
+		government = fascist_dictatorship
+		}
+		ai = yes
+		AUS = { has_country_flag = hre_emperor }
+		619 = { controlled_by = THIS }
+	}
+	
+	option = {
+		name = "real"
+		casus_belli = {
+			target = AUS
+			type = dismantle_hre
+			months = 90
 		}
 	}
 }

@@ -111,4 +111,11 @@ set_country_flag = france
 oob = "BOR_oob.txt"
 1792.01.01 = {
 	decision = fra_setup
+	gas_attack_capability = 1
+	strategic_mobility = 1
+	point_defense_system = 1
+	deep_defense_system = 1
+	infiltration = 1
+	modern_army_doctrine = 1
+	army_doctrine_7 = 1
 }

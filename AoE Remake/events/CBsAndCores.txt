@@ -1167,8 +1167,8 @@ province_event = {
 					}
 				}
 				OR = {
-					owner = { political_rights = culture_voting_only }
-					owner = { political_rights = all_voting_pops }
+					owner = { citizens_rights = culture_voting_only }
+					owner = { citizens_rights = all_voting_pops }
 				}
 			}
 			AND = {
@@ -1178,7 +1178,7 @@ province_event = {
 						controlled_by = THIS
 					}
 				}
-				owner = { political_rights = all_voting_pops }
+				owner = { citizens_rights = all_voting_pops }
 			}
 		}
 		owner = {

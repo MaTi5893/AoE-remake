@@ -763,9 +763,9 @@ country_event = {
 }
 
 country_event = {
-	id = 1516013
+	id = 1516014
 	title = "The End of Latin American Wars of Independence"
-    desc = "EVTDESC1516013"
+    desc = "EVTDESC1516014"
 	picture = ""
 	fire_only_once = yes
 	
@@ -783,7 +783,7 @@ country_event = {
 		war = no
 		NOT = { exists = PRG }
 		NOT = { exists = PEU }
-		NOT = { exists = GCU }
+		NOT = { exists = GCO }
 		NOT = { exists = LPL }
 		NOT = { exists = CHL }
 		NOT = { exists = BOL }

@@ -6727,7 +6727,7 @@ napoleon_bonaparte = {
     core_pop_consciousness_modifier = -0.04
     prestige = 0.05
     ruling_party_support = 0.15
-    cb_generation_speed_modifier = -0.15
+    cb_generation_speed_modifier = 0.15
     icon = 19
 }
 ###Savoy###
@@ -7079,4 +7079,8 @@ hispanic_unity = {
 	assimilation_rate = 0.85
 	education_efficiency_modifier = 0.15
 	icon = 7
+}
+voc_golden_age = {
+    tax_efficiency = 0.15
+    icon = 9
 }

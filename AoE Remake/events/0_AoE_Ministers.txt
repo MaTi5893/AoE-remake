@@ -13,7 +13,6 @@ country_event = {
 				owner = {
 					wage_reform = trinket_wage
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -25,7 +24,6 @@ country_event = {
 				owner = {
 					wage_reform = low_minimum_wage
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -35,7 +33,6 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 					wage_reform = acceptable_minimum_wage
 				}
@@ -47,7 +44,6 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 					wage_reform = good_minimum_wage
 				}
@@ -67,7 +63,6 @@ country_event = {
 				owner = {
 					unemployment_subsidies = acceptable_subsidies
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -78,7 +73,6 @@ country_event = {
 			limit = {
 				owner = {
 					unemployment_subsidies = low_subsidies
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -91,7 +85,6 @@ country_event = {
 				owner = {
 					unemployment_subsidies = trinket_subsidies
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -102,7 +95,6 @@ country_event = {
 			limit = {
 				owner = {
 					unemployment_subsidies = no_subsidies
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -121,7 +113,6 @@ country_event = {
 				owner = {
 					safety_regulations = trinket_safety
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -132,7 +123,6 @@ country_event = {
 			limit = {
 				owner = {
 					safety_regulations = low_safety
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -145,7 +135,6 @@ country_event = {
 				owner = {
 					safety_regulations = acceptable_safety
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -156,7 +145,6 @@ country_event = {
 			limit = {
 				owner = {
 					safety_regulations = good_safety
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -175,7 +163,6 @@ country_event = {
 				owner = {
 					work_hours = ten_hours
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -186,7 +173,6 @@ country_event = {
 			limit = {
 				owner = {
 					work_hours = twelve_hours
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -199,7 +185,6 @@ country_event = {
 				owner = {
 					work_hours = fourteen_hours
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -210,7 +195,6 @@ country_event = {
 			limit = {
 				owner = {
 					work_hours = no_work_hour_limit
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -230,7 +214,6 @@ country_event = {
 					pensions = acceptable_pensions
 					has_country_flag = skill_and_merit_allowed
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -241,7 +224,6 @@ country_event = {
 			limit = {
 				owner = {
 					pensions = low_pensions
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -254,7 +236,6 @@ country_event = {
 				owner = {
 					pensions = trinket_pensions
 					NOT = { centralization = legislative_parliment }
-					NOT = { centralization = legislative_parliment }
 				}
 			}
 			owner = {
@@ -265,7 +246,6 @@ country_event = {
 			limit = {
 				owner = {
 					pensions = no_pensions
-					NOT = { centralization = legislative_parliment }
 					NOT = { centralization = legislative_parliment }
 				}
 			}
@@ -329,10 +309,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -370,7 +347,6 @@ country_event = {
 								owner = {
 									nationalvalue = pm_clergyman
 									OR = {
-										centralization = legislative_parliment
 										centralization = legislative_parliment
 									}
 								}
@@ -521,10 +497,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -589,10 +562,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -637,10 +607,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -685,10 +652,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -733,10 +697,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -781,10 +742,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -847,10 +805,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -895,10 +850,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -943,10 +895,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -991,10 +940,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1039,10 +985,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1101,10 +1044,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1149,10 +1089,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1197,10 +1134,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1259,10 +1193,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1307,10 +1238,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1355,10 +1283,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1437,10 +1362,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1485,10 +1407,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1533,10 +1452,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1581,10 +1497,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1629,10 +1542,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1721,10 +1631,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1769,10 +1676,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1817,10 +1721,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1865,10 +1766,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1913,10 +1811,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -1981,10 +1876,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2029,10 +1921,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2077,10 +1966,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2125,10 +2011,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2173,10 +2056,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2239,10 +2119,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2287,10 +2164,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2335,10 +2209,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2383,10 +2254,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2431,10 +2299,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2493,10 +2358,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2541,10 +2403,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2589,10 +2448,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2651,10 +2507,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2699,10 +2552,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2747,10 +2597,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2829,10 +2676,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_nobleman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2877,10 +2721,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_clergyman
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2925,10 +2766,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_reformists
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -2973,10 +2811,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_gentry
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {
@@ -3021,10 +2856,7 @@ country_event = {
 									limit = {
 										owner = {
 											nationalvalue = pm_militarist
-											OR = {
-												centralization = legislative_parliment
-												centralization = legislative_parliment
-											}
+											centralization = legislative_parliment
 										}
 									}
 									owner = {

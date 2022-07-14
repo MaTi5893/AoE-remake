@@ -233,7 +233,6 @@ country_event = {
     option = {
         name = "Sell it."
         money = 500000
-		money = 500000
         FROM = { country_event = 180500003 }
         prestige = -5
 		relation = {

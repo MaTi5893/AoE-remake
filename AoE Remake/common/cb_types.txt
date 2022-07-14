@@ -2900,7 +2900,10 @@ make_puppet = {
 		NOT = { has_country_modifier = neutrality }
 		THIS = { NOT = { has_country_modifier = neutrality } }
         NOT = { is_our_vassal = THIS }
+		OR = {
         NOT = { number_of_states = 4 }
+		government = elective_monarchy_oligarchy
+		}
         is_greater_power = no
         #is_vassal = no
     }
@@ -3526,6 +3529,7 @@ install_communist_gov_cb = {
         political_reform = state_controlled
         political_reform = underground_parties
 		political_reform = legislative_parliment
+		country_event = 60000
     }
 }
 

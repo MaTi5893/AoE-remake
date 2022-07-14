@@ -55,7 +55,7 @@ country_event = {
         political_reform = state_controlled
         political_reform = underground_parties
         political_reform = no_slavery
-        political_reform = debtors_prisons
+        
         political_reform = culture_voting_only
         prestige_factor = -0.1
         country_event = 800052
@@ -258,7 +258,6 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         remove_country_modifier = fight_the_power
-        random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { government = hms_government } }
         random_owned = { limit = { owner = { NOT = { government = fascist_dictatorship } } } owner = { government = democracy } }
         election = yes
         add_country_modifier = { name = not_dictatorship duration = 3650 }
@@ -388,6 +387,7 @@ country_event = {
     trigger = {
         government = prussian_constitutionalism
         centralization = legislative_parliment
+		NOT = { upper_house = party_appointed }
         civilized = yes
     }
 

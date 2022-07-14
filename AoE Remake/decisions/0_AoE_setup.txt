@@ -386,7 +386,6 @@ political_decisions = {
 			always = no
 		}
 		effect = {
-			invention = gas_attack_capability
 			country_event = 19355
 			country_event = 19356
 		}
@@ -507,16 +506,16 @@ political_decisions = {
 				any_pop = {
 					limit = {
 						NOT = { has_pop_culture = manchu }
-						NOT = { region = CHI_1499 } #treaty ports excluded
-						NOT = { region = CHI_1496 }
-						NOT = { region = CHI_1498 }
-						NOT = { region = CHI_1566 }
-						NOT = { region = CHI_1569 }
-						NOT = { region = CHI_1538 }
-						NOT = { region = CHI_1606 }
-						NOT = { region = CHI_1608 }
-						NOT = { region = CHI_1481 }
-						NOT = { region = CHI_2562 }
+						NOT = { location = { region = CHI_1499 } } #treaty ports excluded
+						NOT = { location = { region = CHI_1496 } }
+						NOT = { location = { region = CHI_1498 } }
+						NOT = { location = { region = CHI_1566 } }
+						NOT = { location = { region = CHI_1569 } }
+						NOT = { location = { region = CHI_1538 } }
+						NOT = { location = { region = CHI_1606 } }
+						NOT = { location = { region = CHI_1608 } }
+						NOT = { location = { region = CHI_1481 } }
+						NOT = { location = {  region = CHI_2562 } }
 					}
 					reduce_pop = 0.45
 				}
@@ -689,22 +688,22 @@ political_decisions = {
 		}
 		effect = {
 			enable_canal = 4
-			enable_canal = 5
+			#enable_canal = 5
 			enable_canal = 6
 			enable_canal = 7
 			enable_canal = 8
 			enable_canal = 9
 			enable_canal = 10
-			enable_canal = 11
+			#enable_canal = 11
 			enable_canal = 12
-			enable_canal = 13
+			#enable_canal = 13
 			enable_canal = 14
-			enable_canal = 15
+			#enable_canal = 15
 			enable_canal = 16
 			enable_canal = 17
 			enable_canal = 18
 			enable_canal = 19
-			enable_canal = 20
+			#enable_canal = 20
 		}
 	}
 }

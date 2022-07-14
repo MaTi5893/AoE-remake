@@ -174,6 +174,7 @@ political_decisions = {
 			add_core = 1724
 			add_core = 2023
 			add_core = 570
+			add_core = 1980
 		}
 		ai_will_do = {
 			factor = 1
@@ -967,6 +968,7 @@ political_decisions = {
         }
 
         allow = {
+			is_greater_power = yes
 		    war = no
             FRA_412 = { owned_by = THIS }
             BEL_387 = { owned_by = THIS }
@@ -1056,6 +1058,10 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1807 }
+			}
         }
 
     }
@@ -1101,7 +1107,7 @@ political_decisions = {
 			LOR = {
 				all_core = {
 					add_core = BOR
-					remove_core = NN
+					remove_core = NNN
 				}
 				annex_to = THIS
 			}

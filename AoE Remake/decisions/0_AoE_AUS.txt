@@ -341,6 +341,22 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						exists = SAL
+						SAL = { ai = yes}
+					}
+				}
+				owner = {
+					inherit = SAL
+					SAL = {
+						all_core = {
+							add_core = THIS
+						}
+					}
+				}
+			}
 			set_country_flag = declared_the_austrian_empire
         }
     }
@@ -424,7 +440,7 @@ political_decisions = {
 				limit = {
 					owner = {
 						ai = yes
-						VEN = = { ai = yes war = no }
+						VEN = { ai = yes war = no }
 					}
 				}
 				owner = {
@@ -432,6 +448,13 @@ political_decisions = {
 				}
 			}
 			leave_alliance = VEN
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1800 }
+			}
 		}
 	}
 }

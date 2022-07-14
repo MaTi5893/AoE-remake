@@ -509,7 +509,7 @@ country_event = {
             country_event = 800056
         }
         random_country = {
-            limit = { is_our_vassal = THIS }
+            limit = { is_our_vassal = THIS NOT = { truce_with = THIS } }
             release_vassal = THIS
             leave_alliance = THIS
             diplomatic_influence = {

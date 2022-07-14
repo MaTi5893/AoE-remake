@@ -1540,8 +1540,8 @@ country_event = {
         }
         government = proletarian_dictatorship
         ruling_party_ideology = communist
-        political_reform = universal_voting
-        political_reform = population_equal_weight
+        political_reform = wealth_weighted_voting
+        political_reform = state_equal_weight
         political_reform = yes_meeting
         political_reform = free_press
         any_country = {
