@@ -385,37 +385,6 @@ political_decisions = {
                     political_reform = population_equal_weight
                 }
             }
-			
-			any_state = {
-				limit = {
-					is_colonial = yes
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-				}
-				any_owned = {
-					add_core = UTI
-				}
-			}
-			any_owned = {
-				limit = {
-					is_core = UTI
-				}
-				secede_province = CLN
-			}
-			CLN = {
-				any_owned = {
-					limit = {
-						is_core = UTI
-					}
-					secede_province = UTI
-				}
-				create_vassal = UTI
-			}
-			inherit = UTI
-			UTI = { all_core = { remove_core = UTI } }
-			
             FLO = {
                 all_core = {
                     add_core = THIS
