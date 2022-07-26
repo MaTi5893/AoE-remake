@@ -885,7 +885,7 @@ province_event = {
 				health_care = good_health_care #v. infl 'crats
 				has_country_flag = nana_phadnavis
 				has_country_flag = mughal_reforms
-				political_thought_7 = 1
+				revolution_n_counterrevolution = 1
 			}
 		}
 	}
@@ -933,7 +933,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			health_care = good_health_care
 		}
 	}

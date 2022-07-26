@@ -333,7 +333,10 @@ political_decisions = {
     act_of_union_ire = {
 		picture = map_britain
         potential = {
+			OR = {
             tag = GBR
+			tag = GBJ
+			}
             NOT = { exists = ENG }
         }
         allow = {
@@ -355,11 +358,20 @@ political_decisions = {
 			}
         }
         effect = {
-            all_core = {
-                add_core = ENG
-                remove_core = THIS
-            }
-            change_tag = ENG
+			random_owned = {
+				limit = {
+					owner = {
+						tag = GBR
+					}
+				}
+				owner = {
+					all_core = {
+						add_core = ENG
+						remove_core = THIS
+					}
+					change_tag = ENG
+				}
+			}
             prestige = 15
             any_pop = {
                 militancy = -1

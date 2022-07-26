@@ -405,6 +405,8 @@ political_decisions = {
             change_tag = PLR
             PLR = {
                 add_accepted_culture = ukrainian
+				add_accepted_culture = tatar
+				add_accepted_culture = cossack
             }
             prestige = 15
         }
@@ -519,6 +521,7 @@ political_decisions = {
                 }
             }
 			add_accepted_culture = latvian
+			add_accepted_culture = estonian
             354 = { add_core = THIS }
             355 = { add_core = THIS }
             352 = { add_core = THIS }

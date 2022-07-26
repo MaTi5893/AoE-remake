@@ -170,6 +170,9 @@ steamers = {
     unciv_military = yes
 
     navy_base = { maximum_speed = 1 }
+	rgo_goods_output = {
+		fish = 0.5
+	}
 
     ai_chance = {
         factor = 4

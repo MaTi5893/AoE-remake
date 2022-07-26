@@ -615,6 +615,7 @@ political_reforms = {
             allow = {
 				NOT = { upper_house_composition = party_appointed }
 				NOT = { vote_franschise = none_voting }
+				has_country_flag = never
             }
         }
         theocratic_council = {
@@ -622,7 +623,7 @@ political_reforms = {
 			literacy_con_impact = -0.15
 			cb_generation_speed_modifier = 0.15
             allow = {
-				#wage_reform = no_minimum_wage
+				has_country_flag = never
             }
         }
     }

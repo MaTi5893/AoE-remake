@@ -36,7 +36,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					OR = {
 					truce_with = AUS
+					war_with = AUS
+					}
 				}
 			}
 			owner = {
@@ -53,6 +56,7 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { truce_with = AUS }
+					NOT = { war_with = AUS }
 				}
 			}
 			owner = {

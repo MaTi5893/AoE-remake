@@ -50,39 +50,39 @@ country_event = {
         ai_chance = { factor = 1 }
     }
 }
-country_event = {
-    id = 170779
-    title = "Dissolution of our Empire"
-    desc = "EVTDESC170779"
-    major = yes
-    fire_only_once = yes
-    trigger = {
-        tag = MUG
-        war = no
-        MUG = {
-            OR = {
-                AND = {
-                    NOT = { is_greater_power = yes }
-                    has_recently_lost_war = yes
-                }
-                AND = {
-                    NOT = { owns = 1270 }
-                    NOT = { owns = 1277 }
-                    NOT = { owns = 1305 }
-                    NOT = { owns = 1277 }
-                    NOT = { owns = 1261 }
-                }
-            }
-        }
-    }
-    mean_time_to_happen = {
-        months = 1
-    }
-    option = {
-        name = "We will not rest until we rebuild it..."
-        all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
-    }
-}
+#country_event = {
+#    id = 170779
+#    title = "Dissolution of our Empire"
+#    desc = "EVTDESC170779"
+#    major = yes
+#    fire_only_once = yes
+#    trigger = {
+#        tag = MUG
+#        war = no
+#        MUG = {
+#            OR = {
+#                AND = {
+#                    NOT = { is_greater_power = yes }
+#                    has_recently_lost_war = yes
+#                }
+#                AND = {
+#                    NOT = { owns = 1270 }
+#                    NOT = { owns = 1277 }
+#                    NOT = { owns = 1305 }
+#                    NOT = { owns = 1277 }
+#                    NOT = { owns = 1261 }
+#                }
+#            }
+#        }
+#    }
+#    mean_time_to_happen = {
+#        months = 1
+#    }
+#    option = {
+#        name = "We will not rest until we rebuild it..."
+#        all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
+#    }
+#}
 country_event = {
     id = 175002
     title = "The Indian Realms"

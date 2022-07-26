@@ -803,6 +803,18 @@ political_decisions = {
 					}
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = { is_core = AUS is_core = THIS }
+					}
+				}
+				owner = {
+					all_core = {
+						remove_core = AUS
+					}
+				}
+			}
 		}
 	}
 }

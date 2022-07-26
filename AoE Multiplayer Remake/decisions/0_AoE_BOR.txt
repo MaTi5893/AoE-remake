@@ -150,7 +150,7 @@ political_decisions = {
 		}
 		allow = {
 			war_policy = jingoism
-			NOT = { has_country_modifier = no_more_war }
+			mass_politics = 1
 		}
 		effect = {
 			badboy = 15

@@ -352,45 +352,15 @@ political_decisions = {
 		}
 		allow = {
 			war_policy = jingoism
-			is_greater_power = yes
-			546 = { owned_by = THIS }
-			OR = {
-				AND = {
-					690 = { owned_by = THIS }
-					365 = { owned_by = THIS }
-					KUR = {
-						all_core = {
-							OR = {
-								owned_by = THIS
-								owner = {
-									in_sphere = THIS
-								}
-							}
-						}
-					}
-				}
-				AND = {
-					KUR = {
-						all_core = {
-							controlled_by = THIS
-						}
-					}
-					360 = {
-						controlled_by = THIS
-					}
-					690 = {
-						controlled_by = THIS
-					}
-					706 = {
-						controlled_by = THIS
-					}
-				}
-				has_country_flag = installed_leszczynski
-			}
+			nationalism_n_imperialism = 1
+			owns = 354
+			owns = 350
+			owns = 994
 		}
 		effect = {
 			badboy = 10
 			set_country_flag = conquer_danzig
+			add_accepted_culture = lithuanian
 			PRU_690 = {
 				add_core = THIS
 			}
@@ -438,65 +408,6 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	
-	renew_the_kedainiai_treaty = {
-		potential = {
-			primary_culture = swedish
-			NOT = { has_country_flag = renewed_the_kedainiai_treaty }
-			owns = 365
-		}
-		allow = {
-			is_greater_power = yes
-			war_policy = jingoism
-			all_core = { owned_by = THIS }
-			LIT = {
-				OR = {
-				exists = no
-					AND = {
-						exists = yes
-						vassal_of = THIS
-					}
-				}
-			}
-			PLC = {
-				OR = {
-					exists = no
-					AND = {
-						exists = yes
-						NOT = {
-							any_owned_province = {
-								is_core = LIT
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			add_accepted_culture = lithuanian
-			LIT = {
-				all_core = {
-					add_core = THIS
-				}
-			}
-			random_country = {
-				limit = {
-					exists = yes
-					tag = LIT
-					vassal_of = THIS
-				}
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					exists = yes
-					tag = PLC
-				}
-				change_tag = POL
-			}
-			set_country_flag = renewed_the_kedainiai_treaty
 		}
 	}
 	
