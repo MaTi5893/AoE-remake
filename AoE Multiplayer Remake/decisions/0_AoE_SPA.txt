@@ -385,7 +385,6 @@ political_decisions = {
                     political_reform = population_equal_weight
                 }
             }
-			
             FLO = {
                 all_core = {
                     add_core = THIS
@@ -399,8 +398,6 @@ political_decisions = {
             add_core = 2214
             add_core = 2222
             add_core = 2217
-			
-			CLN = { country_event = 111111 }
         }
     }
 }
