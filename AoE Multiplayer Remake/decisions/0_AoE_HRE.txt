@@ -49,6 +49,7 @@ political_decisions = {
             has_country_flag = hre_member
             NOT = { has_global_flag = hre_dismantled }
             exists = yes
+			NOT = { has_country_flag = hre_emperor }
 			NOT = { exists = NNN }
         }
         allow = {
@@ -258,9 +259,12 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				NOT = {
-					any_sphere_member = {
-						has_country_flag = hre_member
+				OR = {
+					NOT = {
+						any_sphere_member = {
+							has_country_flag = hre_member
+							exists = yes
+						}
 					}
 				}
 				is_greater_power = no
