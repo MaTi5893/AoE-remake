@@ -575,45 +575,6 @@ political_decisions = {
             }
         }
     }
-
-    form_brandenburg = {
-        picture = prussia_king
-        potential = {
-            tag = PRU
-            NOT = {
-                owns = 691
-                owns = 695
-            }
-            exists = yes
-        }
-        allow = {
-            exists = yes
-        }
-        effect = {
-            all_core = {
-                add_core = BRN
-                remove_core = PRU
-            }
-            580 = {
-                remove_core = BRN
-                add_core = LIP
-            }
-            577 = {
-                remove_core = BRN
-                secede_province = PAL
-            }
-            PRU_695 = {
-                add_core = DPR
-                remove_core = BRN
-            }
-            release = LIP
-            create_alliance = LIP
-            change_tag = BRN
-            prestige = -15
-        }
-        ai_will_do = { factor = 1 }
-    }
-
     form_prussia = {
         picture = prussia_king
         potential = {
