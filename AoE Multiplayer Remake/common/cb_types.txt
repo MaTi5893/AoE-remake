@@ -4256,10 +4256,16 @@ conquest_low = {
     can_use = {
 		NOT = { has_country_modifier = neutrality }
 		THIS = { NOT = { has_country_modifier = neutrality } }
-        NOT = {    total_pops = 400000 }
+		OR = {
+			NOT = {    total_pops = 400000 }
+			AND = { has_country_flag = hre_member ai = no }
+		}
         NOT = { is_our_vassal = THIS }
         # only one state or unciv
-        NOT = { number_of_states = 5 }
+		OR  = {
+			NOT = { number_of_states = 5 }
+			AND = { has_country_flag = hre_member ai = no }
+		}
 		OR = { #non hre member can't justify on hre member
 			AND = {
 				NOT = { has_country_flag = hre_member }
@@ -4276,20 +4282,11 @@ conquest_low = {
 			tag = LIG
 		}
         OR = {
-            AND = {
-                civilized = yes
-                NOT = { number_of_states = 3 }
-            }
+            civilized = yes
             AND = {
                 civilized = no
                 THIS = { civilized = no }
                 NOT = { number_of_states = 3 }
-            }
-			AND = {
-                civilized = yes
-				has_country_flag = hre_member
-				total_pops = 500000
-                NOT = { number_of_states = 4 }
             }
             AND = {
                 civilized = no
@@ -4318,7 +4315,7 @@ conquest_low = {
     good_relation_infamy_factor = 1
     good_relation_militancy_factor = 1
 
-    construction_speed = 0.5
+    construction_speed = 1
 
     on_add = {
         move_issue_percentage = {
@@ -4403,7 +4400,7 @@ conquest_tiny = {
     good_relation_infamy_factor = 1
     good_relation_militancy_factor = 1
 
-    construction_speed = 0.5
+    construction_speed = 1.5
 
     on_add = {
         move_issue_percentage = {
@@ -4451,7 +4448,7 @@ conquest_tribal = {
 	good_relation_infamy_factor = 1
 	good_relation_militancy_factor = 1
 	
-	construction_speed = 0.5
+	construction_speed = 1.5
 	
 	on_add = {
 		move_issue_percentage = { 

@@ -1,96 +1,4 @@
 country_event = {
-	id = 156900
-	title = "Integration of Ducal Prussia"
-	desc = "EVTDESC156900"
-	picture = szlachta
-	fire_only_once = yes
-	
-	trigger = {
-		primary_culture = polish
-		is_our_vassal = DPR
-	}
-	
-	mean_time_to_happen = {
-		months = 20
-	}
-	
-	option = {
-		name = "Integrate them"	
-		DPR = {
-			all_core = { add_core = PLC }
-		}
-		inherit = DPR
-		badboy = 7
-		prestige = 20
-	}	
-	option = {
-		name = "Let them be"
-		prestige = 5
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-country_event = {
-	id = 156902
-	title = "Polish-Lithuanian policies vetoed"
-	desc = "EVTDESC156902"
-	picture = sejm
-
-	trigger = {
-		government = elective_monarchy_oligarchy
-		primary_culture = polish
-		OR = { safety_regulations = low_safety safety_regulations = acceptable_safety }
-		average_militancy = 1.5
-	}
-	
-	mean_time_to_happen = {
-		months = 4
-	}
-	
-	option = {
-		name = "They're all idiots"	
-		election = yes
-		safety_regulations = no_safety
-		add_country_modifier = {
-			name = szlachta_pissed
-			duration = 1825
-		}
-		prestige = -5
-	}	
-}
-country_event = {
-	id = 156903
-	title = "Tax Law Passed"
-	desc = "EVTDESC156903"
-	picture = sejm
-
-	trigger = {
-		government = elective_monarchy_oligarchy
-		primary_culture = polish
-		war_exhaustion = 5
-		war = yes
-		NOT = { has_country_modifier = szlachta_war_taxes }
-		NOT = { has_country_modifier = noble_democracy }
-		NOT = { has_country_modifier = policy_approved }
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	option = {
-		name = "They're taking Coins out of MY treasury?!"	
-		election = yes
-		money = -7500
-		add_country_modifier = {
-			name = szlachta_war_taxes
-			duration = 1825
-		}
-		prestige = -5
-	}	
-}
-country_event = {
 	id = 156905
 	title = "Tornogrod Confederation"
 	desc = "EVTDESC156905"
@@ -120,19 +28,6 @@ country_event = {
 		}
 		clr_country_flag = elective_monarchy
 		prestige = -5
-	}
-}
-country_event = {
-	id = 156904
-	title = "Szlachta reinstitutes the elective monarchy"
-	desc = "EVTDESC156904"	
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "We were on the verge of greatness..."
-		government = elective_monarchy_oligarchy
-		election = yes
 	}
 }
 
@@ -357,48 +252,6 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = 15730031
-	title = "Treaty of Warsaw"
-	desc = "..."	
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "A Historical Victory for our nation!"
-		RUS = {
-			diplomatic_influence = {
-				who = THIS
-				value = -400
-			}
-		}
-		HET = {
-			limit = {
-				vassal_of = RUS
-			}
-			country_event = 15730131
-		}
-		ZZH = {
-			limit = {
-				vassal_of = RUS
-			}
-			country_event = 15730131
-		}
-		prestige = 25
-		clr_global_flag = polish_succesion_crisis
-	}
-}
-country_event = {
-	id = 15730131
-	title = "Treaty of Warsaw"
-	desc = "..."	
-	is_triggered_only = yes
-	
-	option = {
-		name = "A Historical Victory for our nation!"
-		annex_to = PLC
-	}
-}
 ####Royal Election of 1764####
 country_event = {
 	id = 15730040
@@ -614,7 +467,6 @@ country_event = {
 		government = elective_monarchy_oligarchy
 		has_country_flag = lesczynski_rule
 		war = no
-		year = 1734
 	}
 	
 	mean_time_to_happen = {
@@ -623,22 +475,7 @@ country_event = {
 	
 	option = {
 		name = "Enact the reforms!"
-		add_country_modifier = {
-			name = noble_democracy
-			duration = -1
-		}
-		social_reform = ten_hours
-		social_reform = acceptable_subsidies
-		social_reform = low_pensions
-		political_reform = wealth_voting
-		remove_country_modifier = magnate_oligarchy
-		ai_chance = { factor = 1 }
-	}
-	
-	option = {
-		name = "Strengthening the sejm? Over my dead body!"
-		prestige = -15
-		ai_chance = { factor = 0 }
+		years_of_research = 1
 	}
 }
 country_event = {
@@ -1275,5 +1112,27 @@ country_event = {
 				social_reform = trinket_health_care
 			}
 		}
+	}
+}
+country_event = {
+	id = 15730070
+	title = "Loss of Saxony"
+	desc = "How will we recover"
+	picture = sejm
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { owns = 558 }
+		NOT = { owns = 556 }
+		has_country_flag = wettin_coup
+	}
+	option = {
+		name = "Literally 1784"
+		all_core = {
+			limit = {
+				is_core = SAX
+			}
+			remove_core = THIS
+		}	
 	}
 }

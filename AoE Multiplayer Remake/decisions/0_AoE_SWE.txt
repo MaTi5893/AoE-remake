@@ -563,28 +563,6 @@ political_decisions = {
 	#	}
 	#}
 	
-	install_leszczynski = {
-		picture = install_leszczynski
-		potential = {
-			primary_culture = swedish
-			NOT = { has_country_flag = installed_leszczynski }
-			war_with = PLC
-			NOT = { year = 1766 }
-			OR = {
-			706 = { controlled_by = THIS }
-			PLC = { capital_scope = { controlled_by = THIS } }
-			}
-		}
-		allow = {
-			war_with = PLC
-		}
-		effect = {
-			war_exhaustion = -5
-			set_country_flag = installed_leszczynski
-			PLC = { country_event = 1721006 }
-		}
-	}
-	
 	form_scandinavia = {
 		picture = become_scandinavia
 		potential = {

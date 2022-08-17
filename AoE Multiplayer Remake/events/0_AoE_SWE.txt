@@ -203,29 +203,18 @@ country_event = {
 }
 country_event = {
     id = 1721006
-    title = "A puppet King installed!"
+    title = "A Swedish Pretender Installed!"
     desc = "EVTDESC1721006"
     picture = leszczynski
     is_triggered_only = yes
+	major = yes
 
     option = {
-        name = "We will accept his rule, but resist the Swedes"
+        name = "Long Live Stanislaw Leszczynski!"
         release_vassal = SAX
         set_country_flag = leszcynski_rule
         war_exhaustion = -5
         SAX = {
-            casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 12
-            }
-        }
-    }
-
-    option = {
-        name = "We stay loyal to the Wettins!"
-        war_exhaustion = 5
-		SWE = {
             casus_belli = {
                 target = THIS
                 type = make_puppet

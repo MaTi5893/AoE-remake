@@ -1149,3 +1149,25 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = 171141
+	title = "Loss Of New France"
+	desc = "We lost our new world posessions"
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { owns = 139 }
+		NOT = { owns = 58 }
+		NOT = { owns = 46 }
+	}
+	
+	option = {
+		name = "Mon Dieu!"
+		all_core = {
+			limit = {
+				life_rating = 35
+			}
+			life_rating = -1
+		}
+	}
+}

@@ -740,7 +740,7 @@ promote_to =
         }
 		modifier = {
 			factor = 5
-			nationalvalue = pm_militarist
+			nationalvalue = nv_order
 		}
 		modifier = {
 			factor = -10
@@ -968,7 +968,7 @@ promote_to =
         }
 		modifier = {
 			factor = 5
-			nationalvalue = pm_gentry
+			nationalvalue = nv_equality
 		}
         group = {
         modifier = {
@@ -2046,7 +2046,7 @@ issues =
         }
 		modifier = {
 			factor = 1.3
-			nationalvalue = pm_militarist
+			nationalvalue = nv_order
 		}
     }
     pro_military = {

@@ -1,36 +1,5 @@
 political_decisions = {
 
-    education_reform = {
-        picture = education_reforms
-        potential = {
-            372 = {
-                is_capital = yes
-            }
-            owns = 372
-            exists = yes
-            NOT = { has_country_flag = education_reform }
-        }
-        allow = {
-            war = no
-            social_science = 1
-        }
-        effect = {
-            set_country_flag = education_reform
-            random_owned = {
-                limit = {
-                    owner = { NOT = { school_reforms = good_schools } }
-                }
-                owner = {
-                    social_reform = good_schools
-                }
-            }
-            add_country_modifier = {
-                name = reformed_scholarship
-                duration = 1825
-            }
-        }
-    }
-
     struensee_reforms = {
         picture = struensse
         potential = {
@@ -123,76 +92,26 @@ political_decisions = {
                     political_reform = debtors_prisons
                 }
             }
-            add_country_modifier = {
-                name = total_reform
-                duration = 5475
-            }
+			years_of_research = 2
         }
     }
 
     danish_gp = {
         picture = danish_straits
         potential = {
-            372 = {
-                is_capital = yes
-            }
-            owns = 372
+           tag = DNN
             NOT = { has_country_flag = danish_gp }
             NOT = { tag = SCA }
             exists = yes
         }
         allow = {
-            all_core = {
-                OR = {
-                    AND = {
-                        owned_by = THIS
-                        NOT = {
-                            owned_by = SWE
-                        }
-                    }
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
+			year = 1701
         }
         effect = {
             set_country_flag = danish_gp
-            prestige = 50
-            add_country_modifier = {
-                name = local_hegemon
-                duration = 5475
-            }
-        }
-    }
-
-    claim_estonia_and_livonia = {
-        picture = baltic
-        potential = {
-            372 = {
-                is_capital = yes
-            }
-            owns = 372
-            NOT = { has_country_flag = claimed_estonia_and_livonia }
-            NOT = { tag = SCA }
-            exists = yes
-        }
-        allow = {
-            has_country_flag = danish_gp
-            all_core = {
-                owned_by = THIS
-            }
-            military_score = 30
-        }
-        effect = {
-            badboy = 7
-            set_country_flag = claimed_estonia_and_livonia
-            RUS_349 = {
-                add_core = THIS
-            }
-            RUS_354 = {
-                add_core = THIS
-            }
+			prestige = 15
+			add_core = 319
+			SWE_329 = { add_core = THIS }	
         }
     }
 
@@ -207,12 +126,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            has_country_flag = danish_gp
-            all_core = {
-                owned_by = THIS
-            }
-            is_greater_power = yes
-            military_score = 50
+			nationalism_n_imperialism = 1
         }
         effect = {
             set_country_flag = claimed_pomerania_den
@@ -220,90 +134,6 @@ political_decisions = {
             set_country_flag = struensee_reforms
             PRU_546 = {
                 add_core = THIS
-            }
-        }
-    }
-
-#    claim_british_islands
-#
-#    reestablish_danelaw
-
-    end_dnn = {
-        picture = become_dnn
-        potential = {
-            DEN = {
-                exists = no
-            }
-            tag = DNN
-            NOT = { has_country_flag = education_reform }
-            exists = yes
-        }
-        allow = {
-            OR = {
-                AND = {
-                    NOT = { owns = 308 }
-                    NOT = { owns = 309 }
-                    NOT = { owns = 313 }
-                }
-                NOR = {
-                    exists = yes
-                }
-            }
-        }
-        effect = {
-            prestige = -50
-            change_tag = DEN
-        }
-    }
-
-    reestablish_dnn = {
-        picture = become_dnn
-        potential = {
-            DNN = {
-                exists = no
-            }
-            tag = DEN
-            NOT = { has_country_flag = education_reform }
-            exists = yes
-        }
-        allow = {
-            owns = 308
-            owns = 309
-            owns = 313
-            NOR = {
-                exists = no
-            }
-        }
-        effect = {
-            set_country_flag = struensee_reforms
-            change_tag = DNN
-        }
-    }
-    #mmmyes
-    danish_tunis = {
-        picture = tunisia_map
-        potential = {
-            OR = {
-                tag = DNN
-                tag = DEN
-                tag = SCA
-            }
-            owns = 1725
-            NOT = {
-                has_country_flag = danish_tunisia
-            }
-            exists = yes
-        }
-        allow = {
-            war = no
-        }
-        effect = {
-            set_country_flag = danish_tunisia
-            1725 = { change_province_name = "Carthenhagen" }
-            prestige = 15
-            TUN = {
-                primary_culture = danish
-                add_accepted_culture = maghrebi
             }
         }
     }

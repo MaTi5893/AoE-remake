@@ -723,7 +723,7 @@ promote_to =
         }
 		modifier = {
 			factor = 5
-			nationalvalue = pm_militarist
+			nationalvalue = nv_order
 		}
         group = {
             modifier = {
@@ -767,10 +767,6 @@ promote_to =
                 military_spending = 0.99
             }
         }
-		modifier = {
-			factor = -10
-			has_crime = foreign_service_pressing
-		}
         group = {
             modifier = {
                 factor = -2

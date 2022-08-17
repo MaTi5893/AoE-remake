@@ -334,8 +334,8 @@ promote_to =
                 aristocrats = 0.02
             }
 			OR = {
-			nationalvalue = pm_gentry
-			nationalvalue = pm_noblemen
+			nationalvalue = nv_equality
+			nationalvalue = nv_order
 			}
         }
 
@@ -349,7 +349,7 @@ promote_to =
         }
 		modifier = {
             factor = 5
-            nationalvalue = pm_gentry
+            nationalvalue = nv_equality
         }
         modifier = {
             factor = 2
