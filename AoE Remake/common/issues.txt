@@ -191,29 +191,38 @@ party_issues = {
             core_pop_consciousness_modifier = -0.1
         }
     }
-    social_policy = { #Estate policy
-        no_state_interference = { #Despotic Dominance
+    estate_affiliation = {
+        absolutist = {
             max_social_spending = 0.5
             core_pop_consciousness_modifier = -0.1
             core_pop_militancy_modifier = -0.16
         }
-        colonial_spending_policy = { #Colonial Subjects
-            cb_generation_speed_modifier = 0.1
-            mobilisation_size = 0.01
-            non_accepted_pop_consciousness_modifier = -0.05
+        nobility_church = {
+			max_social_spending = 0.5
         }
-        no_position_set = {
+		nobility_gentry = {
+			max_social_spending = 0.75
+			min_social_spending = 0.2
         }
-        populist_welfare = { #Philosopher court
-            min_social_spending = 0.15
-			core_pop_consciousness_modifier = 0.01 
-            research_points_modifier = 0.15
+		gentry_burghers = {
+			min_social_spending = 0.5
         }
-        welfare_state = { #Revolutionary Thought
-            min_social_spending = 0.33
-            cb_generation_speed_modifier = 0.33
-            core_pop_militancy_modifier = 0.01
+		nobility_army = {
+			max_social_spending = 0.5
+			min_military_spending = 0.25
         }
+		gentry_army= {
+			min_social_spending = 0.25
+			min_military_spending = 0.25
+        }
+		church_army = {
+			min_social_spending = 0.25
+			min_military_spending = 0.25
+		}
+        no_affiliation = {
+		
+        }
+
     }
 }
 
@@ -268,6 +277,7 @@ political_reforms = {
             global_immigrant_attract = 0.01
             allow = {
                 OR = {
+					has_country_flag = abolitionism_activated
                     year = 1800
                 }
             }
@@ -513,51 +523,6 @@ political_reforms = {
         }
     }
 
-    colonial_policy = {
-		next_step_only = yes
-		settlement = {
-			global_assimilation_rate = 0.075
-			global_immigrant_attract = 0.015
-			supply_consumption = 0.05
-			tax_efficiency = -0.03
-			non_accepted_pop_consciousness_modifier = 0.02
-			non_accepted_pop_militancy_modifier = 0.02
-			core_pop_militancy_modifier = -0.01
-			core_pop_consciousness_modifier = -0.01
-			administrative_multiplier = 1
-			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
-		}
-		
-		exploitation = { #Indirect rule
-			prestige = 0.1
-			tax_efficiency = 0.03
-			supply_consumption = 0.05
-			non_accepted_pop_militancy_modifier = -0.05
-			navy_tech_research_bonus = 0.05
-			suppression_points_modifier = 0.25
-			administrative_multiplier = 1
-			allow = { colonial_nation = yes  NOT = { has_country_flag = chosen_colonial_policy } }
-		}
-
-		civilizing = { #Charter Company
-			tariff_efficiency_modifier = 0.1
-			tax_efficiency = 0.05
-			supply_consumption = 0.05
-			non_accepted_pop_militancy_modifier = -0.01
-			non_accepted_pop_consciousness_modifier = 0.01
-			commerce_tech_research_bonus = -0.05
-			administrative_multiplier = 0.8
-			allow = { colonial_nation = yes NOT = { has_country_flag = chosen_colonial_policy } }
-		}
-		
-		no_colonies = {
-			allow = { colonial_nation = no }
-			supply_consumption = -0.05
-			navy_tech_research_bonus = -0.05
-			army_tech_research_bonus = 0.05
-		}
-	}
-
     centralization = { #Parliment
         no_parliment = {
 			suppression_points_modifier = 0.25
@@ -594,8 +559,10 @@ social_reforms = {
             core_pop_consciousness_modifier = -0.02
 
             rich_vote = 0.20
-
-            
+			
+            allow = {
+				NOT = { estate_affiliation = absolutist }
+			}
         }
         trinket_wage = { #influential
             tax_efficiency = -0.025
@@ -625,7 +592,11 @@ social_reforms = {
 
             rich_vote = 0.05
 			allow = {
-				NOT = { has_country_flag = clergy_and_nobility_domination }
+				allow = { 
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+					NOT = { estate_affiliation = nobility_church }
+					NOT = { estate_affiliation = church_army }
+				}
             }
         }
         good_minimum_wage = { #irrelevant
@@ -633,6 +604,7 @@ social_reforms = {
             factory_throughput = 0.1
             core_pop_consciousness_modifier = 0.01
             minimum_wage = 0.8
+			 allow = { NOT = { estate_affiliation = nobility_church estate_affiliation = church_army } }
         }
     }
 
@@ -641,6 +613,7 @@ social_reforms = {
         next_step_only = yes
         no_work_hour_limit = { #irrelevant
             tax_efficiency = 0.05
+			 allow = { NOT = { estate_affiliation = nobility_gentry estate_affiliation = gentry_burghers estate_affiliation = gentry_army } }
         }
         fourteen_hours = { #marginally relevant
             tax_efficiency = 0.025
@@ -651,7 +624,8 @@ social_reforms = {
             global_immigrant_attract = 0.1
 
             middle_vote = 0.02
-
+			
+			 allow = { NOT = { estate_affiliation = nobility_gentry estate_affiliation = gentry_burghers estate_affiliation = gentry_army } }
         }
         twelve_hours = { #slightly influential
             factory_throughput = 0.05
@@ -686,11 +660,9 @@ social_reforms = {
 
             middle_vote = 0.08
 
-            #allow = {
-            #    #unemployment_subsidies = no_subsidies
-			#	#NOT = { pensions = good_pensions }
-			#	#NOT = { health_care = good_health_care }
-            #}
+            allow = {
+               	NOT = { estate_affiliation = absolutist }
+            }
         }
     }
 
@@ -705,7 +677,9 @@ social_reforms = {
             factory_maintenance = 0.25
 
             rich_vote = 0.20
-
+			allow = {
+               	NOT = { estate_affiliation = absolutist }
+            }
         }
         trinket_safety = { #influential
             tax_efficiency = -0.025
@@ -718,7 +692,6 @@ social_reforms = {
 
         }
         low_safety = { #slightly influential
-            tax_efficiency = 0.0
             RGO_throughput = 0.10
             goods_demand = -0.10
             factory_maintenance = 0.15
@@ -737,6 +710,9 @@ social_reforms = {
 			
 			allow = {
 				NOT = { has_country_flag = clergy_and_nobility_domination }
+				NOT = { estate_affiliation = nobility_army }
+				NOT = { estate_affiliation = nobility_gentry }
+				NOT = { estate_affiliation = nobility_church }
             }
         }
         good_safety = { #irrelevant
@@ -744,6 +720,11 @@ social_reforms = {
             ruling_party_support = 0.1
 			mobilisation_size = -0.02
             administrative_multiplier = 2
+			allow = {
+				NOT = { estate_affiliation = nobility_army }
+				NOT = { estate_affiliation = nobility_gentry }
+				NOT = { estate_affiliation = nobility_church }
+			}
         }
     }
 
@@ -752,6 +733,7 @@ social_reforms = {
         no_subsidies = { #irrelevant
             tax_efficiency = 0.05
             RGO_throughput = 0.10
+			allow = { NOT = { estate_affiliation = gentry_burghers } }
         }
         trinket_subsidies = { #marginally relevant
             tax_efficiency = 0.025
@@ -760,6 +742,9 @@ social_reforms = {
 
             middle_vote = 0.02
             poor_vote = 0.01
+			allow = {
+			NOT = { estate_affiliation = gentry_burghers }
+			}
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
@@ -790,6 +775,7 @@ social_reforms = {
             poor_vote = 0.04
 
             allow = {
+               	NOT = { estate_affiliation = absolutist }
             }
         }
     }
@@ -797,6 +783,11 @@ social_reforms = {
     pensions = { #army
         next_step_only = yes
         no_pensions = { #irrelevant
+			allow = {
+			NOT = { estate_affiliation = gentry_army }
+			NOT = { estate_affiliation = church_army }
+			NOT = { estate_affiliation = nobility_army }
+			}
         }
         trinket_pensions = { #marginally relevant
             land_organisation = 0.05
@@ -804,6 +795,12 @@ social_reforms = {
             supply_consumption = 0.10
             org_regain = 0.05
             mobilisation_size = 0.01
+			
+			allow = {
+			NOT = { estate_affiliation = gentry_army }
+			NOT = { estate_affiliation = church_army }
+			NOT = { estate_affiliation = nobility_army }
+			}
         }
         low_pensions = { #slightly influential
             land_organisation = 0.10
@@ -831,7 +828,8 @@ social_reforms = {
 
 
             allow = {
-
+               	NOT = { estate_affiliation = absolutist }
+				NOT = { war_policy = pacifism }
             }
         }
     }

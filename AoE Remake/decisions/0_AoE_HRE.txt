@@ -259,9 +259,10 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
-				NOT = {
-					any_sphere_member = {
-						has_country_flag = hre_member
+				any_sphere_member = {
+					OR = {
+						NOT = { has_country_flag = hre_member }
+						exists = no
 					}
 				}
 				is_greater_power = no

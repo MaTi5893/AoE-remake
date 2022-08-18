@@ -2,10 +2,15 @@ country_event = { #10225 Hungarian rebellion
 	id = 10225
 	title = "EVTNAME10225" #Rakoczi war of independence
 	desc = "EVTDESC10225"
-	news = yes
+	major = yes
 	picture = "rakoczi"
+	fire_only_once = yes
 	
-	is_triggered_only = yes
+	trigger = {
+		year = 1703
+		tag = AUS
+		any_owned_province = { is_core = SIE }
+	}
 
 	mean_time_to_happen = {
 		months = 4
@@ -17,6 +22,16 @@ country_event = { #10225 Hungarian rebellion
 
 	option = {
 		name = "EVT10225OPTA"
+		any_owned = {
+			limit = {
+				is_core = SIE
+			}
+			secede_province = SIE
+		}
+		AUS_613 = { secede_province = SIE }
+		SIE = {
+			prestige = 15
+		}
 		AUS = {
 			relation = { who = SIE value = -100 }
 			any_pop = {
@@ -33,7 +48,45 @@ country_event = { #10225 Hungarian rebellion
 			war = {
 				target = SIE
 				attacker_goal = { casus_belli = annex_core_country }
-				defender_goal = { casus_belli = status_quo }
+				defender_goal = { casus_belli = acquire_state state_province_id = 641 }
+				call_ally = no
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "A Worth Couse! (Switch to Transylvania)"
+		any_owned = {
+			limit = {
+				is_core = SIE
+			}
+			secede_province = SIE
+		}
+		AUS_613 = { secede_province = SIE }
+		change_tag_no_core_switch = SIE
+		SIE = {
+			prestige = 15
+		}
+		AUS = {
+			relation = { who = SIE value = -100 }
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				militancy = -6
+			}
+		}
+		AUS = {
+			casus_belli = {
+				target = SIE
+				type = make_puppet
+				months = 120
+			}
+			war = {
+				target = SIE
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = acquire_state state_province_id = 641 }
 				call_ally = no
 			}
 		}

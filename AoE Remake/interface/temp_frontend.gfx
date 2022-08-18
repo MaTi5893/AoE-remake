@@ -50,6 +50,10 @@ spriteTypes = {
 		name = "GFX_mob_button_2"
 		texturefile = "gfx\\interface\\mob_button_2.dds"
 	}
+	textSpriteType = {
+		name = "GFX_flava_button"
+		texturefile = "gfx\\interface\\flava_button.dds"
+	}
 	spriteType = {
 		name = "GFX_frontend_lobby_countries_entry"
 		texturefile = "gfx\\interface\\frontend_lobby_countries_entry.tga"
@@ -501,6 +505,35 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_horizontal_rule"
 		texturefile = "gfx\\interface\\horizontal_rule.tga"
+		loadType = "FRONTEND"
+	}
+
+	spriteType = {
+		name = "flv_gold_name"
+		texturefile = "gfx\\interface\\flav_menu.dds"
+		loadType = "FRONTEND"
+	}
+
+	spriteType = {
+		name = "flv_spain"
+		texturefile = "gfx\\interface\\flv_spain.tga"
+		loadType = "FRONTEND"
+	}
+	
+	spriteType = {
+		name = "flv_aus"
+		texturefile = "gfx\\interface\\flv_aus.tga"
+		loadType = "FRONTEND"
+	}
+	
+	spriteType = {
+		name = "flv_rus"
+		texturefile = "gfx\\interface\\flv_rus.tga"
+		loadType = "FRONTEND"
+	}
+	spriteType = {
+		name = "flv_tur"
+		texturefile = "gfx\\interface\\flv_tur.tga"
 		loadType = "FRONTEND"
 	}
 

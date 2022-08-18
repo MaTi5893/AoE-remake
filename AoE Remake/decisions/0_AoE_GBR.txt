@@ -476,6 +476,32 @@ political_decisions = {
         }
     }
 	
+	become_enl = {
+		picture = map_britain
+		potential = {
+			primary_culture = british
+			NOT = { exists = ENL }
+		}
+		allow = {
+			SCO = { exists = yes }
+			war = no
+		}
+		effect = {
+			all_core = {
+				limit = {
+				is_core = SCO
+				}
+				remove_core = THIS
+			}
+			all_core = {
+				add_core = ENL
+				remove_core = THIS
+			}
+			change_tag = ENL
+			
+		}
+	}
+	
 	company_rule_in_india = {
 		picture = eic
 		potential = {

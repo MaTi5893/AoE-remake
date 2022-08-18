@@ -188,20 +188,14 @@ objectTypes = {
 	
 	EMFXActorType = {
 		name = "building_factory"
-		actorfile = "gfx\anims\factory.xac"
+		actorfile = "gfx\anims\City_Western_01.xac"
 		scale = 0.75
-				
-		animation = {
-			name = "idle"
-			file ="gfx\anims\Factory_Anim.xsm"
-			defaultAnimationTime = 0.3
-		}
 	}
 	
 	# TODO remove this later
 	EMFXActorType = {
 		name = "building_aeroplane_factory"
-		actorfile = "gfx\anims\factory.xac"
+		actorfile = "gfx\anims\City_Western_01.xac"
 		
 		idle   = "gfx\anims\static.xsm"
 		scale = 0.75
@@ -333,11 +327,11 @@ objectTypes = {
 	
 	
 	
-#	EMFXActorType = {
-#		name = "generic_capital"
-#		actorfile = "gfx\anims\Generic_Capital.xac"
-#		idle   = "gfx\anims\static.xsm"
-#		scale = 1.25
-#	}	
+	EMFXActorType = {
+		name = "capital2"
+		actorfile = "gfx\anims\Capital.xac"
+		idle   = "gfx\anims\Static.xsm"
+		scale = 1.25
+	}	
 
 }

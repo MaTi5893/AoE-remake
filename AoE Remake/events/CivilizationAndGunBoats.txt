@@ -2178,3 +2178,28 @@ country_event = {
 	}
 
 }
+country_event = {
+	title = "$FROMCOUNTRY$ Dominates North America"
+	desc = "EVTDESC90960"
+	major = yes
+	is_triggered_only = yes
+	id = 90960
+	
+	option = {
+		name = "Regretable"
+		any_owned = {
+            limit = {
+                continent = north_america
+				NOT = { is_core = HAI }
+            }
+            secede_province = FROM
+        }
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				capital_scope = { continent = north_america }
+			}
+			annex_to = FROM
+		}
+	}
+}

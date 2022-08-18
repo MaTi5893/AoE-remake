@@ -14,59 +14,59 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    rakoczi_war_of_independence = {
-        picture = rakoczi
-        potential = {
-            tag = SIE
-            NOT = { has_country_flag = rakoczi_tried }
-			ai = yes
-            OR = {
-                NOT = { has_global_flag = spanish_succesion_resolved }
-                NOT = { year = 1711 }
-            }
-        }
-        allow = {
-            exists = yes
-            OR = {
-                has_global_flag = spanish_succesion_crisis
-                AND = {
-                    year = 1704
-                    is_secondary_power = yes
-                }
-            }
-            NOT = { year = 1711 }
-        }
-        effect = {
-            set_country_flag = rakoczi_tried
-            AUS = { country_event = 10225 }
-			AUS = {
-				diplomatic_influence = {
-					who = SIE
-					value = -300
-				}
-			}
-        }
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = { year = 1704 }
-            }
-            modifier = {
-                factor = 0
-                AUS = {
-                    war = yes
-                }
-            }
-			modifier = {
-                factor = 0
-                AUS = {
-                    ai = yes
-                }
-				619 = { NOT = { country_units_in_province = AUS } }
-            }
-        }
-    }
+    #rakoczi_war_of_independence = {
+    #    picture = rakoczi
+    #    potential = {
+    #        tag = SIE
+    #        NOT = { has_country_flag = rakoczi_tried }
+	#		ai = yes
+    #        OR = {
+    #            NOT = { has_global_flag = spanish_succesion_resolved }
+    #            NOT = { year = 1711 }
+    #        }
+    #    }
+    #    allow = {
+    #        exists = yes
+    #        OR = {
+    #            has_global_flag = spanish_succesion_crisis
+    #            AND = {
+    #                year = 1704
+    #                is_secondary_power = yes
+    #            }
+    #        }
+    #        NOT = { year = 1711 }
+    #    }
+    #    effect = {
+    #        set_country_flag = rakoczi_tried
+    #        AUS = { country_event = 10225 }
+	#		AUS = {
+	#			diplomatic_influence = {
+	#				who = SIE
+	#				value = -300
+	#			}
+	#		}
+    #    }
+    #    ai_will_do = {
+    #        factor = 1
+    #        modifier = {
+    #            factor = 0
+    #            NOT = { year = 1704 }
+    #        }
+    #        modifier = {
+    #            factor = 0
+    #            AUS = {
+    #                war = yes
+    #            }
+    #        }
+	#		modifier = {
+    #            factor = 0
+    #            AUS = {
+    #                ai = yes
+    #            }
+	#			619 = { NOT = { country_units_in_province = AUS } }
+    #        }
+    #    }
+    #}
 
     down_the_danube = {
         picture = passarowitz

@@ -1001,10 +1001,6 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.75
-			owner = { colonial_policy = settlement }
-		}
-		modifier = {
 			factor = 1.5
 			is_primary_culture = no
 			is_accepted_culture = yes
@@ -1062,10 +1058,6 @@ province_event = {
 		}
 		ai_chance = {
 			factor = 80
-			modifier = {
-				factor = 1.5
-				colonial_policy = settlement
-			}
 			modifier = {
 				factor = 0.1
 				owner = { war_policy = pacifism }

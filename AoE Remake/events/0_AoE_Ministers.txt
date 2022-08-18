@@ -346,9 +346,7 @@ country_event = {
 							limit = {
 								owner = {
 									nationalvalue = pm_clergyman
-									OR = {
-										centralization = legislative_parliment
-									}
+									centralization = legislative_parliment
 								}
 							}
 							owner = {
@@ -393,10 +391,7 @@ country_event = {
 							limit = {
 								owner = {
 									nationalvalue = pm_reformists
-									OR = {
-										centralization = legislative_parliment
-										centralization = legislative_parliment
-									}
+									centralization = legislative_parliment
 								}
 							}
 							owner = {
@@ -441,10 +436,7 @@ country_event = {
 							limit = {
 								owner = {
 									nationalvalue = pm_gentry
-									OR = {
-										centralization = legislative_parliment
-										centralization = legislative_parliment
-									}
+									centralization = legislative_parliment
 								}
 							}
 							owner = {

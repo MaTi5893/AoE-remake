@@ -113,7 +113,7 @@ country_event = {
 			ruling_party_ideology = conservative
 			ruling_party_ideology = reactionary
 		}
-		social_policy = no_state_interference
+		NOT = { estate_affiliation = gentry_burghers }
 	}
 	
 	mean_time_to_happen = {

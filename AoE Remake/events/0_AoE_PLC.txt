@@ -206,19 +206,6 @@ country_event = {
 		prestige = -5
 	}
 }
-country_event = {
-	id = 156904
-	title = "Szlachta reinstitutes the elective monarchy"
-	desc = "EVTDESC156904"	
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "We were on the verge of greatness..."
-		government = elective_monarchy_oligarchy
-		election = yes
-	}
-}
 
 country_event = {
 	id = 1573000040
@@ -441,48 +428,48 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = 15730031
-	title = "Treaty of Warsaw"
-	desc = "..."	
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "A Historical Victory for our nation!"
-		RUS = {
-			diplomatic_influence = {
-				who = THIS
-				value = -400
-			}
-		}
-		HET = {
-			limit = {
-				vassal_of = RUS
-			}
-			country_event = 15730131
-		}
-		ZZH = {
-			limit = {
-				vassal_of = RUS
-			}
-			country_event = 15730131
-		}
-		prestige = 25
-		clr_global_flag = polish_succesion_crisis
-	}
-}
-country_event = {
-	id = 15730131
-	title = "Treaty of Warsaw"
-	desc = "..."	
-	is_triggered_only = yes
-	
-	option = {
-		name = "A Historical Victory for our nation!"
-		annex_to = PLC
-	}
-}
+#country_event = {
+#	id = 15730031
+#	title = "Treaty of Warsaw"
+#	desc = "..."	
+#	major = yes
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "A Historical Victory for our nation!"
+#		RUS = {
+#			diplomatic_influence = {
+#				who = THIS
+#				value = -400
+#			}
+#		}
+#		HET = {
+#			limit = {
+#				vassal_of = RUS
+#			}
+#			country_event = 15730131
+#		}
+#		ZZH = {
+#			limit = {
+#				vassal_of = RUS
+#			}
+#			country_event = 15730131
+#		}
+#		prestige = 25
+#		clr_global_flag = polish_succesion_crisis
+#	}
+#}
+#country_event = {
+#	id = 15730131
+#	title = "Treaty of Warsaw"
+#	desc = "..."	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "A Historical Victory for our nation!"
+#		annex_to = PLC
+#	}
+#}
 ####Royal Election of 1764####
 country_event = {
 	id = 15730040

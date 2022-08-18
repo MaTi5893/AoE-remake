@@ -2511,28 +2511,6 @@ province_event = {
     }
 }
 country_event = {
-    id = 170214
-    title = "$COUNTRY$ Colonial Policy"
-    desc = ""
-	is_triggered_only = yes
-	picture = harbour
-	
-	option = {
-		name = "Settlement"
-		political_reform = settlement
-	}
-	
-	option = {
-		name = "Indirect Rule"
-		political_reform = exploitation
-	}
-	
-	option = {
-		name = "Charter Company"
-		political_reform = civilizing
-	}
-}
-country_event = {
     id = 170215
     title = "$COUNTRY_ADJ$ Army Works"
     desc = "EVTDESC170215"
