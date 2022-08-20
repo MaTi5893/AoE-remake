@@ -34,3 +34,64 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 171604
+	title = "Kurpfalzischen Religionsdeklaration of $YEAR$"
+	desc = "EVTDESC171404"
+	fire_only_once = yes
+	
+	trigger = {
+		exists = PAL
+		tag = PAL
+		year = 1705
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "We should find a peaceful solution!"
+		relation = {
+			who = BRN
+			value = 50
+		}
+		relation = {
+			who = HAN
+			value = 50
+		}
+		set_country_flag = religionsdeklaration_otl
+	}
+	
+	option = {
+		name = "We can try to liberate our brothers in Westfalia, We cannot give up now!"
+		badboy  = 2
+		any_country = {
+			limit = {
+				OR = {
+					tag = BRN
+					tag = HAN
+				}
+			}
+			add_casus_belli = {
+				target = PAL
+				type = humiliate
+				months = 12
+			}
+		}
+		582 = {
+			add_core = PAL
+		}
+		583 = {
+			add_core = PAL
+		}
+		any_pop = {
+			limit = {
+				is_state_religion = no
+			}
+			militancy = 2
+		}
+		set_country_flag = religionsdeklaration_alt
+	}
+}

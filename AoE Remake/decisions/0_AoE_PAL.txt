@@ -3,6 +3,7 @@ political_decisions = {
 	kurpfalzischen_religionsdeklaration_and_recoverey = {
 		potential = {
 			tag = PAL
+			has_country_flag = religionsdeklaration_otl
 			NOT = { has_country_flag = religionsdeklaration }
 		}
 		allow = {
@@ -39,4 +40,69 @@ political_decisions = {
 			set_country_flag = wittlesbach_union_pal
 		}
 	}
-}
+	
+	restore_heidelberger_castle_otl = {
+		picture = heidelberger_castle
+		potential = {
+			owns = 569
+			has_country_flag = religionsdeklaration
+			NOT = { has_country_flag = heidelbergercastleotl_built }
+		}
+		allow = {
+			ideological_thought = 1
+			realism = 1
+			money = 25000
+		}
+		effect = {
+			money = -25000
+			prestige = 20
+			set_country_flag = heidelbergercastleotl_built
+		}
+	}
+	
+	restore_heidelberger_castle_alt = {
+		picture = heidelberger_castle
+		potential = {
+			owns = 569
+			has_country_flag = religionsdeklaration_alt
+			NOT = { has_country_flag = heidelbergercastlealt_built }
+		}
+		allow = {
+			ideological_thought = 1
+			realism = 1
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			569 = {
+				life_rating = 4
+			}
+			capital = 569
+			prestige = 50
+			set_country_flag = heidelbergercastlealt_built
+		}
+	}
+	
+	build_mannheimer_castle = {
+		picture = heidelberger_castle
+		potential = {
+			owns = 569
+			has_country_flag = religionsdeklaration
+			NOT = { has_country_flag = mannheimercastle_built }
+		}
+		allow = {
+			ideological_thought = 1
+			realism = 1
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			569 = {
+				life_rating = 4
+			}
+			capital = 569
+			prestige = 50
+			set_country_flag = mannheimercastle_built
+		}
+	}
+		
