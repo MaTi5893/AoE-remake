@@ -9,7 +9,6 @@ country_event = {
         primary_culture = british
         year = 1714
 		owns = 300
-		NOT = { has_country_flag = jacobite_path }
         OR = {
             government = absolute_monarchy
             government = prussian_constitutionalism
@@ -50,31 +49,23 @@ country_event = {
     title = "Jacobites Prevail!" #Jacobism Prevails
     desc = "EVTDESC171402"
 	major = yes
-	fire_only_once = yes
-
-	trigger = {
-        primary_culture = british
-		tag = GBR
-        year = 1714
-		has_country_flag = jacobite_path
-        OR = {
-            government = absolute_monarchy
-            government = prussian_constitutionalism
-            government = hms_government
-        }
-        NOT = { year = 1750 }
-    }
+	is_triggered_only = yes
 
     option = {
         name = "Long live the king"
         prestige = -25
         set_country_flag = jacobism_prevails
-        #government = absolute_monarchy
         all_core = {
-            add_core = GBJ
-            remove_core = THIS
+			limit = {
+				NOT = { is_core = SCO }
+			}
+			add_core = ENL
+			remove_core = GBR
+			remove_core = ENG
+            add_core = SCO
         }
-        change_tag = GBJ
+		annex_to = FROM
+		FROM = { all_core = { add_core = GBJ remove_core = FROM } change_tag = GBJ  capital = 300 add_accepted_culture = british add_accepted_culture = welsh }
         add_country_modifier = {
             name = national_confusion
             duration = 365
@@ -82,9 +73,6 @@ country_event = {
         set_variable = {
             which = jacobite_provinces
             value = 0
-        }
-        THIS = {
-        ruling_party_ideology  = reactionary
         }
         capital_scope = {
             any_pop = {
@@ -130,31 +118,6 @@ country_event = {
             remove_province_modifier = strike_solution
             remove_province_modifier = province_strike
             remove_province_modifier = may_day
-        }
-        random_country = {
-            limit = {
-                is_sphere_leader_of = THIS
-                NOT = { is_our_vassal = THIS }
-            }
-            leave_alliance = THIS
-            country_event = 800056
-        }
-        random_country = {
-            limit = { is_our_vassal = THIS }
-            leave_alliance = THIS
-            country_event = 800055
-        }
-        any_country = {
-            limit = {
-                neighbour = THIS
-                NOT = { government = absolute_monarchy }
-            }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = reactionary
-                    factor = 6
-                }
-            }
         }
     }
 }
@@ -263,141 +226,7 @@ country_event = {
         year = 1745
     }
 
-    mean_time_to_happen = {
-        months = 1
-        modifier = {
-            factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    reactionary = 25
-                }
-                average_militancy = 3
-            }
-        }
-        modifier = {
-            factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    reactionary = 25
-                }
-                average_militancy = 4
-            }
-        }
-        modifier = {
-            factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    reactionary = 25
-                }
-                average_militancy = 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            any_owned_province = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    reactionary = 25
-                }
-                average_militancy = 6
-            }
-        }
-        modifier = {
-            factor = 1.5
-            has_country_flag = 1st_jacobite_rebellion
-        }
-        modifier = {
-            factor = 1.5
-            has_country_flag = 2nd_jacobite_rebellion
-        }
-        modifier = {
-            factor = 1.5
-            has_country_flag = 3rd_jacobite_rebellion
-        }
-    }
-
-    immediate = {
-        change_variable = {
-            which = jacobite_sympathies
-            value = 1
-        }
-    }
-
-    option = {
-        name = "EVT37713OPTA"
-        prestige = -2
-        random_owned = {
-            limit = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    region = ENG_266
-                    AND = {
-                        reactionary = 25
-                        NOT = { region = ENG_300 }
-                    }
-                }
-            }
-            add_province_modifier = {
-                name = jacobite_sympathies
-                duration = -1
-            }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = reactionary
-                    factor = 6
-                }
-            }
-        }
-    }
-
-    option = {
-        name = "EVT37713OPTB"
-        random_owned = {
-            limit = {
-                is_colonial = no
-                is_core = THIS
-                OR = {
-                    culture = scottish
-                    region = ENG_266
-                    AND = {
-                        reactionary = 25
-                        NOT = { region = ENG_300 }
-                    }
-                }
-            }
-            add_province_modifier = {
-                name = jacobite_sympathies
-                duration = -1
-            }
-            any_pop = {
-                ideology = {
-                    value = reactionary
-                    factor = 0.3
-                }
-            }
-            state_scope = {
-                any_pop = {
-                    ideology = {
-                        value = reactionary
-                        factor = 0.1
-                    }
-                }
-            }
-        }
-    }
+	option = { name = "mogus" }
 }
 
 province_event = {
@@ -437,7 +266,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 40
+        months = 80
         modifier = {
             factor = 0.8
                 culture = scottish
@@ -617,7 +446,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 40
+        months = 80
         modifier = {
             factor = 2
             owner = { has_country_modifier = rebel_cell_discovered }
@@ -874,20 +703,7 @@ country_event = {
     option = {
         name = "Introduce it immediatly"
         money = 20000
-        random_owned = {
-			limit = {
-				owner = {
-					exists = THC
-				}
-			}
-			owner = {
-				relation = {
-					who = THC
-					value = -50
-				}
-				country_event = 24502
-			}
-		}
+
         ai_chance = { factor = 100 }
     }
 }
@@ -1401,118 +1217,6 @@ country_event = {
         }
     }
 }
-#country_event = {
-#    id = 171009
-#    title = "French War of Independence"
-#    desc = "EVTDESC171009"
-#    fire_only_once = yes
-#    major = yes
-#
-#    trigger = {
-#        tag = EFM
-#        owns = 425
-#        average_militancy = 6
-#    }
-#    mean_time_to_happen = {
-#        months = 1
-#    }
-#
-#    option = {
-#        name = "Horrible News"
-#        prestige = -10
-#        all_core = {
-#            limit = {
-#                is_core = BOR
-#            }
-#            secede_province = BOR
-#        }
-#        425 = {
-#            owner = {
-#                war = {
-#                    target = EFM
-#                    attacker_goal = { casus_belli = humiliate }
-#                    defender_goal = { casus_belli = acquire_all_cores }
-#                    call_ally = no
-#                }
-#            }
-#        }
-#    }
-#}
-#country_event = {
-#    id = 171010
-#    title = "Loss of France"
-#    desc = "EVTDESC171010"
-#    picture = english_parliment
-#    fire_only_once = yes
-#    major = yes
-#
-#    trigger = {
-#        tag = EFM
-#        NOT = { owns = 425 }
-#        OR = {
-#            BOR = {
-#                exists = yes
-#            }
-#            FRA = {
-#                exists = yes
-#            }
-#        }
-#        war = no
-#        average_militancy = 6
-#    }
-#    mean_time_to_happen = {
-#        months = 1
-#    }
-#    option = {
-#        name = "Oh well..."
-#        prestige = -60
-#        any_country = {
-#            limit = {
-#                SCO = {
-#                    vassal_of = THIS
-#                }
-#                THIS = {
-#                    owns = 300
-#                    has_country_flag = jacobism_prevails
-#                }
-#            }
-#            change_tag = GBJ
-#        }
-#        any_country = {
-#            limit = {
-#                SCO = {
-#                    vassal_of = THIS
-#                }
-#                THIS = {
-#                    owns = 300
-#                }
-#            }
-#            change_tag = ENG
-#        }
-#    }
-#}
-
-#country_event = {
-#    id = 171011
-#    title = "Society of Antiquaries of London"
-#    desc = "EVTDESC171011"
-#    picture = english_parliment
-#    fire_only_once = yes
-#
-#    trigger = {
-#        year = 1707
-#        owns = 300
-#    }
-#    option = {
-#        name = "Amazing, ladies and gentelmens"
-#        300 = {
-#            add_province_modifier = {
-#                name = antiquaries_of_london
-#                duration = -1
-#            }
-#        }
-#    }
-#}
 country_event = {
     id = 171012
     title = "The Storming of the Tower of London"
@@ -1712,7 +1416,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Better a German prince than a French one. (Sign The Act)"
+		name = "Better a German prince than a French one."
 		any_pop = {
 			limit = {
 				culture = british
@@ -1730,28 +1434,6 @@ country_event = {
 			ideology = conservative
 			value = 0.3
 		}
-	}
-	
-	option = {
-		name = "Better a Catholic then a Fool. (Refuse To Sign The Act)"
-		any_pop = {
-			limit = {
-				culture = british
-			}
-			militancy = 2
-			consciousness = 5
-		}
-		any_pop = {
-			limit = {
-				culture = scottish
-			}
-			consciousness = -2
-		}
-		upper_house = {
-			ideology = liberal
-			value = 0.3
-		}
-		set_country_flag = jacobite_path
 	}
 }
 country_event = {

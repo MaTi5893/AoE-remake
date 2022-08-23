@@ -152,8 +152,8 @@ country_event = {
 #        }
 #        NOT = {
 #            OR = {
-#                vote_franschise = universal_weighted_voting
-#                vote_franschise = universal_voting
+#                vote_franschise = wealth_weighted_voting
+#                vote_franschise = wealth_voting
 #            }
 #        }
 #        year = 1847
@@ -302,7 +302,7 @@ country_event = {
         months = 12
         modifier = {
             factor = 1.5
-            vote_franschise = universal_weighted_voting
+            vote_franschise = wealth_weighted_voting
         }
         modifier = {
             factor = 1.5
@@ -324,7 +324,7 @@ country_event = {
         }
         modifier = {
             factor = 0.1
-            vote_franschise = universal_voting
+            vote_franschise = wealth_voting
             public_meetings = yes_meeting
             press_rights = free_press
             OR = {
@@ -362,8 +362,8 @@ country_event = {
         any_neighbor_country = {
             limit = {
                 NOT = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
+                    vote_franschise = wealth_weighted_voting
+                    vote_franschise = wealth_voting
                 }
             }
             scaled_militancy = {
@@ -1232,8 +1232,8 @@ country_event = {
         has_country_modifer = new_schools_of_thought
 			
 		NOT = {	vote_franschise = none_voting }
-		NOT = {	vote_franschise = universal_weighted_voting }
-		NOT = {	vote_franschise = universal_voting }
+		NOT = {	vote_franschise = wealth_weighted_voting }
+		NOT = {	vote_franschise = wealth_voting }
         any_state = {
             is_colonial = no
             liberal = 10
@@ -1314,7 +1314,7 @@ country_event = {
                     factor = 4
                 }
                 dominant_issue = {
-                    value = universal_voting
+                    value = wealth_voting
                     factor = 0.1
                 }
             }
@@ -3967,8 +3967,8 @@ country_event = {
     trigger = {
         NOT = {
             OR = {
-                vote_franschise = universal_weighted_voting
-                vote_franschise = universal_voting
+                vote_franschise = wealth_weighted_voting
+                vote_franschise = wealth_voting
                 has_country_flag = isolationist
             }
         }
@@ -4049,7 +4049,7 @@ country_event = {
             }
             poor_strata = {
                 dominant_issue = {
-                    value = universal_weighted_voting
+                    value = wealth_weighted_voting
                     factor = 0.1
                 }
             }

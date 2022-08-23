@@ -1,0 +1,97 @@
+political_decisions = {
+	
+	jacobite_pretender_rising = {
+		picture = jacobitism
+		potential = {
+			tag = SCO
+			is_vassal = yes
+			NOT = { has_global_flag = first_jacobite_rising }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			country_event = 169802
+			prestige = 15
+			set_global_flag = first_jacobite_rising
+			overlord = { release_vassal = SCO }
+			define_general = {
+				name = 	"Edward James Stuart"
+				personality = defence_3.1
+				background = attack_2.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1715 }
+			}
+		}
+	}
+	
+	abandon_new_caledonia = {
+		picture = map_central_america
+		potential = {
+			tag = SCO
+			NOT = { has_country_flag = abandoned_new_caledonia }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = abandoned_new_caledonia
+			money = 200000
+			random_owned = {
+			limit = { owner = { exists = SPA } }
+			3278 = { secede_province = SPA }
+			}
+			random_owned = {
+			limit = { owner = { exists = SPC } }
+			3278 = { secede_province = SPC }
+			}
+			prestige = -15
+		}
+	}
+	
+	the_inglorious_revolution = {
+		picture = union_act
+		potential = {
+			primary_culture = scottish
+			owns = 300
+			NOT = { has_country_flag = abandoned_new_caledonia }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = abandoned_new_caledonia
+			political_reform = legislative_parliment
+			political_reform = no_trade_unions
+			political_reform = party_appointed
+			political_reform = underground_parties
+			government = prussian_constitutionalism
+			any_pop = {
+				limit = { culture = british }
+				militancy = 2
+			}
+		}
+	}
+	
+	greater_sco = {
+		potential = {
+			tag = SCO
+			has_country_flag = chose_sco
+			NOT = { has_country_flag = greater_sco }
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = greater_sco
+			ENG_277 = { add_core = THIS }
+			ENG_280 = { add_core = THIS }
+		}
+	}
+}

@@ -65,6 +65,7 @@ dominate_north_america
 dispute_succession_aus
 unify_bourbon_empire
 unify_habsburg_monarchy
+restore_jacobites
 restore_anglo_dutch_union
 dethrone_peter
 greek_plan_cb
@@ -93,7 +94,6 @@ war_reparations
 take_capital
 conquest_low
 negotiated_transfer
-#steal_puppet
 conquest_tiny
 conquest_tribal
 acquire_core_substate_region
@@ -1220,6 +1220,53 @@ restore_anglo_dutch_union = {
 
     on_po_accepted = {
         country_event = 1581052
+    }
+}
+restore_jacobites = {
+    sprite_index = 26
+    is_triggered_only = yes
+    constructing_cb = no
+    months = 12
+    crisis = no
+
+    badboy_factor = 0
+    prestige_factor = 5
+    peace_cost_factor = 85
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 5
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 60
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+		NOT = { has_country_modifier = neutrality }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+        primary_culture = british
+        THIS = {
+            primary_culture = scottish
+        }
+    }
+
+    po_remove_prestige = yes
+
+    war_name = UNIFICATION_HUMILIATE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+
+    on_po_accepted = {
+        country_event = 171402
     }
 }
 dethrone_peter = {

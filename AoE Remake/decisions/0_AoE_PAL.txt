@@ -1,5 +1,7 @@
 political_decisions = {
-	
+
+#main flavour
+
 	kurpfalzischen_religionsdeklaration_and_recoverey = {
 		potential = {
 			tag = PAL
@@ -19,19 +21,117 @@ political_decisions = {
 		}
 	}
 	
+	wittlesbach_union_1724 = {
+		picture = wittlesbach
+		potential = {
+			tag = PAL
+			BAV = { 
+				exists = yes
+				is_independant = yes
+			}
+			PAL = {
+				exists = yes
+				is_independant = yes
+			}
+			KOL = {
+				exists = yes
+				is_independant = yes
+			}
+			TRR = {
+				exists = yes
+				is_independant = yes
+			}
+			year = 1720
+			NOT = { has_country_flag = wittelsbach_union_of_1724 }
+		}
+		allow = {
+			BAV = {
+				relation = { who = THIS value = 50 }
+			}
+			KOL = {
+				relation = { who = THIS value = 50 }
+			}
+			TRR = {
+				relation = { who = THIS value = 50 }
+			}
+		}
+		effect = {
+			any_country = {
+				limit = {
+					OR = {
+						tag = BAV
+						tag = KOL
+						tag = TRR
+					}
+				}
+				relation = { 
+					who = PAL
+					value = 100
+				}
+			}
+			BAV = {
+				create_alliance = PAL
+			}
+			set_country_flag = wittelsbach_union_of_1724
+		}
+	}
+	
+	retake_electorate_palatinate = {
+		picture = bavaria
+		potential = {
+			has_country_flag = karl_theodore
+			NOT = { has_country_flag = retake_electorate_pal }
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+			war = no
+			BAV = {
+				war = no
+			}
+			war = no
+		}
+		effect = {
+			badboy = 5
+			casus_belli = {
+				target = BAV
+				type = make_puppet
+				months = 12
+			}
+			war = {
+				target = BAV
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+			set_country_flag = retake_electorate_pal
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+	
 	wittlesbach_union_pal = {
 		picture = wittlesbach
 		potential = {
 			tag = PAL
-			BAV = { exists = yes ai = yes }
+			BAV = {
+				exists = yes
+				ai = yes
+			}
+			has_country_flag = retake_electorate_pal
 			NOT = { has_country_flag = wittlesbach_union_pal }
 		}
 		allow = {
 			mass_politics = 1
 			war = no
+			is_our_vassal = BAV
 			relation = {
 				who = BAV
-				value = 150
+				value = 100
 			}
 		}
 		effect = {
@@ -41,6 +141,117 @@ political_decisions = {
 		}
 	}
 	
+	expand_in_bavaria = {
+		picture = bavaria
+		potential = {
+			tag = PAL
+			has_country_flag fate_of_bavaria_1
+			BAV = {
+				exists = no
+			}
+			NOT = { has_country_flag = expand_bavaria_pal }
+			owns = 599
+		}
+		allow = {
+			rank = 16
+		}
+		effect = {
+			badboy = 5
+			BAV_599 = {
+				add_core = PAL
+			}
+			BAV_595 = {
+				add_core = PAL
+			}
+			prestige = 20
+			set_country_flag = expand_bavaria_pal
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+	
+	expand_into_lorraine_pal = {
+		picture = lorraine
+		potential = {
+			tag = PAL
+			OR = {
+				has_country_flag = fate_of_bavaria_2
+				has_country_flag = fate_of_bavaria_3
+			}
+			NOT = { has_country_flag = expansion_into_lorraine_pal }
+		}
+		allow = {
+			rank = 16
+			relation = {
+				who = AUS
+				value = 100
+			}
+		}
+		effect = {
+			badboy = 10
+			FRA_412 = {
+				add_core = PAL
+			}
+			FRA_411 = {
+				add_core = PAL
+			}
+			prestige = 20
+			set_country_flag = expansion_into_lorraine_pal
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.6
+			}
+		}
+	}
+	
+	form_soygundy = {
+		picture = become_burgundy
+		potential = {
+			tag = PAL
+			has_country_flag = fate_of_bavaria_3
+			has_country_flag = expansion_into_lorraine_pal
+			NOT = { has_country_flag = burgundy_formed_pal }
+		}
+		allow = {
+			FRA_412 = { owned_by = THIS }
+			FRA_411 = { owned_by = THIS }
+			BEL_393 = { owned_by = THIS }
+			BEL_387 = { owned_by = THIS }
+			NET_397 = { owned_by = THIS }
+			rank = 16
+		}
+		effect = {
+			badboy = 5
+			prestige = 50
+			any_core = {
+				add_core = BGY
+				remove_core = PAL
+			}
+			FRA_428 = {
+				add_core = BGY
+			}
+			change_tag = BGY
+			set_country_flag = burgundy_formed_pal
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+	
+	#Funny castles
+
 	restore_heidelberger_castle_otl = {
 		picture = heidelberger_castle
 		potential = {
@@ -105,4 +316,4 @@ political_decisions = {
 			set_country_flag = mannheimercastle_built
 		}
 	}
-		
+}

@@ -365,11 +365,11 @@ country_event = {
         clr_country_flag = constitutional_monarchy_gov
         clr_country_flag = democracy_gov
         clr_country_flag = presidential_dictatorship_gov
-		clr_coutry_flag = nobles_angery
-		clr_coutry_flag = church_angery
-		clr_coutry_flag = gentry_angery
-		clr_coutry_flag = burghers_angery
-		clr_coutry_flag = army_angery
+		clr_country_flag = nobles_angery
+		clr_country_flag = church_angery
+		clr_country_flag = gentry_angery
+		clr_country_flag = burghers_angery
+		clr_country_flag = army_angery
     }
 }
 
@@ -387,7 +387,7 @@ country_event = {
     trigger = {
         government = prussian_constitutionalism
         centralization = legislative_parliment
-		NOT = { upper_house = party_appointed }
+		NOT = { upper_house_composition = party_appointed }
         civilized = yes
     }
 

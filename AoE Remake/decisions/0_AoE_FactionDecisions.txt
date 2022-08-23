@@ -215,7 +215,6 @@ political_decisions = {
                 has_country_modifier = law_changed_by_force
             }
             OR = {
-                social_policy = colonial_spending_policy
                 safety_regulations = no_safety
                 safety_regulations = trinket_safety
                 government = elective_monarchy_oligarchy
@@ -313,7 +312,6 @@ political_decisions = {
         allow = {
             war = yes
             capital_scope = { controlled_by = THIS }
-            social_policy = welfare_state
             money = 100000
         }
         effect = {
