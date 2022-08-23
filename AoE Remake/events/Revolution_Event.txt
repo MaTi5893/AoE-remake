@@ -640,7 +640,6 @@ country_event = {
         clr_country_flag = colonial_genocide_only
         clr_country_flag = preparations_to_kill
         remove_country_modifier = preparations_to_kill
-        political_reform = open_borders
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -858,7 +857,6 @@ country_event = {
         clr_country_flag = colonial_genocide_only
         clr_country_flag = preparations_to_kill
         remove_country_modifier = preparations_to_kill
-        random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         clr_country_flag = wants_to_unify
         clr_country_flag = does_not_want_to_unify
         clr_country_flag = liberal_revolution_fired
@@ -1376,7 +1374,6 @@ country_event = {
         clr_country_flag = colonial_genocide_only
         clr_country_flag = preparations_to_kill
         remove_country_modifier = preparations_to_kill
-        random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         clr_country_flag = wants_to_unify
         clr_country_flag = does_not_want_to_unify
         clr_country_flag = rebels_in_capital

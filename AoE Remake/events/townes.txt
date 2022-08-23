@@ -1,7 +1,7 @@
 country_event = {
 	id  = 777796
 	title = "Parliment Session"
-	desc = EVTDESC777796
+	desc = "EVTDESC777796"
 	picture = english_parliment
 	
 	trigger = {
@@ -10,7 +10,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { 
-		months = 48
+		months = 60
 		modifier = {
 			factor = 0.5 #increase likelihood to happen
 			government = hms_government
@@ -18,7 +18,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "We can issue an executive order"
+		name = "We can now pass acts in parliment"
 		set_country_flag = executive_activated
 	}
 }
@@ -26,7 +26,7 @@ country_event = {
 country_event = {
 	id  = 777797
 	title = EVTNAME777797
-	desc = EVTDESC777797
+	desc = "EVTDESC777797"
 	picture = english_parliment
 	
 	trigger = {
@@ -38,7 +38,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Our Leader has other priorities"
+		name = "An eventfull session"
 		clr_country_flag = executive_activated
 	}
 }

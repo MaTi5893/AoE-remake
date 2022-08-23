@@ -546,6 +546,7 @@ political_reforms = {
     }
 }
 
+
 ##########################################
 # Social reforms.
 ##########################################
@@ -594,8 +595,6 @@ social_reforms = {
 			allow = {
 				allow = { 
 					NOT = { has_country_flag = clergy_and_nobility_domination }
-					NOT = { estate_affiliation = nobility_church }
-					NOT = { estate_affiliation = church_army }
 				}
             }
         }
@@ -624,8 +623,6 @@ social_reforms = {
             global_immigrant_attract = 0.1
 
             middle_vote = 0.02
-			
-			 allow = { NOT = { estate_affiliation = nobility_gentry estate_affiliation = gentry_burghers estate_affiliation = gentry_army } }
         }
         twelve_hours = { #slightly influential
             factory_throughput = 0.05
@@ -710,9 +707,6 @@ social_reforms = {
 			
 			allow = {
 				NOT = { has_country_flag = clergy_and_nobility_domination }
-				NOT = { estate_affiliation = nobility_army }
-				NOT = { estate_affiliation = nobility_gentry }
-				NOT = { estate_affiliation = nobility_church }
             }
         }
         good_safety = { #irrelevant
@@ -742,9 +736,6 @@ social_reforms = {
 
             middle_vote = 0.02
             poor_vote = 0.01
-			allow = {
-			NOT = { estate_affiliation = gentry_burghers }
-			}
         }
         low_subsidies = { #slightly influential
             RGO_throughput = 0.05
@@ -795,12 +786,6 @@ social_reforms = {
             supply_consumption = 0.10
             org_regain = 0.05
             mobilisation_size = 0.01
-			
-			allow = {
-			NOT = { estate_affiliation = gentry_army }
-			NOT = { estate_affiliation = church_army }
-			NOT = { estate_affiliation = nobility_army }
-			}
         }
         low_pensions = { #slightly influential
             land_organisation = 0.10

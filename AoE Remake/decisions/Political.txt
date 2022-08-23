@@ -17,6 +17,7 @@ political_decisions = {
 			revolution_n_counterrevolution = 1
 		}
 		effect = {
+			set_country_flag = rivalry_in_north_america
 			any_country = {
 				limit = {
 					any_owned_province = { continent = north_america }
@@ -44,7 +45,9 @@ political_decisions = {
 				owner = {
 					war = {
 						target = BOR
-						casus_belli = dominate_north_america
+						attacker_goal = { casus_belli = dominate_north_america }
+						defender_goal = { casus_belli = dominate_north_america }
+						call_ally = yes
 					}
 				}
 			}

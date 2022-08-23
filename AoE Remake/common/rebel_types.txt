@@ -779,13 +779,6 @@ communist_rebels = {
                 }
             }
         }
-
-        modifier = {
-            factor = 0
-            location = {
-                is_colonial = yes
-            }
-        }
     }
 
      #This is checked for EACH province in the Area of Operations
@@ -870,12 +863,12 @@ communist_rebels = {
         clr_country_flag = anarcho_liberal_gov
         ruling_party_ideology = communist                    #Modelled after France
         political_reform = all_voting_pops
-        political_reform = universal_voting
-        political_reform = population_equal_weight
+        political_reform = wealth_voting
+        political_reform = appointed
         political_reform = yes_meeting
         political_reform = free_press
-        political_reform = secret_ballots
-        political_reform = debtors_prisons
+        political_reform = non_secret_ballots
+        political_reform = abolished
         political_reform = no_slavery
         random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
         social_reform = good_minimum_wage
@@ -986,12 +979,6 @@ nationalist_rebels = {
                 has_country_flag = dungan_rebellion
                 has_country_flag = panthay_rebellion
             }
-        }
-        modifier = {
-            factor = 0.25
-            is_culture_group = east_asian
-            has_global_flag = taiping_has_happened
-            TPG = { exists = yes }
         }
         modifier = {
             factor = 0
@@ -1596,11 +1583,11 @@ pan_nationalist_rebels = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         political_reform = wealth_voting
-        political_reform = population_equal_weight
+        political_reform = appointed
         political_reform = yes_meeting
         political_reform = free_press
         political_reform = non_socialist
-        political_reform = secret_ballots
+        political_reform = non_secret_ballots
         prestige_factor = -0.3
         random_owned = {
             limit = {
@@ -1764,15 +1751,14 @@ liberal_rebels = {
                     government = hms_government
                 }
                 OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
+                    vote_franschise = wealth_weighted_voting
+                    vote_franschise = wealth_voting
                 }
                 OR = {
                     upper_house_composition = state_equal_weight
-                    upper_house_composition = population_equal_weight
+                    upper_house_composition = appointed
                 }
                 NOT = { debt_law = serfdom }
-                NOT = { border_policy = closed_borders }
                 public_meetings = yes_meeting
                 press_rights = free_press
                 slavery = no_slavery
@@ -1787,12 +1773,12 @@ liberal_rebels = {
                     government = hms_government
                 }
                 OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
+                    vote_franschise = wealth_weighted_voting
+                    vote_franschise = wealth_voting
                 }
                 OR = {
                     upper_house_composition = state_equal_weight
-                    upper_house_composition = population_equal_weight
+                    upper_house_composition = appointed
                 }
                 NOT = { debt_law = serfdom }
                 public_meetings = yes_meeting
@@ -1977,15 +1963,10 @@ liberal_rebels = {
         ruling_party_ideology = liberal
         political_reform = yes_meeting
         political_reform = free_press
-        political_reform = open_borders
         random_owned = { limit = { owner = { NOT = { trade_unions = all_trade_unions } } } owner = { political_reform = non_socialist } }
         random_owned = {
-            limit = { owner = { NOT = { vote_franschise = universal_voting } } }
-            owner = { political_reform = universal_weighted_voting }
-        }
-        random_owned = {
             limit = { owner = { debt_law = peonage } }
-            owner = { political_reform = debtors_prisons }
+            owner = { political_reform = abolished }
         }
         random_owned = {
             limit = { owner = { debt_law = serfdom } }
@@ -2000,12 +1981,12 @@ liberal_rebels = {
             owner = { political_reform = proportional_representation }
         }
         random_owned = {
-            limit = { owner = { NOT = { upper_house_composition = population_equal_weight tag = USA } } }
-            owner = { political_reform = population_equal_weight }
+            limit = { owner = { NOT = { upper_house_composition = appointed tag = USA } } }
+            owner = { political_reform = appointed }
         }
         random_owned = {
             limit = { owner = { political_parties = non_secret_ballots } }
-            owner = { political_reform = secret_ballots }
+            owner = { political_reform = non_secret_ballots }
         }
         random_owned = {
             limit = { owner = { political_parties = gerrymandering } }

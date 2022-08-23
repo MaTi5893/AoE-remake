@@ -27,11 +27,7 @@ political_decisions = {
     conquer_morocco = {
         picture = form_morocco
         potential = {
-            OR = {
-                tag = TAF
-                tag = SUS
-                tag = TIM
-            }
+			tag = TIM
             NOT = { has_country_flag = conquest_morocco }
         }
         allow = {
@@ -62,11 +58,7 @@ political_decisions = {
     form_morocco = {
         picture = form_morocco
         potential = {
-            OR = {
-                tag = TAF
-                tag = SUS
-                tag = TIM
-            }
+            tag = TIM
         }
         allow = {
             NOT = { MOR = { exists = yes } }

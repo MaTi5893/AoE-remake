@@ -1,0 +1,105 @@
+country_event = {
+	id = 169800
+	title = "New Caledonia Flurishes!"
+	desc = "EVTDESC169800"
+	picture = dnz
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = scottish
+		owns = 3278
+		year = 1715
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	option = {
+		name = "Took them long enough."
+		prestige = 15
+		3278 = {
+			add_province_modifier = {
+				name = baby_boom
+				duration = 365
+			}
+		}
+	}
+}
+country_event = {
+	id = 169801
+	title = "What are we fighting for?"
+	desc = "EVTDESC169801"
+	picture = jacobites
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = scottish
+		OR = {
+		war_with = ENL
+		war_with = GBR
+		}
+		OR = {
+			ENL = { any_core = { controlled_by = THIS } }
+			GBR = { any_core = { limit = { NOT = { is_core = SCO } } controlled_by = THIS } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "We fight for our kings birthright, the Throne of England!"
+		prestige = 15
+		
+	}
+	
+	option = {
+		name = "Perhaps the independence of Scotland is more important?"
+		prestige = -15
+		random_owned = {
+			limit = {
+				owner = { war_with = GBR }
+			}
+			owner = {
+				end_war = GBR
+				all_core = {
+					remove_core = GBR	
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { war_with = ENL }
+			}
+			owner = {
+				end_war = ENL
+			}
+		}
+	}
+}
+country_event = {
+	id = 169802
+	title = "The Jacobite Rising of $YEAR$"
+	desc = "EVTDESC169802"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "We fight for our kings birthright, the Throne of England!"
+		prestige = 15
+		war = {
+			target = ENL
+			attacker_goal = { casus_belli = restore_jacobites }
+			defender_goal = { casus_belli = annex_core_country }
+		}
+	}
+}
+country_event = {
+	id = 169803
+	title = "The Jacobite Rising of $YEAR$"
+	desc = "EVTDESC169802"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = { name = "guh" }
+}

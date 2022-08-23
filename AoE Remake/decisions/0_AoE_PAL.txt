@@ -221,11 +221,11 @@ political_decisions = {
 			NOT = { has_country_flag = burgundy_formed_pal }
 		}
 		allow = {
-			owns = FRA_412
-			owns = FRA_411
-			owns = BEL_393
-			owns = BEL_387
-			owns = NET_397
+			FRA_412 = { owned_by = THIS }
+			FRA_411 = { owned_by = THIS }
+			BEL_393 = { owned_by = THIS }
+			BEL_387 = { owned_by = THIS }
+			NET_397 = { owned_by = THIS }
 			rank = 16
 		}
 		effect = {
@@ -249,9 +249,8 @@ political_decisions = {
 			}
 		}
 	}
-					
 	
-#Funny castles
+	#Funny castles
 
 	restore_heidelberger_castle_otl = {
 		picture = heidelberger_castle
