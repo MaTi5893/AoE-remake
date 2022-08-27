@@ -25,67 +25,6 @@ political_decisions = {
         }
     }
 
-    mosquito_bite = {
-        picture = moskito_coast_reserve
-        potential = {
-            tag = MSK
-            NOT = {
-                has_country_flag = mosquito_mark
-            }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-            military_score = 5
-            prestige = 15
-        }
-        effect = {
-            2196 = {
-                add_core = THIS
-            }
-            UCA_2197 = {
-                add_core = THIS
-            }
-            set_country_flag = mosquito_mark
-            prestige = 20
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    mosquito_swarm = {
-        picture = moskito_coast_reserve
-        potential = {
-            tag = MSK
-            NOT = {
-                has_country_flag = i_am_the_swarm
-            }
-            has_country_flag = mosquito_mark
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-        }
-        effect = {
-            UCA_2191 = {
-                add_core = THIS
-            }
-            UCA_2201 = {
-                add_core = THIS
-            }
-            set_country_flag = i_am_the_swarm
-            prestige = 30
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     montenegro_monarchy = {
         picture = montenegro_map
         potential = {

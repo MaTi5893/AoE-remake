@@ -426,21 +426,7 @@ political_decisions = {
 			AUS_736 = { add_core = THIS }
 			AUS_780 = { add_core = THIS }
 			854 = { add_core = THIS }
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							owns = AUS_734
-							owns = AUS_736
-							owns = AUS_780
-						}
-					}
-				}
-				owner = {
-					badboy = 10
-				}
-			}
-			
+			badboy = 10
         }
     }
 	

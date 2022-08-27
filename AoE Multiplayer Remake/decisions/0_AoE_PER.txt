@@ -70,14 +70,11 @@ political_decisions = {
             owns = 926
         }
         effect = {
-            TUR_935 = {
-                add_core = THIS
-            }
             923 = { add_core = THIS }
             924 = { add_core = THIS }
             925 = { add_core = THIS }
             927 = { add_core = THIS }
-	    928 = { add_core = THIS }
+			928 = { add_core = THIS }
             TUR_931 = {
                 add_core = THIS
             }
@@ -101,29 +98,27 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-	    1218 = { owned_by = THIS }
-	    1209 = { owned_by = THIS }
-	    OR = {
-           	1236 = { controlled_by = THIS }
-	   		AND = {
-	   			1228 = { owned_by = THIS }
-	   			1288 = { owned_by = THIS }
-	   			1227 = { owned_by = THIS }
-	      			}
-	   	}
-	    AND = {
+			1218 = { owned_by = THIS }
+			1209 = { owned_by = THIS }
+			OR = {
+				1236 = { controlled_by = THIS }
+				AND = {
+					1228 = { owned_by = THIS }
+					1288 = { owned_by = THIS }
+					1227 = { owned_by = THIS }
+				}
+			}
 	    	AFG = { exists = no }
-		HTK = { exists = no }
-		}
+			HTK = { exists = no }
         }
         effect = {
             KAL_1221 = { add_core = THIS }
-	    AFG_1217 = { add_core = THIS }
+			AFG_1217 = { add_core = THIS }
             SIN_1288 = { add_core = THIS }
-	    PAN_1227 = { add_core = THIS }
-	    PAN_1224 = { add_core = THIS }
-	    1265 = { add_core = THIS }
-	    1211 = { add_core = THIS }
+			PAN_1227 = { add_core = THIS }
+			PAN_1224 = { add_core = THIS }
+			1265 = { add_core = THIS }
+			1211 = { add_core = THIS }
             badboy = 20
             set_country_flag = indian_frontiers
         }
@@ -386,25 +381,23 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-	    owns = 1131
+			owns = 1131
             owns = 1218
             owns = 1221
             owns = 1213
-	    owns = 1209
-	    AND = {
-	    	AFG = { exists = no }
-		HTK = { exists = no }
-		}
+			owns = 1209
+			AFG = { exists = no }
+			HTK = { exists = no }
         }
         effect = {
-	    KAL_1221 = { add_core = THIS }
-	    AFG_1209 = { add_core = THIS }
-	    RUS_1196 = { add_core = THIS }
-	    1265 = { add_core = THIS }
-	    1266 = { add_core = THIS }
-	    1267 = { add_core = THIS }
-	    1211 = { add_core = THIS }
-	    1194 = { add_core = THIS }
+			KAL_1221 = { add_core = THIS }
+			AFG_1209 = { add_core = THIS }
+			RUS_1196 = { add_core = THIS }
+			1265 = { add_core = THIS }
+			1266 = { add_core = THIS }
+			1267 = { add_core = THIS }
+			1211 = { add_core = THIS }
+			1194 = { add_core = THIS }
             932 = { add_core = THIS }
             1164 = { add_core = THIS }
             1163 = { add_core = THIS }
