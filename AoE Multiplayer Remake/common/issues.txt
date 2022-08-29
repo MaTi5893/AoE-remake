@@ -1035,19 +1035,22 @@ social_reforms = {
         }
 
         court_vaccination = {
-            global_population_growth = 0.001
             administrative_multiplier = 2
+			administrative_efficiency_modifier = 0.05
             global_immigrant_attract = 0.02
         }
 
         military_vaccination = {
-            global_population_growth = 0.001
             administrative_multiplier = 3
+			administrative_efficiency_modifier = 0.05
+			org_regain = 0.02
             global_immigrant_attract = 0.03
         }
 
         public_vaccination = {
             global_population_growth = 0.001
+			administrative_efficiency_modifier = 0.05
+			org_regain = 0.02
             administrative_multiplier = 4
             global_immigrant_attract = 0.04
         }
