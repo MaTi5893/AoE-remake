@@ -75,6 +75,14 @@ political_decisions = {
 				factor = 0
 				NOT = { year = 1754 }
 			}
+			modifier = {
+				factor = 0
+				truce_with = GBR
+			}
+			modifier = {
+				factor = 0
+				truce_with = BOR
+			}
 		}
 	}
     leave_soi = {

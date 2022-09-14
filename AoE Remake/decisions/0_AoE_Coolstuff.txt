@@ -486,6 +486,7 @@ political_decisions = {
             is_vassal = no
             NOT = { has_country_flag = third_expedition_to_panama }
             exists = yes
+			nationalism_n_imperialism = 1
         }
         allow = {
             is_secondary_power = yes
@@ -501,31 +502,6 @@ political_decisions = {
                 who = SPA
                 value = -50
             }
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-
-    become_true_pictland = {
-        picture = national_value
-        potential = {
-            tag  = SCO
-            is_vassal = no
-            NOT = { has_country_flag = pictish_scotland }
-            exists = yes
-        }
-        allow = {
-            government = absolute_monarchy
-        }
-        effect = {
-            prestige = 15
-            set_country_flag = pictish_scotland
-            relation = {
-                who = ENG
-                value = -50
-            }
-            primary_culture = scottish
         }
         ai_will_do = {
             factor = 0

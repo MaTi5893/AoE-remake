@@ -83,69 +83,63 @@
 #Tanga (88000/22000 POPS)
 2037 = {
     aristocrats = {
-        culture = bantu
+        culture = pashtun
         religion = sunni
-        size = 325
+        size = 550
     }
 
     clergymen = {
-        culture = bantu
+        culture = pashtun
         religion = sunni
-        size = 175
+        size = 288
     }
 
     artisans = {
-        culture = bantu
+        culture = pashtun
         religion = sunni
-        size = 725
+        size = 1400
     }
 
     soldiers = {
-        culture = bantu
+        culture = pashtun
         religion = sunni
-        size = 175
+        size = 1100
     }
 
     farmers = {
-        culture = bantu
+        culture = pashtun
         religion = sunni
-        size = 11600
-    }
-
-    slaves = {
-        culture = bantu
-        religion = animist
-        size = 6000
+        size = 24762
     }
 
     aristocrats = {
-        culture = bantu
+        culture = tajik
         religion = sunni
-        size = 50
+        size = 1725
     }
 
     clergymen = {
-        culture = bantu
+        culture = tajik
         religion = sunni
-        size = 50
+        size = 875
     }
 
     artisans = {
-        culture = bantu
+        culture = tajik
         religion = sunni
-        size = 200
+        size = 4400
     }
 
     soldiers = {
-        culture = bantu
+        culture = tajik
         religion = sunni
-        size = 50
+        size = 1100
     }
 
     farmers = {
-        culture = bantu
+        culture = tajik
         religion = sunni
-        size = 2650
+        size = 80000
     }
 }
 #Kilwa (188000/47000 POPS)
@@ -1018,94 +1012,46 @@
 }
 #Arusha (80000/20000 POPS)
 2047 = {
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 100
+     aristocrats = {
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 50
+    bureaucrats = {
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
-    artisans = {
-        culture = bantu
-        religion = animist
-        size = 300
-    }
-
-    soldiers = {
-        culture = bantu
-        religion = animist
+    officers = {
+        culture = baluchi
+        religion = sunni
         size = 75
     }
 
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 5475
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 125
-    }
-
     clergymen = {
-        culture = bantu
-        religion = animist
-        size = 75
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
     artisans = {
-        culture = bantu
-        religion = animist
-        size = 400
+        culture = baluchi
+        religion = sunni
+        size = 1250
     }
 
     soldiers = {
-        culture = bantu
-        religion = animist
-        size = 100
+        culture = baluchi
+        religion = sunni
+        size = 7000
     }
 
     farmers = {
-        culture = bantu
-        religion = animist
-        size = 7275
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 100
-    }
-
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 50
-    }
-
-    artisans = {
-        culture = bantu
-        religion = animist
-        size = 300
-    }
-
-    soldiers = {
-        culture = bantu
-        religion = animist
-        size = 75
-    }
-
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 5475
+        culture = baluchi
+        religion = sunni
+        size = 16925
     }
 }
 #Zanzibar Region (156000)

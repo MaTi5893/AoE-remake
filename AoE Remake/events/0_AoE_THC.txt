@@ -24,6 +24,10 @@ country_event = {
             who = GBR
             value = -175
         }
+		change_variable = {
+			which = usa_rev
+			value = 2
+		}
         set_country_flag = boston_massacre_happened
     }
 }
@@ -48,13 +52,11 @@ country_event = {
         name = "let's show them just how much we love their policys!"
         set_country_flag = boston_tea_party_prep
         country_event = 177505
+		change_variable = {
+			which = usa_rev
+			value = 2
+		}
         ai_chance = { factor = 1 }
-    }
-
-    option = {
-        name = "it's wise not to upset our mother country"
-        prestige = -5
-        ai_chance = { factor = 0 }
     }
 }
 country_event = {
@@ -238,6 +240,13 @@ country_event = {
 		relation = {
 			who = USA
 			value = 75
+		}
+		any_owned = {
+			limit = {
+				continent = north_america
+				NOT = { is_core = HAI }
+			}
+			secede_province = USA
 		}
 		USA = {
 			badboy = -5
@@ -433,13 +442,12 @@ country_event = {
     title = "The Continental Congress"
     desc = "EVTDESC177510"
     picture = continental_congress
+	fire_only_once = yes
 
     trigger = {
-        tag = THC
-        has_country_modifier = sugar_act_on_colonies
-        has_country_modifier = stamp_act_on_colonies
-        has_country_modifier = tea_act_on_colonies
-        has_country_modifier = intoreable_act_on_colonies
+        any_owned_province = { is_core = THC }
+		NOT = { exists = USA }
+		year = 1775
     }
 
     mean_time_to_happen = {
@@ -448,6 +456,86 @@ country_event = {
 
     option = {
         name = "We cannot allow such treatment any longer"
-        overlord = { country_event = 98610 }
+		change_variable = {
+			which = usa_rev
+			value = 2
+		}
     }
+}
+country_event = {
+    id = 177511
+    title = "The Constitutional Convention"
+    desc = "EVTDESC177510"
+    major = yes
+	is_triggered_only = yes
+
+    option = {
+        name = "The Convention is a success!"
+		years_of_research = 1
+		any_pop = { consciousness = 3 }
+    }
+	
+	option = {
+        name = "The Convention is a failure!"
+		set_country_flag = convention_fail
+		any_pop = { militancy = 3 }
+    }
+}
+country_event = {
+    id = 177512
+    title = "The 2nd American Revolution"
+    desc = "EVTDESC177510"
+    major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = convention_fail
+		NOT = { government = proletarian_dictatorship }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+
+    option = {
+        name = "Don't Tread on me."
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = wealth_weighted_voting
+		political_reform = state_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = non_secret_ballots
+		political_reform = all_voting_pops
+		political_reform = abolished
+		political_reform = legislative_parliment
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -100 }
+			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+			    OR = {
+				      government = democracy
+					  government = proletarian_dictatorship
+					  government = fascist_dictatorship
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = 200 }
+		}
+	}
 }

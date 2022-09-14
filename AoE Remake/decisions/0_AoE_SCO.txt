@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			tag = SCO
 			is_vassal = yes
+			war = no
 			NOT = { has_global_flag = first_jacobite_rising }
 		}
 		allow = {
@@ -79,6 +80,7 @@ political_decisions = {
 	}
 	
 	greater_sco = {
+		picture = map_britain
 		potential = {
 			tag = SCO
 			has_country_flag = chose_sco

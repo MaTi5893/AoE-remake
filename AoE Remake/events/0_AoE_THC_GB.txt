@@ -6,15 +6,18 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		NOT = {
-			any_owned_province = {
-				has_province_modifier = salutary_neglect
+		OR = {
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = salutary_neglect
+				}
 			}
+			year = 1740
 		}
 		any_owned_province = {
 			is_core = THC
 		}
-		primary_culture = british
+		OR = { primary_culture = british AND = { primary_culture = scottish NOT = { exists = ENL } } }
 	}
 
     option = {
@@ -182,5 +185,9 @@ country_event = {
 	
 	option = {
 		name = "Intresting."
+		change_variable = {
+			which = usa_rev
+			value = 2
+		}
 	}
 }

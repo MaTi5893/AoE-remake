@@ -3,63 +3,69 @@
 #Windhoek (72000/18000 POPS)
 2078 = {
     aristocrats = {
-        culture = khoikhoi
-        religion = animist
-        size = 100
-    }
-
-    clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 50
-    }
-
-    artisans = {
-        culture = khoikhoi
-        religion = animist
+        culture = oriya
+        religion = hindu
         size = 300
     }
 
+    bureaucrats = {
+        culture = oriya
+        religion = hindu
+        size = 50
+    }
+
+    clergymen = {
+        culture = oriya
+        religion = hindu
+        size = 300
+    }
+
+    artisans = {
+        culture = oriya
+        religion = hindu
+        size = 1450
+    }
+
     soldiers = {
-        culture = khoikhoi
-        religion = animist
-        size = 75
+        culture = oriya
+        religion = hindu
+        size = 1100
     }
 
     farmers = {
-        culture = khoikhoi
-        religion = animist
-        size = 5475
+        culture = oriya
+        religion = hindu
+        size = 25900
     }
 
     aristocrats = {
-        culture = khoikhoi
+        culture = asian_minor
+        religion = animist
+        size = 250
+    }
+
+    clergymen = {
+        culture = asian_minor
         religion = animist
         size = 225
     }
 
-    clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 125
-    }
-
     artisans = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 600
+        size = 1050
     }
 
     soldiers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 125
+        size = 250
     }
 
     farmers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 10925
+        size = 21225
     }
 }
 #Swakopmund (52000/13000 POPS)
@@ -165,63 +171,69 @@
 #Otjinene (44000/11000 POPS)
 2082 = {
     aristocrats = {
-        culture = khoikhoi
-        religion = animist
-        size = 100
-    }
-
-    clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 50
-    }
-
-    artisans = {
-        culture = khoikhoi
-        religion = animist
+        culture = oriya
+        religion = hindu
         size = 300
     }
 
-    soldiers = {
-        culture = khoikhoi
-        religion = animist
-        size = 75
-    }
-
-    farmers = {
-        culture = khoikhoi
-        religion = animist
-        size = 5475
-    }
-
-    aristocrats = {
-        culture = khoikhoi
-        religion = animist
-        size = 75
-    }
-
-    clergymen = {
-        culture = khoikhoi
-        religion = animist
+    bureaucrats = {
+        culture = oriya
+        religion = hindu
         size = 50
     }
 
+    clergymen = {
+        culture = oriya
+        religion = hindu
+        size = 300
+    }
+
     artisans = {
-        culture = khoikhoi
+        culture = oriya
+        religion = hindu
+        size = 1450
+    }
+
+    soldiers = {
+        culture = oriya
+        religion = hindu
+        size = 1100
+    }
+
+    farmers = {
+        culture = oriya
+        religion = hindu
+        size = 25900
+    }
+
+    aristocrats = {
+        culture = asian_minor
         religion = animist
         size = 250
     }
 
-    soldiers = {
-        culture = khoikhoi
+    clergymen = {
+        culture = asian_minor
         religion = animist
-        size = 50
+        size = 225
+    }
+
+    artisans = {
+        culture = asian_minor
+        religion = animist
+        size = 1050
+    }
+
+    soldiers = {
+        culture = asian_minor
+        religion = animist
+        size = 250
     }
 
     farmers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 4575
+        size = 21225
     }
 }
 #Kafue Region (16000) #see Zambia.txt for balance of region
@@ -229,97 +241,139 @@
 #Linyati (16000/4000 POPS)
 2081 = {
     aristocrats = {
-        culture = khoikhoi
-        religion = animist
+        culture = oriya
+        religion = hindu
+        size = 300
+    }
+
+    bureaucrats = {
+        culture = oriya
+        religion = hindu
         size = 50
     }
 
     clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 75
+        culture = oriya
+        religion = hindu
+        size = 300
     }
 
     artisans = {
-        culture = khoikhoi
-        religion = animist
-        size = 150
+        culture = oriya
+        religion = hindu
+        size = 1450
     }
 
     soldiers = {
-        culture = khoikhoi
-        religion = animist
-        size = 25
+        culture = oriya
+        religion = hindu
+        size = 1100
     }
 
     farmers = {
-        culture = khoikhoi
-        religion = animist
-        size = 2700
+        culture = oriya
+        religion = hindu
+        size = 25900
     }
 
     aristocrats = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 15
+        size = 250
     }
 
     clergymen = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 25
+        size = 225
     }
 
     artisans = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 50
+        size = 1050
     }
 
     soldiers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 10
+        size = 250
     }
 
     farmers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 900
+        size = 21225
     }
 }
 #Namaqualand Region (64000) #see South Africa.txt for balance of region
 #uncolonized in 1836/dominated by the Nama in 1836
 #Walvis Bay (4000/1000 POPS)
 2083 = {
-    aristocrats = {
-        culture = khoikhoi
-        religion = animist
-        size = 15
+     aristocrats = {
+        culture = oriya
+        religion = hindu
+        size = 300
     }
 
-    clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 25
-    }
-
-    artisans = {
-        culture = khoikhoi
-        religion = animist
+    bureaucrats = {
+        culture = oriya
+        religion = hindu
         size = 50
     }
 
+    clergymen = {
+        culture = oriya
+        religion = hindu
+        size = 300
+    }
+
+    artisans = {
+        culture = oriya
+        religion = hindu
+        size = 1450
+    }
+
     soldiers = {
-        culture = khoikhoi
-        religion = animist
-        size = 10
+        culture = oriya
+        religion = hindu
+        size = 1100
     }
 
     farmers = {
-        culture = khoikhoi
+        culture = oriya
+        religion = hindu
+        size = 25900
+    }
+
+    aristocrats = {
+        culture = asian_minor
         religion = animist
-        size = 900
+        size = 250
+    }
+
+    clergymen = {
+        culture = asian_minor
+        religion = animist
+        size = 225
+    }
+
+    artisans = {
+        culture = asian_minor
+        religion = animist
+        size = 1050
+    }
+
+    soldiers = {
+        culture = asian_minor
+        religion = animist
+        size = 250
+    }
+
+    farmers = {
+        culture = asian_minor
+        religion = animist
+        size = 21225
     }
 }
 #Angra Pequena (28000/7000 POPS)
@@ -419,63 +473,69 @@
 #Karasburg (20000/5000 POPS)
 2086 = {
     aristocrats = {
-        culture = khoikhoi
-        religion = animist
+        culture = oriya
+        religion = hindu
+        size = 300
+    }
+
+    bureaucrats = {
+        culture = oriya
+        religion = hindu
         size = 50
     }
 
     clergymen = {
-        culture = khoikhoi
-        religion = animist
-        size = 50
+        culture = oriya
+        religion = hindu
+        size = 300
     }
 
     artisans = {
-        culture = khoikhoi
-        religion = animist
-        size = 200
+        culture = oriya
+        religion = hindu
+        size = 1450
     }
 
     soldiers = {
-        culture = khoikhoi
-        religion = animist
-        size = 50
+        culture = oriya
+        religion = hindu
+        size = 1100
     }
 
     farmers = {
-        culture = khoikhoi
-        religion = animist
-        size = 3650
+        culture = oriya
+        religion = hindu
+        size = 25900
     }
 
     aristocrats = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 15
+        size = 250
     }
 
     clergymen = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 25
+        size = 225
     }
 
     artisans = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 50
+        size = 1050
     }
 
     soldiers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 10
+        size = 250
     }
 
     farmers = {
-        culture = khoikhoi
+        culture = asian_minor
         religion = animist
-        size = 900
+        size = 21225
     }
 
 }

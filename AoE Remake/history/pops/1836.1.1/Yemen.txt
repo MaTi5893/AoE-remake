@@ -299,64 +299,70 @@
 }
 #Taizz (52000/13000 POPS)
 1180 = {
-    aristocrats = {
-        culture = mashriqi
-        religion = sunni
-        size = 1100
+     aristocrats = {
+        culture = rajput
+        religion = hindu
+        size = 500
     }
 
     clergymen = {
-        culture = mashriqi
-        religion = sunni
+        culture = rajput
+        religion = hindu
+        size = 500
+    }
+
+    bureaucrats = {
+        culture = rajput
+        religion = hindu
         size = 50
     }
 
     artisans = {
-        culture = mashriqi
+        culture = rajput
+        religion = hindu
+        size = 8000
+    }
+
+    soldiers = {
+        culture = rajput
+        religion = hindu
+        size = 500
+    }
+
+    farmers = {
+        culture = rajput
+        religion = hindu
+        size = 29450
+    }
+
+    aristocrats = {
+        culture = avadhi
         religion = sunni
         size = 250
     }
 
-    soldiers = {
-        culture = mashriqi
+    clergymen = {
+        culture = avadhi
         religion = sunni
-        size = 1100
-    }
-
-    farmers = {
-        culture = mashriqi
-        religion = sunni
-        size = 3625
-    }
-
-    aristocrats = {
-        culture = mashriqi
-        religion = shiite
         size = 125
     }
 
-    clergymen = {
-        culture = mashriqi
-        religion = shiite
-        size = 75
-    }
-
     artisans = {
-        culture = mashriqi
-        religion = shiite
-        size = 400
+        culture = avadhi
+        religion = sunni
+        size = 2000
     }
 
     soldiers = {
-        culture = mashriqi
-        religion = shiite
-        size = 75
+        culture = avadhi
+        religion = sunni
+        size = 300
     }
 
     farmers = {
-        culture = mashriqi
-        religion = shiite
-        size = 6400
+        culture = avadhi
+        religion = sunni
+        size = 8325
     }
 }
 #Aden (40000/10000 POPS)

@@ -523,7 +523,8 @@ political_reforms = {
         }
     }
 
-    centralization = { #Parliment
+    centralization = { #Parliament
+		next_step_only = yes
         no_parliment = {
 			suppression_points_modifier = 0.25
 			literacy_con_impact = -0.15
@@ -544,6 +545,36 @@ political_reforms = {
 			cb_generation_speed_modifier = -0.05
         }
     }
+	
+	religious_minoritys = {
+		next_step_only = yes
+		no_rights = {
+			#depending on rel policy religious persecusions might happen
+			#can't assimilate without pops religion matching state religion if moralist rel policy, if anything else you get a debuff
+		}
+		no_political_rights = {
+			#assimilation debuffs from above don't impact poor strata pops
+			global_immigrant_attract = 0.1
+			allow = { NOT = { religious_policy = moralism } }
+		}
+		political_rights = {
+			#can assimilate foreign religious pops
+			global_immigrant_attract = 0.15
+			allow = { OR = { religious_policy = secularized religious_policy = pluralism } }
+			
+		}
+	}
+	church_and_state = {
+		next_step_only = yes
+		state_religion = {
+			#Enables Church Estate
+		}
+		church_and_state_seperation = {
+			allow = { OR = { religious_policy = secularized religious_policy = pro_atheism } is_ideology_enabled = communist }
+			global_immigrant_attract = 0.15
+			#disables Church Estate
+		}
+	}
 }
 
 
@@ -602,7 +633,6 @@ social_reforms = {
             tax_efficiency = 0.05
             factory_throughput = 0.1
             core_pop_consciousness_modifier = 0.01
-            minimum_wage = 0.8
 			 allow = { NOT = { estate_affiliation = nobility_church estate_affiliation = church_army } }
         }
     }

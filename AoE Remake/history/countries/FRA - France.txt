@@ -19,14 +19,16 @@ prestige = 90
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = party_appointed
-vote_franschise = none_voting
+upper_house_composition = state_equal_weight
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = censored_press
-trade_unions = no_trade_unions
-voting_system = first_past_the_post
+trade_unions = all_trade_unions
+voting_system = proportional_representation
 political_parties = non_secret_ballots
-
+religious_minoritys = political_rights
+church_and_state = separated
+centralization = legislative_parliment
 # Social Reforms
 wage_reform = no_minimum_wage
 work_hours = no_work_hour_limit
@@ -42,8 +44,6 @@ debt_law = debtors_prisons
 penal_system = capital_punishment
 
 citizens_rights = culture_voting_only
-
-centralization = unitary
 colonial_policy = exploitation
 
 set_country_flag = catholic_country
@@ -95,12 +95,12 @@ ruling_party = "Jacobins"
 last_election = 1789.6.21
 upper_house = {
     fascist = 0
-    liberal = 12
-    conservative = 70
-    reactionary = 18
+    liberal = 15
+    conservative = 15
+    reactionary = 5
     anarcho_liberal = 0
-    socialist = 0
-    communist = 0
+    socialist = 35
+    communist = 3
 }
 
 schools = culture_tech_school

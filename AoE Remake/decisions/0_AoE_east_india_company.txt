@@ -8,7 +8,7 @@ political_decisions = {
                 is_secondary_power = yes
                 is_greater_power = yes
             }
-            NOT = { tag = RUS }
+            NOT = { primary_culture = russian }
             exists = yes
             OR = {
             nationalism_n_imperialism = 1

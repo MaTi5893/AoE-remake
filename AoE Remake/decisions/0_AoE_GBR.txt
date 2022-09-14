@@ -89,6 +89,11 @@ political_decisions = {
 				factor = 0
 				NOT = { year = 1707 }
 			}
+			modifier = {
+				factor = 0
+				NOT = { year = 1711 }
+				exists = SPA
+			}
 		}
     }
 

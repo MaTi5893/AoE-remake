@@ -19,6 +19,15 @@ objectTypes = {
 	}
 	
 	EMFXActorType = {
+		name = "manufactory_weapons"
+		actorfile = "gfx\anims\Manu_WeaponFactory.xac"
+		
+		idle   = "gfx\anims\Static.xsm"
+		
+		scale = 1.5
+	}
+	
+	EMFXActorType = {
 		name = "City_southamericagfx_0"
 		actorfile = "gfx\anims\City_SA_00.xac"
 		
@@ -188,14 +197,14 @@ objectTypes = {
 	
 	EMFXActorType = {
 		name = "building_factory"
-		actorfile = "gfx\anims\City_Western_01.xac"
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"
 		scale = 0.75
 	}
 	
 	# TODO remove this later
 	EMFXActorType = {
 		name = "building_aeroplane_factory"
-		actorfile = "gfx\anims\City_Western_01.xac"
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"
 		
 		idle   = "gfx\anims\static.xsm"
 		scale = 0.75
@@ -259,7 +268,7 @@ objectTypes = {
 
 	EMFXActorType = {
 		name = "building_trainstation"
-		actorfile = "gfx\anims\trainstation.xac"
+		actorfile = "gfx\anims\Manu_FineartsAcadamy.xac"
 		idle   = "gfx\anims\static.xsm"
 		scale = 0.3
 	}

@@ -3,12 +3,12 @@ cruiser = { #Heavy Frigate
     naval_icon = 8
 
     type = naval
-    sprite = Cruiser
+    sprite = big_ship
     active = no
     unit_type = light_ship
     move_sound = steam_move
     select_sound = steam_selected
-    colonial_points = 25
+    colonial_points = 40
 
     #Core Abilities
     priority = 12

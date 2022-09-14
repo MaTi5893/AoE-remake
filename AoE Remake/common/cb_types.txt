@@ -69,6 +69,7 @@ restore_jacobites
 restore_anglo_dutch_union
 dethrone_peter
 greek_plan_cb
+monroe_doctrine_cb
 place_in_the_sun
 place_in_the_sun_for_puppet
 convert_cb
@@ -392,6 +393,95 @@ latin_america_cb = {
     po_demand_state = yes
 
     war_name = WAR_AUSTRIAN_EMPIRE_NAME
+
+    on_add = {
+		badboy = 5
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+monroe_doctrine_cb = {
+    sprite_index = 25
+    is_triggered_only = yes
+    months = 12
+
+    construction_speed = 0.8
+
+    badboy_factor = 0
+    prestige_factor = 2
+    peace_cost_factor = 0.7
+    penalty_factor = 1
+    always = yes
+
+    break_truce_prestige_factor = 5
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 48
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        THIS = {
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+                war_with = THIS
+            }
+			tag = USA
+			has_country_flag = monroe_doctrine
+        }
+        is_vassal = no
+        neighbour = THIS
+        any_owned_province = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+        }
+		capital_scope = {
+			NOT = { continent = north_america }
+			NOT = { continent = south_america }
+		}
+        OR = {
+            THIS = {
+                military_score = 1
+            }
+            war_with = THIS
+        }
+    }
+
+    allowed_states = {
+        any_owned_province = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+        }
+		OR = {
+            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            AND = {
+                any_owned_province = { port = yes }
+                THIS = { any_owned_province = { port = yes } }
+            }
+            any_owned_province = {
+                any_neighbor_province = {
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+			}
+		}
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_LIBERATE_NAME
 
     on_add = {
 		badboy = 5
@@ -1062,6 +1152,7 @@ dominate_north_america = {
     }
 
     po_remove_prestige = yes
+	po_status_quo = yes
 
     on_po_accepted = {
 		country_event = 90960
@@ -1608,7 +1699,6 @@ acquire_core_state = {
         any_owned_province = {
             is_core = THIS
         }
-        not = { any_owned_province = { is_capital = yes } }
     }
 
     po_demand_state = yes
@@ -2658,6 +2748,12 @@ cut_down_to_size_boxer = {
 		THIS = { NOT = { has_country_modifier = neutrality } }
         NOT = { is_our_vassal = THIS }
         is_disarmed = no
+		NOT = {
+			AND = {
+				THIS = { ai = yes }
+				NOT = { war_with = THIS }
+			}
+		}
     }
 
     badboy_factor = 1.1

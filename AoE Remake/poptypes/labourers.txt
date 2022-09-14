@@ -3836,4 +3836,98 @@ issues =
             NOT = { literacy = 0.25 }
         }
     }
+		no_political_rights = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { consciousness = 3 }
+                NOT = {
+                    is_next_reform = no_political_rights
+                }
+                NOT = { is_ideology_enabled = socialist }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+		modifier = {
+            factor = 0.5
+            is_state_religion = no
+        }
+		modifier = {
+            factor = 2
+            is_state_religion = yes
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 5
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+	}
+	political_rights = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { consciousness = 3 }
+                NOT = {
+                    is_next_reform = political_rights
+                }
+                NOT = { is_ideology_enabled = communist }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+		modifier = {
+            factor = 0.5
+            is_state_religion = no
+        }
+		modifier = {
+            factor = 2
+            is_state_religion = yes
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 5
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+	}
 }

@@ -682,11 +682,11 @@ political_decisions = {
 				exists = SCA
 			}
 			exists = yes
+			OR = { political_thought_7 = 1 ruling_party_ideology = communist }
 		}
 		allow = {
 			prestige = 45
 			war = no
-			state_n_government = 1
 			SCA = {
 				all_core = {
 					OR = {
@@ -710,7 +710,6 @@ political_decisions = {
 			add_accepted_culture = norwegian
 			add_accepted_culture = finnish
 			add_accepted_culture = icelandic
-			add_accepted_culture = sami
 			any_country = {
 				limit = {
 					NOT = {

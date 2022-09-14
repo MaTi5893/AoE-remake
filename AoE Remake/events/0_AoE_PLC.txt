@@ -45,7 +45,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 12
 	}
 	
 	option = {
@@ -73,7 +73,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 12
 	}
 	
 	option = {
@@ -102,7 +102,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 12
 	}
 	
 	option = {
@@ -912,6 +912,10 @@ country_event = {
 		political_reform = state_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
+		political_reform = non_secret_ballots
+		political_reform = all_voting_pops
+		political_reform = abolished
+		political_reform = legislative_parliment
 		any_country = {
 			limit = {
 				alliance_with = THIS
@@ -1009,18 +1013,6 @@ country_event = {
 		703 = {
 			add_core = CPL
 		}
-	}
-}
-country_event = {
-	id = 15730067
-	title = "Treaty of Perpetual Peace"
-	desc = "EVTDESC15730067"
-	picture = sejm
-	fire_only_once = yes
-
-	option = {
-		name = "Eternal Friendship"	
-		prestige = 5
 	}
 }
 country_event = {

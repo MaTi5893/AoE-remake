@@ -3,93 +3,63 @@
 #Nairobi (260000/65000 POPS)
 2024 = {
     aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 925
+        culture = marathi
+        religion = hindu
+        size = 1500
     }
 
     clergymen = {
-        culture = bantu
-        religion = animist
-        size = 475
+        culture = marathi
+        religion = hindu
+        size = 1750
     }
 
     artisans = {
-        culture = bantu
-        religion = animist
-        size = 2400
+        culture = marathi
+        religion = hindu
+        size = 6500
     }
 
     soldiers = {
-        culture = bantu
-        religion = animist
+        culture = marathi
+        religion = hindu
+        size = 2000
+    }
+
+    farmers = {
+        culture = marathi
+        religion = hindu
+        size = 208350
+    }
+
+    aristocrats = {
+        culture = avadhi
+        religion = sunni
+        size = 1100
+    }
+
+    clergymen = {
+        culture = avadhi
+        religion = sunni
         size = 500
     }
 
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 43700
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 200
-    }
-
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 100
-    }
-
     artisans = {
-        culture = bantu
-        religion = animist
-        size = 550
+        culture = avadhi
+        religion = sunni
+        size = 7000
     }
 
     soldiers = {
-        culture = bantu
-        religion = animist
-        size = 125
+        culture = avadhi
+        religion = sunni
+        size = 800
     }
 
     farmers = {
-        culture = bantu
-        religion = animist
-        size = 10025
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 50
-    }
-
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 50
-    }
-
-    artisans = {
-        culture = bantu
-        religion = animist
-        size = 200
-    }
-
-    soldiers = {
-        culture = bantu
-        religion = animist
-        size = 50
-    }
-
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 3650
+        culture = avadhi
+        religion = sunni
+        size = 33700
     }
 }
 #Lodwar (36000/9000 POPS)
@@ -163,168 +133,108 @@
 #Nakuru (128000/32000 POPS)
 2027 = {
     aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 150
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 125
+    bureaucrats = {
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
-    artisans = {
-        culture = bantu
-        religion = animist
-        size = 400
-    }
-
-    soldiers = {
-        culture = bantu
-        religion = animist
+    officers = {
+        culture = baluchi
+        religion = sunni
         size = 75
     }
 
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 7350
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 300
-    }
-
     clergymen = {
-        culture = bantu
-        religion = animist
-        size = 150
+        culture = baluchi
+        religion = sunni
+        size = 250
     }
 
     artisans = {
-        culture = bantu
-        religion = animist
-        size = 650
+        culture = baluchi
+        religion = sunni
+        size = 1250
     }
 
     soldiers = {
-        culture = bantu
-        religion = animist
-        size = 175
+        culture = baluchi
+        religion = sunni
+        size = 7000
     }
 
     farmers = {
-        culture = bantu
-        religion = animist
-        size = 11725
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 150
-    }
-
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 75
-    }
-
-    artisans = {
-        culture = bantu
-        religion = animist
-        size = 400
-    }
-
-    soldiers = {
-        culture = bantu
-        religion = animist
-        size = 75
-    }
-
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 7300
-    }
-
-    slaves = {
-        culture = bantu
-        religion = animist
-        size = 3000
+        culture = baluchi
+        religion = sunni
+        size = 16925
     }
 }
 #uncolonized in 1836/under influence of Buganda
 #Kisumu (196000/49000POPS)
 2028 = {
     aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 375
+        culture = pashtun
+        religion = sunni
+        size = 550
     }
 
     clergymen = {
-        culture = bantu
-        religion = animist
-        size = 200
+        culture = pashtun
+        religion = sunni
+        size = 288
     }
 
     artisans = {
-        culture = bantu
-        religion = animist
-        size = 775
+        culture = pashtun
+        religion = sunni
+        size = 1400
     }
 
     soldiers = {
-        culture = bantu
-        religion = animist
-        size = 300
-    }
-
-    farmers = {
-        culture = bantu
-        religion = animist
-        size = 20350
-    }
-
-    aristocrats = {
-        culture = bantu
-        religion = animist
-        size = 375
-    }
-
-    clergymen = {
-        culture = bantu
-        religion = animist
-        size = 200
-    }
-
-    artisans = {
-        culture = bantu
-        religion = animist
+        culture = pashtun
+        religion = sunni
         size = 1100
     }
 
+    farmers = {
+        culture = pashtun
+        religion = sunni
+        size = 24762
+    }
+
+    aristocrats = {
+        culture = tajik
+        religion = sunni
+        size = 1725
+    }
+
+    clergymen = {
+        culture = tajik
+        religion = sunni
+        size = 875
+    }
+
+    artisans = {
+        culture = tajik
+        religion = sunni
+        size = 4400
+    }
+
     soldiers = {
-        culture = bantu
-        religion = animist
-        size = 200
+        culture = tajik
+        religion = sunni
+        size = 1100
     }
 
     farmers = {
-        culture = bantu
-        religion = animist
-        size = 18225
-    }
-
-    slaves = {
-        culture = bantu
-        religion = animist
-        size = 7000
+        culture = tajik
+        religion = sunni
+        size = 80000
     }
 }
 #Tana Region (324000)

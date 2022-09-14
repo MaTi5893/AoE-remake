@@ -6851,28 +6851,6 @@ streltsi_rebellion = {
     #mobilisation_size = -0.005
     icon = 16
 }
-army_with_a_state1 = {
-    mobilization_economy_impact = -0.10
-    org_regain = 0.25
-    land_organisation = 0.2
-    supply_consumption = -0.15
-    mobilisation_size = 0.01
-    icon = 15
-}
-army_with_a_state2 = {
-    mobilization_economy_impact = -0.05
-    org_regain = 0.15
-    land_organisation = 0.1
-    supply_consumption = -0.1
-    mobilisation_size = 0.005
-    icon = 15
-}
-army_with_a_state3 = {
-    org_regain = 0.1
-    land_organisation = 0.05
-    supply_consumption = -0.1
-    icon = 15
-}
 
 healthy_merchant_guilds = {
     local_artisan_throughput = 0.25
@@ -7083,4 +7061,12 @@ hispanic_unity = {
 voc_golden_age = {
     tax_efficiency = 0.15
     icon = 9
+}
+asiatic_company = {
+    tax_efficiency = 0.15
+    icon = 9
+}
+stavnsband = {
+	mobilisation_size = 0.01
+	icon = 15
 }

@@ -38,24 +38,22 @@ country_event = {
 		war_with = ENL
 		war_with = GBR
 		}
-		OR = {
-			ENL = { any_core = { controlled_by = THIS } }
-			GBR = { any_core = { limit = { NOT = { is_core = SCO } } controlled_by = THIS } }
-		}
+		277 = { controlled_by = THIS }
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		months = 1
 	}
 	option = {
-		name = "We fight for our kings birthright, the Throne of England!"
+		name = "EVTOPT169801A"
 		prestige = 15
 		
 	}
 	
 	option = {
-		name = "Perhaps the independence of Scotland is more important?"
+		name = "EVTOPT169801B"
 		prestige = -15
+		set_country_flag = chose_sco
 		random_owned = {
 			limit = {
 				owner = { war_with = GBR }
@@ -82,24 +80,69 @@ country_event = {
 	title = "The Jacobite Rising of $YEAR$"
 	desc = "EVTDESC169802"
 	picture = jacobites
+	major = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = "We fight for our kings birthright, the Throne of England!"
+		name = "To London!"
 		prestige = 15
-		war = {
-			target = ENL
-			attacker_goal = { casus_belli = restore_jacobites }
-			defender_goal = { casus_belli = annex_core_country }
+		ENL = {
+			war = {
+				target = SCO
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = restore_jacobites }
+			}
 		}
 	}
 }
 country_event = {
 	id = 169803
-	title = "The Jacobite Rising of $YEAR$"
-	desc = "EVTDESC169802"
-	picture = jacobites
-	is_triggered_only = yes
+	title = "Part of The Royal Navy Defects!"
+	desc = "EVTDESC169803"
+	picture = harbour
+	fire_only_once = yes
 	
-	option = { name = "guh" }
+	trigger = {
+		tag = GBJ
+		exists = yes
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "Great!"
+		299 = {
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+			sub_unit = { type = manowar value = current }
+		}
+	}
 }

@@ -45,15 +45,15 @@ country_event = {
         }
     }
     option = {
-        name = "EVTOPTA60000"
+        name = "Long live the revolution!"
         government = proletarian_dictatorship
 
-        political_reform = none_voting
-        political_reform = party_appointed
-        political_reform = no_meeting
+        political_reform = wealth_voting
+        political_reform = state_equal_weight
+        political_reform = yes_meeting
         political_reform = state_press
-        political_reform = state_controlled
-        political_reform = underground_parties
+        political_reform = non_socialist_allowed
+        political_reform = non_secret_ballots
         political_reform = no_slavery
         
         political_reform = culture_voting_only

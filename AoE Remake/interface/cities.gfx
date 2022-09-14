@@ -28,9 +28,9 @@ objectTypes = {
 	}	
 	EMFXActorType = {
 		name = "building_factory_small"
-		actorfile = "gfx\anims\buildings_03_1.xac"
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"
 		idle   = "gfx\anims\Static.xsm"
-		scale = 1.0
+		scale = 0.38
 	}
 
 #### JAP cities ########################################################	
@@ -156,58 +156,58 @@ objectTypes = {
 
 	EMFXActorType = {
 		name = "Generic_house_1_1"
-		actorfile = "gfx\anims\buildings_03_1.xac"		# <- Expecting industrial style mesh
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"		# <- Expecting industrial style mesh
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.7f
+		scale = 0.45f
 	}
 	EMFXActorType = {
 		name = "Generic_house_1_2"
-		actorfile = "gfx\anims\buildings_03_2.xac"
+		actorfile = "gfx\anims\Manu_WeaponFactory.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.7f
+		scale = 0.15f
 	}
 	EMFXActorType = {
 		name = "Generic_house_1_3"
-		actorfile = "gfx\anims\buildings_03_3.xac"
+		actorfile = "gfx\anims\Manu_University.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.7f
+		scale = 0.45f
 	}
 
 	EMFXActorType = {
 		name = "Generic_house_2_1"
-		actorfile = "gfx\anims\buildings_02_1.xac"		# <- Expecting industrial style mesh
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"	# <- Expecting industrial style mesh
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.68f
+		scale = 0.38f
 	}
 	EMFXActorType = {
 		name = "Generic_house_2_2"
-		actorfile = "gfx\anims\buildings_02_5.xac"
+		actorfile = "gfx\anims\Manu_WeaponFactory.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.68f
+		scale = 0.18f
 	}
 	EMFXActorType = {
 		name = "Generic_house_2_3"
-		actorfile = "gfx\anims\buildings_02_6.xac"
+		actorfile = "gfx\anims\Manu_University.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.68f
+		scale = 0.38f
 	}
 
 	EMFXActorType = {
 		name = "Generic_house_3_1"
-		actorfile = "gfx\anims\buildings_01_1.xac"		# <- Expecting industrial style mesh
+		actorfile = "gfx\anims\Manu_TradeCompany.xac"		# <- Expecting industrial style mesh
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.66f
+		scale = 0.36f
 	}
 	EMFXActorType = {
 		name = "Generic_house_3_2"
-		actorfile = "gfx\anims\buildings_01_5.xac"
+		actorfile = "gfx\anims\Manu_University.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.66f
+		scale = 0.36f
 	}
 	EMFXActorType = {
 		name = "Generic_house_3_3"
-		actorfile = "gfx\anims\buildings_01_3.xac"
+		actorfile = "gfx\anims\Manu_WeaponFactory.xac"
 		idle   = "gfx\anims\static.xsm"
-		scale = 0.66f
+		scale = 0.16f
 	}
 }

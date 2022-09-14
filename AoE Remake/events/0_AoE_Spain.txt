@@ -117,20 +117,26 @@ country_event = {
 	}
 	
 	option = {
-		name = "We'll take what's rightfully mine with sword in hand!"
-		badboy = 28
-		casus_belli = {
-			target = AUS
-			type = unify_habsburg_monarchy
-			months = 12
-		}
-		prestige = 25
-		any_greater_power = {
-			relation = {
-				who = THIS
-				value = -80
+		name = "We'll take what's rightfully ours!"
+		random_list = {
+			50 = { badboy = 28 AUS = { country_event = 174511 } }
+			50 = {
+				badboy = 28
+				casus_belli = {
+					target = AUS
+					type = unify_habsburg_monarchy
+					months = 12
+				}
+				prestige = 25
+				any_greater_power = {
+					relation = {
+						who = THIS
+						value = -80
+					}
+				}
 			}
 		}
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -142,6 +148,7 @@ country_event = {
 			}
 		}
 		prestige = -25
+		ai_chance = { factor = 0 }
 	}
 }
 country_event = {

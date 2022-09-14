@@ -634,32 +634,85 @@ guiTypes = {
 			}
 		}
 		
-		windowType = {
-			name = "debt_law"
-			backGround =""
-			position = { x = 843 y = 451 }
-			size = { x=151 y= 92}
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = "0"
-			verticalBorder = ""
-			fullScreen = no
+			windowType = {
+				name = "debt_law"
+				backGround =""
+				position = { x = 843 y = 451 }
+				size = { x=151 y= 92}
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
 			
 				iconType = {
-				name = "politics_penal"
-				spriteType = "GFX_politics_penal"
-				position = { x= 6 y = 12 } #WAS { x= 7 y = 8 }
-				Orientation = "UPPER_LEFT"
-					}
+					name = "politics_penal"
+					spriteType = "GFX_politics_penal"
+					position = { x= 6 y = 12 } #WAS { x= 7 y = 8 }
+					Orientation = "UPPER_LEFT"
+				}
 				instantTextBoxType = { 
-				name = "reform_name"
-				position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
-				font = "vic_18"
-				text = "REFORM_NAME"	
-				maxWidth = 100
-				maxHeight = 20	
-					}
-
+					name = "reform_name"
+					position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "religious_minoritys"
+				backGround =""
+				position = { x = 691 y = 309 }
+				size = { x=151 y= 92}
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+			
+				iconType = {
+					name = "politics_rel_minority"
+					spriteType = "GFX_politics_rel_minority"
+					position = { x= 6 y = 12 } #WAS { x= 7 y = 8 }
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 150
+					maxHeight = 20	
+				}
+			}
+			
+			windowType = {
+				name = "church_and_state"
+				backGround =""
+				position = { x = 614 y = 517 }
+				size = { x=151 y= 92}
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = "0"
+				verticalBorder = ""
+				fullScreen = no
+			
+				iconType = {
+					name = "politics_church_n_state"
+					spriteType = "GFX_politics_church_n_state"
+					position = { x= 6 y = 12 } #WAS { x= 7 y = 8 }
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = { 
+					name = "reform_name"
+					position = { x = 39 y = 20 } #WAS { x = 40 y = 15 }
+					font = "vic_18"
+					text = "REFORM_NAME"	
+					maxWidth = 100
+					maxHeight = 20	
+				}
 			}
 			
 			windowType = {
