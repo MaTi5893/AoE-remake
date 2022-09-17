@@ -18,6 +18,7 @@ political_decisions = {
             all_core = { remove_core = THIS }
             change_tag = USA
             remove_accepted_culture = british
+			country_event = 177601
         }
 
         ai_will_do = {
@@ -88,7 +89,7 @@ political_decisions = {
 			148 = { add_core = THIS }
 			146 = { add_core = THIS }
 			131 = { add_core = THIS }
-			USA_106 = { add_core = THIS }
+			USA_122 = { add_core = THIS }
 			random_owned = {
 				limit = {
 					owner = {
@@ -224,19 +225,30 @@ political_decisions = {
         picture = bill_of_rights
         potential = {
             tag = USA
-            NOT = { has_country_modifier = freedom_of_religion }
+            NOT = { has_country_flag = enacted_the_bill_of_rights }
             exists = yes
         }
         allow = {
             war = no
-            militancy = 4
+            OR = {
+                AND = {
+                    upper_house = {
+                        ideology = socialist
+                        value = 0.3
+                    }
+                    average_consciousness = 3
+                }
+                AND = {
+                    ruling_party_ideology = socialist
+                    average_consciousness = 4
+                }
+            }
             citizenship_policy = full_citizenship
         }
         effect = {
-            add_country_modifier = {
-                name = freedom_of_religion
-                duration = -1
-            }
+			set_country_flag = enacted_the_bill_of_rights
+            political_reform = political_rights
+			political_reform = church_n_state_seperated
             any_pop = {
                 militancy = 3
             }
@@ -453,7 +465,7 @@ political_decisions = {
         }
         effect = {
             set_country_flag = constitutional_convention
-            country_event = 17860002
+            country_event = 177511
 			prestige = 15
         }
         ai_will_do = {

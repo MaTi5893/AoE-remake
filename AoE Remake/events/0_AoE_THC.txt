@@ -181,7 +181,7 @@ country_event = {
             fort = -1
             infrastructure = -2
             any_pop = {
-                reduce_pop = 0.95
+                reduce_pop = 0.98
             }
         }
         treasury = -5000
@@ -465,7 +465,7 @@ country_event = {
 country_event = {
     id = 177511
     title = "The Constitutional Convention"
-    desc = "EVTDESC177510"
+    desc = "EVTDESC177511"
     major = yes
 	is_triggered_only = yes
 
@@ -484,7 +484,7 @@ country_event = {
 country_event = {
     id = 177512
     title = "The 2nd American Revolution"
-    desc = "EVTDESC177510"
+    desc = "EVTDESC177512"
     major = yes
 	fire_only_once = yes
 

@@ -90406,20 +90406,15 @@
 } # Managua
 
 2197 = {
-    unit = {
-        x = 1469.000000
-        y = 1162.000000
-    }
-
     text_position = {
         x = 1469.599976
         y = 1156.800049
     }
 
     text_scale = 2.500000
-    building_construction = {
-        x = 1478.000000
-        y = 1164.000000
+    unit = {
+        x = 1469.000000
+        y = 1162.000000
     }
 
     factory = {
@@ -90427,10 +90422,20 @@
         y = 1161.599976
     }
 
+    building_construction = {
+        x = 1478.000000
+        y = 1164.000000
+    }
+
     building_position = {
         fort = {
             x = 1457.000000
             y = 1148.000000
+        }
+
+        naval_base = {
+            x = 1455.066667
+            y = 1145.391667
         }
 
     }
@@ -105068,6 +105073,14 @@
     building_construction = {
         x = 1523.805000
         y = 1498.140000
+    }
+
+    building_position = {
+        naval_base = {
+            x = 1539.971667
+            y = 1476.058333
+        }
+
     }
 
 } # Asheville

@@ -11,10 +11,10 @@ civilized = yes
 # Political reforms
 slavery = yes_slavery
 upper_house_composition = party_appointed
-vote_franschise = none_voting
-public_meetings = no_meeting
+vote_franschise = wealth_voting
+public_meetings = yes_meeting
 press_rights = state_press
-trade_unions = no_trade_unions
+trade_unions = socialist_allowed
 voting_system = first_past_the_post
 political_parties = underground_parties
 
@@ -33,16 +33,14 @@ penal_system = capital_punishment
 
 citizens_rights = culture_voting_only
 
-centralization = confederalism
-colonial_policy = settlement
-
+centralization = legislative_parliment
 set_country_flag = new_world_nation
 set_country_flag = dynamic_colony
 ruling_party = "Nobility Faction"
 upper_house = {
     fascist = 0
-    liberal = 0
-    conservative = 100
+    liberal = 50
+    conservative = 50
     reactionary = 0
     anarcho_liberal = 0
     socialist = 0

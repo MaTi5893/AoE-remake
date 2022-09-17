@@ -624,9 +624,7 @@ social_reforms = {
 
             rich_vote = 0.05
 			allow = {
-				allow = { 
-					NOT = { has_country_flag = clergy_and_nobility_domination }
-				}
+				NOT = { has_country_flag = clergy_and_nobility_domination }
             }
         }
         good_minimum_wage = { #irrelevant
@@ -995,40 +993,6 @@ social_reforms = {
             allow = {
                 has_country_flag = skill_and_merit_allowed
             }
-        }
-    }
-
-    vaccination = {
-        administrative = yes
-        next_step_only = yes
-        no_vaccination = {
-        }
-
-        court_vaccination = {
-            global_population_growth = 0.001
-			rich_everyday_needs = -0.05
-			middle_everyday_needs = -0.05
-			poor_everyday_needs = -0.05
-            administrative_multiplier = 2
-            global_immigrant_attract = 0.02
-        }
-
-        military_vaccination = {
-            global_population_growth = 0.001
-			rich_everyday_needs = -0.10
-			middle_everyday_needs = -0.10
-			poor_everyday_needs = -0.10
-            administrative_multiplier = 3
-            global_immigrant_attract = 0.03
-        }
-
-        public_vaccination = {
-            global_population_growth = 0.001
-			rich_everyday_needs = -0.15
-			middle_everyday_needs = -0.15
-			poor_everyday_needs = -0.15
-            administrative_multiplier = 4
-            global_immigrant_attract = 0.04
         }
     }
 }

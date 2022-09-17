@@ -21,7 +21,9 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            relation = { who = AUS value = 150 }
+            sphere_owner = {
+				has_country_flag = hre_emperor
+			}
         }
         effect = {
             all_core = {
@@ -35,11 +37,7 @@ political_decisions = {
             set_country_flag = hre_member
         }
         ai_will_do = {
-            factor = 0
-            modifier = {
-                factor = 10
-                in_sphere = AUS
-            }
+            factor = 1
         }
     }
 

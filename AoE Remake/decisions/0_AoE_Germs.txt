@@ -6,6 +6,8 @@ political_decisions = {
 			NOT = {
 				exists = THU
 			}
+			NOT = { exists = GER }
+			NOT = { exists = NNN }
 			exists = yes
 		}
 		allow = {
@@ -36,6 +38,8 @@ political_decisions = {
 				exists = WES
 			}
 			exists = yes
+			NOT = { exists = GER }
+			NOT = { exists = NNN }
 		}
 		allow = {
 			owns = 581
@@ -66,6 +70,8 @@ political_decisions = {
 			}
 			exists = yes
 			NOT = { tag = LOR }
+			NOT = { exists = GER }
+			NOT = { exists = NNN }
 		}
 		allow = {
 			owns = 572
@@ -96,6 +102,8 @@ political_decisions = {
 			}
 			exists = yes
 			NOT = { tag = BAV }
+			NOT = { exists = GER }
+			NOT = { exists = NNN }
 		}
 		allow = {
 			owns = 586

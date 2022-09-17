@@ -183,40 +183,6 @@ political_decisions = {
         }
     }
 
-    #trade_with_japan = {
-    #    picture = french_military_exp_japan
-    #    potential = {
-    #        OR = {
-    #            tag = NET
-    #            tag = POR
-    #        }
-    #        NOT = {
-    #            has_global_flag = japan_not_isolated
-    #        }
-    #        exists = yes
-    #    }
-    #    allow = {
-    #        relation = {
-    #            who = JAP
-    #            value = 150
-    #        }
-    #        money = 25000
-    #    }
-    #    effect = {
-    #        1661 = {
-    #            secede_province = THIS
-    #        }
-    #        treasury = -25000
-    #        set_global_flag = japan_not_isolated
-    #        JAP = {
-    #            research_points = 2500
-    #        }
-    #    }
-    #    ai_will_do = {
-    #        factor = 1
-    #    }
-    #}
-
     teutonic_prusa = {
         picture = west_prussia
         potential = {

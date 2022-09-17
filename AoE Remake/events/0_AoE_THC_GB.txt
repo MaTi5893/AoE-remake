@@ -166,8 +166,13 @@ country_event = {
 	
 	trigger = {
 		any_owned_province = {
+			OR = {
 			is_core = THC
+			is_core = USA
+			}
 		}
+		literacy = 0.5
+		year = 1742
 		USA = { exists = no }
 	}
 	
@@ -185,6 +190,7 @@ country_event = {
 	
 	option = {
 		name = "Intresting."
+		any_pop = { limit = { location = { continent = north_america } } consciousness = 2 }
 		change_variable = {
 			which = usa_rev
 			value = 2
