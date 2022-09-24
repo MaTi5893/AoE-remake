@@ -138,7 +138,7 @@ political_decisions = {
     form_ruthenia = {
         picture = cossak_state
         potential = {
-            primary_culture = ukrainian
+            OR = { primary_culture = ukrainian primary_culture = cossack }
             NOT = { exists = RUT }
         }
         allow = {

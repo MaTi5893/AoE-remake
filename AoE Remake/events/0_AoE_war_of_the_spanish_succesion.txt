@@ -100,7 +100,7 @@ country_event = {
             background = attack_3.1
         }
         ai_chance = {
-            factor = 0.85
+            factor = 0.75
         }
     }
 
@@ -144,7 +144,7 @@ country_event = {
             background = attack_3.1
         }
         ai_chance = {
-            factor = 0.15
+            factor = 0.25
         }
     }
 }
@@ -154,7 +154,7 @@ country_event = {
     desc = "EVTDESC93001"
 	major = yes
 	news = yes
-    fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "Follow the treaty"

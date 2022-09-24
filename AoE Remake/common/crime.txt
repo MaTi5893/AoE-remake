@@ -6,12 +6,16 @@ anarchic_bomb_throwers = {
 	}	
 }
 
-citizen_guard = {
-	life_rating = -0.02
-	local_rgo_output = -0.1
+unruley_nobility = {
+	active = yes
+
+	local_factory_output = -0.05
 	icon = 2	
 	
 	trigger = {
+		owner = {
+			NOT = { safety_regulations = good_safety }
+		}
 	}		
 }
 
@@ -33,16 +37,18 @@ machine_politics = {
 	icon = 4
 	
 	trigger = {
+		owner = { NOT = { vote_franschise = none_voting } }
 	}		
 }
 
-mafia = {
+mafia = { #never
 	active = yes
 
 	local_factory_output = -0.05
 	icon = 5	
 	
 	trigger = {
+		owner = { exists = no }
 	}		
 }
 
@@ -56,13 +62,7 @@ piracy = {
 	
 	trigger = {
 		is_coastal = yes
-		OR = {
-			continent = africa
-			continent = north_america
-			continent = south_america
-			is_core = HND
-			is_core = INO
-		}
+		is_overseas = yes
 	}		
 }
 
@@ -73,6 +73,7 @@ spoil_system = {
 	icon = 7	
 	
 	trigger = {
+		owner = { NOT = { vote_franschise = none_voting } }
 	}	
 }
 
@@ -86,13 +87,21 @@ terrorist_cells = {
 	}	
 }
 
-witch_hunts = {
+religious_persecussions = {
 	
 	active = yes
 	pop_militancy_modifier = 0.1
+	life_rating = -1
 	icon = 9	
 
 	trigger = {
+		any_pop = {
+			is_state_religion = no
+		}
+		owner = {
+			religious_policy = moralism
+			religious_minoritys = no_rights
+		}
 	}	
 }
 foreign_service_pressing = {
@@ -138,17 +147,4 @@ maronnage = {
 			type = slaves
 		}
 	}
-}
-
-unruley_nobility = {
-	active = yes
-
-	local_factory_output = -0.05
-	icon = 2	
-	
-	trigger = {
-		owner = {
-			NOT = { safety_regulation = no_safety }
-		}
-	}		
 }

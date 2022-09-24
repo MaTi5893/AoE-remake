@@ -183,7 +183,6 @@ promotion_chance =
 		country = { 
 			OR = {
 				slavery = yes_slavery 
-				slavery = freedom_of_womb
 				debt_law = serfdom
 			}
 		}
@@ -220,7 +219,6 @@ demotion_chance =
 		country = { 
 			OR = {
 				slavery = yes_slavery
-				slavery = freedom_of_womb
 				debt_law = serfdom
 			}
 		}
@@ -1597,22 +1595,6 @@ assimilation_chance = {
             has_culture_core = no
         }
     }
-#EQUALITY NATIONAL VALUE BONUS - 50% more base assimilation rate for nations with the equality national value. (0.000198 + base)(new rate = 0.000594)
-    group = {
-        modifier = {
-            factor = 5
-            country = {
-                nationalvalue = nv_equality
-            }
-        }
-        modifier = {
-            factor = -4.95
-            has_culture_core = no
-            country = {
-                nationalvalue = nv_equality
-            }
-        }
-    }
 
 }
 
@@ -1658,7 +1640,7 @@ conversion_chance =
 	
 	modifier = {
         factor = 5
-        nationalvalue = pm_clergyman
+        country = { nationalvalue = pm_clergyman }
     }
 
     modifier = {

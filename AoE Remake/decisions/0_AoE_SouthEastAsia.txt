@@ -113,4 +113,39 @@ political_decisions = {
 			set_country_flag = claimed_indochina
 		}
 	}
+	
+	form_dai_viet = {
+		picture = become_vietnam
+		potential = {
+			primary_culture = vietnamese
+			NOT = { exists = DAI }
+		}
+		allow = {
+			OR = {
+				NUG = { exists = no }
+				TRH = { exists = no }
+			}
+		}
+		effect = {
+			years_of_research = 1
+			all_core = {
+				add_core = DAI
+				remove_core = THIS
+			}
+			ANN_1383 = { add_core = DAI }
+			ANN_1374 = { add_core = DAI }
+			ANN_1371 = { add_core = DAI }
+			change_tag = DAI
+			random_owned = {
+				limit = {
+					owner = {
+						is_our_vassal = CHP
+					}
+				}
+				owner = {
+					CHP = { annex_to = THIS }
+				}
+			}
+		}
+	}
 }

@@ -456,6 +456,7 @@ country_event = {
 	option = {
 		name = "Send a linient treaty"
 		RUS_1469 = { add_core = THIS }
+		RUS_1079 = { add_core = THIS }
 		prestige = 5
 		relation = {
 			who = QNG
@@ -468,6 +469,7 @@ country_event = {
 	option = {
 		name = "Claim Some Qing Lands"
 		RUS_1469 = { add_core = THIS }
+		RUS_1079 = { add_core = THIS }
 		1469 = {
 			add_core = RUS
 		}
@@ -496,6 +498,7 @@ country_event = {
 	option = {
 		name = "Add in Manchuria as well!"
 		RUS_1469 = { add_core = THIS }
+		RUS_1079 = { add_core = THIS }
 		1081 = {
 			add_core = RUS
 		}

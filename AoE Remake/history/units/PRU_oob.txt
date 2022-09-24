@@ -13,12 +13,6 @@ ANH = {
     influence_value = 100
     military_access = yes
 }
-ATB = {
-    value = 225
-    level = 5
-    influence_value = 100
-    military_access = yes
-}
 BRA = {
     value = 225
     level = 5
@@ -236,12 +230,7 @@ army = {
         type = cuirassier
         home = 557
     }
-
-}
-
-army = {
-    name = "II. Armee-Korps"
-    location = 680
+	
     regiment = {
         name= "III. Artillery"
         type = artillery
@@ -301,12 +290,7 @@ army = {
         type = infantry
         home = 1743
     }
-
-}
-
-army = {
-    name = "III Army"
-    location = 695
+	
     regiment = {
         name= "1. Artillery"
         type = artillery

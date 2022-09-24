@@ -2,11 +2,12 @@ country_event = {
 	id = 170300
 	title = "Pirate Raid!"
 	desc = "EVTDESC170300"
-	picture = piracy
+	picture = piracy_golden_ended
 	
 	trigger = {
 		any_owned_province = {
 			has_crime = piracy
+			OR = { continent = north_america continent = south_america }
 		}
 	}
 	
@@ -28,6 +29,11 @@ country_event = {
 	
 	option = {
 		name = "Those damn rascals!"
+		random_owned = {
+			limit = {
+				has_crime = piracy
+			}
+		}
 		random_owned = {
 			limit = {
 				has_crime = piracy

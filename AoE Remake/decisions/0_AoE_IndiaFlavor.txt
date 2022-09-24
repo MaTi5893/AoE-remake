@@ -393,4 +393,27 @@ political_decisions = {
 			change_tag = HYD
 		}
 	}
+	
+	form_nagpur = {
+		picture = form_nagupr
+		potential = {
+			tag = GRH
+			NOT = { exists = NAG }
+		}
+		allow = {
+			OR = {
+				civilization_progress = 0.5
+				num_of_cities = 10
+			}
+		}
+		effect = {
+			all_core = {
+				add_core = NAG
+				remove_core = THIS
+			}
+			NAG_1277 = { add_core = NAG }
+			change_tag = NAG
+			1277 = { change_province_name = "Nagpur" }
+		}
+	}
 }

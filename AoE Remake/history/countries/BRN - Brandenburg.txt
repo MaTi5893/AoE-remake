@@ -7,8 +7,6 @@ nationalvalue = pm_militarist
 literacy = 0.7
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.25
 civilized = yes
-is_releasable_vassal = no
-
 
 #GreaterPowers = prestige
 prestige = 29
@@ -33,21 +31,13 @@ pensions = acceptable_pensions
 school_reforms = no_schools
 
 #New Reforms
-
-debt_law = debtors_prisons
 penal_system = capital_punishment
 
 citizens_rights = culture_voting_only
 
-centralization = unitary
-colonial_policy = no_colonies
-
 set_country_flag = protestant_country
 set_country_flag = support_habsburg_heir
 set_country_flag = hre_member
-
-decision = literacy_PRU
-decision = silesia_rename_german
 
 ruling_party = "Nobility Faction"
 upper_house = {
@@ -59,7 +49,7 @@ upper_house = {
     socialist = 0
     communist = 0
 }
-
+oob = "BRN_oob.txt"
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
@@ -96,5 +86,3 @@ consciousness = 2
 nonstate_consciousness = 1
 
 schools = army_tech_school
-
-oob = "BRN_oob.txt"

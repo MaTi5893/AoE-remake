@@ -103,12 +103,13 @@ country_event = {
 country_event = {
 	id = 1516003
 	title = "Charles III chosen as Emperor!"
-    desc = "EVTDESC1516003"
+    desc = " "
     picture = "austrian_empire"
     fire_only_once = yes
 	
 	trigger = {
 		year = 1711
+		NOT = { year = 1715 }
 		tag = SPA
 		exists = SPA
 		AUS = {

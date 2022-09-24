@@ -12,10 +12,10 @@ prestige = 5
 # Political reforms
 slavery = no_slavery
 upper_house_composition = party_appointed
-vote_franschise = none_voting
+vote_franschise = landed_voting
 public_meetings = yes_meeting
 press_rights = state_press
-trade_unions = no_trade_unions
+trade_unions = state_controlled
 voting_system = first_past_the_post
 political_parties = underground_parties
 
@@ -37,8 +37,7 @@ penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
 
-centralization = unitary
-colonial_policy = no_colonies
+centralization = legislative_parilment
 
 set_country_flag = catholic_country
 
