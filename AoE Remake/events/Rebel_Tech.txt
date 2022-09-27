@@ -1,0 +1,122 @@
+# 555080 - Rebel Armament 1725
+country_event = {
+	id = 555080
+	title = "EVTNAME555080"
+	desc = "EVTDESC555080"
+	picture = "Rebellion"
+	major = yes
+	
+	trigger = {	exists = yes
+		year = 1725
+		not = { has_global_flag = rebel_armament_1725 }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA555080"
+		set_global_flag = rebel_armament_1725
+		REB = {
+			activate_technology = post_napoleonic_thought 
+			activate_technology = flintlock_rifles 
+			activate_technology = bronze_muzzle_loaded_artillery 
+			activate_technology = military_staff_system 
+			activate_technology = army_command_principle 
+		}
+	}
+}
+
+# 555081 - Rebel Armament 1745
+country_event = {
+	id = 555081
+	title = "EVTNAME555081"
+	desc = "EVTDESC555081"
+	picture = "Rebellion"
+	major = yes
+	
+	trigger = {	exists = yes
+		year = 1745
+		has_global_flag = rebel_armament_1745
+		not = { has_global_flag = rebel_armament_1745 }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA555081"
+		set_global_flag = rebel_armament_1745
+		REB = {
+			activate_technology = strategic_mobility 
+			activate_technology = muzzle_loaded_rifles 
+			activate_technology = iron_muzzle_loaded_artillery 
+			activate_technology = military_plans 
+			activate_technology = army_professionalism 
+		}
+	}
+}
+
+# 555082 - Rebel Armament 1765
+country_event = {
+	id = 555082
+	title = "EVTNAME555082"
+	desc = "EVTDESC555082"
+	picture = "Rebellion"
+	major = yes
+	
+	trigger = {	exists = yes
+		year = 1765
+		has_global_flag = rebel_armament_1765
+		not = { has_global_flag = rebel_armament_1765 }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA555082"
+		set_global_flag = rebel_armament_1765
+		REB = {
+			activate_technology = point_defense_system 
+			activate_technology = breech_loaded_rifles 
+			activate_technology = iron_breech_loaded_artillery 
+			activate_technology = military_statistics 
+			activate_technology = army_decision_making 
+		}
+	}
+}
+
+# 555083 - Rebel Armament 1785
+country_event = {
+	id = 555083
+	title = "EVTNAME555083"
+	desc = "EVTDESC555083"
+	picture = "Rebellion"
+	major = yes
+	
+	trigger = {	exists = yes
+		year = 1785
+		has_global_flag = rebel_armament_1785
+		not = { has_global_flag = rebel_armament_1785 }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA555083"
+		set_global_flag = rebel_armament_1785
+		REB = {
+			activate_technology = deep_defense_system 
+			activate_technology = bolt_action_rifles 
+			activate_technology = steel_breech_loaded_artillery 
+			activate_technology = military_logistics 
+			activate_technology = army_risk_management 
+		}
+	}
+}

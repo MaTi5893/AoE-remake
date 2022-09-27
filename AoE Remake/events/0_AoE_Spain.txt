@@ -1,7 +1,7 @@
 country_event = {
     id = 1516001
-    title = "Giblartar regained!"
-    desc = "We have regained the straits of giblartar!"
+    title = "Gibraltar regained!"
+    desc = "We have regained the straits of Gibraltar!"
     picture = "harbour"
     fire_only_once = yes
 
@@ -66,12 +66,7 @@ country_event = {
                 sub_unit = { type = artillery value = current }
                 sub_unit = { type = artillery value = current }
 			}
-		}
-		any_pop = {
-			limit = {
-				culture = catalan
-			}
-			militancy = 7.5
+			ARN = { country_event = 1516016 }
 		}
 	}
 	
@@ -90,12 +85,12 @@ country_event = {
 				attacker_goal = { casus_belli = civil_war }
 				defender_goal = { casus_belli = civil_war }
 			}
-		}
-		any_pop = {
-			limit = {
-				culture = catalan
+			define_general = {
+            name = "Charles III Von Habsburg"
+            personality = defence_3.1
+            background = attack_3.1
 			}
-			militancy = 7.5
+			money = 100000
 		}
 		change_tag_no_core_switch = ARN
 	}
@@ -213,11 +208,12 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 30
 	}
 	
 	option = {
 		name = "Long live Charles III!"
+		SPC = { all_core = { add_core = SPA } }
 		random_owned = {
 			limit = {
 				owner = {
@@ -228,10 +224,9 @@ country_event = {
 				inherit = SPC
 			}
 		}
+		SPC = { all_core = { remove_core = SPC } }
 		prestige = 25
 		all_core = {
-			add_core = SPA
-			remove_core = SPC
 			remove_core = ARN
 		}
 		change_tag = SPA
@@ -243,6 +238,46 @@ country_event = {
 		capital = 487
 	}
 }
+country_event = {
+	id = 1516015
+	title = "Habsburg Supporters in Aragon Remnants"
+    desc = "EVTDESC1516015"
+    picture = "catalonia"
+    fire_only_once = yes
+	
+	trigger = {
+		exists = SPC
+		tag = SPC
+		any_owned_province = {
+			is_core = ARN
+				}
+		NOT = { year = 1710 }
+		NOT = { exists = ARN }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "We'll deal with them"
+		any_pop = {
+			limit = {
+				culture = catalan
+				}
+			militancy = 7.5
+			}
+		any_owned = {
+			limit = {
+				pop_majority_culture = catalan
+			}
+			add_province_modifier = {
+					name = nationalist_agitation
+					duration = 1175				
+				}
+			}
+		}
+	}
 #################################################
 ####Latin American Wars Of Independence Chain####
 #################################################
@@ -803,3 +838,20 @@ country_event = {
 		add_accepted_culture = spanish_american
 	}
 }
+#####Charles Event because sussy C++ vic2 code
+country_event = {
+	id = 1516016
+	title = "Charles III Arrives in Barcelona"
+	desc = "EVTDESC17416"
+	is_triggered_only = yes
+	
+	option = {
+			name = "Long live Charles III"
+			define_general = {
+            name = "Charles III Von Habsburg"
+            personality = defence_3.1
+            background = attack_3.1
+			}
+			money = 100000
+		}
+	}
