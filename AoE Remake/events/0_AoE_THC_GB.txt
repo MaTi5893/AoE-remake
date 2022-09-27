@@ -57,9 +57,15 @@ country_event = {
 			is_core = USA
 			}
 		}
-		check_variable = {
-			which = usa_rev
-			value = 6
+		OR = {
+			check_variable = {
+				which = usa_rev
+				value = 6
+			}
+			AND = {
+				year = 1776
+				ai = yes
+			}
 		}
 	}
 	
