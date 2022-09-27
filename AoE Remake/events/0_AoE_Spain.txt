@@ -66,12 +66,17 @@ country_event = {
                 sub_unit = { type = artillery value = current }
                 sub_unit = { type = artillery value = current }
 			}
-		}
+			define_general = {
+            name = "Charles III Von Habsburg"
+            personality = defence_3.1
+            background = attack_3.1
+			}
 		any_pop = {
 			limit = {
 				culture = catalan
 			}
 			militancy = 7.5
+			}
 		}
 	}
 	
@@ -89,6 +94,11 @@ country_event = {
 				target = SPC
 				attacker_goal = { casus_belli = civil_war }
 				defender_goal = { casus_belli = civil_war }
+			}
+			define_general = {
+            name = "Charles III Von Habsburg"
+            personality = defence_3.1
+            background = attack_3.1
 			}
 		}
 		any_pop = {
@@ -218,6 +228,7 @@ country_event = {
 	
 	option = {
 		name = "Long live Charles III!"
+		SPC = { all_core = { add_core = SPA } }
 		random_owned = {
 			limit = {
 				owner = {
@@ -228,10 +239,9 @@ country_event = {
 				inherit = SPC
 			}
 		}
+		SPC = { all_core = { remove_core = SPC } }
 		prestige = 25
 		all_core = {
-			add_core = SPA
-			remove_core = SPC
 			remove_core = ARN
 		}
 		change_tag = SPA
