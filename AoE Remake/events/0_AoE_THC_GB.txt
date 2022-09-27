@@ -17,7 +17,8 @@ country_event = {
 		any_owned_province = {
 			is_core = THC
 		}
-		OR = { primary_culture = british AND = { primary_culture = scottish NOT = { exists = ENL } } }
+		OR = { primary_culture = british AND = { primary_culture = scottish NOT = { exists = ENL } } 
+				primary_culture = french }
 	}
 
     option = {
@@ -50,22 +51,17 @@ country_event = {
 	news = yes
 	
 	trigger = {
-		primary_culture = british
+		OR = { primary_culture = british
+				primary_culture = french }
 		any_owned_province = {
 			OR = {
 			is_core = THC
 			is_core = USA
 			}
 		}
-		OR = {
-			check_variable = {
-				which = usa_rev
-				value = 6
-			}
-			AND = {
-				year = 1776
-				ai = yes
-			}
+		check_variable = {
+			which = usa_rev
+			value = 6
 		}
 	}
 	
@@ -121,7 +117,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		primary_culture = british
+		OR = { primary_culture = british
+				primary_culture = french }
+		any_owned_province = {
+				OR = {
+					is_core = THC
+					is_core = USA
+				}
+			}
 		has_global_flag = american_revolution_has_happened
 		USA = { exists = no }
 	}
@@ -129,13 +132,13 @@ country_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "Order has finally been restored"	
 		prestige = 20
 		add_accepted_culture = yankee
 		clr_global_flag = american_revolution_has_happened
-	}	
+	}
+	
 }
 
 country_event = {
@@ -146,7 +149,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		primary_culture = british
+		OR = { primary_culture = british
+				primary_culture = french }
 		has_global_flag = american_revolution_has_happened
 		NOT = { war_with = USA }
 		truce_with = USA
@@ -192,10 +196,14 @@ country_event = {
 			factor = 0.1
 			primary_culture = yankee
 		}
+		modifier = {
+			factor = 0.1
+			primary_culture = french
+		}
 	}
 	
 	option = {
-		name = "Intresting."
+		name = "Interesting."
 		any_pop = { limit = { location = { continent = north_america } } consciousness = 2 }
 		change_variable = {
 			which = usa_rev
