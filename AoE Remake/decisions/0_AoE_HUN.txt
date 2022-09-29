@@ -109,22 +109,7 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-            653 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
-            792 = {
-                OR = {
-                    owned_by = THIS
-                    owner = {
-                        vassal_of = THIS
-                    }
-                }
-            }
+            state_n_government = 1
         }
         effect = {
             set_country_flag = down_the_danube_aus

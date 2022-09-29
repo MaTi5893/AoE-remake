@@ -84,18 +84,11 @@ political_decisions = {
                 factor = 0
                 RUS = {
                     NOT = { war_with = SWE }
-					NOT = { war_exhaustion = 25 }
                 }
             }
 			modifier = {
                 factor = 0
-                RUS = {
-                    ai = no
-                }
-            }
-			modifier = {
-                factor = 0
-                NOT = { year = 1706 }
+                NOT = { month = 12 }
             }
         }
     }

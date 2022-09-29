@@ -59,9 +59,15 @@ country_event = {
 			is_core = USA
 			}
 		}
-		check_variable = {
-			which = usa_rev
-			value = 6
+		OR = {
+			check_variable = {
+				which = usa_rev
+				value = 6
+			}
+			AND = {
+			year = 1776
+			ai = yes
+			}
 		}
 	}
 	
@@ -135,7 +141,7 @@ country_event = {
 	option = {
 		name = "Order has finally been restored"	
 		prestige = 20
-		add_accepted_culture = yankee
+		random_owned = { limit = { owner = { primary_culture = british } } owner = { add_accepted_culture = yankee } }
 		clr_global_flag = american_revolution_has_happened
 	}
 	

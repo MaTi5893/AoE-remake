@@ -287,7 +287,16 @@ restore_austrian_empire = {
                 is_core = SLO
                 is_core = SLV
                 is_core = BOH
-                is_core = HUN
+				AND = {
+					is_core = HUN
+					THIS = { has_country_flag = down_the_danube_aus }
+				}
+				AND = {
+					is_core = HUN
+					NOT = { province_id = 792 }
+					NOT = { province_id = 653 }
+					THIS = { NOT = { has_country_flag = down_the_danube_aus } }
+				}
                 region = AUS_702
                 region = AUS_771
                 region = AUS_654
@@ -923,10 +932,6 @@ restore_holy_roman_empire = {
         }
         any_owned_province = {
             is_core = NNN
-        }
-        OR = {
-            NOT = { tag = ITA }
-            THIS = { NOT = { has_country_flag = accepts_italy } }
         }
         NOT = { has_country_modifier = neutrality }
         NOT = { in_sphere = THIS }

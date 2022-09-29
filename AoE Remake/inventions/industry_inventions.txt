@@ -1108,26 +1108,6 @@ artificial_fertilizers = {
         factory_goods_output = { fertilizer = 0.05 }
     }
 }
-
-nitroglycerin = {
-    limit = { inorganic_chemistry = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            military_statistics = 1
-        }
-        modifier = {
-            factor = 2
-            scientific_management = 1
-        }
-    }
-    effect = {
-        factory_goods_output = {
-            explosives = 0.02
-        }
-    }
-}
 chemical_wood_pulp_process = {
     limit = { inorganic_chemistry = 1 }
     chance = {
@@ -1185,23 +1165,6 @@ catalytic_fermentative_process = {
         # activate_building = dye_factory
     # }
 # }
-gaslights = {
-    limit = { inorganic_chemistry = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = patent
-        }
-        modifier = {
-            factor = 2
-            investment_banks = 1
-        }
-    }
-    effect = {
-        factory_throughput = 0.05
-    }
-}
 carbon_soil_enrichment = {
     limit = { organic_chemistry = 1 }
     chance = {

@@ -355,13 +355,13 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "multi_player_button"
-				position = { x = 9158 y = 429 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				position = { x = 1115 y = 645 }
+				quadTextureSprite ="GFX_mp_button"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
-				buttonText = "FE_MULTI_PLAYER"
-				buttonFont = "vic_22_black"
+				buttonText = "MP"
+				buttonFont = "vic_headline_red"
 			}
 
 			guiButtonType = {
