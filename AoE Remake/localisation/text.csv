@@ -576,7 +576,7 @@ liquor_distillery;Liquor Distillery;Distillerie;Schnapsbrennerei;;Destilería de 
 winery;Winery;Exploitation vinicole;Winzerei;;Bodega;;;;;;;;;
 cement_factory;Cement Factory;Cimenterie;Betonfabrik;;Fábrica de cemento;;;;;;;;;
 naval_base;Naval Base;Base navale;Marinestützpunkt;;Base naval;;;;;;;;;
-railroad;Railroad;Chemin de fer;Eisenbahn;;Ferrocarril;;;;;;;;;
+railroad;Infrastructure;Chemin de fer;Eisenbahn;;Ferrocarril;;;;;;;;;
 electric_gear_factory_desc;The olive's fruit, also called the olive, is of major agricultural importance in the Mediterranean region as the source of olive oil, it is one of the core ingredients in Mediterranean cuisine.;Les composants électriques sont produits ?l'aide de caoutchouc, de charbon et de fer. Les composants électriques sont nécessaires dans différents secteurs, notamment pour la production d'automobiles et d'avions.;Elektroteile werden mit Gummi, Kohle und Eisen produziert. Elektroteile sind wichtig für eine Reihe von Produkten, unter anderem für Automobile und Flugzeuge.;;Los componentes eléctricos se producen mediante caucho, hierro y carbón. Estos componentes se necesitan para muchas cosas, entre ellas, automóviles y aeroplanos.;;;;;;;;;
 machine_parts_factory_desc;If you hovered here to check what a tool is then go back to monke.;;;;;;;;;;;;;
 mild_climate;Mild Climate;Climat doux;Mildes Klima;;Clima suave;;;;;;;;;
@@ -2920,7 +2920,7 @@ CREATE_ADMIRAL_EFFECT;Gain new §Yadmiral§W.\n;Obtention d'un nouvel §Yamiral§W.\
 CREATE_GENERAL_EFFECT;Gain new §Ygeneral§W.\n;Obtention d'un nouveau §Ygénéral§W.\n;§YGeneral§W erhalten.\n;;Obtiene un nuevo §Ygeneral§W.\n;;;;;;;;;
 RESEARCH_POINTS_EFFECT;Gain §G$VALUE$§W Research Points.\n;Gain de §G$VALUE$§W points de recherche.\n;§G$VALUE$§W Forschungspunkte erhalten.\n;;Gana §G$VALUE$§W puntos de investigación.\n;;;;;;;;;
 LIMITED_BY;Limited by:\n;Limit?e) par :\n;Beschränkt durch:\n;;Limitado por:\n;;;;;;;;;
-INFRASTRUCTURE_EFFECT;$DIRECTION$ $VALUE$ level of railroad\n;$DIRECTION$ $VALUE$ niveau de chemin de fer\n;$DIRECTION$ $VALUE$ Eisenbahnstufen\n;;$DIRECTION$ $VALUE$ nivel de ferrocarril.\n;;;;;;;;;
+INFRASTRUCTURE_EFFECT;$DIRECTION$ $VALUE$ level of Infrastructure\n;$DIRECTION$ $VALUE$ niveau de chemin de fer\n;$DIRECTION$ $VALUE$ Eisenbahnstufen\n;;$DIRECTION$ $VALUE$ nivel de ferrocarril.\n;;;;;;;;;
 RENAME_PROV_EFF;$OLD$ renamed to §Y$NEW$§W.\n;$OLD$ renomm?e) §Y$NEW$§W.\n;$OLD$ umbenannt zu §Y$NEW$§W.\n;;$OLD$ cambia su nombre por §Y$NEW$§W.\n;;;;;;;;;
 RENAME_REGION_EFF;$OLD$ renamed to §Y$NEW$§W.\n;$OLD$ renomm?e) §Y$NEW$§W.\n;$OLD$ umbenannt zu §Y$NEW$§W.\n;;$OLD$ cambia su nombre por §Y$NEW$§W.\n;;;;;;;;;
 LITERACY_EFFECT;$DIRECTION$ $VALUE$ ;Education Quality\n;$DIRECTION$ $VALUE$ en alphabétisation\n;$DIRECTION$ $VALUE$ Alphabetisierung\n;;$DIRECTION$ $VALUE$ alfabetización.\n;;;;;;;;;
@@ -6033,7 +6033,7 @@ PV_CONTROLLER;Controller:;Contrôleur :;Kontrolleur:;;En poder de:;;;;;;;;;
 PV_SIEGE_PROGRESS;Occupation progress:;Progression de l'occupation :;Belagerungsfortschritt:;;Avance de ocupación:;;;;;;;;;
 PV_FORT;Fort;Fort;Fort;;Fuerte;;;;;;;;;
 PV_NAVALBASE;Naval base;Base navale;Marinestützpunkt;;Base naval;;;;;;;;;
-PV_RAILROAD;Railroad;Voie ferrée;Eisenbahn;;Ferrocarril;;;;;;;;;
+PV_RAILROAD;Infrastructure;Voie ferrée;Eisenbahn;;Ferrocarril;;;;;;;;;
 AVG_STATE_BONUS;Average in state:;Moyenne dans l'État :;Staatsdurchschnitt:;;Media estatal:;;;;;;;;;
 PW_SUPPLY_LIMIT;Supply Limit;Limite en ravitaillement;Versorgungslimit;;Límite de suministros;;;;;;;;;
 LEVEL_WITH;with;avec;mit;;con;;;;;;;;;

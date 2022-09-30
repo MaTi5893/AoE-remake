@@ -28,6 +28,15 @@ political_decisions = {
         }
         effect = {
             money = -100000
+			random_country = {
+				limit = {
+					capital_scope = { is_core = HND }
+					in_sphere = THIS
+					civilized = no
+					ai = yes
+				}
+				annex_to = THIS
+			}
             prestige = 10
             set_country_flag = east_india_company_funded
         }

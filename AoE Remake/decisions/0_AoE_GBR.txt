@@ -486,6 +486,7 @@ political_decisions = {
 		potential = {
 			primary_culture = british
 			NOT = { exists = ENL }
+			SCO = { exists = yes }
 		}
 		allow = {
 			SCO = { exists = yes }
@@ -548,6 +549,7 @@ political_decisions = {
 				which = usa_rev
 				value = 2
 			}
+			NOT = { exists = USA }
 		}
 		allow = {
 			war = no

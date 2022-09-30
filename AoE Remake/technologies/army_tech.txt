@@ -223,6 +223,7 @@ muzzle_loaded_rifles = {
     unciv_military = yes
     activate_unit = engineer
     combat_width = 2
+	mobilisation_size = 0.01
 
     ai_chance = {
         factor = 4
@@ -236,6 +237,7 @@ breech_loaded_rifles = {
     activate_unit = guard
     combat_width = 4
     unciv_military = yes
+	mobilisation_size = 0.01
 
 	army_base = {
     default_organisation = 5

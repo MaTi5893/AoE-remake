@@ -91,7 +91,7 @@ late_enlightenment_philosophy = {
     cost = 3600
 
 
-    increase_research = 0.25
+    increase_research = 0.5
 
     ai_chance = {
         factor = 90
@@ -102,7 +102,7 @@ idealism = {
     year = 1705
     cost = 7200
 
-    increase_research = 0.25
+    increase_research = 0.5
     ai_chance = {
         factor = 90
     }
@@ -113,7 +113,7 @@ empiricism = {
     year = 1715
     cost = 10800
 
-    increase_research = 0.75
+    increase_research = 1
     ai_chance = {
         factor = 90
     }

@@ -10,6 +10,17 @@ ai_boost_mil = {
     }
     core_pop_militancy_modifier = -0.2
 }
+buff_nation = {
+	trigger = {
+		OR = {
+			tag = MAH
+			tag = PRU
+		}
+		ai = yes
+	}
+	mobilisation_size = 0.15
+	tax_efficiency = 0.2
+}
 ai_revolutionary_buff = {
 	trigger = {
 		ai = yes

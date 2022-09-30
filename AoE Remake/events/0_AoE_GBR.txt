@@ -1359,7 +1359,7 @@ country_event = {
     id = 171018
     title = "Company Rule In India"
     desc = "EVTDESC171018"
-    picture = william_of_orange
+    picture = eng_india
     is_triggered_only = yes
 	
 	option = {
@@ -1372,6 +1372,15 @@ country_event = {
 				name = colonial_exploitation
 				duration = 365
 			}
+		}
+		random_country = {
+			limit = {
+				capital_scope = { is_core = HND }
+				in_sphere = THIS
+				civilized = no
+				ai = yes
+			}
+			annex_to = THIS
 		}
 		casus_belli = {
 			target = JAP

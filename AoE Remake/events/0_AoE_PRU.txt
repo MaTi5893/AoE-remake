@@ -82,9 +82,9 @@ country_event = {
 }
 country_event = {
     id = 1740005
-    title = "Frederick land reforms"
+    title = "Frederick's Land Reforms"
     desc = "EVTDESC1740005"
-    picture = fredrick_grosse
+    picture = pru_land_reform
     fire_only_once = yes
 
     trigger = {
@@ -93,7 +93,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 6
     }
 
     option = {
