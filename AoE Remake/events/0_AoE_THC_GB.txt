@@ -48,6 +48,7 @@ country_event = {
 	title = "The American Revolution"
 	desc = "EVTDESC176402"
 	major = yes
+	fire_only_once = yes
 	news = yes
 	
 	trigger = {
@@ -58,6 +59,7 @@ country_event = {
 			is_core = THC
 			is_core = USA
 			}
+			owns = 220
 		}
 		OR = {
 			check_variable = {
@@ -67,6 +69,12 @@ country_event = {
 			AND = {
 			year = 1776
 			ai = yes
+			}
+			
+			AND = {
+				year = 1769
+				ai = yes
+				primary_culture = french
 			}
 		}
 	}
@@ -88,7 +96,7 @@ country_event = {
 		}
 		USA = {
 			capital = 223
-			government = colonial_company
+			government = democracy
 			ruling_party_ideology = conservative
 		}
 		war = {

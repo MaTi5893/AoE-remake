@@ -334,14 +334,12 @@ political_reforms = {
 
     upper_house_composition = { #Head of State
         next_step_only = yes
-        party_appointed = { #executive head
+        party_appointed = { #Independent Executive
             rules = { rich_only = yes }
             ruling_party_support = 0.05
         }
         appointed = { #house of lords
             rules = { rich_only = yes }
-            rich_vote = 5.00
-            middle_vote = 0.10
             global_immigrant_attract = 0.01
         }
         state_equal_weight = { #house of commons
@@ -494,13 +492,6 @@ political_reforms = {
             poor_savings_modifier = -0.5
             global_immigrant_attract = -0.1
 			mobilisation_size = 0.02
-            allow = {
-                OR = {
-                    has_country_flag = clean_up_colonial_government
-                    has_country_flag = absolute_monarchy_gov
-                    has_country_flag = semi_constitutional_monarchy_gov
-                }
-            }
         }
         peonage = {
             education_efficiency_modifier = -0.03
@@ -509,18 +500,19 @@ political_reforms = {
             suppression_points_modifier = 0.1
             poor_everyday_needs = 0.1
             poor_savings_modifier = -0.25
-            allow = {
-				has_country_flag = abolished_special_priv
-				has_country_flag = abolished_titles_of_nobility
-            }
+			allow = {
+				NOT = { estate_affiliation = nobility_army }
+				NOT = { estate_affiliation = nobility_church }
+				NOT = { estate_affiliation = nobility_gentry }
+				AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = party_appointed } }
+				AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = appointed } }
+			}
         }
 
         abolished = {
             administrative_efficiency_modifier = 0.05
             tariff_efficiency_modifier = 0.05
             administrative_multiplier = 2
-            allow = {
-            }
         }
     }
 

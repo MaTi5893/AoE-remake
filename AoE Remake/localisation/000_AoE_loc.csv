@@ -25,18 +25,18 @@ closed_borders;Closed Borders;;;;;;;;;;;;;
 closed_borders_l;Closed Borders;;;;;;;;;;;;;
 closed_borders_desc;People aren't allowed in or out of our country. The effectiveness of this policy is based on our administration and military spending. Some people might still emigrate illegally, either by crossing the border or hiding in ships. The veil of secrecy that shrouds our country makes other nations mistrust us.;;;;;;;;;;;;;
 movement_closed_borders;Movement for the Protection of the Country;;;;;;;;;;;;;
-quota_immigration;Immigration Quotas;;;;;;;;;;;;;
-quota_immigration_l;Immigration Quotas;;;;;;;;;;;;;
-quota_immigration_desc;Foreign nationals are allowed to immigrate to our country, as long as they have a literacy above 60% and aren't citizens of countries that were recently or are currently at war with our country. There are no restrictions for emigration.;;;;;;;;;;;;;
-movement_quota_immigration;Movement for Immigration Quotas;;;;;;;;;;;;;
+quota_lmmigration;Immigration Quotas;;;;;;;;;;;;;
+quota_lmmigration_l;Immigration Quotas;;;;;;;;;;;;;
+quota_lmmigration_desc;Foreign nationals are allowed to immigrate to our country, as long as they have a literacy above 60% and aren't citizens of countries that were recently or are currently at war with our country. There are no restrictions for emigration.;;;;;;;;;;;;;
+movement_quota_lmmigration;Movement for Immigration Quotas;;;;;;;;;;;;;
 open_borders;Open Borders;;;;;;;;;;;;;
 open_borders_l;Open Borders;;;;;;;;;;;;;
 open_borders_desc;Our country is completly open for immigration and emigration, either by deliberate choice or because of the lack of appropriate border controls.;;;;;;;;;;;;;
 movement_open_borders;Pro Immigration Movement;;;;;;;;;;;;;
-child_labor_illegal;Child Labor Illegal;;;;;;;;;;;;;
-child_labor_illegal_l;Child Labor Illegal;;;;;;;;;;;;;
-child_labor_illegal_desc;Child Labor is viewed as immoral and is illegal.;;;;;;;;;;;;;
-movement_child_labor_child_labor_illegal;Campaign for the Legalization of Child Labor;;;;;;;;;;;;;
+child_labor_lllegal;Child Labor Illegal;;;;;;;;;;;;;
+child_labor_lllegal_l;Child Labor Illegal;;;;;;;;;;;;;
+child_labor_lllegal_desc;Child Labor is viewed as immoral and is illegal.;;;;;;;;;;;;;
+movement_child_labor_child_labor_lllegal;Campaign for the Legalization of Child Labor;;;;;;;;;;;;;
 child_labor_restricted;Child Labor Restricted;;;;;;;;;;;;;
 child_labor_restricted_l;Child Labor Restricted;;;;;;;;;;;;;
 child_labor_restricted_desc;Children cannot work in certain dangerous professions.;Restricted;Restricted;;Restricted;;;;;;;;;
@@ -45,7 +45,7 @@ child_labor_legal;Child Labor Legal;;;;;;;;;;;;;
 child_labor_legal_l;Child Labor Legal;;;;;;;;;;;;;
 child_labor_legal_desc;No child labor regulation exists.;;;;;;;;;;;;;
 child_labor;Child Labor;;;;;;;;;;;;;
-movement_child_labor_illegal;Child Labor Abolition League;;;;;;;;;;;;;
+movement_child_labor_lllegal;Child Labor Abolition League;;;;;;;;;;;;;
 debt_law;Debt Law;;;;;;;;;;;;;
 serfdom;Serfdom;;;;;;;;;;;;;
 serfdom_l;Serfdom;;;;;;;;;;;;;
@@ -76,7 +76,7 @@ movement_colonial_transportation;Campaign for the Abolition of Capital Punishmen
 incarceration;Incarceration;;;;;;;;;;;;;
 incarceration_l;Incarceration;;;;;;;;;;;;;
 incarceration_desc;Convicts are imprisoned with the intent of removing undesirables from society, though they aren't used for hard manual labor most of the times.\n§YThis reform is neutral - no effects.§!;;;;;;;;;;;;;
-movement_incarceration;Movement for the Abolition of Penal Colonies;;;;;;;;;;;;;
+movement_lncarceration;Movement for the Abolition of Penal Colonies;;;;;;;;;;;;;
 rehabilitation;Rehabilitation;;;;;;;;;;;;;
 rehabilitation_l;Rehabilitation;;;;;;;;;;;;;
 rehabilitation_desc;Convicts are imprisoned with the intent of reforming them and reintroducing them into society.;;;;;;;;;;;;;
@@ -343,9 +343,9 @@ populist_welfare_1;Philospher Court;;;;;;;;;;;;;
 populist_welfare_desc;The Court is full of most influential and best Philosphers from our country to help us guide the nation.;;;;;;;;;;;;;
 welfare_state;Revolutionary Thought;;;;;;;;;;;;;
 welfare_state_1;Revolutionary Thought;;;;;;;;;;;;;
-no_state_interference;Despotic Dominance;;;;;;;;;;;;;
-no_state_interference_1;Despotic Dominance;;;;;;;;;;;;;
-no_state_interference_desc;Subjects are dominated by our Head of State;;;;;;;;;;;;;
+no_state_lnterference;Despotic Dominance;;;;;;;;;;;;;
+no_state_lnterference_1;Despotic Dominance;;;;;;;;;;;;;
+no_state_lnterference_desc;Subjects are dominated by our Head of State;;;;;;;;;;;;;
 colonial_spending_policy;Colonial Subjects;;;;;;;;;;;;;
 colonial_spending_policy_1;Colonial Subjects;;;;;;;;;;;;;
 pogonya_za_zapadom;Pogonya Za Zapodom!;;;;;;;;;;;;;
@@ -353,31 +353,30 @@ natral_talent;Naturally Talented;;;;;;;;;;;;;
 mercantilism_1;Mercantilism;;;;;;;;;;;;;
 trade_unions;§YExecutive Power§!;;;;;;;;;;;;;
 no_trade_unions;No Council;;;;;;;;;;;;;
+no_trade_unions_l;No Council;;;;;;;;;;;;;
 no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YIncreases §PAbsolutist§Y Ideology in Pops§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!;;;;;;;;;;;;;
 state_controlled;Advisor Council;;;;;;;;;;;;;
+state_controlled_l;Advisor Council;;;;;;;;;;;;;
 state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YCan Appoint And Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G10§Y years.§!;;;;;;;;;;;;;
 non_socialist;Delegated Ministers;;;;;;;;;;;;;
+non_socialist_l;Delegated Ministers;;;;;;;;;;;;;
 non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YCan Appoint And Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G7.5§Y years.§!;;;;;;;;;;;;;
 all_trade_unions;Mandatory Cabinet;;;;;;;;;;;;;
+all_trade_unions_l;Mandatory Cabinet;;;;;;;;;;;;;
 all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the executive powers.\n§YLead Ministers Are Appointed Based On Our Upperhouse. Can Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G5§Y years.\nThis reform reduces your Plead Estates For War Support §RCooldown§Y to §G3§Y years.§!;;;;;;;;;;;;;
 MAY_GAS_ATTACK;Unlocks Napoleonic Warfare;;;;;;;;;;;;;
 MAY_GAS_DEFEND;Can defend against Napoleonic Warfare;;;;;;;;;;;;;
 gas_attack;Napoleonic Warfare;;;;;;;;;;;;;
-no_vaccination;No Vaccination;;;;;;;;;;;;;
-no_vaccination_desc;No Vaccination;;;;;;;;;;;;;
-court_vaccination;Court Vaccination;;;;;;;;;;;;;
-court_vaccination_desc;Our Entire Court is Vaccinated;;;;;;;;;;;;;
-military_vaccination;Military Vaccine Stations;;;;;;;;;;;;;
-military_vaccination_desc;The Military Uses a Vaccine Station;;;;;;;;;;;;;
-public_vaccination;Public Vaccine Stations;;;;;;;;;;;;;
-public_vaccination_desc;Public Vaccine Stations are available in most of our major citys;;;;;;;;;;;;;
 ukrainian;Ruthenian;;;;;;;;;;;;;
 promotion_laws;Career Progress;;;;;;;;;;;;;
 privlage_benefits;Privilege;;;;;;;;;;;;
+privlage_benefits_l;Privilege;;;;;;;;;;;;
 privlage_benefits_desc;The Rich Class and Prominent Families can use existing laws to justify taking over government positions over competent individuals;;;;;;;;;;;;;
 nepotism;Nepotism;;;;;;;;;;;;;
+nepotism_l;Nepotism;;;;;;;;;;;;;
 nepotism_desc;A handfull of most influential families are in controll of our most important government positions.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential and Church Influence beyond Very Influential. Monarchies require getting the Rights and Liberty tech first.§W\n;;;;;;;;;;;;;
 skill_and_merit_based;Skill and Merit;;;;;;;;;;;;;
+skill_and_merit_based_l;Skill and Merit;;;;;;;;;;;;;
 skill_and_merit_based_desc;Individuals are given government positions based on their accomplishments, not titles.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential, Church Influence beyond Very Influential and increase Beaurocratic Influence above Slightly Influential.  Monarchies require getting the Law and Jurisprudence tech first.§W\n;;;;;;;;;;;;;
 social_reforms;Estate Influence & Law;;;;;;;;;;;;;
 jacobite_rebels_name;Jacobite Pretender Rebels;;;;;;;;;;;;;
@@ -388,8 +387,6 @@ WORLD_WARS_ENABLE_DESC;Continental wars can now become Coalition wars;;;;;;;;;;;
 WORLD_WARS_ENABLED_DESC;Continental wars are enabled;;;;;;;;;;;;;
 WORLD_WARS_DISABLED_DESC;Continental wars are NOT enabled;;;;;;;;;;;;;
 military_science;Military Science & Cavalry;;;;;;;;;;;;;
-totalitarianism;Despotism;;;;;;;;;;;;;
-totalitarianism_desc;Our whole state is controlled by a single person.;;;;;;;;;;;;;
 slave_rebels_title;Slave Rebels;;;;;;;;;;;;;
 slave_rebels_name;Slave Rebels;;;;;;;;;;;;;
 slave_rebels_desc;Tired of serving their masters, Slave Rebels will attempt to end the institution cousing their suffering under all cost.;;;;;;;;;;;;;
@@ -430,14 +427,13 @@ poniatowski_rule;Stanislaw Poniatowski won the Royal election of 1764;;;;;;;;;;;
 centralization;§YParliament§!;;;;;;;;;;;;;
 no_parliment;No Parliament;;;;;;;;;;;;;
 no_parliment_desc;We Have No Parliament;;;;;;;;;;;;;
+no_parliment_l;No Parliament;;;;;;;;;;;;;
 admin_parliment;Administrative Parliament;;;;;;;;;;;;;
 admin_parliment_desc;Our parliament serves our Leader in maneging the administrative part of our cuntry. Real life example of such parliaments is The Russian Senate created by Peter The Great.\n§YAllows using the Bureaucrat Promotion National Focus in states with non-accepted pops.§!;;;;;;;;;;;;;
+admin_parliment_l;Administrative Parliament;;;;;;;;;;;;;
 legislative_parliment;Legislative Parliament;;;;;;;;;;;;;
 legislative_parliment_desc;Our parliament creates legislation and manages most of the important functions in our country. Real life example of such Parliaments is The English Parliament.\n§YAllows Forcing through reforms every §G2 years§Y based on current rulling party and if it has at least 17% seats in the Upper House.\nAppointing Ministers Does NOT Change Faction Influence.\nSame Minister Can Only Serve 2 Consecutive Terms In Office§!;;;;;;;;;;;;;
-national_parliment;National Parliament;;;;;;;;;;;;;
-national_parliment_desc;Our parliament creates legislation and manages the entierty of our foreign policy, without proper separation of powers. Real life example of such Parliaments is The Polish Sejm.\n§YAllows Forcing through reforms every §G4 years§Y based on current rulling party and if it has at least 17% seats in the Upper House.\nAppointing Ministers Does NOT Change Faction Influence.\nSame Minister Can Only Serve 2 Consecutive Terms In Office§!;;;;;;;;;;;;;
-theocratic_council;Theocratic Council;;;;;;;;;;;;;
-theocratic_council_desc;A Theocratic Council Aids Our Leader In Keeping The Country Holy.;;;;;;;;;;;;;
+legislative_parliment_l;Legislative Parliament;;;;;;;;;;;;;
 army_tech_school;Stratocratic Leadership;;;;;;;;;;;;;
 MODIFIER_PENSION_LEVEL;§YPublic Maintenance Cost§!;;;;;;;;;;;;;
 SOCIAL_DESC2;The Public Maintenance spending budget goes towards helping out your pops gain more money.  The amount of money to distribute depends on your §Ycountry administrative efficiency§!.\n§YPublic Maintenance Cost is essentialy reskinned pensions.§Y;;;;;;;;;;;;;
@@ -463,19 +459,26 @@ COMBAT_GAS;Extensive artillery bombardment usage of corps system and supirior ta
 upper_house_composition;§YHead Of State§!;;;;;;;;;;;x
 appointed;Parliamentary Constraints;;;;;;;;;;;x
 appointed_desc;Our Head Of State is accountable to the Parliment, but still retains influence on our politics;;;;;;;;;;;x
+appointed_l;Parliamentary Constraints;;;;;;;;;;;x
 party_appointed;Independent Executive;;;;;;;;;;;x
 party_appointed_desc;Executive head is assigned absolute control over legislative process;;;;;;;;;;;x
+party_appointed_l;Independent Executive;;;;;;;;;;;x
 state_equal_weight;Figurehead;;;;;;;;;;;x
 state_equal_weight_desc;Our Head of State is accountable to the parliament and the few powers he possesses require a countersignature from our cabinet.;;;;;;;;;;;x
+state_equal_weight_l;Figurehead;;;;;;;;;;;x
 political_parties;§YJudicial Appointment§!;;;;;;;;;;;x
 underground_parties;Decree;;;;;;;;;;;x
 underground_parties_desc;Our Head of State may issue decrees which act as an official sentance.;;;;;;;;;;;x
+underground_parties_l;Decree;;;;;;;;;;;x
 harassment;Cabinet Approval;;;;;;;;;;;x
 harassment_desc;Judicial appointment requiers a countersignature from our cabinet.;;;;;;;;;;;x
+harassment_l;Cabinet Approval;;;;;;;;;;;x
 gerrymandering;Legislative Approval;;;;;;;;;;;x
 gerrymandering;Judicial appointment requiers a countersignature from our Legislative Branch.;;;;;;;;;;;x
+gerrymandering_l;Legislative Approval;;;;;;;;;;;x
 non_secret_ballots;Internal Selection;;;;;;;;;;;x
 non_secret_ballots_desc;Judicial appointment is done internally.;;;;;;;;;;;x
+non_secret_ballots_l;Internal Selection;;;;;;;;;;;x
 voting_system;§YVoting System§!;;;;;;;;;;;x
 vote_franschise;§YVote Franchise§!;;;;;;;;;;;x
 witch_hunts;Witch Hunts;;;;;;;;;x;;;;
@@ -487,37 +490,51 @@ fugative_peasants;Fugative Peasants;;;;;;;;;;;x
 desc_fugative_peasants;Our Peasants attempt to escape their misrable life of serfdom.;;;;;;;;;;;x
 absolutism;§PAbsolutist Rule§!;;;;;;;;;;;x
 no_absolutism;§PNo Absolutism§!;;;;;;;;;;;x
+no_absolutism_l;§PNo Absolutism§!;;;;;;;;;;;x
 yes_absolutism;§PAbsolutism§!;;;;;;;;;;;x
+yes_absolutism_l;§PAbsolutism§!;;;;;;;;;;;x
 set_up_advisor_court_title;Set up an Advisor Council;;;;;;;;;;;x
 set_up_advisor_court_desc;It has become increasingly clear that we cannot rule alone, we should set up a proper advisor council to help us manage state affairs.\n§RThis decision will get rid of the §PAbsolutism reform!§!;;;;;;;;;;;x
 piracy;Piracy;;;;;;;;;x;;;;
 desc_piracy;Piracy is an act of robbery or criminal violence by ship or boat-borne attackers upon another ship or a coastal area, typically with the goal of stealing cargo and other valuable goods. Those who conduct acts of piracy are called pirates, while the dedicated ships that pirates use are called pirate ships.;;;;;;;;;x;;;;
 recompensation_period;Recompensation Period;;;;;;;;;x;;;;
+recompensation_period_l;Recompensation Period;;;;;;;;;x;;;;
 recompensation_period_desc;Recompensation Period is a stage where the state pays the landowners and aristocrats for their losses due to the abolition of slavery. At this stage we are only enforcing the abolition and many landowners.;;;;;;;;;;;x
 abolished;Abolished;;;;;;;;;x;;;;
+abolished_l;Abolished;;;;;;;;;x;;;;
 abolished_desc;We have abolished Serfdom;;;;;;;;;x;;;;
 estate_affiliation;Estate Affiliation;;;;;;;;;x;;;;
 estate_affiliation_desc;This Faction is comprised of the following estates
 absolutist;§PAbsolutist§!;;;;;;;;;x;;;;
+absolutist_l;§PAbsolutist§!;;;;;;;;;x;;;;
 absolutist_desc;This faction is comprised of people loyal to the sovereign and will prevent any faction from being very influential besides bureaucracy.;;;;;;;;;x;;;;
 nobility_church;§BNobles§!,§BChurch§!;;;;;;;;;x;;;;
+nobility_church_l;§BNobles§!,§BChurch§!;;;;;;;;;x;;;;
 nobility_church_desc;This faction is comprised of Nobles and Church Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 nobility_gentry;§BNobles§!,§GGentry§!;;;;;;;;;x;;;;
+nobility_gentry_l;§BNobles§!,§GGentry§!;;;;;;;;;x;;;;
 nobility_gentry_desc;This faction is comprised of Nobles and Gentry and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 gentry_burghers;§GGentry§!,§YBurghers§!;;;;;;;;;x;;;;
+gentry_burghers_l;§GGentry§!,§YBurghers§!;;;;;;;;;x;;;;
 gentry_burghers_desc;This faction is comprised of Gentry and Burghers and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 no_affiliation;No Affiliation;;;;;;;;;x;;;;
+no_affiliation_l;No Affiliation;;;;;;;;;x;;;;
 no_affiliation_desc; ;;;;;;;;;x;;;;
 nobility_army;§BNobles§!,§RArmy§!;;;;;;;;;x;;;;
+nobility_army_l;§BNobles§!,§RArmy§!;;;;;;;;;x;;;;
 nobility_army_desc;This faction is comprised of Nobles and Army Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 gentry_army;§GGentry§!,§RArmy§!;;;;;;;;;x;;;;
+gentry_army_l;§GGentry§!,§RArmy§!;;;;;;;;;x;;;;
 gentry_army_desc;This faction is comprised of Gentry and Church Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 church_army;§BChurch§!,§RArmy§!;;;;;;;;;x;;;;
+church_army_l;§BChurch§!,§RArmy§!;;;;;;;;;x;;;;
 church_army_desc;This faction is comprised of Church Officials and Army Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
 church_and_state;Church And State;;;;;;;;;x;;;;
 state_religion;State Religion;;;;;;;;;x;;;;
+state_religion_l;State Religion;;;;;;;;;x;;;;
 state_religion_desc;Our State has a official religion and the church is not seperated from it.;;;;;;;;;x;;;;
 church_and_state_seperation;Separated;;;;;;;;;x;;;;
+hurch_and_state_seperation_l;Separated;;;;;;;;;x;;;;
 church_and_state_seperation_desc;Church and state are seperated.\n§YThe Church estate will be §Rdisabled§Y.§!;;;;;;;;;x;;;;
 religious_minoritys;Religious Minorities;;;;;;;;;x;;;;
 no_rights;No Rights;;;;;;;;;x;;;;

@@ -8,7 +8,10 @@ political_decisions = {
         }
         allow = {
 			war = no
-            civilization_progress = 0.75
+			OR = {
+				civilization_progress = 0.75
+				civilized = yes
+			}
             owns = 1291
         }
         effect = {

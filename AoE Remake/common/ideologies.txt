@@ -85,18 +85,19 @@ fascist_group = { #fascist_group = absolutist faction
 			}
         }
         add_social_reform = {
-            base = 1
+            base = 0
 			modifier = {
 				factor = 0.17
 				has_country_flag = executive_activated
 			}
         }
-        remove_social_reform = {
+        remove_social_reform = { #
             base = 1
 			modifier = {
 				factor = 0.17
 				has_country_flag = executive_activated
 			}
+			
         }
 
         add_military_reform = {
