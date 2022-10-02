@@ -115,7 +115,7 @@ country_event = {
 	option = {
 		name = "We'll take what's rightfully ours!"
 		random_list = {
-			50 = { badboy = 28 AUS = { country_event = 174511 } }
+			50 = { badboy = 25 AUS = { country_event = 174511 } }
 			50 = {
 				badboy = 25
 				casus_belli = {
@@ -142,7 +142,7 @@ country_event = {
 						}
 					}
 				}
-			}
+			}	
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -214,13 +214,15 @@ country_event = {
 		tag = ARN
 		OR = {
 			SPC = { exists = no }
-			487 = {
+			AND = { 487 = {
 				controlled_by = THIS
-			}
+				}
+				479 = { NOT = { controlled_by = SPC }
+				}
 		}
 	}
 	mean_time_to_happen = {
-		days = 30
+		days = 10
 	}
 	
 	option = {
@@ -248,6 +250,18 @@ country_event = {
 		add_accepted_culture = galician
 		add_accepted_culture = spanish_american
 		capital = 487
+		AUS = {
+			diplomatic_influence = {
+				who = SPA
+				value = 300
+				}
+			}
+		create_alliance = AUS
+		relation = {
+            who = AUS
+            value = 200
+			}
+		
 	}
 }
 country_event = {
