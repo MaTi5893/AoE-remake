@@ -134,6 +134,7 @@ political_decisions = {
 			exists = yes
 			government = absolute_monarchy
 			NOT = { absolutism = yes_absolutism }
+			
 		}
 		allow = {
 			upper_house_composition = party_appointed 
@@ -142,6 +143,10 @@ political_decisions = {
 		}
 		effect = {
 			political_reform = yes_absolutism
+			add_country_modifier = {
+				name = absolutism_cooldown
+				duration = 5475
+			}
 			any_pop = {
 				consciousness = 3
 				militancy = 1
@@ -371,6 +376,7 @@ political_decisions = {
 			trade_unions = no_trade_unions
 			government = absolute_monarchy
 			exists = yes
+			NOT = { has_country_modifier = absolutism_cooldown }
 		}
 		allow = {
 			exists = yes
