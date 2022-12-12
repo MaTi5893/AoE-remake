@@ -347,17 +347,15 @@ political_decisions = {
             }
             war = no
 			OR = {
-				AND = {
-					average_militancy = 4
-					political_thought_7 = 1
-				}
-				FRA = {
-					exists = yes
-					government = proletarian_dictatorship
-				}
+				political_thought_7 = 1
+					FRA = {
+						exists = yes
+						government = proletarian_dictatorship
+					}
 			}
         }
         effect = {
+		add_accepted_culture = irish
 			random_owned = {
 				limit = {
 					owner = {
@@ -376,7 +374,6 @@ political_decisions = {
             any_pop = {
                 militancy = -1
             }
-            add_accepted_culture = irish
         }
 		ai_will_do = {
 			factor = 1
