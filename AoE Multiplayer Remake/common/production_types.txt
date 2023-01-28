@@ -909,6 +909,13 @@ coffee_plantation = {
     farm = yes
 }
 
+sugar_plantation = {
+    template = RGO_template_farmers
+    output_goods = sugar
+    value = 1.5
+    farm = yes
+}
+
 cotton_plantation = {
     template = RGO_template_farmers
     output_goods = cotton
@@ -979,6 +986,13 @@ rubber_lodge = {
     farm = yes
 }
 
+fur_trapping_lodge = {
+    template = RGO_template_labourers
+    output_goods = fur
+    value = 7
+    farm = yes
+}
+
 sheep_ranch = {
     template = RGO_template_farmers
     output_goods = wool
@@ -1007,9 +1021,23 @@ tea_plantation = {
     farm = yes
 }
 
+spice_plantation = {
+    template = RGO_template_farmers
+    output_goods = spices
+    value = 1.75
+    farm = yes
+}
+
 timber_lodge = {
     template = RGO_template_labourers
     output_goods = timber
+    value = 16
+    farm = yes
+}
+
+hardwood_lodge = {
+    template = RGO_template_labourers
+    output_goods = hardwood
     value = 16
     farm = yes
 }
