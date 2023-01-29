@@ -347,7 +347,7 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 194550
+        size = 184550
     }
 
     clergymen = {
@@ -385,6 +385,11 @@
         religion = jewish
         size = 495
     }
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 10000
+	}
 }
 #Sankt Polten (88000/22000 POPS)
 620 = {
@@ -485,8 +490,13 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 133900
+        size = 128900
     }
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 5000
+	}
 }
 #Odenburg Region (196000) #see Hungary.txt for balance of region
 #under the rule of Austria in 1836

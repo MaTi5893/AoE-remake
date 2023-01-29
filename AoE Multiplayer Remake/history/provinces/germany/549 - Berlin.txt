@@ -27,6 +27,11 @@ state_building = {
     building = paper_mill
     upgrade = yes
 }
+state_building = {
+	level = 2
+	building = canned_food_factory
+	upgrade = yes
+}
 1756.01.01 = {
 owner = PRU
 controller = PRU

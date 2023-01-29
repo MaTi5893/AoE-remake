@@ -313,7 +313,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 46125
+        size = 36125
     }
 
     artisans = {
@@ -321,6 +321,11 @@
         religion = jewish
         size = 200
     }
+	craftsmen = {
+		culture = north_german
+		religion = protestant
+		size = 10000
+	}
 }
 #Silesia Region (2568000) #see Czechia.txt and Germany.txt for balance of region
 #under the rule of Prussia in 1836
@@ -365,7 +370,7 @@
     craftsmen = {
         culture = north_german
         religion = protestant
-        size = 3500
+        size = 15000
     }
 
     artisans = {
@@ -389,7 +394,7 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 147280
+        size = 134780
     }
 
     clergymen = {
