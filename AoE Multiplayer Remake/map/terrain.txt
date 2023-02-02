@@ -82,6 +82,20 @@ categories =  {
         min_build_railroad = 3
     }
 
+    gibraltar = {
+        movement_cost = 1.5
+        defence = 3
+        color = { 117 108 119 }
+        farm_rgo_size = 0
+        farm_rgo_eff = -0.25
+        mine_rgo_size = 0.0
+        mine_rgo_eff = 0.0
+        supply_limit = 2
+
+        combat_width = -0.9
+
+        min_build_railroad = 3
+    }
 
     steppe = {
         movement_cost = 1.0

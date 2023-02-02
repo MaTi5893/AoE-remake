@@ -2208,32 +2208,38 @@
 }
 1960 = {
     aristocrats = {
-        culture = south_italian
+        culture = north_italian
         religion = catholic
-        size = 110
+        size = 310
     }
 
     clergymen = {
-        culture = south_italian
+        culture = north_italian
         religion = catholic
-        size = 47
+        size = 150
     }
 
     artisans = {
-        culture = south_italian
+        culture = north_italian
         religion = catholic
-        size = 650
+        size = 3650
     }
 
     soldiers = {
-        culture = south_italian
+        culture = north_italian
         religion = catholic
-        size = 110
+        size = 330
     }
 
     farmers = {
-        culture = south_italian
+        culture = north_italian
         religion = catholic
-        size = 3802
+        size = 23802
+    }
+
+    farmers = {
+        culture = french
+        religion = catholic
+        size = 4850
     }
 }

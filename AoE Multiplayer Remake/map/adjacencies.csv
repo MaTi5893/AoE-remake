@@ -39,7 +39,7 @@
 759;763;sea;2760;0;Strait of Messina
 759;763;sea;2757;0;Strait of Messina
 837;827;sea;2765;0;Ionian Islands Strait
-1687;517;sea;2746;0;Strait of Gibraltar
+1687;2384;sea;2746;0;Strait of Gibraltar
 369;533;sea;2721;0;Kiel-Helegoland Strait
 418;419;sea;2725;0;France-Channel Islands Strait
 780;782;land;2762;0;Mostar Bay
@@ -73,13 +73,30 @@
 1310;1322;sea;2794;0;Palk Strait #Ceylon-S India
 1384;1402;sea;2814;0;Straits of Johore
 1385;1402;sea;2814;0;Straits of Johore
-1403;1413;sea;2805;0;Sunda Strait
+1402;1400;sea;2814;0;Johore Strait
+1402;1398;sea;2814;0;Johore Strait
+1386;1401;sea;2814;0;Malacca Strait
+1399;1404;sea;2813;0;Palembang Strait
+1385;2576;sea;2814;0;Natuna Strait
+1426;2576;sea;2814;0;Natuna Strait
+1403;772;sea;2805;0;Sunda Strait
 1412;1851;sea;2782;0;Aden Strait
 1412;1875;sea;2782;0;Aden Strait
 1418;1421;sea;2811;0;Strait of Madura
 1420;1438;sea;2811;0;Bali Strait
 1438;1442;sea;2811;0;Lombok Strait
 1442;1440;sea;2811;0;Sumbawa Strait
+1408;1411;sea;2803;0;Atjeh Strait
+1409;1411;sea;2803;0;Atjeh Strait
+1407;1411;sea;2803;0;Atjeh Strait
+1440;1439;sea;2811;0;Flores Strait
+1439;1444;sea;2809;0;Flores Strait
+1439;1441;sea;2809;0;Flores Strait
+1439;1430;sea;2810;0;Makassar Strait
+1446;1444;sea;2809;0;Dili Strait
+1445;1443;sea;2809;0;Rote Strait
+1429;1432;sea;2812;0;Makassar Strait
+1424;1432;sea;2812;0;Makassar Strait
 1495;1499;sea;2823;0;Hainan Strait
 1457;1461;sea;2849;0;Tacloban Strait
 1640;1660;sea;2843;0;Fukuoka Strait
@@ -94,6 +111,7 @@
 1461;1463;sea;2850;0;Surigao Strait #Tacloban to Davao
 2565;1460;sea;2850;0;Tanon Strait #Cebu to Iloilo
 1462;1464;sea;2851;0;Sulu Sea #Zamboanga to Sulu
+1397;1464;sea;2851;0;Sulu Sea #Sandakan to Sulu
 
 #
 # Oceanian Straits
@@ -105,6 +123,7 @@
 #
 # Impassables
 #
+517;514;impassable;0;0;scary mountain #Gibraltar-Malaga
 1326;1589;impassable;0;0;scary mountain
 1326;1592;impassable;0;0;scary mountain
 1328;1589;impassable;0;0;scary mountain
@@ -149,12 +168,6 @@
 727;734;impassable;0;0;scary mountain
 
 #caucases
-1051;1095;impassable;0;0;scary mountain
-1051;2640;impassable;0;0;scary mountain
-1056;1092;impassable;0;0;scary mountain
-1056;1054;impassable;0;0;scary mountain
-1056;2640;impassable;0;0;scary mountain
-1055;1054;impassable;0;0;scary mountain
 1055;1091;impassable;0;0;scary mountain
 1053;1091;impassable;0;0;scary mountain
 1090;1052;impassable;0;0;scary mountain
@@ -210,7 +223,7 @@
 2707;2713;canal;350;4;Narva Strait
 2707;2714;canal;994;6;Neva Strait
 #Giblartar
-2746;3272;canal;517;7;Giblartar Strait
+2746;3272;canal;2384;7;Giblartar Strait
 2746;3273;canal;512;8;Giblartar Strait
 2746;3274;canal;1687;9;Giblartar Strait
 #Don

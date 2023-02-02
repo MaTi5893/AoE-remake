@@ -394,18 +394,12 @@ political_decisions = {
             is_greater_power = yes
 			revolution_n_counterrevolution = 1
             war = no
-            owns = 517
 			owns = 65
 			owns = 46
-			owns = 204
+			owns = 178
 			owns = 195
 			owns = 190
 			owns = 238
-			BNG = {
-				all_core = {
-					owned_by = THIS
-				}
-			}
 			IQS = { exists = no }
         }
         effect = {
@@ -464,7 +458,7 @@ political_decisions = {
 					inherit = THC
 				}
 			}
-            prestige = 15
+            prestige = 30
         }
     }
     dispute_spanish_succession_gbr = {
@@ -521,6 +515,7 @@ political_decisions = {
 				}
 			}
             add_core = 517
+	    add_core = 2384
             badboy = 2
             set_country_flag = disputed_spanish_succession
         }
@@ -581,6 +576,48 @@ political_decisions = {
 		effect = {
 			set_country_flag = company_rule_in_india
 			country_event = 171018
+		}
+	}
+
+	capture_of_gibraltar = {
+		picture = british_empire
+		potential = {
+			primary_culture = british
+			NOT = {
+				has_global_flag = gibraltar_captured_brit
+			}
+		}
+		allow = {
+			owns = 517
+			owns = 2384
+			
+		}
+		effect = {
+			set_global_flag = gibraltar_captured_brit
+			2384 = { fort = 2 }
+			517 = { fort = 2 }
+			country_event = 171020
+		}
+	}
+
+	reclaim_gibraltar = {
+		picture = spanish_academy
+		potential = {
+			primary_culture = spanish
+			exists = yes
+			has_global_flag = gibraltar_captured_brit
+			NOT = {
+				has_country_flag = gibraltar_reclaimed
+			}
+		}
+		allow = {
+			owns = 517
+			owns = 2384
+			
+		}
+		effect = {
+			set_country_flag = gibraltar_reclaimed
+			300 = { owner = { relation = { who = THIS value = -75 } country_event = 171021 } }
 		}
 	}
 }

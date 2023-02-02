@@ -4246,7 +4246,6 @@ pax_britannica = {
     naval_unit_start_experience = 5
     naval_organisation = 0.01
     diplomatic_points_modifier = 0.5
-    badboy = -0.05
     influence_modifier = 0.05
     min_military_spending = 0.25
     icon = 7
@@ -4470,6 +4469,11 @@ fief_and_drum = {
     land_organisation = 0.02
     supply_consumption = -0.1
     icon = 15
+}
+british_naval_dominance = {
+    local_repair = 0.2
+    local_ship_build = 0.2
+    icon = 17
 }
 jacobite_pretender = {
     icon = 14

@@ -18,6 +18,9 @@ political_decisions = {
 					BEL_394 = {
 						owned_by = THIS
 					}
+					BEL_393 = {
+						owned_by = THIS
+					}
 				}
 				AND = {
 					is_greater_power = yes
@@ -55,12 +58,13 @@ political_decisions = {
 		picture = FRA_rename_artois
 		potential = {
 			primary_culture = dutch
-			has_country_flag = unite_the_netherlands
+			has_country_flag = united_the_netherlands
 			NOT = { has_country_flag = claimed_artois }
 			exists = yes
 		}
 		allow = {
 			war_policy = jingoism
+			is_greater_power = yes
 			BEL_387 = {
 				owned_by = THIS
 				#is_core = THIS
@@ -72,13 +76,16 @@ political_decisions = {
 			NET_397 = {
 				owned_by = THIS
 			}
+			BEL_393 = {
+				owned_by = THIS
+			}
 		}
 		effect = {
 			set_country_flag = claimed_artois
 			FRA_404 = {
 				add_core = THIS
 			}
-			badboy = 3
+			badboy = 8
 		}
 		ai_will_do = {
 			factor = 1
@@ -101,16 +108,45 @@ political_decisions = {
 		}
 		effect = {
 			treasury = -250000
-			any_neighbor_country = {
-				limit = {
-					capital_scope = { is_core = MJA }
-					civilized = no
-				}			
-				add_casus_belli = {
-					target = NET
-					type = conquest
-					months = 12
-				} 
+			JOH = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			DJA = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			PLM = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			JAV = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			SLW = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			BTN = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			PYG = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			MAL = {
+				all_core = {
+					add_core = VOC
+				}
 			}
 			1413 = {
 				any_pop = {
@@ -140,6 +176,29 @@ political_decisions = {
 				name = voc_golden_age
 				duration = 1825
 			}
+			BAL = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			KLM = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			PTK = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			KND = {
+				all_core = {
+					add_core = VOC
+				}
+			}
+			1439 = { add_core = VOC }
+			1444 = { add_core = VOC }
+			1446 = { add_core = VOC }
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -14,7 +14,7 @@ cruiser = { #Heavy Frigate
     priority = 12
     max_strength = 100
     default_organisation = 175
-    maximum_speed = 14
+    maximum_speed = 16
     weighted_value = 8.0
     floating_flag = yes
     can_build_overseas = yes
@@ -40,8 +40,8 @@ cruiser = { #Heavy Frigate
     }
 
     #Naval Abilties
-    hull = 22
-    gun_power = 14
+    hull = 24
+    gun_power = 16
     fire_range = 0.55
     evasion = 0
     torpedo_attack = 0

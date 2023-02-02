@@ -1770,20 +1770,18 @@ country_event = {
 				duration = 365
 			}
 		}
-		casus_belli = {
-			target = JAP
-			type = demand_concession_casus_belli
-			months = 12
+		3261 = { add_core = EIC }
+		3262 = { add_core = EIC }
+		3264 = { add_core = EIC }
+		BNG = {
+			all_core = {
+				add_core = EIC
+			}
 		}
 		casus_belli = {
 			target = MUG
-			type = demand_concession_casus_belli
-			months = 12
-		}
-		casus_belli = {
-			target = TKG
-			type = demand_concession_casus_belli
-			months = 12
+			type = annex_india_full
+			months = 60
 		}
 	}
 }
@@ -1812,5 +1810,51 @@ country_event = {
 			}
 			life_rating = -5
 		}
+	}
+}
+country_event = {
+    id = 171020
+	title = "Capture of Gibraltar"
+    	desc = "EVTDESC171020"
+	picture = william_of_orange
+	is_triggered_only = yes
+	
+	option = {
+		name = "Anglos one, Spaniards none."
+		prestige = 15
+		303 = { add_province_modifier = {
+				name = british_naval_dominance
+				duration = -1
+			
+						}
+					}
+		299 = { add_province_modifier = {
+				name = british_naval_dominance
+				duration = -1
+			
+						}
+					}
+		517 = { add_province_modifier = {
+				name = british_naval_dominance
+				duration = -1
+			
+						}
+					}
+	}
+}
+country_event = {
+    id = 171021
+	title = "Fall of Gibraltar"
+   	desc = "EVTDESC171021"
+	picture = william_of_orange
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is a serious blow to our naval prestige."
+		prestige = -20
+		THIS = { all_core = { remove_province_modifier = british_naval_dominance } }
+#		303 = { remove_province_modifier = { name = british_naval_dominance } }
+#		299 = { remove_province_modifier = { name = british_naval_dominance } }
+#		517 = { remove_province_modifier = { name = british_naval_dominance } }
 	}
 }

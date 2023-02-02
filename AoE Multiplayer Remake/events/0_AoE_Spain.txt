@@ -1,24 +1,33 @@
 country_event = {
     id = 1516001
-    title = "Giblartar regained!"
-    desc = "We have regained the straits of giblartar!"
+    title = "Gibraltar regained!"
+    desc = "We have regained the straits of gibraltar!"
     picture = "harbour"
     fire_only_once = yes
 
     trigger = {
         OR = { tag = SPA tag = SPC }
         war = no
-        has_country_flag = lost_gib
+        has_global_flag = gibraltar_captured_brit
         owns = 517
+	owns = 2583
     }
 
     option = {
         name = "Fantastic!"
+	2384 = {
+            add_core = THIS
+            remove_core = GBR
+            remove_core = GBJ
+            remove_core = ENG
+	    remove_core = ENL
+        }
         517 = {
             add_core = THIS
             remove_core = GBR
             remove_core = GBJ
             remove_core = ENG
+	    remove_core = ENL
         }
     }
 }

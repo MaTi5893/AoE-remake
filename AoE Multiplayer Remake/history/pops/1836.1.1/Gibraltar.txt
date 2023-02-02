@@ -53,7 +53,63 @@
     farmers = {
         culture = spanish
         religion = catholic
-        size = 200
+        size = 800
     }
 
+}
+#Mercedes (8000/2000 POPS)
+2384 = {
+    clergymen = {
+        culture = spanish
+        religion = catholic
+        size = 25
+    }
+
+    artisans = {
+        culture = spanish
+        religion = catholic
+        size = 50
+    }
+
+    soldiers = {
+        culture = spanish
+        religion = catholic
+        size = 25
+    }
+
+    farmers = {
+        culture = spanish
+        religion = catholic
+        size = 1200
+    }
+
+    aristocrats = {
+       culture = british
+        religion = protestant
+        size = 10
+    }
+
+    clergymen = {
+       culture = british
+        religion = protestant
+        size = 25
+    }
+
+    artisans = {
+        culture = british
+        religion = protestant
+        size = 50
+    }
+
+    soldiers = {
+       culture = british
+        religion = protestant
+        size = 15
+    }
+
+    farmers = {
+       culture = british
+        religion = protestant
+        size = 400
+    }
 }

@@ -58,51 +58,51 @@ political_decisions = {
 		}
 	}
 	
-	capture_royal_croatia = {
-		picture = tur_hungary
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = captured_croatia }
-			has_country_flag = expanded_bosnia
-			has_country_flag = recovered_kanije
-		}
-		allow = {
-			owns = 771
-			war_policy = jingoism
-			NOT = { has_country_modifier = janisseries_influence }
-		}
-		effect = {
-			AUS_771 = { add_core = THIS }
-			set_country_flag = captured_croatia
-		}
-	}
+#	capture_royal_croatia = {
+#		picture = tur_hungary
+#		potential = {
+#			tag = TUR
+#			NOT = { has_country_flag = captured_croatia }
+#			has_country_flag = expanded_bosnia
+#			has_country_flag = recovered_kanije
+#		}
+#		allow = {
+#			owns = 771
+#			war_policy = jingoism
+#			NOT = { has_country_modifier = janisseries_influence }
+#		}
+#		effect = {
+#			AUS_771 = { add_core = THIS }
+#			set_country_flag = captured_croatia
+#		}
+#	}
 
-	recover_hungary = {
-		picture = tur_hungary
-		potential = {
-			tag = TUR
-			NOT = { has_country_flag = recovered_hungary }
-			has_country_flag = expanded_bosnia
-			has_country_flag = recovered_kanije
-			has_country_flag = captured_croatia
-			exists = yes
-		}
-		allow = {
-			is_greater_power = yes
-			war_policy = jingoism
-			
-		}
-		effect = {
-			set_country_flag = recovered_hungary
-			prestige = 25
-			AUS_641 = { add_core = THIS }
-			AUS_613 = { add_core = THIS }
-			badboy = 10
-		}
-		ai_will_do = {					
-			factor = 1
-		}
-	}
+#	recover_hungary = {
+#		picture = tur_hungary
+#		potential = {
+#			tag = TUR
+#			NOT = { has_country_flag = recovered_hungary }
+#			has_country_flag = expanded_bosnia
+#			has_country_flag = recovered_kanije
+#			has_country_flag = captured_croatia
+#			exists = yes
+#		}
+#		allow = {
+#			is_greater_power = yes
+#			war_policy = jingoism
+#			
+#		}
+#		effect = {
+#			set_country_flag = recovered_hungary
+#			prestige = 25
+#			AUS_641 = { add_core = THIS }
+#			AUS_613 = { add_core = THIS }
+#			badboy = 10
+#		}
+#		ai_will_do = {					
+#			factor = 1
+#		}
+#	}
 	
 	recover_morea = {
 		picture = tur_hungary

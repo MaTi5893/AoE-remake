@@ -14,7 +14,7 @@ battleship = { #Seventy-Four
     priority = 40
     max_strength = 100
     default_organisation = 200
-    maximum_speed = 12
+    maximum_speed = 13
     weighted_value = 50.0
     can_build_overseas = no
 
@@ -41,6 +41,6 @@ battleship = { #Seventy-Four
     #Naval Abilties
     hull = 30
     gun_power = 25
-    fire_range = 0.58
+    fire_range = 0.55
     evasion = 0
 }

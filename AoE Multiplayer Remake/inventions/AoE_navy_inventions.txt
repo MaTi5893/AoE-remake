@@ -3,9 +3,9 @@
 warship_convoys = {
 	limit = { battleship_column_doctrine = 1 }
     chance = {
-        base = 1
+        base = 5
         modifier = {
-            factor = 5
+            factor = 10
 			OR = {
             invention = eastindiamen
 			invention = three_deckers
@@ -115,7 +115,7 @@ the_nelson_touch = {
 clipper_shipyard_construction = {
     limit = { clipper_design = 1 }
     chance = {
-        base = 2
+        base = 10
         modifier = {
             factor = 2
             piston_steam_engine = 1
@@ -125,7 +125,7 @@ clipper_shipyard_construction = {
             naval_design_bureaus = 1
         }
         modifier = {
-            factor = -6
+            factor = -12
             NOT = { civilized = yes }
         }
     }
@@ -136,7 +136,7 @@ clipper_shipyard_construction = {
 building_station_shipyards = {
     limit = { clipper_design = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
             factor = 2
             puddling = 1
@@ -160,7 +160,7 @@ building_station_shipyards = {
 eastindiamen = {
     limit = { steamers = 1 }
     chance = {
-        base = 5
+        base = 10
         modifier = {
             factor = 2
             late_classical_theory = 1
@@ -186,11 +186,11 @@ three_deckers = {
 
     }
     chance = {
-        base = 5
-        modifier = {
-            factor = 2
-            invention = razees
-        }
+        base = 0
+	modifier = {
+		factor = 100
+		weapon_platforms = 1
+	}
     }
     effect = {
         activate_unit = ironclad
@@ -201,11 +201,11 @@ razees = {
         iron_steamers = 1
     }
     chance = {
-        base = 5
-        modifier = {
-            factor = 2
-            invention = three_deckers
-        }
+        base = 0
+	modifier = {
+		factor = 100
+		weapon_platforms = 1
+	}
     }
     effect = {
         activate_unit = monitor
@@ -217,17 +217,9 @@ seventy_four = {
         steel_steamers = 1
     }
     chance = {
-        base = 5
+        base = 0
         modifier = {
-            factor = 2
-            invention = three_deckers
-        }
-        modifier = {
-            factor = 1
-            bessemer_process = 1
-        }
-        modifier = {
-            factor = 1
+            factor = 100
             main_armament = 1
         }
     }
@@ -246,14 +238,10 @@ heavy_frigate = {
         steam_turbine_ships = 1
     }
     chance = {
-        base = 3
+        base = 0
         modifier = {
-            factor = 2
-            invention = seventy_four
-        }
-        modifier = {
-            factor = 2
-            naval_nco_training = 1
+            factor = 100
+            advanced_naval_design = 1
         }
     }
     effect = {
@@ -267,7 +255,7 @@ great_frigate = {
     chance = {
         base = 0
         modifier = {
-            factor = 2
+            factor = 100
             invention = heavy_frigate
         }
     }
@@ -289,11 +277,15 @@ limes = {
         oil_driven_ships = 1
     }
     chance = {
-        base = 5
+        base = 0
+        modifier = {
+            factor = 100
+            modern_naval_design = 1
+        }
     }
     effect = {
         navy_base = {
-			hull = 1
+			hull = 3
 		}
     }
 }
@@ -304,14 +296,10 @@ heavy_first_rate = {
 
     }
     chance = {
-        base = 5
+        base = 0
         modifier = {
-            factor = 2
-            invention = seventy_four
-        }
-        modifier = {
-            factor = 2
-            naval_integration = 1
+            factor = 100
+            naval_engineering_7 = 1
         }
     }
     effect = {
@@ -322,10 +310,10 @@ heavy_first_rate = {
 steam_boat = {
     limit = { ship_construction_8 = 1 }
     chance = {
-        base = 5
+        base = 0
         modifier = {
-            factor = 3
-            tech_power_8 = 1
+            factor = 100
+            naval_engineering_8 = 1
         }
     }
     effect = {
