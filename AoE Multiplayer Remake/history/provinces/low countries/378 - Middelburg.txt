@@ -3,3 +3,8 @@ controller = NET
 add_core = NET
 trade_goods = fish
 life_rating = 35
+state_building = {
+    level = 2
+    building = explosives_factory
+    upgrade = yes
+}

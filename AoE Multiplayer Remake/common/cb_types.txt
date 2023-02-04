@@ -129,7 +129,7 @@ gunboat = {
 
     badboy_factor = 1
     prestige_factor = 5
-    peace_cost_factor = 1
+    peace_cost_factor = 0.005
     penalty_factor = 1
 
     on_add = {
@@ -189,7 +189,7 @@ restore_austrian_empire = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.02
     penalty_factor = 1
     always = yes
 
@@ -313,7 +313,7 @@ restore_austrian_empire = {
     }
 
     po_demand_state = yes
-
+	po_gunboat = yes
     war_name = WAR_AUSTRIAN_EMPIRE_NAME
 
     on_add = {
@@ -333,7 +333,7 @@ restore_spanish_empire = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.025
     penalty_factor = 1
     always = yes
 
@@ -460,6 +460,7 @@ restore_spanish_empire = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_SPANISH_EMPIRE_NAME
 
@@ -553,7 +554,7 @@ partition_cb = {
 
     badboy_factor = 1.8
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.025
     penalty_factor = 1
 
     break_truce_prestige_factor = 5
@@ -629,6 +630,7 @@ partition_cb = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_PARTITION_NAME
 
@@ -718,7 +720,7 @@ restore_holy_roman_empire = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.025
     penalty_factor = 1
     always = yes
 
@@ -772,6 +774,7 @@ restore_holy_roman_empire = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_AUSTRIAN_EMPIRE_NAME
 
@@ -793,7 +796,7 @@ unite_china = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.02
     penalty_factor = 1
     always = yes
 
@@ -837,6 +840,7 @@ unite_china = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CHINA_REUNIFICATION
 
@@ -1411,7 +1415,7 @@ acquire_core_state = {
 
     badboy_factor = 0
     prestige_factor = 5
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.02
     penalty_factor = 1
     always = yes
 
@@ -1442,6 +1446,7 @@ acquire_core_state = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_CORE_NAME
 
@@ -1515,7 +1520,7 @@ acquire_substate_region = {
 
     badboy_factor = 1
     prestige_factor = 2
-    peace_cost_factor = 1
+    peace_cost_factor = 0.03
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -1551,6 +1556,7 @@ acquire_substate_region = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -1574,7 +1580,7 @@ acquire_core_substate_region = {
 
     badboy_factor = 0
     prestige_factor = 1.5
-    peace_cost_factor = 1
+    peace_cost_factor = 0.02
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -1608,6 +1614,7 @@ acquire_core_substate_region = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -1630,7 +1637,7 @@ acquire_state = {
 
     badboy_factor = 2.2
     prestige_factor = 2
-    peace_cost_factor = 1
+    peace_cost_factor = 0.03
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -1708,6 +1715,7 @@ acquire_state = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -1729,7 +1737,7 @@ acquire_state_china = {
 
     badboy_factor = 3.4
     prestige_factor = 2
-    peace_cost_factor = 2.2
+    peace_cost_factor = 0.021
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -1807,6 +1815,7 @@ acquire_state_china = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -1829,7 +1838,7 @@ annex_india = {
 
     badboy_factor = 0
     prestige_factor = 0.5
-    peace_cost_factor = 0.6
+    peace_cost_factor = 0.015
     penalty_factor = 2
 
     break_truce_prestige_factor = 5
@@ -1916,6 +1925,7 @@ annex_india = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CONCESSION_NAME
 
@@ -1939,7 +1949,7 @@ annex_india_full = {
 
     badboy_factor = 0
     prestige_factor = 0.5
-    peace_cost_factor = 0.6
+    peace_cost_factor = 0.02
     penalty_factor = 2
 
     break_truce_prestige_factor = 0
@@ -2011,6 +2021,7 @@ annex_india_full = {
     }
 
     po_annex = yes
+	po_gunboat = yes
 
     war_name = WAR_PROTECTORATE_NAME
 
@@ -2035,7 +2046,7 @@ annex_na = {
 
     badboy_factor = 0
     prestige_factor = 0.5
-    peace_cost_factor = 0.6
+    peace_cost_factor = 0.015
     penalty_factor = 2
 
     break_truce_prestige_factor = 5
@@ -2122,6 +2133,7 @@ annex_na = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CONCESSION_NAME
 
@@ -2144,7 +2156,7 @@ annex_na_full = {
 
     badboy_factor = 0
     prestige_factor = 0.5
-    peace_cost_factor = 0.6
+    peace_cost_factor = 0.02
     penalty_factor = 2
 
     break_truce_prestige_factor = 0
@@ -2216,6 +2228,7 @@ annex_na_full = {
     }
 
     po_annex = yes
+	po_gunboat = yes
 
     war_name = WAR_PROTECTORATE_NAME
 
@@ -2237,7 +2250,7 @@ place_in_the_sun = {
 
     badboy_factor = 1.1
     prestige_factor = 2
-    peace_cost_factor = 0.9
+    peace_cost_factor = 0.01
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -2274,6 +2287,7 @@ place_in_the_sun = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_COLONIAL_NAME
 
@@ -2293,7 +2307,7 @@ place_in_the_sun_for_puppet = {
 
     badboy_factor = 1.1
     prestige_factor = 2
-    peace_cost_factor = 0.9
+    peace_cost_factor = 0.01
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -2342,6 +2356,7 @@ place_in_the_sun_for_puppet = {
     }
 
     po_transfer_provinces = yes
+	po_gunboat = yes
 
     war_name = WAR_COLONIAL_NAME
 
@@ -2364,7 +2379,7 @@ colonial_competition = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.9
+    peace_cost_factor = 0.010
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -2377,6 +2392,7 @@ colonial_competition = {
     good_relation_militancy_factor = 1
 
     po_colony = yes
+	po_gunboat = yes
 
     war_name = WAR_COLONIAL_NAME
 
@@ -2623,7 +2639,7 @@ free_peoples = {
 
     badboy_factor = 1.5
     prestige_factor = 1
-    peace_cost_factor = 1
+    peace_cost_factor = 0.025
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -2687,6 +2703,7 @@ free_peoples = {
     }
 
     po_transfer_provinces = yes
+	po_gunboat = yes
 
     war_name = WAR_FREE_NAME
 
@@ -3727,7 +3744,7 @@ demand_concession_casus_belli = {
 	
 	badboy_factor = 1
 	prestige_factor = 0.1
-	peace_cost_factor = 0.6
+	peace_cost_factor = 0.014
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 1
@@ -3761,6 +3778,7 @@ demand_concession_casus_belli = {
 	}
 	
 	po_demand_state = yes
+	po_gunboat = yes
 	
 	war_name = WAR_CONCESSION_NAME
 
@@ -3783,7 +3801,7 @@ demand_concession_china = {
 	
 	badboy_factor = 3.4
 	prestige_factor = 0.1
-	peace_cost_factor = 2.8
+	peace_cost_factor = 0.026
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 1
@@ -3820,6 +3838,7 @@ demand_concession_china = {
 	}
 	
 	po_demand_state = yes
+	po_gunboat = yes
 	
 	war_name = WAR_CONCESSION_NAME
 
@@ -3841,7 +3860,7 @@ demand_concession_casus_belli_for_puppet = {
 	
 	badboy_factor = 1
 	prestige_factor = 0.1
-	peace_cost_factor = 0.6
+	peace_cost_factor = 0.010
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 1
@@ -3884,6 +3903,7 @@ demand_concession_casus_belli_for_puppet = {
 	}
 	
 	po_transfer_provinces = yes
+	po_gunboat = yes
 	
 	war_name = WAR_CONCESSION_NAME
 
@@ -3962,7 +3982,7 @@ take_capital = {
 
     badboy_factor = 3
     prestige_factor = 10
-    peace_cost_factor = 1
+    peace_cost_factor = 0.055
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -4022,6 +4042,7 @@ take_capital = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -4042,7 +4063,7 @@ take_capital_china = {
 
     badboy_factor = 4
     prestige_factor = 10
-    peace_cost_factor = 1
+    peace_cost_factor = 0.090
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -4102,6 +4123,7 @@ take_capital_china = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_TAKE_NAME
 
@@ -4122,7 +4144,7 @@ demand_concession_capital = {
 
     badboy_factor = 2.3
     prestige_factor = 2
-    peace_cost_factor = 1
+    peace_cost_factor = 0.02
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -4172,6 +4194,7 @@ demand_concession_capital = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CONCESSION_NAME
 
@@ -4193,7 +4216,7 @@ demand_concession_capital_china = {
 
     badboy_factor = 4
     prestige_factor = 2
-    peace_cost_factor = 1.75
+    peace_cost_factor = 0.090
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -4235,6 +4258,7 @@ demand_concession_capital_china = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CONCESSION_NAME
 
@@ -4520,7 +4544,7 @@ acquire_treaty_port = {
 
     badboy_factor = 0.5
     prestige_factor = 1.0
-    peace_cost_factor = 0.6
+    peace_cost_factor = 0.010
     penalty_factor = 1
 
     break_truce_prestige_factor = 1
@@ -4609,6 +4633,7 @@ acquire_treaty_port = {
     }
 
     po_demand_state = yes
+	po_gunboat = yes
 
     war_name = WAR_CONCESSION_NAME
 

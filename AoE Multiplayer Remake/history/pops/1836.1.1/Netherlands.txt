@@ -226,7 +226,7 @@
     farmers = {
         culture = dutch
         religion = protestant
-        size = 37300
+        size = 36300
     }
 
     artisans = {
@@ -240,6 +240,12 @@
         religion = catholic
         size = 1100
     }
+	
+	craftsmen = {
+		culture = flemish
+		religion = catholic
+		size = 10000
+	}
 
 }
 #Limburg-Gelderland Region - 979400
@@ -290,7 +296,7 @@
     farmers = {
         culture = dutch
         religion = protestant
-        size = 53500
+        size = 45500
     }
 
     clergymen = {
@@ -310,6 +316,12 @@
         religion = catholic
         size = 3000
     }
+	
+	craftsmen = {
+		culture = flemish
+		religion = catholic
+		size = 8000
+	}
 }
 #Breda (173200/43300 POPS)
 380 = {
