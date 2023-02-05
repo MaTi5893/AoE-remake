@@ -329,13 +329,12 @@ restore_spanish_empire = {
     is_triggered_only = yes
     months = 12
 
-    construction_speed = 0.8
+    construction_speed = 0.5
 
-    badboy_factor = 0
+    badboy_factor = 1.1
     prestige_factor = 2
     peace_cost_factor = 0.025
     penalty_factor = 1
-    always = yes
 
     break_truce_prestige_factor = 5
     break_truce_infamy_factor = 2
@@ -716,13 +715,12 @@ restore_holy_roman_empire = {
     is_triggered_only = yes
     months = 12
 
-    construction_speed = 0.8
+    construction_speed = 0.5
 
-    badboy_factor = 0
+    badboy_factor = 1.2
     prestige_factor = 2
     peace_cost_factor = 0.025
     penalty_factor = 1
-    always = yes
 
     break_truce_prestige_factor = 5
     break_truce_infamy_factor = 2
