@@ -380,8 +380,8 @@ leader = {
     type = land
     date = 1700.1.1
     background = defence_0.1
-    personality = attack_3.1
-    prestige = 0.75
+    personality = attack_4.1
+    prestige = 0.7
     }
 
 leader = {
@@ -389,47 +389,37 @@ leader = {
     picture = pru_anhalt_dessau
     type = land
     date = 1699.1.1
-    background = defence_3.1
-    personality = attack_3.1
+    background = defence_2.1
+    personality = attack_4.1
     prestige = 0.5
     }
 
 leader = {
-    name = "Eduard Vogel von Falckenstein"
+    name = "Kurt Christoph Graf von Schwerin"
     picture = european_general_27
     type = land
     date = 1700.1.1
     background = defence_2.4
     personality = attack_2.1
-    prestige = 0.3
+    prestige = 0.35
     }
 
 leader = {
-    name = "Leopold Hermann von Boyen"
+    name = "Dubislav Gneomar von Natzmer"
     picture = pru_gen_boyen
-    date = 1813.1.1
+    date = 1700.1.1
     type = land
-    personality = defence_0.1
-    background = attack_0.1
-    prestige = 0.5
+    personality = defence_2.1
+    background = attack_1.1
+    prestige = 0.3
 }
 
 leader = {
-    name = "Prince Friedrich Wilhelm August"
+    name = "Alexander Hermann"
     picture = pru_gen_prinzaugust
-    date = 1814.1.1
+    date = 1700.1.1
     type = land
-    personality = defence_0.1
-    background = attack_0.1
-    prestige = 0.4
-}
-
-leader = {
-    name = "Prince Friedrich Karl"
-    picture = pru_gen_prinzkarl
-    date = 1824.1.1
-    type = land
-    personality = defence_minus_1.2
-    background = attack_1.4
-    prestige = 0.4
+    personality = defence_1.1
+    background = attack_1.1
+    prestige = 0.2
 }

@@ -1,19 +1,10 @@
 leader = {
-    name = "Cornelius Anckarstjerna"
-    date = 1700.1.1
-    type = sea
-    personality = defence_3.5 
-    background = attack_minus_1.1 
-    prestige = 0.2
-}
-
-leader = {
     name = "Carl Gustav Rehnskiold"
     date = 1700.1.1
     picture = swe_carl_gustaf
     type = land
     personality = defence_minus_1.1
-    background = attack_3.1 
+    background = attack_4.2 
     prestige = 0.5
 }
 
@@ -23,7 +14,7 @@ leader = {
     picture = swe_gen_charles
     type = land
     personality = defence_1.2
-    background = attack_3.1
+    background = attack_5.1
     prestige = 0.8
 }
 
@@ -49,9 +40,9 @@ leader = {
     name = "Carl Gustaf Armfeldt"
     date = 1674.1.1
     type = sea
-    personality = defence_0.3
+    personality = defence_1.2
     background = attack_2.4
-    prestige = 0.1
+    prestige = 0.2
 }
 
 leader = {
@@ -72,24 +63,6 @@ leader = {
 }
 
 leader = {
-    name = "Otto Velingk"
-    date = 1694.1.1
-    type = land
-    personality = defence_minus_1.1
-    background = attack_0.3
-    prestige = 0.2
-}
-
-leader = {
-    name = "Hans Wachtmeister"
-    date = 1677.1.1
-    type = land
-    personality = defence_0.3
-    background = attack_0.1
-    prestige = 0.1
-}
-
-leader = {
     name = "Carl Gustav Creutz"
     date = 1687.1.1
     type = land
@@ -103,14 +76,6 @@ leader = {
     type = land
     personality = defence_2.1
     background = attack_2.2
-    prestige = 0.1
-}
-leader = {
-    name = "Georg Reinhold Patkul"
-    date = 1677.1.1
-    type = land
-    personality = defence_minus_1.2
-    background = attack_1.2
     prestige = 0.1
 }
 

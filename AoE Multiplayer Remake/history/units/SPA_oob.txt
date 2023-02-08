@@ -701,7 +701,7 @@ navy = {
 }
 leader = {
     name = "Francisco Serrano"
-    date = 1833.1.1
+    date = 1700.1.1
     type = land
     personality = defence_2.2
     background = attack_2.1
@@ -709,8 +709,8 @@ leader = {
 }
 
 leader = {
-    name = "Leopoldo O'Donnell"
-    date = 1836.1.1
+    name = "George Camocke"
+    date = 1700.1.1
     type = land
     personality = defence_3.4
     background = attack_0.4
@@ -718,37 +718,28 @@ leader = {
 }
 
 leader = {
-    name = "Narváez"
-    date = 1836.1.1
-    type = land
-    personality = defence_0.1
+    name = "José Antonio de Gaztaneta"
+    date = 1700.1.1
+    type = sea
+    personality = defence_1.1
     background = attack_2.3
-    prestige = 0.0
+    prestige = 0.2
 }
 
 leader = {
-    name = "Gerónimo Valdés"
-    date = 1836.1.1
-    type = land
-    personality = defence_1.2
-    background = attack_0.3
-    prestige = 0.0
-}
-
-leader = {
-    name = "Van Halen"
-    date = 1823.1.1
+    name = "José Carrillo de Albornoz"
+    date = 1700.1.1
     type = land
     personality = defence_2.3
-    background = attack_3.1
-    prestige = 0.1
+    background = attack_4.2
+    prestige = 0.3
 }
 
 leader = {
-    name = "José Ramón Rodil"
-    date = 1824.1.1
+    name = "Jean François de Bette"
+    date = 1700.1.1
     type = land
-    personality = defence_3.1
+    personality = defence_4.1
     background = attack_2.3
     prestige = 0.1
 }
