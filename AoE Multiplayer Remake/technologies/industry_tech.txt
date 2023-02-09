@@ -5,6 +5,7 @@ piston_steam_engine = {
     cost = 3600
 
     activate_building =  fabric_factory
+    activate_building =  rum_distillery 
     mine_rgo_eff = 0.05
     farm_rgo_eff = 0.15
 
@@ -100,6 +101,7 @@ mechanical_production = {
     cost = 3600
 
     activate_building = regular_clothes_factory
+    activate_building = fur_clothes_factory 
     ai_chance = {
         factor = 2
     }

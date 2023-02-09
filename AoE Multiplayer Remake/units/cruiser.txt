@@ -21,11 +21,12 @@ cruiser = { #Heavy Frigate
 
 
     #Building Costs
-    build_time = 240
+    build_time = 280
     build_cost = {
         artillery = 15
         canned_food = 12
-        clipper_convoy = 15
+	steamer_convoy = 10
+        clipper_convoy = 30
         explosives = 5
     }
     min_port_level = 5
@@ -35,14 +36,15 @@ cruiser = { #Heavy Frigate
     supply_consumption = 1.0
     supply_cost = {
         steamer_convoy = 0.5 #18.6
-        artillery = 0.4       #15
-        canned_food = 0.4    #1.5
+	clipper_convoy = 2.0 #21
+        artillery = 0.6       #15
+        canned_food = 0.6    #1.5
     }
 
     #Naval Abilties
-    hull = 24
-    gun_power = 16
-    fire_range = 0.55
+    hull = 19
+    gun_power = 15
+    fire_range = 0.7
     evasion = 0
-    torpedo_attack = 0
+    torpedo_attack = 10.0
 }

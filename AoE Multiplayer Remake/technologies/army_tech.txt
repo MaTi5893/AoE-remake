@@ -58,6 +58,7 @@ deep_defense_system = {
     year = 1730
     cost = 14400
     unciv_military = yes
+    mobilisation_size = 0.01
     engineer = {
         support = 0.25
     }
@@ -105,6 +106,7 @@ modern_army_doctrine = {
     cost = 21600
     unciv_military = yes
 
+    mobilisation_size = 0.01
     army_base = {
         supply_consumption = 0.20
     }
@@ -283,7 +285,6 @@ modern_divisional_structure = {
     cost = 21600
     unciv_military = yes
 
-    unit = 2
     combat_width = -1
         infantry = {
             attack = 1
@@ -315,7 +316,6 @@ light_armament_7 = {
     year = 1790
     cost = 25200
     unciv_military = yes
-    unit = 1
 
         infantry = {
             attack = 2
@@ -348,7 +348,6 @@ light_armament_8 = {
     cost = 30200
     unciv_military = yes
 
-    unit = 2
     combat_width = -2
         infantry = {
             attack = 2
@@ -578,7 +577,7 @@ military_logistics = {
         default_organisation = 5
         supply_consumption = 0.20
     }
-    mobilisation_size = 0.05
+    mobilisation_size = 0.01
 
     ai_chance = {
         factor = 1.5
@@ -594,6 +593,7 @@ military_directionism = {
         default_organisation = 10
         supply_consumption = 0.20
     }
+    mobilisation_size = 0.01
     ai_chance = {
         factor = 8
     }

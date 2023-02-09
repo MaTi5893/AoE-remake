@@ -191,6 +191,10 @@ three_deckers = {
 		factor = 100
 		weapon_platforms = 1
 	}
+	modifier = {
+		factor = 5
+		naval_statistics = 1
+	}
     }
     effect = {
         activate_unit = ironclad
@@ -204,6 +208,10 @@ razees = {
         base = 0
 	modifier = {
 		factor = 100
+		naval_statistics = 1
+	}
+	modifier = {
+		factor = 5
 		weapon_platforms = 1
 	}
     }
@@ -222,6 +230,10 @@ seventy_four = {
             factor = 100
             main_armament = 1
         }
+	modifier = {
+	    factor = 5
+	    naval_logistics = 1
+	}
     }
     effect = {
         ironclad = {
@@ -240,8 +252,12 @@ heavy_frigate = {
     chance = {
         base = 0
         modifier = {
-            factor = 100
+            factor = 5
             advanced_naval_design = 1
+        }
+	modifier = {
+            factor = 100
+            naval_directionism = 1
         }
     }
     effect = {
@@ -277,10 +293,14 @@ limes = {
         oil_driven_ships = 1
     }
     chance = {
-        base = 0
+        base = 5
         modifier = {
-            factor = 100
+            factor = 25
             modern_naval_design = 1
+        }
+	modifier = {
+            factor = 10
+            naval_integration = 1
         }
     }
     effect = {
@@ -301,6 +321,10 @@ heavy_first_rate = {
             factor = 100
             naval_engineering_7 = 1
         }
+	modifier = {
+            factor = 5
+            naval_science_7 = 1
+        }
     }
     effect = {
         activate_unit = dreadnought
@@ -314,6 +338,10 @@ steam_boat = {
         modifier = {
             factor = 100
             naval_engineering_8 = 1
+        }
+	modifier = {
+            factor = 5
+            naval_science_8 = 1
         }
     }
     effect = {

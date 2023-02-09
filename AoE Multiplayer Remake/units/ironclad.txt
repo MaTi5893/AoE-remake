@@ -16,15 +16,16 @@ ironclad = { #Three-decker
     priority = 35
     max_strength = 100
     default_organisation = 175
-    maximum_speed = 6
+    maximum_speed = 10
     weighted_value = 6.0
 
 
     #Building Costs
     build_time = 360
     build_cost = {
-        steamer_convoy = 24  #24 warship
-        artillery = 20
+        steamer_convoy = 30  #24 warship
+        artillery = 15
+	explosives = 4
     }
     min_port_level = 3
     limit_per_port = 3
@@ -32,14 +33,14 @@ ironclad = { #Three-decker
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 0.5  #24 warship
+        steamer_convoy = 1  #24 warship
         artillery = 0.38
-		canned_food = 0.8
+	canned_food = 0.8
     }
 
     #Naval Abilties
     hull = 20
-    gun_power = 14
+    gun_power = 15
     fire_range = 0.6
     evasion = 0
 }

@@ -446,8 +446,8 @@ fuel_refinery = {
 steamer_shipyard = {
     template = factory_template
     input_goods = {
-        steel = 26.8        #120
-		clipper_shipyard = 3
+        steel = 9        #120
+	hardwood = 24
         lumber = 8        #8 (huhuh huhuh) total input+maint = 140
     }
     output_goods = steamer_convoy
@@ -485,6 +485,42 @@ luxury_clothes_factory = {
     bonus = {
         trigger = { trade_goods_in_state = silk }
         value = 0.15
+    }
+}
+
+luxury_clothes_factory = {
+    template = factory_template
+    input_goods = {
+        dye = 0.25    #3
+        silk = 5        #50    total input+maint = 62.825
+    }
+    output_goods = luxury_clothes
+    value = 2.5            #75
+    bonus = {
+        trigger = {
+            OR = {
+                has_building = dye_factory
+                trade_goods_in_state = dye
+            }
+        }
+        value = 0.1
+    }
+    bonus = {
+        trigger = { trade_goods_in_state = silk }
+        value = 0.15
+    }
+}
+
+fur_clothes_factory = {
+    template = factory_template
+    input_goods = {
+        fur = 12    #3 total input+maint = 62.825
+    }
+    output_goods = luxury_clothes
+    value = 6            #75
+    bonus = {
+        trigger = { trade_goods_in_state = fur }
+        value = 0.2
     }
 }
 
@@ -548,9 +584,10 @@ artillery_factory = {
 clipper_shipyard = {
     template = factory_template
     input_goods = {
-        fabric = 70        #162
-        lumber = 100        #81
-        steel = 20        #94        total input+maint = 346.825
+        fabric = 60        #162
+	hardwood = 8
+        lumber = 70        #81
+        steel = 6        #94        total input+maint = 346.825
     }
     output_goods = clipper_convoy
     is_coastal = yes
@@ -740,6 +777,23 @@ liquor_distillery = {
     }
 }
 
+rum_distillery = {
+    template = cheap_factory_template
+    input_goods = {
+        sugar = 12        #11   total input+maint = 26.6
+    }
+    output_goods = liquor
+    value = 10            #32
+    bonus = {
+        trigger = { has_building = glass_factory }
+        value = 0.15
+    }
+    bonus = {
+        trigger = { trade_goods_in_state = sugar }
+        value = 0.25
+    }
+}
+
 winery = {
     template = cheap_factory_template
     input_goods = {
@@ -912,7 +966,7 @@ coffee_plantation = {
 sugar_plantation = {
     template = RGO_template_farmers
     output_goods = sugar
-    value = 1.5
+    value = 2.2
     farm = yes
 }
 
@@ -989,7 +1043,7 @@ rubber_lodge = {
 fur_trapping_lodge = {
     template = RGO_template_labourers
     output_goods = fur
-    value = 7
+    value = 1.8
     farm = yes
 }
 
@@ -1024,7 +1078,7 @@ tea_plantation = {
 spice_plantation = {
     template = RGO_template_farmers
     output_goods = spices
-    value = 1.75
+    value = 2.3
     farm = yes
 }
 
@@ -1038,7 +1092,7 @@ timber_lodge = {
 hardwood_lodge = {
     template = RGO_template_labourers
     output_goods = hardwood
-    value = 16
+    value = 1.4
     farm = yes
 }
 
@@ -1215,8 +1269,8 @@ artisan_fuel = {
 
 artisan_steamer = {
     input_goods = {
-        steel = 22        #103.4
-		clipper_convoy = 3
+        steel = 9        #103.4
+	hardwood = 24
         lumber = 6        #6.6
         machine_parts = 0.05    #1.825 total input+maint = 112
     }
@@ -1244,6 +1298,24 @@ artisan_luxury_clothes = {
     }
     output_goods = luxury_clothes
     value = 2.2            #66
+
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_fur_clothes = {
+    input_goods = {
+        fur = 12    #3  total input+maint = 53
+    }
+    output_goods = luxury_clothes
+    value = 6            #66
 
 
     owner = {
@@ -1316,9 +1388,10 @@ artisan_artillery = {
 
 artisan_clipper = {
     input_goods = {
-        fabric = 25        #54
-        lumber = 100        #54
-        steel = 30        #47        total input+maint = 155
+        fabric = 20        #54
+        lumber = 70        #54
+	hardwood = 6
+        steel = 6        #47        total input+maint = 155
     }
     output_goods = clipper_convoy
     is_coastal = yes
@@ -1472,6 +1545,23 @@ artisan_liquor = {
     }
     output_goods = liquor
     value = 10            #64
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_rum = {
+    input_goods = {
+        sugar = 18        #23.2    total input+maint = 55
+    }
+    output_goods = liquor
+    value = 15            #64
 
     owner = {
         poptype = artisans
