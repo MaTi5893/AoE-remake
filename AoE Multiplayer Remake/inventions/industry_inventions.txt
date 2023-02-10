@@ -36,6 +36,8 @@ tractors = {
     effect = {
         rgo_goods_output = { cotton = 0.03 }
         rgo_goods_output = { coffee = 0.05 }
+	rgo_goods_output = { sugar = 0.03 }
+	rgo_goods_output = { spices = 0.03 }
         rgo_goods_output = { grain = 0.03 }
         rgo_goods_output = { opium = 0.03 }
         rgo_goods_output = { fruit = 0.03 }
@@ -149,6 +151,9 @@ sharp_n_roberts_power_loom = {
         rgo_goods_output = {
             wool = 0.2
         }
+	rgo_goods_output = {
+            fur = 0.15
+        }
     }
 }
 bouchon_paper_tape = {
@@ -171,6 +176,9 @@ bouchon_paper_tape = {
         # factory_goods_output = {
             # silk = 0.2
         # }
+	rgo_goods_output = {
+            fur = 0.15
+        }
         factory_goods_output = {
             fabric = 0.05
         }
@@ -223,6 +231,9 @@ mechanical_saw = {
         rgo_goods_output = {
             timber = 0.15
         }
+	rgo_goods_output = {
+            hardwood = 0.15
+        }
         rgo_goods_output = {
             tropical_wood = 0.1
         }
@@ -245,6 +256,9 @@ mechanical_precision_saw = {
         rgo_goods_output = {
             timber = 0.15
         }
+	rgo_goods_output = {
+            hardwood = 0.1
+        }
     }
 }
 hussey_n_mccormicks_reaping_machine = {
@@ -266,6 +280,12 @@ hussey_n_mccormicks_reaping_machine = {
         }
         rgo_goods_output = {
             fruit = 0.2
+        }
+	rgo_goods_output = {
+            sugar = 0.1
+        }
+	rgo_goods_output = {
+            spices = 0.1
         }
         rgo_goods_output = {
             tea = 0.1
@@ -291,6 +311,12 @@ pitts_threshing_machine = {
         }
         rgo_goods_output = {
             fruit = 0.2
+        }
+	rgo_goods_output = {
+            sugar = 0.1
+        }
+	rgo_goods_output = {
+            spices = 0.1
         }
         rgo_goods_output = {
             tea = 0.2
@@ -318,6 +344,9 @@ mechanized_slaughtering_block = {
         rgo_goods_output = {
             wool = 0.2
         }
+	rgo_goods_output = {
+            fur = 0.15
+        }
     }
 }
 
@@ -341,6 +370,9 @@ vaucanson_loom = {
         # }
         rgo_goods_output = {
             wool = 0.2
+        }
+	rgo_goods_output = {
+            fur = 0.2
         }
         rgo_goods_output = {
             silk = 0.05
@@ -491,6 +523,9 @@ electric_machinery = {
         rgo_goods_output = {
             timber = 0.15
         }
+	rgo_goods_output = {
+            hardwood = 0.2
+        }
         factory_goods_output = {
             machine_parts = 0.02
         }
@@ -518,6 +553,12 @@ drying_techniques = {
         }
         rgo_goods_output = {
             opium = 0.2
+        }
+	rgo_goods_output = {
+            sugar = 0.2
+        }
+        rgo_goods_output = {
+            spices = 0.2
         }
     }
 }
@@ -561,6 +602,9 @@ cartwright_loom = {
         }
         rgo_goods_output = {
             wool = 0.2
+        }
+	rgo_goods_output = {
+            fur = 0.1
         }
         rgo_goods_output = {
             silk = 0.2
@@ -662,6 +706,12 @@ refrigerator_technology = {
         factory_goods_output = {
             wine = 0.02
         }
+	rgo_goods_output = {
+            sugar = 0.2
+        }
+        rgo_goods_output = {
+            spices = 0.2
+        }
     }
 }
 #mechanization_8
@@ -681,6 +731,9 @@ jacquard_power_loom = {
     effect = {
         rgo_goods_output = {
             wool = 0.2
+        }
+	rgo_goods_output = {
+            fur = 0.1
         }
         rgo_goods_output = {
             silk = 0.2

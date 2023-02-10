@@ -60,12 +60,18 @@ objectTypes = {
 
 	EMFXActorType = {
 		name = "PolishGCInfantry"
-		actorfile = "gfx\anims\Polish_1800.xac"
+		actorfile = "gfx\anims\plc_1700.xac"
 		
 		idle   = "gfx\anims\Generic_Western_1700_Idle.xsm"
 		move   = "gfx\anims\Generic_Western_1700_Move.xsm"
 		attack = "gfx\anims\Generic_Western_1700_Attack.xsm"
 		scale = 5.9
+		
+		attach = {
+			name = "InfantryShadowblob"
+			node = "Root"
+			attachId = 2
+		}
 	}
 
 	EMFXActorType = {
