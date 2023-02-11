@@ -584,7 +584,7 @@ artillery_factory = {
 clipper_shipyard = {
     template = factory_template
     input_goods = {
-        fabric = 60        #162
+        fabric = 45        #162
 	hardwood = 8
         lumber = 70        #81
         steel = 6        #94        total input+maint = 346.825
@@ -945,7 +945,7 @@ RGO_template_labourers = {
 cattle_ranch = {
     template = RGO_template_farmers
     output_goods = cattle
-    value = 1.8
+    value = 1.7
     farm = yes
 }
 
@@ -973,14 +973,14 @@ sugar_plantation = {
 cotton_plantation = {
     template = RGO_template_farmers
     output_goods = cotton
-    value = 2.2
+    value = 2.3
     farm = yes
 }
 
 dye_plantation = {
     template = RGO_template_farmers
     output_goods = dye
-    value = 0.44
+    value = 0.75
     farm = yes
 }
 
@@ -994,7 +994,7 @@ fishing_wharf = {
 grain_farm = {
     template = RGO_template_farmers
     output_goods = grain
-    value = 1.8
+    value = 2
     farm = yes
 }
 
@@ -1022,7 +1022,7 @@ opium_plantation = {
 orchard = {
     template = RGO_template_farmers
     output_goods = fruit
-    value = 2.8
+    value = 3.3
     farm = yes
 }
 
@@ -1092,7 +1092,7 @@ timber_lodge = {
 hardwood_lodge = {
     template = RGO_template_labourers
     output_goods = hardwood
-    value = 1.4
+    value = 1.5
     farm = yes
 }
 
@@ -1106,7 +1106,7 @@ tobacco_plantation = {
 tropical_wood_lodge = {
     template = RGO_template_labourers
     output_goods = tropical_wood
-    value = 4
+    value = 5
     farm = yes
 }
 
@@ -1388,7 +1388,7 @@ artisan_artillery = {
 
 artisan_clipper = {
     input_goods = {
-        fabric = 20        #54
+        fabric = 16        #54
         lumber = 70        #54
 	hardwood = 6
         steel = 6        #47        total input+maint = 155
