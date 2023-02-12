@@ -4278,10 +4278,8 @@ conquest_low = {
     can_use = {
 		NOT = { has_country_modifier = neutrality }
 		THIS = { NOT = { has_country_modifier = neutrality } }
-		OR = {
-			NOT = {    total_pops = 400000 }
-			AND = { has_country_flag = hre_member ai = no }
-		}
+		NOT = {    total_pops = 400000 }
+	
         NOT = { is_our_vassal = THIS }
         # only one state or unciv
 		OR  = {
