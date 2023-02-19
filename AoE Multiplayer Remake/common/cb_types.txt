@@ -464,7 +464,7 @@ restore_spanish_empire = {
     war_name = WAR_SPANISH_EMPIRE_NAME
 
     on_add = {
-        badboy = 4
+        badboy = 0
         move_issue_percentage = {
             from = jingoism
             to = pro_military
