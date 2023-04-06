@@ -227,6 +227,104 @@ political_decisions = {
 	##Bavaria##
 	###########
 
+	unite_wittelsbach_territories = {
+		picture = crown
+		potential = {
+			tag = BAV
+			OR = {
+			KOL = { exists = yes }
+			LIG = { exists = yes }
+			PAL = { exists = yes }
+			}
+		}
+		allow = {
+			war_policy = jingoism
+			war = no
+			OR = {
+				KOL = {
+					relation = {
+						who = THIS
+						value = 120
+					}
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+				LIG = {
+					relation = {
+						who = THIS
+						value = 120
+					}
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+				PAL = {
+					relation = {
+						who = THIS
+						value = 150
+					}
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					tag = KOL
+					war = no
+					relation = { who = THIS value = 120 }
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+				annex_to = THIS
+				KOL = { all_core = { add_core = THIS } }
+				BAV = { badboy = 5 }
+			}
+			random_country = {
+				limit = {
+					tag = LIG
+					war = no
+					relation = { who = THIS value = 120 }
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+				annex_to = THIS
+				LIG = { all_core = { add_core = THIS } }
+				BAV = { badboy = 5 }
+			}
+			random_country = {
+				limit = {
+					tag = PAL
+					war = no
+					relation = { who = THIS value = 150 }
+					OR = {
+					in_sphere = BOR
+					in_sphere = FRA
+					in_sphere = BAV
+					}
+				}
+				annex_to = THIS
+				PAL = { all_core = { add_core = THIS } }
+				BAV = { badboy = 10 }
+			}
+		}
+	}
+	
 	declare_the_kingdom_of_bavaria = {
 		picture = crown
 		potential = {
@@ -241,6 +339,7 @@ political_decisions = {
 			war_policy = jingoism
 		}
 		effect = {
+			add_accepted_culture = north_german
 			add_core = 592
 			add_core = 598
 			add_core = 597

@@ -159,34 +159,34 @@ party_issues = {
             is_jingoism = yes
             cb_generation_speed_modifier = 0.3
             mobilization_impact = 4
-            org_regain = 0.5
-            reinforce_speed = 0.5
+            org_regain = 0.25
+			reinforce_speed = 0.25
         }
         pro_military = {
             max_military_spending = 1.0
             war_exhaustion_effect = 0.7
             cb_generation_speed_modifier = 0.2
             mobilization_impact = 3
-            org_regain = 0.25
-            reinforce_speed = 0.25
+            org_regain = 0.15
+			reinforce_speed = 0.15
         }
         anti_military = {
             max_military_spending = 0.5
-            supply_consumption = -0.25
+            supply_consumption = -0.1
             war_exhaustion_effect = 1.2
             cb_generation_speed_modifier = -0.2
             mobilization_impact = 2
-            org_regain = -0.25
-            reinforce_speed = -0.25
+            org_regain = -0.15
+			reinforce_speed = -0.15
         }
         pacifism = {
             max_military_spending = 0.4
-            supply_consumption = -0.5
+            supply_consumption = -0.2
             war_exhaustion_effect = 1.5
             cb_generation_speed_modifier = -0.4
             mobilization_impact = 1
-            org_regain = -0.5
-            reinforce_speed = -0.5
+            org_regain = -0.25
+			reinforce_speed = -0.25
 			badboy = -0.02
             core_pop_consciousness_modifier = -0.1
         }
@@ -851,31 +851,33 @@ social_reforms = {
         trinket_pensions = { #marginally relevant
             land_organisation = 0.01
             leadership_modifier = 0.05
-            supply_consumption = 0.10
             org_regain = 0.05
+			reinforce_speed = 0.04
             mobilisation_size = 0.01
         }
         low_pensions = { #slightly influential
             land_organisation = 0.02
             leadership_modifier = 0.10
-            supply_consumption = 0.20
             org_regain = 0.10
 			culture_tech_research_bonus = -0.05
+			reinforce_speed = 0.08
             mobilisation_size = 0.015
         }
         acceptable_pensions = { #influential
             land_organisation = 0.03
             leadership_modifier = 0.30
-            supply_consumption = 0.45
             org_regain = 0.15
+			reinforce_speed = 0.12
+			navy_tech_research_bonus = -0.05
 			culture_tech_research_bonus = -0.1
             mobilisation_size = 0.02
         }
         good_pensions = { #very influential
             land_organisation = 0.04
             leadership_modifier = 0.40
-            supply_consumption = 0.60
             org_regain = 0.20
+			reinforce_speed = 0.15
+			navy_tech_research_bonus = -0.1
 			culture_tech_research_bonus = -0.15
             mobilisation_size = 0.025
 

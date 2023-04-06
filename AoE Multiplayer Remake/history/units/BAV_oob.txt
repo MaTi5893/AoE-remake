@@ -17,6 +17,21 @@ leader = {
     prestige = 0.1
 }
 
+LIG = {
+    value = 75
+    military_access = yes
+}
+
+KOL = {
+    value = 90
+    military_access = yes
+}
+
+PAL = {
+    value = 45
+    military_access = yes
+}
+
 army = {
     name = "I. Korps"
     location = 599
@@ -54,5 +69,29 @@ army = {
         name = "8. Kgl. Bayer. Infanteriebrigade"
         type = hussar
         home = 599
+    }
+
+    regiment = {
+        name= "9. Kgl. Bayer. Infanteriebrigade"
+        type = infantry
+        home = 600
+    }
+
+    regiment = {
+        name= "10. Kgl. Bayer. Infanteriebrigade"
+        type = infantry
+        home = 600
+    }
+
+    regiment = {
+        name= "4. Kgl. Bayer. Infanteriebrigade"
+        type = infantry
+        home = 601
+    }
+
+    regiment = {
+        name= "2. Kgl. Bayer. Infanteriebrigade"
+        type = infantry
+        home = 602
     }
 }

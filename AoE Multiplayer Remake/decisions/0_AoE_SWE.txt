@@ -342,6 +342,26 @@ political_decisions = {
 		}
 	}
 	
+	attempt_dethrone_peter = {
+		picture = peter_the_great
+		potential = {
+			primary_culture = swedish
+			NOT = {
+				RUS = { exists = yes } 
+				has_country_flag = attempted_dethrone_peter
+			}
+			TOR = { has_country_modifier = peter_the_great }
+		}
+		allow = {
+			war_with = TOR
+			1008 = { controlled_by = THIS }
+		}
+		effect = {
+			country_event = 1721008
+			set_country_flag = attempted_dethrone_peter
+		}
+	}
+	
 	expand_livonia = { #deluge 2.0
 		picture = danzig
 		potential = {

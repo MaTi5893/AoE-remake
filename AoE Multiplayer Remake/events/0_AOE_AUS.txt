@@ -370,6 +370,57 @@ country_event = {
 #		}
 #	}
 #}
+country_event = {
+	id = 174512
+	title = "Expulsion of Joseph Clemens of Bavaria"
+	desc = "EVTDESC174512"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		OR = {
+		war_with = BOR
+		war_with = SPC
+		}
+		is_greater_power = yes
+		KOL = {
+			in_sphere = BOR
+			any_owned_province = {
+					province_id = 575
+					country_units_in_province = AUS
+					}
+			}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Deprive him of his lands and place an Imperial ban."
+		 AUS = {
+				diplomatic_influence = {
+					who = KOL
+					value = 400
+				}
+				relation = {
+					who = KOL
+					value = 120
+				}
+			}
+		BOR = {
+				diplomatic_influence = {
+					who = KOL
+					value = -400
+				}
+				relation = {
+					who = KOL
+					value = -120
+				}
+			}
+	}
+}
 #####################
 ##Habsburg Monarchy##
 #####################

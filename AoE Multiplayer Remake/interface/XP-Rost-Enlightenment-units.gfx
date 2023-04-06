@@ -50,4 +50,43 @@ objectTypes = {
 		scale = 5.9
 	}
 	
+	EMFXActorType = {
+		name = "SavoyardGCInfantry"
+		actorfile = "gfx\anims\Savoia_1700.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1700_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1700_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1700_Attack.xsm"
+		scale = 5.9
+	}
+	
+	EMFXActorType = {
+		name = "SavoyardGCInfantry2"
+		actorfile = "gfx\anims\Italian_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
+	
+    EMFXActorType = {
+		name = "RevolutionaryFrenchGCInfantry"
+		actorfile = "gfx\anims\Revolutionaryfrench_1700.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1700_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1700_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1700_Attack.xsm"
+		scale = 5.9
+	}
+	
+	EMFXActorType = {
+		name = "RevolutionaryFrenchGCInfantry2"
+		actorfile = "gfx\anims\Revolutionaryfrench_1800.xac"
+		
+		idle   = "gfx\anims\Generic_Western_1800_Idle.xsm"
+		move   = "gfx\anims\Generic_Western_1800_Move.xsm"
+		attack = "gfx\anims\Generic_Western_1800_Attack.xsm"
+		scale = 5.9
+	}
 }

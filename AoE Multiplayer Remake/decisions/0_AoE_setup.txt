@@ -73,7 +73,30 @@ political_decisions = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 0.65
+					reduce_pop = 0.75
+				}
+			}
+		}
+	}
+	
+	morocco_pop_buff = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			MOR = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = maghrebi
+							has_pop_culture = berber
+							has_pop_culture = western_african
+						}
+					}
+					reduce_pop = 2.2
 				}
 			}
 		}
@@ -105,7 +128,7 @@ political_decisions = {
 				limit = {
 					culture = tatar
 				}
-				reduce_pop = 3
+				reduce_pop = 1.5
 			}
 			TOR = {
 				any_pop = {
@@ -167,8 +190,15 @@ political_decisions = {
 					reduce_pop = 1.66
 				}
 				any_pop = {
+				limit = {
+					culture = tatar
+				}
+				reduce_pop = 2.2
+				}
+				any_pop = {
 					limit = {
 						NOT = { culture = turkish }
+						NOT = { culture = tatar }
 						type = soldiers
 					}
 					reduce_pop = 0.1

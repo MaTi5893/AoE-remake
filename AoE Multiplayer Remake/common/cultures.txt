@@ -5,7 +5,7 @@ germanic = {
     leader = european
     unit = EuropeanGC
     north_german = {
-        color = { 90 60 60 }
+        color = { 60 20 20 }
         first_names = { Adelbert Adolf Albrecht Alexander Alfred August Bernhard Burkhard Dieter
         Eduard Edwin Erwin Erich Ernst Florian Franz Friedrich Fritz Georg Günther
         Gustav Hasso Heinrich Helmuth Hermann Hugo Joachim Johann Jürgen Karl
@@ -21,7 +21,7 @@ germanic = {
         "von Wrangel" "von Zieten" "zur Lippe" "von Roon" }
     }
     south_german = {
-        color = { 110 80 80 } #{ 90 60 60 }
+        color = { 120 100 100 } #{ 90 60 60 }
         first_names = { Adolf Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian
         Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried
         Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph
@@ -336,7 +336,7 @@ italian = {
     leader = european
     unit = ItalianGC
     north_italian = {
-        color = {49 170 74}
+        color = {36 226 207}
         first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
         Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
         Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
@@ -350,7 +350,7 @@ italian = {
         Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
     }
     south_italian = {
-        color = {41 155 61}
+        color = {109 55 179}
         first_names = { Alessandro Armando Augusto Carlo Cesare Corrado Domenico Enrico Fabio Fabrizio
         Ferdinando Francesco Gaetano Giacomo Giovanni Giulio Giuseppe Guglielmo Leopoldo Lorenzo
         Ludovico Marcantonio Marino Mario Matteo Nicola Orazio Sigismondo Tommasso Vincenzo }
@@ -641,7 +641,7 @@ south_slavic = {
         }
     }
     bosniak = {
-        color = {30 200 200}
+        color = {120 140 110}
         first_names = { Abdulvehhab Adnan Ahmed Ali Alija Asim Atif Beriz Dzemal Dzemaludin
         Elvir Enver Fikret Fuad Gazi Hakija Hamdija Hamid Haris Hasan
         Husein Irfan Isa Ivan Izet Jusuf Mehmed Meho Mirsad Muhamed
@@ -787,7 +787,7 @@ polish_culture_group = {
     unit = AustriaHungaryGC
 
     polish = {
-        color = {255 120 120}
+        color = { 235  0  26 }
         first_names = { Adam Aleksander Antoni Boleslaw Bonawentura Bronislaw Dezydery Edmund Edward Emil
         Eustachy Felicjan Franciszek Gustaw Henryk Ignacy Jakub Jan Jedrzej Józef
         Juliusz Karol Kazimierz Klemens Konstanty Lech Leon Leopold Lucjan Ludwik

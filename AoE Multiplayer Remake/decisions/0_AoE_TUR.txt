@@ -207,7 +207,7 @@ political_decisions = {
 				duration = 1825
 			}
 			add_accepted_culture = mashriqi
-			add_accepted_culture = bulgarian
+			add_accepted_culture = kurdish
 			years_of_research = 0.5
 		}
 		ai_will_do = {					
@@ -310,6 +310,42 @@ political_decisions = {
 		}
 	}
 
+	reclaim_podolia = {
+		picture = steppes_cossack
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = reclaimed_podolia }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				nationalism_n_imperialism = 1
+				AND = {
+					state_n_government = 1
+					NOT = { has_country_modifier = janisseries_influence }
+				}
+			}
+			is_greater_power = yes
+			owns = 968
+		}
+		effect = {
+			set_country_flag = reclaimed_podolia
+			 ZZH = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			954 = { add_core = THIS }
+			955 = { add_core = THIS }
+			960 = { add_core = THIS }
+			add_accepted_culture = cossack
+			badboy = 6
+		}
+		ai_will_do = {					
+			factor = 1
+		}
+	}
+	
 	end_romanian_principalities = {
 		picture = map_moldavia
 		potential = {

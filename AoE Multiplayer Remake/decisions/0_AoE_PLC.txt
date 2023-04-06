@@ -516,4 +516,60 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	polonize_wild_fields = {
+        picture = crimea
+        potential = {
+            primary_culture = polish
+            NOT = { has_country_flag = polonization_wild_fields }
+            exists = yes
+        }
+        allow = {
+			OR = {
+            war_policy = jingoism
+			war_policy = pro_military
+			}
+			owns = 960
+			OR = {
+				nationalism_n_imperialism = 1
+				AND = {
+					state_n_government = 1
+					has_country_flag = leszczynski_rule
+				}
+			}
+        }
+        effect = {
+            set_country_flag = polonization_wild_fields
+			add_accepted_culture = cossack
+			add_accepted_culture = tatar
+            ZZH = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+            RUS_980 = { add_core = THIS }
+            RUS_965 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { owns = RUS_980 }
+					}
+				}
+				owner = {
+					badboy = 5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { owns = RUS_965 }
+					}
+				}
+				owner = {
+					badboy = 5
+				}
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
 }

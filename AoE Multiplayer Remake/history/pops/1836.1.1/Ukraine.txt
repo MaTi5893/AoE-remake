@@ -943,9 +943,15 @@
     }
 
     farmers = {
+        culture = cossack
+        religion = orthodox
+        size = 20100
+    }
+
+    farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 96100
+        size = 76100
     }
 
     aristocrats = {
@@ -1559,10 +1565,16 @@
         size = 4200
     }
 
+     farmers = {
+        culture = cossack
+        religion = orthodox
+        size = 14425
+    }
+
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 81425
+        size = 67425
     }
 
     aristocrats = {
@@ -2037,7 +2049,13 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 41000
+        size = 54000
+    }
+
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 15000
     }
 
     clergymen = {
@@ -2171,7 +2189,7 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 4575
+        size = 9575
     }
 
     aristocrats = {
@@ -2198,10 +2216,10 @@
         size = 3000
     }
 
-    farmers = {
+    slaves = {
         culture = ukrainian
         religion = orthodox
-        size = 1250
+        size = 5250
     }
 
     clergymen = {
@@ -2329,7 +2347,13 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 7950
+        size = 12950
+    }
+
+    slaves = {
+       culture = ukrainian
+        religion = orthodox
+        size = 6950
     }
 
     aristocrats = {
@@ -2433,7 +2457,13 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 35375
+        size = 65375
+    }
+
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 14000
     }
 
     aristocrats = {
@@ -2593,7 +2623,7 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 32725
+        size = 22725
     }
 
     farmers = {
@@ -2602,10 +2632,10 @@
         size = 130
     }
 
-    farmers = {
+    slaves = {
         culture = ukrainian
         religion = orthodox
-        size = 130
+        size = 11030
     }
 
     farmers = {
@@ -2793,13 +2823,19 @@
     farmers = {
         culture = tatar
         religion = sunni
-        size = 91000
+        size = 62000
+    }
+
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 36000
     }
 
     farmers = {
-        culture = tatar
-        religion = sunni
-        size = 15000
+       	culture = ukrainian
+        religion = orthodox
+        size = 8000
     }
 
     aristocrats = {
@@ -2912,7 +2948,7 @@
         size = 300
     }
 
-    farmers = {
+    slaves = {
         culture = ukrainian
         religion = orthodox
         size = 7375
@@ -3256,6 +3292,12 @@
         size = 2325
     }
 
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 7000
+    }
+
     soldiers = {
         culture = tatar
         religion = sunni
@@ -3392,6 +3434,12 @@
         size = 150
     }
 
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 8000
+    }
+
     farmers = {
         culture = ukrainian
         religion = orthodox
@@ -3470,6 +3518,12 @@
         culture = tatar
         religion = sunni
         size = 2550
+    }
+
+    slaves = {
+       	culture = ukrainian
+        religion = orthodox
+        size = 12000
     }
 
     farmers = {

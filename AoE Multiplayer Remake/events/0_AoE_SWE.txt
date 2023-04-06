@@ -245,22 +245,7 @@ country_event = {
     title = "Moscow Captured!"
     desc = "EVTDESC1721008"
 	picture = poltavas_battle
-    fire_only_once = yes
-	
-	trigger = {
-		tag = SWE
-		war_with = TOR
-		TOR = {
-			1008 = {
-				controlled_by = THIS
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
+	is_triggered_only = yes
 	
 	option = {
 		name = "May Tsar Peter tremble before us!"
@@ -269,5 +254,34 @@ country_event = {
 			type = dethrone_peter
 			months = 60
 		}
+	}
+}
+country_event = {
+    id = 1721009
+    title = "Fall of Stettin!"
+    desc = "EVTDESC1721010"
+	fire_only_once = yes
+
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	trigger = {
+		owns = 322
+        322 = { is_capital = yes }
+		AND = {
+				NOT = { owns = 546 }
+				NOT = { owns = 547 }
+				NOT = { owns = 548 }
+            }
+		primary_culture = swedish
+    }
+	
+	option = {
+		name = "Perhaps our ambitions in Pommerania were not meant to be."
+		prestige = -5
+		remove_core = 546
+		remove_core = 547
+		remove_core = 548
 	}
 }

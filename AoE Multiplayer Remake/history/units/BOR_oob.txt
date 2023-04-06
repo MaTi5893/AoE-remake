@@ -46,9 +46,23 @@ PLC = {
 }
 
 BAV = {
-    value = 75
+    value = 140
     level = 5
     influence_value = 0
+}
+
+LIG = {
+    value = 80
+    level = 5
+    influence_value = 0
+    military_access = yes
+}
+
+KOL = {
+    value = 60
+    level = 5
+    influence_value = 0
+    military_access = yes
 }
 
 MOD = {
@@ -57,8 +71,14 @@ MOD = {
     influence_value = 0
 }
 
-MOD = {
-    value = 75
+PAP = {
+    value = 110
+    level = 4
+    military_access = yes
+}
+
+PAL = {
+    value = 35
     level = 3
     influence_value = 0
 }
