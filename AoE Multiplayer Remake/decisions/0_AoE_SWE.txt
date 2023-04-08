@@ -613,6 +613,11 @@ political_decisions = {
 				add_core = SCA
 				remove_core = THIS
 			}
+			FIN = {
+				all_core = {
+					add_core = SCA
+				}
+			}
 			change_tag = SCA
 			add_accepted_culture = swedish
 			add_accepted_culture = danish
