@@ -22,7 +22,7 @@ dreadnought = { #Heavy First Rate
     #Building Costs
     build_time = 390
     build_cost = {
-        steamer_convoy = 80
+        steamer_convoy = 60
         artillery = 30
         canned_food = 20
     }
@@ -32,7 +32,8 @@ dreadnought = { #Heavy First Rate
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 4.0  #102
+        steamer_convoy = 2.2  #102
+		clipper_convoy = 1.0
         artillery = 1.5         #50
         #canned_food = 0.5     #5
         #telephones = 0.2      #3.2

@@ -238,7 +238,7 @@ breech_loaded_rifles = {
     cost = 10800
 
     activate_unit = guard
-    combat_width = 4
+    combat_width = 2
     unciv_military = yes
 
 	army_base = {
@@ -255,7 +255,7 @@ machine_guns = {
     cost = 14400
     unciv_military = yes
 
-    combat_width = -6
+    combat_width = -8
     #colonial_life_rating = -10
     ai_chance = {
         factor = 6
@@ -273,7 +273,7 @@ bolt_action_rifles = {
 		attack = 2
 		defence = 2
 	}
-    combat_width = -1
+    combat_width = -2
 
     ai_chance = {
         factor = 3
@@ -285,7 +285,7 @@ modern_divisional_structure = {
     cost = 21600
     unciv_military = yes
 
-    combat_width = -1
+    combat_width = -2
         infantry = {
             attack = 1
             supply_consumption = 0.25
@@ -317,6 +317,7 @@ light_armament_7 = {
     cost = 25200
     unciv_military = yes
 
+    combat_width = -2
         infantry = {
             attack = 2
             supply_consumption = 0.20

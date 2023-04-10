@@ -26,7 +26,7 @@ commerce_raider = { #Steamboat
         artillery = 25
         canned_food = 20
         explosives = 5
-        clipper_convoy = 45
+        clipper_convoy = 50
     }
     min_port_level = 6
     limit_per_port = 1
@@ -34,7 +34,7 @@ commerce_raider = { #Steamboat
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 1.5 #origionally 12 steamers
+        clipper_convoy = 3.4 #origionally 12 steamers
         artillery = 1.2     #6
     }
 

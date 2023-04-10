@@ -15,6 +15,11 @@ naval_base = 2
         building = clipper_shipyard
         upgrade = yes
     }
+    state_building = {
+    level = 1
+    building = hardwood_mill
+    upgrade = yes
+    }
 }
 1792.01.01 = {
 owner = FRA

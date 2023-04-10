@@ -78,7 +78,7 @@ country_event = {
         name = "EVTOPTA21010"
         random_state = {
             poor_strata = {
-                reduce_pop = 0.98
+                reduce_pop = 0.99
             }
         }
         add_tax_relative_income    = -100
@@ -89,7 +89,7 @@ country_event = {
         name = "EVTOPTB21010"
         random_state = {
             poor_strata = {
-                reduce_pop = 0.95
+                reduce_pop = 0.97
                 militancy = 1
             }
         }
@@ -157,7 +157,7 @@ country_event = {
         name = "EVTOPTA21020"
         random_state = {
             any_pop = {
-                reduce_pop = 0.95
+                reduce_pop = 0.97
             }
         }
     }
@@ -166,7 +166,7 @@ country_event = {
         name = "EVTOPTB21020"
         random_state = {
             any_pop = {
-                reduce_pop = 0.98
+                reduce_pop = 0.99
                 militancy = 2
             }
         }
@@ -297,7 +297,7 @@ country_event = {
         name = "EVTOPTA21040"
         random_state = {
             any_pop = {
-                reduce_pop = 0.95
+                reduce_pop = 0.98
                 consciousness = 2
             }
         }
@@ -307,7 +307,7 @@ country_event = {
         name = "EVTOPTB21040"
         random_state = {
             any_pop = {
-                reduce_pop = 0.92
+                reduce_pop = 0.96
                 militancy = -1
             }
         }

@@ -596,6 +596,25 @@ lumber_mill = {
     pop_build_factory = yes
 }
 
+hardwood_mill = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 20
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = hardwood_mill
+    pop_build_factory = yes
+}
+
 fabric_factory = {
     type = factory
     on_completion = factory
@@ -720,9 +739,9 @@ naval_base = {
     {
         timber = 800
         lumber = 600
-        cement = 800
-        steel = 800
-        machine_parts = 60
+        cement = 500
+        steel = 400
+        machine_parts = 50
     }
     time = 400
     naval_capacity = 1

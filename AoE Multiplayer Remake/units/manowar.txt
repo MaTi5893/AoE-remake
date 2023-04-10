@@ -23,7 +23,7 @@ manowar = { #Two-Decker
     #Building Costs
     build_time = 360
     build_cost = {
-        clipper_convoy = 20
+        clipper_convoy = 15
         artillery = 15
         canned_food = 8
         explosives = 5
@@ -34,13 +34,13 @@ manowar = { #Two-Decker
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.15 #0.24
-        artillery = 0.08 #0.16
+        clipper_convoy = 0.2 #0.24
+        artillery = 0.1 #0.16
     }
 
     #Naval Abilties
     hull = 10
-    gun_power = 7.5
+    gun_power = 8
     fire_range = 0.55
     evasion = 0
 }

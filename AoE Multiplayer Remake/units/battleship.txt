@@ -22,18 +22,19 @@ battleship = { #Seventy-Four
     #Building Costs
     build_time = 375
     build_cost = {
-        steamer_convoy = 50
+        steamer_convoy = 35
         artillery = 20
         canned_food = 10
         explosives = 6
     }
     min_port_level = 4
-    limit_per_port = 4
+    limit_per_port = 6
     supply_consumption_score = 0
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 2.5
+        steamer_convoy = 1.05
+		clipper_convoy = 0.75
         artillery = 1
         canned_food = 1.2
     }

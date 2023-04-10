@@ -446,13 +446,13 @@ fuel_refinery = {
 steamer_shipyard = {
     template = factory_template
     input_goods = {
-        steel = 9        #120
-	hardwood = 24
-        lumber = 8        #8 (huhuh huhuh) total input+maint = 140
+        steel = 10        #120
+		hardwood = 20
+        lumber = 30        #8 (huhuh huhuh) total input+maint = 140
     }
     output_goods = steamer_convoy
     is_coastal = yes
-    value = 2.5            #150
+    value = 12            #150
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.125
@@ -460,6 +460,14 @@ steamer_shipyard = {
     bonus = {
         trigger = { trade_goods_in_state = coal }
         value = 0.125
+    }
+	bonus = {
+        trigger = { has_building = hardwood_mill }
+        value = 0.2
+    }
+    bonus = {
+        trigger = { trade_goods_in_state = timber }
+        value = 0.05
     }
 }
 
@@ -584,14 +592,14 @@ artillery_factory = {
 clipper_shipyard = {
     template = factory_template
     input_goods = {
-        fabric = 45        #162
-	hardwood = 8
-        lumber = 70        #81
-        steel = 6        #94        total input+maint = 346.825
+        fabric = 25        #162
+		hardwood = 10
+        lumber = 40        #81
+        steel = 4        #94        total input+maint = 346.825
     }
     output_goods = clipper_convoy
     is_coastal = yes
-    value = 15            #370
+    value = 18            #370
     bonus = {
         trigger = { has_building = fabric_factory }
         value = 0.1
@@ -599,6 +607,10 @@ clipper_shipyard = {
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.1
+    }
+	bonus = {
+        trigger = { has_building = hardwood_mill }
+        value = 0.2
     }
     bonus = {
         trigger = { trade_goods_in_state = timber }
@@ -825,6 +837,25 @@ lumber_mill = {
     bonus = {
         trigger = { trade_goods_in_state = timber }
         value = 0.25
+    }
+}
+
+hardwood_mill = {
+    template = factory_template
+    input_goods = {
+		iron = 12
+        timber = 100        #90    total input+maint = 100
+    }
+    output_goods = hardwood
+
+    value = 50           #110
+    bonus = {
+        trigger = { trade_goods_in_state = timber }
+        value = 0.25
+    }
+	 bonus = {
+        trigger = { trade_goods_in_state = iron }
+        value = 0.2
     }
 }
 
@@ -1089,12 +1120,12 @@ timber_lodge = {
     farm = yes
 }
 
-hardwood_lodge = {
-    template = RGO_template_labourers
-    output_goods = hardwood
-    value = 1.5
-    farm = yes
-}
+#hardwood_lodge = {
+#    template = RGO_template_labourers
+#    output_goods = hardwood
+#    value = 1.5
+#    farm = yes
+#}
 
 tobacco_plantation = {
     template = RGO_template_farmers
@@ -1269,14 +1300,14 @@ artisan_fuel = {
 
 artisan_steamer = {
     input_goods = {
-        steel = 9        #103.4
-	hardwood = 24
-        lumber = 6        #6.6
-        machine_parts = 0.05    #1.825 total input+maint = 112
+        steel = 6        #103.4
+		hardwood = 12
+        lumber = 20        #6.6
+        #1.825 total input+maint = 112
     }
     output_goods = steamer_convoy
     is_coastal = yes
-    value = 2.0            #120
+    value = 6.0            #120
 
     owner = {
         poptype = artisans
@@ -1388,14 +1419,14 @@ artisan_artillery = {
 
 artisan_clipper = {
     input_goods = {
-        fabric = 16        #54
-        lumber = 70        #54
-	hardwood = 6
-        steel = 6        #47        total input+maint = 155
+        fabric = 15        #54
+        lumber = 30        #54
+		hardwood = 6
+        steel = 3        #47        total input+maint = 155
     }
     output_goods = clipper_convoy
     is_coastal = yes
-    value = 7.5            #175
+    value = 9            #175
 
     owner = {
         poptype = artisans
@@ -1601,6 +1632,44 @@ artisan_lumber = {
     output_goods = lumber
 
     value = 130            #110
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_timber_hardwood = {
+    input_goods = {
+		iron = 8
+        timber = 80        #90    total input+maint = 100
+    }
+    output_goods = hardwood
+
+    value = 38            #110
+
+    owner = {
+        poptype = artisans
+        effect = output
+    }
+
+    type = artisan
+
+    workforce = 10000
+}
+
+artisan_tropical_hardwood = {
+    input_goods = {
+		iron = 2
+        tropical_wood = 20        #90    total input+maint = 100
+    }
+    output_goods = hardwood
+
+    value = 26            #110
 
     owner = {
         poptype = artisans

@@ -36,8 +36,8 @@ tractors = {
     effect = {
         rgo_goods_output = { cotton = 0.03 }
         rgo_goods_output = { coffee = 0.05 }
-	rgo_goods_output = { sugar = 0.03 }
-	rgo_goods_output = { spices = 0.03 }
+		rgo_goods_output = { sugar = 0.03 }
+		rgo_goods_output = { spices = 0.03 }
         rgo_goods_output = { grain = 0.03 }
         rgo_goods_output = { opium = 0.03 }
         rgo_goods_output = { fruit = 0.03 }
@@ -231,8 +231,8 @@ mechanical_saw = {
         rgo_goods_output = {
             timber = 0.15
         }
-	rgo_goods_output = {
-            hardwood = 0.15
+		factory_goods_output = {
+            hardwood = 0.05
         }
         rgo_goods_output = {
             tropical_wood = 0.1
@@ -256,8 +256,8 @@ mechanical_precision_saw = {
         rgo_goods_output = {
             timber = 0.15
         }
-	rgo_goods_output = {
-            hardwood = 0.1
+		factory_goods_output = {
+            hardwood = 0.05
         }
     }
 }
@@ -523,8 +523,8 @@ electric_machinery = {
         rgo_goods_output = {
             timber = 0.15
         }
-	rgo_goods_output = {
-            hardwood = 0.2
+		factory_goods_output = {
+            hardwood = 0.05
         }
         factory_goods_output = {
             machine_parts = 0.02
@@ -554,7 +554,7 @@ drying_techniques = {
         rgo_goods_output = {
             opium = 0.2
         }
-	rgo_goods_output = {
+		rgo_goods_output = {
             sugar = 0.2
         }
         rgo_goods_output = {

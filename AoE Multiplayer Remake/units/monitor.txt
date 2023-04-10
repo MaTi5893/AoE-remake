@@ -21,7 +21,7 @@ monitor = { #Razee
     build_time = 330
     build_cost = {
         steamer_convoy = 6
-	clipper_convoy = 20
+		clipper_convoy = 18
         artillery = 10
         explosives = 2
     }
@@ -31,9 +31,9 @@ monitor = { #Razee
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 0.3 #21
-	clipper_convoy = 0.7 #21
-        artillery = 0.19      #10
+        steamer_convoy = 0.25 #21
+		clipper_convoy = 0.75 #21
+        artillery = 0.2      #10
         canned_food = 0.4     #2  total 33
     }
 
