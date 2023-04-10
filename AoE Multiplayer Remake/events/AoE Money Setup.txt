@@ -1,0 +1,72 @@
+country_event = {
+    id = 10000000
+    title = "Money Setup"
+    desc = " "
+
+#shamelessly stolen from ToK credit to that mod
+
+   trigger = {
+        tag = SIK
+        NOT = {
+            has_global_flag = money_setup
+        }
+    } 
+    
+    mean_time_to_happen = {
+        days = 0
+    }
+
+    option = {
+        name = "Cool"
+        set_global_flag = money_setup
+
+        BOR = {
+            treasury = 150000
+        }
+        SPA = {
+            treasury = 120000
+        }
+        ENL = {
+            treasury = 150000
+        }
+        AUS = {
+            treasury = 120000
+        }
+        SWE = {
+            treasury = 100000
+        }
+        TOR = {
+            treasury = 100000
+        }
+        TUR = {
+            treasury = 100000
+        }
+        PRU = {
+            treasury = 100000
+        }
+        PLC = {
+            treasury = 100000
+        }
+		NET = {
+            treasury = 100000
+        }
+        any_country = {
+            limit = {
+                exists = yes
+                is_secondary_power = yes
+                NOT = {
+                    tag = SVF
+                }
+            }
+            treasury = 100000
+        }
+        any_country = {
+            limit = {
+                exists = yes
+                is_secondary_power = no
+                is_greater_power = no
+            }
+            treasury = 50000
+        }
+    }
+}
