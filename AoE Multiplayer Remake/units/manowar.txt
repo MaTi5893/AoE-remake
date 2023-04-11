@@ -34,13 +34,13 @@ manowar = { #Two-Decker
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.2 #0.24
+        clipper_convoy = 0.32 #0.24
         artillery = 0.1 #0.16
     }
 
     #Naval Abilties
-    hull = 10
-    gun_power = 8
+    hull = 11
+    gun_power = 9
     fire_range = 0.55
     evasion = 0
 }

@@ -452,7 +452,7 @@ steamer_shipyard = {
     }
     output_goods = steamer_convoy
     is_coastal = yes
-    value = 12            #150
+    value = 11.8            #150
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.125
@@ -578,7 +578,7 @@ artillery_factory = {
         steel = 6.5        #30.55   total input+maint = 62.9
     }
     output_goods = artillery
-    value = 1.5           #65
+    value = 3.2          #65
     bonus = {
         trigger = { has_building = steel_factory }
         value = 0.15
@@ -599,7 +599,7 @@ clipper_shipyard = {
     }
     output_goods = clipper_convoy
     is_coastal = yes
-    value = 18            #370
+    value = 17            #370
     bonus = {
         trigger = { has_building = fabric_factory }
         value = 0.1
@@ -1307,7 +1307,7 @@ artisan_steamer = {
     }
     output_goods = steamer_convoy
     is_coastal = yes
-    value = 6.0            #120
+    value = 5.6            #120
 
     owner = {
         poptype = artisans
@@ -1426,7 +1426,7 @@ artisan_clipper = {
     }
     output_goods = clipper_convoy
     is_coastal = yes
-    value = 9            #175
+    value = 5.7            #175
 
     owner = {
         poptype = artisans

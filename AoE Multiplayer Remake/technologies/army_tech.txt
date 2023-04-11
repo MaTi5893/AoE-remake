@@ -226,7 +226,6 @@ muzzle_loaded_rifles = {
     cost = 7200
     unciv_military = yes
     activate_unit = engineer
-    combat_width = 2
 
     ai_chance = {
         factor = 4
@@ -238,7 +237,6 @@ breech_loaded_rifles = {
     cost = 10800
 
     activate_unit = guard
-    combat_width = 2
     unciv_military = yes
 
 	army_base = {
@@ -255,7 +253,7 @@ machine_guns = {
     cost = 14400
     unciv_military = yes
 
-    combat_width = -8
+    combat_width = -4
     #colonial_life_rating = -10
     ai_chance = {
         factor = 6

@@ -28,7 +28,7 @@ ironclad = { #Three-decker
 		explosives = 4
     }
     min_port_level = 3
-    limit_per_port = 5
+    limit_per_port = 6
     supply_consumption_score = 0
 
     supply_consumption = 1.0
@@ -40,8 +40,8 @@ ironclad = { #Three-decker
     }
 
     #Naval Abilties
-    hull = 20
-    gun_power = 16
+    hull = 21
+    gun_power = 17
     fire_range = 0.6
     evasion = 0
 }
