@@ -242,7 +242,7 @@ country_event = {
 
 country_event = {
 	id = 173611
-	title = "Polish portectorate"
+	title = "Polish protectorate"
 	desc = "EVTDESC173611"
 	picture = veto
 	fire_only_once = yes
@@ -671,5 +671,866 @@ country_event = {
 	option = {
 		name = "Eternal Friendship"	
 		prestige = 5
+	}
+}
+
+country_event = {
+	id = 173623
+	title = "Mameluke Bey Stirring Trouble"
+	desc = "EVTDESC173623"
+	picture = cairo
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		tag = TUR
+		year = 1763
+		NOT = {
+			EGY = { exists = yes }
+			has_country_flag = mameluke_influence_ended_egypt
+		}
+		exists = yes
+		owns = 1745
+	}
+	
+	option = {
+		name = "Replace the cur with a new Pasha and exile him from Egypt."
+		set_country_flag = ali_bey_deposed
+	}
+}
+country_event = {
+	id = 173624
+	title = "Ali Bey al-Kabir Returns from Exile!"
+	desc = "EVTDESC173624"
+	picture = reinventing_egypt
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ali_bey_deposed
+		tag = TUR
+		owns = 1745
+		NOT = {
+			EGY = { exists = yes }
+			has_country_flag = mameluke_influence_ended_egypt
+		}
+		exists = no
+		OR = {
+			1745 = { NOT = { controlled_by = THIS } }
+			war_exhaustion = 30
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "It is beyond our control to act on this information for now."
+		set_country_flag = ali_bey_returned
+		clr_country_flag = ali_bey_deposed
+	}
+}
+country_event = {
+	id = 173625
+	title = "Revolt of Ali Bey al-Kabir!"
+	desc = "EVTDESC173625"
+	picture = cairo
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = ali_bey_returned
+			year = 1769
+		}
+		tag = TUR
+		owns = 1745
+		NOT = {
+			EGY = { exists = yes }
+			has_country_flag = mameluke_influence_ended_egypt
+		}
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "This insult must be met with force at once!"
+		release = EGY
+		relation = { who = EGY value = -100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+			
+            owner = {
+                prestige = -10
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+		any_owned = {
+			limit = {
+                OR = {
+                    is_core = EGY
+					is_core = PLS
+					is_core = HDJ
+                    }
+                }
+                secede_province = EGY
+				add_core = EGY
+		}
+		EGY = { define_general = { name = "Ali Bey al-Kabir" personality = defence_4.1 background = attack_4.1 } }
+        EGY = {
+            capital = 1745
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+	}
+	
+	option = {
+		name = "Our resources are spread too thin to waste on Egypt."
+		release = EGY
+		relation = { who = EGY value = 100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -30
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = -50
+            }
+        }
+		any_owned = {
+			limit = {
+                OR = {
+                    is_core = EGY
+					is_core = PLS
+					is_core = HDJ
+                    }
+                }
+                secede_province = EGY
+				add_core = EGY
+				remove_core = THIS
+		}
+		EGY = { define_general = { name = "Ali Bey al-Kabir" personality = defence_4.1 background = attack_4.1 } }
+        EGY = {
+            capital = 1745
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+	}
+}
+country_event = {
+	id = 173626
+	title = "Mameluke Nobility Revolt!"
+	desc = "EVTDESC173626"
+	picture = cairo
+	is_triggered_only = yes
+	
+	option = {
+		name = "The traitors have finally shown their true colors. To Cairo!"
+		release = EGY
+		relation = { who = EGY value = -100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+			
+            owner = {
+                prestige = -10
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = EGY
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+		any_owned = {
+			limit = {
+                    is_core = EGY
+                }
+                secede_province = EGY
+				add_core = EGY
+		}
+		EGY = { define_general = { name = "Ali Bey al-Kabir" personality = defence_3.1 background = attack_4.1 } }
+        EGY = {
+            capital = 1745
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+	}
+}
+country_event = {
+	id = 173627
+	title = "Mamluk Kingdom in Iraq"
+	desc = "EVTDESC173627"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1704
+		tag = TUR
+		owns = 926
+		war = no
+		NOT = {
+			IRQ = { exists = yes }
+		}
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "Allowing such a kingdom to form will undermine the authority of the Sultan. These foolhardy Mamluks must be crushed at once."
+		release = IRQ
+		relation = { who = IRQ value = -100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -2
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+			
+            owner = {
+                prestige = -10
+                war = {
+                    target = IRQ
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                    call_ally = no
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                prestige = 20
+                war = {
+                    target = IRQ
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+		any_owned = {
+			limit = {              
+                    is_core = IRQ					                  
+                }
+                secede_province = IRQ
+				add_core = IRQ
+		}
+		IRQ = { define_general = { name = "Hassan Pasha" personality = defence_3.1 background = attack_3.1 } }
+        IRQ = {
+            capital = 926
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+		set_country_flag = mameluke_iraq_crushed
+	}
+	
+	option = {
+		name = "Their kingdom is useful enough to guard our frontiers against the Safavids. There is no need to act - for now."
+		release = IRQ
+		relation = { who = IRQ value = 100 }
+		TUR = {
+			create_vassal = IRQ
+		}
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = 1.5
+        }
+		any_owned = {
+			limit = {              
+                    is_core = IRQ					                  
+                }
+                secede_province = IRQ
+				add_core = IRQ
+				remove_core = TUR
+		}
+        IRQ = {
+            capital = 926
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+	}
+}
+country_event = {
+	id = 173628
+	title = "Crisis in the Maghreb"
+	desc = "EVTDESC173628"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		NOT = { war_with = MOR truce_with = MOR war_with = TUN truce_with = TUN }
+		NOT = { 
+		has_global_flag = turk_intervenes_maghreb 
+		has_global_flag = turk_maghreb_war_victor 
+		has_global_flag = turk_maghreb_war_defeat 
+		}
+		MOR = { exists = yes is_vassal = no }
+		TUN = { exists = yes is_vassal = no }
+		OR = {
+			ALD = {
+				AND = {
+					exists = yes	
+					war_with = MOR
+				}
+			}
+			1707 = { owned_by = MOR } 
+		} 
+		exists = yes
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "The Tunisian and Moroccan invaders shall taste the might of our Janissaries."
+		relation = { who = MOR value = -100 }
+		relation = { who = ALD value = 100 }
+		relation = { who = TUN value = -100 }
+		ALD = { country_event = 173629 }
+		TUR = {
+			create_vassal = ALD
+			create_alliance = ALD
+			war = {
+				target = MOR
+				attacker_goal = { casus_belli = liberate_country country = ALD }
+				defender_goal = { casus_belli = release_puppet country = ALD }
+				call_ally = yes
+			}
+			war = {
+				target = TUN
+				attacker_goal = { casus_belli = make_puppet }
+				call_ally = yes
+			}
+		}
+		set_global_flag = turk_intervenes_maghreb 
+	}
+	
+	option = {
+		name = "Crushing the Beylik of Tunis is of more importance than aiding the Algerians."
+		ALD = { all_core = { add_core = MOR } }
+		relation = { who = MOR value = 20 }
+		relation = { who = ALD value = -40 }
+		relation = { who = TUN value = -100 }
+		TUR = {
+			war = {
+				target = TUN
+				attacker_goal = { casus_belli = make_puppet }
+				call_ally = no
+			}
+		}
+		prestige = -5
+		set_global_flag = turk_maghreb_war_defeat
+	}
+	
+	option = {
+		name = "The Sultan has little resources to spare for the trite affairs of Maghrebis."
+		ALD = { all_core = { add_core = MOR } }
+		release_vassal = TUN
+		relation = { who = MOR value = 40 }
+		relation = { who = ALD value = -60 }
+		relation = { who = IRQ value = -20 }
+		prestige = -10
+		set_global_flag = turk_maghreb_war_defeat
+	}
+}
+country_event = {
+	id = 173629
+	title = "The Sultan Sends Janissaries"
+	desc = "EVTDESC173629"
+	picture = janisseries_tur
+	is_triggered_only = yes
+	
+	option = {
+		name = "With these reinforcements, the Moroccans are sure to flee our country."
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+		any_owned = {
+			limit = {
+                    is_core = ALD
+					controlled_by = MOR
+                }
+                secede_province = MOR
+		}
+		capital = 1700
+		create_alliance = TUR
+	}
+}
+country_event = {
+	id = 173630
+	title = "Algiers Protectorate"
+	desc = "EVTDESC173630"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_global_flag = turk_intervenes_maghreb 
+			ALD = { truce_with = MOR }
+		}
+		tag = TUR
+		NOT = { has_global_flag = turk_maghreb_war_defeat }
+		NOT = { war_with = MOR war_with = ALD }
+		ALD = {
+            exists = yes
+			ALD = { all_core = { owned_by = ALD } }
+            NOT = { war_with = MOR }
+			OR = {
+				is_vassal = no
+				vassal_of = TUR
+			}
+        }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "And the Sultan graciously accepts their vassalage."
+		relation = { who = MOR value = -50 }
+		relation = { who = ALD value = 200 }
+		TUR = {
+			create_vassal = ALD
+			create_alliance = ALD
+			diplomatic_influence = {
+				who = ALD
+				value = 400
+			}
+			set_global_flag = turk_maghreb_war_victor
+		}
+	}
+}
+country_event = {
+	id = 173631
+	title = "Algiers Submits"
+	desc = "EVTDESC173631"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		NOT = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		NOT = { war_with = TUR }
+		has_global_flag = turk_intervenes_maghreb 
+		ALD = {
+			OR = { 
+				AND = {
+					exists = yes
+					is_vassal = no
+					NOT = { 
+						war_with = MOR 
+						ALD = { all_core = { owned_by = ALD } } 
+					}
+				}
+				exists = no	
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "The true Sultan of the Maghreb should dominate Maghrebi affairs."
+		relation = { who = TUR value = -60 }
+		relation = { who = ALD value = 80 }
+		ALD = { all_core = { add_core = MOR } }
+		MOR = {
+			create_vassal = ALD
+			inherit = ALD
+		}
+		TUR = {
+			diplomatic_influence = {
+				who = ALD
+				value = -400
+			}
+			set_global_flag = turk_maghreb_war_defeat
+		}
+	}
+}
+country_event = {
+	id = 173632
+	title = "Edirne Vak'asi"
+	desc = "EVTDESC173632"
+	fire_only_once = yes	
+	major = yes
+	
+	trigger = {
+		year = 1703
+		has_country_flag = ottoman_georgia_invaded
+		tag = TUR
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Horrible!"	
+		prestige = -15
+		random_owned = {
+            limit = {
+                owner = {
+                    pensions = acceptable_pensions
+                }
+            }
+            owner = {
+                social_reform = good_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = low_pensions
+                }
+            }
+            owner = {
+                social_reform = acceptable_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = trinket_pensions
+                }
+            }
+            owner = {
+                social_reform = low_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = no_pensions
+                }
+            }
+            owner = {
+                social_reform = trinket_pensions
+            }
+        }
+		any_pop = {
+			militancy = 3
+		}
+	}
+}
+country_event = {
+	id = 173633
+	title = "Rebellion in Georgia!"
+	desc = "EVTDESC173633"
+	picture = janisseries_tur
+	fire_only_once = yes	
+	trigger = {
+		year = 1703
+		tag = TUR
+		war = no
+		owns = 1092
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "We will not accept these provacations any longer! It's time to put an end to Georgian autonomy."	
+		money = -15000
+		release = GEO
+		GEO = {
+            capital = 1092
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+        }
+		GEO = { define_general = { name = "Giorgi-Malakia Abashidze" personality = defence_4.1 background = attack_2.1 } }
+		war = {
+			target = GEO
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+		}
+		TUR = {
+			diplomatic_influence = {
+				who = GEO
+				value = -400
+			}
+			relation = {
+				who = GEO
+				value = -400
+			}
+		}
+		set_country_flag = ottoman_georgia_invaded
+	}
+	
+	option = {
+		name = "We have neither the care nor the treasury to concern ourselves with petty squabbles!"	
+		prestige = -8
+		release = GEO
+		GEO = { define_general = { name = "Giorgi-Malakia Abashidze" personality = defence_4.1 background = attack_2.1 } }
+		TUR = {
+			diplomatic_influence = {
+				who = GEO
+				value = -200
+			}
+			relation = {
+				who = GEO
+				value = -80
+			}
+		}
+	}
+}
+country_event = {
+	id = 173634
+	title = "Pasha Expelled from Tunis!"
+	desc = "EVTDESC173634"
+	picture = janisseries_tur
+	is_triggered_only = yes
+	
+	option = {
+		name = "Husayn ibn Ali shall rule the Beylik. Our Janissaries will ensure that."
+		war = {
+				target = MOR
+				attacker_goal = { casus_belli = release_puppet country = TUN }
+				call_ally = yes
+			}
+		prestige = 10
+	}
+	
+	option = {
+		name = "The Maghreb is a damned place with a damned people."
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -3
+        }
+		prestige = -10
+	}
+}
+country_event = {
+	id = 173635
+	title = "Husayn Installed in Tunis"
+	desc = "EVTDESC173635"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		has_global_flag = morocco_intervened_tunis
+		tag = TUR
+		NOT = { war_with = MOR war_with = TUN }
+		TUN = {
+            exists = yes
+			TUN = { all_core = { owned_by = TUN } }
+            NOT = { war_with = TUR }
+			OR = {
+				is_vassal = no
+				vassal_of = TUR
+			}
+        }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Our candidate in the civil war has prevailed."
+		relation = { who = MOR value = -120 }
+		relation = { who = TUN value = 200 }
+		TUR = {
+			create_vassal = TUN
+			create_alliance = TUN
+			diplomatic_influence = {
+				who = TUN
+				value = 400
+			}
+		}
+	}
+}
+country_event = {
+	id = 173636
+	title = "Husayn Expelled from Tunis"
+	desc = "EVTDESC173636"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		OR = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		NOT = { war_with = TUR }
+		OR = {
+			TUN = { all_core = { owned_by = THIS } }
+			AND = {
+				has_global_flag = morocco_intervened_tunis
+				TUN = {
+					exists = yes
+					vassal_of = MOR
+					NOT = { war_with = TUR }	
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "The Deys of Tunis shall enjoy freedom their from Turkish opressors."
+		relation = { who = TUR value = -80 }
+		relation = { who = TUN value = 200 }
+		TUN = { all_core = { add_core = MOR } }
+		MOR = { inherit = TUN }
+		TUR = {
+			diplomatic_influence = {
+				who = TUN
+				value = -400
+			}
+			prestige = -10
+		}
 	}
 }

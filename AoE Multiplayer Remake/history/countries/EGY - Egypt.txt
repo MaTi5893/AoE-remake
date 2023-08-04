@@ -3,12 +3,13 @@ primary_culture = misri
 culture = mashriqi
 culture = bedouin
 religion = sunni
-civilized = no
+civilized = yes
 government = colonial_company
-plurality = 0.0
+plurality = 5.0
 nationalvalue = nv_autocracy
-literacy = 0.01  non_state_culture_literacy = 0.01
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+literacy = 0.01  
+non_state_culture_literacy = 0.01
+civilized = yes
 
 # Political reforms
 slavery = yes_slavery
@@ -58,15 +59,30 @@ govt_flag = {
 
 set_country_flag = sunni_country
 set_country_flag = exempt_from_vassal_contribution
-set_country_flag = NOT_colony
-
 
 # Technologies
+post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
+army_command_principle = 1
+post_nelsonian_thought = 1
+clipper_design = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+late_enlightenment_philosophy = 1
+freedom_of_trade = 1
+experimental_railroad = 1
+enlightenment_thought = 1
+piston_steam_engine = 1
+mechanical_production = 1
+malthusian_thought = 1
+basic_chemistry = 1
 
 # Inventions
-
 
 # Starting Consciousness
 consciousness = 0

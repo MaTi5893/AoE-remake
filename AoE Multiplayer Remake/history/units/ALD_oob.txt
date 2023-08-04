@@ -1,0 +1,144 @@
+TUR = {
+	value = 110
+}
+SPA = {
+    value = 40
+}
+MOR = {
+    value = -140
+}
+TUN = {
+    value = -80
+}
+
+leader = {
+	name = "Bey Mustapha Bouchelaghem"
+	type = land
+	date = 1694.1.1
+    personality = defence_3.1
+    background = attack_4.1
+    prestige = 0.3
+}
+
+leader = {
+	name = "Ali Khodja Bey"
+	type = land
+	date = 1694.1.1
+    personality = defence_1.1
+    background = attack_3.1
+    prestige = 0.14
+}
+
+leader = {
+	name = "Hadj Mustapha"
+	type = land
+	date = 1694.1.1
+    personality = defence_2.1
+    background = attack_2.1
+    prestige = 0.14
+}
+
+army = {
+	name = "Army of Mascara"
+	location = 1702
+	regiment = {
+		name= "1.Askäris"
+		type = infantry
+		home = 1707
+	}
+
+	regiment = {
+		name= "2.Askäris"
+		type = infantry
+		home = 1707
+	}
+
+	regiment = {
+		name= "3.Askäris"
+		type = artillery
+		home = 1705
+	}
+
+	regiment = {
+		name= "1.Spahis"
+		type = cuirassier
+		home = 1705
+	}
+
+	regiment = {
+		name= "2.Spahis"
+		type = cuirassier
+		home = 1715
+	}
+
+	regiment = {
+		name= "3.Spahis"
+		type = cavalry
+		home = 1713
+	}
+
+}
+
+army = {
+	name = "Army of Constantine"
+	location = 1701
+	regiment = {
+		name= "4.Askäris"
+		type = infantry
+		home = 1708
+	}
+
+	regiment = {
+		name= "5.Askäris"
+		type = irregular
+		home = 1703
+	}
+
+	regiment = {
+		name= "6.Askäris"
+		type = irregular
+		home = 1707
+	}
+
+	regiment = {
+		name= "7.Askäris"
+		type = artillery
+		home = 1703
+	}
+
+	regiment = {
+		name= "3.Spahis"
+		type = cuirassier
+		home = 1708
+	}
+
+	regiment = {
+		name= "4.Spahis"
+		type = cavalry
+		home = 1710
+	}
+
+}
+
+army = {
+	name = "Army of the Berbers"
+	location = 1713
+	regiment = {
+		name= "5.Spahis"
+		type = cavalry
+		home = 1701
+	}
+
+	regiment = {
+		name= "6.Spahis"
+		type = cavalry
+		home = 1702
+	}
+
+	regiment = {
+		name= "7.Spahis"
+		type = cavalry
+		home = 1702
+	}
+
+}

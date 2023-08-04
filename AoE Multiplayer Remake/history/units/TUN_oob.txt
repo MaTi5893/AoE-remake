@@ -1,6 +1,24 @@
+leader = {
+    name = "Murad III Bey"
+    type = land
+    date = 1699.1.1
+    personality = defence_1.1
+    background = attack_2.1
+    prestige = 0.22
+    }
+
+leader = {
+    name = "Ibrahim Sharif"
+    type = land
+    date = 1699.1.1
+    personality = defence_2.1
+    background = attack_2.1
+    prestige = 0.1
+    }
+	
 army = {
     name = "Army of the Bey of Tunis"
-    location = 1725
+    location = 1708
     regiment = {
         name= "1.Askäris"
         type = infantry
@@ -15,30 +33,36 @@ army = {
 
     regiment = {
         name= "3.Askäris"
-        type = infantry
+        type = irregular
         home = 1726
+    }
+	
+    regiment = {
+        name= "1.Kroumir"
+        type = cuirassier
+        home = 1727
     }
 
 }
 
 army = {
-    name = "Army of Ifriqiya"
-    location = 1730
-    regiment = {
-        name= "1.Kroumir"
+    name = "Army of Tripoli"
+    location = 1725
+	regiment = {
+        name= "4.Askäris"
         type = irregular
-        home = 1727
+        home = 1726
     }
-
+	
     regiment = {
         name= "2.Kroumir"
-        type = irregular
+        type = cavalry
         home = 1728
     }
 
     regiment = {
         name= "3.Kroumir"
-        type = irregular
+        type = cavalry
         home = 1730
     }
 

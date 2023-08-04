@@ -336,12 +336,40 @@ political_decisions = {
 			is_vassal = no
 			state_n_government = 1
 			OR = {
-				owns = 728
-				owns = 726
+				728 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+				726 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
 			}
 			OR = {
-				owns = 741
-				owns = 744
+				741 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+				744 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
 			}
 			OR = {
 				AND = {

@@ -7,6 +7,33 @@ leader = {
     prestige = 0.5
 }
 
+leader = {
+    name = "Mohammad Ali Khan"
+    date = 1699.1.1
+    type = land
+    personality = defence_2.1
+    background = attack_minus_1.2
+    prestige = 0.1
+}
+
+leader = {
+    name = "Allahverdi Khan"
+    date = 1699.1.1
+    type = land
+    personality = defence_1.1
+    background = attack_2.2
+    prestige = 0.1
+}
+
+leader = {
+    name = "Gorgin Khan"
+    date = 1699.1.1
+    type = land
+    personality = defence_1.1
+    background = attack_1.2
+    prestige = 0.1
+}
+
 army = {
     name = "Army of Persia"
     location = 1120
@@ -88,6 +115,35 @@ army = {
 }
 
 army = {
+    name = "Army of Baku"
+    location = 1102
+    regiment = {
+        name= "16. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1779
+    }
+
+    regiment = {
+        name= "17. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1780
+    }
+
+    regiment = {
+        name= "18. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1212
+    }
+	
+	regiment = {
+        name= "18. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1214
+    }
+
+}
+
+army = {
     name = "Northern Army of Persia"
     location = 1112
     regiment = {
@@ -147,6 +203,53 @@ army = {
         name= "18. Bakhsh-i Piyadenizam"
         type = infantry
         home = 1145
+    }
+	
+	regiment = {
+        name= "19. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1213
+    }
+
+}
+
+army = {
+    name = "Army of Balochistan"
+    location = 1221
+    regiment = {
+        name= "4. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1222
+    }
+
+    regiment = {
+        name= "5. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1220
+    }
+
+    regiment = {
+        name= "6. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1221
+    }
+
+    regiment = {
+        name= "7. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1214
+    }
+
+    regiment = {
+        name= "8. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1215
+    }
+
+    regiment = {
+        name= "9. Bakhsh-i Piyadenizam"
+        type = cavalry
+        home = 1213
     }
 
 }

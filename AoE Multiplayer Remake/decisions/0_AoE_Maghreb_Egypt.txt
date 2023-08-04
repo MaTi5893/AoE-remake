@@ -1,16 +1,38 @@
 political_decisions = {
-
-    centralize_morocco = {
-        picture = crown
+	centralize_morocco = {
+        picture = map_maghreb
         potential = {
-            tag = MOR
-            TIM = { vassal_of = THIS }
-            #SUS = { vassal_of = THIS }
+			OR = {
+				primary_culture = maghrebi
+				tag = MOR
+			}
+			NOT = { has_country_flag = morocco_centralized }
         }
         allow = {
-            TIM = { vassal_of = THIS }
-            #SUS = { vassal_of = THIS }
-            civilized = yes
+			war = no
+			OR = {
+				civilized = yes
+				AND = {
+					has_global_flag = turk_maghreb_war_victor 
+					civilization_progress = 0.65
+				}
+				AND = {
+					has_global_flag = turk_maghreb_war_defeat
+					civilization_progress = 0.45
+				}
+			}
+			OR = {
+				ALD = { vassal_of = THIS }
+				ALD = { all_core = { owned_by = THIS } }
+			}
+            OR = {
+				TIM = { vassal_of = THIS }
+				TIM = { all_core = { owned_by = THIS } }
+			}
+			OR = {
+				TUN = { vassal_of = THIS }
+				TUN = { all_core = { owned_by = THIS } }
+			}
         }
         effect = {
             any_country = {
@@ -20,69 +42,147 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
+			ALD = { all_core = { add_core = THIS } }
+			TUN = { all_core = { add_core = THIS } }
+			MOR = { all_core = { add_core = THIS } }
+			TIM = { all_core = { add_core = THIS } }
+			all_core = {
+                add_core = MGH
+                remove_core = THIS
+            }
+			change_tag = MGH
+			prestige = 30
+			set_country_flag = morocco_centralized
         }
+		
         ai_will_do = { factor = 1 }
     }
 
-    conquer_morocco = {
-        picture = form_morocco
+	moroccan_intervention_tunis = {
+        picture = tunisia_map
         potential = {
-            OR = {
-                tag = TAF
-                tag = SUS
-                tag = TIM
-            }
-            NOT = { has_country_flag = conquest_morocco }
+            tag = MOR
+			ALD = { 
+				exists = no 
+				all_core = { owned_by = THIS } 
+			}
+			OR = {
+				has_global_flag = turk_maghreb_war_defeat 	
+				has_global_flag = turk_maghreb_war_victor
+			}
+			NOT = { has_global_flag = morocco_intervened_tunis }
         }
         allow = {
-            is_vassal = no
+			war = no
+			year = 1705
+			NOT = { 
+				war_with = TUR 
+				truce_with = TUR 
+				war_with = TUN 
+			}
+			OR = {
+				AND = {
+					neighbour = TUN
+					TUN = {
+						exists = yes
+						OR = { 
+						vassal_of = TUR
+						is_vassal = no
+						}
+					}
+				}
+				THIS = { any_owned_province = { is_core = TUN } }
+			}
         }
         effect = {
-            set_country_flag = conquest_morocco
-            MOR = {
-                all_core = {
-                    add_core = THIS
-                }
-            }
-            badboy = 10
-            any_country = {
-                limit = {
-                    primary_culture = maghrebi
-                    exists = yes
-                }
-                relation = {
-                    who = THIS
-                    value = -200
-                }
-            }
+			TUR = { 
+				release_vassal = TUN
+				country_event = 173634 
+			}
+			MOR = { 
+				create_vassal = TUN
+				create_alliance = TUN
+			}
+			set_global_flag = morocco_intervened_tunis
         }
+		
         ai_will_do = { factor = 1 }
     }
-
-    form_morocco = {
-        picture = form_morocco
+	
+	invasion_of_tripoli = {
+        picture = west_med
         potential = {
-            OR = {
-                tag = TAF
-                tag = SUS
-                tag = TIM
-            }
+            tag = MGH
+			owns = 1725
+			NOT = { has_country_flag = maghreb_invaded_tripoli }
         }
         allow = {
-            NOT = { MOR = { exists = yes } }
-            MOR = {
-                all_core = {
-                    owned_by = THIS
-                }
-            }
+			war = no
+			war_policy = jingoism
+			civilized = yes
+			MGH = { all_core = { owned_by = THIS } }
         }
         effect = {
-            prestige = 30
-            change_tag = MOR
+			badboy = 6
+			TRI = { all_core = { add_core = THIS } }
+			FZN = { all_core = { add_core = THIS } }
+			add_accepted_culture = bedouin
+			set_country_flag = maghreb_invaded_tripoli
         }
+		
         ai_will_do = { factor = 1 }
     }
-
+	
+	raid_egyptian_frontier = {
+        picture = map_egypt
+        potential = {
+            tag = MGH
+			owns = 1731
+			has_country_flag = maghreb_invaded_tripoli
+			NOT = { has_country_flag = egyptian_frontier_raided }
+        }
+        allow = {
+			war = no
+			war_policy = jingoism
+			state_n_government = 1
+			MGH = { all_core = { owned_by = THIS } }
+        }
+        effect = {
+			EGY = { all_core = { add_core = THIS } }
+			prestige = 15
+			badboy = 10
+			set_country_flag = egyptian_frontier_raided
+        }
+		
+        ai_will_do = { factor = 1 }
+    }
+	
+	stabilize_egyptian_frontier = {
+        picture = herat
+        potential = {
+            tag = MGH
+			owns = 1745
+			has_country_flag = egyptian_frontier_raided
+			NOT = { has_country_flag = egyptian_frontier_stabilized }
+        }
+        allow = {
+			war = no
+			citizenship_policy = full_citizenship
+			nationalism_n_imperialism = 1
+			MGH = { all_core = { owned_by = THIS } }
+        }
+        effect = {
+			any_pop = {
+            limit = { culture = misri }
+            militancy = -3
+			}
+			add_accepted_culture = misri
+			set_country_flag = egyptian_frontier_stabilized
+        }
+		
+        ai_will_do = { factor = 1 }
+    }
+	
     form_andalusia = {
         picture = form_andalusia
         potential = {
@@ -126,19 +226,21 @@ political_decisions = {
         picture = map_levant
         potential = {
             tag = EGY
+			owns = 1745
             NOT = { has_country_flag = conquest_of_levant }
         }
         allow = {
             is_vassal = no
+			controls = 916
+			controls = 913
+			controls = 897
+			controls = 1153
         }
         effect = {
             set_country_flag = conquest_of_levant
-            903 = { add_core = EGY }
-            897 = { add_core = EGY }
-            905 = { add_core = EGY }
-            #TUR_894 = { add_core = EGY }
-            EGY_915 = { add_core = EGY }
-            badboy = 10
+			PLS = { all_core = { add_core = EGY } }
+			HDJ = { all_core = { add_core = EGY } }
+            EGY_903 = { add_core = EGY }
         }
         ai_will_do = { factor = 1 }
     }
@@ -147,6 +249,7 @@ political_decisions = {
         picture = map_iraq
         potential = {
             tag = EGY
+			owns = 1745
             NOT = { has_country_flag = conquest_of_syria }
         }
         allow = {
@@ -154,27 +257,17 @@ political_decisions = {
                 is_greater_power = yes
                 is_secondary_power = yes
             }
+			is_vassal = no
             owns = 897
+			owns = 916
+			owns = 1153
         }
         effect = {
             set_country_flag = conquest_of_syria
-            TUR_935 = {
-                add_core = THIS
-            }
-            934 = { add_core = THIS }
-            929 = { add_core = THIS }
-            926 = { add_core = THIS }
-            927 = { add_core = THIS }
-            910 = { add_core = THIS }
-            931 = { add_core = THIS }
-            2639 = { add_core = THIS }
-            907 = { add_core = THIS }
-            904 = { add_core = THIS }
-            901 = { add_core = THIS }
-            TUR_923 = {
-                add_core = THIS
-            }
-            badboy = 15
+            SYR = { all_core = { add_core = EGY } }
+			IRQ = { all_core = { add_core = EGY } }
+			2638 = { remove_core = EGY }
+            badboy = 12
         }
         ai_will_do = { factor = 1 }
     }

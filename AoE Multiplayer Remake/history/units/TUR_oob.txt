@@ -43,13 +43,19 @@ QAT = {
 	influence_value = 0
 }
 
-TUN = {
-	value = 200		#relation
+ALD = {
+	value = 140		#relation
 	level = 5		#3=cordial, 4 = friendly, 5 sphere
 	influence_value = 0
 }
+
+TUN = {
+	value = 80		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
 MOR = {
-	value = 100
+	value = 40
 }
 
 #Europe
@@ -102,7 +108,7 @@ BOR = { value = 35 }
 
 army = {
 	name = "Army of the Danube"
-	location = 968
+	location = 810
 	regiment = {
 		name = "1. Sipahis"
 		type = hussar
@@ -165,8 +171,8 @@ army = {
 }
 	
 army = {
-	name = "Army of Anatolia"
-	location = 878
+	name = "Army of Erzurum"
+	location = 887
 	regiment = {
 		name = "1. Piyade Tümeni"
 		type = hussar
@@ -192,12 +198,6 @@ army = {
 	}
 
 	regiment = {
-		name = "4. Redif Kars"
-		type = infantry
-		home = 806
-	}
-
-	regiment = {
 		name = "1. Redif Kars"
 		type = artillery
 		home = 894
@@ -214,24 +214,58 @@ army = {
 		type = artillery
 		home = 888
 	}
-
+	
 	regiment = {
 		name = "4. Redif Trabzon"
 		type = artillery
-		home = 883
+		home = 884
+	}
+}
+
+army = {
+	name = "Sultan's Janissary Core"
+	location = 860
+	regiment = {
+		name = "1. Spahi Tümeni"
+		type = hussar
+		home = 860
 	}
 
 	regiment = {
-		name = "5. Redif Trabzon"
+		name = "1. Janissary Tümeni"
+		type = infantry
+		home = 860
+	}
+
+	regiment = {
+		name = "2. Janissary Tümeni"
+		type = infantry
+		home = 862
+	}
+
+	regiment = {
+		name = "3. Janissary Kars"
+		type = infantry
+		home = 806
+	}
+	
+	regiment = {
+		name = "1. Janissary Tümeni"
 		type = artillery
-		home = 884
+		home = 883
+	}
+	
+	regiment = {
+		name = "2. Janissary Tümeni"
+		type = artillery
+		home = 967
 	}
 
 }
 
 army = {
 	name = "Army of Silistria"
-	location = 969
+	location = 678
 	regiment = {
 		name = "4. Sipahis"
 		type = hussar
@@ -292,6 +326,194 @@ army = {
 		home = 828
 	}
 
+}
+
+army = {
+	name = "Army of Baghdad"
+	location = 926
+	regiment = {
+		name = "4. Sipahis"
+		type = cuirassier
+		home = 923
+	}
+
+	regiment = {
+		name = "5. Sipahis"
+		type = cuirassier
+		home = 887
+	}
+
+	regiment = {
+		name = "6. Sipahis"
+		type = cuirassier
+		home = 1049
+	}
+
+	regiment = {
+		name = "9. Piyade Tümeni"
+		type = infantry
+		home = 1051
+	}
+
+	regiment = {
+		name = "10. Piyade Tümeni"
+		type = artillery
+		home = 1048
+	}
+
+	regiment = {
+		name = "11. Piyade Tümeni"
+		type = artillery
+		home = 3255
+	}
+
+	regiment = {
+		name = "1. Redif Diyarbakir"
+		type = artillery
+		home = 925
+	}
+
+}
+
+army = {
+	name = "Mamluk Army of Cairo"
+	location = 1745
+	regiment = {
+		name = "4. Sipahis"
+		type = hussar
+		home = 1751
+	}
+
+	regiment = {
+		name = "5. Sipahis"
+		type = cuirassier
+		home = 1745
+	}
+
+	regiment = {
+		name = "6. Sipahis"
+		type = cuirassier
+		home = 1745
+	}
+
+	regiment = {
+		name = "9. Piyade Tümeni"
+		type = infantry
+		home = 834
+	}
+
+	regiment = {
+		name = "10. Piyade Tümeni"
+		type = infantry
+		home = 837
+	}
+
+	regiment = {
+		name = "11. Piyade Tümeni"
+		type = artillery
+		home = 824
+	}
+
+	regiment = {
+		name = "1. Redif Diyarbakir"
+		type = artillery
+		home = 851
+	}
+
+	regiment = {
+		name = "2. Redif Diyarbakir"
+		type = artillery
+		home = 850
+	}
+
+
+}
+
+army = {
+	name = "Army of Tripolitania"
+	location = 1731
+	regiment = {
+		name = "4. Sipahis"
+		type = hussar
+		home = 1731
+	}
+
+	regiment = {
+		name = "5. Sipahis"
+		type = cuirassier
+		home = 1732
+	}
+
+	regiment = {
+		name = "6. Sipahis"
+		type = cuirassier
+		home = 1735
+	}
+
+	regiment = {
+		name = "9. Piyade Tümeni"
+		type = infantry
+		home = 804
+	}
+
+	regiment = {
+		name = "10. Piyade Tümeni"
+		type = infantry
+		home = 798
+	}
+
+}
+
+army = {
+	name = "Army of Khan Giray"
+	location = 964
+	regiment = {
+		name = "1. Tatar Raiders"
+		type = cavalry
+		home = 970
+	}
+
+	regiment = {
+		name = "2. Tatar Raiders"
+		type = cavalry
+		home = 965
+	}
+
+	regiment = {
+		name = "3. Tatar Raiders"
+		type = cuirassier
+		home = 973
+	}
+
+	regiment = {
+		name = "4. Tatar Raiders"
+		type = infantry
+		home = 975
+	}
+
+	regiment = {
+		name = "5. Tatar Raiders"
+		type = infantry
+		home = 976
+	}
+
+	regiment = {
+		name = "1. Khan's Guard"
+		type = hussar
+		home = 964
+	}
+
+	regiment = {
+		name = "2. Khan's Guard"
+		type = cuirassier
+		home = 964
+	}
+
+	regiment = {
+		name = "3. Khan's Guard"
+		type = cuirassier
+		home = 969
+	}
 }
 
 navy = {
@@ -486,6 +708,21 @@ navy = {
 		name = "3rd Transport Flotilla"
 		type = clipper_transport
 	}
+	
+	ship = {
+		name = "4th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name = "5th Transport Flotilla"
+		type = clipper_transport
+	}
+
+	ship = {
+		name = "6th Transport Flotilla"
+		type = clipper_transport
+	}
 
 }
 
@@ -555,6 +792,15 @@ leader = {
 
 leader = {
 	name = "Abdülkerim Pasha"
+	date = 1700.1.1
+	type = land
+	personality = defence_0.1
+	background = attack_2.3
+	prestige = 0.0
+}
+
+leader = {
+	name = "Khan Giray I"
 	date = 1700.1.1
 	type = land
 	personality = defence_0.1

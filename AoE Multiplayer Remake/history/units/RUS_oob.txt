@@ -138,7 +138,7 @@ army = {
 
 army = {
 	name = "3-i Armeiskii Korpus" #Vilna/Marijampole - Baltic Army
-	location = 1036
+	location = 1047
 
 	regiment = {
 		name = "3.1-ya Pekhotnaya Diviziya"
@@ -190,13 +190,13 @@ army = {
 	
 	regiment = {
 		name = "3.2-ya Artilleriiskii Diviziya"
-		type = artillery
+		type = cuirassier
 		home = 980
 	}
 	
 	regiment = {
 		name = "3.2-ya Artilleriiskii Diviziya"
-		type = artillery
+		type = cuirassier
 		home = 1012
 	}
 }
@@ -236,19 +236,19 @@ army = {
 
 	regiment = {
 		name= "6.2-ya Kavalerijskaya Diviziya"
-		type = artillery
+		type = cuirassier
 		home = 1015
 	}
 	
 	regiment = {
 		name= "6.3-ya Kavalerijskaya Diviziya"
-		type = artillery
+		type = cuirassier
 		home = 1050
 	}
 
 	regiment = {
 		name= "8.6-ya Pekhotnaya Diviziya"
-		type = artillery
+		type = cuirassier
 		home = 1028
 	}
 	
@@ -267,31 +267,7 @@ army = {
 
 army = {
 	name = "1-i Kavkazskii Korpus"
-	location = 1047
-	
-	regiment = {
-		name= "1.1-ya Kavkazskii Pekhotnaya Diviziya"
-		type = infantry
-		home = 1022
-	}
-
-	regiment = {
-		name= "1.2-ya Kavkazskii Pekhotnaya Diviziya"
-		type = infantry
-		home = 1011
-	}
-
-	regiment = {
-		name= "1.3-ya Kavkazskii Pekhotnaya Diviziya"
-		type = infantry
-		home = 1011
-	}
-
-	regiment = {
-		name= "1.4-ya Kavkazskii Pekhotnaya Diviziya"
-		type = infantry
-		home = 1035
-	}
+	location = 1036
 
 	regiment = {
 		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
@@ -332,29 +308,29 @@ army = {
 
 army = {
 	name = "1-i Sibirskii Korpus" #Siberian Army
-	location = 1050
+	location = 1078
 	
 	regiment = {
 		name = "1.1-ya Sibirskii Pekhotnaya Diviziya"
 		home = 1039
-		type = artillery
+		type = hussar
 	}
 
 	regiment = {
 		name= "1.2-ya Sibirskii Pekhotnaya Diviziya"
-		type = artillery
+		type = infantry
 		home = 1019
 	}
 	
 	regiment = {
 		name= "1.3-ya Sibirskii Pekhotnaya Diviziya"
-		type = artillery
+		type = infantry
 		home = 1019
 	}
 
 	regiment = {
 		name= "1.1-ya Sibirskii Kavalerijskaya Diviziya"
-		type = artillery
+		type = infantry
 		home = 1021
 	}
 
@@ -511,31 +487,31 @@ army = {
 
     regiment = {
         name= "Chernigov Polk"
-        type = artillery
+        type = cuirassier
         home = 962
     }
 
     regiment = {
         name= "Kiev Polk"
-        type = artillery
+        type = cuirassier
         home = 963
     }
 
     regiment = {
         name= "3nd Chernigov Polk"
-        type = artillery
+        type = cuirassier
         home = 962
     }
 
     regiment = {
         name= "2nd Chernigov Polk"
-        type = artillery
+        type = infantry
         home = 962
     }
 
     regiment = {
         name= "Bryansk Polk"
-        type = artillery
+        type = infantry
         home = 1016
     }
 }

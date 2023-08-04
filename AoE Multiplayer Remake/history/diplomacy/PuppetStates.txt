@@ -7,6 +7,22 @@
 #	end_date = 2000.1.1
 #}
 
+##Ottoman - Tunis
+#vassal = {  #substate
+#	first = TUR
+#	second = TUN
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
+
+##Ottoman - Algiers
+#vassal = {  #substate
+#	first = TUR
+#	second = ALD
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
+
 #Mughal - Jodhpur
 vassal = {  #substate
 	first = MUG
@@ -30,14 +46,6 @@ vassal = {  #substate
 #	start_date = 1700.1.1
 #	end_date = 1756.1.1
 #}
-
-#Morroco - Timbuktu
-vassal = {  #substate
-	first = MOR
-	second = TIM
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 
 #Bukhara - Bandakhshan
 vassal = {  #substate
@@ -227,15 +235,6 @@ vassal = {
 	first = NET
 	second = MAL
 	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-
-##Bornu - Baguirmi
-vassal = {
-	first = KBO
-	second = BRM
-	start_date = 1700.1.1
 	end_date = 1936.1.1
 }
 
