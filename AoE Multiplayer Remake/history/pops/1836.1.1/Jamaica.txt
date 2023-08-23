@@ -55,11 +55,17 @@
         religion = protestant
         size = 1100
     }
+	
+    slaves = {
+        culture = afro_caribbean
+        religion = protestant
+        size = 20375
+    }
 
     farmers = {
         culture = afro_caribbean
         religion = protestant
-        size = 84375
+        size = 4375
     }
 }
 #Cayman Islands : (1200/300 POPS) #still a British Colony
@@ -76,10 +82,16 @@
         size = 15
     }
 
+    slaves = {
+        culture = afro_caribbean
+        religion = protestant
+        size = 230
+    }
+
     farmers = {
         culture = afro_caribbean
         religion = protestant
-        size = 280
+        size = 50
     }
 
 }

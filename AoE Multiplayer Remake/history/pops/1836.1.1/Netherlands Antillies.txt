@@ -22,30 +22,54 @@
 
     clergymen = {
         culture = afro_caribbean
-        religion = catholic
+        religion = protestant
         size = 20
     }
 
     artisans = {
         culture = afro_caribbean
-        religion = catholic
+        religion = protestant
         size = 150
     }
 
     soldiers = {
         culture = afro_caribbean
-        religion = catholic
+        religion = protestant
         size = 30
+    }
+
+   slaves = {
+        culture = afro_caribbean
+        religion = protestant
+        size = 2600
     }
 
     farmers = {
         culture = afro_caribbean
-        religion = catholic
-        size = 2800
+        religion = protestant
+        size = 200
     }
 }
 #Aruba (2400/600 POPS)
 2235 = {
+    bureaucrats = {
+        culture = dutch
+        religion = catholic
+        size = 5
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = catholic
+        size = 25
+    }
+
+    artisans = {
+        culture = dutch
+        religion = catholic
+        size = 70
+    }
+
     clergymen = {
         culture = afro_caribbean
         religion = catholic
@@ -58,14 +82,38 @@
         size = 25
     }
 
+    slaves = {
+        culture = afro_caribbean
+        religion = catholic
+        size = 500
+    }
+
     farmers = {
         culture = afro_caribbean
         religion = catholic
-        size = 550
+        size = 50
     }
 }
 #Saint Martin (4800/1200 POPS)
 2236 = {
+    bureaucrats = {
+        culture = dutch
+        religion = protestant
+        size = 5
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = protestant
+        size = 25
+    }
+
+    artisans = {
+        culture = dutch
+        religion = protestant
+        size = 70
+    }
+
     clergymen = {
         culture = afro_caribbean
         religion = protestant
@@ -78,10 +126,16 @@
         size = 55
     }
 
+    slaves = {
+        culture = afro_caribbean
+        religion = protestant
+        size = 1000
+    }
+
     farmers = {
         culture = afro_caribbean
         religion = protestant
-        size = 1120
+        size = 120
     }
 
 }

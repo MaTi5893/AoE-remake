@@ -128,66 +128,57 @@
 #Bluefields (12000/3000 POPS)
 2200 = {
     aristocrats = {
-        culture = spanish_american
+        culture = native_american_minor
         religion = catholic
         size = 15
-        militancy = 9
     }
 
     clergymen = {
-        culture = spanish_american
+        culture = native_american_minor
         religion = catholic
         size = 25
-        militancy = 9
     }
 
     artisans = {
-        culture = spanish_american
+        culture = native_american_minor
         religion = catholic
         size = 50
-        militancy = 9
     }
 
     soldiers = {
-        culture = spanish_american
+        culture = native_american_minor
         religion = catholic
         size = 10
-        militancy = 9
     }
 
     farmers = {
-        culture = spanish_american
+        culture = native_american_minor
         religion = catholic
-        size = 900
-        militancy = 9
+        size = 1900
     }
 
     clergymen = {
         culture = afro_caribbean
         religion = catholic
         size = 50
-        militancy = 9
     }
 
     artisans = {
         culture = afro_caribbean
         religion = catholic
         size = 100
-        militancy = 9
     }
 
     soldiers = {
         culture = afro_caribbean
         religion = catholic
         size = 50
-        militancy = 9
     }
 
     farmers = {
         culture = afro_caribbean
         religion = catholic
-        size = 1800
-        militancy = 9
+        size = 800
     }
 
 }
