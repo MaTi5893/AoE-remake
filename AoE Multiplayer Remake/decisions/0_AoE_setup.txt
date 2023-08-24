@@ -1085,14 +1085,14 @@ political_decisions = {
 					limit = {	
 						OR = {
 							has_pop_culture = romanian
-							has_pop_culture = ukranian 
+							has_pop_culture = ukrainian 
 							has_pop_culture = north_german 
 							has_pop_culture = ashkenazi 
 							has_pop_culture = polish 
 							has_pop_culture = hungarian 
 						}
 					}
-					reduce_pop = 0.22
+					reduce_pop = 0.26
 				}
 			}
 			WAL = {

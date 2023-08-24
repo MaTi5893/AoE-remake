@@ -515,7 +515,8 @@ political_decisions = {
 				}
 			}
             add_core = 517
-	    add_core = 2384
+			add_core = 2384
+			add_core = 911
             badboy = 2
             set_country_flag = disputed_spanish_succession
         }
@@ -590,12 +591,14 @@ political_decisions = {
 		allow = {
 			owns = 517
 			owns = 2384
+	                owns = 911
 			
 		}
 		effect = {
 			set_global_flag = gibraltar_captured_brit
 			2384 = { fort = 2 }
 			517 = { fort = 2 }
+                        911 = { fort = 2 }
 			country_event = 171020
 		}
 	}
@@ -613,7 +616,7 @@ political_decisions = {
 		allow = {
 			owns = 517
 			owns = 2384
-			
+                        owns = 911		
 		}
 		effect = {
 			set_country_flag = gibraltar_reclaimed
