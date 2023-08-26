@@ -580,37 +580,207 @@ army = {
     regiment = {
         name= "1.8ème Division d'Infanterie"
         type = hussar
-        home = 435
+        home = 415
     }
 	
     regiment = {
         name= "3.9ème Division d'Infanterie"
         type = artillery
-        home = 139
+        home = 402
     }
 
     regiment = {
         name= "1.2ème Division de cavalerie"
         type = artillery
-        home = 139
+        home = 432
     }
 
     regiment = {
         name= "2.2ème Division de cavalerie"
         type = artillery
-        home = 2215
+        home = 400
     }
 
     regiment = {
         name= "3.2ème Division de cavalerie"
         type = artillery
-        home = 2213
+        home = 400
     }
 
     regiment = {
         name= "2.10ème Division d'Infanterie"
         type = artillery
-        home = 418
+        home = 405
+    }
+
+	 regiment = {
+        name= "5.9ème Division d'Infanterie"
+        type = infantry
+        home = 451
+    }
+
+	regiment = {
+        name= "6.9ème Division d'Infanterie"
+        type = infantry
+        home = 454
+    }
+	
+	regiment = {
+        name= "7.9ème Division d'Infanterie"
+        type = infantry
+        home = 425
+    }
+	
+	regiment = {
+        name= "8.9ème Division d'Infanterie"
+        type = infantry
+        home = 468
+    }
+}
+
+army = {
+    name = "5ère Armée"
+    location = 470
+    regiment = {
+        name= "1.8ème Division de Hussar"
+        type = hussar
+        home = 421
+    }
+
+    regiment = {
+        name= "5.8ème Division d'Infanterie"
+        type = infantry
+        home = 422
+    }
+
+    regiment = {
+        name= "6.8ème Division d'Infanterie"
+        type = infantry
+        home = 434
+    }
+
+    regiment = {
+        name= "7.9ème Division d'Infanterie"
+        type = infantry
+        home = 443
+    }
+
+    regiment = {
+        name= "8.9ème Division d'Infanterie"
+        type = infantry
+        home = 445
+    }
+
+    regiment = {
+        name= "11.9ème Division d'Infanterie"
+        type = artillery
+        home = 458
+    }
+
+    regiment = {
+        name= "12.2ème Division de artillerie"
+        type = artillery
+        home = 447
+    }
+
+    regiment = {
+        name= "21.2ème Division de artillerie"
+        type = artillery
+        home = 450
+    }
+
+    regiment = {
+        name= "13.2ème Division de artillerie"
+        type = artillery
+        home = 456
+    }
+
+    regiment = {
+        name= "14.10ème Division artillerie"
+        type = artillery
+        home = 455
+    }
+
+}
+
+army = {
+    name = "6ère Armée"
+    location = 420
+    regiment = {
+        name= "1.8ème Division de Hussar"
+        type = hussar
+        home = 421
+    }
+	
+    regiment = {
+        name= "5.8ème Division de artillerie"
+        type = artillery
+        home = 421
+    }
+
+	regiment = {
+        name= "3.8ème Division de artillerie"
+        type = artillery
+        home = 400
+    }
+	
+    regiment = {
+        name= "1.6ème Division de artillerie"
+        type = artillery
+        home = 458
+    }
+
+    regiment = {
+        name= "2.3ème Division de artillerie"
+        type = artillery
+        home = 456
+    }
+
+    regiment = {
+        name= "1.8ème Division de artillerie"
+        type = artillery
+        home = 461
+    }
+
+}
+
+army = {
+    name = "7ère Armée"
+    location = 467
+	regiment = {
+        name= "1.8ème Division de Hussar"
+        type = hussar
+        home = 413
+    }
+
+    regiment = {
+        name= "5.9ème Division de artillerie"
+        type = artillery
+        home = 453
+    }
+
+    regiment = {
+        name= "4.2ème Division de artillerie"
+        type = artillery
+        home = 448
+    }
+
+    regiment = {
+        name= "1.2ème Division de artillerie"
+        type = artillery
+        home = 430
+    }
+
+    regiment = {
+        name= "3.2ème Division de artillerie"
+        type = artillery
+        home = 432
+    }
+
+    regiment = {
+        name= "4.1ème Division artillerie"
+        type = artillery
+        home = 412
     }
 
 }
@@ -625,6 +795,24 @@ army = {
         home = 46
     }
 
+	regiment = {
+        name= "2.9ème Division d'Infanterie"
+        type = infantry
+        home = 58
+    }
+	
+	regiment = {
+        name= "3.9ème Division d'Infanterie"
+        type = infantry
+        home = 65
+    }
+	
+	regiment = {
+        name= "4.9ème Division d'Infanterie"
+        type = infantry
+        home = 69
+    }
+	
     regiment = {
         name= "2.9ème Division d'Infanterie"
         type = hussar
@@ -635,6 +823,30 @@ army = {
         name= "3.9ème Division d'Infanterie"
         type = artillery
         home = 424
+    }
+	
+}
+
+army = {
+    name = "Force d'intervention Louisiana"
+    location = 139
+
+	regiment = {
+        name= "2.2ème Division d'Infanterie"
+        type = infantry
+        home = 2215
+    }
+
+    regiment = {
+        name= "3.2ème Division d'Infanterie"
+        type = infantry
+        home = 2213
+    }
+
+    regiment = {
+        name= "3.9ème Division de artillerie"
+        type = artillery
+        home = 139
     }
 }
 

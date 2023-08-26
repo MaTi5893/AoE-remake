@@ -147,35 +147,107 @@ army = {
     location = 385
 
     regiment = {
-        name = "5e Infanterie Brigade"
+        name = "5e Artillerie Brigade"
         type = artillery
         home = 379
     }
 
     regiment = {
-        name = "6e Infanterie Brigade"
+        name = "6e Artillerie Brigade"
         type = artillery
         home = 382
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
+        name = "7e Artillerie Brigade"
         type = artillery
         home = 384
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
+        name = "7e Artillerie Brigade"
         type = artillery
         home = 380
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
+        name = "7e Artillerie Brigade"
         type = artillery
         home = 385
     }
+	
+	regiment = {
+        name= "3e Infanterie Brigade"
+        type = infantry
+        home = 384
+    }
+
+    regiment = {
+        name= "4e Infanterie Brigade"
+        type = infantry
+        home = 386
+    }
+
+    regiment = {
+        name= "5e Infanterie Brigade"
+        type = infantry
+        home = 385
+    }
+
+    regiment = {
+        name= "6e Infanterie Brigade"
+        type = infantry
+        home = 382
+    }
+
+    regiment = {
+        name = "2e Cavalerie Brigade"
+        type = hussar
+        home = 383
+    }
 }
+
+army = {
+    name = "Hague Garnizoen"
+    location = 376
+
+    regiment = {
+        name = "12e Artillerie Brigade"
+        type = artillery
+        home = 393
+    }
+
+    regiment = {
+        name = "13e Artillerie Brigade"
+        type = artillery
+        home = 383
+    }
+
+    regiment = {
+        name = "14e Artillerie Brigade"
+        type = artillery
+        home = 383
+    }
+
+    regiment = {
+        name = "15e Artillerie Brigade"
+        type = artillery
+        home = 383
+    }
+
+    regiment = {
+        name = "11e Artillerie Brigade"
+        type = artillery
+        home = 2087
+    }
+
+    regiment = {
+        name = "3e Cavalerie Brigade"
+        type = hussar
+        home = 393
+    }
+}
+
 army = {
     name = "K.N.I.L."
     location = 1413
@@ -189,6 +261,30 @@ army = {
         name = "Banisaren Korps"
         type = hussar
         home = 1421
+    }
+	
+	regiment = {
+        name = "Banten Korps"
+        type = infantry
+        home = 772
+    }
+	
+	regiment = {
+        name = "Banisaren Korps"
+        type = infantry
+        home = 1413
+    }
+	
+	regiment = {
+        name = "Bogor Korps"
+        type = artillery
+        home = 1414
+    }
+	
+	regiment = {
+        name = "Lampung Korps"
+        type = artillery
+        home = 1403
     }
 }
 

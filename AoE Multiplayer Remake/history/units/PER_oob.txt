@@ -115,6 +115,46 @@ army = {
 }
 
 army = {
+    location = 1212
+    name = "Army of Herat"
+    regiment = {
+        name= "4. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1147
+    }
+
+    regiment = {
+        name= "5. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1116
+    }
+
+    regiment = {
+        name= "6. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1780
+    }
+
+    regiment = {
+        name= "7. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1779
+    }
+
+    regiment = {
+        name= "8. Bakhsh-i Piyadenizam"
+        type = artillery
+        home = 1148
+    }
+
+    regiment = {
+        name= "9. Bakhsh-i Piyadenizam"
+        type = cavalry
+        home = 1214
+    }
+}
+
+army = {
     name = "Army of Baku"
     location = 1102
     regiment = {

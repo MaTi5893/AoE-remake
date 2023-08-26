@@ -491,6 +491,7 @@ basic_chemistry = {
 
     activate_building = fertilizer_factory
 #    activate_building = steamer_shipyard
+    supply_limit = 0.1
     pop_growth = 0.0001
 
     ai_chance = {
@@ -503,7 +504,7 @@ medicine = {
     year = 1660
     cost = 7200
 
-    supply_limit = 0.25
+    supply_limit = 0.15
 
     ai_chance = {
         factor = 10

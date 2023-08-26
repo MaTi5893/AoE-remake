@@ -3,14 +3,19 @@ army = {
 	name = "Esercito Veneziano"
 	location = 729
 	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
+		name= "Venetian Guards Cavalry"
+		type = cuirassier
 		home = 729
 	}
 	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
+		name= "Venetian Infantry"
+		type = infantry
 		home = 730
+	}
+	regiment = {
+		name= "Venetian Infantry"
+		type = infantry
+		home = 723
 	}
 	regiment = {
 		name= "Venetian Artillery"
@@ -27,25 +32,6 @@ army = {
 		type = artillery
 		home = 731
 	}
-}
-army = {
-	name = "Esercito Grecia"
-	location = 840
-	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
-		home = 840
-	}
-	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
-		home = 839
-	}
-	regiment = {
-		name= "Venetian Artillery"
-		type = artillery
-		home = 841
-	}
 	regiment = {
 		name= "Venetian Artillery"
 		type = artillery
@@ -54,7 +40,26 @@ army = {
 	regiment = {
 		name= "Venetian Artillery"
 		type = artillery
-		home = 727
+		home = 728
+	}
+}
+army = {
+	name = "Esercito Grecia"
+	location = 840
+	regiment = {
+		name= "Venetian Infantry"
+		type = infantry
+		home = 840
+	}
+	regiment = {
+		name= "Venetian Infantry"
+		type = infantry
+		home = 839
+	}
+	regiment = {
+		name= "Venetian Artillery"
+		type = artillery
+		home = 841
 	}
 }
 

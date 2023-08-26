@@ -68,50 +68,48 @@ army = {
 	name = "Army of Savoia"
 	location = 720
 	regiment = {
-		name= "Savoiard Artillery"
+		name= "6th Savoiard Artillery"
 		type = artillery
 		home = 720
 	}
 	regiment = {
-		name= "Savoiard Artillery"
-		type = artillery
+		name= "1st Savoiard Infantry"
+		type = infantry
 		home = 720
 	}
+	
 	regiment = {
-		name= "3nd Savoiard Artillery"
-		type = artillery
+		name= "2nd Savoiard Infantry"
+		type = infantry
 		home = 472
 	}
 	
 	regiment = {
-		name= "4nd Savoiard Artillery"
-		type = artillery
-		home = 465
+		name= "3rd Savoiard Infantry"
+		type = infantry
+		home = 720
 	}
 	
 	regiment = {
-		name= "5nd Savoiard Artillery"
-		type = artillery
-		home = 466
+		name= "4th Savoiard Infantry"
+		type = infantry
+		home = 720
 	}
-}
-army = {
-	name = "Army of Aosta"
-	location = 721
+
 	regiment = {
-		name= "Savoiard Artillery"
+		name= "1st Savoiard Artillery"
 		type = artillery
 		home = 720
 	}
 	regiment = {
-		name= "Savoiard Artillery"
+		name= "2nd Savoiard Artillery"
 		type = artillery
 		home = 720
 	}
 	regiment = {
 		name= "3rd Savoiard Artillery"
 		type = artillery
-		home = 472
+		home = 1960
 	}
 	
 	regiment = {

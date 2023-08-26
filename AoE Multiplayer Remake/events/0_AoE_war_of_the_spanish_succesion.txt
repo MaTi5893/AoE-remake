@@ -64,7 +64,7 @@ country_event = {
 					casus_belli = {
 						target = THIS
 						type = dispute_succession_aus
-						months = 5
+						months = 6
 					}
 				}
 			}
@@ -169,4 +169,67 @@ country_event = {
     #        factor = 0.15
     #    }
     #}
+}
+country_event = {
+    id = 98001
+    title = "Eve of the Spanish Succession"
+    desc = "EVTDESC98001"
+	picture = conscription_marching
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The fate of Spain shall be decided soon."
+			artillery = 300
+			canned_food = 300
+			ammunition = 300
+			small_arms = 300
+			wine = 300
+			liquor = 300
+			regular_clothes = 250
+			luxury_clothes = 250
+			money = 50000
+	}
+}
+country_event = {
+    id = 98002
+    title = "Eve of the Great Northern War"
+    desc = "EVTDESC98002"
+	picture = gnw_swe
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The fate of Sweden shall be decided soon."
+			artillery = 300
+			canned_food = 300
+			ammunition = 300
+			small_arms = 300
+			wine = 300
+			liquor = 300
+			regular_clothes = 250
+			luxury_clothes = 250
+			money = 50000
+	}
+}
+country_event = {
+    id = 98003
+    title = "Times of Trouble Ahead"
+    desc = "EVTDESC98003"
+	picture = cavallery
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Preparation is necessary for our nation's survival."
+			artillery = 150
+			canned_food = 100
+			ammunition = 100
+			small_arms = 100
+			wine = 100
+			liquor = 100
+			regular_clothes = 80
+			luxury_clothes = 80
+			money = 25000
+	}
 }

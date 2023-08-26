@@ -14,6 +14,47 @@ political_decisions = {
 		}
 	}
 	
+	cleanup_setup = {
+		potential = {
+			ai = yes
+			exists = yes
+			tag = CLN
+			NOT = { has_country_flag = starting_goods_war }
+		}
+		allow = { }
+		
+		effect = {
+			set_country_flag = starting_goods_war
+			SWE = { country_event = 98002 }
+			TOR = { country_event = 98002 }
+			DNN = { country_event = 98002 }
+			PLC = { country_event = 98002 }
+			SAX = { country_event = 98002 }
+			TUR = { country_event = 98002 }
+			SPA = { country_event = 98001 }
+			BOR = { country_event = 98001 }
+			PRU = { country_event = 98001 }
+			AUS = { country_event = 98001 }
+			SVY = { country_event = 98001 }
+			VEN = { country_event = 98001 }
+			POR = { country_event = 98001 }
+			ENL = { country_event = 98001 }
+			NET = { country_event = 98001 }
+			MOR = { country_event = 98003 }
+			ALD = { country_event = 98003 }
+			PER = { country_event = 98003 }
+			MUG = { country_event = 98003 }
+			MAH = { country_event = 98003 }
+			KON = { country_event = 98003 }
+			DAI = { country_event = 98003 }
+			AYO = { country_event = 98003 }
+			KOR = { country_event = 98003 }
+			TKG = { country_event = 98003 }
+			ETH = { country_event = 98003 }
+			DZN = { country_event = 98003 }
+		}
+	}
+	
 	1700_hist_pop_setup = {
 		potential = {
 			ai = yes
@@ -54,7 +95,8 @@ political_decisions = {
 					}
 				}
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_german
 							has_pop_culture = south_german 
@@ -67,6 +109,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.18
 				}
 			}
 			#African Pop Change
@@ -96,7 +144,8 @@ political_decisions = {
 					}
 				}
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = western_african
 							has_pop_culture = nigerian 
@@ -127,7 +176,8 @@ political_decisions = {
 					}
 				}
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = native_american_minor
 							has_pop_culture = cherokee 
@@ -137,6 +187,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.43
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.1
 				}
 			}
 			#Indonesian Pop Change
@@ -166,6 +222,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = malay
 							has_pop_culture = acehnese 
@@ -178,6 +235,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.78
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.14
 				}
 			}
 			#Indian Pop Change
@@ -265,6 +328,13 @@ political_decisions = {
 					}
 					reduce_pop = 1.256
 				}
+				any_pop = {
+					limit = {	
+						culture = japanese
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
 			}
 			#Okinawa
 			1678 = {
@@ -282,6 +352,7 @@ political_decisions = {
 			SPA = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_german
 							has_pop_culture = south_german 
@@ -294,6 +365,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = spanish
 							has_pop_culture = catalan 
@@ -308,6 +380,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = malay
 							has_pop_culture = filipino 
@@ -318,6 +391,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = mayan
 							has_pop_culture = spanish_american 
@@ -349,6 +423,9 @@ political_decisions = {
 			}
 			#La Paz
 			BOL_2321 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.96
 				}
@@ -367,42 +444,63 @@ political_decisions = {
 			}
 			#Puglia 
 			SIC_754 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.77
 				}
 			}
 			#Campania 
 			SIC_753 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.76
 				}
 			}
 			#Sicily 
 			SIC_763 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.51
 				}
 			}
 			#Sardinia
 			SAR_765 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.82
 				}
 			}
 			#Cuba
 			SPA_2209 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.39
 				}
 			}
 			#Milan
 			726 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.82
 				}
 			}
 			#Puerto Rico
 			2222 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
 				any_pop = {
 					reduce_pop = 0.41
 				}
@@ -410,7 +508,8 @@ political_decisions = {
 			#Portuguese pop change
 			POR = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = portuguese
 							has_pop_culture = western_african 
@@ -420,6 +519,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = brazilian
 							has_pop_culture = amazonian 
@@ -434,16 +534,24 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = bantu
 						}
 					}
 					reduce_pop = 0.91
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.18
+				}
 			}
 			DAI = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = vietnamese
 							has_pop_culture = asian_minor 
@@ -452,19 +560,31 @@ political_decisions = {
 					}
 					reduce_pop = 1.79
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 6.2
+				}
 			}
 			SWI = {
 				any_pop = {
 					limit = {
-						NOT = { type = slaves }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 1.07
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.26
 				}
 			}
 			TIB = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.32
 				}
@@ -472,9 +592,15 @@ political_decisions = {
 			ETH = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.84
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.36
 				}
 			}
 			RZV = {
@@ -484,6 +610,12 @@ political_decisions = {
 					}
 					reduce_pop = 3.02
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
+				}
 			}
 			MTP = {
 				any_pop = {
@@ -491,6 +623,12 @@ political_decisions = {
 						NOT = { type = clerks }
 					}
 					reduce_pop = 2.63
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
 				}
 			}
 			KON = {
@@ -500,27 +638,45 @@ political_decisions = {
 					}
 					reduce_pop = 1.65
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
+				}
 			}
 			DZN = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.42
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
 				}
 			}
 			XIN = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.35
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
 				}
 			}
 			LXA = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.7
 				}
@@ -532,13 +688,25 @@ political_decisions = {
 					}
 					reduce_pop = 1.87
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.6
+				}
 			}
 			BUK = {
 				any_pop = {
 					limit = {
-						NOT = { type = clerks }
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.46
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
 				}
 			}
 			KAZ = {
@@ -548,6 +716,12 @@ political_decisions = {
 					}
 					reduce_pop = 3.9
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
+				}
 			}
 			BUR = {
 				any_pop = {
@@ -555,6 +729,12 @@ political_decisions = {
 						NOT = { type = clerks }
 					}
 					reduce_pop = 1.094
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
 				}
 			}
 			ASM = {
@@ -580,6 +760,12 @@ political_decisions = {
 					}
 					reduce_pop = 1.15
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.6
+				}
 			}
 			KOR = {
 				any_pop = {
@@ -591,10 +777,17 @@ political_decisions = {
 					}
 					reduce_pop = 1.74
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 4.1
+				}
 			}
 			TUS = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_italian
 							has_pop_culture = south_italian 
@@ -602,16 +795,29 @@ political_decisions = {
 					}
 					reduce_pop = 0.78
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
 			}
 			PAP = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_italian
 							has_pop_culture = south_italian 
 						}
 					}
 					reduce_pop = 0.78
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
 				}
 			}
 			ALD = {
@@ -624,6 +830,12 @@ political_decisions = {
 					}
 					reduce_pop = 1.3
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
 			}
 			SAX = {
 				any_pop = {
@@ -635,10 +847,17 @@ political_decisions = {
 					}
 					reduce_pop = 1.12
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
 			}
 			MLT = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = maltese
 							has_pop_culture = english 
@@ -650,6 +869,7 @@ political_decisions = {
 			BAV = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = south_german
 							has_pop_culture = western_slavic 
@@ -657,10 +877,17 @@ political_decisions = {
 					}
 					reduce_pop = 0.68
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.5
+				}
 			}
 			WUR = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = south_german
 							has_pop_culture = western_slavic 
@@ -672,19 +899,27 @@ political_decisions = {
 			PRU = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_german
 							has_pop_culture = polish 
 							has_pop_culture = lithuanian 
 						}
 					}
-					reduce_pop = 0.68
+					reduce_pop = 0.66
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.87
 				}
 			}
 			#French Pop Change
 			BOR = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = french
 							has_pop_culture = breton 
@@ -692,10 +927,11 @@ political_decisions = {
 							has_pop_culture = south_german 
 						}
 					}
-					reduce_pop = 0.956
+					reduce_pop = 0.927
 				}
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = french_canadian
 							has_pop_culture = cree 
@@ -709,7 +945,8 @@ political_decisions = {
 					reduce_pop = 0.046
 				}
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = afro_antillean
 							has_pop_culture = western_african
@@ -717,11 +954,18 @@ political_decisions = {
 					}
 					reduce_pop = 0.63
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.3
+				}
 			}
 			#English Pop Change
 			ENL = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = irish 
 							has_pop_culture = western_african
@@ -732,17 +976,20 @@ political_decisions = {
 				any_pop = {
 					limit = {	
 						has_pop_culture = scottish
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.685
 				}
 				any_pop = {
 					limit = {	
 						has_pop_culture = welsh
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 0.55
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = british 
 							has_pop_culture = anglo_canadian 
@@ -752,6 +999,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = yankee
 							has_pop_culture = native_american_minor 
@@ -759,6 +1007,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.05
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.28
 				}
 			}
 			#Saint Johns
@@ -785,6 +1039,7 @@ political_decisions = {
 			NET = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = dutch
 							has_pop_culture = flemish 
@@ -794,10 +1049,18 @@ political_decisions = {
 					}
 					reduce_pop = 0.68
 				}
+				any_pop = {
+					limit = {	
+						culture = dutch
+						type = soldiers 
+					}
+					reduce_pop = 1.18
+				}
 			}
 			SVY = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_italian
 							has_pop_culture = arpitan 
@@ -806,30 +1069,45 @@ political_decisions = {
 					}
 					reduce_pop = 0.91
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
 			}
 			VEN = {
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_italian
 						}
 					}
 					reduce_pop = 0.68
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
 			}
 			AUS = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = slovene
 							has_pop_culture = south_german
 							has_pop_culture = north_italian
 						}
 					}
-					reduce_pop = 0.74
+					reduce_pop = 0.728
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = slovak
 							has_pop_culture = hungarian
@@ -843,6 +1121,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = north_german
 							has_pop_culture = czech
@@ -851,28 +1130,46 @@ political_decisions = {
 					}
 					reduce_pop = 0.56
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.38
+				}
 			}
 			#Western Transylvania
 			AUS_654 = {
 				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
 					reduce_pop = 0.42
 				}
 			}
 			#Eastern Transylvania
 			AUS_657 = {
 				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
 					reduce_pop = 0.41
 				}
 			}
 			#Bohemia
 			AUS_625 = {
 				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
 					reduce_pop = 0.81
 				}
 			}
 			#Oradea
 			647 = {
 				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
 					reduce_pop = 0.45
 				}
 			}
@@ -889,54 +1186,70 @@ political_decisions = {
 		effect = {
 			SWE = {
 				any_pop = {
-					limit = {	
+					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = norwegian
 							has_pop_culture = north_german
 						}
 					}
-					reduce_pop = 0.48
+					reduce_pop = 0.36
 				}
 				any_pop = {
-					limit = {					
+					limit = {	
+						NOT = { type = soldiers }
 						has_pop_culture = finnish
 					}
-					reduce_pop = 0.45
+					reduce_pop = 0.38
 				}
 				any_pop = {
-					limit = {					
+					limit = {		
+						NOT = { type = soldiers }
 						has_pop_culture = swedish
 					}
-					reduce_pop = 0.68
+					reduce_pop = 0.51
 				}
 			}
 			RUS_994 = {
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						NOT = { culture = finnish }
 					}
-					reduce_pop = 0.65
+					reduce_pop = 0.62
 				}
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						culture = finnish
 					}
-					reduce_pop = 0.85
+					reduce_pop = 0.82
 				}
 			}
 			RUS_349 = {
 				any_pop = {
-					reduce_pop = 0.55
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.52
 				}
 			}
 			RUS_354 = {
 				any_pop = {
-					reduce_pop = 0.45
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.44
 				}
 			}
 			DNN = {
+				add_country_modifier = {
+					name = great_northern_war
+					duration = 5474
+				}
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = danish
 							has_pop_culture = norwegian
@@ -944,21 +1257,25 @@ political_decisions = {
 							has_pop_culture = western_african
 						}
 					}
-					reduce_pop = 0.55
+					reduce_pop = 0.51
 				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.25
+					reduce_pop = 1.5
 				}
 			}
 			SWE = {
+				add_country_modifier = {
+					name = charles_xii
+					duration = 7300
+				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.45
+					reduce_pop = 1.1
 				}
 			}
 		}
@@ -987,12 +1304,12 @@ political_decisions = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.75
+					reduce_pop = 1.82
 				}
 			}
 		}
 	}
-	
+
 	rus_nerf_setup = {
 		potential = {
 			always = no
@@ -1010,13 +1327,6 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					culture = russian
-					NOT = { type = soldiers }
-				}
-				reduce_pop = 1
-			}
-			any_pop = {
-				limit = {
 					culture = siberian_tatar
 				}
 				reduce_pop = 1.48
@@ -1026,7 +1336,13 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.69
+					reduce_pop = 0.684
+				}
+				any_pop = {
+					limit = {
+						type = soldiers 
+					}
+					reduce_pop = 1.11
 				}
 			}
 			PLC = {
@@ -1034,7 +1350,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.752
+					reduce_pop = 0.746
 				}
 			}
 		}
@@ -1094,6 +1410,12 @@ political_decisions = {
 					}
 					reduce_pop = 0.26
 				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.62
+				}
 			}
 			WAL = {
 				any_pop = {
@@ -1103,6 +1425,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.66
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.57
 				}
 			}
 			any_owned = {
@@ -1127,6 +1455,7 @@ political_decisions = {
 				}
 				any_pop = {
 					limit = {	
+						NOT = { type = soldiers }
 						OR = {
 							culture = turkish
 							culture = greek
@@ -1167,7 +1496,7 @@ political_decisions = {
 						NOT = { culture = berber }
 						type = soldiers
 					}
-					reduce_pop = 0.9
+					reduce_pop = 1.08
 				}
 			}
 		}
@@ -1461,6 +1790,10 @@ political_decisions = {
 				name = magnate_oligarchy
 				duration = -1
 			}
+			add_country_modifier = {
+					name = great_northern_war
+					duration = 5480
+				}
 			PLC = {
 				any_pop = {
 					limit = {
@@ -1473,7 +1806,7 @@ political_decisions = {
 				limit = {
 					type = soldiers
 				}
-				reduce_pop = 1.2
+				reduce_pop = 1.8
 			}
 		}
 	}
@@ -1556,7 +1889,7 @@ political_decisions = {
 						has_pop_culture = north_italian
 						type = soldiers
 					}
-					reduce_pop = 4
+					reduce_pop = 5
 				}
 			}
 		}
@@ -1640,6 +1973,12 @@ political_decisions = {
 				}
 				reduce_pop = 1.42
 			}	
+			any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
+				}
 			country_event = 173208
 		}
 	}
@@ -1738,16 +2077,9 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					OR = {
-						culture = north_italian
-						culture = south_italian
-						culture = wallonian
-						culture = dutch
-						culture = flemish
-					}
 					type = soldiers
 				}
-				reduce_pop = 0.95
+				reduce_pop = 1.22
 			}
 		}
 	}

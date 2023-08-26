@@ -299,7 +299,7 @@ army = {
 	regiment = {
         name= "IV. Infantry"
         type = infantry
-        home = 1743
+        home = 552
     }
 
 }
@@ -328,7 +328,7 @@ army = {
     regiment = {
         name= "4. Artillery"
         type = artillery
-        home = 3256
+        home = 695
     }
 	
 	regiment = {
@@ -337,10 +337,74 @@ army = {
         home = 698
     }
 
+	regiment = {
+        name= "I. Infantry"
+        type = infantry
+        home = 3252
+    }
+	
+	regiment = {
+        name= "II. Infantry"
+        type = infantry
+        home = 3252
+    }
+	
+	regiment = {
+        name= "III. Infantry"
+        type = infantry
+        home = 681
+    }
+	
+	regiment = {
+        name= "IV. Infantry"
+        type = infantry
+        home = 550
+    }
+	
     regiment = {
         name= "1. Cruissier"
         type = cuirassier
         home = 698
+    }
+}
+
+army = {
+    name = "IV Army"
+    location = 553
+    regiment = {
+        name= "1. Artillery"
+        type = artillery
+        home = 577
+    }
+
+    regiment = {
+        name= "2. Artillery"
+        type = artillery
+        home = 557
+    }
+	
+	regiment = {
+        name= "3. Artillery"
+        type = artillery
+        home = 553
+    }
+
+    regiment = {
+        name= "4. Artillery"
+        type = artillery
+        home = 551
+    }
+	
+	regiment = {
+        name= "5. Artillery"
+        type = artillery
+        home = 549
+    }
+	
+    regiment = {
+        name= "1. Cruissier"
+        type = cuirassier
+        home = 3252
     }
 }
 

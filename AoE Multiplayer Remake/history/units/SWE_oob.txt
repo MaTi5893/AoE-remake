@@ -147,67 +147,323 @@ army = {
     regiment = {
         name= "Svea Livgarde"
         type = plane
-        home = 329
+        home = 317
     }
 
     regiment = {
         name= "Södermanlands Regemente"
         type = plane
-        home = 326
+        home = 321
     }
 
+	regiment = {
+        name= "Dunktaser Regemente"
+        type = plane
+        home = 335
+    }
+	
     regiment = {
         name= "Första Livgrenadjärregementet"
         type = plane
-        home = 325
+        home = 531
     }
 
     regiment = {
         name= "Upplands Regemente"
         type = plane
-        home = 324
+        home = 546
     }
 
     regiment = {
         name= "Västgöta Regemente"
         type = artillery
-        home = 330
+        home = 546
     }
 
     regiment = {
         name= "Kalmar Regemente"
         type = artillery
-        home = 332
+        home = 321
     }
 
     regiment = {
         name= "Jönköpings Regemente"
         type = artillery
-        home = 333
+        home = 345
     }
 
     regiment = {
         name= "Södra Skånska Infanteriregementet"
         type = artillery
-        home = 334
+        home = 345
     }
 
+	regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 325
+    }
+	
+	 regiment = {
+        name= "Surdania Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+	
     regiment = {
         name= "Kronprinsens Husarregemente"
         type = hussar
-        home = 335
+        home = 346
     }
 
     regiment = {
         name= "Norrlands Dragonregemente"
         type = artillery
-        home = 321
+        home = 346
     }
 }
 
 army = {
-    name = "Support Armén"
+    name = "Karlskrona Armén"
+    location = 335
+    regiment = {
+        name= "Svea Livgarde"
+        type = plane
+        home = 334
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = plane
+        home = 335
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = plane
+        home = 329
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = plane
+        home = 333
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 332
+    }
+
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 325
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = hussar
+        home = 327
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 328
+    }
+}
+
+army = {
+    name = "Boras Armén"
+    location = 330
+    regiment = {
+        name= "Svea Livgarde"
+        type = plane
+        home = 334
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = plane
+        home = 329
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = plane
+        home = 333
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 332
+    }
+
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = hussar
+        home = 327
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 328
+    }
+}
+
+army = {
+    name = "Ingriya Armén"
+    location = 3253
+    regiment = {
+        name= "Svea Livgarde"
+        type = plane
+        home = 3253
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = plane
+        home = 3253
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = plane
+        home = 994
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = plane
+        home = 994
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 349
+    }
+
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 352
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 352
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 343
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = hussar
+        home = 343
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 345
+    }
+}
+
+army = {
+    name = "Vaasa Armén"
     location = 345
+    regiment = {
+        name= "Svea Livgarde"
+        type = plane
+        home = 346
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = plane
+        home = 346
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = plane
+        home = 336
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = plane
+        home = 338
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 321
+    }
+
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 320
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 318
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 317
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = hussar
+        home = 323
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 324
+    }
+}
+
+army = {
+    name = "Finska Armén"
+    location = 343
     regiment = {
         name= "Svea Livgarde"
         type = artillery
@@ -243,12 +499,8 @@ army = {
         type = dragoon
         home = 322
     }
-}
-
-army = {
-    name = "2nd Support Armén"
-    location = 343
-    regiment = {
+	
+	regiment = {
         name= "Kalmar Regemente"
         type = artillery
         home = 546
@@ -284,31 +536,412 @@ army = {
         home = 548
     }
 }
+
 army = {
-    name = "Suomen Kaarti"
+    name = "Pommern Armén"
+    location = 334
+    regiment = {
+        name= "Svea Livgarde"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = artillery
+        home = 334
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 335
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 332
+    }
+	
+	regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 333
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 3253
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 3253
+    }
+}
+
+army = {
+    name = "Kalmar Armén"
+    location = 332
+    regiment = {
+        name= "Svea Livgarde"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = artillery
+        home = 334
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 335
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 332
+    }
+	
+	regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 333
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 3253
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 3253
+    }
+}
+
+army = {
+    name = "Reval Armén"
+    location = 349
+    regiment = {
+        name= "Svea Livgarde"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = artillery
+        home = 334
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 335
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 332
+    }
+	
+	regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 333
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 3253
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 3253
+    }
+}
+
+army = {
+    name = "Pommern Armén"
+    location = 546
+    regiment = {
+        name= "Svea Livgarde"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = artillery
+        home = 548
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = artillery
+        home = 334
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 335
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 332
+    }
+	
+	regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 333
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 330
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 331
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 3253
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 3253
+    }
+}
+
+army = {
+    name = "Karelen Armén"
+    location = 340
+    regiment = {
+        name= "Svea Livgarde"
+        type = artillery
+        home = 322
+    }
+
+    regiment = {
+        name= "Södermanlands Regemente"
+        type = artillery
+        home = 326
+    }
+
+    regiment = {
+        name= "Första Livgrenadjärregementet"
+        type = artillery
+        home = 325
+    }
+
+    regiment = {
+        name= "Upplands Regemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 322
+    }
+	
+	regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 546
+    }
+
+    regiment = {
+        name= "Södra Skånska Infanteriregementet"
+        type = artillery
+        home = 355
+    }
+
+    regiment = {
+        name= "Kronprinsens Husarregemente"
+        type = artillery
+        home = 349
+    }
+
+    regiment = {
+        name= "Norrlands Dragonregemente"
+        type = artillery
+        home = 328
+    }
+
+    regiment = {
+        name= "Västgöta Regemente"
+        type = dragoon
+        home = 548
+    }
+}
+
+army = {
+    name = "Livlandska Gardet"
     location = 354
     regiment = {
         name= "I. Suomen Tarkk’ampujapataljoona"
         type = plane
-        home = 343
+        home = 354
     }
 
     regiment = {
         name= "II. Suomen Tarkk’ampujapataljoona"
         type = plane
-        home = 345
+        home = 354
     }
 
     regiment = {
         name= "III. Suomen Tarkk’ampujapataljoona"
         type = plane
-        home = 346
+        home = 355
     }
 
     regiment = {
-        name= "III. Suomen Tarkk’ampujapataljoona"
+        name= "IV. Suomen Tarkk’ampujapataljoona"
         type = plane
-        home = 548
+        home = 994
     }
 
     regiment = {
@@ -318,9 +951,20 @@ army = {
     }
 
     regiment = {
-        name= "Kalmar Regemente"
+        name= "Dorpat Regemente"
         type = artillery
-        home = 323
+        home = 994
+    }
+
+    regiment = {
+        name= "Köpings Regemente"
+        type = artillery
+        home = 994
+    }
+    regiment = {
+        name= "Lapland Regemente"
+        type = artillery
+        home = 994
     }
 
     regiment = {
@@ -329,20 +973,9 @@ army = {
         home = 994
     }
     regiment = {
-        name= "Kalmar Regemente"
+        name= "Kalmati Regemente"
         type = artillery
-        home = 994
-    }
-
-    regiment = {
-        name= "Jönköpings Regemente"
-        type = artillery
-        home = 531
-    }
-    regiment = {
-        name= "Kalmar Regemente"
-        type = artillery
-        home = 327
+        home = 350
     }
 }
 
