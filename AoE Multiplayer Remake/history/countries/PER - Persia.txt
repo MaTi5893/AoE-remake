@@ -7,10 +7,10 @@ religion = shiite
 government = absolute_monarchy
 civilized = yes
 prestige = 10
-plurality = 0.0
+plurality = 10.0
 nationalvalue = nv_autocracy
-literacy = 0.03
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+literacy = 0.08
+non_state_culture_literacy = 0.02
 
 # Political reforms
 slavery = yes_slavery
@@ -63,16 +63,6 @@ govt_flag = {
     flag = theocracy
 }
 
-foreign_officers = yes_foreign_officers
-foreign_training = yes_foreign_training
-foreign_weapons = yes_foreign_weapons
-military_constructions = yes_military_constructions
-admin_reform = admin_reform_two
-education_reform = yes_education_reform
-industrial_construction = yes_western_science
-finance_reform = yes_finance_reform
-land_reform = land_reform_two
-
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
@@ -89,6 +79,7 @@ piston_steam_engine = 1
 clipper_design = 1
 malthusian_thought = 1
 basic_chemistry = 1
+piston_steam_engine = 1
 
 # Inventions
 test_irregular = yes

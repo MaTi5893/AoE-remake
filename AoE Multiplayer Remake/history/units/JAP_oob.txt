@@ -3,7 +3,7 @@ army = {
 
     leader = {
         name = "Tokugawa Tsunayoshi"
-        date = 1836.1.1
+        date = 1700.1.1
         type = land
         personality = defence_2.1
         background = attack_1.1
@@ -30,6 +30,23 @@ army = {
         home = 1652
     }
 
+	regiment = {
+        name= "4.Edo"
+        type = irregular
+        home = 1649
+    }
+
+    regiment = {
+        name= "5.Edo"
+        type = cavalry
+        home = 1651
+    }
+	
+	regiment = {
+        name= "6.Edo"
+        type = cavalry
+        home = 1676
+    }
 }
 
 army = {
@@ -61,13 +78,13 @@ army = {
     regiment = {
         name= "1.1 Satsuma"
         type = irregular
-        home = 1662
+        home = 1661
     }
 
     regiment = {
         name= "2.1 Satsuma"
         type = irregular
-        home = 1660
+        home = 1661
     }
 
     regiment = {
@@ -84,19 +101,19 @@ army = {
     regiment = {
         name= "1.Tosa"
         type = irregular
-        home = 1665
+        home = 1656
     }
 
     regiment = {
         name= "2.Tosa"
         type = irregular
-        home = 1667
+        home = 1656
     }
 
     regiment = {
         name= "3.Tosa"
         type = irregular
-        home = 1666
+        home = 1655
     }
 
 }
@@ -107,19 +124,19 @@ army = {
     regiment = {
         name= "1.Sendai"
         type = irregular
-        home = 1668
+        home = 1653
     }
 
     regiment = {
         name= "2.Sendai"
         type = irregular
-        home = 1673
+        home = 1674
     }
 
     regiment = {
         name= "3.Sendai"
         type = irregular
-        home = 1669
+        home = 1652
     }
 
 }
@@ -149,7 +166,7 @@ army = {
 
 navy = {
     name = "Imperial Fleet"
-    location = 1657
+    location = 1661
     ship = {
         name= "1 Yusosentai"
         type = clipper_transport

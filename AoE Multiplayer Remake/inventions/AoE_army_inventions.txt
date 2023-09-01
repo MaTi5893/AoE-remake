@@ -288,7 +288,7 @@ impressment = {
         base = 5
         modifier = {
             factor = 50
-            goose_step = 1
+            invention = goose_step 
         }
         modifier = {
             factor = 100
@@ -370,7 +370,7 @@ professional_recruitment = {
         base = 5
         modifier = {
             factor = 30
-            the_carbine = 1
+            invention = the_carbine 
         }
         modifier = {
             factor = 100
