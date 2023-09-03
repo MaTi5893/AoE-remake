@@ -485,3 +485,27 @@ seperate_truce;Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
 seperate_truce_desc;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
 seperate_truce_short;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
 seperate_truce_setup;Adds a Seperate Truce;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_low;Acquire Small Core;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_low_desc;Acquire an enemy 即state劬 where we have 即core provinces劬;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_low_short;Acquire $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_low_setup;Acquire small core $STATE$ from $RECIPIENT$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_high;Acquire Large Core;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_high_desc;Acquire an enemy 即state劬 where we have 即core provinces劬;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_high_short;Acquire $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_high_setup;Acquire large core $STATE$ from $RECIPIENT$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state;Acquire Medium Core;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_desc;Acquire an enemy 即state劬 where we have 即core provinces劬;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_short;Acquire $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_core_state_setup;Acquire medium core $STATE$ from $RECIPIENT$;;;;;;;;;;;;x;;;;;;;;;;;;;;
+acquire_state;Acquire Medium State;Prendre 尒at;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_desc;Aquire an enemy 即state劬;Prendre un 即尒at劬 ennemi;Erobern Sie einen feindlichen 即Staat劬.;;Adquirir un 即estado劬 enemigo;;;;;;;;;x
+acquire_state_short;Acquire $STATE$;Prendre $STATE$;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ de $RECIPIENT$;$STATE$ von $RECIPIENT$ erwerben;;;;;;;;;;;
+acquire_state_low;Acquire Small State;Prendre 尒at;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_low_desc;Aquire an enemy 即state劬;Prendre un 即尒at劬 ennemi;Erobern Sie einen feindlichen 即Staat劬.;;Adquirir un 即estado劬 enemigo;;;;;;;;;x
+acquire_state_low_short;Acquire $STATE$;Prendre $STATE$;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_low_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ de $RECIPIENT$;$STATE$ von $RECIPIENT$ erwerben;;;;;;;;;;;
+acquire_state_high;Acquire Large State;Prendre 尒at;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_high_desc;Aquire an enemy 即state劬;Prendre un 即尒at劬 ennemi;Erobern Sie einen feindlichen 即Staat劬.;;Adquirir un 即estado劬 enemigo;;;;;;;;;x
+acquire_state_high_short;Acquire $STATE$;Prendre $STATE$;$STATE$ erwerben;;;;;;;;;;;
+acquire_state_high_setup;Acquire $STATE$ from $RECIPIENT$;Prendre $STATE$ de $RECIPIENT$;$STATE$ von $RECIPIENT$ erwerben;;;;;;;;;;;
