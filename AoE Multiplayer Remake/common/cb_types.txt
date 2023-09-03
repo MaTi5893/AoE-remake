@@ -1735,10 +1735,12 @@ acquire_substate_region = {
 
     allowed_substate_regions = {
         is_colonial = no
-		NOT = { substate_of = TKG }
-        owner = { NOT = { in_sphere = THIS } }
+        owner = { 
+			NOT = { in_sphere = THIS }
+			NOT = { substate_of = TKG }
+		}
         any_owned_province = {
-            not = {    is_core = THIS }
+            not = { is_core = THIS }
             is_colonial = no
         }
     }
@@ -4402,13 +4404,14 @@ acquire_substate_region_japan = {
     }
 
     allowed_substate_regions = {
-        is_colonial = no
-		substate_of = TKG 
-        owner = { NOT = { in_sphere = THIS } }
+        is_colonial = no 
+        owner = {
+			NOT = { in_sphere = THIS }
+			substate_of = TKG
+		}
         any_owned_province = {
             not = { is_core = THIS }
             is_colonial = no
-			substate_of = TKG
         }
     }
 
