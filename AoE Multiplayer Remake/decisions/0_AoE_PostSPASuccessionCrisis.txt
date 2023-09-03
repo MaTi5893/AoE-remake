@@ -10,6 +10,10 @@ political_decisions = {
             capital_scope = {
                 continent = europe
             }
+			NOT = {
+			tag = FSU
+			tag = BOR
+			}
             NOT = { has_country_flag = disputed_austrian_succ }
             AUS = { has_country_modifier = maria_theresa }
         }
@@ -34,7 +38,7 @@ political_decisions = {
         }
     }
 
-    denauce_maria_theresa = {
+    denounce_maria_theresa = {
         picture = austria_coa
         potential = {
             has_country_flag = refused_sanction
@@ -49,7 +53,6 @@ political_decisions = {
             NOT = { has_global_flag = disputed_austrian_succ }
             AUS = { has_country_modifier = maria_theresa }
             NOT = { has_country_flag = accepted_sanction }
-			NOT = { has_country_flag = refused_sanction }
             has_global_flag = austrian_succession_crisis
         }
         allow = {

@@ -78,6 +78,7 @@ political_decisions = {
             exists = yes
             NOT = { is_vassal = yes }
             war_policy = jingoism
+			state_n_government = 1
             owns = 653
             owns = 792
         }
@@ -109,6 +110,7 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
+			state_n_government = 1
             653 = {
                 OR = {
                     owned_by = THIS

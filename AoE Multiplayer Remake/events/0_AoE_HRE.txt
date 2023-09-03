@@ -44,6 +44,7 @@ country_event = {
             }
             clr_country_flag = hre_member
         }
+		clr_country_flag = hre_member
         clr_country_flag = hre_emperor
         set_global_flag = hre_dismantled
     }
@@ -230,5 +231,42 @@ country_event = {
 				}
 			}
 		}
+		add_accepted_culture = north_german
+		add_accepted_culture = south_german
+	}
+}
+country_event = {
+    id = 800010
+    title = "Collapse of Imperial Authority"
+    desc = "EVTDESC800010"
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = hre_dismantled
+		tag = AUS
+		has_country_flag = integrated_austrian_netherlands
+		exists = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 8
+	}
+	
+	option = {
+		name = "The dream of a united Empire is gone - forever."
+		remove_accepted_culture = flemish
+		remove_accepted_culture = wallonian
+		BEL = {
+            all_core = {
+                remove_core = AUS
+            }
+        }
+		SIC_754 = { remove_core = AUS }
+		SIC_753 = { remove_core = AUS }
+		LOM = {
+            all_core = {
+                remove_core = AUS
+            }
+        }
 	}
 }

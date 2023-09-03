@@ -7,7 +7,8 @@ political_decisions = {
             NOT = { has_country_flag = bourbon_claims_on_italy }
         }
         allow = {
-            state_n_government = 1
+			has_country_flag = centralised_spanish_empire
+			nationalism_n_imperialism = 1
             owns = 754
             owns = 762
         }
@@ -193,7 +194,10 @@ political_decisions = {
             NOT = { has_country_flag = nueva_planta_decrees }
         }
         allow = {
-            ideological_thought = 1
+			OR = {
+				ideological_thought = 1
+				year = 1707
+			}
             NOT = { safety_regulations = no_safety }
 			NOT = { safety_regulations = trinket_safety }
 			NOT = { safety_regulations = low_safety }
@@ -242,24 +246,72 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						tag = SPA #Habsburg
+						LUX = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						#LIG = {
+						#	all_core = {
+						#		owned_by = THIS
+						#	}
+						#}
+						owns = 389
+						owns = 387
+						owns = 381
+						owns = 754
+						owns = 755
+						SRD = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						SYC = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						#517 = {
+						#	owned_by = THIS
+						#}
 					}
 				}
 				owner = {
-					any_owned = {
+						any_owned = {
 						limit = {
 							OR = {
-							continent = north_america
-							continent = south_america
+								is_core = NAP
+								is_core = SYC
+								is_core = SRD
+								is_core = LOM
+								is_core = BEL
+								is_core = LIG
 							}
 						}
-						add_province_modifier = {
-							name = small_baby_boom
-							duration = 1095
-						}
-					}
+						add_core = THIS
+					}	
 				}
 			}
+            set_country_flag = centralised_spanish_empire
+		}
+	}
+
+	initiate_bourbon_reforms = {
+		picture = charles_iii
+		potential = {
+			tag = SPC
+			FSU = { exists = no }
+			#has_country_flag = centralised_spanish_empire
+            NOT = { has_country_flag = centralised_spanish_americas }
+			NOT = { has_country_flag = unified_by_force }
+		}
+		allow = {
+		    revolution_n_counterrevolution = 1
+			has_country_flag = centralised_spanish_empire
+			FSU = { exists = no }
+            is_greater_power = yes
+		}
+		effect = {
 			random_owned = {
 				limit = {
 					owner = {
@@ -278,53 +330,17 @@ political_decisions = {
 							name = hispanic_unity
 							duration = 7300
 						}
+						add_province_modifier = {
+							name = small_baby_boom
+							duration = 1095
+						}
 					}
 				}
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						BEL = {
-							all_core = {
-								owned_by = THIS
-							}
-						}
-						owns = 754
-						owns = 753
-						SRD = {
-							all_core = {
-								owned_by = THIS
-							}
-						}
-						SYC = {
-							all_core = {
-								owned_by = THIS
-							}
-						}
-						517 = {
-							owned_by = THIS
-						}
-					}
-				}
-				owner = {
-						any_owned = {
-						limit = {
-							OR = {
-								is_core = NAP
-								is_core = SYC
-								is_core = SRD
-								is_core = LOM
-								is_core = BEL
-							}
-						}
-						add_core = THIS
-					}
-				}
-			}
-            set_country_flag = centralised_spanish_empire
+            set_country_flag = centralised_spanish_americas
 		}
 	}
-
+	
     enact_new_constitution_spc = {
         picture = 1812_constitution
         potential = {
@@ -340,7 +356,7 @@ political_decisions = {
                 ruling_party_ideology = socialist
                 ruling_party_ideology = communist
             }
-            revolution_n_counterrevolution = 1
+            mass_politics = 1
         }
 
         effect = {

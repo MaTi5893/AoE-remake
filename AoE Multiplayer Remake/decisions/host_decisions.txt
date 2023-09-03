@@ -57,6 +57,44 @@ political_decisions = {
 			factor = 0
 		}
 	}
+	take_control_imperial_access = {
+		picture = flag_hre
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+			NOT = { has_global_flag = taken_control_imperial_access }
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			set_global_flag = taken_control_imperial_access
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	relinquish_control_imperial_access = {
+		picture = flag_hre
+		potential = {
+			has_country_flag = showing_host_decisions
+			has_country_flag = host_nation
+			has_global_flag = taken_control_imperial_access
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			clr_global_flag = taken_control_imperial_access
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	ally_all_countries = {
 		picture = zombie_freak115
 		potential = {

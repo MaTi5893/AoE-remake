@@ -45,7 +45,10 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			OR = {
 			civilization_progress = 0.5
+			civilized = yes
+			}
 		}
 		effect = {
 			random_owned = {

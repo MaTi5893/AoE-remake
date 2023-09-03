@@ -6,7 +6,7 @@ country_event = {
 #shamelessly stolen from ToK credit to that mod
 
    trigger = {
-        tag = SIK
+        tag = CLN
         NOT = {
             has_global_flag = money_setup
         }
