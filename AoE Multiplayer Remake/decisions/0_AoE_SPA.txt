@@ -337,6 +337,8 @@ political_decisions = {
 					}
 				}
 			}
+			VNG = { all_core = { remove_core = VOP } }
+			VLP = { all_core = { remove_core = VOP } }
             set_country_flag = centralised_spanish_americas
 		}
 	}

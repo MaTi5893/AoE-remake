@@ -166,37 +166,38 @@ country_event = {
 	}
 	
 	trigger = {
-		is_substate = yes
 		OR = {
-			tag = VNS
-			tag = VNG
-			tag = VOP
-			tag = VLP
+			tag = SPA
+			tag = SPC
+			tag = FSU
 		}
-		money = 1000000
+		NOT = { money = 1000000 }
 	}
 	
 	option = {
-		name = "Send the treasury fleet"
-		overlord = {
-			money = 500000
-		}
-		money = -500000
-		ai_chance = {
-			factor = 1
-		}
-	}
-	
-	option = {
-		name = "That's our money!"
-		overlord = {
-			relation = {
-				who = THIS
-				value = -25
+		name = "Accept the treasury fleet."
+		money = 500000
+		any_pop = {
+				limit = {	
+					culture = spanish_american	
+				}
+				militancy = 3
 			}
-		}
 		ai_chance = {
-			factor = 0
+			factor = 0.6
+		}
+	}
+	
+	option = {
+		name = "Distribute the funds among the Viceroyalties."
+		any_pop = {
+				limit = {	
+					culture = spanish_american	
+				}
+				militancy = -3
+			}
+		ai_chance = {
+			factor = 0.4
 		}
 	}
 }
@@ -318,5 +319,87 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+country_event = {
+	id = 1516006
+	title = "Rebellion of Tupac Amaru II!"
+    desc = "EVTDESC151606"
+    picture = "new_world"
+	fire_only_once = yes	
+	major = yes
+	
+	trigger = {
+		year = 1780
+		OR = {
+		mass_politics = 1
+		has_country_flag = centralised_spanish_americas
+		}
+		owns = 2302
+		owns = 2310
+		owns = 2308
+		primary_culture = spanish
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "Those Incan traitors will be destroyed!"
+		BOL = {
+            capital = 2302
+            government = absolute_monarchy
+            political_reform = non_secret_ballots
+            political_reform = none_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+		}
+		BOL = { define_general = { name = "Tupac Amaru II" personality = defence_4.1 background = attack_3.1 } }
+		war = {
+			target = BOL
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = acquire_all_cores country = BOL }
+		}
+		#PEU_2297 = { secede_province = BOL add_core = BOL }
+		BOL_2321 = { secede_province = BOL add_core = BOL }
+		2301 = { secede_province = BOL add_core = BOL }
+		2302 = { secede_province = BOL add_core = BOL }
+		2303 = { secede_province = BOL add_core = BOL }
+		2578 = { secede_province = BOL add_core = BOL }
+		2307 = { secede_province = BOL add_core = BOL }
+		2308 = { secede_province = BOL add_core = BOL }
+		2309 = { secede_province = BOL add_core = BOL }
+		VOP = { all_core = { add_core = BOL } }
+		2305 = { add_core = BOL }
+		set_global_flag = tupac_amaru_rebellion
+	}
+}
+country_event = {
+	id = 1516007
+	title = "Incan Rebellion Crushed"
+    desc = "EVTDESC151607"
+    picture = "new_world"
+	fire_only_once = yes	
+	
+	trigger = {
+		has_global_flag = tupac_amaru_rebellion
+		owns = 2302
+		owns = 2310
+		owns = 2308
+		BOL = { exists = no }
+		primary_culture = spanish
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = "The Incans will once again become a footnote in the annals of history."
+		VLP = { all_core = { remove_core = BOL } }
+		VOP = { all_core = { remove_core = BOL } }
+		set_global_flag = tupac_amaru_rebellion_crushed
 	}
 }

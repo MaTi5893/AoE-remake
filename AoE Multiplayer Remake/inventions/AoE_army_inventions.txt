@@ -219,7 +219,7 @@ regimental_mustering = {
 goose_step = {
     limit = { deep_defense_system = 1 }
     chance = {
-        base = 2
+        base = 4
         modifier = {
             factor = 10
             war_countries = { invention = goose_step }
@@ -287,19 +287,12 @@ impressment = {
     chance = {
         base = 5
         modifier = {
-            factor = 50
+            factor = 30
             invention = goose_step 
-        }
-        modifier = {
-            factor = 100
-            war = yes
-            war_countries = { invention = impressment }
         }
     }
     effect = {
-        army_base = {
-            max_strength = 1
-        }
+        reinforce_rate = 0.01
     }
 }
 #infiltration - Skirmish tactics
@@ -372,15 +365,9 @@ professional_recruitment = {
             factor = 30
             invention = the_carbine 
         }
-        modifier = {
-            factor = 100
-            war = yes
-            war_countries = { invention = professional_recruitment }
-        }
     }
     effect = {
         army_base = {
-			max_strength = 1
             build_time = 50
             supply_consumption = -0.3
         }
