@@ -99,9 +99,7 @@ mechanical_production = {
     area = mechanization
     year = 1650
     cost = 3600
-
-    activate_building = regular_clothes_factory
-    activate_building = fur_clothes_factory 
+ 
 	activate_building = hardwood_mill
     ai_chance = {
         factor = 2
