@@ -545,10 +545,7 @@ political_decisions = {
                 government = democracy
                 government = hms_government
             }
-            OR = {
-                vote_franschise = universal_weighted_voting
-                vote_franschise = universal_voting
-            }
+            vote_franschise = wealth_voting
             empiricism = 1
             war = no
             NOT = { war_policy = jingoism }

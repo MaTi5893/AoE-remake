@@ -163,7 +163,7 @@ low_health_care_desc; ;
 acceptable_health_care;Influential Bureaucracy;Syst?e acceptable;Akzeptable Hilfe;;Aceptable;;;;;;;;;
 acceptable_health_care_desc; ;
 good_health_care;Very Infl. Bureaucracy;Bon syst?e de sant?Gute Hilfe;;Buena;;;;;;;;;;
-good_health_care_desc; ;
+good_health_care_desc;Very Influential Bureaucracy.\n§YEnables §GCoring Events§!;;;;;;;;;;
 no_minimum_wage_l;Church - Very Influential;Aucun salaire min.;Kein Mindestlohn;;Sin salario m?imo;;;;;;;;;
 trinket_wage_l;Church - Influential;Salaire min. d?isoire;Sach-Mindestlohn;;Salario m?imo testimonial;;;;;;;;;
 low_minimum_wage_l;Church - Slightly Influential;Salaire min. bas;Niedriger Mindestlohn;;Salario m?imo bajo;;;;;;;;;
@@ -337,29 +337,22 @@ guide_reminder_title;Modus Operandi of the "Age of Enlightenment";;;;;;;;;;;;;
 guide_reminder_desc;Let's look back at what should we know about the world around us...;;;;;;;;;;;;;
 mercantilism;Mercantilism;;;;;;;;;;;;;
 NET_397;Luxemburg;;;;;;;;;;;;;
-social_policy;Estate Policy;;;;;;;;;;;;;
-populist_welfare;Philospher Court;;;;;;;;;;;;;
-populist_welfare_1;Philospher Court;;;;;;;;;;;;;
-populist_welfare_desc;The Court is full of most influential and best Philosphers from our country to help us guide the nation.;;;;;;;;;;;;;
-welfare_state;Revolutionary Thought;;;;;;;;;;;;;
-welfare_state_1;Revolutionary Thought;;;;;;;;;;;;;
-no_state_interference;Despotic Dominance;;;;;;;;;;;;;
-no_state_interference_1;Despotic Dominance;;;;;;;;;;;;;
-no_state_interference_desc;Subjects are dominated by our Head of State;;;;;;;;;;;;;
-colonial_spending_policy;Colonial Subjects;;;;;;;;;;;;;
-colonial_spending_policy_1;Colonial Subjects;;;;;;;;;;;;;
 pogonya_za_zapadom;Pogonya Za Zapodom!;;;;;;;;;;;;;
 natral_talent;Naturally Talented;;;;;;;;;;;;;
 mercantilism_1;Mercantilism;;;;;;;;;;;;;
-trade_unions;Executive Power;;;;;;;;;;;;;
-no_trade_unions;One Man To Rule;;;;;;;;;;;;;
-no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!\n;;;;;;;;;;;;;
+trade_unions;§YExecutive Power§!;;;;;;;;;;;;;
+no_trade_unions;No Council;;;;;;;;;;;;;
+no_trade_unions_l;No Council;;;;;;;;;;;;;
+no_trade_unions_desc;All Executive Powers belong to our highest official.\n§YIncreases §PAbsolutist§Y Ideology in Pops§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G15§Y years§!;;;;;;;;;;;;;
 state_controlled;Advisor Council;;;;;;;;;;;;;
-state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G10§Y years.§!;;;;;;;;;;;;;
+state_controlled_l;Advisor Council;;;;;;;;;;;;;
+state_controlled_desc;The Executive Power is in the hands of our highes official, but he is supported by a dedicated Advisor Council in some of his dutys.\n§YCan Appoint And Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G10§Y years.§!;;;;;;;;;;;;;
 non_socialist;Delegated Ministers;;;;;;;;;;;;;
-non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G7.5§Y years.§!;;;;;;;;;;;;;
+non_socialist_l;Delegated Ministers;;;;;;;;;;;;;
+non_socialist_desc;The Higest Official can appoint Ministers who take care of governing the state in delegated affairs.\n§YCan Appoint And Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G7.5§Y years.§!;;;;;;;;;;;;;
 all_trade_unions;Mandatory Cabinet;;;;;;;;;;;;;
-all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the executive powers.\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G5§Y years.\nThis reform reduces your Plead Estates For War Support §RCooldown§Y to §G3§Y years.§W\n;;;;;;;;;;;;;
+all_trade_unions_l;Mandatory Cabinet;;;;;;;;;;;;;
+all_trade_unions_desc;The Highest Official of the state apppoints a cabinet which holds most of the executive powers.\n§YLead Ministers Are Appointed Based On Our Upperhouse. Can Dissmiss Lead Ministers.§!\n§YThis reform reduces your Change Estate Influence Decision §RCooldown§Y to §G5§Y years.\nThis reform reduces your Plead Estates For War Support §RCooldown§Y to §G3§Y years.§!;;;;;;;;;;;;;
 MAY_GAS_ATTACK;Unlocks Napoleonic Warfare;;;;;;;;;;;;;
 MAY_GAS_DEFEND;Can defend against Napoleonic Warfare;;;;;;;;;;;;;
 gas_attack;Napoleonic Warfare;;;;;;;;;;;;;
@@ -373,11 +366,11 @@ public_vaccination;Public Vaccine Stations;;;;;;;;;;;;;
 public_vaccination_desc;Public Vaccine Stations are available in most of our major citys;;;;;;;;;;;;;
 ukrainian;Ruthenian;;;;;;;;;;;;;
 promotion_laws;Career Progress;;;;;;;;;;;;;
-privlage_benefits;Privilege Benefit Based;;;;;;;;;;;;;
+privlage_benefits;Privilege;;;;;;;;;;;;;
 privlage_benefits_desc;The Rich Class and Prominent Families can use existing laws to justify taking over government positions over competent individuals;;;;;;;;;;;;;
 nepotism;Nepotism;;;;;;;;;;;;;
 nepotism_desc;A handfull of most influential families are in controll of our most important government positions.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential and Church Influence beyond Very Influential. This Process can be speed up if you're a republic.§W\n;;;;;;;;;;;;;
-skill_and_merit_based;Based on Skill and Merit;;;;;;;;;;;;;
+skill_and_merit_based;Skill and Merit;;;;;;;;;;;;;
 skill_and_merit_based_desc;Individuals are given government positions based on their accomplishments, not titles.\n§YTo take this Reform you must lower your Noble Influence Beyond Slightly Influential, Church Influence beyond Very Influential and increase Beaurocratic Influence above Slightly Influential. This Process can be speed up if you're a republic.§W\n;;;;;;;;;;;;;
 social_reforms;Estate Influence & Law;;;;;;;;;;;;;
 jacobite_rebels_name;Jacobite Pretender Rebels;;;;;;;;;;;;;
@@ -427,17 +420,16 @@ industralisation_focus;Industrialization Focus;;;;;;;;;;;;;
 suppress_populace;Suppress Rebelious Populace;;;;;;;;;;;;;
 forcefull_assimilation;Forcefull Assimilation;;;;;;;;;;;;;
 poniatowski_rule;Stanislaw Poniatowski won the Royal election of 1764;;;;;;;;;;;;;
-centralization;Parliament;;;;;;;;;;;;;
+centralization;§YParliament§!;;;;;;;;;;;;;
 no_parliment;No Parliament;;;;;;;;;;;;;
 no_parliment_desc;We Have No Parliament;;;;;;;;;;;;;
+no_parliment_l;No Parliament;;;;;;;;;;;;;
 admin_parliment;Administrative Parliament;;;;;;;;;;;;;
-admin_parliment_desc;Our parliament serves our Leader in maneging the administrative part of our cuntry. Real lfe example of such parliaments is The Russian Senate created by Peter The Great.\n§YAllows using the Bureaucrat Promotion National Focus in states with non-accepted pops.§!;;;;;;;;;;;;;
+admin_parliment_desc;Our parliament serves our Leader in maneging the administrative part of our cuntry. Real life example of such parliaments is The Russian Senate created by Peter The Great.;;;;;;;;;;;;;
+admin_parliment_l;Administrative Parliament;;;;;;;;;;;;;
 legislative_parliment;Legislative Parliament;;;;;;;;;;;;;
-legislative_parliment_desc;Our parliament creates legislation and manages most of the important functions in our country. Real life example of such Parliaments is The English Parliament.\n§YAllows Forcing through reforms every §G2 years§Y based on current rulling party and if it has at least 17% seats in the Upper House.§!;;;;;;;;;;;;;
-national_parliment;National Parliament;;;;;;;;;;;;;
-national_parliment_desc;Our parliament creates legislation and manages the entierty of our foreign policy, without proper separation of powers. Real life example of such Parliaments is The Polish Sejm.\n§YAllows Forcing through reforms every §G4 years§Y based on current rulling party and if it has at least 17% seats in the Upper House.§!;;;;;;;;;;;;;
-theocratic_council;Theocratic Council;;;;;;;;;;;;;
-theocratic_council_desc;A Theocratic Council Aids Our Leader In Keeping The Country Holy.;;;;;;;;;;;;;
+legislative_parliment_desc;Our parliament creates legislation and manages most of the important functions in our country. Real life example of such Parliaments is The English Parliament.\n§YAllows Forcing through reforms every §G2 years§Y based on current rulling party and if it has at least 17% seats in the Upper House.\nAppointing Ministers Does NOT Change Faction Influence.\nSame Minister Can Only Serve 2 Consecutive Terms In Office§!;;;;;;;;;;;;;
+legislative_parliment_l;Legislative Parliament;;;;;;;;;;;;;
 army_tech_school;Stratocratic State;;;;;;;;;;;;;
 MODIFIER_PENSION_LEVEL;§YPublic Maintenance Cost§!;;;;;;;;;;;;;
 SOCIAL_DESC2;The Public Maintenance spending budget goes towards helping out your pops gain more money.  The amount of money to distribute depends on your §Ycountry administrative efficiency§!.\n§YPublic Maintenance Cost is essentialy reskinned pensions.§Y;;;;;;;;;;;;;
@@ -449,8 +441,44 @@ skill_and_merit_allowed;§YCan Take The "Based On Skill and Merit" Career Progres
 nana_phadnavis;Nana Phadnavis;;;;;;;;;;;;;
 cock_and_balls;Cock and Balls;;;;;;;;;;;;;
 brazilian;Portugese-American;;;;;;;;;;;;;
+POLITICS_NATIONALVALUE_TOOLTIP;Our Leading Minister is a §Y$NATIONALVALUE$§!\n;;;;;;;;;;;x
+LEDGER_COUNTRY_NATIONALVALUE;Leading Minister;;;;;;;;;;;x
+NOT_HAS_NATIONAL_VALUE;Leading Minister is NOT a §Y$NATIONALVALUE$§!.;;;;;;;;;;;x
+CHANGE_NATIONALVALUE;Our Newly Appointed Leading Minister will be a §Y$NATIONALVALUE$§!.\n;;;;;;;;;;;x
+HAS_NATIONAL_VALUE;Leading Minister is a §Y$NATIONALVALUE$§!.;;;;;;;;;;;x
 gas;Napoleonic Warfare;Napoleonic Warfare;Napoleonic Warfare;;Napoleonic Warfare;;;;;;;;x;;;
+pm_militarist;Militarist\n§WIncreases Jingoism Popularity§!\n§WSligthly Increases Soldier Promotion§!;;;;;;;;;;;;;
+pm_gentry;Gentry\n§WIncreases Aristocrat Promotion (If Monarchy)\nMore Pop Types Can Promote to Aristocrat (If Monarchy)\nSlightly Increases Clerk Promotion\nSlightly Increases Craftsmen Promotion§!;;;;;;;;;;;;;
+pm_nobleman;Nobleman\n§WDecreases Rebel Spawn chance\nIncreases Aristocrat Promotion\nIncreases §YTraditionalist§! Ideology in Pops§!;;;;;;;;;;;;;
+pm_reformists;Reformist\n§WIncrease §YParlamentarian§! Ideology in Pops§!;;;;;;;;;;;;;
+pm_clergyman;Clergyman\n§WMajorly Decreases Rebel Spawn Chance§!\n§WMajorly Increases Pop Conversion Chance§!;;;;;;;;;;;;;
+pm_no_minister;§R[-]§!;;;;;;;;;;;;;
 COMBAT_GAS;Extensive artillery bombardment usage of corps system and supirior tactics, while the opponent lacks the technology to defend against them may be devastating.;;;;;;;;;;;x
+upper_house_composition;§YHead Of State§!;;;;;;;;;;;x
+appointed;Parliamentary Constraints;;;;;;;;;;;x
+appointed_desc;Our Head Of State is accountable to the Parliment, but still retains influence on our politics;;;;;;;;;;;x
+appointed_l;Parliamentary Constraints;;;;;;;;;;;x
+party_appointed;Independent Executive;;;;;;;;;;;x
+party_appointed_desc;Executive head is assigned absolute control over legislative process\n1/2 Required For §pAbsolutism§!;;;;;;;;;;;x
+party_appointed_l;Independent Executive;;;;;;;;;;;x
+state_equal_weight;Figurehead;;;;;;;;;;;x
+state_equal_weight_desc;Our Head of State is accountable to the parliament and the few powers he possesses require a countersignature from our cabinet.;;;;;;;;;;;x
+state_equal_weight_l;Figurehead;;;;;;;;;;;x
+political_parties;§YJudicial Appointment§!;;;;;;;;;;;x
+underground_parties;Decree;;;;;;;;;;;x
+underground_parties_desc;Our Head of State may issue decrees which act as an official sentance.;;;;;;;;;;;x
+underground_parties_l;Decree;;;;;;;;;;;x
+harassment;Cabinet Approval;;;;;;;;;;;x
+harassment_desc;Judicial appointment requiers a countersignature from our cabinet.;;;;;;;;;;;x
+harassment_l;Cabinet Approval;;;;;;;;;;;x
+gerrymandering;Legislative Approval;;;;;;;;;;;x
+gerrymandering;Judicial appointment requiers a countersignature from our Legislative Branch.;;;;;;;;;;;x
+gerrymandering_l;Legislative Approval;;;;;;;;;;;x
+non_secret_ballots;Internal Selection;;;;;;;;;;;x
+non_secret_ballots_desc;Judicial appointment is done internally.;;;;;;;;;;;x
+non_secret_ballots_l;Internal Selection;;;;;;;;;;;x
+voting_system;§YVoting System§!;;;;;;;;;;;x
+vote_franschise;§YVote Franchise§!;;;;;;;;;;;x
 reactionary_uh;Absolutist always attempt to roll back both political and allow to change estate influence as they please.;;;;;;;;;;;x
 conservative_uh;Traditionalists prefer the status-quo, but may back reforms under conditions of high militancy.;;;;;;;;;;;x
 socialist_uh;Reformists want to see the change of faction influence, but may back political reforms under conditions of high militancy.;;;;;;;;;;;x
@@ -458,3 +486,68 @@ communist_uh;Jacobins want to change of faction influence, but want to see polit
 liberal_uh;Parlamenterians want to enact further political reforms, but will also support change of faction influence under conditions of high militancy.;;;;;;;;;;;x
 turk_maghreb_war_victor;Ottoman Domination of Maghreb;;;;;;;;;;;;;
 turk_maghreb_war_defeat;Collapse of Ottoman Maghreb;;;;;;;;;;;;;
+absolutism;§PAbsolutist Rule§!;;;;;;;;;;;x
+no_absolutism;§PNo Absolutism§!;;;;;;;;;;;x
+no_absolutism_l;§PNo Absolutism§!;;;;;;;;;;;x
+yes_absolutism;§PAbsolutism§!;;;;;;;;;;;x
+yes_absolutism_l;§PAbsolutism§!;;;;;;;;;;;x
+set_up_advisor_court_title;Set up an Advisor Council;;;;;;;;;;;x
+set_up_advisor_court_desc;It has become increasingly clear that we cannot rule alone, we should set up a proper advisor council to help us manage state affairs.\n§RThis decision will get rid of the §PAbsolutism reform!§!;;;;;;;;;;;x
+piracy;Piracy;;;;;;;;;x;;;;
+desc_piracy;Piracy is an act of robbery or criminal violence by ship or boat-borne attackers upon another ship or a coastal area, typically with the goal of stealing cargo and other valuable goods. Those who conduct acts of piracy are called pirates, while the dedicated ships that pirates use are called pirate ships.;;;;;;;;;x;;;;
+recompensation_period;Recompensation Period;;;;;;;;;x;;;;
+recompensation_period_l;Recompensation Period;;;;;;;;;x;;;;
+recompensation_period_desc;Recompensation Period is a stage where the state pays the landowners and aristocrats for their losses due to the abolition of slavery. At this stage we are only enforcing the abolition and many landowners.;;;;;;;;;;;x
+abolished;Abolished;;;;;;;;;x;;;;
+abolished_l;Abolished;;;;;;;;;x;;;;
+abolished_desc;We have abolished Serfdom;;;;;;;;;x;;;;
+estate_affiliation;Estate Affiliation;;;;;;;;;x;;;;
+estate_affiliation_desc;This Faction is comprised of the following estates
+absolutist;§PAbsolutist§!;;;;;;;;;x;;;;
+absolutist_l;§PAbsolutist§!;;;;;;;;;x;;;;
+absolutist_desc;This faction is comprised of people loyal to the sovereign and will prevent any faction from being very influential besides bureaucracy.;;;;;;;;;x;;;;
+nobility_church;§BNobles§!,§BChurch§!;;;;;;;;;x;;;;
+nobility_church_l;§BNobles§!,§BChurch§!;;;;;;;;;x;;;;
+nobility_church_desc;This faction is comprised of Nobles and Church Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+nobility_gentry;§BNobles§!,§GGentry§!;;;;;;;;;x;;;;
+nobility_gentry_l;§BNobles§!,§GGentry§!;;;;;;;;;x;;;;
+nobility_gentry_desc;This faction is comprised of Nobles and Gentry and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+gentry_burghers;§GGentry§!,§YBurghers§!;;;;;;;;;x;;;;
+gentry_burghers_l;§GGentry§!,§YBurghers§!;;;;;;;;;x;;;;
+gentry_burghers_desc;This faction is comprised of Gentry and Burghers and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+no_affiliation;No Affiliation;;;;;;;;;x;;;;
+no_affiliation_l;No Affiliation;;;;;;;;;x;;;;
+no_affiliation_desc; ;;;;;;;;;x;;;;
+nobility_army;§BNobles§!,§RArmy§!;;;;;;;;;x;;;;
+nobility_army_l;§BNobles§!,§RArmy§!;;;;;;;;;x;;;;
+nobility_army_desc;This faction is comprised of Nobles and Army Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+gentry_army;§GGentry§!,§RArmy§!;;;;;;;;;x;;;;
+gentry_army_l;§GGentry§!,§RArmy§!;;;;;;;;;x;;;;
+gentry_army_desc;This faction is comprised of Gentry and Church Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+church_army;§BChurch§!,§RArmy§!;;;;;;;;;x;;;;
+church_army_l;§BChurch§!,§RArmy§!;;;;;;;;;x;;;;
+church_army_desc;This faction is comprised of Church Officials and Army Officials and will work towards increasing the influence of those factions.;;;;;;;;;x;;;;
+church_and_state;Church And State;;;;;;;;;x;;;;
+state_religion;State Religion;;;;;;;;;x;;;;
+state_religion_l;State Religion;;;;;;;;;x;;;;
+state_religion_desc;Our State has a official religion and the church is not seperated from it.;;;;;;;;;x;;;;
+church_and_state_seperation;Separated;;;;;;;;;x;;;;
+hurch_and_state_seperation_l;Separated;;;;;;;;;x;;;;
+church_and_state_seperation_desc;Church and state are seperated.\n§YThe Church estate will be §Rdisabled§Y.§!;;;;;;;;;x;;;;
+religious_minoritys;Religious Minorities;;;;;;;;;x;;;;
+no_rights;No Rights;;;;;;;;;x;;;;
+no_rights_desc;Religious minorities in our countries are activly converted to the majority religion.\n§YDepending on our religious policy, religious minorities may be §Rpersecuted§Y.\n§RDepending on our religious policy religious minorities will NOT assimilate or recieve a major debuff to assimilation§!;;;;;;;;;x;;;;
+no_political_rights;No Political Rights;;;;;;;;;x;;;;
+no_political_rights_desc;Freedom of worship is present however the disidents may not occupy political stations.\n§RDepending on our religious policy, religious minorities, that belong to either the §YRich Strata§R or§Y Middle Strata §Rwill NOT assimilate or recieve a major debuff to assimilation§!;;;;;;;;;x;;;;
+political_rights;Political Rights Allowed;;;;;;;;;x;;;;
+political_rights_desc;Freedom of worship is present and disdents may occupy political stations.\n§YReligious minorities will not recieve an assimilation debuff§!;;;;;;;;;x;;;;
+unruley_nobility;Unruley Nobility;x
+maronnage;Maronnage;x
+religious_persecussions;Religious Persecussions;x
+HAVE_CRIME;Province Suffers From §Y$NAME$§W;;;;;;;;;;;x
+witch_hunts;Witch Hunts;;;;;;;;;x;;;;
+desc_witch_hunts;A witch-hunt, or a witch purge, is a search for people who have been labeled witches or a search for evidence of witchcraft.;;;;;;;;;x;;;;
+foreign_service_pressing;Foreign Service Pressing;;;;;;;;;x;;;;
+desc_foreign_service_pressing;Foreign nations press our population into serving in their military\n§YReduces Soldier Promotion§!;;;;;;;;;x;;;;
+HAVE_CRIME;Province Suffers From §Y$NAME$§W;;;;;;;;;;;x
+fugative_peasants;Fugative Peasants;;;;;;;;;;;x

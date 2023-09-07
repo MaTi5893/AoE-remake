@@ -215,7 +215,6 @@ political_decisions = {
                 has_country_modifier = law_changed_by_force
             }
             OR = {
-                social_policy = colonial_spending_policy
                 safety_regulations = no_safety
                 safety_regulations = trinket_safety
                 government = elective_monarchy_oligarchy
@@ -232,7 +231,7 @@ political_decisions = {
             money = 100000
         }
         effect = {
-            #money = -100000
+            treasury = -100000
             any_pop = {
                 militancy = 5
             }
@@ -240,6 +239,50 @@ political_decisions = {
                 name = law_changed_by_force
                 duration = 5475
             }
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = trinket_safety
+						NOT = { centralization = legislative_parliment }
+					}
+				}
+				owner = {
+					social_reform = no_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = low_safety
+						NOT = { centralization = legislative_parliment }
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = acceptable_safety
+						NOT = { centralization = legislative_parliment }
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = good_safety
+						NOT = { centralization = legislative_parliment }
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
             capital_scope = {
                 sub_unit = { type = infantry value = current }
                 sub_unit = { type = infantry value = current }
@@ -269,7 +312,6 @@ political_decisions = {
         allow = {
             war = yes
             capital_scope = { controlled_by = THIS }
-            social_policy = welfare_state
             money = 100000
         }
         effect = {

@@ -4,7 +4,7 @@ culture = north_italian
 religion = catholic
 government = theocracy
 plurality = 0.25
-nationalvalue = nv_order
+nationalvalue = pm_no_minister
 literacy = 0.15
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.2
 civilized = yes
@@ -12,7 +12,7 @@ prestige = 5
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = state_press

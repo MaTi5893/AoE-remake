@@ -150,8 +150,17 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_politics_bureaucracy"
 		texturefile = "gfx\\interface\\politics_bureaucracy.dds"
-		}
+	}
+	
+	spriteType = {
+		name = "GFX_politics_church_n_state"
+		texturefile = "gfx\\interface\\state_n_church.dds"
+	}
 
+	spriteType = {
+		name = "GFX_politics_rel_minority"
+		texturefile = "gfx\\interface\\politics_rel_minorities.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_politics_borders"

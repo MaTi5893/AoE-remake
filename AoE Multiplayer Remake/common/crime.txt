@@ -1,0 +1,133 @@
+anarchic_bomb_throwers = {
+	pop_consciousness_modifier = 0.05
+	icon = 1	
+	
+	trigger = {
+	}	
+}
+
+unruley_nobility = {
+	active = yes
+
+	local_factory_output = -0.05
+	icon = 2	
+	
+	trigger = {
+		owner = {
+			NOT = { safety_regulations = good_safety }
+		}
+	}		
+}
+
+immoral_business = {
+
+	active = yes
+	
+	local_rgo_output = -0.2
+	icon = 3	
+	
+	trigger = {
+	}		
+}
+
+machine_politics = {
+	active = yes
+
+	boost_strongest_party = 5.0
+	icon = 4
+	
+	trigger = {
+		owner = { NOT = { vote_franschise = none_voting } }
+	}		
+}
+
+mafia = { #never
+	active = yes
+
+	local_factory_output = -0.05
+	icon = 5	
+	
+	trigger = {
+		owner = { exists = no }
+	}		
+}
+
+piracy = {
+
+	active = yes
+
+	local_rgo_output = -0.2
+	life_rating = -0.02
+	icon = 6	
+	
+	trigger = {
+		is_coastal = yes
+		is_overseas = yes
+	}		
+}
+
+spoil_system = {
+
+	active = yes
+	local_ruling_party_support = 2.0
+	icon = 7	
+	
+	trigger = {
+		owner = { NOT = { vote_franschise = none_voting } }
+	}	
+}
+
+terrorist_cells = {
+	
+
+	local_factory_throughput = -0.15
+	icon = 8	
+
+	trigger = {
+	}	
+}
+
+religious_persecussions = {
+	
+	active = yes
+	pop_militancy_modifier = 0.1
+	life_rating = -1
+	icon = 9	
+
+	trigger = {
+		any_pop = {
+			is_state_religion = no
+		}
+		owner = {
+			religious_policy = moralism
+			religious_minoritys = no_rights
+		}
+	}	
+}
+fugative_peasants = {
+	active = yes
+	immigrant_push = 0.15
+	local_RGO_output = -0.05
+	icon = 11
+	
+	trigger = {
+		owner = {
+			debt_law = serfdom
+		}
+	}
+}
+maronnage = {
+	active = yes
+	immigrant_push = 0.15
+	local_RGO_output = -0.05
+	icon = 12
+	
+	trigger = {
+		owner = {
+			slavery = yes_slavery
+		}
+		any_pop = {
+			type = slaves
+		}
+	}
+}

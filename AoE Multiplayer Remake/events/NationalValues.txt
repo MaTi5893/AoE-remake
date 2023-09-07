@@ -5,7 +5,7 @@ country_event = {
 	picture = "Parade"
 	
 	trigger = {
-		nationalvalue = nv_order
+		nationalvalue = pm_nobleman
 		average_militancy = 7
 	}
 	
@@ -36,7 +36,7 @@ country_event = {
 	picture = "Parade"
 	
 	trigger = {
-		nationalvalue = nv_order
+		nationalvalue = pm_nobleman
 		NOT = {
 			prestige = 10
 		}
@@ -67,7 +67,7 @@ country_event = {
 	picture = "Parade"
 	
 	trigger = {
-		nationalvalue = nv_order
+		nationalvalue = pm_nobleman
 		war = yes
 		NOT = {
 			war_exhaustion = 8
@@ -107,7 +107,7 @@ country_event = {
 	picture = "Invention"
 	
 	trigger = {
-		nationalvalue = nv_liberty
+		nationalvalue = pm_gentry
 	}
 	
 	mean_time_to_happen = {
@@ -133,7 +133,7 @@ country_event = {
 	picture = "Expansion"
 	
 	trigger = {
-		nationalvalue = nv_liberty
+		nationalvalue = pm_gentry
 		badboy = 0.7
 	}
 	
@@ -162,7 +162,7 @@ country_event = {
 	
 	trigger = {
 		average_militancy = 8
-		nationalvalue = nv_liberty
+		nationalvalue = pm_gentry
 	}
 	
 	mean_time_to_happen = {
@@ -193,7 +193,7 @@ country_event = {
 	
 	
 	trigger = {
-		nationalvalue = nv_equality
+		nationalvalue = pm_reformists
 	}
 	
 	mean_time_to_happen = {
@@ -222,7 +222,7 @@ country_event = {
 	picture = "Finepeople"
 	
 	trigger = {
-		nationalvalue = nv_equality
+		nationalvalue = pm_reformists
 	}
 	
 	mean_time_to_happen = {
@@ -250,7 +250,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
-		nationalvalue = nv_equality
+		nationalvalue = pm_reformists
 		war = yes
 		war_exhaustion = 4
 	}

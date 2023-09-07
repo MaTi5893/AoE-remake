@@ -7,7 +7,7 @@ culture = french_canadian
 religion = catholic
 government = absolute_monarchy
 plurality = 25
-nationalvalue = nv_order
+nationalvalue = pm_no_minister
 literacy = 0.40
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
@@ -17,7 +17,7 @@ prestige = 120
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = censored_press
@@ -90,7 +90,7 @@ high_pressure_steam_engine = 1
 consciousness = 3
 nonstate_consciousness = 1
 
-ruling_party = "Fete Royale"
+ruling_party = "Faction Royale"
 upper_house = {
     fascist = 0
     liberal = 12

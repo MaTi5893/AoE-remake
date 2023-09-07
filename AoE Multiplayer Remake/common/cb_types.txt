@@ -3546,7 +3546,7 @@ install_communist_gov_cb = {
     }
 
     on_po_accepted = {
-        political_reform = universal_voting
+        political_reform = wealth_voting
         political_reform = party_appointed
         political_reform = no_meeting
         political_reform = state_press

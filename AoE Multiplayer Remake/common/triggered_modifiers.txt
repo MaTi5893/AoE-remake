@@ -577,3 +577,61 @@ substate_nation = {
 	
 	icon = 10
 }
+
+church_turnoff_1 = { #very influential
+	trigger = {
+		exists = yes
+		wage_reform = no_minimum_wage
+		church_and_state = church_and_state_seperation
+	}
+    tax_efficiency = 0.05
+    RGO_throughput = -0.20
+    core_pop_consciousness_modifier = 0.02
+
+    rich_vote = 0.20
+}
+church_turnoff_2 = { #influential
+	trigger = {
+		exists = yes
+		wage_reform = trinket_wage
+		church_and_state = church_and_state_seperation
+	}
+    tax_efficiency = 0.025
+    RGO_throughput = -0.15
+    factory_throughput = -0.025
+    core_pop_consciousness_modifier = 0.01
+    rich_vote = -0.15
+}
+church_turnoff_3 = { #silghtly influential
+	trigger = {
+		exists = yes
+		wage_reform = low_minimum_wage
+		church_and_state = church_and_state_seperation
+	}
+    RGO_throughput = -0.10
+    factory_throughput = -0.05
+
+    rich_vote = -0.10
+}
+church_turnoff_4 = { #marginally relevant
+	trigger = {
+		exists = yes
+		wage_reform = acceptable_minimum_wage
+		church_and_state = church_and_state_seperation
+	}
+    tax_efficiency = -0.025
+    RGO_throughput = -0.05
+    factory_throughput = -0.075
+
+    rich_vote = -0.05
+}
+church_turnoff_5 = { #irrelevant
+	trigger = {
+		exists = yes
+		wage_reform = good_minimum_wage
+		church_and_state = church_and_state_seperation
+	}
+    tax_efficiency = -0.05
+    factory_throughput = -0.1
+    core_pop_consciousness_modifier = -0.01
+}

@@ -302,10 +302,6 @@ romanticist_literature = {
             average_consciousness = 3
         }
         modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
-        modifier = {
             factor = -2
             OR = {
                 invention = romanticist_art
@@ -1080,10 +1076,6 @@ social_conscience = {
         base = 2
         modifier = {
             factor = 3
-            nationalvalue = nv_equality
-        }
-        modifier = {
-            factor = 3
             average_consciousness = 2
         }
     }
@@ -1099,10 +1091,6 @@ individualism = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 3
-            nationalvalue = nv_liberty
-        }
         modifier = {
             factor = 1
             average_consciousness = 2
@@ -1121,10 +1109,6 @@ social_justice = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_equality
-        }
         modifier = {
             factor = 1
             OR = {
@@ -1146,14 +1130,6 @@ patritotism = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 3
-            nationalvalue = nv_liberty
-        }
-        modifier = {
-            factor = -1
-            nationalvalue = nv_order
-        }
         modifier = {
             factor = 2
             ruling_party_ideology = liberal
@@ -1328,10 +1304,6 @@ secularization = {
     chance = {
         base = 1
         modifier = {
-            factor = 3
-            nationalvalue = nv_equality
-        }
-        modifier = {
             factor = 1
             OR = {
                 ruling_party_ideology = socialist
@@ -1363,10 +1335,6 @@ abolitionism = {
             social_alienation = 1
         }
         modifier = {
-            factor = 7
-            nationalvalue = nv_liberty
-        }
-        modifier = {
             factor = 2
             government = democracy
         }
@@ -1388,10 +1356,6 @@ populism_vs._establishment = {
         modifier = {
             factor = 2
             average_consciousness = 3
-        }
-        modifier = {
-            factor = 1
-            nationalvalue = nv_order
         }
     }
     political_reform_desire = 0.05
@@ -1426,10 +1390,6 @@ bureaucracy_vs._nepotism = {
     chance = {
         base = 2
         modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
-        modifier = {
             factor = 1
             average_consciousness = 2
         }
@@ -1448,10 +1408,6 @@ meritocracy_vs._aristocracy = {
         modifier = {
             factor = 1
             literacy = 0.4
-        }
-        modifier = {
-            factor = 2
-            nationalvalue = nv_liberty
         }
     }
     effect = {
@@ -1496,10 +1452,6 @@ egalitarianism = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 3
-            nationalvalue = nv_equality
-        }
         modifier = {
             factor = 2
             government = democracy
@@ -1568,13 +1520,6 @@ early_womens_suffrage_movement = {
     chance = {
         base = 3
         modifier = {
-            factor = 2
-            OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
-            }
-        }
-        modifier = {
             factor = 3
             ruling_party_ideology = liberal
         }
@@ -1590,10 +1535,6 @@ collectivism = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_equality
-        }
         modifier = {
             factor = 1
             ruling_party_ideology = socialist

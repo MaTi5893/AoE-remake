@@ -10,7 +10,7 @@ party = {
 
     ideology = liberal
 
-    social_policy = no_position_set
+    estate_affiliation = gentry_burghers
     economic_policy = laissez_faire
     trade_policy = free_trade
     religious_policy = pluralism
@@ -25,7 +25,7 @@ party = {
 
     ideology = conservative
 
-    social_policy = no_state_interference
+    estate_affiliation = nobility_army
     economic_policy = interventionism
     trade_policy = protectionism
     religious_policy = moralism
@@ -40,7 +40,7 @@ party = {
 
     ideology = liberal
 
-    social_policy = no_position_set
+    estate_affiliation = no_affiliation
     economic_policy = laissez_faire
     trade_policy = free_trade
     religious_policy = pluralism
@@ -55,7 +55,7 @@ party = {
 
     ideology = liberal
 
-    social_policy = no_position_set
+    estate_affiliation = no_affiliation
     economic_policy = laissez_faire
     trade_policy = free_trade
     religious_policy = pluralism
@@ -70,7 +70,7 @@ party = {
 
     ideology = socialist
 
-    social_policy = populist_welfare
+    estate_affiliation = nobility_gentry
     economic_policy = planned_economy
     trade_policy = free_trade
     religious_policy = pluralism
@@ -85,7 +85,7 @@ party = {
 
     ideology = socialist
 
-    social_policy = welfare_state
+    estate_affiliation = gentry_burghers
     economic_policy = planned_economy
     trade_policy = free_trade
     religious_policy = secularized
@@ -100,7 +100,7 @@ party = {
 
     ideology = socialist
 
-    social_policy = welfare_state
+    estate_affiliation = gentry_burghers
     economic_policy = planned_economy
     trade_policy = free_trade
     religious_policy = secularized
@@ -115,7 +115,7 @@ party = {
 
     ideology = reactionary
 
-    social_policy = populist_welfare
+    estate_affiliation = nobility_army
     economic_policy = state_capitalism
     trade_policy = protectionism
     religious_policy = moralism
@@ -128,9 +128,7 @@ party = {
     start_date = 1900.1.1
     end_date = 2000.1.1
 
-    ideology = conservative
-
-    social_policy = no_position_set
+ideology = conservative estate_affiliation = nobility_church
     economic_policy = interventionism
     trade_policy = protectionism
     religious_policy = moralism
@@ -143,9 +141,7 @@ party = {
     start_date = 1900.1.1
     end_date = 2000.1.1
 
-    ideology = conservative
-
-    social_policy = no_position_set
+ideology = conservative estate_affiliation = nobility_church
     economic_policy = interventionism
     trade_policy = protectionism
     religious_policy = moralism
@@ -160,7 +156,7 @@ party = {
 
     ideology = anarcho_liberal
 
-    social_policy = no_state_interference
+    estate_affiliation = absolutist
     economic_policy = laissez_faire
     trade_policy = free_trade
     religious_policy = pro_atheism
@@ -175,7 +171,7 @@ party = {
 
     ideology = communist
 
-    social_policy = welfare_state
+    estate_affiliation = gentry_burghers
     economic_policy = planned_economy
     trade_policy = protectionism
     religious_policy = pro_atheism
@@ -190,7 +186,7 @@ party = {
 
     ideology = fascist
 
-    social_policy = populist_welfare
+    estate_affiliation = nobility_gentry
     economic_policy = state_capitalism
     trade_policy = protectionism
     religious_policy = moralism

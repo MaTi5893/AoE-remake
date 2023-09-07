@@ -5,7 +5,7 @@ culture = brazilian
 religion = catholic
 government = absolute_monarchy
 plurality = 0.25
-nationalvalue = nv_productivity
+nationalvalue = pm_no_minister
 literacy = 0.25
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.02
 civilized = yes
@@ -13,7 +13,7 @@ prestige = 25
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = state_equal_weight
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
 press_rights = state_press

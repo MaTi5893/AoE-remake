@@ -2511,28 +2511,6 @@ province_event = {
     }
 }
 country_event = {
-    id = 170214
-    title = "$COUNTRY$ Colonial Policy"
-    desc = ""
-	is_triggered_only = yes
-	picture = harbour
-	
-	option = {
-		name = "Settlement"
-		political_reform = settlement
-	}
-	
-	option = {
-		name = "Indirect Rule"
-		political_reform = exploitation
-	}
-	
-	option = {
-		name = "Charter Company"
-		political_reform = civilizing
-	}
-}
-country_event = {
     id = 170215
     title = "$COUNTRY_ADJ$ Army Works"
     desc = "EVTDESC170215"
@@ -2586,4 +2564,1303 @@ country_event = {
 		clr_country_flag = urban_army_works
 		clr_country_flag = army_works
 	}
+}
+country_event = {
+	id = 170220
+	title = "$COUNTRY_ADJ$ Royal Court"
+	desc = "EVTDESC170220"
+	picture = "ministers"
+	is_triggered_only = yes
+	
+    option = {
+        name = "Surround yourself with Clergymen"
+        random_owned = {
+            limit = {
+                owner = {
+                    wage_reform = trinket_wage
+                }
+            }
+            owner = {
+                social_reform = no_minimum_wage
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    wage_reform = low_minimum_wage
+                }
+            }
+            owner = {
+                social_reform = no_minimum_wage
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    wage_reform = acceptable_minimum_wage
+                }
+            }
+            owner = {
+                social_reform = trinket_wage
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    wage_reform = good_minimum_wage
+                }
+            }
+            owner = {
+                social_reform = low_minimum_wage
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = acceptable_safety
+				}
+			}
+			owner = {
+				social_reform = good_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = low_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = trinket_safety
+				}
+			}
+			owner = {
+				social_reform = low_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = no_safety
+				}
+			}
+			owner = {
+				social_reform = trinket_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+    }
+
+    option = {
+        name = "Surround yourself with Gentry"
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = ten_hours
+                }
+            }
+            owner = {
+                social_reform = eight_hours
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = twelve_hours
+                }
+            }
+            owner = {
+                social_reform = eight_hours
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = fourteen_hours
+                }
+            }
+            owner = {
+                social_reform = ten_hours
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = no_work_hour_limit
+                }
+            }
+            owner = {
+                social_reform = twelve_hours
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = acceptable_safety
+				}
+			}
+			owner = {
+				social_reform = good_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = low_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = trinket_safety
+				}
+			}
+			owner = {
+				social_reform = low_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = no_safety
+				}
+			}
+			owner = {
+				social_reform = trinket_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+    }
+
+    option = {
+        name = "Surround yourself with Nobility"
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = trinket_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = low_safety
+                }
+            }
+            owner = {
+                social_reform = no_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = acceptable_safety
+                }
+            }
+            owner = {
+                social_reform = trinket_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = good_safety
+                }
+            }
+            owner = {
+                social_reform = low_safety
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+    }
+
+    option = {
+        name = "Surround yourself with Burghers"
+        random_owned = {
+            limit = {
+                owner = {
+                    unemployment_subsidies = acceptable_subsidies
+                }
+            }
+            owner = {
+                social_reform = good_subsidies
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    unemployment_subsidies = low_subsidies
+                }
+            }
+            owner = {
+                social_reform = good_subsidies
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    unemployment_subsidies = trinket_subsidies
+                }
+            }
+            owner = {
+                social_reform = acceptable_subsidies
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    unemployment_subsidies = no_subsidies
+                }
+            }
+            owner = {
+                social_reform = low_subsidies
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = acceptable_safety
+				}
+			}
+			owner = {
+				social_reform = good_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = low_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = trinket_safety
+				}
+			}
+			owner = {
+				social_reform = low_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = no_safety
+				}
+			}
+			owner = {
+				social_reform = trinket_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+    }
+
+    option = {
+        name = "Surround yourself with officers"
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = acceptable_pensions
+                }
+            }
+            owner = {
+                social_reform = good_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = low_pensions
+                }
+            }
+            owner = {
+                social_reform = good_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = trinket_pensions
+                }
+            }
+            owner = {
+                social_reform = acceptable_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = no_pensions
+                }
+            }
+            owner = {
+                social_reform = low_pensions
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = acceptable_safety
+				}
+			}
+			owner = {
+				social_reform = good_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = low_safety
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = trinket_safety
+				}
+			}
+			owner = {
+				social_reform = low_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					safety_regulations = no_safety
+				}
+			}
+			owner = {
+				social_reform = trinket_safety
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+    }
+
+    option = {
+        name = "Surround yourself with government officials"
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = acceptable_health_care
+                }
+            }
+            owner = {
+                social_reform = good_health_care
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = low_health_care
+                }
+            }
+            owner = {
+                social_reform = good_health_care
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = trinket_health_care
+                }
+            }
+            owner = {
+                social_reform = acceptable_health_care
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = no_health_care
+                }
+            }
+            owner = {
+                social_reform = low_health_care
+            }
+        }
+		##############################
+		###All Estates go down by 1###
+		##############################
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = acceptable_minimum_wage
+					}
+				}
+				owner = {
+					social_reform = good_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = low_minimum_wage
+						NOT = { has_country_flag = clergy_and_nobility_domination }
+					}
+				}
+				owner = {
+					social_reform = acceptable_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = trinket_wage
+					}
+				}
+				owner = {
+					social_reform = low_minimum_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						wage_reform = no_minimum_wage
+					}
+				}
+				owner = {
+					social_reform = trinket_wage
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = fourteen_hours
+					}
+				}
+				owner = {
+					social_reform = no_work_hour_limit
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = twelve_hours
+					}
+				}
+				owner = {
+					social_reform = fourteen_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = ten_hours
+					}
+				}
+				owner = {
+					social_reform = twelve_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						work_hours = eight_hours
+					}
+				}
+				owner = {
+					social_reform = ten_hours
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = acceptable_safety
+					}
+				}
+				owner = {
+					social_reform = good_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = low_safety
+						NOT = { has_country_flag = clergy_and_nobility_domination }
+					}
+				}
+				owner = {
+					social_reform = acceptable_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = trinket_safety
+					}
+				}
+				owner = {
+					social_reform = low_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						safety_regulations = no_safety
+					}
+				}
+				owner = {
+					social_reform = trinket_safety
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = trinket_subsidies
+					}
+				}
+				owner = {
+					social_reform = no_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = low_subsidies
+					}
+				}
+				owner = {
+					social_reform = trinket_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = acceptable_subsidies
+					}
+				}
+				owner = {
+					social_reform = low_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						unemployment_subsidies = good_subsidies
+					}
+				}
+				owner = {
+					social_reform = acceptable_subsidies
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = no_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = acceptable_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = good_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+    }
 }

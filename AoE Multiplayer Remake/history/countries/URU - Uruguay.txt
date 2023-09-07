@@ -3,7 +3,7 @@ primary_culture = platinean
 religion = catholic
 government = democracy
 plurality = 0.25
-nationalvalue = nv_equality
+nationalvalue = pm_no_minister
 literacy = 0.15
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
@@ -11,7 +11,7 @@ prestige = 3
 
 # Political reforms
 slavery = freedom_of_womb
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
 press_rights = free_press

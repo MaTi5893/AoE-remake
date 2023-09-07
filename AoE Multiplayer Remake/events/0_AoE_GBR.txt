@@ -67,7 +67,7 @@ country_event = {
         prestige = -25
         set_country_flag = jacobism_prevails
         #government = absolute_monarchy
-		nationalvalue = nv_autocracy
+		nationalvalue = pm_no_minister
         all_core = {
             add_core = GBJ
             remove_core = THIS
@@ -1538,7 +1538,7 @@ country_event = {
         }
         government = proletarian_dictatorship
         ruling_party_ideology = communist
-        political_reform = universal_voting
+        political_reform = welath_voting
         political_reform = population_equal_weight
         political_reform = yes_meeting
         political_reform = free_press

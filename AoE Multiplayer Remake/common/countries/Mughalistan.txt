@@ -61,7 +61,7 @@ party = {
 
     ideology = socialist
 
-    social_policy = welfare_state
+    estate_affiliation = gentry_burghers
     economic_policy = laissez_faire
     trade_policy = free_trade
     religious_policy = secularized
@@ -74,9 +74,7 @@ party = {
     start_date = 1600.1.1
     end_date = 2000.1.1
 
-    ideology = communist
-
-    social_policy = populist_welfare
+    ideology = communist estate_affiliation = gentry_burghers
     economic_policy = planned_economy
     trade_policy = protectionism
     religious_policy = pro_atheism

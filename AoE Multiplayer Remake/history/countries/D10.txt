@@ -3,7 +3,7 @@ primary_culture = Metropolitan
 religion = protestant
 government = absolute_monarchy
 plurality = 0.251
-nationalvalue = nv_order
+nationalvalue = pm_no_minister
 literacy = 0.17
 civilized = yes
 #is_releasable_vassal = no
@@ -11,7 +11,7 @@ set_country_flag = dynamic_tag
 
 # Political reforms - inherit
 slavery = no_slavery
-upper_house_composition = appointed
+upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = censored_press

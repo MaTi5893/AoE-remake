@@ -4,7 +4,7 @@ culture = texan
 religion = protestant
 government = democracy
 plurality = 0.251
-nationalvalue = nv_liberty
+nationalvalue = pm_no_minister
 literacy = 0.50
 civilized = yes
 is_releasable_vassal = no
@@ -126,7 +126,7 @@ market_structure = 1
 # Political reforms
 slavery = yes_slavery
 upper_house_composition = state_equal_weight
-vote_franschise = universal_weighted_voting
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = all_trade_unions

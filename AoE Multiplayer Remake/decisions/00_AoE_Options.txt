@@ -28,34 +28,6 @@ political_decisions = {
 		}
 	}
 	
-	change_colonial_policy_aoe = {
-		picture = merchant_navy
-		alert = no
-		potential = {
-			ai = no
-			any_owned_province = {
-				is_colonial = yes
-			}
-			exists = yes
-			NOT = { has_country_modifier = change_colonial_policy }
-			has_country_flag = showing_aoe_options
-		}
-		allow = {
-		}
-		effect = {
-			add_country_modifier = {
-				name = national_confusion
-				duration = 365
-			}
-			add_country_modifier = {
-				name = change_colonial_policy
-				duration = 14600
-			}
-			country_event = 170214
-			set_country_flag = chosen_colonial_policy
-		}
-	}
-	
 	rgo_change_mining = {
 		picture = alsace_lorraine_mines
 			potential = {
@@ -362,22 +334,6 @@ political_decisions = {
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
                     political_reform = wealth_voting
-                }
-            }
-
-            random_owned = {
-                limit = { owner = { vote_franschise = universal_weighted_voting } }
-                any_country = {
-                    limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = universal_weighted_voting
-                }
-            }
-
-            random_owned = {
-                limit = { owner = { vote_franschise = universal_voting } }
-                any_country = {
-                    limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = universal_voting
                 }
             }
 

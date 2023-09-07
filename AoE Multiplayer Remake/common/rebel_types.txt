@@ -93,7 +93,14 @@ reactionary_rebels = {
                 pop_majority_ideology = reactionary
 			}
         }
-
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 1.0115
             pop_majority_ideology = reactionary
@@ -371,7 +378,14 @@ traditionalist_rebels = {
                 pop_majority_ideology = conservative
             }
         }
-
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 1.0115
             pop_majority_ideology = conservative
@@ -672,6 +686,14 @@ communist_rebels = {
             factor = 0
             country = { government = proletarian_dictatorship }
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 1.015
             pop_majority_ideology = communist
@@ -858,7 +880,7 @@ communist_rebels = {
         clr_country_flag = anarcho_liberal_gov
         ruling_party_ideology = communist                    #Modelled after France
         political_reform = all_voting_pops
-        political_reform = universal_voting
+        political_reform = welath_voting
         political_reform = population_equal_weight
         political_reform = yes_meeting
         political_reform = free_press
@@ -1021,6 +1043,14 @@ nationalist_rebels = {
             NOT = {
                 country = { num_of_cities = 2 }
             }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
         }
         modifier = {
             factor = 1.01
@@ -1343,6 +1373,14 @@ pan_nationalist_rebels = {
                 NOT = { is_culture_group = THIS }
                 country = { is_greater_power = yes }
             }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
         }
         modifier = {
             factor = 1.05
@@ -1697,7 +1735,14 @@ liberal_rebels = {
             factor = 0
             social_movement = yes
         }
-
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 0.01
             NOT = {
@@ -1741,10 +1786,6 @@ liberal_rebels = {
                     government = hms_government
                 }
                 OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
-                }
-                OR = {
                     upper_house_composition = state_equal_weight
                     upper_house_composition = population_equal_weight
                 }
@@ -1762,10 +1803,6 @@ liberal_rebels = {
                 OR = {
                     government = democracy
                     government = hms_government
-                }
-                OR = {
-                    vote_franschise = universal_weighted_voting
-                    vote_franschise = universal_voting
                 }
                 OR = {
                     upper_house_composition = state_equal_weight
@@ -1957,10 +1994,6 @@ liberal_rebels = {
         political_reform = open_borders
         random_owned = { limit = { owner = { NOT = { trade_unions = all_trade_unions } } } owner = { political_reform = non_socialist } }
         random_owned = {
-            limit = { owner = { NOT = { vote_franschise = universal_voting } } }
-            owner = { political_reform = universal_weighted_voting }
-        }
-        random_owned = {
             limit = { owner = { debt_law = peonage } }
             owner = { political_reform = debtors_prisons }
         }
@@ -2137,6 +2170,15 @@ unciv_reactionary_rebels = {
         #        NOT = { controlled_by = owner }
         #    }
         #}
+		
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
 
         modifier = {
             factor = 1.05
@@ -2402,6 +2444,14 @@ jacobite_rebels = {
                 NOT = { tag = GBR }
             }
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 2
             location = {
@@ -2656,6 +2706,14 @@ peasant_rebels = {
 			factor = 0
 			country = { has_country_modifier = tax_restrictions }
 		}
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 1.1
             pop_majority_ideology = liberal
@@ -3026,6 +3084,14 @@ noble_rebels = {
 			country = { civilized = no }
 		}
 		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
+		modifier = {
 			location = {
 				has_province_modifier = tornogrod_confederation
 			}
@@ -3341,6 +3407,14 @@ slave_rebels = {
 			factor = 0
             NOT = { type = slaves }
         }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 2
             type = slaves
@@ -3536,6 +3610,14 @@ american_patriot_rebels = {
             location = {
                 NOT = { is_core = THC }
             }
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
         }
         modifier = {
             factor = 2
@@ -3809,6 +3891,14 @@ janissery_rebels = {
 		modifier = {
             country = { NOT = { tag = TUR } }
             factor = 0
+        }
+		modifier = {
+            factor = 0.1
+            country = { nationalvalue = pm_clergyman }
+        }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
         }
         modifier = {
             factor = -2

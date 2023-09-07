@@ -3,7 +3,7 @@ primary_culture = native_american_minor
 religion = animist
 government = tribal_democracy
 plurality = 0.05
-nationalvalue = nv_liberty
+nationalvalue = pm_no_minister
 literacy = 0.07
 civilized = no
 prestige = 6
@@ -20,7 +20,7 @@ upper_house = {
 }
 slavery = yes_slavery
 upper_house_composition = state_equal_weight
-vote_franschise = universal_weighted_voting
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = no_trade_unions

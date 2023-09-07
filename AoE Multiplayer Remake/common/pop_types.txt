@@ -490,11 +490,6 @@ migration_chance =
 			NOT = { location = { total_pops = 1000 } }
 		}
     }
-	
-	modifier = {
-		factor = 0.1
-		country = { colonial_policy = settlement }
-	}
 
     group = {
         modifier = {
@@ -575,12 +570,6 @@ colonialmigration_chance =
         factor = 0.02
         country = { penal_system = colonial_transportation }
 		militancy = 3
-    }
-	
-    modifier = {
-        factor = 0.05
-        country = { colonial_policy = settlement }
-		consciousness = 3
     }
 	
 	#If pop group doesn't obtain 10%/20%/30%/40%/50%/60%/70%/80%/90%/99% of their life needs, then 0.05% chance to migrate to a colony for each threshold. (0.5% total)
@@ -735,13 +724,6 @@ emigration_chance =
         }
     }
 
-    modifier = {
-        factor = -0.1
-        country = {
-            colonial_policy = settlement
-        }
-    }
-
     group = {
 		modifier = {
 			factor = 0.05
@@ -893,7 +875,31 @@ emigration_chance =
 assimilation_chance = {
     factor = 1
 
-
+	modifier = {
+        factor = -100
+        country = { religious_policy = moralism religious_minoritys = no_rights }
+        is_state_religion = no
+    }
+	
+	modifier = {
+        factor = -5
+        country = { NOT = { religious_policy = moralism } religious_minoritys = no_rights }
+        is_state_religion = no
+    }
+	
+	modifier = {
+        factor = -100
+        country = { religious_policy = moralism religious_minoritys = no_political_rights }
+        is_state_religion = no
+		NOT = { strata = poor }
+    }
+	
+	modifier = {
+        factor = -5
+        country = { NOT = { religious_policy = moralism } religious_minoritys = no_political_rights }
+        is_state_religion = no
+		NOT = { strata = poor }
+    }
 #IMPORTANT DO NOT DELETE - blocks assimilation if the state is colonial and/or the country trying to assimilate pops is unciv and/or the pop is below 100% life needs.
     modifier = {
         factor = -1000
@@ -1649,22 +1655,6 @@ assimilation_chance = {
             has_culture_core = no
         }
     }
-#EQUALITY NATIONAL VALUE BONUS - 50% more base assimilation rate for nations with the equality national value. (0.000198 + base)(new rate = 0.000594)
-    group = {
-        modifier = {
-            factor = 5
-            country = {
-                nationalvalue = nv_equality
-            }
-        }
-        modifier = {
-            factor = -4.95
-            has_culture_core = no
-            country = {
-                nationalvalue = nv_equality
-            }
-        }
-    }
 
 }
 
@@ -1746,6 +1736,10 @@ conversion_chance =
     modifier = {
         factor = 0.15
         not = { culture = this }
+    }
+	modifier = {
+        factor = 2
+        country = { nationalvalue = pm_clergyman }
     }
 
     modifier = {

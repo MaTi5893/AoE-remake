@@ -9,10 +9,6 @@ multitude_of_financial_instruments = {
         base = 2
         modifier = {
             factor = 2
-            nationalvalue = nv_liberty
-        }
-        modifier = {
-            factor = 2
             trade_policy = free_trade
         }
     }
@@ -186,10 +182,6 @@ private_bank_monitoring = {
             factor = 2
             economic_policy = state_capitalism
         }
-        modifier = {
-            factor = 1
-            nationalvalue = nv_order
-        }
     }
     effect = {
         tax_eff = 0.5
@@ -203,10 +195,6 @@ market_behaviour_monitoring = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
         modifier = {
             factor = 1
             ruling_party_ideology = socialist
@@ -226,10 +214,6 @@ buying_on_margin = {
             factor = 2
             ruling_party_ideology = liberal
         }
-        modifier = {
-            factor = 1
-            nationalvalue = nv_liberty
-        }
     }
     effect = {
         factory_cost = -0.01
@@ -241,10 +225,6 @@ silver_standard = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 1
-            nationalvalue = nv_equality
-        }
         modifier = {
             factor = 1
             economic_policy = interventionism
@@ -259,10 +239,6 @@ decimal_monetary_system = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
         modifier = {
             factor = 1
             economic_policy = interventionism
@@ -356,10 +332,6 @@ state_bond_monetary_mechanism = {
     news = no
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
         modifier = {
             factor = 1
             economic_policy = interventionism
@@ -483,10 +455,6 @@ patent = {
         base = 2
         modifier = {
             factor = 2
-            nationalvalue = nv_order
-        }
-        modifier = {
-            factor = 2
             is_greater_power = yes
         }
         modifier = {
@@ -574,10 +542,6 @@ anti_trust_laws = {
         modifier = {
             factor = 2
             ruling_party_ideology = socialist
-        }
-        modifier = {
-            factor = 2
-            nationalvalue = nv_equality
         }
     }
     effect = {
@@ -694,10 +658,6 @@ polypoly_structure = {
             factor = 2
             ruling_party_ideology = liberal
         }
-        modifier = {
-            factor = 2
-            nationalvalue = nv_liberty
-        }
     }
     effect = {
         factory_input = -0.02
@@ -717,10 +677,6 @@ oligopoly_structure = {
     }
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_order
-        }
         modifier = {
             factor = 2
             ruling_party_ideology = conservative
@@ -744,10 +700,6 @@ monopoly_structure = {
     }
     chance = {
         base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_equality
-        }
         modifier = {
             factor = 2
             economic_policy = state_capitalism

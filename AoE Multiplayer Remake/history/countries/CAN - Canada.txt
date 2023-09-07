@@ -5,14 +5,14 @@ culture = french_canadian
 religion = protestant
 government = dominion
 plurality = 0.2
-nationalvalue = nv_order
+nationalvalue = pm_no_minister
 literacy = 0.6
 civilized = yes
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
-vote_franschise = universal_weighted_voting
+upper_house_composition = party_appointed
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = no_trade_unions

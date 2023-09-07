@@ -42,6 +42,7 @@ luxury_needs = {
 }
 
 
+
 country_migration_target =
 {
     factor = 1
@@ -137,17 +138,17 @@ country_migration_target =
 		NOT = { social_spending = 0.7 }
     }
 	modifier = {
-        factor = 1.75
+        factor = 1.6
         social_spending = 0.7
 		NOT = { social_spending = 0.8 }
     }
 	modifier = {
-        factor = 2
+        factor = 1.7
         social_spending = 0.8
 		NOT = { social_spending = 0.9 }
     }
 	modifier = {
-        factor = 8
+        factor = 1.8
         social_spending = 0.9
 		NOT = { social_spending = 1 }
     }
@@ -194,22 +195,6 @@ country_migration_target =
     modifier = {
         factor = 1.05
         vote_franschise = wealth_voting
-    }
-    modifier = {
-        factor = 1.25
-        vote_franschise = universal_weighted_voting
-    }
-    modifier = {
-        factor = 1.5
-        vote_franschise = universal_voting
-    }
-    modifier = {
-        factor = 4.0
-        OR = {
-            continent = north_america
-            continent = south_america
-            continent = oceania
-        }
     }
     modifier = {
         factor = 0.1
@@ -743,11 +728,7 @@ promote_to =
         }
 		modifier = {
 			factor = 5
-			nationalvalue = nv_order
-		}
-		modifier = {
-			factor = -10
-			has_crime = foreign_service_pressing
+			nationalvalue = pm_militarist
 		}
         group = {
             modifier = {
@@ -971,7 +952,7 @@ promote_to =
         }
 		modifier = {
 			factor = 5
-			nationalvalue = nv_equality
+			nationalvalue = pm_gentry
 		}
         group = {
         modifier = {
@@ -1414,7 +1395,7 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
         }
         modifier = {
             factor = 0.9
@@ -1442,7 +1423,7 @@ ideologies = {
         factor = 1.1
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             NOT = { ruling_party_ideology = communist }
         }
         modifier = {
@@ -1634,7 +1615,7 @@ ideologies = {
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
         }
         modifier = {
             factor = 1.1
@@ -2049,7 +2030,7 @@ issues =
         }
 		modifier = {
 			factor = 1.3
-			nationalvalue = nv_order
+			nationalvalue = pm_militarist
 		}
     }
     pro_military = {
@@ -2375,27 +2356,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_order
+            nationalvalue = pm_nobleman
             consciousness = 9
         }
         modifier = {
@@ -2420,27 +2401,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_equality
+            nationalvalue = pm_gentry
             consciousness = 9
         }
         modifier = {
@@ -2460,27 +2441,27 @@ issues =
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 5
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 6
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 7
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 8
         }
         modifier = {
             factor = 1.1
-            nationalvalue = nv_liberty
+            nationalvalue = pm_reformists
             consciousness = 9
         }
         modifier = {
@@ -3023,151 +3004,6 @@ issues =
             consciousness = 9
         }
     }
-    universal_weighted_voting = {
-        factor = 1.25
-        modifier = {
-            factor = 0
-            OR = {
-                NOT = {
-                    is_next_reform = universal_weighted_voting
-                }
-                NOT = { consciousness = 6 }
-                luxury_needs =  1.0
-                NOT = { life_needs = 0.7 }
-            }
-        }
-        modifier = {
-            factor = 0.25
-            country = {
-                civilized = no
-            }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 1 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.90 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.80 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.70 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.60 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.50 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.40 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.30 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.20 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.10 }
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 7
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 8
-        }
-
-        modifier = {
-            factor = 1.25
-            consciousness = 9
-        }
-    }
-    universal_voting = {
-        factor = 1.3
-        modifier = {
-            factor = 0
-            OR = {
-                vote_franschise = universal_voting
-                NOT = { consciousness = 6 }
-                luxury_needs =  1.0
-                NOT = { life_needs = 0.7 }
-            }
-        }
-        modifier = {
-            factor = 0.25
-            country = {
-                civilized = no
-            }
-        }
-
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 1 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.90 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.80 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.70 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.60 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.50 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.40 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.30 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.20 }
-        }
-        modifier = {
-            factor = 1.3
-            NOT = { agree_with_ruling_party = 0.10 }
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 7
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 8
-        }
-
-        modifier = {
-            factor = 1.25
-            consciousness = 9
-        }
-    }
     jefferson_method = {
         factor = 1
         modifier = {
@@ -3410,74 +3246,6 @@ issues =
                 NOT = {
                     is_next_reform = non_secret_ballots
                 }
-                luxury_needs =  1.0
-                NOT = { life_needs = 0.7 }
-            }
-        }
-        modifier = {
-            factor = 0.25
-            country = {
-                civilized = no
-            }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.10 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.20 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.30 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.40 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.50 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.60 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.70 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.80 }
-        }
-        modifier = {
-            factor = 1.25
-            NOT = { agree_with_ruling_party = 0.90 }
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 7
-        }
-        modifier = {
-            factor = 1.25
-            consciousness = 8
-        }
-
-        modifier = {
-            factor = 1.25
-            consciousness = 9
-        }
-    }
-    secret_ballots = {
-        factor = 1
-        modifier = {
-            factor = 0
-            OR = {
-                vote_franschise = none_voting
-                NOT = { consciousness = 6 }
-                political_parties = secret_ballots
                 luxury_needs =  1.0
                 NOT = { life_needs = 0.7 }
             }
@@ -3902,4 +3670,98 @@ issues =
             NOT = { literacy = 0.25 }
         }
     }
+		no_political_rights = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { consciousness = 3 }
+                NOT = {
+                    is_next_reform = no_political_rights
+                }
+                NOT = { is_ideology_enabled = socialist }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+		modifier = {
+            factor = 0.5
+            is_state_religion = no
+        }
+		modifier = {
+            factor = 2
+            is_state_religion = yes
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 5
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+	}
+	political_rights = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                NOT = { consciousness = 3 }
+                NOT = {
+                    is_next_reform = political_rights
+                }
+                NOT = { is_ideology_enabled = communist }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            country = {
+                civilized = no
+            }
+        }
+		modifier = {
+            factor = 0.5
+            is_state_religion = no
+        }
+		modifier = {
+            factor = 2
+            is_state_religion = yes
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 5
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 6
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 7
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 8
+        }
+        modifier = {
+            factor = 1.25
+            consciousness = 9
+        }
+	}
 }

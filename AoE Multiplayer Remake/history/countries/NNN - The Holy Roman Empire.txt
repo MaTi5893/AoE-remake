@@ -4,15 +4,15 @@ culture = north_german
 religion = protestant
 government = absolute_monarchy
 plurality = 0.15
-nationalvalue = nv_order
+nationalvalue = pm_no_minister
 literacy = 0.87
 civilized = yes
 is_releasable_vassal = no
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
-vote_franschise = universal_weighted_voting
+upper_house_composition = party_appointed
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
 press_rights = free_press
 trade_unions = all_trade_unions
