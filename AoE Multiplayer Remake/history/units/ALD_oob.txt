@@ -76,7 +76,24 @@ army = {
 		type = cavalry
 		home = 1713
 	}
+	
+	regiment = {
+		name= "5.Spahis"
+		type = cavalry
+		home = 1701
+	}
 
+	regiment = {
+		name= "6.Spahis"
+		type = cavalry
+		home = 1702
+	}
+
+	regiment = {
+		name= "7.Spahis"
+		type = cavalry
+		home = 1702
+	}
 }
 
 army = {
@@ -116,29 +133,6 @@ army = {
 		name= "4.Spahis"
 		type = cavalry
 		home = 1710
-	}
-
-}
-
-army = {
-	name = "Army of the Berbers"
-	location = 1713
-	regiment = {
-		name= "5.Spahis"
-		type = cavalry
-		home = 1701
-	}
-
-	regiment = {
-		name= "6.Spahis"
-		type = cavalry
-		home = 1702
-	}
-
-	regiment = {
-		name= "7.Spahis"
-		type = cavalry
-		home = 1702
 	}
 
 }

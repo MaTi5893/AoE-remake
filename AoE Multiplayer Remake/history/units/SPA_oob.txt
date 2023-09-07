@@ -107,7 +107,7 @@ MUG = { value = -25 }
 
 #Army
 army = {
-    name = "Ejército Cristino del Centro"
+    name = "Ejército del Centro"
     location = 487
     regiment = {
         name= "1. Granaderos del Rey"
@@ -128,50 +128,50 @@ army = {
     }
 
     regiment = {
-        name= "1. Granaderos del Rey"
+        name= "4. Granaderos del Rey"
         type = infantry
         home = 487
     }
 
     regiment = {
-        name= "2. Granaderos del Rey"
+        name= "2. Caballeria del Rey"
         type = cuirassier
         home = 489
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "1. Artilleria del Rey"
         type = artillery
-        home = 488
+        home = 482
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "2. Artilleria del Rey"
         type = artillery
-        home = 474
+        home = 483
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 475
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "4. Artilleria del Rey"
         type = artillery
         home = 487
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "5. Artilleria del Rey"
         type = artillery
         home = 509
     }
 }
 
 army = {
-    name = "Ejército Cristino del Centro"
+    name = "Ejército del Sur"
     location = 510
     regiment = {
         name= "1. Granaderos del Rey"
@@ -198,44 +198,44 @@ army = {
     }
 
     regiment = {
-        name= "2. Granaderos del Rey"
+        name= "2. Caballeria del Rey"
         type = cuirassier
         home = 515
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 503
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 497
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 495
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 474
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
         home = 513
     }
 }
 
 army = {
-    name = "Ejército Cristino del Centro"
+    name = "Ejército del Norte"
     location = 498
     regiment = {
         name= "1. Granaderos del Rey"
@@ -262,112 +262,176 @@ army = {
     }
 
     regiment = {
-        name= "2. Granaderos del Rey"
+        name= "3. Caballeria del Rey"
         type = cuirassier
-        home = 1455
+        home = 496
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "1. Artilleria del Rey"
         type = artillery
-        home = 1457
+        home = 495
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "2. Artilleria del Rey"
         type = artillery
-        home = 1463
+        home = 497
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "3. Artilleria del Rey"
         type = artillery
-        home = 1455
+        home = 498
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "4. Artilleria del Rey"
         type = artillery
-        home = 1463
+        home = 475
     }
 
     regiment = {
-        name= "3. Granaderos del Rey"
+        name= "5. Artilleria del Rey"
         type = artillery
-        home = 1457
+        home = 476
     }
 }
 
 army = {
-    name = "Ejército Cristino del Centro"
+    name = "Ejército de los Paises Bajos"
     location = 388
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
-        home = 398
+        home = 2328
     }
 
     regiment = {
         name= "2. Granaderos del Rey"
         type = infantry
-        home = 397
+        home = 2349
     }
 
     regiment = {
         name= "3. Guardia Real"
         type = infantry
-        home = 722
+        home = 2348
     }
 
     regiment = {
-        name= "1. Granaderos del Rey"
+        name= "4. Granaderos del Rey"
         type = infantry
-        home = 723
+        home = 722
+    }
+	
+	regiment = {
+        name= "4. Caballeria del Rey"
+        type = cuirassier
+        home = 1455
+    }
+
+    regiment = {
+        name= "1. Artilleria del Rey"
+        type = artillery
+        home = 1457
+    }
+
+    regiment = {
+        name= "2. Artilleria del Rey"
+        type = artillery
+        home = 1463
+    }
+
+    regiment = {
+        name= "3. Artilleria del Rey"
+        type = artillery
+        home = 515
+    }
+
+    regiment = {
+        name= "4. Artilleria del Rey"
+        type = artillery
+        home = 512
+    }
+
+    regiment = {
+        name= "5. Artilleria del Rey"
+        type = artillery
+        home = 514
     }
 }
 
-
 army = {
-    name = "Activo Oajaca"
-    location = 2163
+    name = "Ejército de Napoles"
+    location = 754
     regiment = {
-        name= "1.Oajaca y Tlaxcala"
+        name= "1. Granaderos del Rey"
         type = infantry
-        home = 2177
+        home = 754
     }
 
     regiment = {
-        name= "2.Oajaca y Tlaxcala"
+        name= "2. Granaderos del Rey"
         type = infantry
-        home = 2177
+        home = 723
     }
 
     regiment = {
-        name= "3.Oajaca y Tlaxcala"
+        name= "3. Guardia Real"
         type = infantry
-        home = 2177
+        home = 753
+    }
+
+    regiment = {
+        name= "4. Granaderos del Rey"
+        type = infantry
+        home = 757
     }
 	
-    regiment = {
-        name= "1.Division Comonfort"
-        type = infantry
-        home = 2176
+	regiment = {
+        name= "4. Caballeria del Rey"
+        type = cuirassier
+        home = 756
     }
 
     regiment = {
-        name= "2.Division Comonfort"
-        type = infantry
-        home = 2176
+        name= "1. Artilleria del Rey"
+        type = artillery
+        home = 761
     }
 
+    regiment = {
+        name= "2. Artilleria del Rey"
+        type = artillery
+        home = 755
+    }
+
+    regiment = {
+        name= "3. Artilleria del Rey"
+        type = artillery
+        home = 759
+    }
+
+    regiment = {
+        name= "4. Artilleria del Rey"
+        type = artillery
+        home = 765
+    }
+
+    regiment = {
+        name= "5. Artilleria del Rey"
+        type = artillery
+        home = 726
+    }
 }
 
 army = {
     name = "Ejército del Ciudad Mejico"
-    location = 2164
+    location = 2172
     regiment = {
         name= "1.Oajaca y Tlaxcala"
-        type = infantry
+        type = hussar
         home = 2191
     }
 
@@ -394,10 +458,168 @@ army = {
         type = infantry
         home = 2167
     }
+	
+	regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2174
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2177
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2187
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2186
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = artillery
+        home = 2176
+    }
+}
+
+army = {
+    name = "Ejército de Colombia"
+    location = 2254
+    regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = hussar
+        home = 388
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = infantry
+        home = 389
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = infantry
+        home = 390
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 387
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 387
+    }
+	
+	regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = artillery
+        home = 394
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = artillery
+        home = 396
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = artillery
+        home = 397
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 398
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = artillery
+        home = 381
+    }
+}
+
+army = {
+    name = "Ejército de Peru"
+    location = 2302
+    regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = hussar
+        home = 2295
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2302
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = infantry
+        home = 2279
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 2279
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 2283
+    }
+	
+	regiment = {
+        name= "1.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2326
+    }
+
+    regiment = {
+        name= "2.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2324
+    }
+
+    regiment = {
+        name= "3.Oajaca y Tlaxcala"
+        type = artillery
+        home = 2325
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = artillery
+        home = 2330
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = artillery
+        home = 2379
+    }
 }
 
 navy = {
-    name = "Armada de Cuba"
+    name = "Armada de Espana"
     location = 512
 
     ship = {
@@ -623,12 +845,32 @@ navy = {
         name= "3a Flotilla de Transporte"
         type = clipper_transport
     }
+	
+	ship = {
+        name= "12a Flotilla de Transporte"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "21a Flotilla de Transporte"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "23a Flotilla de Transporte"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "13a Flotilla de Transporte"
+        type = clipper_transport
+    }
 }
 leader = {
     name = "Francisco Serrano"
     date = 1700.1.1
     type = land
-    personality = defence_2.2
+    personality = defence_1.2
     background = attack_2.1
     prestige = 0.0
 }
@@ -647,7 +889,7 @@ leader = {
     date = 1700.1.1
     type = sea
     personality = defence_1.1
-    background = attack_2.3
+    background = attack_3.3
     prestige = 0.2
 }
 
@@ -655,7 +897,7 @@ leader = {
     name = "José Carrillo de Albornoz"
     date = 1700.1.1
     type = land
-    personality = defence_2.3
+    personality = defence_1.3
     background = attack_4.2
     prestige = 0.3
 }
@@ -664,7 +906,7 @@ leader = {
     name = "Jean François de Bette"
     date = 1700.1.1
     type = land
-    personality = defence_4.1
+    personality = defence_3.1
     background = attack_2.3
     prestige = 0.1
 }

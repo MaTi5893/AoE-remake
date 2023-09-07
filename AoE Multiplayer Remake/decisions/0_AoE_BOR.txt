@@ -31,40 +31,39 @@ political_decisions = {
 		}
 	}
 	
-	#edict_of_tolerance = {
-	#	picture = tolerance_edict
-	#	potential = {
-	#		primary_culture = french
-	#		NOT = { has_country_flag = edict_of_tolerance }
-	#		exists = yes
-	#	}
-	#	allow = {
-	#		war = no
-	#		OR = {
-	#			average_militancy = 10
-	#			nationalism_n_imperialism = 1
-	#		}
-	#	}
-	#	effect = {
-	#		set_country_flag = edict_of_tolerance
-	#		add_accepted_culture = gascon
-	#		any_pop = {
-	#			limit = {
-	#				religion = protestant 
-	#			}
-	#			militancy = -6
-	#		}
-	#		any_pop = {
-	#			limit = {
-	#				religion = catholic 
-	#			}
-	#			militancy = 1
-	#		}
-	#	}
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#}
+	edict_of_tolerance = {
+		picture = tolerance_edict
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = edict_of_tolerance }
+			exists = yes
+		}
+		allow = {
+			war = no
+			OR = {
+				average_militancy = 10
+				nationalism_n_imperialism = 1
+			}
+		}
+		effect = {
+			set_country_flag = edict_of_tolerance
+			any_pop = {
+				limit = {
+					religion = protestant 
+				}
+				militancy = -6
+			}
+			any_pop = {
+				limit = {
+					religion = catholic 
+				}
+				militancy = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	establish_ecole_militire = {
 		picture = fra_soldier
@@ -137,6 +136,116 @@ political_decisions = {
 		}
 	}
 	
+	louis_dream = {
+		picture = louis_dream
+		potential = {
+			tag = BOR
+			NOT = { has_country_flag = louis_dream }
+			exists = yes
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+		}
+		allow = {
+			owns = 387
+			owns = 389
+			owns = 397
+			owns = 381
+			owns = 395
+			OR = {
+				AND = {
+					has_country_modifier = louis_grande
+					ideological_thought = 1
+					NOT = { has_global_flag = france_lost_succ }
+				}
+				AND = {
+					nationalism_n_imperialism = 1
+					war_policy = jingoism
+				}
+			}
+			NOT = { has_country_modifier = no_more_war }
+			NOT = { has_country_modifier = peasant_turmoil }
+			has_recently_lost_war = no
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							owns = 387
+							owns = 389
+							owns = 397
+						}
+					}
+				}
+				owner = { 
+					badboy = 15
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							owns = 387
+							owns = 389
+							owns = 397
+						}
+						NOT = {
+							AND = {
+							owns = 387
+							owns = 389
+							owns = 397
+							}
+						}
+					}
+				}
+				owner = { 
+					badboy = 10
+				}
+			}
+			set_country_flag = louis_dream
+			398 = {
+				add_core = THIS
+			}
+			397 = {
+				add_core = THIS
+			}
+			394 = {
+				add_core = THIS
+			}
+			393 = {
+				add_core = THIS
+			}
+			393 = {	add_core = THIS }
+			388 = {	add_core = THIS }
+			389 = {	add_core = THIS }
+			387 = {	add_core = THIS }
+			390 = {	add_core = THIS }
+			396 = {	add_core = THIS }
+			381 = {	add_core = THIS }
+			LIG = {	all_core = { add_core = THIS } }
+			random_country = {
+				limit = {
+					tag = LOR
+					in_sphere = THIS
+					ai = yes
+				}
+				THIS = {
+					create_vassal = LOR
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 5
+			}
+		}
+	}
+	
 	natural_borders_of_fr = {
 		picture = louis_dream
 		potential = {
@@ -170,6 +279,7 @@ political_decisions = {
 			576 = { add_core = THIS }
 			577 = { add_core = THIS }
 			add_core = 1724
+			add_core = 1980
 			add_core = 2023
 			add_core = 570
 		}
@@ -308,15 +418,14 @@ political_decisions = {
 	form_franco_spanish_union_war = {
 		picture = bourbon
 		potential = {
-			OR = {
-			tag = BOR
 			tag = SPC
-			}
-			NOT = { exists = FSU }
+			FSU = { exists = no }
+			NNN = { exists = no }
 			exists = SPC
 			exists = BOR
 			NOT = { has_global_flag = FSU }
 			NOT = { has_global_flag = france_lost_succ }
+			NOT = { has_country_flag = centralised_spanish_americas }
 			OR = {
 				government = absolute_monarchy
 				government = hms_government
@@ -330,23 +439,34 @@ political_decisions = {
 				government = hms_government
 				government = prussian_constitutionalism
 			}
+			BEL_387 = {
+				owned_by = THIS
+				is_core = THIS
+			}
+			BEL_394 = {
+				owned_by = THIS
+				is_core = THIS
+			}
+			NET_397 = {
+				owned_by = THIS
+				is_core = THIS
+			}
+			BEL_393 = {
+				owned_by = THIS
+				is_core = THIS
+			}
+			owns = 754
+			owns = 755
+			owns = 762
+			owns = 765
+			owns = 517
+			has_country_flag = centralised_spanish_empire
+			NOT = { exists = NNN }
 			is_greater_power = yes
-			state_n_government = 1
+			revolution_n_counterrevolution = 1
 			war = no
 		}
 		effect = {
-			random_owned = {
-				owner = {
-					limit = {
-						tag = BOR
-					}
-					casus_belli = {
-						target = SPC
-						type = unify_bourbon_empire
-						months = 12
-					}
-				}
-			}
 			random_owned = {
 				owner = {
 					limit = {
@@ -368,19 +488,6 @@ political_decisions = {
 				owner = {
 					relation = {
 						who = BOR
-						value = -200
-					}
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						tag = BOR
-					}
-				}
-				owner = {
-					relation = {
-						who = SPC
 						value = -200
 					}
 				}
@@ -444,10 +551,13 @@ political_decisions = {
 	support_jacobite_pretenders = {
 		picture = edward_stuart
 		potential = {
-			tag = BOR
+			OR = {
+				tag = BOR
+				tag = SPC
+			}
 			NOT = { exists = GBJ }
 			exists = GBR
-			NOT = { has_country_flag = supported_jacobite_pretenders }
+			NOT = { has_global_flag = bourbons_supported_jacobite_pretenders }
 			year = 1715
 		}
 		allow = {
@@ -455,7 +565,7 @@ political_decisions = {
 		}
 		effect = {
 			GBR = { country_event = 171124 }
-			set_country_flag = supported_jacobite_pretenders
+			set_global_flag = bourbons_supported_jacobite_pretenders
 		}
 	}
 	
@@ -738,6 +848,8 @@ political_decisions = {
             }
             NOT = {
                 exists = GCF
+				exists = NNN
+				exists = GER
                 has_global_flag = created_confed_rhein
             }
         }

@@ -66,31 +66,31 @@ army = {
     name = "Exército Português"
     location = 521
     regiment = {
-        name= "1. Brigada de Infantaria"
+        name= "1. Brigada de Artilharia"
         type = artillery
         home = 521
     }
 
     regiment = {
-        name= "2. Brigada de Infantaria"
+        name= "2. Brigada de Artilharia"
         type = artillery
         home = 524
     }
 
     regiment = {
-        name= "3. Brigada de Infantaria"
+        name= "3. Brigada de Artilharia"
         type = artillery
         home = 518
     }
 
     regiment = {
-        name= "4. Brigada de Infantaria"
+        name= "4. Brigada de Artilharia"
         type = artillery
         home = 520
     }
 
     regiment = {
-        name= "1. Brigada de Artilharia"
+        name= "5. Brigada de Artilharia"
         type = artillery
         home = 522
     }
@@ -101,74 +101,93 @@ army = {
         home = 519
     }
 
-}
-
-army = {
-	name = "2. Exército de Brazil Ocidental"
-	location = 2447
-	regiment = {
-		name= "1. Brigada de Artilharia"
-		type = artillery
-		home = 2447
-	}
-
-	regiment = {
-		name= "2. Brigada de Artilharia"
-		type = artillery
-		home = 2450
-	}
-
-	regiment = {
-		name= "3. Brigada de Artilharia"
-		type = artillery
-		home = 2436
-	}
-
-	regiment = {
-		name= "1. Brigada de Artilharia"
-		type = cuirassier
-		home = 2429
-	}
-}
-
-army = {
-	name = "1.Exército de Brazil Ocidental"
-	location = 2463
-	regiment = {
-		name= "4. Brigada de Infantaria"
-		type = artillery
-		home = 2463
-	}
-
-	regiment = {
-		name= "5. Brigada de Infantaria"
-		type = artillery
-		home = 2457
-	}
-
-}
-
-army = {
-    name = "Exército de Africa Ocidental"
-    location = 523
-
-    regiment = {
+	 regiment = {
         name = "1. Divisão Colonial"
-        type = artillery
+        type = infantry
         home = 525
     }
 
     regiment = {
         name = "2. Divisão Colonial"
-        type = artillery
+        type = infantry
         home = 2134
     }
 	
     regiment = {
         name = "3. Divisão Colonial"
-        type = artillery
+        type = infantry
         home = 1303
     }
+	
+	 regiment = {
+        name = "4. Divisão Colonial"
+        type = infantry
+        home = 521
+    }
+}
+
+army = {
+	name = "1. Exército de Brazil Ocidental"
+	location = 2447
+	regiment = {
+		name= "1. Brigada de Infantaria"
+		type = infantry
+		home = 2447
+	}
+
+	regiment = {
+		name= "2. Brigada de Infantaria"
+		type = infantry
+		home = 2450
+	}
+
+	regiment = {
+		name= "3. Brigada de Infantaria"
+		type = infantry
+		home = 2436
+	}
+
+	regiment = {
+		name= "4. Brigada de Infantaria"
+		type = infantry
+		home = 2426
+	}
+
+	regiment = {
+		name= "1. Brigada de Cavalaria"
+		type = cuirassier
+		home = 2429
+	}
+	
+	regiment = {
+		name= "1. Brigada de Artilharia"
+		type = artillery
+		home = 2463
+	}
+
+	regiment = {
+		name= "2. Brigada de Artilharia"
+		type = artillery
+		home = 2457
+	}
+	
+	regiment = {
+		name= "3. Brigada de Artilharia"
+		type = artillery
+		home = 2434
+	}
+
+	regiment = {
+		name= "4. Brigada de Artilharia"
+		type = artillery
+		home = 2441
+	}
+	
+	regiment = {
+		name= "4. Brigada de Artilharia"
+		type = artillery
+		home = 2345
+	}
 }
 
 navy = {
@@ -313,6 +332,14 @@ navy = {
         name= "9o Navios de Transporte"
         type = clipper_transport
     }
+	ship = {
+        name= "10o Navios de Transporte"
+        type = clipper_transport
+    }
+    ship = {
+        name= "11o Navios de Transporte"
+        type = clipper_transport
+    }
 
 }
 
@@ -320,17 +347,17 @@ leader = {
     name = "Duke of Saldanha"
     picture = european_general_55
     type = land
-    date = 1825.8.20
-    background = defence_0.2
-    personality = attack_1.2
-    prestige = 0.1
+    date = 1699.8.20
+    background = defence_1.2
+    personality = attack_2.2
+    prestige = 0.2
     }
 
 leader = {
     name = "José Joaquim da Rosa Coelho"
     picture = european_admiral_5
     type = sea
-    date = 1820.12.14
+    date = 1690.12.14
     background = defence_2.1
     personality = attack_0.1
     prestige = 0.05
@@ -338,7 +365,7 @@ leader = {
 
 leader = {
     name = "Nunes Vidigal"
-    date = 1808.1.1
+    date = 1690.1.1
     type = land
     personality = defence_0.1
     background = attack_2.1
@@ -347,7 +374,7 @@ leader = {
 
 leader = {
     name = "Luís Barreto"
-    date = 1824.1.1
+    date = 1690.1.1
     type = land
     personality = defence_2.4
     background = attack_0.3
@@ -356,7 +383,7 @@ leader = {
 
 leader = {
     name = "Vicente de Mesquita"
-    date = 1808.1.1
+    date = 1699.1.1
     type = land
     personality = defence_0.3
     background = attack_minus_1.1

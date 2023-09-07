@@ -1054,10 +1054,7 @@ country_event = {
 	option = {
 		name = "Their kingdom is useful enough to guard our frontiers against the Safavids. There is no need to act - for now."
 		release = IRQ
-		relation = { who = IRQ value = 100 }
-		TUR = {
-			create_vassal = IRQ
-		}
+		relation = { who = IRQ value = -40 }
         any_pop = {
             limit = { is_primary_culture = yes }
             militancy = 1.5
@@ -1079,6 +1076,7 @@ country_event = {
             political_reform = free_press
             political_reform = yes_meeting
         }
+		ai_chance = { factor = 0 }
 	}
 }
 country_event = {
@@ -1096,6 +1094,8 @@ country_event = {
 		has_global_flag = turk_maghreb_war_victor 
 		has_global_flag = turk_maghreb_war_defeat 
 		}
+		year = 1700
+		month = 6
 		MOR = { exists = yes is_vassal = no }
 		TUN = { exists = yes is_vassal = no }
 		OR = {
@@ -1111,7 +1111,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		days = 5
 	}
 	
 	option = {
@@ -1416,6 +1416,7 @@ country_event = {
 				value = -80
 			}
 		}
+		ai_chance = { factor = 0 }
 	}
 }
 country_event = {

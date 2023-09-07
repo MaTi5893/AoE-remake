@@ -43,12 +43,15 @@ political_decisions = {
         allow = {
             war = no
             OR = {
-                state_n_government = 1
-                owns = 682
-                AND = {
-                    tag = PRU
-                    owns = 546
-                }
+				has_country_modifier = frederick_grosse
+				AND = {
+					state_n_government = 1
+					owns = 682     
+				}
+				AND = {
+					owns = 546
+					nationalism_n_imperialism = 1
+				}
             }
             war_policy = jingoism
         }
@@ -199,6 +202,10 @@ political_decisions = {
         }
         allow = {
             war = no
+			OR = {
+				has_country_modifier = frederick_grosse
+				nationalism_n_imperialism = 1
+			}
             owns = 696
             owns = 693
             owns = 690
@@ -244,11 +251,17 @@ political_decisions = {
 
         allow = {
             war = no
-            war_policy = jingoism
-            OR = {
-            military_score = 65
-            owns = 682
-            }
+			OR = {
+				has_country_modifier = frederick_grosse
+				AND = {
+					war_policy = jingoism
+					nationalism_n_imperialism = 1
+					OR = {
+						military_score = 65
+						owns = 682
+					}
+				}
+			}	
         }
 
         effect = {
@@ -438,6 +451,7 @@ political_decisions = {
             military_score = 150
             owns = 580
             owns = 577
+			state_n_government = 1
             is_greater_power = yes
         }
 
@@ -643,9 +657,14 @@ political_decisions = {
                 exists = GER
                 tag = ISR
 				tag = SIE
-                has_country_flag = hre_member
-                has_country_flag = hre_emperor
             }
+			OR = {
+				has_global_flag = hre_dismantled
+				NOT = { 
+					has_country_flag = hre_member
+					has_country_flag = hre_emperor
+				}
+			}
             exists = yes
         }
 

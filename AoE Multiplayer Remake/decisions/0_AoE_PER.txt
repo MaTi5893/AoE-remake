@@ -66,7 +66,7 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
-            ideological_thought = 1
+            state_n_government = 1
             owns = 926
         }
         effect = {
@@ -97,6 +97,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
+			nationalism_n_imperialism = 1
             war_policy = jingoism
 			1218 = { owned_by = THIS }
 			1209 = { owned_by = THIS }
@@ -134,6 +135,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
+		nationalism_n_imperialism = 1
            war_policy = jingoism
 	   OR = {
            	1236 = { controlled_by = THIS }
@@ -330,6 +332,7 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
+			state_n_government = 1
 	    KAK = { all_core = { owned_by = THIS } }
             KKH = { all_core = { owned_by = THIS } }
             owns = 885
@@ -341,6 +344,7 @@ political_decisions = {
             1053 = { add_core = THIS }
             1055 = { add_core = THIS }
             886 = { add_core = THIS }
+	    885 = { add_core = THIS }
             set_country_flag = persian_caucases
         }
         ai_will_do = { factor = 1 }
@@ -356,6 +360,7 @@ political_decisions = {
         }
         allow = {
             war_policy = jingoism
+			nationalism_n_imperialism = 1
 	    owns = 926
             owns = 923
             TUR_885 = { owned_by = THIS }
@@ -386,6 +391,7 @@ political_decisions = {
             owns = 1221
             owns = 1213
 			owns = 1209
+			nationalism_n_imperialism = 1
 			AFG = { exists = no }
 			HTK = { exists = no }
         }

@@ -102,4 +102,94 @@ political_decisions = {
 			}
 		}
 	}
+	
+	hyojong_northern_expedition = {
+		picture = chinese_capital_pic
+		potential = {
+			tag = KOR 
+			NOT = { has_country_flag = northern_expedition_launched }
+		}
+		allow = {
+			KOR = {
+				all_core = {
+					owned_by = THIS
+				}
+            }
+			military_score = 40
+		}
+		effect = {
+			set_country_flag = northern_expedition_launched
+			relation = {
+                who = QNG
+                value = -80
+            }
+			MCK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			badboy = 8
+			prestige = 10
+		}
+	}
+	
+	domination_of_manchu_lands = {
+		picture = chinese_capital_pic
+		potential = {
+			tag = KOR 
+			NOT = { has_country_flag = manchu_lands_dominated }
+		}
+		allow = {
+			MCK = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			set_country_flag = manchu_lands_dominated
+			MCK = {
+				all_core = {
+					add_province_modifier = {
+						name = manchu_cultural_oppression  
+						duration = 14600
+					}
+				}
+			}
+			badboy = 6
+		}
+	}
+	
+	farxinite_diplomacy = {
+		picture = chinese_capital_pic
+		potential = {
+			tag = KOR 
+			NOT = { has_country_flag = farxinite_diplomacy }
+		}
+		allow = {
+			owns = 1555
+			owns = 1552
+			owns = 1083
+			OR = {
+				TOR = {
+					relation = {
+						who = THIS
+						value = 60
+					}
+				}
+				RUS = {
+					relation = {
+						who = THIS
+						value = 60
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = farxinite_diplomacy
+			RUS = { country_event = 157105 }
+			TOR = { country_event = 157105 }
+			badboy = -2
+		}
+	}
 }

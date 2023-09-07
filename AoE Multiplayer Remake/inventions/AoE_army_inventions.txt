@@ -98,11 +98,11 @@ regimental_system = {
     chance = {
         base = 0
         modifier = {
-            factor = 2
+            factor = 4
             experimental_railroad = 1
         }
         modifier = {
-            factor = 3
+            factor = 8
             functionalism = 1
         }
     }
@@ -110,13 +110,17 @@ regimental_system = {
         mobilisation_size = 0.01
     }
 }
-saleried_soldiers = {
+salaried_soldiers = {
     limit = { strategic_mobility = 1 }
     chance = {
-        base = 3
+        base = 5
+        modifier = {
+            factor = 30
+            regimental_system = 1
+        }
     }
     effect = {
-        reinforce_rate = 0.01
+		reinforce_rate = 0.01
     }
 }
 #point_defense_system - Doctrine of Firepower
@@ -151,10 +155,10 @@ earthworks = {
 mass_infantry = {
     limit = { point_defense_system = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
-            factor = 3
-            invention = regimental_system
+            factor = 30
+            salaried_soldiers = 1
         }
     }
     effect = {
@@ -172,7 +176,7 @@ mass_infantry = {
         }
     }
 }
-scoarched_earth_policy = {
+scorched_earth_policy = {
     limit = { point_defense_system = 1 }
     chance = {
         base = 0
@@ -215,17 +219,17 @@ regimental_mustering = {
 goose_step = {
     limit = { deep_defense_system = 1 }
     chance = {
-        base = 1
+        base = 4
         modifier = {
-            factor = 2
+            factor = 10
             war_countries = { invention = goose_step }
         }
         modifier = {
-            factor = 1
+            factor = 2
             war = yes
         }
         modifier = {
-            factor = 2
+            factor = 4
             army_decision_making = 1
         }
     }
@@ -278,6 +282,19 @@ goose_step = {
 
     }
 }
+impressment = {
+    limit = { deep_defense_system = 1 }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 30
+            invention = goose_step 
+        }
+    }
+    effect = {
+        reinforce_rate = 0.01
+    }
+}
 #infiltration - Skirmish tactics
 light_infantry_companies = {
     limit = { infiltration = 1 }
@@ -301,6 +318,19 @@ light_infantry_companies = {
             attack = 1
             defence = 1
         }
+    }
+}
+recruitment_parties = {
+    limit = { infiltration = 1 }
+    chance = {
+        base = 5
+        modifier = {
+            factor = 30
+            light_infantry_companies = 1
+        }
+    }
+    effect = {
+        reinforce_rate = 0.01
     }
 }
 #modern_army_doctrine - Standardazied Armies
@@ -327,10 +357,14 @@ the_carbine = {
         }
     }
 }
-proffesional_recruitment = {
+professional_recruitment = {
     limit = { modern_army_doctrine = 1 }
-    chance = {
-        base = 3
+	chance = {
+        base = 5
+        modifier = {
+            factor = 30
+            invention = the_carbine 
+        }
     }
     effect = {
         army_base = {
@@ -402,7 +436,7 @@ napoleonic_square = {
         }
     }
 }
-forging_parties = {
+foraging_parties = {
     limit = { army_doctrine_7 = 1 }
     chance = {
         base = 3
@@ -424,6 +458,19 @@ forging_parties = {
         irregular = {
             maximum_speed = 1
         }
+    }
+}
+levee_en_masse = {
+    limit = { army_doctrine_7 = 1 }
+	chance = {
+        base = 5
+        modifier = {
+            factor = 50
+            political_thought_7  = 1
+        }
+    }
+    effect = {
+		mobilisation_size = 0.01
     }
 }
 #army_doctrine_8 - Clasuwitz&Jomini's Theory
@@ -880,9 +927,9 @@ improved_carcasses = {
 cuirassier_activation = {
     limit = { military_staff_system = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
-            factor = -2
+            factor = -5
             not = { civilized = yes }
         }
     }
@@ -893,9 +940,9 @@ cuirassier_activation = {
 dragoon_activation = {
     limit = { military_staff_system = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
-            factor = -2
+            factor = -5
             not = { civilized = yes }
         }
     }
@@ -906,9 +953,9 @@ dragoon_activation = {
 hussar_activation = {
     limit = { military_staff_system = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
-            factor = -2
+            factor = -5
             not = { civilized = yes }
         }
     }

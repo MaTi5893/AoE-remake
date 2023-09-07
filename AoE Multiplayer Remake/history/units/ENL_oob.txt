@@ -206,7 +206,7 @@ army = {
     regiment = {
         name= "Heavy Brigade"
         type = artillery
-        home = 291
+        home = 300
     }
 
     regiment = {
@@ -224,7 +224,7 @@ army = {
     regiment = {
         name= "3.1st Division"
         type = artillery
-        home = 295
+        home = 289
     }
 
     regiment = {
@@ -236,13 +236,13 @@ army = {
     regiment = {
         name= "2.2nd Division"
         type = infantry
-        home = 287
+        home = 289
     }
 
     regiment = {
         name= "3.2nd Division"
         type = infantry
-        home = 256
+        home = 285
     }
 
     regiment = {
@@ -254,18 +254,18 @@ army = {
 }
 
 army = {
-    name = "2st Corps"
+    name = "2nd Corps"
     location = 278
     regiment = {
-        name= "Light Brigade"
+        name= "Royal Guards Cavalry"
         type = hussar
         home = 302
     }
 
     regiment = {
-        name= "Royal Dragoons"
+        name= "Royal Sappers"
         type = artillery
-        home = 297
+        home = 303
     }
 
     regiment = {
@@ -277,7 +277,7 @@ army = {
     regiment = {
         name= "1.1st Division"
         type = artillery
-        home = 298
+        home = 303
     }
 
     regiment = {
@@ -289,7 +289,7 @@ army = {
     regiment = {
         name= "3.1st Division"
         type = artillery
-        home = 274
+        home = 302
     }
 
     regiment = {
@@ -349,13 +349,13 @@ army = {
     regiment = {
         name= "2.4th Division"
         type = infantry
-        home = 255
+        home = 301
     }
 
     regiment = {
         name= "3.4th Division"
         type = artillery
-        home = 281
+        home = 292
     }
 
     regiment = {
@@ -379,10 +379,75 @@ army = {
     regiment = {
         name= "3.6th Division"
         type = artillery
-        home = 267
+        home = 301
     }
 	
+}
+
+army = {
+    name = "Army of Scotland"
+    location = 269
+    regiment = {
+        name= "1.3rd Division"
+        type = hussar
+        home = 268
     }
+
+    regiment = {
+        name= "2.3rd Division"
+        type = infantry
+        home = 258
+    }
+
+    regiment = {
+        name= "3.3rd Division"
+        type = infantry
+        home = 261
+    }
+
+    regiment = {
+        name= "1.4th Division"
+        type = infantry
+        home = 260
+    }
+
+    regiment = {
+        name= "2.4th Division"
+        type = infantry
+        home = 286
+    }
+
+    regiment = {
+        name= "3.4th Division"
+        type = artillery
+        home = 286
+    }
+
+    regiment = {
+        name= "1.5th Division"
+        type = artillery
+        home = 284
+    }
+
+    regiment = {
+        name= "2.5th Division"
+        type = artillery
+        home = 284
+    }
+
+    regiment = {
+        name= "3.5th Division"
+        type = artillery
+        home = 284
+    }
+
+    regiment = {
+        name= "3.6th Division"
+        type = artillery
+        home = 288
+    }
+	
+}
 	
 army = {
     name = "Colonial Army"
@@ -420,10 +485,34 @@ army = {
     regiment = {
         name= "2.4th Division"
         type = artillery
-        home = 2217
+        home = 247
     }
 	
+	regiment = {
+        name= "3.3rd Division"
+        type = infantry
+        home = 206
     }
+
+    regiment = {
+        name= "4.3rd Division"
+        type = infantry
+        home = 216
+    }
+
+    regiment = {
+        name= "5.4th Division"
+        type = infantry
+        home = 232
+    }
+
+    regiment = {
+        name= "6.4th Division"
+        type = infantry
+        home = 234
+    }
+
+}
 	
 navy = {
     name = "Channel Fleet"

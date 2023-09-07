@@ -10,15 +10,15 @@ political_decisions = {
         }
         allow = {
 			war = no
+			civilized = yes
 			OR = {
-				civilized = yes
 				AND = {
 					has_global_flag = turk_maghreb_war_victor 
-					civilization_progress = 0.65
+					ideological_thought = 1
 				}
 				AND = {
 					has_global_flag = turk_maghreb_war_defeat
-					civilization_progress = 0.45
+					state_n_government = 1
 				}
 			}
 			OR = {
@@ -120,6 +120,7 @@ political_decisions = {
 			war = no
 			war_policy = jingoism
 			civilized = yes
+			state_n_government = 1
 			MGH = { all_core = { owned_by = THIS } }
         }
         effect = {
@@ -144,7 +145,7 @@ political_decisions = {
         allow = {
 			war = no
 			war_policy = jingoism
-			state_n_government = 1
+			nationalism_n_imperialism = 1
 			MGH = { all_core = { owned_by = THIS } }
         }
         effect = {
@@ -169,6 +170,7 @@ political_decisions = {
 			war = no
 			citizenship_policy = full_citizenship
 			nationalism_n_imperialism = 1
+			analytic_philosophy = 1
 			MGH = { all_core = { owned_by = THIS } }
         }
         effect = {
@@ -187,6 +189,7 @@ political_decisions = {
         picture = form_andalusia
         potential = {
             primary_culture = maghrebi
+			NOT = { tag = MGH }
             NOT = {
                 ALA = {
                     exists = yes
@@ -194,6 +197,7 @@ political_decisions = {
             }
         }
         allow = {
+			civilized = yes
             owns = 513
             owns = 509
             owns = 507

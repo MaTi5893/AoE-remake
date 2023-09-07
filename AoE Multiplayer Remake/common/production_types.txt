@@ -676,7 +676,7 @@ paper_mill = {
 regular_clothes_factory = {
     template = factory_template
     input_goods = {
-        fabric = 40        #18    total input+maint = 72
+        fabric = 50        #18    total input+maint = 72
     }
     output_goods = regular_clothes
     value = 15            #87
@@ -862,8 +862,8 @@ hardwood_mill = {
 fabric_factory = {
     template = factory_template
     input_goods = {
-        cotton = 18
-        dye = 2
+        cotton = 100
+        dye = 10
     }
     output_goods = fabric
     value = 45            #81
@@ -1004,14 +1004,14 @@ sugar_plantation = {
 cotton_plantation = {
     template = RGO_template_farmers
     output_goods = cotton
-    value = 2.3
+    value = 1.1
     farm = yes
 }
 
 dye_plantation = {
     template = RGO_template_farmers
     output_goods = dye
-    value = 0.75
+    value = 0.45
     farm = yes
 }
 
@@ -1025,7 +1025,7 @@ fishing_wharf = {
 grain_farm = {
     template = RGO_template_farmers
     output_goods = grain
-    value = 2
+    value = 1.4
     farm = yes
 }
 
@@ -1053,7 +1053,7 @@ opium_plantation = {
 orchard = {
     template = RGO_template_farmers
     output_goods = fruit
-    value = 3.3
+    value = 2.6
     farm = yes
 }
 
@@ -1683,8 +1683,8 @@ artisan_tropical_hardwood = {
 
 artisan_fabric = {
     input_goods = {
-        cotton = 18
-        dye = 2
+        cotton = 120
+        dye = 12
     }
     output_goods = fabric
     value = 45            #81

@@ -43,40 +43,42 @@ political_decisions = {
         }
     }
 
-    leave_hre = {
-        picture = flag_hre
-        potential = {
-            has_country_flag = hre_member
-            NOT = { has_global_flag = hre_dismantled }
-            exists = yes
-			NOT = { has_country_flag = hre_emperor }
-			NOT = { exists = NNN }
-        }
-        allow = {
-            NOT = { relation = { who = AUS value = -10 } }
-        }
-        effect = {
-            all_core = {
-                limit = {
-                    continent = europe
-                }
-                remove_core = NNN
-            }
-            AUS = { country_event = 800001 }
-            prestige = 5
-            clr_country_flag = hre_member
-        }
-        ai_will_do = { factor = 0 }
-    }
+    #leave_hre = {
+    #    picture = flag_hre
+    #    potential = {
+    #        has_country_flag = hre_member
+    #        NOT = { has_global_flag = hre_dismantled }
+    #        exists = yes
+	#		NOT = { has_country_flag = hre_emperor }
+	#		NOT = { exists = NNN }
+    #    }
+    #    allow = {
+    #        NOT = { relation = { who = AUS value = -10 } }
+    #    }
+    #    effect = {
+    #        all_core = {
+    #            limit = {
+    #                continent = europe
+    #            }
+    #            remove_core = NNN
+    #        }
+    #        AUS = { country_event = 800001 }
+    #        prestige = 5
+    #        clr_country_flag = hre_member
+    #    }
+    #    ai_will_do = { factor = 0 }
+    #}
 
     renoveto_imperii= {
         picture = renoveto_imperii
         potential = {
             has_country_flag = hre_emperor
+			NOT = { has_global_flag = FSU }
             NOT = {
                 exists = NNN
             }
             NOT = { has_global_flag = hre_dismantled }
+			NOT = { has_global_flag = hre_dualism_ended }
 			NOT = {
 				is_ideology_enabled = communist
 			}
@@ -85,6 +87,7 @@ political_decisions = {
 
         allow = {
 			NOT = { is_ideology_enabled = communist }
+			NOT = { exists = FSU }
             has_recently_lost_war = no
             is_greater_power = yes
             war = no
@@ -101,7 +104,6 @@ political_decisions = {
                     }
                 }
             }
-            NOT = { has_country_modifier = hre_mendling }
         }
         effect = {
 			all_core = {
@@ -131,11 +133,245 @@ political_decisions = {
         }
     }
 
+	ratification_of_dutch_neutrality = {
+        picture = austria_coa
+        potential = {
+            has_country_flag = hre_emperor
+            NOT = { has_country_flag = ratified_dutch_neutrality }
+			NOT = { has_country_flag = integrated_austrian_netherlands }
+			NOT = { has_global_flag = hre_dualism_ended }
+            NOT = { has_global_flag = hre_dismantled }
+            exists = yes
+        }
+        allow = {
+			nationalism_n_imperialism = 1
+            OR = {
+				LIG = { all_core = { owned_by = THIS } }
+				LIG = { all_core = { owned_by = NET } }
+			}
+			OR = {
+				389 = { owned_by = THIS } 
+				389 = { owned_by = NET } 
+			}
+			OR = {
+				387 = { owned_by = THIS } 
+				387 = { owned_by = NET } 
+			}
+			OR = {
+				381 = { owned_by = THIS } 
+				381 = { owned_by = NET } 
+			}
+			OR = {
+				397 = { owned_by = THIS } 
+				397 = { owned_by = NET } 
+			}
+        }
+        effect = {
+            set_country_flag = ratified_dutch_neutrality
+            any_country = {
+                limit = {
+                    in_sphere = THIS
+                    is_culture_group = wallonian
+                }
+                clr_country_flag = hre_member
+            }
+            BEL = {
+                all_core = {
+                    remove_core = NNN
+					remove_core = AUS
+                }
+            }
+			LIG = {
+                all_core = {
+                    remove_core = NNN
+					remove_core = AUS
+                }
+            }
+            prestige = -15
+			relation = {
+                who = NET
+                value = 80
+            }
+			remove_accepted_culture = flemish
+			remove_accepted_culture = wallonian
+        }
+        ai_will_do = {
+            factor = 0.3
+        }
+	}
+	
+	integrate_austrian_netherlands = {
+        picture = austria_coa
+        potential = {
+            has_country_flag = hre_emperor
+			tag = AUS
+            NOT = { has_country_flag = integrated_austrian_netherlands }
+			NOT = { has_country_flag = ratified_dutch_neutrality }
+			NOT = { has_global_flag = hre_dualism_ended }
+			has_global_flag = france_lost_succ
+            NOT = { has_global_flag = hre_dismantled }
+            exists = yes
+        }
+        allow = {
+			nationalism_n_imperialism = 1
+			LIG = { all_core = { owned_by = THIS } }	
+			389 = { owned_by = THIS } 
+			387 = { owned_by = THIS } 
+			381 = { owned_by = THIS } 
+			397 = { owned_by = THIS } 
+        }
+        effect = {
+            set_country_flag = integrated_austrian_netherlands
+			any_pop = {
+				limit = {
+					OR = {
+						culture = wallonian
+						culture = flemish
+					}
+				}
+				militancy = -4
+			}
+            random_owned = {
+				limit = {
+					owner = {
+						LUX = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						LIG = {
+							all_core = {
+								owned_by = THIS
+							}
+						}
+						owns = 389
+						owns = 387
+						owns = 381
+					}
+				}
+				owner = {
+						any_owned = {
+						limit = {
+							OR = {
+								is_core = BEL
+								is_core = LIG
+							}
+						}
+						add_core = THIS
+					}	
+					add_accepted_culture = flemish
+					add_accepted_culture = wallonian
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 754
+						owns = 755
+						owns = 726
+					}
+				}
+				owner = {
+						any_owned = {
+						limit = {
+							OR = {
+								is_core = NAP
+								is_core = LOM
+							}
+						}
+						add_core = THIS
+					}	
+				}
+			}
+			relation = {
+                who = NET
+                value = -80
+            }
+            prestige = 15
+        }
+        ai_will_do = {
+            factor = 0.7
+        }
+	}
+	
+	end_german_dualism = {
+        picture = renoveto_imperii
+        potential = {
+            has_country_flag = hre_emperor
+			tag = AUS
+            NOT = { has_country_flag = integrated_austrian_netherlands }
+			NOT = { has_country_flag = ratified_dutch_neutrality }
+            NOT = { has_global_flag = hre_dismantled }
+			NOT = { has_global_flag = hre_dualism_ended }
+            exists = yes
+			NOT = { year = 1720 }
+        }
+        allow = {
+			NOT = { is_ideology_enabled = communist }
+			NOT = { exists = FSU }
+            has_recently_lost_war = no
+            is_greater_power = yes
+			state_n_government = 1
+			NOT = { year = 1720 }
+			AND = {
+				PRU = { is_greater_power = no }
+				PRU = { is_secondary_power = no } 
+			}
+            war = no
+            owns = 619
+			owns = 625
+			owns = 599
+			owns = 549
+			owns = 558
+			owns = 578
+			owns = 534
+			owns = 575
+			owns = 572
+			owns = 570
+        }
+        effect = {
+			all_core = {
+				add_core = NNN
+				remove_core = THIS
+			}
+			add_accepted_culture = south_german
+			add_accepted_culture = north_german
+			remove_accepted_culture = hungarian
+			remove_accepted_culture = serbian
+            change_tag = NNN
+            all_core = {
+                limit = {
+                    owner = {
+                        has_country_flag = hre_member
+						in_sphere = THIS
+						NOT = { tag = THIS }
+                    }
+                }
+                owner = {
+                    annex_to = NNN
+                }
+            }
+			clr_country_flag = hre_member
+			set_global_flag = hre_dualism_ended
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
     enforce_military_access = {
         picture = flag_hre
         potential = {
-            has_country_flag = hre_emperor
-            war = yes
+			OR = {
+				AND = {
+					has_country_flag = hre_emperor
+					NOT = { has_global_flag = taken_control_imperial_access }
+				}
+				AND = {
+					has_country_flag = host_nation
+					has_global_flag = taken_control_imperial_access 
+				}
+			}
             NOT = { has_global_flag = hre_dismantled }
             check_variable = {
                 which = mil_acc_enf
@@ -167,12 +403,28 @@ political_decisions = {
                 value = 1
             }
         }
+		ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 1
+                war = yes
+            }
+        }
     }
 
     end_enforce_military_access = {
         picture = flag_hre
         potential = {
-            has_country_flag = hre_emperor
+            OR = {
+				AND = {
+					has_country_flag = hre_emperor
+					NOT = { has_global_flag = taken_control_imperial_access }
+				}
+				AND = {
+					has_country_flag = host_nation
+					has_global_flag = taken_control_imperial_access 
+				}
+			}
             NOT = { has_global_flag = hre_dismantled }
             check_variable = {
                 which = mil_acc_enf
@@ -200,6 +452,7 @@ political_decisions = {
     reign_in_italy = {
         picture = austria_coa
         potential = {
+			tag = NNN
             has_country_flag = hre_emperor
             NOT = { has_country_flag = added_italy_hre }
             NOT = { has_global_flag = hre_dismantled }
@@ -257,6 +510,7 @@ political_decisions = {
 			has_country_flag = hre_emperor
 			is_ideology_enabled = communist
 			NOT = { has_global_flag = hre_dismantled }
+			NOT = { exists = NNN }
 		}
 		allow = {
 			OR = {

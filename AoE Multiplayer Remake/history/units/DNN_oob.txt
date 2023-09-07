@@ -51,7 +51,7 @@ leader = {
     name = "Olaf Rye"
 
     picture = european_general_24
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = land
 
@@ -67,7 +67,7 @@ leader = {
     name = "Frederik af Hessen-Kassel"
 
     picture = european_general_2
-    date = 1805.1.1
+    date = 1700.1.1
 
     type = land
 
@@ -81,7 +81,7 @@ leader = {
     name = "Christian Julius de Meza"
 
     picture = european_general_17
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = land
 
@@ -96,7 +96,7 @@ leader = {
     name = "Christoph von Krogh"
 
     picture = european_general_30
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = land
 
@@ -111,7 +111,7 @@ leader = {
     name = "Friderich Adolph Schleppegrell"
 
     picture = european_general_50
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = land
 
@@ -127,7 +127,7 @@ leader = {
     name = "Frederik Rubeck Henrik Bülow"
 
     picture = european_general_16
-    date = 1836.1.1
+    date = 1700.1.1
     type = land
 
     personality = defence_0.1
@@ -140,7 +140,7 @@ leader = {
     name = "Hans Hedemann"
 
     picture = european_general_15
-    date = 1836.1.1
+    date = 1700.1.1
     type = land
 
     personality = defence_0.1
@@ -153,7 +153,7 @@ leader = {
     name = "Edouard Suenson"
 
     picture = european_general_51
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = sea
 
@@ -168,7 +168,7 @@ leader = {
     name = "Carl Edvard van Dockum"
 
     picture = european_admiral_7
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = sea
 
@@ -183,7 +183,7 @@ leader = {
     name = "Steen Andersen Bille"
 
     picture = european_admiral_0
-    date = 1836.1.1
+    date = 1700.1.1
 
     type = sea
 
@@ -226,13 +226,13 @@ army = {
     }
 
     regiment = {
-        name= "2.2. Infanteridivision"
+        name= "2.2. Artelleridivision"
         type = artillery
         home = 366
     }
 
     regiment = {
-        name= "3.2. Infanteridivision"
+        name= "3.2. Artelleridivision"
         type = artillery
         home = 366
     }
@@ -244,19 +244,19 @@ army = {
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "1.1. Artelleridivision"
         type = artillery
         home = 369
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "2.1. Artelleridivision"
         type = artillery
         home = 373
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "3.1. Artelleridivision"
         type = artillery
         home = 372
     }
@@ -264,20 +264,20 @@ army = {
 
 army = {
 
-    name = "Danske Haeren"
+    name = "Kiel Haeren"
 
-    location = 366
+    location = 369
 
     regiment = {
-        name= "2.2. Infanteridivision"
+        name= "2.2. Artelleridivision"
         type = artillery
-        home = 372
+        home = 367
     }
 
     regiment = {
-        name= "3.2. Infanteridivision"
+        name= "3.2. Artelleridivision"
         type = artillery
-        home = 372
+        home = 2557
     }
 	
     regiment = {
@@ -287,22 +287,17 @@ army = {
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "1.1. Artelleridivision"
         type = artillery
-        home = 373
+        home = 371
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "2.1. Artelleridivision"
         type = artillery
         home = 366
     }
-
-    regiment = {
-        name= "1.1. Kavalleridivision"
-        type = artillery
-        home = 366
-    }
+	
 }
 
 army = {
@@ -317,31 +312,31 @@ army = {
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "1.1. Artelleridivision"
         type = artillery
         home = 310
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "2.1. Artelleridivision"
         type = artillery
         home = 305
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "3.1. Artelleridivision"
         type = artillery
         home = 309
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "4.1. Artelleridivision"
         type = artillery
         home = 540
     }
 
     regiment = {
-        name= "1.1. Kavalleridivision"
+        name= "5.1. Artelleridivision"
         type = artillery
         home = 369
     }
@@ -361,8 +356,6 @@ navy = {
 
     }
 
-
-
     ship = {
 
         name= "Dronning Marie"
@@ -371,8 +364,13 @@ navy = {
 
     }
 
+	 ship = {
 
+        name= "Dronning Doni"
 
+        type = manowar
+
+    }
 
 
     ship = {

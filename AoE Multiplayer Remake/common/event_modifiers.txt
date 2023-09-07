@@ -4297,6 +4297,20 @@ swedish_caroleans = {
     supply_consumption = -0.05
     icon = 15
 }
+charles_xii = {
+    mobilisation_economy_impact = -0.15
+    supply_consumption = -0.15
+    mobilisation_size = 0.04
+    min_military_spending = 0.1
+    icon = 15
+}
+great_northern_war = {
+    mobilisation_economy_impact = -0.1
+    supply_consumption = -0.05
+    mobilisation_size = 0.03
+    min_military_spending = 0.1
+    icon = 15
+}
 riksdaler = {
     administrative_efficiency_modifier = 0.025
     tax_efficiency = 0.05
@@ -7007,4 +7021,9 @@ hispanic_unity = {
 }
 absolutism_cooldown = {
 	icon = 20
+}
+manchu_cultural_oppression = {
+	assimilation_rate = 0.75
+	pop_militancy_modifier = 0.1
+	icon = 7
 }

@@ -14,6 +14,1168 @@ political_decisions = {
 		}
 	}
 	
+	cleanup_setup = {
+		potential = {
+			ai = yes
+			exists = yes
+			tag = CLN
+			NOT = { has_country_flag = starting_goods_war }
+		}
+		allow = { }
+		
+		effect = {
+			set_country_flag = starting_goods_war
+			SWE = { country_event = 98002 }
+			TOR = { country_event = 98002 }
+			DNN = { country_event = 98002 }
+			PLC = { country_event = 98002 }
+			SAX = { country_event = 98002 }
+			TUR = { country_event = 98002 }
+			SPA = { country_event = 98001 }
+			BOR = { country_event = 98001 }
+			PRU = { country_event = 98001 }
+			AUS = { country_event = 98001 }
+			SVY = { country_event = 98001 }
+			VEN = { country_event = 98001 }
+			POR = { country_event = 98001 }
+			ENL = { country_event = 98001 }
+			NET = { country_event = 98001 }
+			MOR = { country_event = 98003 }
+			ALD = { country_event = 98003 }
+			PER = { country_event = 98003 }
+			MUG = { country_event = 98003 }
+			MAH = { country_event = 98003 }
+			KON = { country_event = 98003 }
+			DAI = { country_event = 98003 }
+			AYO = { country_event = 98003 }
+			KOR = { country_event = 98003 }
+			TKG = { country_event = 98003 }
+			ETH = { country_event = 98003 }
+			DZN = { country_event = 98003 }
+		}
+	}
+	
+	1700_hist_pop_setup = {
+		potential = {
+			ai = yes
+			exists = yes
+			tag = CLN
+			NOT = { has_global_flag = performance_mode_set }
+		}
+		allow = { }
+		
+		effect = {
+			set_global_flag = performance_mode_set
+			any_pop = { reduce_pop = 0.75 }
+			any_country = { limit = { exists = yes } any_pop = { reduce_pop = 0.75 } }
+			#HRE Pop Change
+			any_country = { 
+				limit = { 
+					exists = yes 
+					capital_scope = {
+						continent = europe
+					}
+					OR = {
+						primary_culture = north_german
+						primary_culture = south_german
+						primary_culture = north_italian
+						primary_culture = south_italian
+						primary_culture = wallonian
+					}
+					NOT = { 
+					tag = AUS 
+					tag = SAX
+					tag = PRU
+					tag = BAV
+					tag = WUR
+					tag = SVY
+					tag = VEN
+					tag = PAP
+					tag = TUS
+					}
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_german
+							has_pop_culture = south_german 
+							has_pop_culture = north_italian
+							has_pop_culture = south_italian
+							has_pop_culture = flemish 
+							has_pop_culture = wallonian 
+							has_pop_culture = dutch 
+							has_pop_culture = french 
+						}
+					}
+					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.18
+				}
+			}
+			#African Pop Change
+			any_country = { 
+				limit = { 
+					exists = yes 
+					capital_scope = {
+						continent = africa
+					}
+					OR = {
+						primary_culture = western_african
+						primary_culture = nigerian
+						primary_culture = bantoid
+						primary_culture = bantu
+						primary_culture = somali
+						primary_culture = nilotic
+						primary_culture = malagasy
+						primary_culture = ethiopian
+						primary_culture = volta
+					}
+					NOT = { 
+					tag = ETH 
+					tag = MOR
+					tag = MTP
+					tag = RZV
+					tag = KON
+					}
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = western_african
+							has_pop_culture = nigerian 
+							has_pop_culture = bantoid
+							has_pop_culture = bantu
+							has_pop_culture = somali 
+							has_pop_culture = nilotic 
+							has_pop_culture = malagasy 
+							has_pop_culture = ethiopian 
+							has_pop_culture = bedouin
+							has_pop_culture = volta 
+						}
+					}
+					reduce_pop = 0.76
+				}
+			}
+			#Native American Pop Change
+			any_country = { 
+				limit = { 
+					exists = yes 
+					capital_scope = {
+						continent = north_america
+					}
+					OR = {
+						primary_culture = native_american_minor
+						primary_culture = cherokee
+						primary_culture = cree
+					}
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = native_american_minor
+							has_pop_culture = cherokee 
+							has_pop_culture = cree
+							has_pop_culture = navajo
+							has_pop_culture = pueblo 
+						}
+					}
+					reduce_pop = 0.43
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.1
+				}
+			}
+			#Indonesian Pop Change
+			any_country = { 
+				limit = { 
+					exists = yes 
+					OR = {
+						capital_scope = {
+							continent = asia
+						}
+						capital_scope = {
+							continent = europe
+						}
+					}
+					OR = {
+						primary_culture = malay
+						primary_culture = acehnese
+						primary_culture = asian_minor
+						primary_culture = javan
+						primary_culture = moluccan
+						primary_culture = melanesian
+						primary_culture = sinitic
+						primary_culture = filipino
+						primary_culture = dutch
+						primary_culture = portuguese
+					}
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = malay
+							has_pop_culture = acehnese 
+							has_pop_culture = asian_minor
+							has_pop_culture = javan
+							has_pop_culture = moluccan 
+							has_pop_culture = melanesian 
+							has_pop_culture = sinitic 
+							has_pop_culture = filipino 
+						}
+					}
+					reduce_pop = 0.78
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.14
+				}
+			}
+			#Indian Pop Change
+			any_country = { 
+				limit = { 
+					exists = yes 
+					OR = {
+						primary_culture = panjabi
+						primary_culture = sindi
+						primary_culture = rajput
+						primary_culture = pashtun
+						primary_culture = kashmiri
+						primary_culture = gujarati
+						primary_culture = marathi
+						primary_culture = kannada
+						primary_culture = avadhi
+						primary_culture = oriya
+						primary_culture = tamil
+						primary_culture = malayalam
+						primary_culture = telegu
+						primary_culture = sinhala
+						primary_culture = kanauji
+						primary_culture = bengali
+						primary_culture = french
+						primary_culture = british
+						primary_culture = dutch
+						primary_culture = portuguese
+					}
+				}
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = panjabi
+							has_pop_culture = sindi 
+							has_pop_culture = rajput
+							has_pop_culture = pashtun
+							has_pop_culture = kashmiri 
+							has_pop_culture = gujarati 
+							has_pop_culture = marathi 
+							has_pop_culture = kannada 
+							has_pop_culture = avadhi
+							has_pop_culture = oriya 
+							has_pop_culture = tamil
+							has_pop_culture = malayalam
+							has_pop_culture = telegu 
+							has_pop_culture = sinhala 
+							has_pop_culture = kanauji 
+							has_pop_culture = asian_minor 
+							has_pop_culture = manipuri 
+							has_pop_culture = tibetan 
+							has_pop_culture = nepali 
+							has_pop_culture = hazara 
+							has_pop_culture = tajik 
+						}
+					}
+					reduce_pop = 1.42
+				}
+			}
+			any_country = { 
+				limit = { 
+					exists = yes 
+					OR = {
+						primary_culture = bengali
+						primary_culture = british
+					}
+				}
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = bengali
+							has_pop_culture = bihari 
+							has_pop_culture = oriya
+						}
+					}
+					reduce_pop = 0.864
+				}
+			}
+			#Japanese Pop Change
+			any_country = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = japanese 
+						}
+					}
+					reduce_pop = 1.256
+				}
+				any_pop = {
+					limit = {	
+						culture = japanese
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
+			}
+			#Okinawa
+			1678 = {
+				any_pop = {
+					reduce_pop = 0.42
+				}
+			}
+			#Amami
+			1679 = {
+				any_pop = {
+					reduce_pop = 0.44
+				}
+			}
+			#Spanish Pop Change
+			SPA = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_german
+							has_pop_culture = south_german 
+							has_pop_culture = flemish 
+							has_pop_culture = wallonian 
+							has_pop_culture = dutch 
+						}
+					}
+					reduce_pop = 0.71
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = spanish
+							has_pop_culture = catalan 
+							has_pop_culture = basque
+							has_pop_culture = galician 
+							has_pop_culture = basque
+							has_pop_culture = sephardic 
+							has_pop_culture = british
+						}
+					}
+					reduce_pop = 0.955
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = malay
+							has_pop_culture = filipino 
+							has_pop_culture = asian_minor
+						}
+					}
+					reduce_pop = 0.18
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = mayan
+							has_pop_culture = spanish_american 
+							has_pop_culture = nahua
+							has_pop_culture = zapotec 
+							has_pop_culture = tarascan
+							has_pop_culture = quechua 
+							has_pop_culture = guarani
+							has_pop_culture = patagonian 
+							has_pop_culture = aimara
+							has_pop_culture = native_american_minor
+							has_pop_culture = amazonian
+							has_pop_culture = guajiro 
+							has_pop_culture = tupinamba							
+							has_pop_culture = afro_american
+							has_pop_culture = afro_caribbean
+							has_pop_culture = afro_caribeno 
+							has_pop_culture = brazilian
+						}
+					}
+					reduce_pop = 0.72
+				}
+			}
+			#Santiago
+			CHL_2322 = {
+				any_pop = {
+					reduce_pop = 1.22
+				}
+			}
+			#La Paz
+			BOL_2321 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.96
+				}
+			}
+			#Antioquia
+			CLM_2251 = {
+				any_pop = {
+					reduce_pop = 1.13
+				}
+			}
+			#Ecuador
+			ECU_2279 = {
+				any_pop = {
+					reduce_pop = 1.13
+				}
+			}
+			#Puglia 
+			SIC_754 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.77
+				}
+			}
+			#Campania 
+			SIC_753 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.76
+				}
+			}
+			#Sicily 
+			SIC_763 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.51
+				}
+			}
+			#Sardinia
+			SAR_765 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.82
+				}
+			}
+			#Cuba
+			SPA_2209 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.39
+				}
+			}
+			#Milan
+			726 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.82
+				}
+			}
+			#Puerto Rico
+			2222 = {
+				limit = {
+						NOT = { type = soldiers }
+					}
+				any_pop = {
+					reduce_pop = 0.41
+				}
+			}
+			#Portuguese pop change
+			POR = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = portuguese
+							has_pop_culture = western_african 
+						}
+					}
+					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = brazilian
+							has_pop_culture = amazonian 
+							has_pop_culture = tupinamba
+							has_pop_culture = guarani 
+							has_pop_culture = basque
+							has_pop_culture = spanish_american 
+							has_pop_culture = afro_brazilian
+						}
+					}
+					reduce_pop = 0.07
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = bantu
+						}
+					}
+					reduce_pop = 0.91
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.18
+				}
+			}
+			DAI = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = vietnamese
+							has_pop_culture = asian_minor 
+							has_pop_culture = sinitic 
+						}
+					}
+					reduce_pop = 1.79
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 6.2
+				}
+			}
+			SWI = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 1.07
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.26
+				}
+			}
+			TIB = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.32
+				}
+			}
+			ETH = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.84
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.36
+				}
+			}
+			RZV = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 3.02
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
+				}
+			}
+			MTP = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 2.63
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
+				}
+			}
+			KON = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 1.65
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.8
+				}
+			}
+			DZN = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.42
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			XIN = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.35
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			LXA = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.7
+				}
+			}
+			CAM = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 1.87
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.6
+				}
+			}
+			BUK = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.46
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			KAZ = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 3.9
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
+				}
+			}
+			BUR = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 1.094
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			ASM = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 2.65
+				}
+			}
+			NEP = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 4.18
+				}
+			}
+			AYO = {
+				any_pop = {
+					limit = {
+						NOT = { type = clerks }
+					}
+					reduce_pop = 1.15
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.6
+				}
+			}
+			KOR = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = korean
+							has_pop_culture = japanese 
+						}
+					}
+					reduce_pop = 1.74
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 4.1
+				}
+			}
+			TUS = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_italian
+							has_pop_culture = south_italian 
+						}
+					}
+					reduce_pop = 0.78
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
+			}
+			PAP = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_italian
+							has_pop_culture = south_italian 
+						}
+					}
+					reduce_pop = 0.78
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
+				}
+			}
+			ALD = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = maghrebi
+							has_pop_culture = berber 
+						}
+					}
+					reduce_pop = 1.3
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			SAX = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = north_german
+							has_pop_culture = western_slavic 
+						}
+					}
+					reduce_pop = 1.12
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			MLT = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = maltese
+							has_pop_culture = english 
+						}
+					}
+					reduce_pop = 0.97
+				}
+			}
+			BAV = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = south_german
+							has_pop_culture = western_slavic 
+						}
+					}
+					reduce_pop = 0.68
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.5
+				}
+			}
+			WUR = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = south_german
+							has_pop_culture = western_slavic 
+						}
+					}
+					reduce_pop = 0.465
+				}
+			}
+			PRU = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_german
+							has_pop_culture = polish 
+							has_pop_culture = lithuanian 
+						}
+					}
+					reduce_pop = 0.66
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.87
+				}
+			}
+			#French Pop Change
+			BOR = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = french
+							has_pop_culture = breton 
+							has_pop_culture = arpitan 
+							has_pop_culture = south_german 
+						}
+					}
+					reduce_pop = 0.927
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = french_canadian
+							has_pop_culture = cree 
+							has_pop_culture = native_american_minor 
+							has_pop_culture = louisianan 
+							has_pop_culture = dakota
+							has_pop_culture = metis
+							has_pop_culture = spanish_american
+						}
+					}
+					reduce_pop = 0.046
+				}
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = afro_antillean
+							has_pop_culture = western_african
+						}
+					}
+					reduce_pop = 0.63
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 2.3
+				}
+			}
+			#English Pop Change
+			ENL = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = irish 
+							has_pop_culture = western_african
+						}
+					}
+					reduce_pop = 0.49
+				}
+				any_pop = {
+					limit = {	
+						has_pop_culture = scottish
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.685
+				}
+				any_pop = {
+					limit = {	
+						has_pop_culture = welsh
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.55
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = british 
+							has_pop_culture = anglo_canadian 
+						}
+					}
+					reduce_pop = 0.72
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = yankee
+							has_pop_culture = native_american_minor 
+							has_pop_culture = afro_american 
+						}
+					}
+					reduce_pop = 0.05
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.28
+				}
+			}
+			#Saint Johns
+			74 = {
+				any_pop = {
+					limit = {							
+						has_pop_culture = irish		
+					}
+					reduce_pop = 0.41
+				}
+			}
+			#Barbados
+			2229 = {
+				any_pop = {
+					reduce_pop = 1.52
+				}
+			}
+			#Jamaica
+			2217 = {
+				any_pop = {
+					reduce_pop = 0.52
+				}
+			}
+			NET = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = dutch
+							has_pop_culture = flemish 
+							has_pop_culture = north_german 
+							has_pop_culture = western_african
+						}
+					}
+					reduce_pop = 0.68
+				}
+				any_pop = {
+					limit = {	
+						culture = dutch
+						type = soldiers 
+					}
+					reduce_pop = 1.18
+				}
+			}
+			SVY = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_italian
+							has_pop_culture = arpitan 
+							has_pop_culture = french 
+						}
+					}
+					reduce_pop = 0.91
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.2
+				}
+			}
+			VEN = {
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_italian
+						}
+					}
+					reduce_pop = 0.68
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.8
+				}
+			}
+			AUS = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = slovene
+							has_pop_culture = south_german
+							has_pop_culture = north_italian
+						}
+					}
+					reduce_pop = 0.728
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = slovak
+							has_pop_culture = hungarian
+							has_pop_culture = serbian
+							has_pop_culture = ukrainian
+							has_pop_culture = croat	
+							has_pop_culture = romanian
+						}
+					}
+					reduce_pop = 0.61
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							has_pop_culture = north_german
+							has_pop_culture = czech
+							has_pop_culture = polish
+						}
+					}
+					reduce_pop = 0.56
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.38
+				}
+			}
+			#Western Transylvania
+			AUS_654 = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.42
+				}
+			}
+			#Eastern Transylvania
+			AUS_657 = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.41
+				}
+			}
+			#Bohemia
+			AUS_625 = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.81
+				}
+			}
+			#Oradea
+			647 = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.45
+				}
+			}
+		}
+	}
+
 	scandi_pop_buff = {
 		potential = {
 			always = no
@@ -25,61 +1187,95 @@ political_decisions = {
 			SWE = {
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						OR = {
-							has_pop_culture = finnish
-							has_pop_culture = swedish
+							has_pop_culture = norwegian
+							has_pop_culture = north_german
 						}
 					}
-					reduce_pop = 1.7
+					reduce_pop = 0.36
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						has_pop_culture = finnish
+					}
+					reduce_pop = 0.38
+				}
+				any_pop = {
+					limit = {		
+						NOT = { type = soldiers }
+						has_pop_culture = swedish
+					}
+					reduce_pop = 0.51
 				}
 			}
 			RUS_994 = {
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						NOT = { culture = finnish }
 					}
-					reduce_pop = 1.6
+					reduce_pop = 0.62
 				}
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						culture = finnish
 					}
-					reduce_pop = 2.4
+					reduce_pop = 0.82
 				}
 			}
 			RUS_349 = {
 				any_pop = {
-					reduce_pop = 2
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.52
 				}
 			}
 			RUS_354 = {
 				any_pop = {
-					reduce_pop = 2
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.44
 				}
 			}
 			DNN = {
+				add_country_modifier = {
+					name = great_northern_war
+					duration = 5474
+				}
 				any_pop = {
 					limit = {
+						NOT = { type = soldiers }
 						OR = {
 							has_pop_culture = danish
 							has_pop_culture = norwegian
+							has_pop_culture = north_german
+							has_pop_culture = western_african
 						}
 					}
-					reduce_pop = 2.6
+					reduce_pop = 0.51
 				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 0.75
+					reduce_pop = 1.5
 				}
 			}
 			SWE = {
+				add_country_modifier = {
+					name = charles_xii
+					duration = 7300
+				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 0.85
+					reduce_pop = 1.1
 				}
 			}
 		}
@@ -102,18 +1298,18 @@ political_decisions = {
 							has_pop_culture = western_african
 						}
 					}
-					reduce_pop = 2.3
+					reduce_pop = 2.6
 				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.75
+					reduce_pop = 1.82
 				}
 			}
 		}
 	}
-	
+
 	rus_nerf_setup = {
 		potential = {
 			always = no
@@ -131,23 +1327,30 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					culture = russian
-					NOT = { type = soldiers }
+					culture = siberian_tatar
 				}
-				reduce_pop = 0.82
-			}
-			any_pop = {
-				limit = {
-					culture = tatar
-				}
-				reduce_pop = 1.5
+				reduce_pop = 1.48
 			}
 			TOR = {
 				any_pop = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.95
+					reduce_pop = 0.684
+				}
+				any_pop = {
+					limit = {
+						type = soldiers 
+					}
+					reduce_pop = 1.11
+				}
+			}
+			PLC = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.746
 				}
 			}
 		}
@@ -193,6 +1396,43 @@ political_decisions = {
 				name = hussein_pasha
 				duration = -1
 			}
+			MOL = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = romanian
+							has_pop_culture = ukrainian 
+							has_pop_culture = north_german 
+							has_pop_culture = ashkenazi 
+							has_pop_culture = polish 
+							has_pop_culture = hungarian 
+						}
+					}
+					reduce_pop = 0.26
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.62
+				}
+			}
+			WAL = {
+				any_pop = {
+					limit = {	
+						OR = {
+							has_pop_culture = romanian
+						}
+					}
+					reduce_pop = 0.66
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 3.57
+				}
+			}
 			any_owned = {
 				any_pop = {
 					limit = {
@@ -205,7 +1445,49 @@ political_decisions = {
 					limit = {
 						culture = tatar
 					}
-					reduce_pop = 2.2
+					reduce_pop = 1.36
+				}
+				any_pop = {
+					limit = {
+						culture = bedouin
+					}
+					reduce_pop = 1.2
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						OR = {
+							culture = turkish
+							culture = greek
+							culture = bulgarian
+							culture = romanian
+							culture = albanian
+							culture = ukrainian
+							culture = serbian
+							culture = bosniak
+							culture = croat
+							culture = ethiopian
+							culture = somali
+							culture = berber
+							culture = maghrebi
+							culture = kurdish
+							culture = armenian
+							culture = mashriqi
+							culture = georgian
+							culture = circassian
+							culture = south_german
+						}
+					}
+					reduce_pop = 0.91
+				}
+				any_pop = {
+					limit = {	
+						OR = {
+							culture = misri
+							culture = nilotic
+						}
+					}
+					reduce_pop = 1.52
 				}
 				any_pop = {
 					limit = {
@@ -214,7 +1496,7 @@ political_decisions = {
 						NOT = { culture = berber }
 						type = soldiers
 					}
-					reduce_pop = 0.9
+					reduce_pop = 1.08
 				}
 			}
 		}
@@ -287,7 +1569,7 @@ political_decisions = {
 					NOT = { total_pops = 50000 }
 				}
 				any_pop = {
-					reduce_pop = 6
+					reduce_pop = 1
 				}
 			}
 			any_country = {
@@ -299,7 +1581,7 @@ political_decisions = {
 					NOT = { total_pops = 100000 }
 				}
 				any_pop = {
-					reduce_pop = 2
+					reduce_pop = 1
 				}
 			}
 			any_country = {
@@ -311,7 +1593,7 @@ political_decisions = {
 					NOT = { total_pops = 250000 }
 				}
 				any_pop = {
-					reduce_pop = 1.5
+					reduce_pop = 1
 				}
 			}
 		}
@@ -508,6 +1790,10 @@ political_decisions = {
 				name = magnate_oligarchy
 				duration = -1
 			}
+			add_country_modifier = {
+					name = great_northern_war
+					duration = 5480
+				}
 			PLC = {
 				any_pop = {
 					limit = {
@@ -520,7 +1806,7 @@ political_decisions = {
 				limit = {
 					type = soldiers
 				}
-				reduce_pop = 1.2
+				reduce_pop = 1.8
 			}
 		}
 	}
@@ -603,7 +1889,7 @@ political_decisions = {
 						has_pop_culture = north_italian
 						type = soldiers
 					}
-					reduce_pop = 4
+					reduce_pop = 5
 				}
 			}
 		}
@@ -621,6 +1907,7 @@ political_decisions = {
 				any_pop = {
 					limit = {
 						NOT = { has_pop_culture = manchu }
+						NOT = { has_pop_culture = mongol }
 						NOT = { region = CHI_1499 } #treaty ports excluded
 						NOT = { region = CHI_1496 }
 						NOT = { region = CHI_1498 }
@@ -632,7 +1919,7 @@ political_decisions = {
 						NOT = { region = CHI_1481 }
 						NOT = { region = CHI_2562 }
 					}
-					reduce_pop = 0.45
+					reduce_pop = 0.425
 				}
 			}
 		}
@@ -650,7 +1937,7 @@ political_decisions = {
 				duration = -1
 			}
 			any_pop = {
-				reduce_pop = 0.8
+				reduce_pop = 1
 			}
 		}
 	}
@@ -664,11 +1951,34 @@ political_decisions = {
 		}
 		effect = {
 			any_pop = {
-				limit = {
-					is_accepted_culture = yes
+				limit = {	
+					OR = {
+						has_pop_culture = persian
+						has_pop_culture = turkmen 
+						has_pop_culture = hazara
+						has_pop_culture = pashtun 
+						has_pop_culture = lurish
+						has_pop_culture = uzbek 
+						has_pop_culture = tajik
+						has_pop_culture = kurdish 
+						has_pop_culture = armenian 
+						has_pop_culture = azerbaijani
+						has_pop_culture = baluchi 
+						has_pop_culture = georgian 
+						has_pop_culture = dagestani
+						has_pop_culture = mashriqi 
+						has_pop_culture = chechen
+						has_pop_culture = circassian 
+					}
 				}
-				reduce_pop = 1.8
-			}
+				reduce_pop = 1.42
+			}	
+			any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.4
+				}
 			country_event = 173208
 		}
 	}
@@ -767,16 +2077,9 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					OR = {
-						culture = north_italian
-						culture = south_italian
-						culture = wallonian
-						culture = dutch
-						culture = flemish
-					}
 					type = soldiers
 				}
-				reduce_pop = 0.45
+				reduce_pop = 1.22
 			}
 		}
 	}

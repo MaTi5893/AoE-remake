@@ -26,7 +26,10 @@ political_decisions = {
                 is_greater_power = no
                 NOT = { number_of_states = 2 }
             }
-            is_greater_power = yes
+            OR = {
+			civilization_progress = 0.8
+			civilized = yes
+			}
         }
         effect = {
             1236 = {
@@ -62,7 +65,13 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            is_greater_power = yes
+			OR = {
+				AND = {
+					civilized = yes
+					nationalism_n_imperialism = 1
+				}
+				is_greater_power = yes
+			}
             military_score = 50
         }
         effect = {
@@ -89,7 +98,13 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            is_greater_power = yes
+            OR = {
+				AND = {
+					civilized = yes
+					revolution_n_counterrevolution = 1
+				}
+				is_greater_power = yes
+			}
             military_score = 50
         }
         effect = {

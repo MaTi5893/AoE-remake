@@ -125,13 +125,13 @@ industrial_goods = {
         available_from_start = no
     }
     clipper_convoy = {
-        cost = 25.0
+        cost = 45.0
         overseas_penalty = yes
         available_from_start = no
         color = { 21 65 30 }
     }
     steamer_convoy = {
-        cost = 36.00
+        cost = 50.00
         available_from_start = no
         overseas_penalty = yes
         color = { 76 18 0 }
