@@ -1888,3 +1888,29 @@ country_event = {
 #		517 = { remove_province_modifier = { name = british_naval_dominance } }
 	}
 }
+country_event = {
+	title = "$FROMCOUNTRY$ Dominates North America"
+	desc = "EVTDESC90960"
+	major = yes
+	is_triggered_only = yes
+	id = 90960
+	
+	option = {
+		name = "A regrettable outcome."
+		set_country_flag = defeated_in_north_america
+		any_owned = {
+            limit = {
+                continent = north_america
+				NOT = { is_core = HAI }
+            }
+            secede_province = FROM
+        }
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				capital_scope = { continent = north_america }
+			}
+			annex_to = FROM
+		}
+	}
+}

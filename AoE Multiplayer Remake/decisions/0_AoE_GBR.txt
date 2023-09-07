@@ -623,4 +623,91 @@ political_decisions = {
 			300 = { owner = { relation = { who = THIS value = -75 } country_event = 171021 } }
 		}
 	}
+
+	rivalry_in_north_america = {
+		picture = dreams_of_empire
+		potential = {
+			OR = {
+				primary_culture = british
+				primary_culture = scottish
+				primary_culture = french
+			}
+			NOT = { has_country_flag = rivalry_in_north_america }
+			NOT = { has_country_flag = defeated_in_north_america }
+			any_owned_province = { continent = north_america }
+			nationalism_n_imperialism = 1
+		}
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			set_country_flag = rivalry_in_north_america
+			any_country = {
+				limit = {
+					any_owned_province = { continent = north_america }
+					civilized = yes
+					OR = {
+						primary_culture = british
+						primary_culture = scottish
+						primary_culture = french
+					}
+				}
+				add_casus_belli = {
+					target = THIS
+					type = dominate_north_america
+					months = 12
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						primary_culture = british
+						exists = BOR
+					}
+				}
+				owner = {
+					war = {
+						target = BOR
+						attacker_goal = { casus_belli = dominate_north_america }
+						defender_goal = { casus_belli = dominate_north_america }
+						call_ally = yes
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						primary_culture = french
+						exists = GBR
+					}
+				}
+				owner = {
+					war = {
+						target = GBR
+						attacker_goal = { casus_belli = dominate_north_america }
+						defender_goal = { casus_belli = dominate_north_america }
+						call_ally = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1754 }
+			}
+			modifier = {
+				factor = 0
+				truce_with = GBR
+			}
+			modifier = {
+				factor = 0
+				truce_with = BOR
+			}
+		}
+	}
 }
