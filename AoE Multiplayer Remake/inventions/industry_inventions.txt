@@ -1528,6 +1528,48 @@ tulls_seed_drill = {
     }
 }
 
+simple_textile_wheel = {
+    limit = { piston_steam_engine = 1 }
+    chance = {
+        base = 8
+        modifier = {
+            factor = 4
+            invention = tulls_seed_drill 
+        }
+    }
+    effect = {
+		activate_building = regular_clothes_factory
+    }
+}
+
+cottage_industry = {
+    limit = { piston_steam_engine = 1 }
+    chance = {
+        base = 4
+        modifier = {
+            factor = 4
+            invention = simple_textile_wheel 
+        }
+    }
+    effect = {
+		activate_building = luxury_clothes_factory 
+    }
+}
+
+putting_out_system = {
+    limit = { piston_steam_engine = 1 }
+    chance = {
+        base = 4
+        modifier = {
+            factor = 4
+            invention = simple_textile_wheel 
+        }
+    }
+    effect = {
+		activate_building = fur_clothes_factory 
+    }
+}
+
 rotherham_plough = {
     limit = { high_pressure_steam_engine = 1 }
     chance = {
