@@ -6977,6 +6977,17 @@ urban_army_works = {
 	commerce_tech_research_bonus = 0.05
 	icon = 13
 }
+colonial_army_works = {
+	global_immigrant_attract = 1
+	global_assimilation_rate = 0.01
+	navy_tech_research_bonus = 0.05
+	icon = 13
+}
+colonial_settlement = {
+	immigrant_attract = 1.10
+    assimilation_rate = 1.50
+	icon = 13
+}
 change_colonial_policy = {
 	icon = 7
 }

@@ -99,7 +99,7 @@ wool_fabric_factory = {
     template = factory_template
     input_goods = {
         wool = 50
-        dye = 2
+        dye = 3
     }
     output_goods = fabric
     value = 24
@@ -476,31 +476,8 @@ steamer_shipyard = {
 luxury_clothes_factory = {
     template = factory_template
     input_goods = {
-        dye = 0.25    #3
-        silk = 5        #50    total input+maint = 62.825
-    }
-    output_goods = luxury_clothes
-    value = 2.5            #75
-    bonus = {
-        trigger = {
-            OR = {
-                has_building = dye_factory
-                trade_goods_in_state = dye
-            }
-        }
-        value = 0.1
-    }
-    bonus = {
-        trigger = { trade_goods_in_state = silk }
-        value = 0.15
-    }
-}
-
-luxury_clothes_factory = {
-    template = factory_template
-    input_goods = {
-        dye = 0.25    #3
-        silk = 5        #50    total input+maint = 62.825
+        dye = 0.5    #3
+        silk = 6        #50    total input+maint = 62.825
     }
     output_goods = luxury_clothes
     value = 2.5            #75
@@ -862,8 +839,8 @@ hardwood_mill = {
 fabric_factory = {
     template = factory_template
     input_goods = {
-        cotton = 100
-        dye = 10
+        cotton = 80
+        dye = 8
     }
     output_goods = fabric
     value = 45            #81

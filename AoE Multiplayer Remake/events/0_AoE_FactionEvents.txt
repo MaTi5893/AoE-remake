@@ -2543,6 +2543,27 @@ country_event = {
 	}
 	
 	option = {
+		name = "Focus on Promoting Overseas Settlement"
+		add_country_modifier = {
+			name = colonial_army_works
+			duration = 2190
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+            }
+            add_province_modifier = {
+				name = colonial_settlement
+				duration = 2190
+			}
+        }
+		set_country_flag = urban_army_works
+	}
+	
+	option = {
 		name = "Never Mind"
 		remove_country_modifier = army_works
 		clr_country_flag = army_works

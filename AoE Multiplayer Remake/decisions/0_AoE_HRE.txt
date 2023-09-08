@@ -386,6 +386,7 @@ political_decisions = {
         }
         allow = {
             OR = {
+			has_country_flag = host_nation
             war = yes
             num_of_revolts = 1
             }
