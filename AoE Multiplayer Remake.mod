@@ -1,4 +1,4 @@
-name = "AoE Multiplayer Remake Version 1.7.1"
+name = "AoE Multiplayer Remake Version 1.8"
 path = "mod/AoE Multiplayer Remake"
 user_dir = "AoE Multiplayer Remake"
 replace_path = "history/provinces"
