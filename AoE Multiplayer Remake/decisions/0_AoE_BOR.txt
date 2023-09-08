@@ -14,8 +14,7 @@ political_decisions = {
 					pop_militancy = 4
 				}
 				government = proletarian_dictatorship
-				
-				nationalism_n_imperialism = 1
+				revolution_n_counterrevolution = 1
 			}
 			has_country_flag = edict_of_tolerance
 		}
@@ -28,6 +27,7 @@ political_decisions = {
 				name = rights_of_man
 				duration = -1
 			}
+			add_accepted_culture = occitan
 		}
 	}
 	
@@ -40,9 +40,10 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			nationalism_n_imperialism = 1
 			OR = {
 				average_militancy = 10
-				nationalism_n_imperialism = 1
+				is_ideology_enabled = communist
 			}
 		}
 		effect = {
@@ -59,6 +60,8 @@ political_decisions = {
 				}
 				militancy = 1
 			}
+			add_accepted_culture = arpitan
+			add_accepted_culture = breton
 		}
 		ai_will_do = {
 			factor = 1
