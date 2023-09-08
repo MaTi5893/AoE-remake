@@ -104,6 +104,25 @@ religious_persecussions = {
 		}
 	}	
 }
+
+foreign_service_pressing = {
+	
+	active = no
+	pop_militancy_modifier = 0.1
+	life_rating = -1
+	icon = 10
+
+	trigger = {
+		any_pop = {
+			is_state_religion = no
+		}
+		owner = {
+			religious_policy = moralism
+			religious_minoritys = no_rights
+		}
+	}	
+}
+
 fugative_peasants = {
 	active = yes
 	immigrant_push = 0.15
