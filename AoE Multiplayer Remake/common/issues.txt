@@ -308,7 +308,6 @@ political_reforms = {
             global_immigrant_attract = 0.02
             allow = {
                 NOT = { has_country_flag = parliment_discontent }
-                NOT = { government = elective_monarchy_oligarchy }
             }
         }
         wealth_voting = {

@@ -183,7 +183,7 @@ promotion_chance =
 		country = { 
 			OR = {
 				slavery = yes_slavery 
-				slavery = freedom_of_womb
+				slavery = recompensation_period
 				debt_law = serfdom
 			}
 		}
@@ -220,7 +220,7 @@ demotion_chance =
 		country = { 
 			OR = {
 				slavery = yes_slavery
-				slavery = freedom_of_womb
+				slavery = recompensation_period
 				debt_law = serfdom
 			}
 		}

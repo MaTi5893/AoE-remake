@@ -80,7 +80,7 @@ political_decisions = {
                     owner = { debt_law = serfdom }
                 }
                 owner = {
-                    political_reform = debtors_prisons
+                    political_reform = abolished
                 }
             }
 
@@ -186,7 +186,7 @@ political_decisions = {
                 militancy = -2
                 consciousness = 1
             }
-            political_reform = bankruptcy
+            political_reform = abolished
             set_country_flag = polaniecki_universal
         }
     }

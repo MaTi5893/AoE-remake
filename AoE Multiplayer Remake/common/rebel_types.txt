@@ -884,8 +884,8 @@ communist_rebels = {
         political_reform = population_equal_weight
         political_reform = yes_meeting
         political_reform = free_press
-        political_reform = secret_ballots
-        political_reform = debtors_prisons
+        political_reform = non_secret_ballots
+        political_reform = abolished
         political_reform = no_slavery
         random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
         social_reform = good_minimum_wage
@@ -1619,7 +1619,7 @@ pan_nationalist_rebels = {
         political_reform = yes_meeting
         political_reform = free_press
         political_reform = non_socialist
-        political_reform = secret_ballots
+        political_reform = non_secret_ballots
         prestige_factor = -0.3
         random_owned = {
             limit = {
@@ -1790,7 +1790,6 @@ liberal_rebels = {
                     upper_house_composition = population_equal_weight
                 }
                 NOT = { debt_law = serfdom }
-                NOT = { border_policy = closed_borders }
                 public_meetings = yes_meeting
                 press_rights = free_press
                 slavery = no_slavery
@@ -1995,7 +1994,7 @@ liberal_rebels = {
         random_owned = { limit = { owner = { NOT = { trade_unions = all_trade_unions } } } owner = { political_reform = non_socialist } }
         random_owned = {
             limit = { owner = { debt_law = peonage } }
-            owner = { political_reform = debtors_prisons }
+            owner = { political_reform = abolished }
         }
         random_owned = {
             limit = { owner = { debt_law = serfdom } }
@@ -2012,10 +2011,6 @@ liberal_rebels = {
         random_owned = {
             limit = { owner = { NOT = { upper_house_composition = population_equal_weight tag = USA } } }
             owner = { political_reform = population_equal_weight }
-        }
-        random_owned = {
-            limit = { owner = { political_parties = non_secret_ballots } }
-            owner = { political_reform = secret_ballots }
         }
         random_owned = {
             limit = { owner = { political_parties = gerrymandering } }

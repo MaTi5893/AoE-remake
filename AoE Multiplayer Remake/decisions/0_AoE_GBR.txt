@@ -171,21 +171,11 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						debt_law = debtors_prisons
-					}
-				}
-				owner = {
-					political_reform = bankruptcy
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
 						debt_law = peonage
 					}
 				}
 				owner = {
-					political_reform = debtors_prisons
+					political_reform = abolished
 				}
 			}
 			random_owned = {

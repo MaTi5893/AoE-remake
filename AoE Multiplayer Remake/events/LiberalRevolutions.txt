@@ -166,25 +166,10 @@ country_event = {
             NOT = { press_rights = free_press }
         }
         modifier = {
-            factor = 1.5
-            NOT = {
-                OR = {
-                    political_parties = gerrymandering
-                    political_parties = non_secret_ballots
-                    political_parties = secret_ballots
-                }
-            }
-        }
-        modifier = {
             factor = 0.1
             vote_franschise = wealth_voting
             public_meetings = yes_meeting
             press_rights = free_press
-            OR = {
-                political_parties = gerrymandering
-                political_parties = non_secret_ballots
-                political_parties = secret_ballots
-            }
         }
     }
 

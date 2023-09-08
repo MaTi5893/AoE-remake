@@ -204,10 +204,6 @@ political_decisions = {
                             NOT = { political_parties = non_secret_ballots }
                             THIS = { political_parties = non_secret_ballots }
                         }
-                        AND =  {
-                            NOT = { political_parties = secret_ballots }
-                            THIS = { political_parties = secret_ballots }
-                        }
                     }
                 }
             }
@@ -246,14 +242,6 @@ political_decisions = {
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
                     political_reform = peonage
-                }
-            }
-
-            random_owned = {
-                limit = { owner = { OR = { debt_law = debtors_prisons debt_law = bankruptcy } } }
-                any_country = {
-                    limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = debtors_prisons
                 }
             }
 
@@ -366,14 +354,6 @@ political_decisions = {
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
                     political_reform = non_secret_ballots
-                }
-            }
-
-            random_owned = {
-                limit = { owner = { political_parties = secret_ballots } }
-                any_country = {
-                    limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = secret_ballots
                 }
             }
 
