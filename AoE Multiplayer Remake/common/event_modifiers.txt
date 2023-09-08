@@ -4357,6 +4357,7 @@ table_of_ranks = {
 	icon = 15
 }
 peter_the_great = {
+	mobilisation_size = 0.02
 	navy_tech_research_bonus = 0.1
 	research_points = 0.25
 	icon = 13
@@ -6761,7 +6762,7 @@ janisseries_influence = {
     #supply_consumption = 0.1
     land_organisation = 0.01
     influence_modifier = -0.4
-    mobilisation_size = 0.01
+    mobilisation_size = 0.02
     icon = 16
 }
 jacobite_absolutism = {

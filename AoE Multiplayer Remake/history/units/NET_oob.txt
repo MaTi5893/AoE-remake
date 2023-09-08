@@ -290,7 +290,7 @@ army = {
 
 navy = {
     name = "Koninklijke Marine"
-    location = 375 #Amsterdam
+    location = 376 #Hague
     ship = {
         name= "Doggersbank"
         type = manowar
@@ -422,11 +422,11 @@ leader = {
     prestige = 0.26
 }
 leader = {
-    name = "Engelbertus Lucas"
+    name = "Philips van Almonde"
     picture = net_adm_lucas
     date = 1700.1.1
     type = sea
-    personality = defence_2.1
+    personality = defence_3.1
     background = attack_1.2
     prestige = 0.1
 }

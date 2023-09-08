@@ -89,16 +89,6 @@ personality = {
         reliability = 0.05
         speed = 0.025
     }
-    defence_1.15 = {
-        defence = 1
-        reliability = 0.05
-        speed = 0.025
-    }
-    defence_1.16 = {
-        defence = 1
-        reliability = 0.05
-        speed = 0.025
-    }
     defence_2.1 = {
         defence = 2
         reliability = 0.1
@@ -159,26 +149,6 @@ personality = {
         reliability = 0.1
         organisation = 0.05
     }
-    defence_2.13 = {
-        defence = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    defence_2.14 = {
-        defence = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    defence_2.15 = {
-        defence = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    defence_2.16 = {
-        defence = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
     defence_3.1 = {
         defence = 3
         reliability = 0.15
@@ -204,31 +174,31 @@ personality = {
         reliability = 0.15
         morale = 0.075
     }
-    defence_3.6 = {
-        defence = 3
-        reliability = 0.15
-        morale = 0.075
-    }
-    defence_3.7 = {
-        defence = 3
-        reliability = 0.15
-        morale = 0.075
-    }
-    defence_3.8 = {
-        defence = 3
-        reliability = 0.15
-        morale = 0.075
-    }
-    defence_3.9 = {
-        defence = 3
-        reliability = 0.15
-        morale = 0.075
-    }
-    defence_3.10 = {
-        defence = 3
-        reliability = 0.15
-        morale = 0.075
-    }
+#    defence_3.6 = {
+#        defence = 3
+#        reliability = 0.15
+#        morale = 0.075
+#    }
+#    defence_3.7 = {
+#        defence = 3
+#        reliability = 0.15
+#        morale = 0.075
+#    }
+#    defence_3.8 = {
+#        defence = 3
+#        reliability = 0.15
+#        morale = 0.075
+#    }
+#    defence_3.9 = {
+#        defence = 3
+#        reliability = 0.15
+#        morale = 0.075
+#    }
+#    defence_3.10 = {
+#        defence = 3
+#        reliability = 0.15
+#        morale = 0.075
+#    }
     defence_4.1 = {
         defence = 4
         reliability = 0.2
@@ -244,16 +214,16 @@ personality = {
         reliability = 0.2
         morale = 0.1
     }
-    defence_4.4 = {
-        defence = 4
-        reliability = 0.2
-        attrition = -0.04
-    }
-    defence_4.5 = {
-        defence = 4
-        reliability = 0.2
-        attrition = -0.04
-    }
+#    defence_4.4 = {
+#        defence = 4
+#        reliability = 0.2
+#        attrition = -0.04
+#    }
+#    defence_4.5 = {
+#        defence = 4
+#        reliability = 0.2
+#        attrition = -0.04
+#    }
     defence_5.1 = {
         defence = 5
         reliability = 0.25
@@ -532,16 +502,6 @@ background = {
         reliability = 0.05
         speed = 0.025
     }
-    attack_1.15 = {
-        attack = 1
-        reliability = 0.05
-        speed = 0.025
-    }
-    attack_1.16 = {
-        attack = 1
-        reliability = 0.05
-        speed = 0.025
-    }
     attack_2.1 = {
         attack = 2
         reliability = 0.1
@@ -602,26 +562,6 @@ background = {
         reliability = 0.1
         organisation = 0.05
     }
-    attack_2.13 = {
-        attack = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    attack_2.14 = {
-        attack = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    attack_2.15 = {
-        attack = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
-    attack_2.16 = {
-        attack = 2
-        reliability = 0.1
-        organisation = 0.05
-    }
     attack_3.1 = {
         attack = 3
         reliability = 0.15
@@ -647,31 +587,31 @@ background = {
         reliability = 0.15
         attrition = -0.03
     }
-    attack_3.6 = {
-        attack = 3
-        reliability = 0.15
-        attrition = -0.03
-    }
-    attack_3.7 = {
-        attack = 3
-        reliability = 0.15
-        attrition = -0.03
-    }
-    attack_3.8 = {
-        attack = 3
-        reliability = 0.15
-        attrition = -0.03
-    }
-    attack_3.9 = {
-        attack = 3
-        reliability = 0.15
-        attrition = -0.03
-    }
-    attack_3.10 = {
-        attack = 3
-        reliability = 0.15
-        attrition = -0.03
-    }
+#    attack_3.6 = {
+#        attack = 3
+#        reliability = 0.15
+#        attrition = -0.03
+#    }
+#    attack_3.7 = {
+#        attack = 3
+#        reliability = 0.15
+#        attrition = -0.03
+#    }
+#    attack_3.8 = {
+#        attack = 3
+#        reliability = 0.15
+#        attrition = -0.03
+#    }
+#    attack_3.9 = {
+#        attack = 3
+#        reliability = 0.15
+#        attrition = -0.03
+#    }
+#    attack_3.10 = {
+#        attack = 3
+#       reliability = 0.15
+#        attrition = -0.03
+#    }
     attack_4.1 = {
         attack = 4
         reliability = 0.2
@@ -687,16 +627,16 @@ background = {
         reliability = 0.2
         organisation = 0.1
     }
-    attack_4.4 = {
-        attack = 4
-        reliability = 0.2
-        morale = 0.1
-    }
-    attack_4.5 = {
-        attack = 4
-        reliability = 0.2
-        morale = 0.1
-    }
+#    attack_4.4 = {
+#        attack = 4
+#        reliability = 0.2
+#        morale = 0.1
+#    }
+#    attack_4.5 = {
+#        attack = 4
+#        reliability = 0.2
+#        morale = 0.1
+#    }
     attack_5.1 = {
         attack = 5
         reliability = 0.25

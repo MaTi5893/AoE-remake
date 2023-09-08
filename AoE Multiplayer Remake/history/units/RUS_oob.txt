@@ -516,6 +516,57 @@ army = {
     }
 }
 
+navy = {
+    name = "Azov Naval Flotilla"
+    location = 1047
+   
+    ship = {
+        name = "Prints Gustav"
+        type = frigate
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = frigate
+    }
+
+    ship = {
+        name = "Azov"
+        type = frigate
+    }
+
+    ship = {
+        name = "Rossiya"
+        type = frigate
+    }
+
+    ship = {
+        name = "Saratov"
+        type = frigate
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = frigate
+    }
+
+    ship = {
+		name= "1. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+}
+
 leader = {
     name = "Ivan Mazepa"
     date = 1700.1.1
@@ -626,7 +677,7 @@ leader = {
 }
 
 leader = {
-	name = "Fyodor von Berg"
+	name = "Ayuka Khan"
 	picture = rus_gen_berg
 	date = 1700.1.1
 	type = land
@@ -636,7 +687,7 @@ leader = {
 }
 
 leader = {
-	name = "Mikhail Gorchakov"
+	name = "Ivan Skoropadsky"
 	#picture = rus_gen_gorchakov
 	date = 1700.1.1
 	type = land
@@ -645,7 +696,7 @@ leader = {
 }
 
 leader = {
-	name = "Pyotr Gorchakov"
+	name = "Matija Zmajevic"
 	picture = rus_gen_gorchakovpyotr
 	date = 1700.1.1
 	type = land
@@ -663,7 +714,7 @@ leader = {
 }
 
 leader = {
-	name = "Vladimir Sievers"
+	name = "Mikhail Mikhailovich Golitsyn"
 	picture = rus_gen_sievers
 	date = 1700.1.1
 	type = land
@@ -672,7 +723,15 @@ leader = {
 }
 
 leader = {
-	name = "Alexander von Lüders"
+	name = "Naum Senyavin"
+	date = 1700.1.1
+	type = sea
+	personality = attack_3.2
+	background = defence_minus_2.1
+}
+
+leader = {
+	name = "Robert Bruce"
 	picture = rus_gen_lueders
 	date = 1700.1.1
 	type = land
@@ -681,7 +740,7 @@ leader = {
 }
 
 leader = {
-	name = "Nikolay Read"
+	name = "Fyodor Apraksin"
 	picture = rus_gen_read
 	date = 1700.1.1
 	type = land
@@ -690,7 +749,7 @@ leader = {
 }
 
 leader = {
-	name = "Nikokay Sukhozanet"
+	name = "Anikita Repnin"
 	picture = rus_gen_sukhozanet
 	date = 1700.1.1
 	type = land

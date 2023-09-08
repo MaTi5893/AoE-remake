@@ -137,6 +137,15 @@ leader = {
 }
 
 leader = {
+    name = "Claude de Forbin"
+    date = 1688.1.1
+    type = sea
+    personality = defence_2.1
+    background = attack_2.1
+    prestige = 0.1
+}
+
+leader = {
     name = "Louis-François de Boufflers"
     date = 1688.1.1
     type = land
@@ -918,45 +927,6 @@ navy = {
         type = frigate
     }
 
-    ship = {
-        name= "Clorinde"
-        type = frigate
-    }
-
-    ship = {
-        name= "Maure"
-        type = frigate
-    }
-
-    ship = {
-        name= "Vestale"
-        type = frigate
-    }
-
-    ship = {
-        name= "Magicienne"
-        type = frigate
-    }
-
-    ship = {
-        name= "Marie Thérese"
-        type = frigate
-    }
-
-    ship = {
-        name= "Venus"
-        type = frigate
-    }
-
-    ship = {
-        name= "Sirène"
-        type = frigate
-    }
-
-    ship = {
-        name= "Atalante"
-        type = frigate
-    }
 
     ship = {
         name= "Surveillante"
@@ -1000,31 +970,6 @@ navy = {
 
     ship = {
         name= "Souverain"
-        type = manowar
-    }
-
-    ship = {
-        name= "Marengo"
-        type = manowar
-    }
-
-    ship = {
-        name= "Ville de Marseilles"
-        type = manowar
-    }
-
-    ship = {
-        name= "Hercule"
-        type = manowar
-    }
-
-    ship = {
-        name= "Montebello "
-        type = manowar
-    }
-
-    ship = {
-        name= "Centaure"
         type = manowar
     }
 
@@ -1076,11 +1021,6 @@ navy = {
     ship = {
         name= "Commerces de Paris"
         type = manowar
-    }
-
-    ship = {
-        name= "Terpsichore"
-        type = frigate
     }
 
     ship = {

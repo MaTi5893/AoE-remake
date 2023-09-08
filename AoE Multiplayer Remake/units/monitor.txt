@@ -14,7 +14,7 @@ monitor = { #Razee
     priority = 30
     max_strength = 100
     default_organisation = 175
-    maximum_speed = 16
+    maximum_speed = 15
     weighted_value = 10.0
 
     #Building Costs
@@ -38,8 +38,8 @@ monitor = { #Razee
     }
 
     #Naval Abilties
-    hull = 13
-    gun_power = 10
+    hull = 12
+    gun_power = 9
     fire_range = 0.65
     evasion = 0
     torpedo_attack = 3.0
