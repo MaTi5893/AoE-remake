@@ -1434,7 +1434,6 @@ military_reforms = {
             #unit stats improve
             land_organisation = 0.1
             civilization_progress_modifier = 0.05
-            research_points_on_conquer = 0.05 #0.25
 
 
             on_execute = {
@@ -1462,9 +1461,8 @@ military_reforms = {
             technology_cost = 8000
             land_organisation = 0.15
             civilization_progress_modifier = 0.10
-            research_points_on_conquer = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1496,7 +1494,6 @@ military_reforms = {
         yes_foreign_weapons = {
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
-            research_points_on_conquer = 0.05 #0.25
 
             on_execute = {
                 effect = {
@@ -1522,9 +1519,8 @@ military_reforms = {
         foreign_weapons_two = {
             technology_cost = 10000
             civilization_progress_modifier = 0.10
-            research_points_on_conquer = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1581,7 +1577,7 @@ military_reforms = {
             technology_cost = 8000
             civilization_progress_modifier = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1618,7 +1614,6 @@ military_reforms = {
             leadership_modifier = 0.10
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
-            research_points_on_conquer = 0.10 #was 0.25
 
             on_execute = {
                 effect = {
@@ -1645,9 +1640,8 @@ military_reforms = {
             leadership_modifier = 0.20
             technology_cost = 8000
             civilization_progress_modifier = 0.10
-            research_points_on_conquer = 0.15
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
 
@@ -1708,7 +1702,7 @@ military_reforms = {
             technology_cost = 10000
             civilization_progress_modifier = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1741,7 +1735,6 @@ military_reforms = {
             tariff_efficiency_modifier = 0.10 #was 0.20
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
-            research_points_on_conquer = 0.05 #new
 			
             on_execute = {
                 effect = {
@@ -1770,9 +1763,8 @@ military_reforms = {
             tariff_efficiency_modifier = 0.20
             technology_cost = 10000
             civilization_progress_modifier = 0.10
-            research_points_on_conquer = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1806,7 +1798,6 @@ military_reforms = {
             naval_defense_modifier = 0.2
             technology_cost = 8000 #10000
             civilization_progress_modifier = 0.05 #was 0.10
-            research_points_on_conquer = 0.05 #new
 
             on_execute = {
                 effect = {
@@ -1836,9 +1827,8 @@ military_reforms = {
             naval_defense_modifier = 0.4
             technology_cost = 10000 #10000
             civilization_progress_modifier = 0.1
-            research_points_on_conquer = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {
@@ -1895,7 +1885,7 @@ military_reforms = {
             technology_cost = 10000 #because player can skip level 1, cost is for both levels
             civilization_progress_modifier = 0.10
 			allow = {
-				year = 1709
+				year = 1710
             }
             on_execute = {
                 effect = {

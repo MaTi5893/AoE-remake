@@ -5078,9 +5078,8 @@ indian_raj = {
     icon = 5
 }
 jacobite_sympathies = {
-    prestige = -0.01
-    local_RGO_throughput = -0.3
-    immigrant_push = -0.5
+    local_RGO_throughput = -0.25
+    immigrant_push = -0.1
     icon = 4
 }
 ###prussian op army###
@@ -6766,7 +6765,6 @@ janisseries_influence = {
     icon = 16
 }
 jacobite_absolutism = {
-    prestige = 0.01
     literacy_con_impact = -0.15
     ruling_party_support = 0.05
     icon = 13

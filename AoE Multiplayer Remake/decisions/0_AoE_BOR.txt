@@ -42,7 +42,7 @@ political_decisions = {
 			war = no
 			nationalism_n_imperialism = 1
 			OR = {
-				average_militancy = 10
+				average_militancy = 6
 				is_ideology_enabled = communist
 			}
 		}
@@ -61,6 +61,7 @@ political_decisions = {
 				militancy = 1
 			}
 			add_accepted_culture = arpitan
+			add_accepted_culture = picard
 			add_accepted_culture = breton
 		}
 		ai_will_do = {
@@ -209,6 +210,7 @@ political_decisions = {
 				}
 			}
 			set_country_flag = louis_dream
+			add_accepted_culture = picard
 			398 = {
 				add_core = THIS
 			}

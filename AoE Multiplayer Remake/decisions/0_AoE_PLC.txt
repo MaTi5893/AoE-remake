@@ -503,6 +503,12 @@ political_decisions = {
             355 = { add_core = THIS }
             352 = { add_core = THIS }
             351 = { add_core = THIS }
+			357 = { add_core = THIS }
+            358 = { add_core = THIS }
+            359 = { add_core = THIS }
+			350 = { add_core = THIS }
+            349 = { add_core = THIS }
+            353 = { add_core = THIS }
 			random_owned = {
 				limit = {
 					owner = {
@@ -530,6 +536,11 @@ political_decisions = {
 			war_policy = pro_military
 			}
 			owns = 960
+			owns = 958
+			OR = {
+				owns = 972
+				owns = 978
+			}
 			OR = {
 				nationalism_n_imperialism = 1
 				AND = {

@@ -91,7 +91,7 @@ religious_persecussions = {
 	
 	active = yes
 	pop_militancy_modifier = 0.1
-	life_rating = -1
+	life_rating = -0.01
 	icon = 9	
 
 	trigger = {
@@ -109,7 +109,7 @@ foreign_service_pressing = {
 	
 	active = no
 	pop_militancy_modifier = 0.1
-	life_rating = -1
+	life_rating = -0.01
 	icon = 10
 
 	trigger = {
