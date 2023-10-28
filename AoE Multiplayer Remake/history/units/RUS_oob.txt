@@ -102,23 +102,23 @@ army = {
 	regiment = {
 		name= "5.3-ya Artilleriiskii Diviziya"
 		type = artillery
-		home = 1034
+		home = 1008
 	}
 	
 	regiment = {
-		name= "5.3-ya Artilleriiskii Diviziya"
+		name= "5.4-ya Artilleriiskii Diviziya"
 		type = artillery
 		home = 998
 	}
 	
 	regiment = {
-		name = "3.1-ya Pekhotnaya Diviziya"
+		name = "1.1-ya Pekhotnaya Diviziya"
 		type = infantry
-		home = 1008
+		home = 1003
 	}
 	
 	regiment = {
-		name = "3.1-ya Pekhotnaya Diviziya"
+		name = "2.1-ya Pekhotnaya Diviziya"
 		type = infantry
 		home = 1018
 	}
@@ -126,13 +126,13 @@ army = {
 	regiment = {
 		name = "3.1-ya Pekhotnaya Diviziya"
 		type = infantry
-		home = 999
+		home = 1044
 	}
 	
 	regiment = {
-		name = "3.1-ya Pekhotnaya Diviziya"
+		name = "4.1-ya Pekhotnaya Diviziya"
 		type = infantry
-		home = 1003
+		home = 1047
 	}
 }
 
@@ -348,62 +348,62 @@ army = {
 	
 	regiment = {
 		name = "1.1-ya Novgorod Pekhotnaya Diviziya"
-		home = 997
+		home = 1063
 		type = artillery
 	}
 
 	regiment = {
 		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
 		type = artillery
-		home = 1006
+		home = 1008
 	}
 	
 	regiment = {
 		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
 		type = artillery
-		home = 1008
+		home = 1020
 	}
 
 	regiment = {
 		name= "1.1-ya Novgorod Kavalerijskaya Diviziya"
 		type = artillery
-		home = 1015
+		home = 1075
 	}
 
 	regiment = {
 		name= "1.2-ya Novgorod Kavalerijskaya Diviziya"
 		type = artillery
-		home = 991
+		home = 1058
 	}
 
 	regiment = {
 		name= "1.1-ya Novgorod Pekhotnaya Diviziya"
 		type = infantry
-		home = 1019
+		home = 1020
 	}
 
 	regiment = {
 		name= "1.2-ya Novgorod Pekhotnaya Diviziya"
 		type = infantry
-		home = 978
+		home = 1024
 	}
 
 	regiment = {
 		name= "1.3-ya Novgorod Pekhotnaya Diviziya"
 		type = infantry
-		home = 1739
+		home = 1001
 	}
 
 	regiment = {
 		name= "1.4-ya Novgorod Pekhotnaya Diviziya"
 		type = infantry
-		home = 980
+		home = 1022
 	}
 	
 	regiment = {
 		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
 		type = dragoon
-		home = 1030
+		home = 1077
 	}
 }
 
@@ -472,8 +472,69 @@ army = {
 	}
 }
 
-RUS = {
-    value = 100
+army = {
+	name = "8-i Orenburg Korpus" #Orenburg Army
+	location = 1044
+	
+	regiment = {
+		name = "1.1-ya Orenburg Pekhotnaya Diviziya"
+		home = 1044
+		type = artillery
+	}
+
+	regiment = {
+		name= "1.2-ya Orenburg Pekhotnaya Diviziya"
+		type = artillery
+		home = 1038
+	}
+	
+	regiment = {
+		name= "1.3-ya Orenburg Pekhotnaya Diviziya"
+		type = artillery
+		home = 1037
+	}
+
+	regiment = {
+		name= "1.1-ya Orenburg Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1037
+	}
+
+	regiment = {
+		name= "1.2-ya Orenburg Kavalerijskaya Diviziya"
+		type = artillery
+		home = 1035
+	}
+
+	regiment = {
+		name= "1.1-ya Orenburg Pekhotnaya Diviziya"
+		type = infantry
+		home = 1034
+	}
+
+	regiment = {
+		name= "1.2-ya Orenburg Pekhotnaya Diviziya"
+		type = infantry
+		home = 1034
+	}
+
+	regiment = {
+		name= "1.3-ya Orenburg Pekhotnaya Diviziya"
+		type = infantry
+		home = 1042
+	}
+
+	regiment = {
+		name= "1.4-ya Orenburg Pekhotnaya Diviziya"
+		type = infantry
+		home = 1042
+	}
+	
+	regiment = {
+		name= "1.5-ya Kavkazskii Pekhotnaya Diviziya"
+		type = dragoon
+		home = 1032
+	}
 }
 
 army = {

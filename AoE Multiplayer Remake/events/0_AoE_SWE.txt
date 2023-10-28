@@ -236,6 +236,7 @@ country_event = {
 		name = "This is a catastrophy!"
 		prestige = -50
 		remove_country_modifier = peter_the_great
+		set_global_flag = peter_the_great_dethroned
 		any_pop = {
 			militancy = 3
 		}

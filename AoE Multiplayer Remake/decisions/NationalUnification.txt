@@ -61,66 +61,6 @@ political_decisions = {
         }
     }
 
-
-    unite_moldavia_wallachia = {
-        potential = {
-            OR = {
-                tag = WAL
-                tag = MOL
-            }
-            NOT = { exists = ROM }
-        }
-
-        allow = {
-            OR = {
-                state_n_government = 1
-                is_vassal = no
-            }
-            WAL = {
-                OR = {
-                    in_sphere = THIS
-                    vassal_of = THIS
-                    all_core = {
-                        owned_by = THIS
-                    }
-                }
-            }
-            MOL = {
-                OR = {
-                    in_sphere = THIS
-                    vassal_of = THIS
-                    all_core = {
-                        owned_by = THIS
-                    }
-                }
-            }
-        }
-
-        effect = {
-            prestige = 10
-            change_tag = ROM
-            random_country = {
-                limit = {
-                    tag = WAL
-                    exists = yes
-                }
-                annex_to = THIS
-            }
-            random_country = {
-                limit = {
-                    tag = MOL
-                    exists = yes
-                }
-                annex_to = THIS
-            }
-            capital = 664
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
     #form_germany = {
     #    potential = {
     #        is_culture_group = germanic

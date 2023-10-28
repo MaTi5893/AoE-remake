@@ -4293,6 +4293,7 @@ foreign_weapons_imported = {
 ###Sweden###
 swedish_caroleans = {
     org_regain = 0.25
+	mobilisation_size = 0.02
     land_organisation = 0.03
     supply_consumption = -0.05
     icon = 15
@@ -4357,7 +4358,7 @@ table_of_ranks = {
 	icon = 15
 }
 peter_the_great = {
-	mobilisation_size = 0.02
+	mobilisation_size = 0.01
 	navy_tech_research_bonus = 0.1
 	research_points = 0.25
 	icon = 13
@@ -7036,4 +7037,54 @@ manchu_cultural_oppression = {
 	assimilation_rate = 0.75
 	pop_militancy_modifier = 0.1
 	icon = 7
+}
+germanization_policy = {
+	assimilation_rate = 0.55
+	icon = 7
+}
+french_language_campaign = {
+	badboy = 0.01
+	tax_efficiency = -0.05
+	icon = 20
+}
+french_language_policy = {
+	assimilation_rate = 3
+	local_non_accepted_pop_consciousness_modifier = 0.3
+    local_non_accepted_pop_militancy_modifier = 0.3
+	local_artisan_output = -0.2
+	local_factory_output = -0.2
+    local_factory_throughput = -0.2
+	icon = 7
+}
+french_language_policy_cooldown = {
+	icon = 7
+}
+catherine_war_recovery = {
+    mobilisation_size = -0.1
+    war_exhaustion = 0.05
+    prestige = -0.05
+    org_regain = -0.2
+	land_organisation = -0.1
+	mobilisation_size = -0.01
+	icon = 7
+}
+ivan_mazepa = {
+    supply_consumption = -0.05
+    mobilisation_size = 0.03
+    min_military_spending = 0.1
+	education_efficiency_modifier = 0.01
+	research_points = 0.15
+    icon = 15
+}
+cantemir_reign = {
+    mobilisation_size = 0.01
+	education_efficiency_modifier = 0.01
+	research_points = 0.15
+    icon = 15
+}
+constantin_brancoveanu = {
+    mobilisation_size = 0.01
+	education_efficiency_modifier = 0.01
+	research_points = 0.15
+    icon = 15
 }

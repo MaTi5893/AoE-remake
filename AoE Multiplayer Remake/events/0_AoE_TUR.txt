@@ -678,7 +678,7 @@ country_event = {
 	id = 173623
 	title = "Mameluke Bey Stirring Trouble"
 	desc = "EVTDESC173623"
-	picture = cairo
+	picture = arab_ruler
 	fire_only_once = yes
 	
 	mean_time_to_happen = {
@@ -705,7 +705,7 @@ country_event = {
 	id = 173624
 	title = "Ali Bey al-Kabir Returns from Exile!"
 	desc = "EVTDESC173624"
-	picture = reinventing_egypt
+	picture = arab_rider
 	fire_only_once = yes
 	
 	trigger = {
@@ -737,7 +737,7 @@ country_event = {
 	id = 173625
 	title = "Revolt of Ali Bey al-Kabir!"
 	desc = "EVTDESC173625"
-	picture = cairo
+	picture = arab_ruler
 	fire_only_once = yes
 	
 	trigger = {

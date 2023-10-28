@@ -1,17 +1,80 @@
-TUR = {
-	truce_until = 1705.1.1
+leader = {
+    name = "Ivan Mazepa"
+    type = land
+    date = 1700.1.1
+    background = defence_2.2
+    personality = attack_4.2
 }
+
+leader = {
+    name = "Ivan Skoropadsky"
+    type = land
+    date = 1700.1.1
+    background = defence_3.2
+    personality = attack_1.2
+}
+
 army = {
-	name = "Cossak Host"
+	name = "Zaporizhian Host"
 	location = 972
 	regiment = {
 	name = "Dykopoltsi"
 	type = hussar
-	home = 972
+	home = 3256
 	}
 	regiment = {
 	name = "Sich Polk"
 	type = hussar
+	home = 3256
+	}
+	regiment = {
+	name = "Lysychansk Polk"
+	type = hussar
+	home = 974
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = infantry
+	home = 972
+	}
+	regiment = {
+	name = "Poltava Polk"
+	type = infantry
+	home = 972
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = infantry
+	home = 972
+	}
+	regiment = {
+	name = "Kharkiv Polk"
+	type = infantry
 	home = 971
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = artillery
+	home = 971
+	}
+	regiment = {
+	name = "Bachmut Polk"
+	type = artillery
+	home = 971
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = artillery
+	home = 974
+	}
+	regiment = {
+	name = "Kyiv Polk"
+	type = artillery
+	home = 974
+	}
+	regiment = {
+	name = "Vasilevsky Polk"
+	type = artillery
+	home = 974
 	}
 }

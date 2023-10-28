@@ -31,6 +31,9 @@ political_decisions = {
 			PLC = { country_event = 98002 }
 			SAX = { country_event = 98002 }
 			TUR = { country_event = 98002 }
+			ZZH = { country_event = 98002 }
+			MOL = { country_event = 98002 }
+			WAL = { country_event = 98002 }
 			SPA = { country_event = 98001 }
 			BOR = { country_event = 98001 }
 			PRU = { country_event = 98001 }
@@ -924,10 +927,16 @@ political_decisions = {
 							has_pop_culture = french
 							has_pop_culture = breton 
 							has_pop_culture = arpitan 
+							has_pop_culture = picard 
+							has_pop_culture = occitan 
 							has_pop_culture = south_german 
+							has_pop_culture = basque 
+							has_pop_culture = catalan 
+							has_pop_culture = wallonian 
+							has_pop_culture = ashkenazi 
 						}
 					}
-					reduce_pop = 0.927
+					reduce_pop = 0.8164
 				}
 				any_pop = {
 					limit = {
@@ -942,7 +951,7 @@ political_decisions = {
 							has_pop_culture = spanish_american
 						}
 					}
-					reduce_pop = 0.046
+					reduce_pop = 0.042
 				}
 				any_pop = {
 					limit = {
@@ -952,13 +961,13 @@ political_decisions = {
 							has_pop_culture = western_african
 						}
 					}
-					reduce_pop = 0.63
+					reduce_pop = 0.52
 				}
 				any_pop = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 2.3
+					reduce_pop = 2
 				}
 			}
 			#English Pop Change
@@ -1264,6 +1273,24 @@ political_decisions = {
 						type = soldiers
 					}
 					reduce_pop = 1.5
+				}
+			}
+			ZZH = {
+				add_country_modifier = {
+					name = ivan_mazepa
+					duration = 7300
+				}
+			}
+			MOL = {
+				add_country_modifier = {
+					name = cantemir_reign
+					duration = 7300
+				}
+			}
+			WAL = {
+				add_country_modifier = {
+					name = constantin_brancoveanu
+					duration = 7300
 				}
 			}
 			SWE = {
@@ -1752,18 +1779,6 @@ political_decisions = {
 		effect = {
 			country_event = 171107
 			BOR = {
-				any_pop = {
-					limit = {
-						type = soldiers
-					}
-					reduce_pop = 1.2
-				}
-				any_pop = {
-					limit = {
-						NOT = { type = soldiers }
-					}
-					reduce_pop = 0.88
-				}
 				425 = {
 					add_province_modifier = {
 						name = palace_of_versallis

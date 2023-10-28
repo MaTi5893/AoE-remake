@@ -219,7 +219,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Dissolve The Essembly!"
+		name = "Dissolve The Assembly!"
 	}
 }
 country_event = {
@@ -363,6 +363,44 @@ country_event = {
 	}
 }
 #####
+country_event = {
+	id = 171109
+	title = "France and the Third Estate"
+	desc = "EVTDESC171109"
+	picture = peasants
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = french
+		OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+		OR = {
+			average_militancy = 4
+			has_recently_lost_war = yes
+		}
+		is_ideology_enabled = communist
+		OR = {
+			blockade = 0.85
+			poor_tax = 0.65
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}
+	
+	option = {
+		name = "Let them eat cake or something..."
+		prestige = 5
+		add_country_modifier = {
+			name = peasant_turmoil
+			duration = -1
+		}
+	}
+}
 
 #####India#####
 
@@ -627,6 +665,7 @@ country_event = {
 			}
 			year = 1789
 		}
+		has_country_modifier = peasant_turmoil
 	}
 	mean_time_to_happen = {
 		months = 4
@@ -642,10 +681,20 @@ country_event = {
 		}
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
-		political_reform = wealth_voting
-		political_reform = population_equal_weight
+		political_reform = wealth_weighted_voting
+		political_reform = state_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = abolished
+		political_reform = culture_voting_only
+		political_reform = legislative_parliment
+		political_reform = political_rights
+		political_reform = church_and_state_seperation
+		social_reform = good_safety
+		social_reform = good_minimum_wage
+		social_reform = good_health_care
+		
 		remove_country_modifier = clergy_and_nobility_domination
 		clr_country_flag = clergy_and_nobility_domination
 		random_owned = {
@@ -662,6 +711,7 @@ country_event = {
 				change_tag = FRA
 			}
 		}
+		remove_country_modifier = peasant_turmoil
 		any_country = {
 			limit = {
 				alliance_with = THIS
@@ -693,7 +743,7 @@ country_event = {
 }
 country_event = {
 	id = 171123
-	title = "King's Trail"
+	title = "King's Trial"
 	desc = "EVTDESC171123"
 	picture = kings_trail
 	is_triggered_only = yes
@@ -1133,7 +1183,7 @@ country_event = {
 }
 country_event = {
 	id = 171140
-	title = "Buring Of The Versallies Palace"
+	title = "Burning Of The Versailles Palace"
 	desc = "EVTDESC171140"
 	is_triggered_only = yes
 	major = yes
@@ -1168,6 +1218,218 @@ country_event = {
 				life_rating = 35
 			}
 			life_rating = -1
+		}
+	}
+}
+country_event = {
+	id = 171142
+	title = "French Language Campaigns"
+	desc = "EVTDESC171142"
+	picture = "peasant"
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Occitanians are the greatest threat to our internal unity."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_461 #Languedoc
+						region = FRA_451 #Rhone
+						region = FRA_467 #Provence
+						region = FRA_442 #Poitou
+						region = FRA_455 #Le Midi
+						region = FRA_445 #Limousin
+						region = FRA_448 #Auvergne
+						region = FRA_458 #Aquitaine
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = occitan }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		add_country_modifier = {
+			name = french_language_campaign
+			duration = 1825
+		}
+	}
+	
+	option = {
+		name = "The Picards prove a treacherous peoples looking beyond the border."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_399 #Picardie
+						region = FRA_404 #Champagne
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = picard }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		add_country_modifier = {
+				name = french_language_campaign
+				duration = 1825
+		}
+	}
+	
+	option = {
+		name = "The Arpitanians have no right to our lands without speaking our language."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_451 #Rhone
+						region = FRA_428 #Bourgogne
+						region = FRA_451 #Franche-Comté
+						region = FRA_428 #Savoie
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = arpitan }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		add_country_modifier = {
+				name = french_language_campaign
+				duration = 1825
+		}
+	}
+	
+	option = {
+		name = "Bretons are simply French speakers that are yet to learn of culture."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_420 #Bretagne
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = breton }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		add_country_modifier = {
+				name = french_language_campaign
+				duration = 1825
+		}
+	}
+	
+	option = {
+		name = "The Germans of Lorraine hold dangerous sympathies for our rivals."
+		
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_412 #Alsace
+						region = FRA_411 #Lorraine
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = south_german }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		add_country_modifier = {
+				name = french_language_campaign
+				duration = 1825
+		}
+	}
+	
+	option = {
+		name = "We do not have the resources for such an endeavour."
+	}
+}
+country_event = {
+	id = 171143
+	title = "A Finale to Imperial Authority"
+	desc = "EVTDESC171143"
+	fire_only_once = yes
+	picture = avignon
+	
+	trigger = {
+		capital = 425
+		primary_culture = french
+		OR = {
+		government = proletarian_dictatorship
+		government = fascist_dictatorship
+		}
+		ai = yes
+		AUS = { has_country_flag = hre_emperor }
+		619 = { controlled_by = THIS }
+	}
+	
+	option = {
+		name = "The revolution will swallow the old regimes whole."
+		casus_belli = {
+			target = AUS
+			type = dismantle_hre
+			months = 90
 		}
 	}
 }

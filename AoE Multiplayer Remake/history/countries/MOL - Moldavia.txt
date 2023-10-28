@@ -4,7 +4,7 @@ religion = orthodox
 government = absolute_monarchy
 plurality = 0.25
 nationalvalue = pm_no_minister
-literacy = 0.04
+literacy = 0.13
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 civilized = yes
 prestige = 4
@@ -25,13 +25,13 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions
+pensions = low_pensions
 school_reforms = no_schools
 
 
 # New Reforms
 conscription = two_year_draft
-debt_law = peonage
+debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
@@ -52,7 +52,6 @@ upper_house = {
     communist = 0
 }
 
-
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
@@ -60,7 +59,6 @@ bronze_muzzle_loaded_artillery = 1
 army_command_principle = 1
 clipper_design = 1
 post_nelsonian_thought = 1
-the_command_principle = 1
 private_banks = 1
 no_standard = 1
 guild_based_production = 1
@@ -69,6 +67,10 @@ late_enlightenment_philosophy = 1
 enlightenment_thought = 1
 piston_steam_engine = 1
 mechanical_production = 1
+freedom_of_trade = 1
+experimental_railroad = 1
+malthusian_thought = 1
+basic_chemistry = 1
 
 # Inventions
 

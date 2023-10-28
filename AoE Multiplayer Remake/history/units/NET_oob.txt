@@ -76,6 +76,7 @@ army = {
         type = artillery
         home = 378
     }
+	
 }
 army = {
     name = "Utrecht Garnizoen"
@@ -84,7 +85,7 @@ army = {
     regiment = {
         name = "5e Infanterie Brigade"
         type = artillery
-        home = 385
+        home = 382
     }
 
     regiment = {
@@ -96,19 +97,19 @@ army = {
     regiment = {
         name = "7e Infanterie Brigade"
         type = artillery
-        home = 386
+        home = 382
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
+        name = "8e Infanterie Brigade"
         type = artillery
         home = 384
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
+        name = "9e Infanterie Brigade"
         type = artillery
-        home = 380
+        home = 382
     }
 
     regiment = {
@@ -136,9 +137,9 @@ army = {
     }
 
     regiment = {
-        name = "2e Artillerie Brigade"
+        name = "2e Hussar Brigade"
         type = hussar
-        home = 386
+        home = 382
     }
 }
 
@@ -245,6 +246,95 @@ army = {
         name = "3e Cavalerie Brigade"
         type = hussar
         home = 393
+    }
+	
+	regiment = {
+        name= "1e Infanterie Brigade"
+        type = infantry
+        home = 380
+    }
+
+    regiment = {
+        name= "1e Cavalerie Brigade"
+        type = infantry
+        home = 380
+    }
+
+    regiment = {
+        name= "2e Cavalerie Brigade"
+        type = infantry
+        home = 393
+    }
+
+    regiment = {
+        name= "1e Artillerie Brigade"
+        type = infantry
+        home = 393
+    }
+}
+
+army = {
+    name = "Zwolle Garnizoen"
+    location = 384
+
+    regiment = {
+        name = "12e Artillerie Brigade"
+        type = artillery
+        home = 380
+    }
+
+    regiment = {
+        name = "13e Artillerie Brigade"
+        type = artillery
+        home = 380
+    }
+
+    regiment = {
+        name = "14e Artillerie Brigade"
+        type = artillery
+        home = 382
+    }
+
+    regiment = {
+        name = "15e Artillerie Brigade"
+        type = artillery
+        home = 382
+    }
+
+    regiment = {
+        name = "11e Artillerie Brigade"
+        type = artillery
+        home = 384
+    }
+
+    regiment = {
+        name = "3e Cavalerie Brigade"
+        type = hussar
+        home = 384
+    }
+	
+	regiment = {
+        name= "1e Infanterie Brigade"
+        type = infantry
+        home = 386
+    }
+
+    regiment = {
+        name= "1e Cavalerie Brigade"
+        type = infantry
+        home = 386
+    }
+
+    regiment = {
+        name= "2e Cavalerie Brigade"
+        type = infantry
+        home = 383
+    }
+
+    regiment = {
+        name= "1e Artillerie Brigade"
+        type = infantry
+        home = 383
     }
 }
 

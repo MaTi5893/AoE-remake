@@ -1,92 +1,168 @@
 political_decisions = {
-    #annex_west_bank = {
-    #    picture = cossak_state
-    #
-    #    potential = {
-    #        tag = HET
-    #        vassal_of = RUS
-    #        NOT = {
-    #            has_country_flag = ukrainian_reunification
-    #        }
-    #        NOT = {
-    #            has_country_flag = end_of_paliy
-    #        }
-    #        has_country_flag = paliy_rebellion
-    #        exists = yes
-    #    }
-    #
-    #    allow = {
-    #        NOT = {
-    #            war_exhaustion = 20
-    #        }
-    #        AND = {
-    #            PLC = {
-    #                OR = {
-    #                    AND = {
-    #                        any_pop = {
-    #                            has_pop_culture = ukrainian
-    #                            militancy = 6
-    #                        }
-    #                        war_exhaustion = 30
-    #                    }
-    #                    AND = {
-    #                        war = yes
-    #                        NOT = {
-    #                            rank = 8
-    #                        }
-    #                        average_militancy = 4
-    #                    }
-    #                }
-    #            }
-    #            HET = {
-    #                money = 100000
-    #            }
-    #        }
-    #    }
-    #
-    #    effect = {
-    #        PLC = {
-    #            country_event = 178308
-    #        }
-    #        set_country_flag = ukrainian_reunification
-    #        badboy = 3
-    #    }
-    #
-    #    ai_will_do = { factor = 1 }
-    #}
+    annex_west_bank = {
+        picture = steppes_cossack
+        potential = {
+			OR = {
+				tag = HET
+				tag = ZZH
+			}
+			OR = {
+				in_sphere = TOR
+				vassal_of = TOR
+				in_sphere = RUS
+				vassal_of = RUS
+			}
+            NOT = {
+                has_country_flag = ukrainian_reunification
+            }
+            NOT = { has_global_flag = end_of_paliy }
+            exists = yes
+        }
+    
+        allow = {
+			has_global_flag = paliy_rebellion
+            NOT = {
+                war_exhaustion = 20
+            }
+			war_with = PLC
+			959 = { NOT = { controlled_by = PLC } }
+			960 = { NOT = { controlled_by = PLC } }
+			954 = { NOT = { controlled_by = PLC } }
+			955 = { NOT = { controlled_by = PLC } }
+        }
+        effect = {
+            PLC = {
+                country_event = 178308
+            }
+            set_country_flag = ukrainian_reunification
+            badboy = 3
+        }
+    
+        ai_will_do = { factor = 1 }
+    }
 
+	crush_paliy_rebellion = {
+        picture = steppes_cossack
+        potential = {
+			tag = PLC
+            has_global_flag = paliy_rebellion
+            NOT = { has_global_flag = end_of_paliy }
+			OR = {
+				HET = { has_country_flag = ukrainian_reunification }
+				ZZH = { has_country_flag = ukrainian_reunification }
+				AND = {
+					959 = { NOT = { owned_by = PLC } }
+					960 = { NOT = { owned_by = PLC } }
+					954 = { NOT = { owned_by = PLC } }
+					955 = { NOT = { owned_by = PLC } }	
+				}
+				year = 1704
+			}
+            exists = yes
+        }
+    
+        allow = {
+            NOT = {
+                war_exhaustion = 40
+            }
+			OR = {
+				war_with = ZZH
+				war_with = HET
+				war = no
+			}
+			959 = { controlled_by = PLC } 
+			960 = { controlled_by = PLC } 
+			954 = { controlled_by = PLC }
+			955 = { controlled_by = PLC } 
+        }
+        effect = {
+            960 = { owner = { country_event = 178305 } }
+			PLC = { country_event = 178306 }
+            set_global_flag = end_of_paliy
+        }
+    
+        ai_will_do = { factor = 1 }
+    }
+	
+	solidify_west_bank = {
+        picture = steppes_cossack
+        potential = {
+			OR = {
+				tag = HET
+				tag = ZZH
+			}
+            has_global_flag = paliy_rebellion
+            NOT = { has_global_flag = end_of_paliy }
+			OR = {
+				HET = { has_country_flag = ukrainian_reunification }
+				ZZH = { has_country_flag = ukrainian_reunification }
+				AND = {
+					959 = { NOT = { owned_by = PLC } }
+					960 = { NOT = { owned_by = PLC } }
+					954 = { NOT = { owned_by = PLC } }
+					955 = { NOT = { owned_by = PLC } }	
+				}
+			}
+            exists = yes
+        }
+    
+        allow = {
+            NOT = {
+                war_exhaustion = 40
+            }
+			OR = {
+				war = no
+				truce_with = PLC
+			}
+			959 = { owned_by = THIS } 
+			960 = { owned_by = THIS } 
+			954 = { owned_by = THIS }
+			955 = { owned_by = THIS } 
+        }
+		
+        effect = {
+            959 = { add_core = THIS }
+			960 = { add_core = THIS }
+			954 = { add_core = THIS }
+			955 = { add_core = THIS }
+            set_global_flag = end_of_paliy
+        }
+    
+        ai_will_do = { factor = 1 }
+    }
+	
     masepa_revolt = {
         picture = cossak_state
         potential = {
-            tag = HET
-            HET = {
-                vassal_of = RUS
-            }
+			tag = HET
+			HET = {
+				vassal_of = TOR
+			}
             NOT = {
-                has_country_flag = masepa_revolt
+                has_global_flag = masepa_revolt
             }
             exists = yes
         }
 
         allow = {
-            RUS = {
+            TOR = {
                 war = yes
             }
             OR = {
                 is_secondary_power = yes
                 any_greater_power = {
-                    war_with = RUS
+                    war_with = TOR
                 }
             }
         }
 
         effect = {
             prestige = 10
-            RUS = {
+            TOR = {
                 country_event = 91241542
             }
             create_alliance = SWE
-            set_country_flag = masepa_revolt
+            set_global_flag = masepa_revolt
             ZZH = {
                 country_event = 91241543
             }
@@ -128,14 +204,14 @@ political_decisions = {
             factor = 1
             modifier = {
                 factor = 0
-                RUS = {
+                TOR = {
                     NOT = { war_with = SWE }
 					NOT = { war_exhaustion = 25 }
                 }
             }
 			modifier = {
                 factor = 0
-                RUS = {
+                TOR = {
                     ai = no
                 }
             }
@@ -146,16 +222,160 @@ political_decisions = {
         }
     }
 
+	masepa_revolt_zaporizhia = {
+        picture = cossacks
+        potential = {
+			tag = ZZH
+			ZZH = {
+				OR = {
+					NOT = { part_of_sphere = yes }
+					in_sphere = TOR
+				}
+			}
+            NOT = {
+                has_global_flag = masepa_revolt
+            }
+			HET = { exists = no }
+            exists = yes
+        }
+
+        allow = {
+            TOR = {
+                war = yes
+            }
+            OR = {
+                is_secondary_power = yes
+                any_greater_power = {
+                    war_with = TOR
+                }
+            }
+        }
+
+        effect = {
+            prestige = 10
+            create_alliance = SWE
+            set_global_flag = masepa_revolt
+            any_pop = {
+                limit = {
+                    type = soldiers
+                }
+                reduce_pop = 2
+            }
+            government = democracy
+            treasury = 300000
+            ammunition = 300
+            small_arms = 100
+			random_owned = {
+				limit = {
+					owner = {
+						ai = no
+					}
+				}
+				owner = {
+					capital_scope = {
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = infantry value = current }
+						sub_unit = { type = cavalry value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+						sub_unit = { type = artillery value = current }
+					}
+				}
+			}
+			SWE = {
+				diplomatic_influence = {
+					who = THIS
+					value = 400
+				}
+			}
+			TOR = {
+				diplomatic_influence = {
+					who = THIS
+					value = -200
+				}
+			}
+			end_war = SWE
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                TOR = {
+                    NOT = { war_with = SWE }
+					NOT = { war_exhaustion = 25 }
+                }
+            }
+			modifier = {
+                factor = 0
+                TOR = {
+                    ai = no
+                }
+            }
+			modifier = {
+                factor = 0
+                NOT = { year = 1706 }
+            }
+        }
+    }
+	
+	victory_in_poltava = {
+        picture = steppes_cossack
+        potential = {
+			tag = ZZH
+			has_global_flag = masepa_revolt
+            NOT = {
+                has_country_flag = poltava_victory
+            }
+			HET = { exists = no }
+			TOR = { exists = yes }
+            exists = yes
+        }
+
+        allow = {
+            TOR = { war_with = THIS }
+            958 = { NOT = { controlled_by = TOR } }
+			961 = { NOT = { controlled_by = TOR } }
+			962 = { NOT = { controlled_by = TOR } }
+			963 = { NOT = { controlled_by = TOR } }
+        }
+
+        effect = {
+            badboy = 3
+			RUS_958 = {
+				secede_province = ZZH
+				add_core = ZZH
+			}
+            1016 = {
+				secede_province = ZZH
+				add_core = ZZH
+			}
+			962 = {
+				secede_province = ZZH
+				add_core = ZZH
+			}
+            set_country_flag = poltava_victory
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
     subsidize_cossak_rebellions = {
         picture = cossak_state
         potential = {
             tag = HET
-            #vassal_of = RUS
+            #vassal_of = TOR
             PLC = {
                 average_militancy = 3
             }
             exists = yes
-            has_country_flag = subsidized_cossak_rebellions
+            NOT = { has_country_flag = subsidized_cossak_rebellions }
         }
 
         allow = {
@@ -179,7 +399,7 @@ political_decisions = {
                     limit = {
                         has_pop_culture = ukrainian
                     }
-                    militancy = 1
+                    militancy = 3
                 }
             }
             set_country_flag = subsidized_cossak_rebellions
@@ -193,9 +413,29 @@ political_decisions = {
 
         potential = {
             tag = RUS
-            HET = {
-                has_country_flag = masepa_revolt
-                exists = yes
+			NVR = { exists = no }
+			OR = {
+				AND = {
+					owns = 972
+					owns = 958
+				}
+				AND = {
+					has_global_flag = masepa_revolt
+					OR = {
+						ZZH = { exists = yes }
+						HET = { exists = yes }
+					}
+				}
+				AND = {
+					OR = {
+						ZZH = { vassal_of = THIS }
+						ZZH = { exists = no }
+					}
+					OR = {
+						HET = { vassal_of = THIS }
+						HET = { exists = no }
+					}
+				}
             }
             NOT = {
                 has_country_flag = fate_of_the_sich
@@ -206,12 +446,17 @@ political_decisions = {
 
         allow = {
             HET = {
-                vassal_of = RUS
+                OR = {
+                    exists = no
+                    vassal_of = RUS
+					in_sphere = RUS
+                }
             }
             ZZH = {
                 OR = {
                     exists = no
                     vassal_of = RUS
+					in_sphere = RUS
                 }
             }
         }
@@ -259,10 +504,10 @@ political_decisions = {
     form_ruthenia = {
         picture = cossak_state
         potential = {
-	OR = {
-            primary_culture = ukrainian
-	    primary_culture = cossack
-	}
+			OR = {
+				primary_culture = ukrainian
+				primary_culture = cossack
+			}
             NOT = { exists = RUT }
         }
         allow = {
@@ -284,7 +529,7 @@ political_decisions = {
                     add_core = RUT
                 }
             }
-	    DON = {
+			DON = {
                 all_core = {
                     add_core = RUT
                 }
@@ -294,6 +539,7 @@ political_decisions = {
                     add_core = RUT
                 }
             }
+			719 = { remove_core = THIS }
             add_accepted_culture = ukrainian
             change_tag = RUT
             government = absolute_monarchy
@@ -303,7 +549,10 @@ political_decisions = {
         picture = cossak_state
 
         potential = {
-            tag = HET
+			OR = {
+				tag = HET
+				tag = ZZH
+			}
             NOT = {
                 RUS = {
                     has_country_flag = destroy_the_sich
@@ -347,6 +596,7 @@ political_decisions = {
 			NOT = { exists = HET }
 		}
 		allow = {
+			war = no
 			owns = 958
 		}
 		effect = {
@@ -358,5 +608,128 @@ political_decisions = {
 			prestige = 15
 		}
 	}
-
+	
+	colonize_wild_fields_zzh = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = ZZH
+			NOT = { exists = HET }
+			NOT = { has_country_flag = colonized_wild_fields }
+		}
+		allow = {
+			war = no
+			owns = 973
+			owns = 970
+		}
+		effect = {
+			RUS_980 = { add_core = ZZH }
+			RUS_965 = { add_core = ZZH }
+			badboy = 3
+			set_country_flag = colonized_wild_fields
+			prestige = 8
+		}
+	}
+	
+	conquer_crimean_peninsula_zzh = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = ZZH
+			NOT = { exists = HET }
+			has_country_flag = colonized_wild_fields
+			NOT = { has_country_flag = conquered_crimean_peninsula }
+		}
+		allow = {
+			war = no
+			owns = 964
+			owns = 972
+		}
+		effect = {
+			CRI = { all_core = { add_core = THIS } }
+			set_country_flag = conquered_crimean_peninsula
+			badboy = 5
+			prestige = 15
+		}
+	}
+	
+	alliance_with_tatars_zzh = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = ZZH
+			NOT = { exists = HET }
+			NOT = { has_country_flag = tatar_alliance_zzh }
+		}
+		allow = {
+			war = no
+			owns = 964
+			owns = 973
+			owns = 970
+			owns = 972
+		}
+		effect = {
+			add_accepted_culture = tatar
+			set_country_flag = tatar_alliance_zzh
+			prestige = -5
+		}
+	}
+	
+	integrate_tatars_novorossiya = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = NVR
+			NOT = { exists = ZZH }
+			NOT = { has_country_flag = integrated_tatars_novorossiya }
+			NOT = { has_country_flag = subjugated_tatars_novorossiya }
+		}
+		allow = {
+			war = no
+			owns = 964
+			owns = 973
+			owns = 970
+			owns = 972
+			citizens_rights = all_voting_pops
+			religious_minoritys = political_rights
+			NOT = { has_country_flag = subjugated_tatars_novorossiya }
+		}
+		effect = {
+			add_accepted_culture = tatar
+			NVR = {
+				all_core = {
+					add_province_modifier = { name = deez_nuts_headass duration = 7300 }
+				}
+			}
+			set_country_flag = integrated_tatars_novorossiya
+			prestige = -10
+		}
+	}
+	
+	subjugate_tatars_novorossiya = {
+		picture = khmelnytsky_uprising
+		potential = {
+			tag = NVR
+			NOT = { exists = ZZH }
+			NOT = { has_country_flag = subjugated_tatars_novorossiya }
+			NOT = { has_country_flag = integrated_tatars_novorossiya }
+		}
+		allow = {
+			war = no
+			NOT = { citizens_rights = all_voting_pops }
+			NOT = { religious_minoritys = political_rights }
+			owns = 964
+			owns = 973
+			owns = 970
+			owns = 972
+			NOT = { has_country_flag = integrated_tatars_novorossiya }
+		}
+		effect = {
+			remove_accepted_culture = tatar
+			NVR = {
+				all_core = {
+					add_province_modifier = { name = deez_nuts_headass duration = 7300 }
+				}
+			}
+			set_country_flag = subjugated_tatars_novorossiya
+			badboy = 5
+			prestige = 15
+		}
+	}
 }

@@ -489,6 +489,7 @@ political_reforms = {
             suppression_points_modifier = 0.1
             poor_everyday_needs = 0.1
             poor_savings_modifier = -0.25
+			mobilisation_size = 0.01
 			allow = {
 				NOT = { estate_affiliation = nobility_army }
 				NOT = { estate_affiliation = nobility_church }
@@ -502,6 +503,7 @@ political_reforms = {
             administrative_efficiency_modifier = 0.05
             tariff_efficiency_modifier = 0.05
             administrative_multiplier = 2
+			global_immigrant_attract = 0.03
         }
     }
 

@@ -448,7 +448,113 @@ army = {
     }
 	
 }
+
+army = {
+    name = "Army of Ireland"
+    location = 263
+    regiment = {
+        name= "1.3rd Division"
+        type = hussar
+        home = 254
+    }
+
+    regiment = {
+        name= "2.3rd Division"
+        type = infantry
+        home = 254
+    }
+
+    regiment = {
+        name= "3.3rd Division"
+        type = infantry
+        home = 256
+    }
+
+    regiment = {
+        name= "1.4th Division"
+        type = infantry
+        home = 256
+    }
+
+    regiment = {
+        name= "2.4th Division"
+        type = infantry
+        home = 255
+    }
+
+    regiment = {
+        name= "3.4th Division"
+        type = artillery
+        home = 283
+    }
+
+    regiment = {
+        name= "1.5th Division"
+        type = artillery
+        home = 257
+    }
+
+    regiment = {
+        name= "2.5th Division"
+        type = artillery
+        home = 265
+    }
+
+    regiment = {
+        name= "3.5th Division"
+        type = artillery
+        home = 262
+    }
+
+    regiment = {
+        name= "3.6th Division"
+        type = artillery
+        home = 283
+    }
 	
+}
+
+army = {
+    name = "4th Division"
+    location = 299
+    regiment = {
+        name= "1.3rd Division"
+        type = hussar
+        home = 283
+    }
+
+    regiment = {
+        name= "3.4th Division"
+        type = artillery
+        home = 278
+    }
+
+    regiment = {
+        name= "1.5th Division"
+        type = artillery
+        home = 278
+    }
+
+    regiment = {
+        name= "2.5th Division"
+        type = artillery
+        home = 296
+    }
+
+    regiment = {
+        name= "3.5th Division"
+        type = artillery
+        home = 297
+    }
+
+    regiment = {
+        name= "3.6th Division"
+        type = artillery
+        home = 298
+    }
+	
+}
+
 army = {
     name = "Colonial Army"
     location = 223

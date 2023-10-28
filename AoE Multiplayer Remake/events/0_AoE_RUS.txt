@@ -44,7 +44,7 @@ country_event = {
 }
 country_event = {
 	id = 1700002
-	title = "Ascention of Peter the Third"
+	title = "Ascension of Peter the Third"
 	desc = "EVTDESC1700002"
 	picture = peter_iii
 	fire_only_once = yes
@@ -67,7 +67,7 @@ country_event = {
 }
 country_event = {
 	id = 1700003
-	title = "Death of Cathrine the Great"
+	title = "Death of Catherine the Great"
 	desc = "EVTDESC1700003"
 	picture = death_of_cat
 	fire_only_once = yes
@@ -103,12 +103,12 @@ country_event = {
 	
 	option = {
 		name = "It's nothing..."
-		set_country_flag = ignore_coup
+		set_country_flag = catherine_coup
 	}
 	
 	option = {
-		name = "Bring Cathrine to me."
-		set_country_flag = cathrine_coup
+		name = "Worrisome. Prepare the army for the worst."
+		set_country_flag = defeat_catherine_coup
 	}
 }
 country_event = {
@@ -120,10 +120,7 @@ country_event = {
 	
 	trigger = {
 		tag = RUS
-		OR = {
-			has_country_flag = ignore_coup
-			has_country_flag = cathrine_coup
-		}
+		has_country_flag = catherine_coup
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -132,10 +129,486 @@ country_event = {
 	option = {
 		name = "Bested by my own wife..."
 		remove_country_modifier = peter_iii
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_controlled
+		political_reform = serfdom
+		political_reform = primary_culture_only
+		political_reform = admin_parliment
+		political_reform = no_political_rights
 		add_country_modifier = {
 			name = catharine_the_great
 			duration = -1
 		}
+		define_general = { name = "Grigory Potemkin" personality = defence_3.1 background = attack_5.1 }
+	}
+}
+country_event = {
+	id = 1700006
+	title = "Cathrine's failed coup d'etat "
+	desc = "EVTDESC1700006"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_country_flag = defeat_catherine_coup
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "This is for the best of the country..."
+		add_country_modifier = {
+			name = catherine_war_recovery
+			duration = 1825
+		}
+	}
+}
+country_event = {
+	id = 1700007
+	title = "Death of Peter the Third"
+	desc = "EVTDESC1700007"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_country_modifier = peter_iii
+		year = 1796
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Perhaps his genius could not be appreciated in our time..."
+		remove_country_modifier = peter_iii
+	}
+}
+country_event = {
+	id = 1700008
+	title = "Peasant Rebellion Stirring"
+	desc = "EVTDESC1700008"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_country_modifier = catharine_the_great
+		has_country_flag = catherine_coup
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "These peasants are of no concern to us. Have the provincial garrisons handle them."
+		set_country_flag = pugachev_rebellion_ignored
+	}
+}
+country_event = {
+	id = 1700009
+	title = "Pugachev's Rebellion!"
+	desc = "EVTDESC1700009"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_country_modifier = catharine_the_great
+		has_country_flag = pugachev_rebellion_ignored
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "That traitor Pugachev and his Cossack rabble will crumble under the Imperial Army."
+		release = DON
+		relation = { who = DON value = -100 }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = 3
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+			
+            owner = {
+                prestige = -10
+                war = {
+                    target = DON
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = {
+                        national_provinces_occupied = .25
+                        any_greater_power = { war_with = THIS }
+                    }
+                }
+            }
+            owner = {
+                war = {
+                    target = DON
+                    attacker_goal = {
+                        casus_belli = annex_core_country
+                    }
+                }
+            }
+        }
+		any_owned = {
+			limit = {
+                OR = {
+                    is_core = CIR
+					is_core = KMK
+					is_core = DAG
+					province_id = 2610
+					province_id = 1182
+					province_id = 1039
+				}
+			}
+            secede_province = DON
+		}
+		DON = { define_general = { name = "Yemelyan Pugachev" personality = defence_3.1 background = attack_4.1 } }
+		DON = { capital = 1039 }
+		set_country_flag = pugachev_rebellion_crushed
+	}
+	
+	option = {
+		name = "Russia will be free from the oppression of serfdom, and the despot Catherine!"
+		remove_country_modifier = catharine_the_great
+		political_reform = peonage
+		political_reform = political_rights
+		political_reform = state_religion
+		social_reform = good_pensions
+		social_reform = good_health_care
+		social_reform = trinket_wage
+		social_reform = acceptable_safety
+		define_general = { name = "Yemelyan Pugachev" personality = defence_3.1 background = attack_4.1 }
+		add_accepted_culture = cossack
+		add_accepted_culture = siberian_tatar
+		add_accepted_culture = tatar
+		add_accepted_culture = siberian
+		add_accepted_culture = yakut
+		add_accepted_culture = oirat
+		add_accepted_culture = kazak
+		add_country_modifier = {
+			name = catherine_war_recovery
+			duration = 3650
+		}
+		set_country_flag = pugachev_rebellion_victory
+	}
+}
+
+country_event = {
+	id = 1700010
+	title = "Abolishment of Crimean Khanate!"
+	desc = "EVTDESC1700010"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Abolish the Crimean Khanate and replace it with the Novorossiya Governorate."
+		CRI = {
+			all_core = {
+				add_core = NVR
+				add_core = THIS
+				remove_core = TUR
+				remove_core = CRI
+			}
+		}
+		DON = {
+			all_core = {
+				add_core = THIS
+				remove_core = DON
+			}
+		}
+		HET = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				add_core = THIS
+				remove_core = HET
+			}
+		}
+		ZZH = {
+			all_core = {
+				add_core = NVR
+			}
+		}
+		ZZH = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				add_core = THIS
+				remove_core = ZZH
+			}
+		}
+		release = NVR
+		inherit = NVR
+		NVR = {
+			all_core = {
+				add_province_modifier = { name = deez_nuts_headass duration = 7300 }
+			}
+		}
+        any_pop = {
+			limit = {
+				culture = tatar
+			}
+			militancy = 6
+			consciousness = 8
+		}
+		any_pop = {
+			limit = {
+				culture = cossack
+			}
+			militancy = 6
+			consciousness = 8
+		}
+		NVR = { capital = 972 }
+		remove_accepted_culture = cossack
+		remove_accepted_culture = tatar
+		remove_accepted_culture = siberian_tatar
+		badboy = 12
+		prestige = 30
+	}
+}
+
+country_event = {
+	id = 1700011
+	title = "Control of Novorossiya"
+	desc = "EVTDESC1700011"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are loyal servants of the Empire. We shall accept our duty graciously."
+		ZZH = {
+			all_core = {
+				add_core = NVR
+				remove_core = THIS
+			}
+		}
+		change_tag = NVR
+		relation = { who = RUS value = 200 }
+		RUS = {
+			diplomatic_influence = {
+				who = NVR
+				value = 400
+			}
+		}
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -3
+        }
+		RUS = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = NVR
+						#NOT = { province_id = 1045 }
+					}
+				}
+				secede_province = THIS
+				remove_core = RUS
+			}
+		}
+		NVR = { capital = 972 }
+		RUS = { create_vassal = NVR }
+		add_accepted_culture = cossack
+		add_accepted_culture = russian
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "We accept the governorate, but only with our full autonomy restored."
+		ZZH = {
+			all_core = {
+				add_core = NVR
+				remove_core = THIS
+			}
+		}
+		change_tag = NVR
+		relation = { who = RUS value = 800 }
+		RUS = {
+			diplomatic_influence = {
+				who = NVR
+				value = 200
+			}
+		}
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -5
+        }
+		RUS = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = NVR
+						#NOT = { province_id = 1045 }
+					}
+				}
+				secede_province = THIS
+				remove_core = RUS
+			}
+		}
+		RUS = { release_vassal = THIS }
+		NVR = { capital = 972 }
+		add_accepted_culture = cossack
+		add_accepted_culture = russian
+	}
+	
+	option = {
+		name = "Clearly a ruse to destroy our Cossack identity. Decline the commission."
+		ZZH = {
+			all_core = {
+				remove_core = NVR
+			}
+		}
+		NVR = { capital = 1047 }
+		NVR = {
+			all_core = {
+				add_province_modifier = { name = deez_nuts_headass duration = 7300 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 1700012
+	title = "ruzzia"
+	desc = "EVTDESC1700012"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "form russia."
+		change_tag = RUS
+		TUR = {
+		any_owned = {
+			limit = {
+                OR = {
+                    is_core = CRI
+					is_core = CIR
+				}
+			}
+            secede_province = RUS
+		}
+		}
+	}
+}
+
+country_event = {
+	id = 1700013
+	title = "Commission of Novorossiya"
+	desc = "EVTDESC1700010"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Grant the Zaporizhians the governorate, but incorporate the other Cossack hosts."
+		CRI = {
+			all_core = {
+				add_core = NVR
+				remove_core = TUR
+				remove_core = CRI
+			}
+		}
+		DON = {
+			all_core = {
+				add_core = THIS
+				remove_core = DON
+			}
+		}
+		HET = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				add_core = THIS
+				remove_core = HET
+			}
+		}
+		ZZH = {
+			all_core = {
+				add_core = NVR
+			}
+		}
+		release = NVR
+		inherit = NVR
+		random_country = {
+            limit = {
+                exists = yes
+                tag = ZZH
+            }
+            country_event = 1700011
+        }
+		badboy = 6
+		prestige = 15
+	}
+	
+	option = {
+		name = "Grant the governorate to all of the Cossacks, to reward their loyalty to the empire."
+		CRI = {
+			all_core = {
+				add_core = NVR
+				remove_core = TUR
+				remove_core = CRI
+			}
+		}
+		HET = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+				}
+				add_core = THIS
+				remove_core = HET
+			}
+		}
+		DON = {
+			all_core = {
+				add_core = NVR
+				add_core = THIS
+				remove_core = DON
+			}
+		}
+		ZZH = {
+			all_core = {
+				add_core = NVR
+			}
+		}
+		release = NVR
+		inherit = NVR
+		random_country = {
+            limit = {
+                exists = yes
+                tag = ZZH
+            }
+            country_event = 1700011
+        }
+		badboy = 4
+		prestige = 10
 	}
 }
 
@@ -189,7 +662,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Send a linient treaty"
+		name = "Send a lenient treaty"
 		RUS_1469 = { add_core = THIS }
 		prestige = 5
 		relation = {
@@ -430,7 +903,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 12
+		months = 8
 	}
 	
 	option = {

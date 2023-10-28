@@ -1,6 +1,8 @@
 capital = 322
 primary_culture = swedish
 culture = finnish
+culture = estonian
+culture = latvian
 religion = protestant
 government = absolute_monarchy
 plurality = 0.25
@@ -40,6 +42,7 @@ centralization = admin_parliment
 colonial_policy = no_colonies
 
 set_country_flag = protestant_country
+set_country_flag = eat_hre_minors
 
 govt_flag = {
     government = proletarian_dictatorship

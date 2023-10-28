@@ -13,11 +13,11 @@ political_decisions = {
 			civilized = yes
 			OR = {
 				AND = {
-					has_global_flag = turk_maghreb_war_victor 
+					has_global_flag = turk_maghreb_war_defeat
 					ideological_thought = 1
 				}
 				AND = {
-					has_global_flag = turk_maghreb_war_defeat
+					has_global_flag = turk_maghreb_war_victor  
 					state_n_government = 1
 				}
 			}

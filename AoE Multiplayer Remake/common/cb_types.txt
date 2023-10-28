@@ -1760,7 +1760,10 @@ acquire_substate_region = {
         NOT = { is_our_vassal = THIS }
         num_of_substates = 1 # if has any substate
         any_substate = {
-			NOT = { substate_of = TKG }
+			OR = {
+				NOT = { substate_of = JAP }
+				NOT = { substate_of = TKG }
+			}
             number_of_states = 1
             any_owned_province = {
                 not = { is_core = THIS }
@@ -1775,7 +1778,10 @@ acquire_substate_region = {
         is_colonial = no
         owner = { 
 			NOT = { in_sphere = THIS }
-			NOT = { substate_of = TKG }
+			OR = {
+				NOT = { substate_of = JAP }
+				NOT = { substate_of = TKG }
+			}
 		}
         any_owned_province = {
             not = { is_core = THIS }
@@ -4265,6 +4271,7 @@ demand_concession_casus_belli = {
 			is_colonial = no
 			NOT = { is_core = CHI }
 			NOT = { is_core = TKG }
+			NOT = { is_core = JAP }
 		}
 		not = { any_owned_province = { is_capital = yes } }
 	}
@@ -4375,7 +4382,10 @@ demand_concession_japan = {
 			civilized = yes
 		}
 		any_owned_province = {
-			is_core = TKG
+			OR = {
+				is_core = TKG
+				is_core = JAP
+			}
 		}
 		any_state = {
             is_colonial = no
@@ -4385,7 +4395,10 @@ demand_concession_japan = {
 	
 	allowed_states = {
 		any_owned_province = {
-			is_core = TKG
+			OR = {
+				is_core = TKG
+				is_core = JAP
+			}
 			is_colonial = no
 		}
 	}
@@ -4430,7 +4443,10 @@ acquire_substate_region_japan = {
         NOT = { is_our_vassal = THIS }
         num_of_substates = 1 # if has any substate
         any_substate = {
-			substate_of = TKG 
+			OR = {
+				substate_of = TKG 
+				substate_of = JAP 
+			}
             number_of_states = 1
             any_owned_province = {
                 not = { is_core = THIS }
@@ -4445,7 +4461,10 @@ acquire_substate_region_japan = {
         is_colonial = no 
         owner = {
 			NOT = { in_sphere = THIS }
-			substate_of = TKG
+			OR = {
+				substate_of = TKG 
+				substate_of = JAP 
+			}
 		}
         any_owned_province = {
             not = { is_core = THIS }
@@ -4502,6 +4521,7 @@ demand_concession_casus_belli_for_puppet = {
 		any_owned_province = {
 			not = { is_core = THIS }
 			not = { is_core = TKG }
+			not = { is_core = JAP }
 			not = { is_core = CHI }
 			is_colonial = no
 		}
@@ -4564,6 +4584,7 @@ establish_protectorate_casus_belli = {
 		any_owned_province = {
 			not = { is_core = TKG }
 			not = { is_core = CHI }
+			not = { is_core = JAP }
 		}
 		THIS = {
 			civilized = yes
@@ -4802,6 +4823,7 @@ demand_concession_capital = {
             not = {    is_core = THIS }
 			not = {    is_core = CHI }
 			not = {    is_core = TKG }
+			not = { is_core = JAP }
             is_colonial = no
         }
         any_owned_province = { is_capital = yes }
@@ -4928,6 +4950,10 @@ conquest_low = {
 			}
 			AND = {
 				has_country_flag = hre_member
+				THIS = { has_country_flag = eat_hre_minors } #non hre members can justify on hre member
+			}
+			AND = {
+				has_country_flag = hre_member
 				THIS = { has_country_flag = hre_member } #hre member can justify on hre member
 			}
 			AND = {
@@ -5011,6 +5037,10 @@ conquest_tiny = {
 			AND = {
 				NOT = { has_country_flag = hre_member }
 				THIS = { NOT = { has_country_flag = hre_member } } #non hre member can justify on non hre member
+			}
+			AND = {
+				has_country_flag = hre_member
+				THIS = { has_country_flag = eat_hre_minors } #non hre members can justify on hre member
 			}
 			AND = {
 				has_country_flag = hre_member

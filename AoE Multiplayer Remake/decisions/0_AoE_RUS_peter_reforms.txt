@@ -20,11 +20,6 @@ political_decisions = {
 				remove_core = TOR
 			}
 			change_tag = RUS
-			ZZH = {
-				all_core = {
-					add_core = THIS
-				}
-			}
             prestige = 25
 			random_owned = {
 				limit = {
@@ -77,6 +72,7 @@ political_decisions = {
 				duration = -1
 			}
 			research_points = 150
+			political_reform = admin_parliment
 			remove_country_modifier = streltsi_rebellion
 			activate_technology = naval_design_bureaus
 			activate_technology = alphabetic_flag_signaling
@@ -216,8 +212,10 @@ political_decisions = {
 			tag = RUS
 			NOT = { has_country_flag = burkhard_crimea_razed }
 			NOT = { has_country_flag = perpetual_peace_TUR }
+			NOT = { has_country_flag = cossack_novorossiya_proposal }
 		}
 		allow = {
+			NOT = { has_country_flag = cossack_novorossiya_proposal }
 			war_policy  = jingoism
 			nationalism_n_imperialism = 1
 			964 = { controlled_by = THIS }
@@ -272,7 +270,7 @@ political_decisions = {
 		potential = {
 			tag = RUS
 			has_country_flag = burkhard_crimea_razed
-			NOT = { has_country_flag = claimed_crimea_south_ukrine }
+			NOT = { has_country_flag = claimed_crimea_south_ukraine }
 			NOT = { has_country_flag = perpetual_peace_TUR }
 		}
 		allow = {
@@ -283,24 +281,32 @@ political_decisions = {
 			}
 			AND = {
 					owns = 1047
-					owns = 965
+					owns = 1048
 					owns = 964
 					owns = 973
 				}
 		}
 		effect = {
-			set_country_flag = claimed_crimea_south_ukrine
+			set_country_flag = claimed_crimea_south_ukraine
 			CRI = {
 				all_core = {
 					limit = {
 						owned_by = THIS
 					}
+					add_core = NVR
 					add_province_modifier = { name = deez_nuts_headass duration = 3650 }
 				}
 			}
 			any_pop = {
 				limit = {
 					culture = tatar
+				}
+				militancy = 4
+				consciousness = 6
+			}
+			any_pop = {
+				limit = {
+					culture = siberian_tatar
 				}
 				militancy = 2
 				consciousness = 3
@@ -319,6 +325,139 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }	
 	}
+	
+	treaty_of_kucuk_kaynarca = {
+		picture = potiomkin
+		potential = {
+			tag = RUS
+			has_country_flag = claimed_crimea_south_ukraine 
+			NOT = { has_country_flag = perpetual_peace_TUR }
+			NOT = { has_global_flag = kucuk_kaynarca_established }
+			NOT = { DON = { exists = yes } }
+			NOT = { NVR = { exists = yes } }
+		}
+		allow = {
+			war_policy  = jingoism
+			OR = {
+				mass_politics = 1
+				AND = {
+					has_country_modifier = catharine_the_great
+					has_country_flag = pugachev_rebellion_crushed
+				}
+			}
+			OR = {
+				CRI = { all_core = { owned_by = THIS }}
+				#CRI = { all_core = { in_sphere = THIS }}
+			}
+		}
+		effect = {
+			country_event = 1700010
+			set_global_flag = kucuk_kaynarca_established
+		}
+		ai_will_do = { factor = 1 }	
+	}
+	
+	catherine_southern_ambitions = {
+		picture = potiomkin
+		potential = {
+			tag = RUS
+			has_country_flag = claimed_crimea_south_ukraine 
+			NOT = { has_country_flag = southern_ambitions_realized }
+		}
+		allow = {
+			war_policy  = jingoism
+			OR = {
+				mass_politics = 1
+				has_country_modifier = catharine_the_great
+			}
+			owns = 1052
+			owns = 1102
+			owns = 1051
+		}
+		effect = {
+			DON = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			DAG = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CIR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			1107 = { add_core = THIS }
+			1102 = { add_core = THIS }
+			any_pop = {
+				limit = {
+					culture = circassian
+					culture = dagestani
+					culture = azerbaijani 
+				}
+				militancy = 4
+				consciousness = 6
+			}
+			prestige = 10
+			badboy = 4
+			set_country_flag = southern_ambitions_realized
+		}
+		ai_will_do = { factor = 1 }	
+	}
+	
+	establish_caucasian_viceroyalty = {
+		picture = potiomkin
+		potential = {
+			tag = RUS
+			has_country_flag = claimed_crimea_south_ukraine 
+			has_country_flag = southern_ambitions_realized
+			NOT = { has_country_flag = caucasian_viceroyalty_established }
+		}
+		allow = {
+			war_policy  = jingoism
+			has_global_flag = kucuk_kaynarca_established
+			OR = {
+				mass_politics = 1
+				has_country_modifier = catharine_the_great
+			}
+			owns = 1092
+			owns = 1090
+			owns = 1102
+			owns = 1098
+		}
+		effect = {
+			add_accepted_culture = georgian
+			add_accepted_culture = armenian
+			GEO = {
+				all_core = {
+					add_core = THIS
+					remove_core = SVA
+					remove_core = IMR
+					remove_core = MIG
+					remove_core = KKH
+				}
+			}
+			RUS_1098 = { add_core = THIS }
+			1096 = { remove_core = THIS }
+			RUS_1102 = { add_core = THIS }
+			any_pop = {
+				limit = {
+					culture = armenian
+					culture = georgian
+				}
+				militancy = -2
+				consciousness = -3
+			}
+			prestige = 15
+			badboy = 8
+			set_country_flag = caucasian_viceroyalty_established
+		}
+		ai_will_do = { factor = 1 }	
+	}
+	
 	enact_the_table_of_ranks = {
 		picture = table_of_ranks
 		potential = {
@@ -367,49 +506,54 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	#enact_nakaz = {
-	#	picture = nakaz
-	#	potential = {
-	#		tag = RUS
-	#		NOT = {
-	#			has_country_flag = enacted_nakaz
-	#		}
-	#		exists = yes
-	#	}
-	#	allow = {
-	#		has_country_modifier = catharine_the_great
-	#		NOT = {
-	#			OR = {
-	#				safety_regulations = no_safety
-	#				safety_regulations = trinket_safety
-	#			}
-	#		}
-	#		NOT = {
-	#			OR = {
-	#				health_care = no_health_care
-	#				health_care = trinket_health_care
-	#			}
-	#		}
-	#		OR = {
-	#			upper_house_composition = party_appointed
-	#			upper_house_composition = appointed
-	#		}
-	#		government = absolute_monarchy
-	#		ruling_party_ideology = reactionary
-	#		war = no
-	#	}
-	#	effect = {
-	#		political_reform = party_appointed
-	#		add_country_modifier = {
-	#			name = nakaz
-	#			duration = -1
-	#		}
-	#		set_country_flag = enacted_nakaz
-	#	}
-	#	ai_will_do = {					
-	#	factor = 1
-	#	}
-	#}
+	enact_nakaz = {
+		picture = nakaz
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = enacted_nakaz
+			}
+			exists = yes
+		}
+		allow = {
+			has_country_modifier = catharine_the_great
+			NOT = {
+				OR = {
+					safety_regulations = no_safety
+					safety_regulations = trinket_safety
+				}
+			}
+			NOT = {
+				OR = {
+					health_care = no_health_care
+					health_care = trinket_health_care
+				}
+			}
+			OR = {
+				upper_house_composition = party_appointed
+				upper_house_composition = appointed
+			}
+			government = absolute_monarchy
+			ruling_party_ideology = reactionary
+			war = no
+		}
+		effect = {
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = state_controlled
+			social_reform = good_pensions
+			social_reform = good_health_care
+			add_country_modifier = {
+				name = nakaz
+				duration = -1
+			}
+			set_country_flag = enacted_nakaz
+		}
+		ai_will_do = {					
+		factor = 1
+		}
+	}
+	
 	claim_ruthenia = {
 		picture = ruthenia
 		potential = {
@@ -541,7 +685,10 @@ political_decisions = {
 		allow = {
 			owns = 994
 			owns = 695
-			revolution_n_counterrevolution = 1
+			OR = {
+				has_country_modifier = catharine_the_great
+				revolution_n_counterrevolution = 1
+			}
 			is_greater_power = yes
 			war_policy = jingoism
 		}
@@ -575,12 +722,38 @@ political_decisions = {
 		allow = {
 			ruling_party_ideology = reactionary
 			OR = {
-			has_country_modifier = catharine_the_great
-			mass_politics = 1
+				has_country_modifier = catharine_the_great
+				mass_politics = 1
 			}
 			owns = 944
 			owns = 718
 			owns = 960
+		}
+		effect = {
+			years_of_research = 1
+			tech_school = pogonya_za_zapadom
+			political_reform = culture_voting_only
+			political_reform = political_rights
+			political_reform = church_and_state_seperation
+			social_reform = good_minimum_wage
+			social_reform = trinket_safety
+			set_country_flag = catharine_the_great_reforms
+		}
+	}
+
+	cossacks_in_new_russia = {
+		picture = catherine_the_great
+		potential = {
+			tag = RUS
+			NVR = { exists = no }
+			NOT = { has_country_flag = fate_of_the_cossacks }
+		}
+		allow = {
+			ruling_party_ideology = reactionary
+			OR = {
+				has_country_modifier = catharine_the_great
+				mass_politics = 1
+			}
 			HET = {
 				OR = {
 					vassal_of = THIS
@@ -597,7 +770,7 @@ political_decisions = {
 		effect = {
 			random_owned = {
 				limit = {
-					owner = { HET = { exists = yes  in_sphere = THIS } }
+					owner = { HET = { exists = yes ai = yes in_sphere = THIS } }
 				}
 				owner = {
 					inherit = HET
@@ -605,16 +778,96 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					owner = { ZZH = { exists = yes  in_sphere = THIS } }
+					owner = { ZZH = { exists = yes ai = yes in_sphere = THIS } }
 				}
 				owner = {
 					inherit = ZZH
 				}
 			}
-			years_of_research = 1
-			tech_school = pogonya_za_zapadom
-			set_country_flag = catharine_the_great_reforms
+			HET = { all_core = { add_core = THIS } }
+			ZZH = { all_core = { add_core = THIS } }
+			set_country_flag = fate_of_the_cossacks
 		}
+	}
+	
+	propose_cossack_settle_novorossiya = {
+		picture = potiomkin
+		potential = {
+			tag = RUS
+			ZZH = { exists = yes }
+			NOT = { has_country_flag = cossack_novorossiya_proposal }
+			NOT = { has_country_flag = burkhard_crimea_razed }
+			NOT = { has_country_flag = perpetual_peace_TUR }
+			NOT = { has_global_flag = kucuk_kaynarca_established }
+			NOT = { NVR = { exists = yes } }
+		}
+		allow = {
+			ZZH = { in_sphere = THIS }
+			OR = {
+				ZZH = {
+					owns = 970
+					owns = 965
+					owns = 964
+					owns = 973
+				}
+				THIS = {
+					NOT = { owns = 972 }
+					owns = 1047
+					owns = 1048
+					owns = 964
+					owns = 973
+					owns = 970
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = CRI
+					}
+				}
+				secede_province = ZZH
+			}
+			976 = { change_province_name = Mariupol }
+			975 = { change_province_name = Yuzovka }
+			973 = { change_province_name = Melitopol }
+			965 = { change_province_name = Cherson }
+			970 = { change_province_name = Nikolaev }
+			969 = { change_province_name = Pervomaisk }
+			968 = { change_province_name = Odessa }
+			964 = { change_province_name = Simferopol }
+			966 = { change_province_name = Kerch }
+			967 = { change_province_name = Sevastopol }
+			set_country_flag = cossack_novorossiya_proposal
+		}
+		ai_will_do = { factor = 0 }	
+	}
+	
+	grant_novorossiya_cossacks = {
+		picture = potiomkin
+		potential = {
+			tag = RUS
+			ZZH = { exists = yes }
+			has_country_flag = cossack_novorossiya_proposal 
+			NOT = { has_country_flag = perpetual_peace_TUR }
+			NOT = { has_global_flag = kucuk_kaynarca_established }
+			NOT = { DON = { exists = yes } }
+			NOT = { NVR = { exists = yes } }
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+			OR = {
+				CRI = { all_core = { owned_by = THIS }}
+				CRI = { all_core = { in_sphere = THIS }}
+			}
+		}
+		effect = {
+			country_event = 1700013
+			set_global_flag = cossack_novorossiya_established
+		}
+		ai_will_do = { factor = 0 }	
 	}
 	
 	propose_the_greek_plan = {
@@ -622,11 +875,12 @@ political_decisions = {
 		potential = {
 			tag = RUS
 			is_greater_power = yes
-			has_country_flag = claimed_crimea_south_ukrine
+			has_country_flag = claimed_crimea_south_ukraine
 			NOT = { has_country_flag = proposed_the_greek_plan }
 		}
 		allow = {
 			war = no
+			has_global_flag = kucuk_kaynarca_established
 			OR = {
 				has_country_modifier = catharine_the_great
 				political_thought_7 = 1

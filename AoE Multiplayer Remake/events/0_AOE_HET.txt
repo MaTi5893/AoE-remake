@@ -22,8 +22,7 @@ country_event = {
     option = {
         name = "EVT91241542OPT2"
         release_vassal = HET
-        prestige = -20
-        badboy = -5
+        prestige = -15
         ai_chance = {
             factor = 0.1
         }
@@ -70,12 +69,33 @@ country_event = {
     option = {
         name = "EVT91241544OPT1"
         prestige = 5
-        badboy = -5
+        badboy = 3
         set_country_flag = sich
-        HET = {
-            release = ZZH
+        random_country = {
+                limit = {
+                    tag = ZZH
+                    exists = yes
+					in_sphere = THIS
+                }
+                THIS = { create_vassal = ZZH }
         }
-        create_vassal = ZZH
+		random_country = {
+                limit = {
+                    tag = HET
+                    exists = yes
+					in_sphere = THIS
+                }
+                THIS = { create_vassal = HET }
+        }
+		any_pop = {
+            limit = {
+                OR = {
+                    has_pop_culture = ukrainian
+                    has_pop_culture = cossack
+                }
+            }
+            militancy = -1
+        }
         ai_chance = {
             factor = 10
         }
@@ -85,11 +105,24 @@ country_event = {
         name = "EVT91241544OPT2"
         badboy = 10
         set_country_flag = fate_of_the_sich
-        HET = {
-            release = ZZH
+        random_country = {
+                limit = {
+                    tag = ZZH
+                    exists = yes
+					vassal_of = THIS
+                }
+                annex_to = THIS
         }
-        create_vassal = ZZH
-        inherit = HET
+		random_country = {
+                limit = {
+                    tag = HET
+                    exists = yes
+					vassal_of = THIS
+                }
+                annex_to = THIS
+        }
+		RUS_958 = { add_core = THIS }
+		3256 = { add_core = THIS }
         any_pop = {
             limit = {
                 OR = {
@@ -103,6 +136,25 @@ country_event = {
             factor = 1
         }
     }
+	
+	option = {
+        name = "EVT91241544OPT3"
+        badboy = -3
+        set_country_flag = sich
+        prestige = -5
+        any_pop = {
+            limit = {
+                OR = {
+                    has_pop_culture = ukrainian
+                    has_pop_culture = cossack
+                }
+            }
+            militancy = -3
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
 }
 country_event = {
     id = 178300
@@ -114,7 +166,7 @@ country_event = {
         tag = HET
         is_secondary_power = yes
         vassal_of = RUS
-        has_country_flag = sich
+        RUS = { has_country_flag = sich }
         NOT = {
             has_country_flag = the_last_hetmanate
         }
@@ -255,10 +307,10 @@ country_event = {
     }
 }
 
-#####Pruth
+#####Pruth - redo loc on this one
 country_event = {
     id = 178305
-    title = "EVTDESC178305"
+    title = "EVTNAME178305"
     desc = "EVTDESC178305"
     picture = sichs_event
 
@@ -266,14 +318,17 @@ country_event = {
 
     option = {
         name = "EVT1783005OPT"
-        HET = {
-            969 = {
+        THIS = {
+            959 = {
                 secede_province = PLC
             }
             960 = {
                 secede_province = PLC
             }
             954 = {
+                secede_province = PLC
+            }
+			955 = {
                 secede_province = PLC
             }
         }
@@ -291,20 +346,7 @@ country_event = {
 
     fire_only_once = yes
 
-    trigger = {
-        tag = PLC
-        has_country_flag = plc_civil_war_end
-        HET = {
-            has_country_flag = ukrainian_reunification
-        }
-        NOT = {
-            has_country_flag = polish_paliy
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 3
-    }
+    is_triggered_only = yes
 
     option = {
         name = "EVT178306OPT"
@@ -313,7 +355,7 @@ country_event = {
             limit = {
                 has_pop_culture = ukrainian
             }
-            militancy = -7
+            militancy = -5
         }
         ai_chance = {
             factor = 10
@@ -335,13 +377,9 @@ country_event = {
         NOT = {
             has_country_flag = polish_paliy
         }
-        HET = {
-            NOT = {
-                has_country_flag = ukrainian_reunification
-            }
-            NOT = {
-                has_country_flag = end_of_paliy
-            }
+		NOT = {
+            has_global_flag = end_of_paliy
+			has_global_flag = paliy_rebellion
         }
     }
 
@@ -351,19 +389,15 @@ country_event = {
 
     option = {
         name = "EVT178307OPT"
-        HET = {
-            set_country_flag = paliy_rebellion
-            country_event = 178310
-        }
-        set_country_flag = paliy_rebellion
+        set_global_flag = paliy_rebellion
         prestige = -5
         any_pop = {
             limit = {
                 has_pop_religion = orthodox
             }
-            militancy = 1
+            militancy = 3
         }
-        969 = {
+        959 = {
             any_pop = {
                 limit = {
                     OR = {
@@ -386,6 +420,17 @@ country_event = {
             }
         }
         954 = {
+            any_pop = {
+                limit = {
+                    OR = {
+                        has_pop_culture = polish
+                        has_pop_culture = ashkenazi
+                    }
+                }
+                reduce_pop = 0.8
+            }
+        }
+		955 = {
             any_pop = {
                 limit = {
                     OR = {
@@ -411,44 +456,19 @@ country_event = {
 
     option = {
         name = "EVT178308OPT"
-        969 = {
-            secede_province = HET
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = ukrainian
-                        has_pop_culture = cossack
-                    }
-                    militancy = 5
-                }
-                reduce_pop = 0.9
-            }
-        }
+        959 = {
+            secede_province = FROM
+		}
         960 = {
-            secede_province = HET
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = ukrainian
-                        has_pop_culture = cossack
-                    }
-                    militancy = 5
-                }
-                reduce_pop = 0.9
-            }
+            secede_province = FROM
+           
         }
         954 = {
-            secede_province = HET
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = ukrainian
-                        has_pop_culture = cossack
-                    }
-                    militancy = 5
-                }
-                reduce_pop = 0.9
-            }
+            secede_province = FROM
+            
+        }
+		955 = {
+            secede_province = FROM
         }
         ai_chance = {
             factor = 1

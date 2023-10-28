@@ -205,6 +205,7 @@ political_decisions = {
 			any_owned_province = {
 				is_core = CRI
 			}
+			NOT = { has_global_flag = kucuk_kaynarca_established }
 			NOT = {
 				has_country_flag = CRI_integrated
 			}
@@ -212,6 +213,10 @@ political_decisions = {
 		allow = {
 			state_n_government = 1
 			war = no
+			OR = {
+				CRI = { all_core = { owned_by = THIS }}
+				CRI = { all_core = { in_sphere = THIS }}
+			}
 			OR = {
 				OR = {
 					CRI = { owns = 1047 }
@@ -494,6 +499,7 @@ political_decisions = {
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = reclaimed_podolia }
+			NOT = { has_global_flag = kucuk_kaynarca_established }
 			exists = yes
 		}
 		allow = {
@@ -507,6 +513,8 @@ political_decisions = {
 			}
 			is_greater_power = yes
 			owns = 968
+			owns = 973
+			owns = 964
 		}
 		effect = {
 			set_country_flag = reclaimed_podolia
@@ -536,7 +544,9 @@ political_decisions = {
 		potential = {
 			tag = TUR
 			NOT = { has_country_flag = end_romanian_principalities }
+			NOT = { has_global_flag = united_romanian_principality }
 			exists = yes
+			ROM = { exists =  no }
 			OR = {
 				AND = {
 					WAL = {
@@ -555,6 +565,7 @@ political_decisions = {
 			}
 		}
 		allow = {
+			ROM = { exists =  no }
 			state_n_government = 1
 			OR = {
 				WAL = {
@@ -574,6 +585,14 @@ political_decisions = {
 				}
 				THIS = { any_owned_province = { is_core = MOL } }
 			}
+			NOT = { 
+				SIE = { 
+					AND = {
+						exists = yes
+						has_country_flag = embraced_transylvanian_identity 
+					}
+				}
+			}
 		}
 		effect = {
 			set_country_flag = end_romanian_principalities
@@ -584,6 +603,7 @@ political_decisions = {
 					tag = MOL
 					vassal_of = THIS
 					in_sphere = THIS
+					ai = yes
 				}
 				annex_to = THIS
 			}
@@ -592,6 +612,7 @@ political_decisions = {
 					tag = SIE
 					vassal_of = THIS
 					in_sphere = THIS
+					ai = yes
 				}
 				annex_to = THIS
 			}
@@ -600,6 +621,7 @@ political_decisions = {
 					tag = WAL
 					vassal_of = THIS
 					in_sphere = THIS
+					ai = yes
 				}
 				annex_to = THIS
 			}

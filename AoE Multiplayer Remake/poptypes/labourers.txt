@@ -719,6 +719,10 @@ promote_to =
 			factor = 5
 			nationalvalue = pm_militarist
 		}
+		modifier = {
+            factor = 8
+			has_country_flag = mobilzied_the_caroleans
+        }
         group = {
             modifier = {
                 factor = 2

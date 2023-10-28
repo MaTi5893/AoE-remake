@@ -19,6 +19,7 @@ political_decisions = {
         potential = {
             tag = SIE
             NOT = { has_country_flag = rakoczi_tried }
+			NOT = { has_country_flag = embraced_transylvanian_identity }
 			ai = yes
             OR = {
                 NOT = { has_global_flag = spanish_succesion_resolved }
@@ -89,6 +90,8 @@ political_decisions = {
             795 = { add_core = THIS }
             666 = { add_core = THIS }
             665 = { add_core = THIS }
+			792 = { add_core = HUN }
+            653 = { add_core = HUN }
             badboy = 10
         }
         ai_will_do = {
@@ -137,6 +140,8 @@ political_decisions = {
                 795 = { add_core = HUN }
                 666 = { add_core = HUN }
                 665 = { add_core = HUN }
+				792 = { add_core = HUN }
+                653 = { add_core = HUN }
             }
             badboy = 10
         }
@@ -162,6 +167,100 @@ political_decisions = {
         }
     }
 	
+	embrace_transylvanian_identity = {
+		picture = rakoczi
+		potential = {
+			primary_culture = romanian
+			NOT = { has_global_flag = united_romanian_principality }
+			NOT = { has_country_flag = embraced_transylvanian_identity }
+			NOT = { exists = ROM }
+			NOT = { tag = SIE }
+			NOT = { exists = HUN }
+		}
+		allow = {
+			OR = {
+				AND = {
+					SIE = { vassal_of = THIS }
+					SIE = { all_core = { owned_by = SIE }}
+				}
+				AND = {
+					NOT = { exists = SIE }
+					owns = 657
+					owns = 654
+				}
+			}
+		}
+		effect = {
+			inherit = SIE
+			all_core = {
+				add_core = SIE
+			}
+			change_tag = SIE
+			capital = 657
+			primary_culture = romanian
+			add_accepted_culture = hungarian
+			add_accepted_culture = north_german
+			prestige = -10
+			relation = {
+				who = AUS
+				value = -40
+			}
+			set_country_flag = embraced_transylvanian_identity
+		}
+	}
+	
+	embrace_slovak_hun = {
+		picture = become_hungary
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = embraced_slovak_hun }
+		}
+		allow = {
+			is_vassal = no
+			owns = 637
+			owns = 633
+		}
+		effect = {
+			add_accepted_culture = slovak
+			prestige = 5
+			set_country_flag = embraced_slovak_hun
+		}
+	}
+	
+	embrace_croat_hun = {
+		picture = become_hungary
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = embraced_croat_hun }
+		}
+		allow = {
+			is_vassal = no
+			owns = 771
+			owns = 779
+		}
+		effect = {
+			add_accepted_culture = croat
+			prestige = 5
+			set_country_flag = embraced_croat_hun
+		}
+	}
+	
+	embrace_ashkenazi_hun = {
+		picture = become_hungary
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = embraced_ashkenazi_hun }
+		}
+		allow = {
+			religious_minoritys = political_rights
+		}
+		effect = {
+			add_accepted_culture = ashkenazi
+			prestige = 5
+			set_country_flag = embraced_ashkenazi_hun
+		}
+	}
+	
 	proclaim_kingdom_of_hungary = {
 		picture = become_hungary
 		potential = {
@@ -172,14 +271,17 @@ political_decisions = {
 			owns = 641
 		}
 		effect = {
+			WAL = { all_core = { remove_core = THIS } }
+			MOL = { all_core = { remove_core = THIS } }
 			all_core = {
 				add_core = HUN
 				remove_core = THIS
 			}
 			change_tag = HUN
 			primary_culture = hungarian
-			remove_accepted_culture = romanian
+			add_accepted_culture = romanian
 			prestige = 20
+			capital = 641
 			relation = {
 				who = AUS
 				value = -100
@@ -202,6 +304,7 @@ political_decisions = {
 		potential = {
 			tag = SIE
 			NOT = { exists = ROM }
+			NOT = { has_global_flag = united_romanian_principality }
 		}
 		allow = {
 			ROM = {
@@ -222,8 +325,9 @@ political_decisions = {
 			}
 			change_tag = ROM
 			primary_culture = romanian
-			remove_accepted_culture = hungarian
-			prestige = 20
+			#remove_accepted_culture = hungarian
+			#remove_accepted_culture = north_german
+			prestige = 15
 			any_country = {
 				limit = {
 					in_sphere = THIS
@@ -256,6 +360,385 @@ political_decisions = {
 		}
 	}
 	
+	unite_moldavia_wallachia = {
+		picture = micheal_the_brave
+        potential = {
+            OR = {
+                tag = WAL
+                tag = MOL
+            }
+            NOT = { exists = ROM }
+			NOT = { has_global_flag = united_romanian_principality }
+        }
+
+        allow = {
+            OR = {
+                state_n_government = 1
+                is_vassal = no
+            }
+			OR = {
+				AND = {
+					owns = 670
+					owns = 664
+				}
+				AND = {
+					WAL = {
+						OR = {
+							in_sphere = THIS
+							vassal_of = THIS
+							all_core = {
+								owned_by = THIS
+							}
+						}	
+					}
+					MOL = {
+						OR = {
+							in_sphere = THIS
+							vassal_of = THIS
+							all_core = {
+								owned_by = THIS
+							}	
+						}
+					}	
+				}
+			} 
+        }
+
+        effect = {
+            prestige = 10
+            change_tag = ROM
+            random_country = {
+                limit = {
+                    tag = WAL
+                    exists = yes
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = MOL
+                    exists = yes
+                }
+                annex_to = THIS
+            }
+            capital = 664
+			TUR = { release_vassal = THIS }
+			set_global_flag = united_romanian_principality
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	create_romanian_state = {
+		picture = map_moldavia
+        potential = {
+			is_greater_power = yes
+            NOT = { exists = ROM }
+			capital_scope = { continent = europe }
+			NOT = { has_country_flag = end_romanian_principalities }
+			NOT = { has_global_flag = united_romanian_principality }
+			OR = {
+                any_owned_province = {
+                    any_neighbor_province = { is_core = ROM }
+                }
+                is_sphere_leader_of = WAL
+                is_sphere_leader_of = MOL
+            }
+        }
+
+        allow = {
+			war = no
+            is_greater_power = yes
+            state_n_government = 1         							
+			AND = {
+				WAL = {
+					OR = {
+						AND = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+							war = no
+							ai = no
+						}
+						AND = {
+							AND = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+							war = no
+							ai = yes
+						}
+						all_core = {
+							owned_by = THIS
+						}
+					}
+				}
+				MOL = {
+					OR = {
+						AND = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+							war = no
+							ai = no
+						}
+						AND = {
+							AND = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+							war = no
+							ai = yes
+						}
+						all_core = {
+							owned_by = THIS
+						}
+					}
+				}
+			} 
+        }
+
+        effect = {
+            prestige = 10
+            random_country = {
+                limit = {
+                    tag = WAL
+                    exists = yes
+					ai = yes
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = MOL
+                    exists = yes
+					ai = yes
+                }
+                annex_to = THIS
+            }
+			random_country = {
+                limit = {
+                    tag = WAL
+                    exists = yes
+					ai = no
+                }
+                change_tag = ROM
+            }
+            random_country = {
+                limit = {
+                    tag = MOL
+                    exists = yes
+					ai = no
+                }
+                change_tag = ROM
+            }
+			any_owned = {
+				limit = {
+					is_core = ROM
+					NOT = { is_core = THIS }
+				}
+				secede_province = ROM
+			}
+            ROM = { capital = 664 }
+			create_vassal = ROM
+            create_alliance = ROM
+            diplomatic_influence = {
+                who = ROM
+                value = 300
+            }
+			set_global_flag = united_romanian_principality
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	treaty_of_lutsk = {
+		picture = map_moldavia
+        potential = {         
+            tag = MOL
+			vassal_of = TUR
+			NOT = { has_global_flag = pruth_river_campaign }
+			NOT = { has_global_flag = rus_pruth_defeat }
+			NOT = { has_global_flag = rus_pruth_victory }
+        }
+
+        allow = {
+			OR = {
+				AND = {
+					OR = {
+						TUR = { war_with = TOR }
+						TUR = { war_with = RUS }
+						war_with = TOR
+						war_with = RUS
+					}
+					OR = {
+						678 = { controlled_by = TOR }
+						678 = { controlled_by = RUS }
+						670 = { controlled_by = TOR }
+						670 = { controlled_by = RUS }
+					}
+					OR = {
+						in_sphere = TUR
+						part_of_sphere = no
+					}
+					vassal_of = TUR
+				}
+				MOL = {
+					vassal_of = TUR
+					OR = {
+						in_sphere = TOR
+						in_sphere = RUS	
+					}	
+				}
+			} 
+        }
+
+        effect = {
+            prestige = 5
+			random_country = {
+				limit = {
+					tag = TOR
+					exists = yes
+				}
+				country_event = 173100
+			}
+			random_country = {
+				limit = {
+					tag = RUS
+					exists = yes
+				}
+				country_event = 173100
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	negotiate_russian_alliance = {
+		picture = map_wallachia
+        potential = {         
+            tag = WAL
+			vassal_of = TUR
+			NOT = { has_country_flag = anti_ottoman_conspiracy }
+			NOT = { has_global_flag = pruth_river_campaign }
+			NOT = { has_global_flag = rus_pruth_defeat }
+			NOT = { has_global_flag = rus_pruth_victory }
+        }
+
+        allow = {
+			OR = {
+				AND = {
+					OR = {
+						TUR = { war_with = TOR }
+						TUR = { war_with = RUS }
+						war_with = TOR
+						war_with = RUS
+					}
+					OR = {
+						668 = { controlled_by = RUS }
+						668 = { controlled_by = RUS }
+						675 = { controlled_by = TOR }
+						675 = { controlled_by = RUS }
+					}
+					OR = {
+						in_sphere = TUR
+						part_of_sphere = no
+					}
+					vassal_of = TUR
+				}
+				WAL = {
+					vassal_of = TUR
+					OR = {
+						in_sphere = TOR
+						in_sphere = RUS	
+					}	
+				}
+			} 
+        }
+
+        effect = {
+            prestige = 5
+			random_country = {
+				limit = {
+					tag = TOR
+					exists = yes
+				}
+				country_event = 173104
+			}
+			random_country = {
+				limit = {
+					tag = RUS
+					exists = yes
+				}
+				country_event = 173104
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	negotiate_habsburg_alliance = {
+		picture = map_wallachia
+        potential = {         
+            tag = WAL
+			vassal_of = TUR
+			NOT = { has_country_flag = anti_ottoman_conspiracy }
+			NOT = { has_global_flag = pruth_river_campaign }
+			NOT = { has_global_flag = rus_pruth_defeat }
+			NOT = { has_global_flag = rus_pruth_victory }
+        }
+
+        allow = {
+			OR = {
+				AND = {
+					OR = {
+						TUR = { war_with = AUS }
+						war_with = AUS
+					}
+					OR = {
+						665 = { controlled_by = AUS }
+						795 = { controlled_by = AUS }
+					}
+					OR = {
+						in_sphere = TUR
+						part_of_sphere = no
+					}
+					vassal_of = TUR
+				}
+				WAL = {
+					vassal_of = TUR
+					in_sphere = AUS
+				}
+			} 
+        }
+
+        effect = {
+            prestige = 5
+			set_country_flag = anti_ottoman_conspiracy
+			random_country = {
+				limit = {
+					tag = RUS
+					exists = yes
+				}
+				country_event = 173104
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
 	kuruc = {
 		picture = kuruc
 		potential = {
@@ -263,7 +746,7 @@ political_decisions = {
 			NOT = { has_country_flag = kuruc }
 		}
 		allow = {
-			war = yes
+			AUS = { war_with = THIS }
 		}
 		effect = {
 			set_country_flag = kuruc

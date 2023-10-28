@@ -589,6 +589,71 @@ army = {
 }
 
 army = {
+    name = "VIII. Armee"
+    location = 2533
+
+    regiment = {
+        name= "2.4. Infanteriedivision"
+        type = infantry
+        home = 654
+    }
+
+    regiment = {
+        name= "1.5. Infanteriedivision"
+        type = infantry
+        home = 2533
+    }
+
+    regiment = {
+        name= "3.5. Infanteriedivision"
+        type = infantry
+        home = 657
+    }
+
+    regiment = {
+        name= "1.2. Kavalleriedivision"
+        type = hussar
+        home = 652
+    }
+
+    regiment = {
+        name= "2.2. Kavalleriedivision"
+        type = infantry
+        home = 637
+    }
+
+    regiment = {
+        name= "3.2. Kavalleriedivision"
+        type = artillery
+        home = 638
+    }
+
+    regiment = {
+        name= "1.1. Infanteriedivision"
+        type = artillery
+        home = 636
+    }
+
+    regiment = {
+        name= "2.1. Infanteriedivision"
+        type = artillery
+        home = 635
+    }
+
+    regiment = {
+        name= "3.1. Infanteriedivision"
+        type = artillery
+        home = 634
+    }
+
+    regiment = {
+        name= "1.2. Infanteriedivision"
+        type = artillery
+        home = 633
+    }
+}
+
+army = {
     name = "VII. Armee"
     location = 623
 

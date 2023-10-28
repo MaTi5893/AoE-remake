@@ -406,6 +406,30 @@ army = {
         type = cuirassier
         home = 3252
     }
+	
+	regiment = {
+        name= "Regiment der Gardes du Corps"
+        type = plane
+        home = 695
+    }
+
+    regiment = {
+        name= "I. Linieninfanteriebrigade"
+        type = plane
+        home = 695
+    }
+
+    regiment = {
+        name= "II. Linieninfanteriebrigade"
+        type = plane
+        home = 695
+    }
+
+    regiment = {
+        name= "III. Linieninfanteriebrigade"
+        type = plane
+        home = 553
+    }
 }
 
 navy = {

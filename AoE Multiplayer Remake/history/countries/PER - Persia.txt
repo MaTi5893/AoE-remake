@@ -6,10 +6,10 @@ culture = tajik
 religion = shiite
 government = absolute_monarchy
 civilized = yes
-prestige = 10
-plurality = 0.0
+prestige = 12
+plurality = 1.0
 nationalvalue = pm_no_minister
-literacy = 0.03
+literacy = 0.105
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
 
 # Political reforms
@@ -30,6 +30,7 @@ health_care = trinket_health_care
 unemployment_subsidies = trinket_subsidies
 pensions = acceptable_pensions
 school_reforms = no_schools
+promotion_laws = skill_and_merit_based
 
 # New Reforms
 conscription = four_year_draft
@@ -53,9 +54,9 @@ upper_house = {
 }
 
 set_country_flag = shiite_country
+set_country_flag = nepotism_allowed
+set_country_flag = skill_and_merit_allowed
 decision = per_setup
-
-
 
 
 govt_flag = {
@@ -75,11 +76,14 @@ guild_based_production = 1
 late_enlightenment_philosophy = 1
 enlightenment_thought = 1
 piston_steam_engine = 1
+freedom_of_trade = 1
 #mechanical_production = 1
 clipper_design = 1
 malthusian_thought = 1
 basic_chemistry = 1
 piston_steam_engine = 1
+experimental_railroad = 1
+
 
 # Inventions
 test_irregular = yes
