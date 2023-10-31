@@ -1,4 +1,40 @@
 political_decisions = {
+	summon_the_estates_general = {
+        picture = estates_general
+        potential = {
+            primary_culture = french
+            NOT = { government = democracy }
+            NOT = { government = proletarian_dictatorship }
+            NOT = { government = fascist_dictatorship }
+            exists = yes
+            NOT = { has_country_flag = estates_general_summoned }
+        }
+        allow = {
+			is_ideology_enabled = communist
+			has_country_modifier = clergy_and_nobility_domination
+            war = no
+        }
+        effect = {
+            set_country_flag = estates_general_summoned
+			remove_country_modifier = clergy_and_nobility_domination
+			add_accepted_culture = arpitan
+			add_accepted_culture = breton
+			add_accepted_culture = occitan
+            country_event = 171136
+			any_pop = {
+				consciousness = 3
+				militancy = -1
+			}
+        }
+
+        ai_will_do = {
+            factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1789 }
+			}
+        }
+    }
 	rights_of_man = {
 		picture = rights_of_man
 		potential = {
@@ -42,7 +78,7 @@ political_decisions = {
 			war = no
 			nationalism_n_imperialism = 1
 			OR = {
-				average_militancy = 4
+				average_militancy = 10
 				is_ideology_enabled = communist
 			}
 		}
@@ -61,28 +97,7 @@ political_decisions = {
 				militancy = 1
 			}
 			add_accepted_culture = arpitan
-			add_accepted_culture = picard
 			add_accepted_culture = breton
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	enforce_french_language_campaigns = {
-		picture = tolerance_edict
-		potential = {
-			primary_culture = french
-			NOT = { has_country_flag = edict_of_tolerance }
-			NOT = { has_country_modifier = french_language_campaign }
-			exists = yes
-		}
-		allow = {
-			war = no
-			NOT = { has_country_modifier = french_language_campaign }
-		}
-		effect = {
-			country_event = 171142
 		}
 		ai_will_do = {
 			factor = 1
@@ -230,7 +245,6 @@ political_decisions = {
 				}
 			}
 			set_country_flag = louis_dream
-			add_accepted_culture = picard
 			398 = {
 				add_core = THIS
 			}
