@@ -6947,6 +6947,7 @@ beaver_trade = {
 sugar_trade = {
 	local_artisan_output = 0.2
 	local_RGO_output = 0.15
+	local_RGO_throughput = 0.15
 	farm_rgo_size = -0.1
 	icon = 13
 }

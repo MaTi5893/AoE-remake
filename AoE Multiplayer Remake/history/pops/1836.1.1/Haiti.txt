@@ -3,19 +3,19 @@
 #Port au Prince (312000/78000 POPS)
 2213 = {
     aristocrats = {
-        culture = afro_antillean
+        culture = french
         religion = catholic
         size = 825
     }
 
     bureaucrats = {
-        culture = afro_antillean
+        culture = french
         religion = catholic
         size = 150
     }
 
     officers = {
-        culture = afro_antillean
+        culture = french
         religion = catholic
         size = 150
     }
@@ -41,13 +41,25 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 68300
+        size = 52300
+    }
+
+	farmers = {
+        culture = afro_antillean
+        religion = catholic
+        size = 2300
+    }
+	
+    farmers = {
+        culture = french
+        religion = catholic
+        size = 4300
     }
 }
 #Cap Haitien (204000/51000 POPS)
 2215 = {
     aristocrats = {
-        culture = afro_antillean
+        culture = french
         religion = catholic
         size = 550
     }
@@ -73,7 +85,18 @@
     slaves = {
         culture = afro_antillean
         religion = catholic
-        size = 46425
+        size = 38425
     }
 
+	farmers = {
+        culture = afro_antillean
+        religion = catholic
+        size = 2300
+    }
+	
+    farmers = {
+        culture = french
+        religion = catholic
+        size = 8300
+    }
 }
