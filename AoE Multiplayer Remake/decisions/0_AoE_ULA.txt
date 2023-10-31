@@ -1,39 +1,39 @@
 political_decisions = {
 
-        fund_new_orlean = {
-        picture = new_orlean
-        potential = {
-            owns = 139
-            primary_culture = french
-            exists = yes
-            NOT = {
-                has_country_flag = new_orlean
-            }
-        }
-        allow = {
-			OR = {
-				139 = {
-					has_building = fort
-					has_building = naval_base
-				}
-				year = 1730
-			}
-        }
-        effect = {
-            set_country_flag = new_orlean
-            prestige = 15
-            139 = {
-                change_province_name = "Nouvelle-Orleans"
-                add_province_modifier = {
-                    name = recently_built_city
-                    duration = 1825
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+    #fund_new_orlean = {
+    #    picture = new_orlean
+    #    potential = {
+    #        owns = 139
+    #        primary_culture = french
+    #        exists = yes
+    #        NOT = {
+    #            has_country_flag = new_orlean
+    #        }
+    #    }
+    #    allow = {
+	#		OR = {
+	#			139 = {
+	#				has_building = fort
+	#				has_building = naval_base
+	#			}
+	#			year = 1730
+	#		}
+    #    }
+    #    effect = {
+    #        set_country_flag = new_orlean
+    #        prestige = 15
+    #        139 = {
+    #            change_province_name = "Nouvelle-Orleans"
+    #            add_province_modifier = {
+    #                name = recently_built_city
+    #                duration = 1825
+    #            }
+    #        }
+    #    }
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
 	
     connect_french_new_world = {
         picture = new_france_louisiana

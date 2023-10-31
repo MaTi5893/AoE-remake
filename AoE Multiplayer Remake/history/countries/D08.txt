@@ -27,10 +27,10 @@ health_care = no_health_care
 unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
-border_policy = open_borders
+
 
 set_country_flag = protestant_country
-centralization = unitary
+
 colonial_policy = no_colonies
 
 
@@ -46,8 +46,8 @@ upper_house = { # inherit
     communist = 0
 }
 #New Reforms
-conscription = two_year_draft
+
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legal
+
 citizens_rights = primary_culture_only

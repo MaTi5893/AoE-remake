@@ -17,6 +17,7 @@ political_decisions = {
         effect = {
             set_country_flag = estates_general_summoned
 			remove_country_modifier = clergy_and_nobility_domination
+			clr_country_flag = clergy_and_nobility_domination
 			add_accepted_culture = arpitan
 			add_accepted_culture = breton
 			add_accepted_culture = occitan
@@ -35,78 +36,9 @@ political_decisions = {
 			}
         }
     }
-	rights_of_man = {
-		picture = rights_of_man
-		potential = {
-			primary_culture = french
-			NOT = { has_country_modifier = rights_of_man }
-			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				AND = {
-					is_ideology_enabled = communist
-					pop_militancy = 4
-				}
-				government = proletarian_dictatorship
-				revolution_n_counterrevolution = 1
-			}
-			has_country_flag = edict_of_tolerance
-		}
-		
-		effect = {
-			any_pop = {
-				militancy = -2
-			}
-			add_country_modifier = {
-				name = rights_of_man
-				duration = -1
-			}
-			add_accepted_culture = occitan
-		}
-	}
-	
-	edict_of_tolerance = {
-		picture = tolerance_edict
-		potential = {
-			primary_culture = french
-			NOT = { has_country_flag = edict_of_tolerance }
-			exists = yes
-		}
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-			OR = {
-				average_militancy = 10
-				is_ideology_enabled = communist
-			}
-		}
-		effect = {
-			set_country_flag = edict_of_tolerance
-			any_pop = {
-				limit = {
-					religion = protestant 
-				}
-				militancy = -6
-			}
-			any_pop = {
-				limit = {
-					religion = catholic 
-				}
-				militancy = 1
-			}
-			add_accepted_culture = arpitan
-			add_accepted_culture = breton
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 
 	enforce_french_language_campaigns = {
-		picture = tolerance_edict
+		picture = fronde
 		potential = {
 			primary_culture = french
 			NOT = { has_country_flag = edict_of_tolerance }
@@ -124,6 +56,10 @@ political_decisions = {
 			factor = 1
 		}
 	}
+
+#################
+####Parlement####
+#################
 	
 	reign_in_the_paris_parlement = {
 		picture = paris_parlement_resistance
@@ -226,9 +162,12 @@ political_decisions = {
 		}
 	}
 	
-	
+################
+####Louis XV####
+################
+
 	first_governemnt_louis_xv = {
-		picture = 
+		picture = little_louis
 		potential = {
 			tag = BOR
 			OR = {
@@ -250,7 +189,7 @@ political_decisions = {
 	}
 	
 	second_governemnt_louis_xv = {
-		picture = 
+		picture = big_louis
 		potential = {
 			tag = BOR
 			OR = {
@@ -271,8 +210,10 @@ political_decisions = {
 		}
 	}
 
+################
+
 	establish_ecole_militire = {
-		picture = fra_soldier
+		picture = ecole_militare
 		potential = {
 			primary_culture = french
 			NOT = { has_country_flag = established_ecole_militire }
@@ -367,41 +308,6 @@ political_decisions = {
 			}
 		}
 		effect = {
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							owns = 387
-							owns = 389
-							owns = 397
-						}
-					}
-				}
-				owner = { 
-					badboy = 15
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							owns = 387
-							owns = 389
-							owns = 397
-						}
-						NOT = {
-							AND = {
-							owns = 387
-							owns = 389
-							owns = 397
-							}
-						}
-					}
-				}
-				owner = { 
-					badboy = 10
-				}
-			}
 			set_country_flag = louis_dream
 			398 = {
 				add_core = THIS
@@ -423,16 +329,6 @@ political_decisions = {
 			396 = {	add_core = THIS }
 			381 = {	add_core = THIS }
 			LIG = {	all_core = { add_core = THIS } }
-			random_country = {
-				limit = {
-					tag = LOR
-					in_sphere = THIS
-					ai = yes
-				}
-				THIS = {
-					create_vassal = LOR
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -764,276 +660,7 @@ political_decisions = {
 			set_global_flag = bourbons_supported_jacobite_pretenders
 		}
 	}
-	
-	begin_continental_blockade = {
-		picture = dreams_of_empire
-		potential = {
-			primary_culture = french
-			OR = {
-			government = proletarian_dictatorship
-			government = fascist_dictatorship
-			}
-			OR = {
-				war_with = GBJ
-				war_with = ENG
-				war_with = GBR
-			}
-			NOT = { has_global_flag = begun_continental_blockade }
-		}
-		allow = {
-			OR = {
-				war_with = GBJ
-				war_with = ENG
-				war_with = GBR
-			}
-		}
-		effect = {
-			random_country = {
-				limit = {
-					exists = GBR
-					tag = GBR
-				}
-				country_event = 171125
-			}
-			random_country = {
-				limit = {
-					exists = GBJ
-					tag = GBJ
-				}
-				country_event = 171125
-			}
-			random_country = {
-				limit = {
-					exists = ENG
-					tag = ENG
-				}
-				country_event = 171125
-			}
-			prestige = 5
-			set_global_flag = begun_continental_blockade
-		}
-	}
-	
-	join_continental_blockade = {
-		picture = dreams_of_empire
-		potential = {
-			capital_scope = {
-				continent = europe
-			}
-			OR = {
-				sphere_owner = {
-					primary_culture = french
-				}
-				OR = {
-					war_with = GBJ
-					war_with = ENG
-					war_with = GBR
-				}
-			}
-			has_global_flag = begun_continental_blockade
-			NOT = { has_country_flag = joined_continental_blockade }
-		}
-		allow = {
-			OR = {
-				OR = {
-					war_with = GBJ
-					war_with = ENG
-					war_with = GBR
-				}
-				NOT = {
-					truce_with = GBJ
-					truce_with = ENG
-					truce_with = GBR
-				}
-				AND = {
-					OR = {
-						alliance_with = FRA
-						alliance_with = BOR
-					}
-					is_greater_power = yes
-				}
-				sphere_owner = {
-					primary_culture = french
-				}
-			}
-		}
-		effect = {
-			random_country = {
-				limit = {
-					exists = GBR
-					tag = GBR
-				}
-				country_event = 171126
-			}
-			random_country = {
-				limit = {
-					exists = GBJ
-					tag = GBJ
-				}
-				country_event = 171126
-			}
-			random_country = {
-				limit = {
-					exists = ENG
-					tag = ENG
-				}
-				country_event = 171126
-			}
-			set_country_flag = joined_continental_blockade 
-		}
-	}
-	
-	leave_continental_blockade = {
-		picture = dreams_of_empire
-		potential = {
-			NOT = { primary_culture = french }
-			OR = {
-				sphere_owner = {
-					primary_culture = french
-				}
-				OR = {
-					war_with = GBJ
-					war_with = ENG
-					war_with = GBR
-				}
-			}
-			has_global_flag = begun_continental_blockade
-			has_country_flag = joined_continental_blockade
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			random_country = {
-				limit = {
-					exists = GBR
-					tag = GBR
-				}
-				country_event = 171128
-			}
-			random_country = {
-				limit = {
-					exists = GBJ
-					tag = GBJ
-				}
-				country_event = 171128
-			}
-			random_country = {
-				limit = {
-					exists = ENG
-					tag = ENG
-				}
-				country_event = 171128
-			}
-			random_country = {
-				limit = {
-					exists = BOR
-					tag = BOR
-				}
-				relation = {
-					who = THIS
-					value = -150
-				}
-				casus_belli = {
-					target = THIS
-					type = humiliate
-					months = 12
-				}
-			}
-			random_country = {
-				limit = {
-					exists = FRA
-					tag = FRA
-				}
-				relation = {
-					who = THIS
-					value = -150
-				}
-				casus_belli = {
-					target = THIS
-					type = humiliate
-					months = 12
-				}
-			}
-			clr_country_flag = joined_continental_blockade 
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						exists = GBR
-						relation = {
-							who = GBR
-							value = 150
-						}
-					}
-					AND = {
-						exists = GBJ
-						relation = {
-							who = GBJ
-							value = 150
-						}
-					}
-					AND = {
-						exists = ENG
-						relation = {
-							who = ENG
-							value = 150
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					in_sphere = FRA
-					in_sphere = BOR
-				}
-			}
-		}
-	}
-	
-	end_continental_blockade = {
-		picture = dreams_of_empire
-		potential = {
-			primary_culture = french
-			OR = {
-				war_with = GBR
-				war_with = ENG
-			}
-			has_global_flag = begun_continental_blockade
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			random_country = {
-				limit = {
-					exists = GBR
-					tag = GBR
-				}
-				country_event = 171127
-			}
-			random_country = {
-				limit = {
-					exists = GBJ
-					tag = GBJ
-				}
-				country_event = 171127
-			}
-			random_country = {
-				limit = {
-					exists = ENG
-					tag = ENG
-				}
-				country_event = 171127
-			}
-			clr_global_flag = begin_continental_blockade
-		}
-	}
-	
+
     create_confed_rhein = {
         picture = become_rhenish_confederacy
         potential = {
@@ -1134,32 +761,5 @@ political_decisions = {
             factor = 1
         }
 
-    }
-	
-	burn_down_versallies = {
-        picture = versallies
-        potential = {
-            NOT = { 425 = { is_core = THIS } }
-            exists = yes
-            425 = {
-				controlled_by = THIS
-				has_province_modifier = palace_of_versallis
-            }
-        }
-        allow = {
-            425 = { controlled_by = THIS }
-        }
-        effect = {
-            set_global_flag = white_house_burned
-			425 = {
-			owner = {
-            country_event = 171140
-			}
-			}
-            badboy = 5
-        }
-        ai_will_do = {
-            factor = 1
-        }
     }
 }

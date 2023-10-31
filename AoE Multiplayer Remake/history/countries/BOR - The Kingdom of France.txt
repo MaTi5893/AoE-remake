@@ -20,7 +20,6 @@ slavery = yes_slavery
 upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = yes_meeting
-press_rights = censored_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
 political_parties = underground_parties
@@ -36,10 +35,9 @@ health_care = low_health_care #slightly influential bureaucracy
 school_reforms = low_schools
 
 #New Reforms
-conscription = one_year_draft
 debt_law = serfdom
 penal_system = capital_punishment
-centralization = unitary
+absolutism = yes_absolutism
 
 set_country_flag = catholic_country
 decision = beaver_trade_setup
@@ -99,7 +97,6 @@ upper_house = {
 oob = "BOR_oob.txt"
 
 schools = culture_tech_school
-decision = lorraine_rename
 decision = bor_louis_setup
 
 govt_flag = {
