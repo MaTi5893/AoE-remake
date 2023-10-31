@@ -89,20 +89,162 @@ political_decisions = {
 		}
 	}
 	
+	reign_in_the_paris_parlement = {
+		picture = paris_parlement_resistance
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			NOT = { has_country_flag = reigned_in_the_paris_parlement }
+		}
+		allow = {
+			money = 1000000
+			nationalism_n_imperialism = 1
+			FRA_461 = { NOT = { has_province_modifier = parlement_resistance } } #Languedoc
+			FRA_451 = { NOT = { has_province_modifier = parlement_resistance } } #Rhone
+			FRA_435 = { NOT = { has_province_modifier = parlement_resistance } } #Loire 
+			FRA_399 = { NOT = { has_province_modifier = parlement_resistance } } #Picardie
+			FRA_467 = { NOT = { has_province_modifier = parlement_resistance } } #Provence
+			FRA_412 = { NOT = { has_province_modifier = parlement_resistance } } #Alsace
+			FRA_418 = { NOT = { has_province_modifier = parlement_resistance } } #Normandie
+			FRA_442 = { NOT = { has_province_modifier = parlement_resistance } } #Poitou			 
+			FRA_455 = { NOT = { has_province_modifier = parlement_resistance } } #Le Midi
+			FRA_445 = { NOT = { has_province_modifier = parlement_resistance } } #Limousin
+			FRA_420 = { NOT = { has_province_modifier = parlement_resistance } } #Bretagne 
+			FRA_428 = { NOT = { has_province_modifier = parlement_resistance } } #Bourgogne 
+			FRA_404 = { NOT = { has_province_modifier = parlement_resistance } } #Nord-Pas-De-Calais/Artois
+			FRA_411 = { NOT = { has_province_modifier = parlement_resistance } } #Lorraine
+			FRA_432 = { NOT = { has_province_modifier = parlement_resistance } } #Franche-Comté
+			FRA_448 = { NOT = { has_province_modifier = parlement_resistance } } #Auvergne 
+			FRA_458 = { NOT = { has_province_modifier = parlement_resistance } } #Aquitaine
+			FRA_438 = { NOT = { has_province_modifier = parlement_resistance } } #Region Centre
+		}
+		effect = {
+			set_country_flag = reigned_in_the_paris_parlement
+			money = -1000000
+			FRA_425 = { any_owned_province = { remove_province_modifier = parlement_resistance } }
+			random_owned = {
+				limit = {
+					owner = {
+						promotion_laws = privlage_benefits
+					}
+				}
+				owner = {
+					social_reform = nepotism
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	
+	pacify_rebelling_parlement = {
+		picture = parlement_resistance
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			NOT = { has_country_flag = reigned_in_the_paris_parlement }
+			OR = {
+			FRA_461 = { has_province_modifier = parlement_resistance } #Languedoc
+			FRA_451 = { has_province_modifier = parlement_resistance } #Rhone
+			FRA_435 = { has_province_modifier = parlement_resistance } #Loire 
+			FRA_399 = { has_province_modifier = parlement_resistance } #Picardie
+			FRA_467 = { has_province_modifier = parlement_resistance } #Provence
+			FRA_412 = { has_province_modifier = parlement_resistance } #Alsace
+			FRA_418 = { has_province_modifier = parlement_resistance } #Normandie
+			FRA_442 = { has_province_modifier = parlement_resistance } #Poitou			 
+			FRA_455 = { has_province_modifier = parlement_resistance } #Le Midi
+			FRA_445 = { has_province_modifier = parlement_resistance } #Limousin
+			FRA_420 = { has_province_modifier = parlement_resistance } #Bretagne 
+			FRA_428 = { has_province_modifier = parlement_resistance } #Bourgogne 
+			FRA_404 = { has_province_modifier = parlement_resistance } #Nord-Pas-De-Calais/Artois
+			FRA_411 = { has_province_modifier = parlement_resistance } #Lorraine
+			FRA_432 = { has_province_modifier = parlement_resistance } #Franche-Comté
+			FRA_448 = { has_province_modifier = parlement_resistance } #Auvergne 
+			FRA_458 = { has_province_modifier = parlement_resistance } #Aquitaine
+			FRA_438 = { has_province_modifier = parlement_resistance } #Region Centre
+			}
+		}
+		allow = {
+			money = 500000
+		}
+		effect = {
+			money = -500000
+			random_state = {
+				limit = {
+					any_owned_province = { NOT = { region = FRA_425 } has_province_modifier = parlement_resistance }
+				}
+				any_owned = { remove_province_modifier = parlement_resistance }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	first_governemnt_louis_xv = {
+		picture = 
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			NOT = { has_country_flag = first_governemnt_louis_xv }
+			exists = yes
+		}
+		allow = {
+			has_country_flag = louis_xiv_dead
+			NOT = { has_country_modifier = louis_xv_regency }
+		}
+		effect = {
+			country_event = 171109
+			set_country_flag = first_governemnt_louis_xv
+		}
+	}
+	
+	second_governemnt_louis_xv = {
+		picture = 
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			has_country_flag = first_governemnt_louis_xv
+			NOT = { has_country_flag = second_governemnt_louis_xv }
+			exists = yes
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			country_event = 171110
+			set_country_flag = second_governemnt_louis_xv
+		}
+	}
 	establish_ecole_militire = {
 		picture = fra_soldier
 		potential = {
 			primary_culture = french
-			is_greater_power = yes
 			NOT = { has_country_flag = established_ecole_militire }
 			exists = yes
 		}
 		allow = {
 			army_nco_training = 1
-			money = 100000
 		}
 		effect = {
-			money = -100000
 			any_pop = {
 				limit = {
 					culture = french
@@ -184,14 +326,8 @@ political_decisions = {
 					ideological_thought = 1
 					NOT = { has_global_flag = france_lost_succ }
 				}
-				AND = {
-					nationalism_n_imperialism = 1
-					war_policy = jingoism
-				}
+				nationalism_n_imperialism = 1
 			}
-			NOT = { has_country_modifier = no_more_war }
-			NOT = { has_country_modifier = peasant_turmoil }
-			has_recently_lost_war = no
 		}
 		effect = {
 			random_owned = {
@@ -402,7 +538,6 @@ political_decisions = {
 			LOR = { exists = yes }
 		}
 		allow = {
-			state_n_government = 1
 			LOR = { in_sphere = THIS }
 			war = no
 		}

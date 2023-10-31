@@ -342,14 +342,17 @@ country_event = {
 }
 country_event = {
 	id = 171108
-	title = "Death of Louis XIV"
+	title = "Death of Louis XIV & The Regency"
 	desc = "EVTDESC171108"
 	picture = louis_xiv_ded
 	fire_only_once = yes
 	
 	trigger = {
 		has_country_modifier = louis_grande
-		year = 1715
+		OR = {
+			year = 1715
+			has_global_flag = france_lost_succ
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -359,49 +362,187 @@ country_event = {
 	option = {
 		name = "Telle tragedie!"
 		prestige = 5
+		set_country_flag = louis_xiv_dead
 		remove_country_modifier = louis_grande
+		add_country_modifier = {
+			name = louis_xv_regency
+			duration = 1825
+		}
+		nationalvalue = pm_nobleman
 	}
 }
-#####
+####louis XV####
 country_event = {
 	id = 171109
-	title = "France and the Third Estate"
+	title = "The First Government Of Louis XV"
 	desc = "EVTDESC171109"
-	picture = peasants
-	fire_only_once = yes
+	picture = louis_xv_gov
+	is_triggered_only = yes
 	
-	trigger = {
-		primary_culture = french
-		OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-			}
-		OR = {
-			average_militancy = 4
-			has_recently_lost_war = yes
+	option = {
+		name = "Appoint Louis Henri"
+		prestige = 5
+		remove_country_modifier = louis_grande
+		add_country_modifier = {
+			name = louis_henri_gov
+			duration = 10950
 		}
-		is_ideology_enabled = communist
-		OR = {
-			blockade = 0.85
-			poor_tax = 0.65
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 9
+		nationalvalue = pm_nobleman
 	}
 	
 	option = {
-		name = "Let them eat cake or something..."
+		name = "Appoint André-Hercule de Fleury"
 		prestige = 5
+		remove_country_modifier = louis_grande
 		add_country_modifier = {
-			name = peasant_turmoil
-			duration = -1
+			name = de_fleury_gov
+			duration = 3650
+		}
+		nationalvalue = pm_clergyman
+	}
+}
+country_event = {
+	id = 171110
+	title = "The Second Government Of Louis XV"
+	desc = "EVTDESC171110"
+	picture = louis_xv_gov
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assume personal rule"
+		prestige = 5
+		remove_country_modifier = louis_grande
+		add_country_modifier = {
+			name = louis_xv
+			duration = 3650
+		}
+		nationalvalue = pm_no_minister
+	}
+	
+	option = {
+		name = "Appoint Duke de Choiseul"
+		prestige = 5
+		remove_country_modifier = louis_grande
+		add_country_modifier = {
+			name = de_choiseul_gov
+			duration = 3650
+		}
+		nationalvalue = pm_militarist
+	}
+}
+###Parlement Rebelion###
+country_event = {
+	id = 171111
+	title = "The Paris Parlement Rebellion"
+	desc = "EVTDESC171111"
+	picture = parlement_resistance
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { safety_regulations = no_safety }
+		NOT = { safety_regulations = trinket_safety }
+		NOT = { has_country_modifier = louis_grande }
+	}
+	
+	option = {
+		name = "These damned nobles!"
+		prestige = 5
+		FRA_425 = {
+			add_province_modifier = {
+				name = parlement_resistance
+				duration = -1
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
 		}
 	}
 }
-
+country_event = {
+	id = 171112
+	title = "The Paris Parlement Rebellion"
+	desc = "EVTDESC171112"
+	picture = parlement_resistance
+	
+	trigger = {
+		tag = BOR
+		FRA_425 = { has_province_modifier = parlement_resistance }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 2
+			has_country_modifier = louis_henri_gov
+		}
+		modifier = {
+			factor = 5
+			NOT = { year = 1730 }
+		}
+	}
+	
+	option = {
+		name = "These damned nobles!"
+		random_owned = {
+			limit = {
+				continent = europe
+				NOT = {  has_province_modifier = parlement_resistance }
+			}
+			state_scope = {
+				any_owned = {
+					add_province_modifier = {
+						name = parlement_resistance
+						duration = -1
+					}
+					any_pop = {
+						limit = { NOT = { strata = rich } }
+						ideology = {
+							value = liberal
+							factor = 0.02
+						}
+						scaled_consciousness = {
+							ideology = liberal
+							factor = 4
+						}
+					}
+				}
+			}
+		}
+	}
+}
 #####India#####
 
 country_event = {
@@ -654,18 +795,15 @@ country_event = {
 	news = yes
 	trigger = {
 		primary_culture = french
-		is_greater_power = yes
 		capital = 425
 		NOT = { government = proletarian_dictatorship }
 		NOT = { government = democracy }
 		OR = {
-			AND = {
-				NOT = { has_country_flag = third_estate_satisfied }
-				has_country_flag = neglecting_the_third_estate
-			}
+			has_country_flag = neglecting_the_third_estate
 			year = 1789
 		}
-		has_country_modifier = peasant_turmoil
+		NOT = { has_country_flag = third_estate_satisfied }
+		has_country_modifier = clergy_and_nobility_domination
 	}
 	mean_time_to_happen = {
 		months = 4
@@ -1261,9 +1399,31 @@ country_event = {
 				}
             }
         }
-		add_country_modifier = {
-			name = french_language_campaign
-			duration = 1825
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
 		}
 	}
 	
@@ -1294,9 +1454,31 @@ country_event = {
 				}
             }
         }
-		add_country_modifier = {
-				name = french_language_campaign
-				duration = 1825
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
 		}
 	}
 	
@@ -1329,9 +1511,31 @@ country_event = {
 				}
             }
         }
-		add_country_modifier = {
-				name = french_language_campaign
-				duration = 1825
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
 		}
 	}
 	
@@ -1361,9 +1565,31 @@ country_event = {
 				}
             }
         }
-		add_country_modifier = {
-				name = french_language_campaign
-				duration = 1825
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
 		}
 	}
 	
@@ -1395,9 +1621,31 @@ country_event = {
 				}
             }
         }
-		add_country_modifier = {
-				name = french_language_campaign
-				duration = 1825
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
 		}
 	}
 	
