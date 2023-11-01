@@ -468,7 +468,7 @@ promote_to =
         }
         modifier = {
             factor = -100
-            officers = 0.002
+            state_scope = { officers = 0.002 }
         }
 
         modifier = {
@@ -588,26 +588,26 @@ promote_to =
             }
         }
         group = {
-        modifier = {
-            factor = 2
-            soldiers = 0.01
-        }
-        modifier = {
-            factor = 2
-            soldiers = 0.02
-        }
-        modifier = {
-            factor = 2
-            soldiers = 0.03
-        }
-        modifier = {
-            factor = 2
-            soldiers = 0.04
-        }
-        modifier = {
-            factor = 2
-            soldiers = 0.05
-        }
+			modifier = {
+				factor = 2
+				state_scope = { soldiers = 0.01 }
+			}
+			modifier = {
+				factor = 2
+				state_scope = { soldiers = 0.02 }
+			}
+			modifier = {
+				factor = 2
+				state_scope = { soldiers = 0.03 }
+			}
+			modifier = {
+				factor = 2
+				state_scope = { soldiers = 0.04 }
+			}
+			modifier = {
+				factor = 2
+				state_scope = { soldiers = 0.05 }
+			}
         }
         modifier = {
             factor = -100
@@ -890,6 +890,10 @@ promote_to =
 			factor = 4
 			has_country_flag = urban_army_works
 		}
+		modifier = {
+            factor = 8
+			has_country_flag = british_industrial_society
+        }
         modifier = {
             factor = -40
             AND = {
@@ -925,7 +929,7 @@ promote_to =
         factor = 0.01
         modifier = {
             factor = 5.0
-            soldiers = 0.03
+            state_scope = { soldiers = 0.03 }
         }
         modifier = {
             factor = 5.0

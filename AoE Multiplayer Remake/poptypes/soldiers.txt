@@ -1,7 +1,7 @@
 sprite = 7
 color = { 200 187 157 }
 strata = poor
-
+state_capital_only = yes
 can_be_recruited = yes
 
 rebel =
@@ -314,7 +314,7 @@ promote_to =
         }
         modifier = {
             factor = -100
-            officers = 0.002
+            state_scope = { officers = 0.002 }
         }
 
         modifier = {
@@ -341,7 +341,7 @@ promote_to =
         factor = 0.01
         modifier = {
             factor = 5.0
-            soldiers = 0.03
+            state_scope = { soldiers = 0.03 }
         }
         modifier = {
             factor = 5.0
@@ -441,6 +441,10 @@ promote_to =
 			factor = 4
 			has_country_flag = urban_army_works
 		}
+		modifier = {
+            factor = 4
+			has_country_flag = british_industrial_society
+        }
         modifier = {
             factor = 10
             state_scope = {

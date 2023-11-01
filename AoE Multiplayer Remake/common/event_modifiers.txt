@@ -6941,6 +6941,7 @@ american_smugglers = {
 beaver_trade = {
 	local_artisan_output = 0.05
 	local_RGO_output = 0.1
+	local_RGO_throughput = 0.1
 	farm_rgo_size = -0.1
 	icon = 13
 }

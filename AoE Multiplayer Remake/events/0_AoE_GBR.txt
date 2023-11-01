@@ -1788,7 +1788,7 @@ country_event = {
 country_event = {
     id = 171019
 	title = "Industrialised Society"
-    desc = "Our life rating will go down"
+    desc = "Our life rating will go down, but our craftsmen promotion will increase significantly."
 	fire_only_once = yes
 	
 	trigger = {
@@ -1798,7 +1798,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "NOOOO"
+		name = "A small price to pay for the advancement of society."
 		all_core = {
 			limit = {
 				NOT = {
@@ -1810,6 +1810,7 @@ country_event = {
 			}
 			life_rating = -5
 		}
+		set_country_flag = british_industrial_society
 	}
 }
 country_event = {

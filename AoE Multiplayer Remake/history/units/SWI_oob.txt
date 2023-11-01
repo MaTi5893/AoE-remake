@@ -1,0 +1,67 @@
+#Relations
+
+SAR = { 
+	value = 125
+}
+
+leader = {
+	name = "de Kalbermatten"
+	date = 1700.1.1
+	type = land
+	personality = defence_1.4
+    background = attack_1.2
+	prestige = 0.2
+}
+
+leader = {
+	name = "Henri Dufour"
+	date = 1700.1.1
+	type = land
+	personality = defence_2.4
+    background = attack_1.2
+	prestige = 0.1
+}
+
+army = {
+	name = "Landwehr I"
+	location = 603
+	regiment = {
+		name= "1. Brigade"
+		type = infantry
+		home = 605
+	}
+	regiment = {
+		name= "2. Brigade"
+		type = infantry
+		home = 605
+	}
+	regiment = {
+		name= "3. Brigade"
+		type = infantry
+		home = 605
+	}
+	regiment = {
+		name= "4. Brigade"
+		type = infantry
+		home = 605
+	}
+}
+army = {
+	name = "Landwehr II"
+	location = 607
+	regiment = {
+		name= "5. Brigade"
+		type = infantry
+		home = 603
+	}
+	regiment = {
+		name= "6. Brigade"
+		type = infantry
+		home = 603
+	}
+	regiment = {
+		name= "7. Brigade"
+		type = infantry
+		home = 603
+	}
+}

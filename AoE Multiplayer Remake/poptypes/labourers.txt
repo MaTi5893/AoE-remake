@@ -405,25 +405,25 @@ promote_to =
         }
         group = {
         modifier = {
-            factor = 1
-            soldiers = 0.01
-        }
-        modifier = {
-            factor = 1
-            soldiers = 0.02
-        }
-        modifier = {
-            factor = 1
-            soldiers = 0.03
-        }
-        modifier = {
-            factor = 1
-            soldiers = 0.04
-        }
-        modifier = {
-            factor = 1
-            soldiers = 0.05
-        }
+				factor = 1
+				state_scope = { soldiers = 0.01 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { soldiers = 0.02 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { soldiers = 0.03 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { soldiers = 0.04 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { soldiers = 0.05 }
+			}
         }
         modifier = {
             factor = -5
@@ -767,41 +767,41 @@ promote_to =
         }
         group = {
             modifier = {
-                factor = -2
-                soldiers = 0.005
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.01
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.015
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.02
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.025
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.03
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.035
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.04
-            }
-            modifier = {
-                factor = -2
-                soldiers = 0.045
-            }
+				factor = -2
+				state_scope = { soldiers = 0.005 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.01 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.015 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.02 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.025 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.03 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.035 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.04 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { soldiers = 0.045 }
+			}
         	modifier = {
                 factor = -1
 				country = {
@@ -810,7 +810,7 @@ promote_to =
 						pensions = good_pensions
 					}
 				}
-                soldiers = 0.05
+                state_scope = { soldiers = 0.05 }
             }
         }
 		group = {
@@ -837,7 +837,7 @@ promote_to =
 				NOT = { has_country_flag = allow_6_procent_soldiers }
 				NOT = { pensions = good_pensions }
 			}
-            soldiers = 0.05
+            state_scope = { soldiers = 0.05 }
         }
 		modifier = {
             factor = -100
@@ -847,7 +847,7 @@ promote_to =
 					pensions = good_pensions
 				}
 			}
-            soldiers = 0.06
+            state_scope = { soldiers = 0.06 }
         }
     }
 
@@ -933,6 +933,10 @@ promote_to =
 			factor = 4
 			has_country_flag = urban_army_works
 		}
+		modifier = {
+            factor = 8
+			has_country_flag = british_industrial_society
+        }
         modifier = {
             factor = 10
             state_scope = {

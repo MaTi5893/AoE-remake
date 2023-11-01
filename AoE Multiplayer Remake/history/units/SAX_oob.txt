@@ -14,19 +14,19 @@ army = {
     regiment = {
         name= "1st Artillery"
         type = artillery
-        home = 687
+        home = 558
     }
 
     regiment = {
         name= "2nd Artillery"
         type = artillery
-        home = 560
+        home = 558
     }
 
     regiment = {
         name= "3rd Artillery"
         type = artillery
-        home = 559
+        home = 558
     }
 
     regiment = {
@@ -37,6 +37,58 @@ army = {
 
     regiment = {
         name= "5th Artillery"
+        type = artillery
+        home = 558
+    }
+
+    regiment = {
+        name= "4th Infantry"
+        type = infantry
+        home = 558
+    }
+
+    regiment = {
+        name= "1st Infantry"
+        type = infantry
+        home = 556
+    }
+
+    regiment = {
+        name= "2nd Infantry"
+        type = infantry
+        home = 556
+    }
+
+    regiment = {
+        name= "3rd Infantry"
+        type = infantry
+        home = 556
+    }
+}
+
+army = {
+    name = "2nd Army"
+    location = 556
+    regiment = {
+        name= "1st hussar"
+        type = hussar
+        home = 556
+    }
+
+    regiment = {
+        name= "1st Artillery"
+        type = artillery
+        home = 556
+    }
+
+    regiment = {
+        name= "2nd Artillery"
+        type = artillery
+        home = 558
+    }
+
+    regiment = {
+        name= "3rd Artillery"
         type = artillery
         home = 556
     }
@@ -44,90 +96,15 @@ army = {
     regiment = {
         name= "4th Infantry"
         type = infantry
-        home = 554
+        home = 556
     }
 
     regiment = {
         name= "1st Infantry"
         type = infantry
-        home = 554
+        home = 556
     }
 
-    regiment = {
-        name= "2nd Infantry"
-        type = infantry
-        home = 3250
-    }
-
-    regiment = {
-        name= "3rd Infantry"
-        type = infantry
-        home = 558
-    }
-}
-
-army = {
-    name = "2nd Army"
-    location = 558
-    regiment = {
-        name= "1st hussar"
-        type = hussar
-        home = 558
-    }
-
-    regiment = {
-        name= "1st Artillery"
-        type = artillery
-        home = 687
-    }
-
-    regiment = {
-        name= "2nd Artillery"
-        type = artillery
-        home = 560
-    }
-
-    regiment = {
-        name= "3rd Artillery"
-        type = artillery
-        home = 554
-    }
-
-    regiment = {
-        name= "4th Artillery"
-        type = artillery
-        home = 554
-    }
-
-    regiment = {
-        name= "5th Artillery"
-        type = artillery
-        home = 554
-    }
-
-    regiment = {
-        name= "4th Infantry"
-        type = infantry
-        home = 554
-    }
-
-    regiment = {
-        name= "1st Infantry"
-        type = infantry
-        home = 554
-    }
-
-    regiment = {
-        name= "2nd Infantry"
-        type = infantry
-        home = 554
-    }
-
-    regiment = {
-        name= "3rd Infantry"
-        type = infantry
-        home = 554
-    }
 }
 
 leader = {
@@ -135,6 +112,15 @@ leader = {
     date = 1700.1.1
     type = land
     personality = defence_0.1
+    background = attack_3.1
+    prestige = 0.3
+}
+
+leader = {
+    name = "Adam Heinrich von Steinau"
+    date = 1700.1.1
+    type = land
+    personality = defence_1.1
     background = attack_3.1
     prestige = 0.3
 }

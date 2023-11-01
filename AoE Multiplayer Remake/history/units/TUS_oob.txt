@@ -1,0 +1,33 @@
+army = {
+	name = "Esercito Toscano"
+
+	leader = {
+		name = "Leopoldo II"
+		date = 1700.1.1
+		type = land
+		personality = defence_2.1
+		background = attack_2.1
+		prestige = 0.2
+	}
+	
+	location = 744
+	regiment = {
+		name= "1. Fanteria di Linea"
+		type = infantry
+		home = 744
+	}
+
+	regiment = {
+		name= "2. Fanteria di Linea"
+		type = infantry
+		home = 744
+	}
+
+	regiment = {
+		name= "3. Fanteria di Linea"
+		type = infantry
+		home = 744
+	}
+
+}
+

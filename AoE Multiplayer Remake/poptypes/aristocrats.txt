@@ -458,7 +458,7 @@ promote_to =
 
         modifier = {
             factor = -5
-            officers = 0.002
+            state_scope = { officers = 0.002 }
         }
         group = {
             modifier = {
@@ -857,7 +857,7 @@ promote_to =
         factor = 0.01
         modifier = {
             factor = 5.0
-            soldiers = 0.03
+            state_scope = { soldiers = 0.03 }
         }
         modifier = {
             factor = 5.0
