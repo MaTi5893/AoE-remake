@@ -184,47 +184,6 @@ political_decisions = {
 		
         ai_will_do = { factor = 1 }
     }
-	
-    form_andalusia = {
-        picture = form_andalusia
-        potential = {
-            primary_culture = maghrebi
-			NOT = { tag = MGH }
-            NOT = {
-                ALA = {
-                    exists = yes
-                }
-            }
-        }
-        allow = {
-			civilized = yes
-            owns = 513
-            owns = 509
-            owns = 507
-            OR = {
-                owns = 526
-                owns =  503
-            }
-        }
-        effect = {
-            prestige = 40
-            all_core = {
-                add_core = ALA
-                remove_core = THIS
-            }
-            capital = 510
-            SPA_512 = { add_core = ALA }
-            SPA_513 = { add_core = ALA }
-            POR_525 = { add_core = ALA }
-            SPA_503 = { add_core = ALA }
-            #SPA_508 = { add_core = ALA }
-            change_tag = ALA
-            add_accepted_culture = spanish
-            add_accepted_culture = catalan
-            add_accepted_culture = portuguese
-        }
-        ai_will_do = { factor = 1 }
-    }
 
     conquest_of_levant = {
         picture = map_levant

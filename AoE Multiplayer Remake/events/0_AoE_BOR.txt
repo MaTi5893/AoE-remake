@@ -498,9 +498,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Appoint Louis Henri"
+		name = "EVTOPT171109A"
 		prestige = 5
-		remove_country_modifier = louis_grande
 		add_country_modifier = {
 			name = louis_henri_gov
 			duration = 10950
@@ -509,9 +508,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "Appoint André-Hercule de Fleury"
+		name = "EVTOPT171109B"
 		prestige = 5
-		remove_country_modifier = louis_grande
 		add_country_modifier = {
 			name = de_fleury_gov
 			duration = 3650
@@ -529,7 +527,6 @@ country_event = {
 	option = {
 		name = "Assume personal rule"
 		prestige = 5
-		remove_country_modifier = louis_grande
 		add_country_modifier = {
 			name = louis_xv
 			duration = 3650
@@ -540,7 +537,6 @@ country_event = {
 	option = {
 		name = "Appoint Duke de Choiseul"
 		prestige = 5
-		remove_country_modifier = louis_grande
 		add_country_modifier = {
 			name = de_choiseul_gov
 			duration = 3650
@@ -1556,29 +1552,137 @@ country_event = {
 }
 country_event = {
 	id = 171143
-	title = "A Finale to Imperial Authority"
+	title = "The Age Of Reason in France"
 	desc = "EVTDESC171143"
+	picture = philospohy
+	is_triggered_only = yes
+
+	option = {
+		name = "Hopefully they don't get any controversial ideas."
+		
+		any_pop = {
+			consciousness = 1
+		}
+		years_of_research = 0.5
+	}
+}
+country_event = {
+	id = 171144
+	title = "Rousseau Publishes 'The Social Contract'"
+	desc = "EVTDESC171144"
 	fire_only_once = yes
-	picture = avignon
+	picture = rousseau
 	
 	trigger = {
-		capital = 425
-		primary_culture = french
-		OR = {
-		government = proletarian_dictatorship
-		government = fascist_dictatorship
+		has_country_flag = french_enlightenement
+		year = 1762
+	}
+
+	option = {
+		name = "Excellent."
+		
+		any_pop = {
+			consciousness = 1
 		}
-		ai = yes
-		AUS = { has_country_flag = hre_emperor }
-		619 = { controlled_by = THIS }
+		years_of_research = 0.5
+	}
+}
+country_event = {
+	id = 171145
+	title = "Voltaire publishes 'Philosophical Letters'"
+	desc = "EVTDESC171145"
+	fire_only_once = yes
+	picture = voltaire
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1732
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+country_event = {
+	id = 171146
+	title = "Montesquieu publishes 'The Spirit of Laws'"
+	desc = "EVTDESC171146"
+	fire_only_once = yes
+	picture = montesquieu
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1750
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+
+country_event = {
+	id = 171147
+	title = "Encyclopédie Published"
+	desc = "EVTDESC171147"
+	fire_only_once = yes
+	picture = encyclopedie
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1753
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+
+country_event = {
+	id = 171148
+	title = "Edict Of Versailles"
+	desc = "EVTDESC171148"
+	fire_only_once = yes
+	picture = Jacobins
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		religious_minoritys = political_rights
+	}
+	mean_time_to_happen = {
+		months = 5
+	}
+	option = {
+		name = "Excellent."
+		any_pop = { militancy = -2 }
+		prestige = 15
+	}
+}
+
+country_event = {
+	id = 171149
+	title = "Declaration Of The Rights Of Man"
+	desc = "EVTDESC171149"
+	fire_only_once = yes
+	picture = rights_of_man
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		government = proletarian_dictatorship
+	}
+	
+	mean_time_to_happen = {
+		months = 50
 	}
 	
 	option = {
-		name = "The revolution will swallow the old regimes whole."
-		casus_belli = {
-			target = AUS
-			type = dismantle_hre
-			months = 90
-		}
+		name = "Excellent."
+		any_pop = { militancy = -2 }
+		prestige = 30
 	}
 }
