@@ -51,6 +51,23 @@ country_event = {
             name = new_constitution
             duration = 1825
         }
+		random_country = {
+                limit = {
+                    tag = SWE
+                    exists = yes
+					NOT = { owns = 349 }
+                }
+                remove_accepted_culture = estonian
+        }
+		random_country = {
+                limit = {
+                    tag = SWE
+                    exists = yes
+					NOT = { owns = 354 }
+                }
+                remove_accepted_culture = latvian
+        }
+		##conditions for those two don't work idk
     }
 }
 
@@ -305,9 +322,21 @@ country_event = {
 	
 	option = {
 		name = "Perhaps our ambitions in Pommerania were not meant to be."
-		prestige = -5
+		prestige = -8
 		remove_core = 546
 		remove_core = 547
 		remove_core = 548
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "Stettin is Prussian only temporarily."
+		prestige = -4
+		badboy = 2
+		ai_chance = {
+			factor = 0
+		}
 	}
 }

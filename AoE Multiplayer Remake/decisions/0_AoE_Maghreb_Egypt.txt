@@ -66,6 +66,13 @@ political_decisions = {
 				exists = no 
 				all_core = { owned_by = THIS } 
 			}
+			TUN = {
+				exists = yes
+				OR = { 
+					vassal_of = TUR
+					is_vassal = no
+				}
+			}
 			OR = {
 				has_global_flag = turk_maghreb_war_defeat 	
 				has_global_flag = turk_maghreb_war_victor

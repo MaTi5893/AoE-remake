@@ -302,7 +302,10 @@ political_decisions = {
 				health_care = no_health_care
 			}
 			has_country_modifier = agriculture_reform
-			has_country_modifier = great_partition
+			OR = {
+				steam_turbine = 1
+				has_global_flag = peter_the_great_dethroned
+			}
 			unemployment_subsidies = good_subsidies
 			trade_policy = protectionism
 			money = 30000

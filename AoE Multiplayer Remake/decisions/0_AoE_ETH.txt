@@ -4,8 +4,7 @@ political_decisions = {
 		picture = ethiopia
 		potential = {
 			tag = ETH
-			exists = HAR
-			TUR = { is_our_vassal = HAR }
+			NOT = { has_country_flag = aussa_deestablished }
 		}
 		allow = {
 			war = no
@@ -35,6 +34,7 @@ political_decisions = {
 					months = 12
 				}
 			}
+			set_country_flag = aussa_deestablished
 		}
 	}
 	

@@ -998,7 +998,8 @@ economic_reforms = {
         yes_land_reform = {
             technology_cost = 7000 #was 8000
             civilization_progress_modifier = 0.05 #was 0.15
-
+			research_points = 0.05
+			
             on_execute = {
                 effect = {
                     activate_technology = mechanized_mining
@@ -1025,11 +1026,12 @@ economic_reforms = {
         land_reform_two = {
             technology_cost = 7000
             civilization_progress_modifier = 0.15
-
+			research_points = 0.1
+			
             on_execute = {
                 effect = {
                     activate_technology = freedom_of_trade
-                    activate_technology = high_pressure_steam_engine
+                    #activate_technology = high_pressure_steam_engine
 					set_country_flag = freedom_of_trade_flag
 					set_country_flag = high_pressure_steam_engine_flag
                     any_pop = {
@@ -1058,7 +1060,8 @@ economic_reforms = {
         yes_admin_reform = {
             technology_cost = 6000 #was 10000
             civilization_progress_modifier = 0.05
-
+			research_points = 0.05
+			
             on_execute = {
                 effect = {
                     activate_technology = no_standard
@@ -1083,7 +1086,8 @@ economic_reforms = {
         admin_reform_two = { #new
             technology_cost = 7000
             civilization_progress_modifier = 0.15
-
+			research_points = 0.1
+			
             on_execute = {
                 effect = {
                     activate_technology = ad_hoc_money_bill_printing
@@ -1116,7 +1120,8 @@ economic_reforms = {
             technology_cost = 6000 #was 7000
             civilization_progress_modifier = 0.05 #was 0.15
             max_loan_modifier = -1.0 # no loan 4 u
-
+			research_points = 0.05
+			
             on_execute = {
                 effect = {
                     activate_technology = private_banks
@@ -1141,7 +1146,7 @@ economic_reforms = {
         finance_reform_two = {
             technology_cost = 7000
             civilization_progress_modifier = 0.15 #was 0.35
-
+			research_points = 0.1
             max_loan_modifier = -0.2 # 80% loans
 
             on_execute = {
@@ -1178,7 +1183,8 @@ economic_reforms = {
             technology_cost = 6000 #was 10000
             education_efficiency_modifier = 0.10
             civilization_progress_modifier = 0.05
-
+			research_points = 0.05
+			
             on_execute = {
                 effect = {
 					activate_technology = malthusian_thought
@@ -1204,7 +1210,8 @@ economic_reforms = {
             technology_cost = 7000
             education_efficiency_modifier = 0.10
             civilization_progress_modifier = 0.15
-
+			research_points = 0.1
+			
             on_execute = {
                 effect = {
                     activate_technology = positivism
@@ -1242,6 +1249,8 @@ economic_reforms = {
             farm_rgo_eff = 0.20
             mine_rgo_eff = 0.20
             civilization_progress_modifier = 0.05 #was 0.15
+			research_points = 0.05
+			
             on_execute = {
                 trigger = {
                     can_build_railway_in_capital = {
@@ -1279,7 +1288,8 @@ economic_reforms = {
             farm_rgo_eff = 0.40
             mine_rgo_eff = 0.40
             civilization_progress_modifier = 0.15
-
+			research_points = 0.1
+			
             on_execute = {
                 effect = {
                     activate_technology = early_railroad
@@ -1311,6 +1321,8 @@ economic_reforms = {
         yes_pre_indust = {
             technology_cost = 6000 #was 15000
             civilization_progress_modifier = 0.05 #was 0.10
+			research_points = 0.05
+			
             on_execute = {
                 trigger = {
                     can_build_factory_in_capital_state = canned_food_factory # example, no trigger needed here
@@ -1340,6 +1352,8 @@ economic_reforms = {
         yes_industrial_construction = { #was in own category
             technology_cost = 7000
             civilization_progress_modifier = 0.10
+			research_points = 0.1
+			
             on_execute = {
                 effect = {
                     activate_technology = organized_factories
@@ -1373,6 +1387,8 @@ economic_reforms = {
         yes_western_science = {
             technology_cost = 6000
             civilization_progress_modifier = 0.05
+			research_points = 0.05
+			
             on_execute = {
                 effect = {
                     activate_technology = late_enlightenment_philosophy
@@ -1399,6 +1415,7 @@ economic_reforms = {
         western_science_two = {
             technology_cost = 7000
             civilization_progress_modifier = 0.10
+			research_points = 0.1
 			
             on_execute = {
                 effect = {
@@ -1436,7 +1453,7 @@ military_reforms = {
             #unit stats improve
             land_organisation = 0.1
             civilization_progress_modifier = 0.05
-
+			research_points = 0.02
 
             on_execute = {
                 effect = {
@@ -1463,13 +1480,14 @@ military_reforms = {
             technology_cost = 8000
             land_organisation = 0.15
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                    activate_technology = strategic_mobility
-					set_country_flag = strategic_mobility_flag
+                    #activate_technology = strategic_mobility
+					#set_country_flag = strategic_mobility_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1496,7 +1514,8 @@ military_reforms = {
         yes_foreign_weapons = {
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
-
+			research_points = 0.02
+			
             on_execute = {
                 effect = {
                     activate_technology = flintlock_rifles
@@ -1521,13 +1540,15 @@ military_reforms = {
         foreign_weapons_two = {
             technology_cost = 10000
             civilization_progress_modifier = 0.10
+			research_points = 0.05
+			
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                    activate_technology = muzzle_loaded_rifles
-					set_country_flag = muzzle_loaded_rifles_flag
+                    #activate_technology = muzzle_loaded_rifles
+					#set_country_flag = muzzle_loaded_rifles_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1554,6 +1575,7 @@ military_reforms = {
         yes_military_constructions = {
             technology_cost = 8000 #10000
             civilization_progress_modifier = 0.05
+			research_points = 0.02
             on_execute = {
                 effect = {
                     activate_technology = bronze_muzzle_loaded_artillery
@@ -1578,13 +1600,14 @@ military_reforms = {
         military_constructions_two = {
             technology_cost = 8000
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                    activate_technology = iron_muzzle_loaded_artillery
-					set_country_flag = iron_muzzle_loaded_artillery_flag
+                    #activate_technology = iron_muzzle_loaded_artillery
+					#set_country_flag = iron_muzzle_loaded_artillery_flag
                     build_fort_in_capital = {
                         in_whole_capital_state = no # no = just in main capital province.
                         limit_to_world_greatest_level = no
@@ -1616,6 +1639,7 @@ military_reforms = {
             leadership_modifier = 0.10
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
+			research_points = 0.02
 
             on_execute = {
                 effect = {
@@ -1642,14 +1666,15 @@ military_reforms = {
             leadership_modifier = 0.20
             technology_cost = 8000
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
 
                 effect = {
-                    activate_technology = army_professionalism
-					set_country_flag = army_professionalism_flag
+                    #activate_technology = army_professionalism
+					#set_country_flag = army_professionalism_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1677,6 +1702,7 @@ military_reforms = {
             land_unit_start_experience = 10
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
+			research_points = 0.02
 
             on_execute = {
                 effect = {
@@ -1703,13 +1729,14 @@ military_reforms = {
             land_unit_start_experience = 10
             technology_cost = 10000
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                    activate_technology = military_plans
-					set_country_flag = military_plans_flag
+                    #activate_technology = military_plans
+					#set_country_flag = military_plans_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1737,6 +1764,7 @@ military_reforms = {
             tariff_efficiency_modifier = 0.10 #was 0.20
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
+			research_points = 0.02
 			
             on_execute = {
                 effect = {
@@ -1765,13 +1793,14 @@ military_reforms = {
             tariff_efficiency_modifier = 0.20
             technology_cost = 10000
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                activate_technology = battleship_column_doctrine
-				set_country_flag = battleship_column_doctrine_flag
+                #activate_technology = battleship_column_doctrine
+				#set_country_flag = battleship_column_doctrine_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1800,7 +1829,8 @@ military_reforms = {
             naval_defense_modifier = 0.2
             technology_cost = 8000 #10000
             civilization_progress_modifier = 0.05 #was 0.10
-
+			research_points = 0.02
+			
             on_execute = {
                 effect = {
                     activate_technology = naval_design_bureaus
@@ -1829,13 +1859,14 @@ military_reforms = {
             naval_defense_modifier = 0.4
             technology_cost = 10000 #10000
             civilization_progress_modifier = 0.1
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
-                    activate_technology = steamers
-					set_country_flag = steamers_flag
+                    #activate_technology = steamers
+					#set_country_flag = steamers_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal
@@ -1863,7 +1894,8 @@ military_reforms = {
             naval_unit_start_experience = 10
             technology_cost = 8000 #was 10000
             civilization_progress_modifier = 0.05 #was 0.10
-
+			research_points = 0.02
+			
             on_execute = {
                 effect = {
                     any_pop = {
@@ -1886,15 +1918,16 @@ military_reforms = {
         naval_schools_two = { #new
             technology_cost = 10000 #because player can skip level 1, cost is for both levels
             civilization_progress_modifier = 0.10
+			research_points = 0.05
 			allow = {
 				year = 1710
             }
             on_execute = {
                 effect = {
                     activate_technology = the_command_principle
-                    activate_technology = naval_professionalism
+                    #activate_technology = naval_professionalism
 					set_country_flag = the_command_principle_flag
-					set_country_flag = naval_professionalism_flag
+					#set_country_flag = naval_professionalism_flag
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal

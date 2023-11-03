@@ -500,6 +500,7 @@ political_decisions = {
 			tag = TUR
 			NOT = { has_country_flag = reclaimed_podolia }
 			NOT = { has_global_flag = kucuk_kaynarca_established }
+			has_country_flag = CRI_integrated
 			exists = yes
 		}
 		allow = {
@@ -659,14 +660,14 @@ political_decisions = {
 				neighbour = ALD
 			} 
 			OR = {
-				FZN = {
+				TRI = {
 					AND = { 
 					exists = yes
 					vassal_of = THIS
 					}
 				}
-				THIS = { any_owned_province = { is_core = FZN } }
-				neighbour = FZN
+				THIS = { any_owned_province = { is_core = TRI } }
+				neighbour = TRI
 			}
 		}
 		allow = {
@@ -695,6 +696,15 @@ political_decisions = {
 					exists = no
 				}
 			}
+			TRI = {
+				OR = {
+					AND = {
+					vassal_of = THIS
+					in_sphere = THIS
+					}
+					exists = no
+				}
+			}
 			FZN = {
 				OR = {
 					AND = {
@@ -714,6 +724,14 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = ALD
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			random_country = {
+				limit = {
+					tag = TRI
 					vassal_of = THIS
 					in_sphere = THIS
 				}

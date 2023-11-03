@@ -742,7 +742,10 @@ political_decisions = {
 	kuruc = {
 		picture = kuruc
 		potential = {
-			tag = SIE
+			OR = {
+				tag = SIE
+				tag = HUN
+			}
 			NOT = { has_country_flag = kuruc }
 		}
 		allow = {
