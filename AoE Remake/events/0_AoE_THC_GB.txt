@@ -52,15 +52,14 @@ country_event = {
 	news = yes
 	
 	trigger = {
-		OR = { primary_culture = british
-				primary_culture = french }
+		OR = { primary_culture = british primary_culture = french }
 		any_owned_province = {
 			OR = {
 			is_core = THC
 			is_core = USA
 			}
-			owns = 220
 		}
+		owns = 232
 		OR = {
 			check_variable = {
 				which = usa_rev
@@ -69,8 +68,7 @@ country_event = {
 			AND = {
 			year = 1776
 			ai = yes
-			}
-			
+			}	
 			AND = {
 				year = 1769
 				ai = yes

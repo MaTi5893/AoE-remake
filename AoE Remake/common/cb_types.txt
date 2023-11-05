@@ -1409,6 +1409,7 @@ dethrone_peter = {
 
     on_po_accepted = {
         country_event = 1721007
+		set_global_flag = peter_dethroned
     }
 }
 greek_plan_cb = {

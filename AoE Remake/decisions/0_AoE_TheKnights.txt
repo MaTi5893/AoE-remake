@@ -1,0 +1,76 @@
+political_decisions = {
+	
+	form_jerusalem = {
+		picture = become_jer
+		potential = {
+			tag = MLT
+			government = theocracy
+			NOT = { exists = ISR }
+		}
+		allow = {
+			owns = 917
+		}
+		effect = {
+			all_core = {
+				add_core = ISR
+				remove_core = THIS
+			}
+			PLS = {
+				all_core = {
+					add_core = ISR
+					remove_core = THIS
+				}
+			}
+			change_tag = ISR
+			government = absolute_monarchy
+			capital = 917
+			prestige = 100
+		}
+	}
+	
+	integrate_muslims = {
+		picture = jerusalem
+		potential = {
+			tag = ISR
+			NOT = { has_country_flag = integrated_muslims }
+		}
+		allow = {
+			citizens_rights = all_voting_pops
+			religious_minoritys = political_rights
+		}
+		effect = {
+			set_country_flag = integrated_muslims
+			set_country_flag = allow_coring_without_bureu
+			add_accepted_culture = sephardic
+			prestige = 30
+			any_pop = {
+				militancy = -3
+			}
+		}
+	}
+
+	ask_for_donations = {
+		picture = treaty_of_guadalupe_hidalgo
+		potential = {
+			tag = MLT
+			NOT = { has_country_modifier = hospitaller_donations }
+		}
+		allow = {
+			NOT = { has_country_modifier = hospitaller_donations }
+		}
+		effect = {
+			add_country_modifier = {
+                name = hospitaller_donations
+                duration = 1825
+            }
+			small_arms = 50
+            artillery = 50
+            canned_food = 50
+            wine = 50
+            liquor = 50
+            luxury_clothes = 50
+			clipper_convoy = 90
+			steamer_convoy = 50
+		}
+	}
+}

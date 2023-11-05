@@ -517,6 +517,14 @@ political_decisions = {
                     inherit = LAT
                 }
             }
+			random_owned = {
+                limit = {
+                    owner = { KUR = { vassal_of = THIS } }
+                }
+                owner = {
+                    inherit = KUR
+                }
+            }
 			add_accepted_culture = latvian
             354 = { add_core = THIS }
             355 = { add_core = THIS }
@@ -535,6 +543,30 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	become_poland = {
+		picture = become_poland
+		potential = {
+            primary_culture = polish
+            NOT = { exists = POL }
+            exists = yes
+			NOT = { owns = 360 }
+			NOT = { owns = 718 }
+			NOT = { owns = 937 }
+        }
+		allow = {
+			war = no
+			NOT = { owns = 360 }
+			NOT = { owns = 718 }
+			NOT = { owns = 937 }
+		}
+		effect = {
+			change_tag = POL
+		}
+		ai_will_do = {
+            factor = 1
+        }
+	}
 
     become_poland_lithuania = {
         picture = become_poland_lithuania
@@ -546,7 +578,6 @@ political_decisions = {
             }
             NOT = { exists = PLC }
             NOT = { exists = PLR }
-            NOT = { has_country_flag = post_colonial_country }
             exists = yes
         }
 
@@ -624,14 +655,9 @@ political_decisions = {
                     all_core = { add_core = PLC }
                 }
             }
-            LAT = {
+            KUR = {
                 all_core = { add_core = PLC }
             }
-            BYE = {
-                all_core = { add_core = PLC }
-            }
-            RUS_958 = { add_core = PLC }
-            PRU_695 = { add_core = PLC }
             any_country = {
                 limit = {
                     OR = {

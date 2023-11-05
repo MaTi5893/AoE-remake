@@ -28,6 +28,35 @@ political_decisions = {
 		}
 	}
 	
+	railroad_napoleon = {
+		picture = napoleon_legacy
+		potential = {
+			ai = no
+			has_country_flag = showing_aoe_options
+			NOT = { year = 1701 }
+		}
+		allow = {
+		}
+		effect = {
+			set_global_flag = railroad_napoleon
+		}
+	}
+	
+	unrailroad_napoleon = {
+		picture = napoleon_legacy
+		potential = {
+			ai = no
+			has_country_flag = showing_aoe_options
+			has_global_flag = railroad_napoleon
+			NOT = { year = 1701 }
+		}
+		allow = {
+		}
+		effect = {
+			clr_global_flag = railroad_napoleon
+		}
+	}
+	
 	rgo_change_mining = {
 		picture = alsace_lorraine_mines
 			potential = {

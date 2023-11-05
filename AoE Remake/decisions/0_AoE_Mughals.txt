@@ -41,7 +41,7 @@ political_decisions = {
 		picture = mughal_emperor
 		potential = {
 			tag = MUG
-			NOT = { has_country_flag = mughal_reforms } 
+			NOT = { has_country_flag = allow_coring_without_bureu } 
 		}
 		allow = {
 			war = no
@@ -88,7 +88,7 @@ political_decisions = {
 					inherit = BNG
 				}
 			}
-			set_country_flag = mughal_reforms
+			set_country_flag = allow_coring_without_bureu
 		}
 	}
 	###########################

@@ -1139,7 +1139,6 @@ province_event = {
 		NOT = { is_core = THIS }
 		controlled_by = THIS
 		is_colonial = no
-		is_overseas = no
 		OR = {
 			AND = {
 				is_primary_culture = yes
@@ -1184,8 +1183,7 @@ province_event = {
 				centralization = admin_parliment
 			}
 			health_care = good_health_care #v. infl 'crats
-			has_country_flag = nana_phadnavis
-			has_country_flag = mughal_reforms
+			has_country_flag = allow_coring_without_bureu
 			}
 		}
 	}

@@ -500,20 +500,25 @@ political_decisions = {
 		allow = {
 			ruling_party_ideology = reactionary
 			has_country_modifier = catharine_the_great
-			owns = 944
-			owns = 718
-			owns = 960
-			HET = {
-				OR = {
-					vassal_of = THIS
-					all_core = { owned_by = THIS }
+			OR = {
+				AND = {
+					owns = 944
+					owns = 718
+					owns = 960
+					HET = {
+						OR = {
+							vassal_of = THIS
+							all_core = { owned_by = THIS }
+						}
+					}
+					ZZH = {
+						OR = {
+							vassal_of = THIS
+							all_core = { owned_by = THIS }
+						}
+					}
 				}
-			}
-			ZZH = {
-				OR = {
-					vassal_of = THIS
-					all_core = { owned_by = THIS }
-				}
+				ai = yes
 			}
 		}
 		effect = {
@@ -540,7 +545,7 @@ political_decisions = {
 	}
 	
 	propose_the_greek_plan = {
-		picture = latinempire
+		picture = map_balkans
 		potential = {
 			tag = RUS
 			has_country_modifier = catharine_the_great
@@ -603,71 +608,6 @@ political_decisions = {
 				who = TUR
 				value = -100
 			}
-		}
-	}
-	perpetual_peace_PLC = {
-		picture = ruthenia
-		potential = {
-			OR = {
-				tag = TOR
-				tag = RUS
-			}
-			ai = no
-			PLC = { ai = no }
-			NOT = { has_country_flag = perpetual_peace_PLC }
-			NOT = { has_country_flag = perpetual_peace_TUR }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_country_flag = perpetual_peace_PLC
-			PLC = { country_event = 15730067 }
-			random_owned = {
-				limit = {
-					owner = {
-						accepted_culture = ukrainian
-					}
-				}
-				owner = {
-					remove_accepted_culture = ukrainian
-				}
-			}
-			any_owned = {
-				limit = {
-					is_core = THIS
-					OR = {
-						is_core = UKR
-						is_core = HET
-						is_core = BYE
-					}
-				}
-				remove_core = UKR
-				remove_core = HET
-				remove_core = BYE
-				add_province_modifier = { name = deez_nuts_headass duration = 3650 }
-			}
-		}
-	}
-	
-	perpetual_peace_TUR = {
-		picture = crimea
-		potential = {
-			OR = {
-				tag = TOR
-				tag = RUS
-			}
-			ai = no
-			TUR = { ai = no }
-			NOT = { has_country_flag = perpetual_peace_PLC }
-			NOT = { has_country_flag = perpetual_peace_TUR }
-		}
-		allow = {
-			war = no
-		}
-		effect = {
-			set_country_flag = perpetual_peace_TUR
-			TUR = { country_event = 173622 }
 		}
 	}
 	

@@ -262,7 +262,7 @@ political_decisions = {
 				release_vassal = SWH
 				casus_belli = {
 					target = SWH
-					type = add_to_sphere
+					type = make_puppet
 					months = 18
 				}
 				relation = {
@@ -270,7 +270,7 @@ political_decisions = {
 					value = -100
 				}
 			}
-			end_alliance = DNH
+			leave_alliance = DNN
 			prestige = 15
 			set_country_flag = aligned_with_SWE
 			random_owned = {
@@ -284,7 +284,7 @@ political_decisions = {
 					DNN = {
 						war = {
 							target = SWH
-							attacker_casus_belli = add_to_sphere
+							attacker_goal = { casus_belli = make_puppet }
 						}
 					}
 				}

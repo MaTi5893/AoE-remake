@@ -243,8 +243,7 @@ country_event = {
 		}
 		any_owned = {
 			limit = {
-				continent = north_america
-				NOT = { is_core = HAI }
+				is_core = USA
 			}
 			secede_province = USA
 		}
@@ -502,7 +501,7 @@ country_event = {
         name = "Don't Tread on me."
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
-		political_reform = wealth_weighted_voting
+		political_reform = wealth_voting
 		political_reform = state_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press

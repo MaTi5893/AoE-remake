@@ -375,4 +375,42 @@ political_decisions = {
             }
         }
     }
+	
+	treaty_of_madrid = {
+		potential = {
+			year = 1750
+			NOT = { has_country_flag = treaty_of_madrid }
+			owns = 2412
+			2408 = { empty = yes }
+			2532 = { empty = yes }
+		}
+		allow = {
+			2408 = { empty = yes }
+			2532 = { empty = yes }
+		}
+		effect = {
+			2408 = { secede_province = THIS }
+			2403 = { secede_province = THIS }
+			2532 = { secede_province = THIS }
+			2532 = { secede_province = THIS }
+			2402 = { secede_province = THIS }
+			set_country_flag = treaty_of_madrid
+		}
+	}
+	
+	treaty_of_madrid_spa = {
+		potential = {
+			year = 1750
+			NOT = { has_country_flag = treaty_of_madrid }
+			owns = 2266
+			2275 = { empty = yes }
+		}
+		allow = {
+			2275 = { empty = yes }
+		}
+		effect = {
+			2275 = { secede_province = THIS }
+			set_country_flag = treaty_of_madrid
+		}
+	}
 }

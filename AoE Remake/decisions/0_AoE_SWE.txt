@@ -56,27 +56,11 @@ political_decisions = {
 	}
 
 	remove_russian_claims = {
-		picture = baltic_russia
+		picture = baltic_swedish
 		potential = {	
 			primary_culture = swedish
 			NOT = { has_country_flag = removed_russian_claims }
 			exists = yes
-		}
-		
-		allow = {
-			OR = {
-				AND = {
-					year = 1736
-					war = no
-				}
-				AND = {
-					nationalism_n_imperialism = 1
-					war = no
-				}
-			}
-			1008 = {
-				controlled_by = THIS
-			}
 			owns = 349
 			owns = 350
 			owns = 351
@@ -86,6 +70,19 @@ political_decisions = {
 			owns = 354
 			owns = 996
 			owns = 355
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					has_global_flag = peter_dethroned
+					war = no
+				}
+				AND = {
+					nationalism_n_imperialism = 1
+					war = no
+				}
+			}
 		}
 		
 		effect = {
@@ -497,158 +494,6 @@ political_decisions = {
 				change_tag = POL
 			}
 			set_country_flag = renewed_the_kedainiai_treaty
-		}
-	}
-	
-	
-#	claim_trongheim = {
-#		picture = army_training
-#		potential = {
-#			owns = 322
-#			322 = { is_capital = yes }
-#			NOT = { has_country_flag = claimed_trongheim }
-#			exists = yes
-#		}
-#		allow = {
-#			war = no
-#			government = absolute_monarchy
-#			military_score = 50
-#			war_policy = jingoism
-#			nationalism_n_imperialism = 1
-#		}
-#		effect = {
-#			badboy = 5
-#			set_country_flag = claimed_trongheim
-#			305 = {
-#				add_core = THIS
-#			}
-#		}
-#		ai_will_do = {
-#			factor = 1
-#		}
-#	}
-	
-	dominus_mari_baltici = {
-		picture = baltic_sea
-		potential = {
-			is_culture_group = scandinavian
-			NOT = { has_country_flag = dominus_mare_baltici }
-			exists = yes
-		}
-		allow = {
-			war = no
-			OR = {
-				owns = 332
-				332 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 994
-				994 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 354
-				354 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 695
-				695 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 690
-				690 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 696
-				696 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 372
-				372 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 530
-				530 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 546
-				546 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 679
-				679 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 350
-				350 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-			OR = {
-				owns = 345
-				345 = {
-					owner = {
-						vassal_of = THIS
-					}
-				}
-			}
-		}
-		effect = {
-			set_country_flag = dominus_mare_baltici
-			prestige = 100
-			add_country_modifier = {
-				name = fanatic_army
-				duration = 7300
-			}
-			THIS = {
-				all_core = {
-					remove_core = PRU
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
 		}
 	}
 	

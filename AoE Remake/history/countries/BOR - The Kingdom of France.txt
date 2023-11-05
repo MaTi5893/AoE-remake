@@ -1,8 +1,5 @@
 capital = 425
 primary_culture = french
-#culture = occitan currently no occitan pops
-culture = breton
-culture = arpitan
 culture = louisianan
 culture = french_canadian
 religion = catholic
@@ -40,10 +37,10 @@ school_reforms = no_schools
 
 debt_law = serfdom
 penal_system = capital_punishment
+press_rights = state_press
+citizens_rights = primary_culture_only
 
-citizens_rights = culture_voting_only
-
-centralization = unitary
+absolutism = yes_absolutism
 colonial_policy = exploitation
 
 set_country_flag = catholic_country
@@ -91,12 +88,12 @@ high_pressure_steam_engine = 1
 consciousness = 3
 nonstate_consciousness = 1
 
-ruling_party = "Fete Royale"
+ruling_party = "Faction Royale"
 upper_house = {
     fascist = 0
     liberal = 12
-    conservative = 70
-    reactionary = 18
+    conservative = 50
+    reactionary = 38
     anarcho_liberal = 0
     socialist = 0
     communist = 0

@@ -78,7 +78,7 @@ country_event = {
         civilized = yes
         OR = {
               government = democracy
-              government = tribal_democracy
+              government = oligarchic_republic
         }
         ruling_party_ideology = reactionary
         average_militancy = 3
@@ -136,6 +136,7 @@ country_event = {
         government = presidential_dictatorship
         political_reform = none_voting
         political_reform = party_appointed
+		political_reform = no_parliment
         political_reform = no_meeting
         political_reform = state_press
         political_reform = state_controlled
@@ -164,26 +165,16 @@ country_event = {
         OR = {
             AND = {
                 government = proletarian_dictatorship
-                war_policy = pacifism
                 war = no
                 NOT = { ruling_party_ideology = communist }
             }
             government = presidential_dictatorship
-            government = bourgeois_dictatorship
-            AND = {
-                government = fascist_dictatorship
-                war_policy = pacifism
-                war = no
-                NOT = { ruling_party_ideology = communist }
-            }
             government = theocracy
         }
         civilized = yes
-        NOT = { vote_franschise = none_voting }
-        NOT = { political_parties = underground_parties }
-        NOT = { upper_house_composition = party_appointed }
+        centralization = legislative_parliment
         NOT = { has_country_modifier = not_dictatorship }
-        NOT = { has_country_modifier = revolutionary_spirit }
+        NOT = { has_country_modifier = reign_of_terror }
     }
 
     mean_time_to_happen = {
@@ -192,19 +183,12 @@ country_event = {
     major = yes
     option = {
         name = "EVTOPTA60050"
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
         clr_country_flag = constitutional_monarchy_gov
         set_country_flag = democracy_gov
         clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         remove_country_modifier = fight_the_power
         random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { government = hms_government } }
         random_owned = { limit = { owner = { NOT = { government = fascist_dictatorship } } } owner = { government = oligarchic_republic } }
@@ -229,10 +213,8 @@ country_event = {
         civilized = yes
         NOT = { vote_franschise = none_voting }
         NOT = { vote_franschise = landed_voting }
-        NOT = { vote_franschise = wealth_weighted_voting }
-        NOT = { vote_franschise = wealth_voting }
         NOT = { political_parties = underground_parties }
-        NOT = { upper_house_composition = party_appointed }
+        centralization = legislative_parliment
         NOT = { has_country_modifier = not_dictatorship }
         NOT = { has_country_modifier = revolutionary_spirit }
         NOT = { has_country_modifier = mercantile_society }
@@ -244,21 +226,14 @@ country_event = {
     major = yes
     option = {
         name = "EVTOPTA60050"
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
         clr_country_flag = constitutional_monarchy_gov
         set_country_flag = democracy_gov
         clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
         remove_country_modifier = fight_the_power
-        random_owned = { limit = { owner = { NOT = { government = fascist_dictatorship } } } owner = { government = democracy } }
+        government = democracy
         election = yes
         add_country_modifier = { name = not_dictatorship duration = 3650 }
 
@@ -279,6 +254,7 @@ country_event = {
 		upper_house_composition = party_appointed
         civilized = yes
         vote_franschise = none_voting
+		NOT = { AND = { NOT = { has_country_flag = established_parliament } centralization = legislative_parliment } }
     }
 
     mean_time_to_happen = {
@@ -304,14 +280,11 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					OR = {
-						centralization = legislative_parliment
-						centralization = legislative_parliment
-					}
+					centralization = legislative_parliment
 				}
 			}
 			owner = {
-				political_reform = admin_parliment
+				political_reform = no_parliment
 			}
 		}
         government = absolute_monarchy
@@ -428,7 +401,6 @@ country_event = {
     trigger = {
         OR = {
               government = democracy
-              government = tribal_democracy
               government = oligarchic_republic
         }
         vote_franschise = none_voting
@@ -455,13 +427,7 @@ country_event = {
         clr_country_flag = constitutional_monarchy_gov
         clr_country_flag = democracy_gov
         set_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = everywhere_genocide_only
-        clr_country_flag = non_colonial_genocide_only
-        clr_country_flag = colonial_genocide_only
-        clr_country_flag = preparations_to_kill
-        remove_country_modifier = preparations_to_kill
+		random_owned = { limit = { owner = { centralization = legislative_parliment } } owner = { political_reform = no_parliment } }
     }
 }
 country_event = {
@@ -470,6 +436,7 @@ country_event = {
     desc = "EVTDESC60090"
 	picture = estates_general
 	
+	mean_time_to_happen = { days = 1 }
 	trigger = {
 		OR = {
 		centralization = admin_parliment
@@ -500,7 +467,10 @@ country_event = {
 	picture = estates_general
 	
 	trigger = {
+		OR = {
 		centralization = no_parliment
+		vote_franschise = none_voting
+		}
 		has_country_flag = established_parliament
 	}
 	option = {
@@ -513,6 +483,16 @@ country_event = {
 			}
 			owner = {
 				political_reform = none_voting
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { vote_franschise = none_voting }
+				}
+			}
+			owner = {
+				political_reform = no_parliment
 			}
 		}
 		clr_country_flag = established_parliament

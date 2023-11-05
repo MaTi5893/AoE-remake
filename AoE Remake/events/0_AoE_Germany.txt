@@ -1,0 +1,49 @@
+country_event = {
+    id = 179700
+    title = "German Revolutionary Republic Proclaimed!"
+    desc = "EVTDESC179700"
+	fire_only_once = yes
+    major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Es lebe die Revolution!"
+		change_tag = GER
+        add_accepted_culture = north_german
+        add_accepted_culture = south_german
+        any_country = {
+            limit = {
+				is_culture_group = germanic
+				neighbour = THIS
+				is_greater_power = no
+				is_secondary_power = no
+				is_vassal = no
+			}
+			war = {
+				target = GER
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = annex_core_country }
+			}
+		}
+	}
+}
+country_event = {
+    id = 179701
+    title = "German Constitutional Convention"
+    desc = "EVTDESC179700"
+	fire_only_once = yes
+    major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Revolution Must Live On! Unite All Germans!"
+		NET_397 = {		add_core = THIS }
+		BOH = { all_core = { add_core = THIS } }
+		AUS_612 = { add_core = THIS }
+	}
+	
+	option = {
+		name = "We should focus on stability first."
+		government = democracy
+	}
+}

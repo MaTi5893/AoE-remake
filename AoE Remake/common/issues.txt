@@ -504,8 +504,10 @@ political_reforms = {
 				NOT = { estate_affiliation = nobility_army }
 				NOT = { estate_affiliation = nobility_church }
 				NOT = { estate_affiliation = nobility_gentry }
-				AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = party_appointed } }
-				AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = appointed } }
+				OR = {
+					NOT = { estate_affiliation = absolutist }
+					upper_house_composition = state_equal_weight
+				}
 			}
         }
 

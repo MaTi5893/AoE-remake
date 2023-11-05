@@ -118,6 +118,10 @@ reactionary_rebels = {
             factor = 0.1
             country = { nationalvalue = pm_clergyman }
         }
+		modifier = {
+            factor = 0.55
+            country = { nationalvalue = pm_nobleman }
+        }
         modifier = {
             factor = 1.0105
             NOT = { consciousness = 1 }

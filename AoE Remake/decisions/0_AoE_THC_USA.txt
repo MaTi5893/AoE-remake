@@ -66,10 +66,7 @@ political_decisions = {
         allow = {
 			money = 500000
             war = no
-			AND = {
-				has_country_flag = war_on_natives
-				#all_core = { owned_by = THIS }
-			}
+			has_country_flag = war_on_natives
             is_greater_power = yes
         }
         effect = {
@@ -248,7 +245,7 @@ political_decisions = {
         effect = {
 			set_country_flag = enacted_the_bill_of_rights
             political_reform = political_rights
-			political_reform = church_n_state_seperated
+			political_reform = church_and_state_seperation
             any_pop = {
                 militancy = 3
             }
@@ -491,6 +488,26 @@ political_decisions = {
         effect = {
             set_country_flag = monroe_doctrine
 			prestige = 15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+	}
+	
+	settle_washington = {
+		potential = {
+			owns = 85
+			owns = 91
+			owns = 20
+			83 = { empty = yes }
+			78 = { empty = yes }
+        }
+        allow = {
+            war = no
+        }
+        effect = {
+            USA_78 = { secede_province = THIS }
+			USA_81 = { secede_province = THIS }
         }
         ai_will_do = {
             factor = 1

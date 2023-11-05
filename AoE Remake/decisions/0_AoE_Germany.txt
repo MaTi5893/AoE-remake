@@ -1,0 +1,239 @@
+political_decisions = {
+
+	################################################
+	####			German Revolution			####
+	################################################
+	
+	proclaim_german_revolutionary_republic = {
+		picture = german_revolution
+		potential = {
+			NOT = { has_global_flag = german_revolutionary_war }
+			NOT = { exists = GER }
+			OR = {
+				primary_culture = north_german
+				primary_culture = south_german
+			}
+			government = proletarian_dictatorship
+			NOT = { tag = AUS }
+			NOT = { tag = HAB }
+			is_greater_power = no
+			is_vassal = no
+		}
+		allow = {
+			war = no
+			political_thought_7 = 1
+		}
+		effect = {
+			country_event = 179700
+			set_global_flag = german_revolutionary_war
+			add_country_modifier = {
+				name = nationalist_influx
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { FRA = { exists = yes government = proletarian_dictatorship } }
+				NOT = { BOR = { exists = yes government = proletarian_dictatorship } }
+				NOT = { year = 1800 }
+				part_of_sphere = yes
+				NOT = { military_score = 0 }
+			}
+		}
+	}
+	form_lutzow_free_corps = {
+		picture = switch_to_army_tech
+		potential = {
+			tag = GER
+			government = proletarian_dictatorship
+			NOT = { has_country_flag = formed_lutzow_free_corps }
+		}
+		allow = {
+			war = yes
+		}
+		effect = {
+			nationalvalue = pm_militarist
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = acceptable_pensions
+						has_country_flag = skill_and_merit_allowed
+					}
+				}
+				owner = {
+					social_reform = good_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = no_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
+			}
+			capital_scope = {
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = infantry value = current }
+                sub_unit = { type = cavalry value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+                sub_unit = { type = artillery value = current }
+            }
+			set_country_flag = formed_lutzow_free_corps
+		}
+	}
+	complete_unification = {
+		picture = german_revolution
+		potential = {
+			tag = GER
+			government = proletarian_dictatorship
+			NOT = { has_country_flag = completed_unification }
+		}
+		allow = {
+			all_core = {
+				owned_by = THIS
+			}
+			war = no
+		}
+		effect = {
+			prestige = 50
+			country_event = 179701
+			set_country_flag = completed_unification
+		}
+	}
+	################################################
+	####		Formed Germany decisions		####
+	################################################
+	
+	create_baltic_land = {
+		picture = baltic_russia
+		potential = {
+			tag = GER
+			NOT = { 
+				AND = {
+					has_global_flag = german_revolutionary_war
+					NOT = { has_country_flag = completed_unification }
+				}
+			}
+			NOT = { has_country_flag = created_baltic_land }
+		}
+		allow = {
+			RUS_357 = { owned_by = THIS }
+			RUS_354 = { owned_by = THIS }
+			RUS_349 = { owned_by = THIS }
+		}
+		effect = {
+			RUS_357 = { add_core = UBD }
+			RUS_354 = { add_core = UBD }
+			RUS_349 = { add_core = UBD }
+			create_vassal = UBD
+			set_country_flag = created_baltic_land
+		}
+	}
+	
+	integrate_baltic_land = {
+		picture = baltic_russia
+		potential = {
+			tag = GER
+			NOT = { 
+				AND = {
+					has_global_flag = german_revolutionary_war
+					NOT = { has_country_flag = completed_unification }
+				}
+			}
+			has_country_flag = created_baltic_land
+			is_our_vassal = UBD
+			NOT = { has_country_flag = integrated_baltic_land }
+		}
+		allow = {
+			political_thought_8 = 1
+		}
+		effect = {
+			UBD = {
+				all_core = {
+					add_core = THIS
+				}
+				annex_to = THIS
+			}
+			set_country_flag = integrated_baltic_land
+		}
+	}
+	
+	integration_of_westprussia = {
+		picture = west_prussia
+		potential = {
+			tag = GER
+			NOT = { 
+				AND = {
+					has_global_flag = german_revolutionary_war
+					NOT = { has_country_flag = completed_unification }
+				}
+			}
+			NOT = { has_country_flag = integrated_westprussia }
+		}
+		allow = {
+			PRU_690 = { owned_by = THIS }
+		}
+		effect = {
+			PRU_690 = { add_core = THIS }
+			set_country_flag = integrated_westprussia
+		}
+	}
+	
+	integration_of_austria = {
+		picture = switch_to_equality
+		potential = {
+			tag = GER
+			exists = AUS
+			NOT = { 
+				AND = {
+					has_global_flag = german_revolutionary_war
+					NOT = { has_country_flag = completed_unification }
+				}
+			}
+		
+		}
+		allow = {
+			war = no
+			AUS = {
+				government = proletarian_dictatorship
+				vassal_of = THIS
+			}
+		}
+		effect = {
+			prestige = 25
+			AUS = {
+				annex_to = THIS
+			}
+		}
+	}
+}

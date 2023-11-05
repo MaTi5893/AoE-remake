@@ -26,14 +26,6 @@ country_event = {
                 poor_strata_everyday_needs = 0.6
             }
         }
-        modifier = {
-            factor = 1.5
-            vaccination = public_vaccination
-        }
-        modifier = {
-            factor = 1.25
-            vaccination = military_vaccination
-        }
     }
 
     option = {
@@ -125,14 +117,6 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            vaccination = public_vaccination
-        }
-        modifier = {
-            factor = 1.25
-            vaccination = military_vaccination
-        }
-        modifier = {
-            factor = 1.5
             average_consciousness = 4
         }
         modifier = {
@@ -213,14 +197,6 @@ country_event = {
             }
         }
         modifier = {
-            factor = 1.5
-            vaccination = public_vaccination
-        }
-        modifier = {
-            factor = 1.25
-            vaccination = military_vaccination
-        }
-        modifier = {
             factor = 0.01
             any_neighbor_country = {
                 civilized = yes
@@ -283,14 +259,6 @@ country_event = {
 #                luxury_needs = 0.9
 #            }
 #        }
-        modifier = {
-            factor = 1.5
-            vaccination = public_vaccination
-        }
-        modifier = {
-            factor = 1.25
-            vaccination = military_vaccination
-        }
     }
 
     option = {

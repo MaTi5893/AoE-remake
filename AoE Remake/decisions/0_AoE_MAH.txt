@@ -107,7 +107,7 @@ political_decisions = {
 	nana_phadnavis = {
 		potential = {
 			tag = MAH
-			NOT = { has_country_flag = nana_phadnavis }
+			NOT = { has_country_flag = allow_coring_without_bureu }
 		}
 		allow = {
 			revolution_n_counterrevolution = 1
@@ -117,7 +117,7 @@ political_decisions = {
 			badboy = -5
 			add_accepted_culture = oriya
 			add_accepted_culture = telegu
-			set_country_flag = nana_phadnavis
+			set_country_flag = allow_coring_without_bureu
 		}
 	}
 }

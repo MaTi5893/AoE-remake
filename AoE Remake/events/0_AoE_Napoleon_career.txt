@@ -8,14 +8,23 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        owns = 473
-        473 = {
-            owner = {
-                capital_scope = {
-                    continent = europe
-                }
-            }
-        }
+		OR = {
+			AND = {
+				owns = 473
+				NOT = { has_global_flag = railroad_napoleon }
+				473 = {
+					owner = {
+						capital_scope = {
+							continent = europe
+						}
+					}
+				}
+			}
+			AND = {
+				primary_culture = french
+				has_global_flag = railroad_napoleon
+			}
+		}
         year = 1790
     }
 

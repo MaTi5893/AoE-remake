@@ -2,23 +2,6 @@
 #Ruled by Britain 1836
 #Valetta (120000/30000 POPS)
 854 = {
-    bureaucrats = {
-        culture = british
-        religion = protestant
-        size = 50
-    }
-
-    soldiers = {
-        culture = british
-        religion = protestant
-        size = 500
-    }
-
-    artisans = {
-        culture = british
-        religion = protestant
-        size = 150
-    }
 
     aristocrats = {
         culture = maltese
@@ -29,7 +12,7 @@
     bureaucrats = {
         culture = maltese
         religion = catholic
-        size = 10
+        size = 50
     }
 
     clergymen = {
@@ -47,7 +30,7 @@
     soldiers = {
         culture = maltese
         religion = catholic
-        size = 340
+        size = 6340
     }
 
     farmers = {

@@ -88,7 +88,6 @@ political_decisions = {
 			BAV = {
 				war = no
 			}
-			war = no
 		}
 		effect = {
 			badboy = 5
@@ -231,7 +230,7 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			prestige = 50
-			any_core = {
+			all_core = {
 				add_core = BGY
 				remove_core = PAL
 			}

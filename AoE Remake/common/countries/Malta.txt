@@ -3,7 +3,7 @@ theocracy = { 204 229 255 }
 graphical_culture = ItalianGC
 
 party = {
-    name = "Nobility Faction"
+    name = "Order Leadership"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
@@ -22,7 +22,7 @@ party = {
 
     ideology = liberal
 
-    estate_affiliation = no_affiliation
+    estate_affiliation = nobility_gentry
     economic_policy = laissez_faire
     trade_policy = protectionism
     religious_policy = pluralism
@@ -31,13 +31,13 @@ party = {
 }
 
 party = {
-    name = "Absolutist Faction"
+    name = "Grand Master's Faction"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
     ideology = reactionary
 
-    estate_affiliation = no_affiliation
+    estate_affiliation = absolutist
     economic_policy = state_capitalism
     trade_policy = protectionism
     religious_policy = moralism

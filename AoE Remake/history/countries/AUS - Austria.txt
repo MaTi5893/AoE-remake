@@ -40,7 +40,6 @@ penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
 
-centralization = regionalism
 colonial_policy = no_colonies
 
 set_country_flag = catholic_country
@@ -48,25 +47,10 @@ set_country_flag = support_habsburg_heir
 set_country_flag = hre_emperor
 set_country_flag = hre_member
 
-decision = AUS_setup_1836
-decision = slovene_rename_aus
-decision = banat_rename_aus
-decision = vojvodina_rename_aus
-decision = istria_rename_aus
-decision = southern_transylvania_rename_aus
-decision = northern_transylvania_rename_aus
-decision = slovakia_rename_aus
-decision = bohemia_rename_aus
-decision = sudetes_rename_aus
-decision = silesia_rename_german
+
 decision = transdanubia_rename_aus
 decision = central_hungary_rename_aus
 decision = german_tyrol
-decision = croatia_rename_aus
-decision = slavonia_rename_aus
-decision = dalmatia_rename_aus
-decision = burgenland_rename
-
 ruling_party = "Nobility Faction"
 upper_house = {
     fascist = 0

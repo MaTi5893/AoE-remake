@@ -222,103 +222,6 @@ country_event = {
 		name = "Dissolve The Essembly!"
 	}
 }
-country_event = {
-	id = 19003
-	title = "Third estate satisfied" #Estates general
-	desc = "EVTDESC19003"
-	picture = peasant
-	fire_only_once = yes
-	
-	trigger = {
-		has_country_modifier = poor_tax_laws
-		has_country_modifier = poor_conscript_laws
-		has_country_modifier = peasant_in_government
-		tag = BOR
-	}
-	
-	mean_time_to_happen = {
-		months = 1 
-	}
-	
-	option = {
-		name = "I'm glad they're happy..."
-		remove_country_modifier = peasant_turmoil
-		clr_country_flag = clergy_and_nobility_domination
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = -1
-			consciousness = 2
-		}
-	}
-}
-country_event = {
-	id = 19004
-	title = "Tennis Court Oath" #Estates general
-	desc = "EVTDESC19003"
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		has_country_modifier = poor_tax_laws
-		has_country_modifier = poor_conscript_laws
-		tag = BOR
-	}
-	
-	mean_time_to_happen = {
-		months = 1 
-	}
-	
-	option = {
-		name = "I'll allow these reforms..."
-		prestige = -60
-		government = hms_government
-		political_reform = jefferson_method
-		political_reform = appointed
-		political_reform = wealth_voting
-		political_reform = harassment
-		add_country_modifier = {
-			name = peasant_in_government
-			duration = 3650
-		}
-		any_pop = { 
-			limit = { 
-				type = aristocrats
-			}
-			militancy = 4
-			consciousness = 4
-		}
-		any_pop = { 
-			limit = { 
-				type = clergymen
-			}
-			militancy = 4
-			consciousness = 4
-		}
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = -2 
-			consciousness = -4
-		}
-		ai_chance = {
-			factor = 5
-		}
-	}
-	
-	option = {
-		name = "Never will I allow dirty peasants to have a voice in MY state!"
-		any_pop = {
-			limit = { 
-				strata = poor
-			}
-			militancy = 6 
-			consciousness = 3
-		}
-	}
-}
 #####louis XIV####
 country_event = {
 	id = 171107
@@ -343,14 +246,17 @@ country_event = {
 }
 country_event = {
 	id = 171108
-	title = "Death of Louis XIV"
+	title = "Death of Louis XIV & The Regency"
 	desc = "EVTDESC171108"
 	picture = louis_xiv_ded
 	fire_only_once = yes
 	
 	trigger = {
 		has_country_modifier = louis_grande
-		year = 1715
+		OR = {
+			year = 1715
+			has_global_flag = france_lost_succ
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -360,204 +266,181 @@ country_event = {
 	option = {
 		name = "Telle tragedie!"
 		prestige = 5
+		set_country_flag = louis_xiv_dead
 		remove_country_modifier = louis_grande
+		add_country_modifier = {
+			name = louis_xv_regency
+			duration = 1825
+		}
+		nationalvalue = pm_nobleman
 	}
 }
-#####
+####louis XV####
 country_event = {
 	id = 171109
-	title = "France and the Third Estate"
+	title = "The First Government Of Louis XV"
 	desc = "EVTDESC171109"
-	picture = peasants
+	picture = louis_xv_gov
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT171109A"
+		prestige = 5
+		add_country_modifier = {
+			name = louis_henri_gov
+			duration = 10950
+		}
+		nationalvalue = pm_nobleman
+	}
+	
+	option = {
+		name = "EVTOPT171109B"
+		prestige = 5
+		add_country_modifier = {
+			name = de_fleury_gov
+			duration = 3650
+		}
+		nationalvalue = pm_clergyman
+	}
+}
+country_event = {
+	id = 171110
+	title = "The Second Government Of Louis XV"
+	desc = "EVTDESC171110"
+	picture = louis_xv_gov
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assume personal rule"
+		prestige = 5
+		add_country_modifier = {
+			name = louis_xv
+			duration = 3650
+		}
+		nationalvalue = pm_no_minister
+	}
+	
+	option = {
+		name = "Appoint Duke de Choiseul"
+		prestige = 5
+		add_country_modifier = {
+			name = de_choiseul_gov
+			duration = 3650
+		}
+		nationalvalue = pm_militarist
+	}
+}
+###Parlement Rebelion###
+country_event = {
+	id = 171111
+	title = "The Paris Parlement Rebellion"
+	desc = "EVTDESC171111"
+	picture = parlement_resistance
 	fire_only_once = yes
 	
 	trigger = {
-		primary_culture = french
-		#government = absolute_monarchy
-		OR = {
-			average_militancy = 4
-			has_recently_lost_war = yes
-		}
-		is_ideology_enabled = communist
-		OR = {
-			blockade = 0.85
-			poor_tax = 0.85
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 9
+		NOT = { safety_regulations = no_safety }
+		NOT = { safety_regulations = trinket_safety }
+		NOT = { has_country_modifier = louis_grande }
 	}
 	
 	option = {
-		name = "Let them eat cake or something..."
+		name = "These damned nobles!"
 		prestige = 5
-		add_country_modifier = {
-			name = peasant_turmoil
-			duration = -1
+		FRA_425 = {
+			add_province_modifier = {
+				name = parlement_resistance
+				duration = -1
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				continent = europe
+				any_owned_province = { NOT = { has_province_modifier = parlement_resistance } }
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = parlement_resistance
+					duration = -1
+				}
+			}
 		}
 	}
 }
-#####India#####
 country_event = {
-	id = 171115
-	title = "Cost of War"
-	desc = "EVTDESC171115"
-	picture = deliberation
+	id = 171112
+	title = "The Paris Parlement Rebellion"
+	desc = "EVTDESC171112"
+	picture = parlement_resistance
 	
 	trigger = {
-		tag = MUG
-		owns = 1305
-		owns = 1261
-		has_recently_lost_war = yes
-		NOT = {
-			war_with = BOR
-		}
-		NOT = {
-			war_with = FRA
-		}
-		NOT = { has_global_flag = disabled_railroad_wars }
+		tag = BOR
+		FRA_425 = { has_province_modifier = parlement_resistance }
 	}
 	
 	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "Approach the French"
-		425 = {
-			owner = {
-				country_event = 171116
-			}
+		months = 12
+		modifier = {
+			factor = 2
+			has_country_modifier = louis_henri_gov
+		}
+		modifier = {
+			factor = 5
+			NOT = { year = 1730 }
 		}
 	}
 	
 	option = {
-		name = "We can get money through other means"
-		prestige = -10
-		any_pop = {
-			militancy = 4
-		}
-	}
-}
-country_event = {
-	id = 171116
-	title = "Mughals offer to sell land"
-	desc = "EVTDESC171116"
-	picture = deliberation
-	is_triggered_only = yes
-	
-	option = {
-		name = "We'd be foulish not to accept... heh.."
-		1305 = {
-			secede_province = THIS
-		}
-		1261 = {
-			secede_province = THIS
-		}
-		money = -20000
-		MUG = {
-			money = 20000
-		}
-		ai_chance = { factor = 1 }	
-	}
-
-	option = {
-		name = "They're not worth our time"
-		prestige = -10
-	}
-}
-
-country_event = {
-	id = 171118
-	title = "Colonial Administration Split of 1717"
-	desc = "EVENTDESC171118"
-	picture = deliberation
-	is_triggered_only = yes
-	
-	option = {
-		name = "This is for the better"
-		any_owned = {
+		name = "These damned nobles!"
+		random_owned = {
 			limit = {
-				is_core = ULA
+				continent = europe
+				NOT = {  has_province_modifier = parlement_resistance }
 			}
-			remove_core = FCA
-			secede_province = ULA
-		}
-		add_country_modifier = {
-			name = mercantilism
-			duration = 1825
-		}
-		BOR = {
-			create_vassal = ULA
-		}
-		ULA = {
-			government = colonial_company
-			add_country_modifier = {
-				name = immigration_boom
-				duration = 1825
-			}
-			add_country_modifier = {
-				name = mercantilism
-				duration = 1825
-			}
-			add_country_modifier = {
-				name = total_reform
-				duration = 1825
-			}
-			treasury = 25000
-		}
-		prestige = 20
-		ai_chance = { factor = 1 }	
-	}
-	
-	option = {
-		name = "We can govern the area ourselves!"
-		any_owned = {
-			limit = {
-				is_core = ULA
-			}
-			remove_core = ULA
-		}
-		BOR = {
-			relation = {
-				who = THIS
-				value = -50
+			state_scope = {
+				any_owned = {
+					add_province_modifier = {
+						name = parlement_resistance
+						duration = -1
+					}
+					any_pop = {
+						limit = { NOT = { strata = rich } }
+						ideology = {
+							value = liberal
+							factor = 0.02
+						}
+						scaled_consciousness = {
+							ideology = liberal
+							factor = 4
+						}
+					}
+				}
 			}
 		}
-		capital_scope = {
-			any_pop = {
-				militancy = 5
-			}
-		}
-		prestige = 5
-		badboy = 10
-		ai_chance = { factor = 0 }	
-	}
-	
-	option = {
-		name = "New lands await our conquest!"
-		any_owned = {
-			limit = {
-				is_core = ULA
-			}
-			remove_core = FCA
-			secede_province = ULA
-		}
-		BOR = {
-			create_vassal = ULA
-		}
-		ULA = {
-			government = colonial_company
-			add_country_modifier = {
-				name = small_immigration_boom
-				duration = 1825
-			}
-			treasury = 25000
-		}
-		change_tag_no_core_switch = ULA
-		prestige = 20
-		ai_chance = { factor = 0 }	
 	}
 }
 country_event = {
@@ -861,111 +744,6 @@ country_event = {
 				culture = scottish
 			}
 			militancy = 8
-		}
-	}
-}
-
-country_event = {
-	id = 171125
-	title = "The Continental Blockade"
-	desc = "EVTDESC171125"
-	picture = continental_blockade
-	is_triggered_only = yes
-	
-	option = {
-		name = "Damn Them!"
-		random_owned = {
-			limit = {
-				is_core = THIS
-				NOT = { has_province_modifier = suffering_from_continental_blockade }
-			}
-			add_province_modifier = {
-				name = suffering_from_continental_blockade
-				duration = -1
-			}
-		}
-	}
-}
-country_event = {
-	id = 171126
-	title = "$FROMCOUNTRY$ Joins The Continental Blockade"
-	desc = "EVTDESC171126"
-	picture = continental_blockade
-	is_triggered_only = yes
-	
-	option = {
-		name = "Damn Them!"
-		random_owned = {
-			limit = {
-				is_core = THIS
-				NOT = { has_province_modifier = suffering_from_continental_blockade }
-			}
-			add_province_modifier = {
-				name = suffering_from_continental_blockade
-				duration = -1
-			}
-		}
-	}
-}
-country_event = {
-	id = 171127
-	title = "End of the Continental Blockade"
-	desc = "EVTDESC171127"
-	picture = continental_blockade
-	is_triggered_only = yes
-	
-	option = {
-		name = "Good"
-		any_owned = {
-			limit = {
-				has_province_modifier = suffering_from_continental_blockade
-			}
-			remove_province_modifier = suffering_from_continental_blockade
-		}
-		prestige = 25
-		relation = {
-			who = FROM
-			value = 50
-		}
-	}
-}
-country_event = {
-	id = 171128
-	title = "$FROMCOUNTRY$ Leaves The Continental Blockade"
-	desc = "EVTDESC171128"
-	picture = continental_blockade
-	is_triggered_only = yes
-
-	option = {
-		name = "Good"
-		random_owned = {
-			limit = {
-				has_province_modifier = suffering_from_continental_blockade
-			}
-			remove_province_modifier = suffering_from_continental_blockade
-		}
-	}
-}
-country_event = {
-	id = 171129
-	title = "Continental blocakde cleanup"
-	desc = "STAY CALM"
-	picture = continental_blockade
-	
-	trigger = {
-		any_owned_province = {
-			has_country_modifier = suffering_from_continental_blockade
-		}
-		NOT = { primary_culture = british }
-	}
-	
-	option = {
-		name = "ok"
-		any_owned = {
-			limit = {
-				has_province_modifier = suffering_from_continental_blockade
-			}
-			remove_province_modifier = suffering_from_continental_blockade
 		}
 	}
 }
@@ -1308,7 +1086,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = 171142
+	id = 171150
 	title = "what if"
 	desc = "deadass?"
 	fire_only_once = yes
@@ -1333,5 +1111,435 @@ country_event = {
 			type = dismantle_hre
 			months = 90
 		}
+	}
+}
+country_event = {
+	id = 171142
+	title = "French Language Campaigns"
+	desc = "EVTDESC171142"
+	picture = "peasant"
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Occitanians are the greatest threat to our internal unity."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_461 #Languedoc
+						region = FRA_451 #Rhone
+						region = FRA_467 #Provence
+						region = FRA_442 #Poitou
+						region = FRA_455 #Le Midi
+						region = FRA_445 #Limousin
+						region = FRA_448 #Auvergne
+						region = FRA_458 #Aquitaine
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = occitan }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "The Picards prove a treacherous peoples looking beyond the border."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_399 #Picardie
+						region = FRA_404 #Champagne
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = picard }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "The Arpitanians have no right to our lands without speaking our language."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_451 #Rhone
+						region = FRA_428 #Bourgogne
+						region = FRA_451 #Franche-Comté
+						region = FRA_428 #Savoie
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = arpitan }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Bretons are simply French speakers that are yet to learn of culture."
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_420 #Bretagne
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = breton }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "The Germans of Lorraine hold dangerous sympathies for our rivals."
+		
+		random_state = {
+            limit = {
+				NOT = { any_owned_province = { has_province_modifier = french_language_policy_cooldown } }
+				any_owned_province = {
+                    OR = {
+						region = FRA_412 #Alsace
+						region = FRA_411 #Lorraine
+					}
+                }
+            }
+			any_pop = {
+                limit = { culture = south_german }
+                militancy = 3
+            }
+            any_owned = {
+				add_province_modifier = {
+					name = french_language_policy
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = french_language_policy_cooldown
+					duration = 3650
+				}
+            }
+        }
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_modifier = de_fleury_gov }
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = french_language_campaign
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "We do not have the resources for such an endeavour."
+	}
+}
+country_event = {
+	id = 171143
+	title = "The Age Of Reason in France"
+	desc = "EVTDESC171143"
+	picture = philospohy
+	is_triggered_only = yes
+
+	option = {
+		name = "Hopefully they don't get any controversial ideas."
+		
+		any_pop = {
+			consciousness = 1
+		}
+		years_of_research = 0.5
+	}
+}
+country_event = {
+	id = 171144
+	title = "Rousseau Publishes 'The Social Contract'"
+	desc = "EVTDESC171144"
+	fire_only_once = yes
+	picture = rousseau
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1762
+	}
+
+	option = {
+		name = "Excellent."
+		
+		any_pop = {
+			consciousness = 1
+		}
+		years_of_research = 0.5
+	}
+}
+country_event = {
+	id = 171145
+	title = "Voltaire publishes 'Philosophical Letters'"
+	desc = "EVTDESC171145"
+	fire_only_once = yes
+	picture = voltaire
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1732
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+country_event = {
+	id = 171146
+	title = "Montesquieu publishes 'The Spirit of Laws'"
+	desc = "EVTDESC171146"
+	fire_only_once = yes
+	picture = montesquieu
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1750
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+
+country_event = {
+	id = 171147
+	title = "Encyclopédie Published"
+	desc = "EVTDESC171147"
+	fire_only_once = yes
+	picture = encyclopedie
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		year = 1753
+	}
+
+	option = {
+		name = "Excellent."
+		years_of_research = 0.5
+		prestige = 20
+	}
+}
+
+country_event = {
+	id = 171148
+	title = "Edict Of Versailles"
+	desc = "EVTDESC171148"
+	fire_only_once = yes
+	picture = Jacobins
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		religious_minoritys = political_rights
+	}
+	mean_time_to_happen = {
+		months = 5
+	}
+	option = {
+		name = "Excellent."
+		any_pop = { militancy = -2 }
+		prestige = 15
+	}
+}
+
+country_event = {
+	id = 171149
+	title = "Declaration Of The Rights Of Man"
+	desc = "EVTDESC171149"
+	fire_only_once = yes
+	picture = rights_of_man
+	
+	trigger = {
+		has_country_flag = french_enlightenement
+		government = proletarian_dictatorship
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	option = {
+		name = "Excellent."
+		any_pop = { militancy = -2 }
+		prestige = 30
 	}
 }

@@ -214,11 +214,10 @@ country_event = {
 		tag = ARN
 		OR = {
 			SPC = { exists = no }
-			AND = { 487 = {
-				controlled_by = THIS
-				}
-				479 = { NOT = { controlled_by = SPC }
-				}
+			AND = {
+				487 = { controlled_by = THIS }
+				479 = { NOT = { controlled_by = SPC } }
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -872,12 +871,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-			name = "Long live Charles III"
-			define_general = {
-            name = "Charles III Von Habsburg"
-            personality = defence_3.1
-            background = attack_3.1
-			}
-			money = 100000
+		name = "Long live Charles III"
+		define_general = {
+           name = "Charles III Von Habsburg"
+           personality = defence_3.1
+           background = attack_3.1
 		}
+		money = 100000
 	}
+}

@@ -1,0 +1,60 @@
+
+army = {
+    name = "Knights Hospitaller"
+    location = 854
+
+    regiment = {
+        name= "2nd Regular Infantry Brigade"
+        type = infantry
+        home = 854
+    }
+
+}
+leader = {
+    name = "Ramon Perellos"
+    date = 1700.1.1
+    type = land
+    personality = defence_3.1
+    background = attack_3.1
+}
+leader = {
+    name = "Ramon Perellos"
+    date = 1700.1.1
+    type = sea
+    personality = defence_3.1
+    background = attack_3.1
+}
+navy = {
+    name = "Hospitaller Navy"
+    location = 854
+	
+	ship = {
+        name = "Frigate"
+        type = frigate
+    }
+
+    ship = {
+        name = "Frigate"
+        type = frigate
+    }
+
+    ship = {
+        name = "Frigate"
+        type = frigate
+    }
+
+    ship = {
+        name = "Frigate"
+        type = frigate
+    }
+
+    ship = {
+        name = "Frigate"
+        type = frigate
+    }
+	
+	ship = {
+        name = "Transport"
+        type = clipper_transport
+    }
+}
