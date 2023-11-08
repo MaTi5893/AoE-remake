@@ -1945,13 +1945,6 @@ guiTypes = {
 		position = { x = 382 y = 20 }
 		size = { x=175 y=126 }
 		moveable = 0
-
-		iconType = {
-			name ="decision_image"
-			spriteType = "GFX_no_decision_image"
-			position = { x= 12 y = 27 }
-			Orientation = "UPPER_LEFT"
-		}
 		
 		iconType = {
 			name ="politics_decision_entry"
@@ -1959,7 +1952,6 @@ guiTypes = {
 			position = { x= 4 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 		instantTextBoxType = { 
 			name = "decision_name"
 			position = { x = 13 y = 5 }
@@ -1969,6 +1961,12 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 			format = left
+		}
+		iconType = {
+			name ="decision_image"
+			spriteType = "GFX_no_decision_image"
+			position = { x= 12 y = 27 }
+			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = { 

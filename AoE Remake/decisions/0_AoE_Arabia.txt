@@ -1,0 +1,51 @@
+political_decisions = {
+	##################
+	#######Oman#######
+	##################
+	
+	conquest_of_zanzibar = {
+		potential = {
+			tag = OMA
+			NOT = { has_country_flag = conquest_of_zanzibar }
+		}
+		allow = {
+			owns = 2048
+		}
+		effect = {
+			badboy = 2.5
+			money = 200000
+			relation = {
+				who = POR
+				value = -100
+			}
+			random_country = {
+				limit = {
+					neighbour = THIS
+					civilized = no
+					capital_scope = { continent = africa }
+				}
+				add_casus_belli = {
+					target = OMA
+					type = conquest
+					months = 12
+				}
+			}
+			set_country_flag = conquest_of_zanzibar
+		}
+	}
+	
+	omani_india = {
+	
+	}
+	
+	arabian_sea_trade = {
+	
+	}
+	#################
+	######Yemen######
+	#################
+	
+	##################
+	######Arabia######
+	##################
+}
