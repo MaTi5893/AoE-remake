@@ -1,0 +1,58 @@
+capital = 972
+primary_culture = cossack
+culture = ukrainian
+religion = orthodox
+government = colonial_company
+plurality = 10
+nationalvalue = pm_no_minister
+literacy = 0.1
+civilized = yes
+prestige = 15
+
+ruling_party = "Sich Rada"
+
+upper_house = {
+fascist = 0
+reactionary = 33
+conservative = 34
+socialist = 0
+communist = 0
+liberal = 33
+anarcho_liberal = 0
+}
+slavery = no_slavery
+vote_franschise = landed_voting
+upper_house_composition = proportional_representation
+voting_system = first_past_the_post
+public_meetings = yes_meeting
+press_rights = free_press
+trade_unions = all_trade_unions
+political_parties = secret_ballots
+wage_reform = no_minimum_wage
+work_hours = eight_hours
+safety_regulations = trinket_safety
+unemployment_subsidies = good_subsidies
+pensions = acceptable_pensions
+health_care = no_health_care
+school_reforms = good_schools
+#tech
+
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+army_command_principle = 1
+clipper_design = 1
+post_nelsonian_thought = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+piston_steam_engine = 1
+mechanical_production = 1
+
+oob = "ZZH_oob.txt"

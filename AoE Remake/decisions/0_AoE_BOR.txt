@@ -204,7 +204,67 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			revolution_n_counterrevolution = 1
+			mass_politics = 1
+		}
+		effect = {
+			country_event = 171110
+			set_country_flag = second_governemnt_louis_xv
+		}
+	}
+	
+	bastion_of_reaction = {
+		picture = big_louis
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			has_country_flag = second_governemnt_louis_xv
+			NOT = { has_country_flag = bastion_of_reaction }
+			exists = yes
+		}
+		allow = {
+			government = absolute_monarchy
+			rank = 1
+			OR = {
+				AND = {
+					has_country_modifier = de_choiseul_gov
+					has_country_flag = dominated_na
+					HND = {
+						any_core = {
+							NOT = { owner = { primary_culture = british } }
+						}
+					}
+				}
+				AND = {
+					has_country_modifier = louis_xv
+					poor_strata_luxury_needs = 0.33
+				}
+			}
+		}
+		effect = {
+			remove_country_modifier = clergy_and_nobility_domination
+			set_country_flag = bastion_of_reaction
+		}
+	}
+	
+	pax_bourbona = {
+		picture = france
+		potential = {
+			tag = BOR
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			has_country_flag = first_governemnt_louis_xv
+			NOT = { has_country_flag = second_governemnt_louis_xv }
+			exists = yes
+		}
+		allow = {
+			political_thought_7 = 1
 		}
 		effect = {
 			country_event = 171110

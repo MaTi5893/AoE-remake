@@ -33,30 +33,408 @@ country_event = {
 }
 country_event = {
 	id = 156901
-	title = "Polish-Lithuanian policies vetoed"
+	title = "Veto In The Sejm!"
 	desc = "EVTDESC156901"
 	picture = sejm
-
-	trigger = {
-		primary_culture = polish
-		government = elective_monarchy_oligarchy
-		rich_tax = 0.9
-		NOT = { has_country_modifier = mercantilism }
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = {
-		months = 12
+	option = {
+		name = "Another futile session..."	
+		election = yes
+		nationalvalue = pm_nobleman
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = trinket_safety }
+			}
+			owner = { social_reform = no_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = low_safety }
+			}
+			owner = { social_reform = trinket_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = acceptable_safety }
+			}
+			owner = { social_reform = low_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = good_safety }
+			}
+			owner = { social_reform = acceptable_safety }
+		}
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+	}
+}
+country_event = {
+	id = 156902
+	title = "Veto In The Sejm!"
+	desc = "EVTDESC156901"
+	picture = sejm
+	is_triggered_only = yes
+	
+	option = {
+		name = "Bribe our way to their hearts!"	
+		election = yes
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = trinket_safety }
+			}
+			owner = { social_reform = no_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = low_safety }
+			}
+			owner = { social_reform = trinket_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = acceptable_safety }
+			}
+			owner = { social_reform = low_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = good_safety }
+			}
+			owner = { social_reform = acceptable_safety }
+		}
 	}
 	
 	option = {
-		name = "They're all idiots"	
-		election = yes
-		add_country_modifier = {
-			name = szlachta_taxes
-			duration = 1825
+		name = "Concede on some reforms"
+		##############################
+		###All Estates go down by 1###
+		##############################
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = acceptable_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = good_minimum_wage
+			}
 		}
-		prestige = -5
-	}	
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = low_minimum_wage
+					NOT = { has_country_flag = clergy_and_nobility_domination }
+				}
+			}
+			owner = {
+				social_reform = acceptable_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = trinket_wage
+				}
+			}
+			owner = {
+				social_reform = low_minimum_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					wage_reform = no_minimum_wage
+				}
+			}
+			owner = {
+				social_reform = trinket_wage
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = fourteen_hours
+				}
+			}
+			owner = {
+				social_reform = no_work_hour_limit
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = twelve_hours
+				}
+			}
+			owner = {
+				social_reform = fourteen_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = ten_hours
+				}
+			}
+			owner = {
+				social_reform = twelve_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					work_hours = eight_hours
+				}
+			}
+			owner = {
+				social_reform = ten_hours
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = trinket_subsidies
+				}
+			}
+			owner = {
+				social_reform = no_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = low_subsidies
+				}
+			}
+			owner = {
+				social_reform = trinket_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = acceptable_subsidies
+				}
+			}
+			owner = {
+				social_reform = low_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					unemployment_subsidies = good_subsidies
+				}
+			}
+			owner = {
+				social_reform = acceptable_subsidies
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = no_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = good_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+	}
 }
 country_event = {
 	id = 1569011
@@ -68,8 +446,7 @@ country_event = {
 		government = elective_monarchy_oligarchy
 		primary_culture = polish
 		rich_tax = 0.7
-		NOT = { has_country_modifier = mercantilism }
-		year = 1740
+		NOT = { has_country_modifier = szlachta_taxes }
 	}
 	
 	mean_time_to_happen = {
@@ -185,12 +562,26 @@ country_event = {
 		name = "Fools!"
 		any_owned = {
 			limit = {
-				pop_majority_culture = polish
+				NOT = { country_units_in_province = SAX }
+ 				NOT = { country_units_in_province = PLC }
 			}
-			add_province_modifier = {
-				name = tornogrod_confederation
-				duration = 1095
+			secede_province = KRA
+		}
+		any_owned = {
+			any_neighbor_province ={
+				limit = {
+					owned_by = KRA
+				}
+				secede_province = PLC
 			}
+		}
+		KRA = {
+			government = oligarchic_republic
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
 		}
 		add_country_modifier = {
 			name = great_statesman
@@ -428,48 +819,6 @@ country_event = {
 		}
 	}
 }
-#country_event = {
-#	id = 15730031
-#	title = "Treaty of Warsaw"
-#	desc = "..."	
-#	major = yes
-#	is_triggered_only = yes
-#	
-#	option = {
-#		name = "A Historical Victory for our nation!"
-#		RUS = {
-#			diplomatic_influence = {
-#				who = THIS
-#				value = -400
-#			}
-#		}
-#		HET = {
-#			limit = {
-#				vassal_of = RUS
-#			}
-#			country_event = 15730131
-#		}
-#		ZZH = {
-#			limit = {
-#				vassal_of = RUS
-#			}
-#			country_event = 15730131
-#		}
-#		prestige = 25
-#		clr_global_flag = polish_succesion_crisis
-#	}
-#}
-#country_event = {
-#	id = 15730131
-#	title = "Treaty of Warsaw"
-#	desc = "..."	
-#	is_triggered_only = yes
-#	
-#	option = {
-#		name = "A Historical Victory for our nation!"
-#		annex_to = PLC
-#	}
-#}
 ####Royal Election of 1764####
 country_event = {
 	id = 15730040
@@ -793,7 +1142,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "REVOLUTIONAIRES!"
+		name = "REVOLUTIONaRIES!"
 		any_pop = {
 			militancy = 3
 		}
@@ -956,6 +1305,7 @@ country_event = {
 	trigger = {
 		NOT = { exists = PLC }
 		NOT = { exists = POL }
+		NOT = { exists = KRA }
 		any_owned_province = {
 			is_core = PLC
 		}

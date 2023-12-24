@@ -16,60 +16,16 @@ army = {
 
 name = "1. Armia Korony Polskiej" location = 703
 
-regiment = { name = "1. brygada" type = infantry home = 712 } 
-regiment = { name = "2. brygada" type = infantry home = 699 } 
-regiment = { name = "3. brygada" type = infantry home = 705 } 
+regiment = { name = "1. Brygada" type = infantry home = 959 } 
+regiment = { name = "2. Pancerni" type = cuirassier home = 699 } 
+regiment = { name = "1. Dragonia" type = dragoon home = 706 } 
 regiment = { 
-	name = "4. brygada" 
-	type = dragoon
+	name = "4. Pancerni" 
+	type = cuirassier
 	home = 696
 } 
-regiment = { name = "5. brygada" type = infantry home = 957 } 
-regiment = { name = "6. brygada" type = artillery home = 706 } 
-regiment = { name = "7. brygada" type = artillery home = 946 } 
-regiment = { name = "8. brygada" type = artillery home = 692 } 
-regiment = { name = "9. brygada" type = artillery home = 960 } 
-regiment = { name = "10. brygada" type = artillery home = 710 }
 }
 
-army = { 
-
-name = "2. Armia Ksiestwa Litewskiego" location = 360
-
-regiment = { name = "1. brygada" type = infantry home = 361 } 
-regiment = { name = "2. brygada" type = infantry home = 360 } 
-regiment = { name = "3. brygada" type = infantry home = 718 } 
-regiment = { name = "4. brygada" type = dragoon home = 948 } 
-regiment = { name = "5. brygada" type = infantry home = 945 } 
-regiment = { name = "6. brygada" type = artillery home = 949 } 
-regiment = { name = "7. brygada" type = artillery home = 940 } 
-regiment = { name = "8. brygada" type = artillery home = 937 } 
-regiment = { name = "9. brygada" type = artillery home = 955 } 
-regiment = { name = "10. brygada" type = artillery home = 956 }
-}
-
-army = { 
-
-name = "2.Armia Koronna" location = 706
-
-regiment = { name = "1. brygada" type = artillery home = 701 } 
-regiment = { name = "2. brygada" type = artillery home = 714 } 
-regiment = { name = "3. brygada" type = artillery home = 703 } 
-regiment = { name = "4. brygada" type = artillery home = 711 } 
-regiment = { name = "5. brygada" type = artillery home = 702 }
-regiment = { name = "1. Dragonia" type = dragoon home = 948 }
-}
-army = { 
-
-name = "3.Armia Koronna" location = 956
-
-regiment = { name = "1. brygada" type = artillery home = 952 } 
-regiment = { name = "2. brygada" type = artillery home = 954 } 
-regiment = { name = "3. brygada" type = artillery home = 959 } 
-regiment = { name = "4. brygada" type = artillery home = 959 } 
-regiment = { name = "5. brygada" type = artillery home = 704 }
-regiment = { name = "1. dragonia" type = dragoon home = 716 }
-}
 
 leader = {
 	name = "Augustus II Von Wettin"

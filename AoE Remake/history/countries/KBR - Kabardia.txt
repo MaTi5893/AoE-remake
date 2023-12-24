@@ -1,12 +1,14 @@
-capital = 1221
-primary_culture = baluchi
+capital = 1051
+primary_culture = circassian
+culture = chechen
+culture = dagestani
 religion = sunni
 civilized = no
-government = khanate
+government = absolute_monarchy
 plurality = 0.0
 nationalvalue = pm_no_minister
 literacy = 0.01  non_state_culture_literacy = 0.01
-#non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
+prestige = 5
 
 # Political reforms
 slavery = yes_slavery
@@ -27,9 +29,9 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-# New Reforms
+#New Reforms
 
-debt_law = serfdom
+debt_law = peonage
 penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
@@ -38,18 +40,16 @@ centralization = unitary
 colonial_policy = no_colonies
 
 
-ruling_party = "Nobility Faction"
-upper_house = {
-    fascist = 0
-    liberal = 15
-    conservative = 75
-    reactionary = 10
-    anarcho_liberal = 0
-    socialist = 0
-    communist = 0
-}
+consciousness = 0
+nonstate_consciousness = 0
+
+oob = "CIR_oob.txt"
 
 set_country_flag = sunni_country
+
+foreign_weapons = yes_foreign_weapons
+military_constructions = yes_military_constructions
+admin_reform = yes_admin_reform
 
 # Technologies
 flintlock_rifles = 1
@@ -60,14 +60,15 @@ classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
 piston_steam_engine = 1
 
-foreign_weapons = yes_foreign_weapons
-military_constructions = yes_military_constructions
-admin_reform = yes_admin_reform
-
 # Inventions
 
-# Starting Consciousness
-consciousness = 0
-nonstate_consciousness = 0
-
-oob = "KAL_oob.txt"
+ruling_party = "Nobility Faction"
+upper_house = {
+    fascist = 0
+    liberal = 20
+    conservative = 70
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
+}

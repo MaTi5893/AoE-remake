@@ -142,7 +142,7 @@ SWH = {
 
 HAM = {
     value = 35
-    level = 4
+    level = 5
     influence_value = 0
 }
 
@@ -171,8 +171,8 @@ EFR = {
 }
 
 KUR = {
-    value = 45
-    level = 5
+    value = -45
+    level = 1
     influence_value = 0
 }
 
@@ -243,6 +243,64 @@ army = {
         name= "Norrlands Dragonregemente"
         type = artillery
         home = 321
+    }
+	
+	regiment = {
+        name= "I. Suomen Tarkk’ampujapataljoona"
+        type = plane
+        home = 343
+    }
+
+    regiment = {
+        name= "II. Suomen Tarkk’ampujapataljoona"
+        type = plane
+        home = 345
+    }
+
+    regiment = {
+        name= "III. Suomen Tarkk’ampujapataljoona"
+        type = plane
+        home = 346
+    }
+
+    regiment = {
+        name= "III. Suomen Tarkk’ampujapataljoona"
+        type = plane
+        home = 548
+    }
+
+    regiment = {
+        name= "II. Suomen Tarkk’ampujapataljoona"
+        type = dragoon
+        home = 547
+    }
+
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 323
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 994
+    }
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 994
+    }
+
+    regiment = {
+        name= "Jönköpings Regemente"
+        type = artillery
+        home = 531
+    }
+    regiment = {
+        name= "Kalmar Regemente"
+        type = artillery
+        home = 327
     }
 }
 
@@ -323,67 +381,6 @@ army = {
         name= "Västgöta Regemente"
         type = dragoon
         home = 548
-    }
-}
-army = {
-    name = "Suomen Kaarti"
-    location = 354
-    regiment = {
-        name= "I. Suomen Tarkk’ampujapataljoona"
-        type = plane
-        home = 343
-    }
-
-    regiment = {
-        name= "II. Suomen Tarkk’ampujapataljoona"
-        type = plane
-        home = 345
-    }
-
-    regiment = {
-        name= "III. Suomen Tarkk’ampujapataljoona"
-        type = plane
-        home = 346
-    }
-
-    regiment = {
-        name= "III. Suomen Tarkk’ampujapataljoona"
-        type = plane
-        home = 548
-    }
-
-    regiment = {
-        name= "II. Suomen Tarkk’ampujapataljoona"
-        type = dragoon
-        home = 547
-    }
-
-    regiment = {
-        name= "Kalmar Regemente"
-        type = artillery
-        home = 323
-    }
-
-    regiment = {
-        name= "Jönköpings Regemente"
-        type = artillery
-        home = 994
-    }
-    regiment = {
-        name= "Kalmar Regemente"
-        type = artillery
-        home = 994
-    }
-
-    regiment = {
-        name= "Jönköpings Regemente"
-        type = artillery
-        home = 531
-    }
-    regiment = {
-        name= "Kalmar Regemente"
-        type = artillery
-        home = 327
     }
 }
 

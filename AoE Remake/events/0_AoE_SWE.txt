@@ -11,20 +11,13 @@ country_event = {
 
     trigger = {
 		NOT = { year = 1756 }
-        owns = 322
-        322 = { is_capital = yes }
+        primary_culture = swedish
         war = no
         OR = {
             AND = {
-                NOT = {    owns = 349 }
-                NOT = {    owns = 350 }
-                NOT = {    owns = 351 }
-                NOT = {    owns = 352 }
-                NOT = {    owns = 353 }
-                NOT = {    owns = 994 }
-                NOT = {    owns = 354 }
-                NOT = {    owns = 996 }
-                NOT = {    owns = 355 }
+			NOT = {	owns = 994 }
+			NOT = {	owns = 350 }
+			NOT = {	owns = 354 }
             }
             government = hms_government
         }
@@ -40,18 +33,14 @@ country_event = {
         name = "Let our nation be guided towards prosperity!"
         prestige = 15
         government = hms_government
-        political_reform = wealth_weighted_voting
+        political_reform = landed_voting
         political_reform = state_equal_weight
+		political_reform = legislative_parliment
+		political_reform = all_trade_unions
         political_reform = yes_meeting
-        political_reform = censored_press
         political_reform = non_secret_ballots
+		political_reform = no_absolutism
         social_reform = no_safety
-        social_reform = trinket_pensions
-        set_country_flag = age_of_liberalism
-        add_country_modifier = {
-            name = new_constitution
-            duration = 1825
-        }
     }
 }
 
@@ -67,6 +56,7 @@ country_event = {
         government = absolute_monarchy
         political_reform = none_voting
         political_reform = party_appointed
+		political_reform = admin_parliment
         political_reform = harassment
 		ruling_party_ideology = reactionary
 		social_reform = good_safety #kills noble influence
@@ -167,7 +157,6 @@ country_event = {
 
     trigger = {
         tag = SWE
-        government = absolute_monarchy
         OR = {
             AND = {
                 war_with = TOR
@@ -204,35 +193,85 @@ country_event = {
 }
 country_event = {
     id = 1721006
-    title = "A puppet King installed!"
+    title = "The Warsaw Confederation"
     desc = "EVTDESC1721006"
     picture = leszczynski
     is_triggered_only = yes
 
     option = {
-        name = "We will accept his rule, but resist the Swedes"
-        release_vassal = SAX
+        name = "Long live Stanislaus Leszczynski!"
         set_country_flag = leszcynski_rule
-        war_exhaustion = -5
-        SAX = {
-            casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 12
-            }
-        }
+		any_owned = {
+			limit = {
+				controlled_by = SWE
+			}
+			secede_province = KRA
+		}
+		KRA = {
+			government = hms_government
+			military_access = SWE
+			create_alliance = SWE
+			set_country_flag = lesczynski_rule
+			relation = {
+				who = SWE
+				value = 100
+			}
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		diplomatic_influence = {
+			who = KRA
+			value = 400
+		}
+		relation = {
+			who = KRA
+			value = 100
+		}
+		any_pop = {
+			limit = {
+				NOT = { agree_with_ruling_party = 0.7 }
+			}
+			militancy = 3
+		}
+		change_tag_no_core_switch = KRA
+		clr_country_flag = elective_monarchy
+		prestige = -5
     }
 
     option = {
         name = "We stay loyal to the Wettins!"
-        war_exhaustion = 5
-		SWE = {
-            casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 12
-            }
-        }
+		any_owned = {
+			limit = {
+				controlled_by = SWE
+			}
+			secede_province = KRA
+		}
+		KRA = {
+			government = hms_government
+			military_access = SWE
+			create_alliance = SWE
+			set_country_flag = lesczynski_rule
+			relation = {
+				who = SWE
+				value = 100
+			}
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		any_pop = {
+			limit = {
+				NOT = { agree_with_ruling_party = 0.7 }
+			}
+			militancy = 3
+		}
+		clr_country_flag = elective_monarchy
+		prestige = -5
     }
 }
 country_event = {
@@ -280,6 +319,41 @@ country_event = {
 			target = TOR
 			type = dethrone_peter
 			months = 60
+		}
+	}
+}
+country_event = {
+    id = 1721009
+    title = "The Young Reign Of Charles XII"
+    desc = "EVTDESC1721009"
+	picture = poltavas_battle
+    is_triggered_only = yes	
+	
+	option = {
+		name = "Long Live Carolus Rex!"
+		add_country_modifier = {
+			name = swedish_military_tradition
+			duration = -1
+		}
+	}
+}
+country_event = {
+    id = 1721010
+    title = "The King Shot Dead!"
+    desc = "EVTDESC1721010"
+	picture = carolus_dead
+    fire_only_once = yes
+	
+	trigger = {
+		tag = SWE
+		NOT = { has_leader = "Karl XII Wittelsbach" }
+	}
+	
+	option = {
+		name = "We're lost!"
+		any_pop = {
+			militancy = 1
+			consciousness =1
 		}
 	}
 }

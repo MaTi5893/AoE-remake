@@ -10,7 +10,6 @@ political_decisions = {
             ideological_thought = 1
             war = no
             owns = 994
-            #owns = 354
             owns = 1047
             owns = 350
         }
@@ -20,16 +19,7 @@ political_decisions = {
 				remove_core = TOR
 			}
 			change_tag = RUS
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { has_country_flag = perpetual_peace_PLC }
-					}
-				}
-				owner = {
-					add_accepted_culture = ukrainian
-				}
-			}
+			add_accepted_culture = ukrainian
             prestige = 25
 			random_owned = {
 				limit = {
@@ -75,11 +65,13 @@ political_decisions = {
 				duration = -1
 			}
 			years_of_research = 1
+			political_reform = admin_parliment
 			remove_country_modifier = streltsi_rebellion
 			activate_technology = naval_design_bureaus
 			activate_technology = alphabetic_flag_signaling
 			activate_technology = the_command_principle
 			activate_technology = battleship_column_doctrine
+			activate_technology = army_command_principle
 			any_pop = {
 				militancy = 3
 			}
@@ -138,10 +130,6 @@ political_decisions = {
 			war_with = SWE
 			war_with = SCA
 			}
-			OR = {
-			owns = 1047
-			owns = 994
-			}
 		}
 	
 		effect = {
@@ -149,37 +137,17 @@ political_decisions = {
 			RUS_349 = {
 				add_core = THIS 
 			}
-			994 = {
+			RUS_994 = {
 				add_core = THIS
 			}
-			354 = {
+			RUS_354 = {
 				add_core = THIS
 			}
-			355 = {
-				add_core = THIS
-			}
-			996 = {
-				add_core = THIS
-			}
-			339 = {
-				add_core = THIS
-			}
-			352 = { add_core = THIS }
-			351 = { add_core = THIS }
-			add_core = 3251
 			random_owned = {
 				limit = {
 					owner = {
-						OR = {
-							owns = 350
-							owns = 354
-						}
-						NOT = {
-							AND = {
-								owns = 350
-								owns = 354
-							}
-						}
+						OR = { owns = 350 owns = 354 }
+						NOT = { AND = { owns = 350 owns = 354 } }
 					}
 				}
 				owner = {
@@ -189,23 +157,35 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						NOT = {
-							owns = 350
-							owns = 354
-						}
+						NOT = {	owns = 350 owns = 354 }
 					}
 				}
 				owner = {
 					badboy = 10
 				}
 			}
+			random_owned = {
+				limit = {
+					owner = {
+						SWE = { exists = yes war = yes }
+						ai = yes
+					}
+				}
+				owner = {
+					war = {
+						target = SWE
+						attacker_goal = { casus_belli = acquire_all_cores country = TOR }
+						call_ally = yes
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
-			#modifier = {
-			#	factor = 0		
-			#	NOT = { year = 1701 }
-			#}
+			modifier = {
+				factor = 0		
+				NOT = { year = 1701 }
+			}
 		}
 	}
 	
@@ -215,10 +195,6 @@ political_decisions = {
 			tag = RUS
 			NOT = { has_country_flag = claimed_crimea_south_ukrine }
 			NOT = { has_country_flag = perpetual_peace_TUR }
-			OR = {
-				owns = 964
-				has_country_modifier = catharine_the_great
-			}
 		}
 		allow = {
 			war_policy  = jingoism
@@ -228,7 +204,7 @@ political_decisions = {
 					owns = 965
 					owns = 973
 				}
-				state_n_government = 1
+				nationalism_n_imperialism = 1
 			}
 		}
 		effect = {
@@ -272,23 +248,55 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			NOT = {
-				OR = {
-					safety_regulations = no_safety
-					safety_regulations = trinket_safety
-				}
-			}
 			OR = {
-				pensions = low_pensions
-				pensions = acceptable_pensions
-				pensions = good_pensions
+				AND = {
+					NOT = { safety_regulations = no_safety }
+					NOT = { safety_regulations = trinket_safety }
+				}
+				nationalism_n_imperialism = 1
 			}
-			war = no
 		}
 		effect = {
-			add_country_modifier = {
-				name = table_of_ranks
-				duration = -1
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = acceptable_pensions
+						has_country_flag = skill_and_merit_allowed
+					}
+				}
+				owner = {
+					social_reform = good_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = low_pensions
+					}
+				}
+				owner = {
+					social_reform = acceptable_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = trinket_pensions
+					}
+				}
+				owner = {
+					social_reform = low_pensions
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						pensions = no_pensions
+					}
+				}
+				owner = {
+					social_reform = trinket_pensions
+				}
 			}
 			set_country_flag = enacted_the_table_of_ranks
 		}
@@ -296,6 +304,108 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	control_the_polish_parliment = {
+		picture = russia_poland
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = control_the_polish_parliment }
+			PLC = { exists = yes }
+		}
+		allow = {
+			PLC = { in_sphere = THIS }
+		}
+		effect = {
+			set_country_flag = control_the_polish_parliment
+			PLC = { country_event = 157301 }
+		}
+	}
+	
+	push_russian_agenda_in_plc = {
+		picture = russia_poland
+		potential = {
+			exists = yes
+			primary_culture = russian
+			has_country_flag = control_the_polish_parliment
+		}
+		allow = {
+			money = 500000
+			NOT = { has_country_modifier = russian_agenda }
+		}
+		effect = {
+			money = -500000
+			add_country_modifier = {
+				name = russian_agenda
+				duration = 730
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						PLC = { has_country_modifier = confederated_sejm }
+					}
+				}
+				owner = { PLC = { country_event = 156902 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						PLC = { NOT = { has_country_modifier = confederated_sejm } }
+					}
+				}
+				owner = { PLC = { country_event = 156901 } }
+			}
+		}
+	}
+	
+	intervene_in_the_commonwealth = {
+		picture = russia_poland
+		potential = {
+			exists = yes
+			primary_culture = russian
+			has_country_flag = control_the_polish_parliment
+			NOT = { has_country_flag = intervened_in_the_commonwealth }
+			NOT = { PLC = { in_sphere = THIS } }
+			exists = PLC
+		}
+		allow = {
+			NOT = { PLC = { in_sphere = THIS } }
+		}
+		effect = {
+			set_country_flag = intervened_in_the_commonwealth
+			casus_belli = {
+				target = PLC
+				type = cut_down_to_size
+				months = 12
+			}
+			casus_belli = {
+				target = PLC
+				type = add_to_sphere
+				months = 12
+			}
+		}
+	}
+	
+	consolidate_central_asia = {
+		picture = central_asia
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = consolidated_central_asia }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			
+		}
+		effect = {
+			set_country_flag = consolidated_central_asia
+			1043 = { secede_province = THIS }
+			1044 = { secede_province = THIS }
+			1996 = { secede_province = THIS }
+			2611 = { secede_province = THIS }
+		}
+	}
+	
 	enact_nakaz = {
 		picture = nakaz
 		potential = {
@@ -307,28 +417,12 @@ political_decisions = {
 		}
 		allow = {
 			has_country_modifier = catharine_the_great
-			NOT = {
-				OR = {
-					safety_regulations = no_safety
-					safety_regulations = trinket_safety
-				}
-			}
-			NOT = {
-				OR = {
-					health_care = no_health_care
-					health_care = trinket_health_care
-				}
-			}
-			OR = {
-				upper_house_composition = party_appointed
-				upper_house_composition = appointed
-			}
-			government = absolute_monarchy
-			ruling_party_ideology = reactionary
-			war = no
 		}
 		effect = {
 			political_reform = party_appointed
+			political_reform = yes_absolutism
+			political_reform = admin_parliment
+			nationalvalue = pm_militarist
 			add_country_modifier = {
 				name = nakaz
 				duration = -1
@@ -346,11 +440,9 @@ political_decisions = {
 			NOT = { has_country_flag = claimed_ruthenia }
 			NOT = { has_country_flag = perpetual_peace_PLC }
 			exists = yes
-			owns = 718
 		}
 		allow = {
 			is_greater_power = yes
-			war_policy  = jingoism
 			OR = {
 				AND = {
 					owns = 718
@@ -362,29 +454,10 @@ political_decisions = {
 					ai = yes
 				}
 			}
-			OR = {
-				POL = {
-					NOT = { is_greater_power = yes }
-					exists = yes
-				}
-				PLC = {
-					NOT = { is_greater_power = yes }
-					exists = yes
-				}
-				AND = {
-					POL = { NOT = { exists = yes } }
-					PLC = { NOT = { exists = yes } }
-				}
-				AND = {
-					year = 1790
-					ai = yes
-				}
-			}
 		}
 		effect = {
 			set_country_flag = claimed_ruthenia
 			RUS_958 = { add_core = THIS }
-			#RUS_955 = { add_core = THIS }
 			RUS_707 = { add_core = THIS }
 			RUS_718 = { add_core = THIS }
 			RUS_947 = { add_core = THIS }
@@ -399,16 +472,6 @@ political_decisions = {
 					badboy = 2.5
 				}
 			}
-			#random_owned = {
-			#	limit = {
-			#		owner = {
-			#			RUS_955 = { NOT = { owned_by = THIS } }
-			#		}
-			#	}
-			#	owner = {
-			#		badboy = 2.5
-			#	}
-			#}
 			random_owned = {
 				limit = {
 					owner = {
@@ -461,31 +524,17 @@ political_decisions = {
 			owns = 695
 		}
 		allow = {
-			owns = 994
-			owns = 695
-			is_greater_power = yes
-			war_policy = jingoism
-			NOT = {
-				PRU = {
-					is_greater_power = yes
-				}
-			}
+			PRU_695 = { owned_by = THIS }
 		}
 		effect = {
 			set_country_flag = conquer_east_prussia
-			any_owned = {
-				limit = {
-					region = PRU_695
-				}
+			PRU_695 = {
+				add_core = RUS
 				add_province_modifier = {
 					name = population_resettlement
 					duration = 7300
 				}
 			}
-			695 = { add_core = RUS }
-			697 = { add_core = RUS }
-			698 = { add_core = RUS }
-			badboy = 5
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -500,31 +549,11 @@ political_decisions = {
 		allow = {
 			ruling_party_ideology = reactionary
 			has_country_modifier = catharine_the_great
-			OR = {
-				AND = {
-					owns = 944
-					owns = 718
-					owns = 960
-					HET = {
-						OR = {
-							vassal_of = THIS
-							all_core = { owned_by = THIS }
-						}
-					}
-					ZZH = {
-						OR = {
-							vassal_of = THIS
-							all_core = { owned_by = THIS }
-						}
-					}
-				}
-				ai = yes
-			}
 		}
 		effect = {
 			random_owned = {
 				limit = {
-					owner = { HET = { exists = yes  in_sphere = THIS } }
+					owner = { HET = { exists = yes  in_sphere = THIS ai = yes } }
 				}
 				owner = {
 					inherit = HET
@@ -532,7 +561,7 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					owner = { ZZH = { exists = yes  in_sphere = THIS } }
+					owner = { ZZH = { exists = yes  in_sphere = THIS ai = yes } }
 				}
 				owner = {
 					inherit = ZZH
@@ -607,6 +636,21 @@ political_decisions = {
 			relation = {
 				who = TUR
 				value = -100
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						TUR = { exists = yes ai = yes }
+						ai = yes
+					}
+				}
+				owner = {
+					war = {
+						target = TUR
+						attacker_goal = { casus_belli = greek_plan_cb }
+						call_ally = yes
+					}
+				}
 			}
 		}
 	}
@@ -693,4 +737,24 @@ political_decisions = {
 		}
 	}
 	
+	###########################
+	###Russian Client States###
+	###########################
+
+	create_the_grand_duchy_of_finland = {
+		picture = finland
+		potential = {
+			tag = RUS
+			owns = 343
+			owns = 337
+			NOT = { exists = FIN }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			release_vassal = FIN
+			prestige = 20
+		}
+	}
 }

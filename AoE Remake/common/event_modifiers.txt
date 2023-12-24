@@ -4311,10 +4311,10 @@ foreign_weapons_imported = {
     icon = 9
 }
 ###Sweden###
-swedish_caroleans = {
+swedish_military_tradition = {
     org_regain = 0.25
-    land_organisation = 0.15
-    supply_consumption = -0.05
+    mobilisation_size = 0.02
+    supply_consumption = -0.15
     icon = 15
 }
 riksdaler = {
@@ -4334,21 +4334,7 @@ swedish_absolutism = {
     icon = 7
 }
 agriculture_reform = {
-    war_exhaustion = -0.01
-	administrative_efficiency_modifier = 0.05
-    global_pop_consciousness_modifier = 0.03
-    icon = 17
-}
-commodity_act = {
-    tariff_efficiency_modifier = 0.25
-    factory_input = -0.02
-    loan_interest = 0.25
-    icon = 17
-}
-great_partition = {
-    farm_rgo_eff = 0.05
-    factory_output = 0.05
-    loan_interest = 0.25
+	mobilisation_size = 0.01
     icon = 17
 }
 ###Russia###
@@ -7024,11 +7010,11 @@ reign_of_terror =  {
 mob_army = {
 	org_regain = -0.2
 	land_organisation = -0.1
-	icon = 13
+	icon = 18
 }
 enemies_of_revolution = {
 	core_pop_militancy_modifier = 0.05
-	icon = 13
+	icon = 18
 }
 nation_state = {
 	mobilisation_size = 0.01
@@ -7121,4 +7107,16 @@ french_language_policy = {
 }
 french_language_policy_cooldown = {
 	icon = 7
+}
+#PLC
+plc_levies_army = {
+	mobilisation_size = 0.02
+	org_regain = -0.1
+	icon = 18
+}
+confederated_sejm = {
+	icon = 7
+}
+russian_agenda = {
+	icon = 8
 }

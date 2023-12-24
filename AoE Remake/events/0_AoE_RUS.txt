@@ -146,30 +146,7 @@ country_event = {
 	title = "The Silent Sejm"
 	desc = "EVTDESC157301"
 	picture = veto
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		PLC = {
-			government = elective_monarchy_oligarchy
-			#in_sphere = RUS
-			NOT = {
-				war_with = RUS
-			}
-			NOT = {
-				is_greater_power = yes
-			}
-		}
-		RUS = {
-			is_greater_power = yes
-		}
-		year = 1712
-		NOT = { year = 1789 }
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "Invest in bribes"
@@ -194,62 +171,6 @@ country_event = {
 			relation = {
 				who = PLC
 				value = -5
-			}
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-country_event = {
-	id = 157302
-	title = "The Silent Sejm"
-	desc = "EVTDESC157302"
-	picture = veto
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		PLC = {
-			government = elective_monarchy_oligarchy
-			NOT = {
-				war_with = RUS
-			}
-			NOT = {
-				is_greater_power = yes
-			}
-			#ai = yes
-		}
-		RUS = {
-			is_greater_power = yes
-		}
-		NOT = { year = 1789 }
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "Bribe them"
-		diplomatic_influence = {
-			who = PLC
-			value = 50
-		}
-		treasury = -50000
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		name = "We don't need that to control the Commonwealth"
-		RUS = {
-			diplomatic_influence = {
-				who = PLC
-				value = -5
-			}
-		}
-		RUS = {
-			relation = {
-				who = PLC
-				value = 5
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -1217,5 +1138,30 @@ country_event = {
 			who = PER
 			value = 25
 		}
+	}
+}
+country_event = {
+	id = 170033
+	title = "Augustus asks for intervention"
+	desc = "EVTDESC170033"
+	picture = "peter_the_sexy"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'd be foolish not to use this"
+		badboy = 2
+		diplomatic_influence = {
+			who = PLC
+			value = 400
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = cut_down_to_size }
+		}
+	}
+	
+	option = {
+		name = "Russia has other matters to attend to."
+		prestige = -5
 	}
 }

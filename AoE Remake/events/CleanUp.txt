@@ -449,7 +449,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					OR = {
 					centralization = legislative_parliment
+					centralization = admin_parliment
+					}
 					vote_franschise = none_voting
 				}
 			}
@@ -488,7 +491,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { vote_franschise = none_voting }
+					vote_franschise = none_voting
 				}
 			}
 			owner = {

@@ -15,7 +15,7 @@ name = "Northern War"
     # country - 3rd party
     # state_province_id - target state capital
     war_goal = {
-        casus_belli = annex
+        casus_belli = conquest
         actor = TOR
         receiver = LAT
     }

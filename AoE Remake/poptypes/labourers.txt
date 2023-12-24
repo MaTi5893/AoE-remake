@@ -840,6 +840,13 @@ promote_to =
 		modifier = {
             factor = -100
 			country = {
+				has_country_flag = 2_procent_soldiers
+			}
+            soldiers = 0.02
+        }
+		modifier = {
+            factor = -100
+			country = {
 				OR = { 
 					has_country_flag = allow_6_procent_soldiers
 					pensions = good_pensions
@@ -909,10 +916,12 @@ promote_to =
             modifier = {
                 factor = -3
                 safety_regulations = no_safety
+				NOT = { has_country_flag = no_craftsmen_nobility_malus }
             }
             modifier = {
                 factor = -1
                 safety_regulations = trinket_safety
+				NOT = { has_country_flag = no_craftsmen_nobility_malus }
             }
             modifier = {
                 factor = 0

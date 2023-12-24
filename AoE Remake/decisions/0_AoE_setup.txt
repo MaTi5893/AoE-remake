@@ -1196,6 +1196,7 @@ political_decisions = {
 				}
 			}
 			SWE = {
+				country_event = 1721009
 				any_pop = {
 					limit = {
 						type = soldiers
@@ -1241,6 +1242,8 @@ political_decisions = {
 					}
 					reduce_pop = 0.95
 				}
+				create_alliance = PLC
+				create_alliance = DNN
 			}
 		}
 	}
@@ -1534,6 +1537,11 @@ political_decisions = {
 				name = magnate_oligarchy
 				duration = -1
 			}
+			add_country_modifier = {
+				name = plc_levies_army
+				duration = -1
+			}
+			set_country_flag = 2_procent_soldiers
 			PLC = {
 				any_pop = {
 					limit = {
@@ -1546,7 +1554,7 @@ political_decisions = {
 				limit = {
 					type = soldiers
 				}
-				reduce_pop = 1.2
+				reduce_pop = 0.9
 			}
 		}
 	}

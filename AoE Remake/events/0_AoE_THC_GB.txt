@@ -53,11 +53,9 @@ country_event = {
 	
 	trigger = {
 		OR = { primary_culture = british primary_culture = french }
-		any_owned_province = {
-			OR = {
-			is_core = THC
-			is_core = USA
-			}
+		OR = {
+		any_owned_province = { is_core = THC }
+		any_owned_province = { is_core = USA }
 		}
 		owns = 232
 		OR = {
@@ -66,15 +64,17 @@ country_event = {
 				value = 6
 			}
 			AND = {
-			year = 1776
-			ai = yes
+				year = 1776
 			}	
 			AND = {
 				year = 1769
-				ai = yes
 				primary_culture = french
 			}
 		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60
 	}
 	
 	option = {
@@ -113,6 +113,22 @@ country_event = {
 	option = {
 		name = "Let them be"
 		prestige = -15
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = THC
+					is_core = USA
+				}
+			}
+			add_core = USA
+			remove_core = THC
+			secede_province = USA
+		}
+		USA = {
+			capital = 223
+			government = democracy
+			ruling_party_ideology = conservative
+		}
 		relation = {
             who = USA
             value = 100

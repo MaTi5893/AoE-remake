@@ -689,19 +689,14 @@ dismantle_hre = {
                     tag = BOR
                     has_global_flag = austrian_succession_crisis
                 }
+				AND = {
+					primary_culture = swedish
+					has_country_flag = challanged_the_emperor
+				}
             }
         }
-        NOT = { has_country_modifier = neutrality }
         NOT = { in_sphere = THIS }
-        THIS = { NOT = { has_country_modifier = neutrality } }
         has_country_flag = hre_emperor
-        THIS = { NOT = { has_country_modifier = punitive_effects } }
-        THIS = {
-            NOT = {
-                has_country_flag = in_great_war
-                has_country_modifier = no_more_war
-            }
-        }
     }
 
     po_remove_prestige = yes
@@ -4239,7 +4234,10 @@ conquest_low = {
 				NOT = { has_country_flag = hre_member }
 				THIS = { has_country_flag = hre_member } #hre member can justify on non hre member
 			}
-			tag = LIG
+			AND = {
+				has_country_flag = hre_member
+				THIS = { NOT = { has_country_flag = hre_member } has_country_flag = ignore_hre } #non-hre member can justify on hre member
+			}
 		}
         OR = {
             AND = {
@@ -4324,6 +4322,10 @@ conquest_tiny = {
 			AND = {
 				NOT = { has_country_flag = hre_member }
 				THIS = { has_country_flag = hre_member } #hre member can justify on non hre member
+			}
+			AND = {
+				has_country_flag = hre_member
+				THIS = { NOT = { has_country_flag = hre_member } has_country_flag = ignore_hre } #non-hre member can justify on hre member
 			}
 		}
         OR = {

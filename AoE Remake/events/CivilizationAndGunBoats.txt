@@ -2201,5 +2201,8 @@ country_event = {
 			}
 			annex_to = FROM
 		}
+		FROM = {
+			set_country_flag = dominated_na
+		}
 	}
 }

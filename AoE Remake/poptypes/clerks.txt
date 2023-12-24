@@ -926,10 +926,12 @@ promote_to =
             modifier = {
                 factor = -3
                 safety_regulations = no_safety
+				NOT = { has_country_flag = no_craftsmen_nobility_malus }
             }
             modifier = {
                 factor = -1
                 safety_regulations = trinket_safety
+				NOT = { has_country_flag = no_craftsmen_nobility_malus }
             }
             modifier = {
                 factor = 0

@@ -5,26 +5,6 @@ alliance = {
     start_date = 1386.9.5
     end_date = 1936.1.1
 }
-
-# Anti-Swedish alliance
-alliance = {
-    first = PLC
-    second = TOR
-    start_date = 1700.1.1
-    end_date = 1772.1.1
-}
-alliance = {
-    first = DNN
-    second = TOR
-    start_date = 1700.1.1
-    end_date = 1772.1.1
-}
-alliance = {
-    first = DNN
-    second = PLC
-    start_date = 1700.1.1
-    end_date = 1772.1.1
-}
 #Grand Alliance
 alliance = {
     first = AUS
@@ -38,13 +18,8 @@ alliance = {
     start_date = 1699.1.1
     end_date = 1750.1.1
 }
-alliance = {
-    first = AUS
-    second = NET
-    start_date = 1699.1.1
-    end_date = 1750.1.1
-}
 
+#Pacte familia
 alliance = {
         first = BOR
         second = SPA
@@ -52,13 +27,6 @@ alliance = {
         end_date = 1838.1.1
 }
 
-#Morrocan-Algerian
-alliance = {
-        first = MOR
-        second = ALD
-        start_date =  1835.1.1
-        end_date = 1838.1.1
-    }
 #########UK and Puppets
 alliance = {
         first = ENL
@@ -67,12 +35,6 @@ alliance = {
         end_date = 1936.1.1
 }
 
-alliance = {
-        first = ENL
-        second = RPL
-        start_date =  1835.1.1
-        end_date = 1936.1.1
-}
 
 alliance = {
         first = ENL
@@ -80,48 +42,6 @@ alliance = {
         start_date =  1700.1.1
         end_date = 1936.1.1
     }
-#########Prussia and their allies
-#Austria/Sphereling
-alliance = {
-        first = AUS
-        second = MOD
-        start_date =  1835.1.1
-        end_date = 1867.1.1
-    }
-alliance = {
-        first = AUS
-        second = PAR
-        start_date =  1835.1.1
-        end_date = 1867.1.1
-    }
-alliance = {
-        first = AUS
-        second = TUS
-        start_date =  1835.1.1
-        end_date = 1867.1.1
-    }
-#Russia/Montenegro
-alliance = {
-    first = TOR
-    second = MON
-    start_date = 1835.1.1
-    end_date = 1911.1.1
-}
-
-#France/Papal States
-alliance = {
-    first = FRA
-    second = PAP
-    start_date = 1835.1.1
-    end_date = 1861.1.1
-}
-#China/Lanfang
-alliance = {
-    first = QNG
-    second = LAN
-    start_date = 1835.1.1
-    end_date = 1911.1.1
-}
 
 alliance = {
         first = QNG
@@ -130,3 +50,24 @@ alliance = {
         end_date = 1936.1.1
     }
 
+# Anti-Swedish alliance
+alliance = {
+    first = DNN
+    second = PLC
+    start_date = 1700.1.1
+    end_date = 1721.1.1
+}
+
+alliance = {
+    first = PLC
+    second = TOR
+    start_date = 1699.1.1
+    end_date = 1721.1.1
+}
+
+alliance = {
+    first = DNN
+    second = TOR
+    start_date = 1699.1.1
+    end_date = 1721.1.1
+}

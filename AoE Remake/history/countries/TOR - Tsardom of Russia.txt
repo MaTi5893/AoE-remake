@@ -41,9 +41,7 @@ debt_law = serfdom
 penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
-border_policy = closed_borders
-centralization = regionalism
-colonial_policy = settlement
+centralization = no_parliment
 
 set_country_flag = orthodox_country
 
@@ -68,8 +66,6 @@ govt_flag = {
 post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-#military_staff_system = 1
-army_command_principle = 1
 post_nelsonian_thought = 1
 clipper_design = 1
 private_banks = 1
@@ -81,6 +77,7 @@ enlightenment_thought = 1
 piston_steam_engine = 1
 mechanical_production = 1
 basic_chemistry = 1
+military_staff_system = 1
 
 #Inventions
 #corvettes = yes
@@ -91,4 +88,4 @@ nonstate_consciousness = 1
 
 schools = traditional_academic
 
-oob = "RUS_oob.txt"
+oob = "TOR_oob.txt"

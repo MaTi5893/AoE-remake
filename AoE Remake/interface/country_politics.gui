@@ -1947,6 +1947,13 @@ guiTypes = {
 		moveable = 0
 		
 		iconType = {
+			name ="decision_image"
+			spriteType = "GFX_no_decision_image"
+			position = { x= 12 y = 27 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
 			name ="politics_decision_entry"
 			spriteType = "GFX_politics_decision_entry"
 			position = { x= 4 y = 0 }
@@ -1961,12 +1968,6 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 			format = left
-		}
-		iconType = {
-			name ="decision_image"
-			spriteType = "GFX_no_decision_image"
-			position = { x= 12 y = 27 }
-			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = { 

@@ -120,9 +120,9 @@ political_decisions = {
         potential = {
             primary_culture = polish
             NOT = { has_country_flag = great_sejm }
-            is_ideology_enabled = socialist
         }
         allow = {
+			is_ideology_enabled = socialist
             part_of_sphere = no
             OR = {
                 AND = {
@@ -140,6 +140,8 @@ political_decisions = {
         }
         effect = {
             country_event = 15730064
+			remove_country_modifier = plc_levies_army
+			clr_country_flag = 2_procent_soldiers
             remove_country_modifier = magnate_oligarchy
             set_country_flag = great_sejm
         }
@@ -310,8 +312,8 @@ political_decisions = {
 		effect = {
 			ruling_party_ideology = reactionary
 			political_reform = party_appointed
+			political_reform = admin_parliment
 			government = absolute_monarchy
-			political_reform = none_voting
 			set_country_flag = wettin_coup
 			any_pop = {
 				limit = {
@@ -323,6 +325,8 @@ political_decisions = {
 				}
 			}
 			country_event = 156905
+			remove_country_modifier = plc_levies_army
+			clr_country_flag = 2_procent_soldiers
 			remove_country_modifier = magnate_oligarchy
 		}
 	}
@@ -492,44 +496,18 @@ political_decisions = {
             primary_culture = polish
             NOT = { has_country_flag = recover_inflanty }
             exists = yes
+			SWE = { owns = 354 }
         }
         allow = {
-            OR = {
-                AND = {
-                    strategic_mobility = 1
-                    is_greater_power = yes
-                }
-                AND = {
-                    SWE = { owns = 354 }
-                    war_with = SWE
-                    LAT = { all_core = { controlled_by = THIS } }
-                }
-            }
-            war_policy = jingoism
+			SWE = { war = yes }
         }
         effect = {
             set_country_flag = recover_inflanty
-            random_owned = {
-                limit = {
-                    owner = { LAT = { vassal_of = THIS } }
-                }
-                owner = {
-                    inherit = LAT
-                }
-            }
-			random_owned = {
-                limit = {
-                    owner = { KUR = { vassal_of = THIS } }
-                }
-                owner = {
-                    inherit = KUR
-                }
-            }
-			add_accepted_culture = latvian
-            354 = { add_core = THIS }
-            355 = { add_core = THIS }
-            352 = { add_core = THIS }
-            351 = { add_core = THIS }
+			casus_belli = {
+				target = SWE
+				type = acquire_state
+				months = 12
+			}
 			random_owned = {
 				limit = {
 					owner = {
@@ -538,6 +516,21 @@ political_decisions = {
 				}
 				owner = {
 					badboy = 5
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						NOT = { war_with = SWE }
+					}
+				}
+				owner = {
+					war = {
+						target = SWE
+						attacker_goal = { casus_belli = acquire_state state_province_id = 354 }
+						call_ally = yes
+					}
 				}
 			}
         }
@@ -689,4 +682,118 @@ political_decisions = {
             factor = 1
         }
     }
+	
+	#######################################
+	###########Civil war content###########
+	#######################################
+	
+	victory_in_the_civil_war = {
+		potential = {
+			tag = KRA
+			exists = yes
+			war = no
+			NOT = { exists = PLC }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			change_tag = PLC
+			government = hms_government
+			add_country_modifier = {
+				name = magnate_oligarchy
+				duration = -1
+			}
+			add_country_modifier = {
+				name = plc_levies_army
+				duration = -1
+			}
+			capital = 703
+			set_country_flag = 2_procent_soldiers
+			add_accepted_culture = lithuanian
+			prestige = 20
+		}
+	}
+	civil_war_loss_KRA = {
+		potential = {
+			tag = KRA
+			exists = yes
+			war = no
+			exists = PLC
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			PLC = {
+				inherit = KRA
+			}
+		}
+	}
+	pact_with_sweden = {
+		potential = {
+			tag = PLC
+			SWE = {
+				has_country_flag = installed_leszczynski
+			}
+			has_country_flag = lesczynski_rule
+			NOT = { year = 1733 }
+			NOT = { has_country_flag = pact_with_sweden }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						KUR = { ai = yes }
+					}
+				}
+				owner = {
+					SWE = { inherit = KUR }
+				}
+			}
+			SWE = {
+				create_vassal = PLC
+			}
+			365 = { secede_province = SWE }
+			364 = { secede_province = SWE }
+			690 = { secede_province = SWE }
+			693 = { secede_province = SWE }
+			set_country_flag = pact_with_sweden
+		}
+	}
+	ask_for_russian_invervention = {
+		potential = {
+			tag = PLC
+			war_with = KRA
+			NOT = { has_country_flag = asked_for_russian_invervention }
+		}
+		allow = {
+			national_provinces_occupied = 0.5
+		}
+		effect = {
+			set_country_flag = asked_for_russian_invervention
+			government = elective_monarchy_oligarchy
+			political_reform = legislative_parliment
+			political_reform = wealth_voting
+			add_country_modifier = {
+				name = magnate_oligarchy
+				duration = -1
+			}
+			random_owned = {
+				limit = {
+					owner = { exists = TOR }
+				}
+				owner = { TOR = { country_event = 170033 } }
+			}
+			random_owned = {
+				limit = {
+					owner = { exists = RUS }
+				}
+				owner = { RUS = { country_event = 170033 } }
+			}
+		}
+	}
 }
