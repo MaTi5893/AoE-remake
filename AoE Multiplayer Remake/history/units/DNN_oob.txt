@@ -245,65 +245,21 @@ army = {
 
     regiment = {
         name= "1.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 370
     }
 
     regiment = {
         name= "2.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 372
     }
 
     regiment = {
         name= "3.1. Artelleridivision"
-        type = artillery
-        home = 372
-    }
-}
-
-army = {
-
-    name = "Kiel Haeren"
-
-    location = 369
-
-    regiment = {
-        name= "2.2. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 369
     }
-
-    regiment = {
-        name= "3.2. Artelleridivision"
-        type = artillery
-        home = 369
-    }
-	
-    regiment = {
-        name= "1.1. Kavalleridivision"
-        type = dragoon
-        home = 369
-    }
-
-    regiment = {
-        name= "1.1. Artelleridivision"
-        type = artillery
-        home = 540
-    }
-
-    regiment = {
-        name= "2.1. Artelleridivision"
-        type = artillery
-        home = 367
-    }
-	
-	regiment = {
-        name= "4.1. Artelleridivision"
-        type = artillery
-        home = 367
-    }
-	
 }
 
 army = {
@@ -319,32 +275,32 @@ army = {
 
     regiment = {
         name= "1.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 367
     }
 
     regiment = {
         name= "2.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 367
     }
 
     regiment = {
         name= "3.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 313
     }
 
     regiment = {
         name= "4.1. Artelleridivision"
-        type = artillery
+        type = engineer
         home = 309
     }
 
     regiment = {
         name= "5.1. Artelleridivision"
         type = artillery
-        home = 308
+        home = 540
     }
 }
 

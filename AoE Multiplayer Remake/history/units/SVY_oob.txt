@@ -8,7 +8,7 @@ leader = {
 	type = land
 	personality = defence_0.1
 	background = attack_0.2
-	prestige = 0.5
+	prestige = 0.1
 }
 
 leader = {
@@ -17,7 +17,7 @@ leader = {
 	type = land
 	personality = defence_minus_1.1
 	background = attack_0.2
-	prestige = 0.2
+	prestige = 0.14
 }
 
 leader = {
@@ -44,7 +44,7 @@ leader = {
 	type = sea
 	personality = attack_1.2
 	background = defence_0.3
-	prestige = 0.0
+	prestige = 0.2
 }
 
 leader = {
@@ -98,18 +98,18 @@ army = {
 
 	regiment = {
 		name= "1st Savoiard Artillery"
-		type = artillery
+		type = engineer
 		home = 465
 	}
 	regiment = {
 		name= "2nd Savoiard Artillery"
-		type = artillery
-		home = 720
+		type = engineer
+		home = 465
 	}
 	regiment = {
 		name= "3rd Savoiard Artillery"
-		type = artillery
-		home = 465
+		type = engineer
+		home = 720
 	}
 	
 	regiment = {
@@ -127,6 +127,6 @@ army = {
 	regiment = {
 		name= "1st Savoiard Cuirassier"
 		type = cuirassier
-		home = 720
+		home = 465
 	}
 }

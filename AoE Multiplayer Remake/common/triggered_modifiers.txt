@@ -109,8 +109,21 @@ holy_roman_emperor = {
         }
     }
     diplomatic_influence = 0.15
-    mobilisation_size = 0.02
+    mobilisation_size = 0.0225
     prestige = 0.05
+    icon = 9
+}
+
+imperial_reinforcements = {
+    trigger = {
+        has_country_flag = hre_member
+		NOT = { has_country_flag = hre_emperor }
+        OR = {
+        month = 1
+        year = 1701
+        }
+    }
+    mobilisation_size = 0.015
     icon = 9
 }
 

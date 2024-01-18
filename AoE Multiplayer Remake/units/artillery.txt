@@ -26,15 +26,15 @@ artillery = {
 
     supply_consumption = 1.0
     supply_cost = {
-        artillery = 0.08 #0.008
+        artillery = 0.1 #0.008
         canned_food = 0.06 #0.004
     }
 
 
     #Land Abilties
     reconnaissance = 0
-    attack = 2
-    defence = 3
+    attack = 3.5
+    defence = 2.5
     discipline = 0.75
     support = 1.2
     maneuver = 1

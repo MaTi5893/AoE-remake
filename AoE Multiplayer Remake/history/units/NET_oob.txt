@@ -18,63 +18,63 @@ army = {
     name = "Amsterdam Garnizoen"
     location = 375
     regiment = {
-        name= "1e Infanterie Brigade"
-        type = infantry
+        name= "1e Gardes du Corps"
+        type = guard
         home = 376
     }
 
     regiment = {
-        name= "1e Cavalerie Brigade"
-        type = infantry
+        name= "2e Compagnie Gardes Friesland"
+        type = guard
         home = 376
     }
 
     regiment = {
-        name= "2e Cavalerie Brigade"
-        type = infantry
-        home = 376
+        name= "3e Hollandsche Gardes"
+        type = guard
+        home = 385
     }
 
     regiment = {
-        name= "1e Artillerie Brigade"
-        type = infantry
-        home = 376
+        name= "4e Compagnie Gardes Groningen"
+        type = guard
+        home = 385
+    }
+
+    regiment = {
+        name = "2e Karabinier Brigade"
+        type = hussar
+        home = 385
+    }
+
+    regiment = {
+        name = "5e Artillerie Brigade"
+        type = engineer
+        home = 385
+    }
+
+    regiment = {
+        name = "1e Artillerie Brigade"
+        type = engineer
+        home = 1421
     }
 
     regiment = {
         name = "2e Artillerie Brigade"
-        type = hussar
-        home = 376
+        type = artillery
+        home = 1421
     }
 
     regiment = {
         name = "3e Artillerie Brigade"
-        type = engineer
-        home = 376
+        type = artillery
+        home = 1449
     }
 
     regiment = {
-        name = "1e Infanterie Brigade"
+        name = "4e Artillerie Brigade"
         type = artillery
-        home = 376
-    }
-
-    regiment = {
-        name = "2e Infanterie Brigade"
-        type = artillery
-        home = 385
-    }
-
-    regiment = {
-        name = "3e Infanterie Brigade"
-        type = artillery
-        home = 385
-    }
-
-    regiment = {
-        name = "4e Infanterie Brigade"
-        type = artillery
-        home = 376
+        home = 393
     }
 	
 }
@@ -83,31 +83,31 @@ army = {
     location = 377
 
     regiment = {
-        name = "5e Infanterie Brigade"
+        name = "5e Artillerie Brigade"
+        type = engineer
+        home = 379
+    }
+
+    regiment = {
+        name = "6e Artillerie Brigade"
+        type = engineer
+        home = 379
+    }
+
+    regiment = {
+        name = "7e Artillerie Brigade"
         type = artillery
         home = 379
     }
 
     regiment = {
-        name = "6e Infanterie Brigade"
+        name = "8e Artillerie Brigade"
         type = artillery
         home = 379
     }
 
     regiment = {
-        name = "7e Infanterie Brigade"
-        type = artillery
-        home = 379
-    }
-
-    regiment = {
-        name = "8e Infanterie Brigade"
-        type = artillery
-        home = 379
-    }
-
-    regiment = {
-        name = "9e Infanterie Brigade"
+        name = "9e Artillerie Brigade"
         type = artillery
         home = 379
     }
@@ -115,23 +115,23 @@ army = {
     regiment = {
         name= "1e Infanterie Brigade"
         type = infantry
+        home = 393
+    }
+
+    regiment = {
+        name= "2e Infanterie Brigade"
+        type = infantry
+        home = 385
+    }
+
+    regiment = {
+        name= "3e Infanterie Brigade"
+        type = infantry
         home = 379
     }
 
     regiment = {
-        name= "1e Cavalerie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name= "2e Cavalerie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name= "1e Artillerie Brigade"
+        name= "4e Infanterie Brigade"
         type = infantry
         home = 385
     }
@@ -144,108 +144,43 @@ army = {
 }
 
 army = {
-    name = "Leeuwarden Garnizoen"
-    location = 385
-
-    regiment = {
-        name = "5e Artillerie Brigade"
-        type = artillery
-        home = 393
-    }
-
-    regiment = {
-        name = "6e Artillerie Brigade"
-        type = artillery
-        home = 393
-    }
-
-    regiment = {
-        name = "7e Artillerie Brigade"
-        type = artillery
-        home = 393
-    }
-
-    regiment = {
-        name = "7e Artillerie Brigade"
-        type = artillery
-        home = 385
-    }
-
-    regiment = {
-        name = "7e Artillerie Brigade"
-        type = artillery
-        home = 385
-    }
-	
-	regiment = {
-        name= "3e Infanterie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name= "4e Infanterie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name= "5e Infanterie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name= "6e Infanterie Brigade"
-        type = infantry
-        home = 385
-    }
-
-    regiment = {
-        name = "2e Cavalerie Brigade"
-        type = hussar
-        home = 385
-    }
-}
-
-army = {
     name = "Hague Garnizoen"
     location = 376
 
     regiment = {
         name = "12e Artillerie Brigade"
-        type = artillery
-        home = 385
+        type = engineer
+        home = 376
     }
 
     regiment = {
         name = "13e Artillerie Brigade"
-        type = artillery
-        home = 385
+        type = engineer
+        home = 376
     }
 
     regiment = {
         name = "14e Artillerie Brigade"
         type = artillery
-        home = 385
+        home = 376
     }
 
     regiment = {
         name = "15e Artillerie Brigade"
         type = artillery
-        home = 385
+        home = 376
     }
 
     regiment = {
         name = "11e Artillerie Brigade"
         type = artillery
-        home = 385
+        home = 376
     }
 
     regiment = {
         name = "3e Cavalerie Brigade"
         type = hussar
-        home = 385
+        home = 376
     }
 	
 	regiment = {
@@ -255,21 +190,21 @@ army = {
     }
 
     regiment = {
-        name= "1e Cavalerie Brigade"
+        name= "2e Infanterie Brigade"
         type = infantry
         home = 385
     }
 
     regiment = {
-        name= "2e Cavalerie Brigade"
+        name= "3e Infanterie Brigade"
         type = infantry
-        home = 385
+        home = 376
     }
 
     regiment = {
-        name= "1e Artillerie Brigade"
+        name= "4e Infanterie Brigade"
         type = infantry
-        home = 385
+        home = 376
     }
 }
 
@@ -291,7 +226,7 @@ army = {
 	regiment = {
         name = "Banten Korps"
         type = infantry
-        home = 2087
+        home = 1386
     }
 	
 	regiment = {

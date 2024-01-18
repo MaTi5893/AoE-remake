@@ -4,12 +4,12 @@ political_decisions = {
 		picture = ethiopia
 		potential = {
 			tag = ETH
-			NOT = { has_country_flag = aussa_deestablished }
+			NOT = { has_country_flag = kill_aussa }
 		}
 		allow = {
 			war = no
-			NOT = { sphere_owner = TUR }
-			civilization_progress = 0.75
+			NOT = { in_sphere = TUR }
+			civilization_progress = 0.45
 		}
 		effect = {
 			HAR = {
@@ -34,7 +34,7 @@ political_decisions = {
 					months = 12
 				}
 			}
-			set_country_flag = aussa_deestablished
+			set_country_flag = kill_aussa
 		}
 	}
 	
@@ -54,6 +54,7 @@ political_decisions = {
 			1867 = { secede_province = THIS }
 			add_accepted_culture = nilotic
 			add_accepted_culture = somali
+			HAR = { all_core = { add_core = THIS } } #just for now
 			SHK = { all_core = { add_core = THIS } }
 			SUD = { all_core = { add_core = THIS } }
 			WRL = { all_core = { add_core = THIS } }

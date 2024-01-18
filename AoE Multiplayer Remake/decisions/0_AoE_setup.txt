@@ -14,7 +14,7 @@ political_decisions = {
 		}
 	}
 	
-	cleanup_setup = {
+	cleanup_baller_setup = {
 		potential = {
 			ai = yes
 			exists = yes
@@ -383,7 +383,6 @@ political_decisions = {
 							has_pop_culture = catalan 
 							has_pop_culture = basque
 							has_pop_culture = galician 
-							has_pop_culture = basque
 							has_pop_culture = sephardic 
 							has_pop_culture = british
 						}
@@ -557,7 +556,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.18
+					reduce_pop = 1.02
 				}
 			}
 			DAI = {
@@ -863,7 +862,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.2
+					reduce_pop = 1
 				}
 			}
 			MLT = {
@@ -893,7 +892,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.5
+					reduce_pop = 1.2
 				}
 			}
 			WUR = {
@@ -908,6 +907,7 @@ political_decisions = {
 					reduce_pop = 0.465
 				}
 			}
+			#Prussia historical should be 500k - buffed by 300k to 800k
 			PRU = {
 				any_pop = {
 					limit = {	
@@ -918,13 +918,13 @@ political_decisions = {
 							has_pop_culture = lithuanian 
 						}
 					}
-					reduce_pop = 0.66
+					reduce_pop = 0.784
 				}
 				any_pop = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.57
+					reduce_pop = 1
 				}
 			}
 			#French Pop Change
@@ -945,7 +945,7 @@ political_decisions = {
 							has_pop_culture = ashkenazi 
 						}
 					}
-					reduce_pop = 0.803
+					reduce_pop = 0.81
 				}
 				any_pop = {
 					limit = {
@@ -976,7 +976,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.6
+					reduce_pop = 1.42
 				}
 			}
 			#English Pop Change
@@ -1030,7 +1030,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.38
+					reduce_pop = 1.06
 				}
 			}
 			#Saint Johns
@@ -1084,7 +1084,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.2
+					reduce_pop = 1
 				}
 			}
 			VEN = {
@@ -1101,7 +1101,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.8
+					reduce_pop = 1.45
 				}
 			}
 			AUS = {
@@ -1145,7 +1145,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 1.24
+					reduce_pop = 0.96
 				}
 			}
 			#Western Transylvania
@@ -1195,6 +1195,7 @@ political_decisions = {
 			always = no
 		}
 		effect = {
+			###Swedish Empire historical total should be 700k - buffed by 400k to 1.1M
 			SWE = {
 				any_pop = {
 					limit = {
@@ -1204,21 +1205,21 @@ political_decisions = {
 							has_pop_culture = north_german
 						}
 					}
-					reduce_pop = 0.36
+					reduce_pop = 0.48
 				}
 				any_pop = {
 					limit = {	
 						NOT = { type = soldiers }
 						has_pop_culture = finnish
 					}
-					reduce_pop = 0.38
+					reduce_pop = 0.78
 				}
 				any_pop = {
 					limit = {		
 						NOT = { type = soldiers }
 						has_pop_culture = swedish
 					}
-					reduce_pop = 0.51
+					reduce_pop = 0.7
 				}
 			}
 			RUS_994 = {
@@ -1227,14 +1228,14 @@ political_decisions = {
 						NOT = { type = soldiers }
 						NOT = { culture = finnish }
 					}
-					reduce_pop = 0.62
+					reduce_pop = 0.52
 				}
 				any_pop = {
 					limit = {
 						NOT = { type = soldiers }
 						culture = finnish
 					}
-					reduce_pop = 0.82
+					reduce_pop = 1.1
 				}
 			}
 			RUS_349 = {
@@ -1242,7 +1243,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.52
+					reduce_pop = 0.74
 				}
 			}
 			RUS_354 = {
@@ -1250,9 +1251,10 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.44
+					reduce_pop = 0.78
 				}
 			}
+			###Denmark-Norway historical total should be 325k - buffed by 300k to 625k
 			DNN = {
 				add_country_modifier = {
 					name = great_northern_war
@@ -1262,13 +1264,13 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.53
+					reduce_pop = 0.96
 				}
 				any_pop = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.42
+					reduce_pop = 0.92
 				}
 			}
 			ZZH = {
@@ -1298,7 +1300,7 @@ political_decisions = {
 					limit = {
 						type = soldiers
 					}
-					reduce_pop = 1.033
+					reduce_pop = 0.45
 				}
 			}
 		}
@@ -1360,21 +1362,13 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.672
+					reduce_pop = 0.68
 				}
 				any_pop = {
 					limit = {
 						type = soldiers 
 					}
-					reduce_pop = 1.04
-				}
-			}
-			PLC = {
-				any_pop = {
-					limit = {
-						NOT = { type = soldiers }
-					}
-					reduce_pop = 0.746
+					reduce_pop = 0.84
 				}
 			}
 		}
@@ -1454,7 +1448,7 @@ political_decisions = {
 						is_accepted_culture = yes
 						type = soldiers
 					}
-					reduce_pop = 1.4
+					reduce_pop = 1
 				}
 				any_pop = {
 					limit = {
@@ -1807,7 +1801,15 @@ political_decisions = {
 				limit = {
 					type = soldiers
 				}
-				reduce_pop = 1.18
+				reduce_pop = 1
+			}
+			PLC = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+					}
+					reduce_pop = 0.752
+				}
 			}
 		}
 	}
@@ -1835,6 +1837,10 @@ political_decisions = {
 			always = no
 		}
 		effect = {
+			add_country_modifier = {
+				name = dutch_military_tradition
+				duration = -1
+			}
 			NET = {
 				any_owned = {
 					limit = {
@@ -1845,7 +1851,7 @@ political_decisions = {
 							culture = dutch
 							type = soldiers
 						}
-						reduce_pop = 1.6
+						reduce_pop = 1.1
 					}
 				}
 				capital_scope = {
@@ -1854,7 +1860,7 @@ political_decisions = {
 							culture = dutch
 							type = soldiers
 						}
-						reduce_pop = 1.2
+						reduce_pop = 1.12
 					}
 				}
 			}
@@ -2063,7 +2069,7 @@ political_decisions = {
 				limit = {
 					type = soldiers
 				}
-				reduce_pop = 1.4
+				reduce_pop = 1.10
 			}
 		}
 	}

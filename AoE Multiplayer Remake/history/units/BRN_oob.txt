@@ -208,33 +208,33 @@ army = {
     }
 
     regiment = {
-        name= "IV. Linieninfanteriebrigade"
-        type = artillery
+        name= "IV. Artilleriebrigade"
+        type = engineer
         home = 549
     }
 
     regiment = {
-        name= "V. Linieninfanteriebrigade"
+        name= "V. Artilleriebrigade"
         type = artillery
-        home = 549
+        home = 695
     }
 
     regiment = {
-        name= "VI. Linieninfanteriebrigade"
+        name= "VI. Artilleriebrigade"
         type = artillery
-        home = 549
+        home = 695
     }
 
     regiment = {
         name= "I. Artilleriebrigade"
         type = artillery
-        home = 549
+        home = 695
     }
 
     regiment = {
         name= "I. Kavalleriebrigade"
         type = cuirassier
-        home = 549
+        home = 695
     }
 
 }
@@ -243,33 +243,33 @@ army = {
     name = "II. Armee-Korps"
     location = 680
     regiment = {
-        name= "III. Artillery"
-        type = artillery
-        home = 695
+        name= "III. Artilleriebrigade"
+        type = engineer
+        home = 553
     }
 
     regiment = {
-        name= "I. Artillery"
-        type = artillery
-        home = 679
+        name= "I. Artilleriebrigade"
+        type = engineer
+        home = 582
     }
 
     regiment = {
-        name= "II. Artillery"
+        name= "II. Artilleriebrigade"
         type = artillery
-        home = 679
+        home = 582
     }
 	
 	regiment = {
-        name= "IV. Artillery"
+        name= "IV. Artilleriebrigade"
         type = artillery
-        home = 679
+        home = 582
     }
 	
 	regiment = {
-        name= "V. Artillery"
+        name= "V. Artilleriebrigade"
         type = artillery
-        home = 679
+        home = 577
     }
 	
 	regiment = {
@@ -281,154 +281,60 @@ army = {
 	regiment = {
         name= "I. Infantry"
         type = infantry
-        home = 695
+        home = 679
     }
 	
 	regiment = {
         name= "II. Infantry"
         type = infantry
-        home = 695
+        home = 552
     }
 	
 	regiment = {
         name= "III. Infantry"
         type = infantry
-        home = 552
+        home = 695
     }
 	
 	regiment = {
         name= "IV. Infantry"
         type = infantry
-        home = 552
+        home = 695
     }
 
 }
 
 army = {
     name = "III Army"
-    location = 695
+    location = 553
     regiment = {
-        name= "1. Artillery"
+        name= "1. Artilleriebrigade"
         type = artillery
-        home = 695
+        home = 553
     }
 
     regiment = {
-        name= "2. Artillery"
+        name= "2. Artilleriebrigade"
         type = artillery
-        home = 695
-    }
-	
-	regiment = {
-        name= "3. Artillery"
-        type = artillery
-        home = 695
-    }
-
-    regiment = {
-        name= "4. Artillery"
-        type = artillery
-        home = 695
-    }
-	
-	regiment = {
-        name= "5. Artillery"
-        type = artillery
-        home = 695
+        home = 553
     }
 
 	regiment = {
         name= "I. Infantry"
         type = infantry
-        home = 695
+        home = 553
     }
 	
 	regiment = {
         name= "II. Infantry"
         type = infantry
-        home = 695
-    }
-	
-	regiment = {
-        name= "III. Infantry"
-        type = infantry
-        home = 582
-    }
-	
-	regiment = {
-        name= "IV. Infantry"
-        type = infantry
         home = 553
     }
 	
     regiment = {
         name= "1. Cruissier"
         type = cuirassier
-        home = 695
-    }
-}
-
-army = {
-    name = "IV Army"
-    location = 553
-    regiment = {
-        name= "1. Artillery"
-        type = artillery
-        home = 553
-    }
-
-    regiment = {
-        name= "2. Artillery"
-        type = artillery
-        home = 553
-    }
-	
-	regiment = {
-        name= "3. Artillery"
-        type = artillery
-        home = 553
-    }
-
-    regiment = {
-        name= "4. Artillery"
-        type = artillery
-        home = 553
-    }
-	
-	regiment = {
-        name= "5. Artillery"
-        type = artillery
-        home = 553
-    }
-	
-    regiment = {
-        name= "1. Cruissier"
-        type = cuirassier
-        home = 553
-    }
-	
-	regiment = {
-        name= "Regiment der Gardes du Corps"
-        type = plane
-        home = 582
-    }
-
-    regiment = {
-        name= "I. Linieninfanteriebrigade"
-        type = plane
-        home = 582
-    }
-
-    regiment = {
-        name= "II. Linieninfanteriebrigade"
-        type = plane
-        home = 577
-    }
-
-    regiment = {
-        name= "III. Linieninfanteriebrigade"
-        type = plane
-        home = 577
+        home = 549
     }
 }
 

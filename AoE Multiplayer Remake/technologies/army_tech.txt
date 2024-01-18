@@ -39,9 +39,7 @@ point_defense_system = {
     year = 1715
     cost = 10800
     unciv_military = yes
-    engineer = {
-        support = 0.25
-    }
+
     army_base = {
         supply_consumption = 0.20
 		default_organisation = 5
@@ -60,7 +58,7 @@ deep_defense_system = {
     unciv_military = yes
     mobilisation_size = 0.01
     engineer = {
-        support = 0.25
+        discipline = 0.25
     }
     infantry = {
         discipline = 0.25
@@ -180,7 +178,7 @@ army_doctrine_8 = {
         defence = 2
     }
     engineer = {
-        defence = 2
+        defence = 1
     }
     irregular = {
         defence = 2
@@ -210,7 +208,6 @@ muzzle_loaded_rifles = {
     year = 1690
     cost = 7200
     unciv_military = yes
-    activate_unit = engineer
 
     ai_chance = {
         factor = 4
@@ -314,7 +311,7 @@ light_armament_7 = {
             supply_consumption = 0.20
         }
         engineer = {
-            attack = 2
+            attack = 1
             supply_consumption = 0.20
         }
         irregular = {
@@ -346,7 +343,7 @@ light_armament_8 = {
             supply_consumption = 0.20
         }
         engineer = {
-            attack = 2
+            attack = 1
             supply_consumption = 0.20
         }
         irregular = {
@@ -365,7 +362,7 @@ bronze_muzzle_loaded_artillery = {
     year = 1650
     cost = 3600
     unciv_military = yes
-    activate_unit = artillery
+	activate_unit = engineer
 
     ai_chance = {
         factor = 4

@@ -67,25 +67,25 @@ army = {
     location = 521
     regiment = {
         name= "1. Brigada de Artilharia"
-        type = artillery
-        home = 521
+        type = engineer
+        home = 2345
     }
 
     regiment = {
         name= "2. Brigada de Artilharia"
-        type = artillery
+        type = engineer
         home = 521
     }
 
     regiment = {
         name= "3. Brigada de Artilharia"
-        type = artillery
+        type = engineer
         home = 521
     }
 
     regiment = {
         name= "4. Brigada de Artilharia"
-        type = artillery
+        type = engineer
         home = 521
     }
 
@@ -98,7 +98,7 @@ army = {
     regiment = {
         name= "1. Brigada de Cavalaria"
         type = cuirassier
-        home = 518
+        home = 2447
     }
 
 	 regiment = {
@@ -148,12 +148,6 @@ army = {
 	}
 
 	regiment = {
-		name= "4. Brigada de Infantaria"
-		type = infantry
-		home = 2447
-	}
-
-	regiment = {
 		name= "1. Brigada de Cavalaria"
 		type = cuirassier
 		home = 2462
@@ -161,33 +155,10 @@ army = {
 	
 	regiment = {
 		name= "1. Brigada de Artilharia"
-		type = artillery
+		type = engineer
 		home = 2464
 	}
 
-	regiment = {
-		name= "2. Brigada de Artilharia"
-		type = artillery
-		home = 2345
-	}
-	
-	regiment = {
-		name= "3. Brigada de Artilharia"
-		type = artillery
-		home = 2053
-	}
-
-	regiment = {
-		name= "4. Brigada de Artilharia"
-		type = artillery
-		home = 1303
-	}
-	
-	regiment = {
-		name= "4. Brigada de Artilharia"
-		type = artillery
-		home = 2134
-	}
 }
 
 navy = {

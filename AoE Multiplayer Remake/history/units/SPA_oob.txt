@@ -141,19 +141,19 @@ army = {
 
     regiment = {
         name= "1. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 487
     }
 
     regiment = {
         name= "2. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 487
     }
 
     regiment = {
         name= "3. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 487
     }
 
@@ -167,134 +167,6 @@ army = {
         name= "5. Artilleria del Rey"
         type = artillery
         home = 487
-    }
-}
-
-army = {
-    name = "Ejército del Sur"
-    location = 510
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 513
-    }
-
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = infantry
-        home = 513
-    }
-
-    regiment = {
-        name= "3. Guardia Real"
-        type = infantry
-        home = 513
-    }
-
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 484
-    }
-
-    regiment = {
-        name= "2. Caballeria del Rey"
-        type = cuirassier
-        home = 503
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 503
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 503
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 512
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 512
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 512
-    }
-}
-
-army = {
-    name = "Ejército del Norte"
-    location = 498
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 498
-    }
-
-    regiment = {
-        name= "2. Granaderos del Rey"
-        type = infantry
-        home = 498
-    }
-
-    regiment = {
-        name= "3. Guardia Real"
-        type = infantry
-        home = 492
-    }
-
-    regiment = {
-        name= "1. Granaderos del Rey"
-        type = infantry
-        home = 492
-    }
-
-    regiment = {
-        name= "3. Caballeria del Rey"
-        type = cuirassier
-        home = 492
-    }
-
-    regiment = {
-        name= "1. Artilleria del Rey"
-        type = artillery
-        home = 474
-    }
-
-    regiment = {
-        name= "2. Artilleria del Rey"
-        type = artillery
-        home = 474
-    }
-
-    regiment = {
-        name= "3. Artilleria del Rey"
-        type = artillery
-        home = 503
-    }
-
-    regiment = {
-        name= "4. Artilleria del Rey"
-        type = artillery
-        home = 484
-    }
-
-    regiment = {
-        name= "5. Artilleria del Rey"
-        type = artillery
-        home = 512
     }
 }
 
@@ -328,30 +200,30 @@ army = {
 	regiment = {
         name= "4. Caballeria del Rey"
         type = cuirassier
-        home = 387
+        home = 474
     }
 
     regiment = {
         name= "1. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 397
     }
 
     regiment = {
         name= "2. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 726
     }
 
     regiment = {
         name= "3. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 1463
     }
 
     regiment = {
         name= "4. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 722
     }
 
@@ -374,7 +246,7 @@ army = {
     regiment = {
         name= "2. Granaderos del Rey"
         type = infantry
-        home = 754
+        home = 484
     }
 
     regiment = {
@@ -386,43 +258,43 @@ army = {
     regiment = {
         name= "4. Granaderos del Rey"
         type = infantry
-        home = 726
+        home = 484
     }
 	
 	regiment = {
         name= "4. Caballeria del Rey"
         type = cuirassier
-        home = 487
+        home = 513
     }
 
     regiment = {
         name= "1. Artilleria del Rey"
-        type = artillery
-        home = 487
+        type = engineer
+        home = 513
     }
 
     regiment = {
         name= "2. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 765
     }
 
     regiment = {
         name= "3. Artilleria del Rey"
-        type = artillery
+        type = engineer
         home = 762
     }
 
     regiment = {
         name= "4. Artilleria del Rey"
-        type = artillery
-        home = 754
+        type = engineer
+        home = 513
     }
 
     regiment = {
         name= "5. Artilleria del Rey"
         type = artillery
-        home = 726
+        home = 512
     }
 }
 
@@ -461,38 +333,38 @@ army = {
 	
 	regiment = {
         name= "1.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 2166
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 2173
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 1460
     }
 	
     regiment = {
         name= "1.Division Comonfort"
-        type = artillery
+        type = engineer
         home = 2197
     }
 
     regiment = {
         name= "2.Division Comonfort"
-        type = artillery
+        type = engineer
         home = 2186
     }
 }
 
 army = {
     name = "Ejército de Colombia"
-    location = 2254
+    location = 2247
     regiment = {
         name= "1.Oajaca y Tlaxcala"
         type = hussar
@@ -525,32 +397,32 @@ army = {
 	
 	regiment = {
         name= "1.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 1455
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 1455
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 2348
     }
 	
     regiment = {
         name= "1.Division Comonfort"
-        type = artillery
+        type = engineer
         home = 2324
     }
 
     regiment = {
         name= "2.Division Comonfort"
-        type = artillery
-        home = 2247
+        type = engineer
+        home = 512
     }
 }
 
@@ -589,32 +461,72 @@ army = {
 	
 	regiment = {
         name= "1.Oajaca y Tlaxcala"
-        type = artillery
-        home = 2324
+        type = engineer
+        home = 492
     }
 
     regiment = {
         name= "2.Oajaca y Tlaxcala"
-        type = artillery
-        home = 2324
+        type = engineer
+        home = 492
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
-        type = artillery
+        type = engineer
         home = 2344
     }
 	
     regiment = {
         name= "1.Division Comonfort"
-        type = artillery
-        home = 2330
+        type = engineer
+        home = 503
     }
 
     regiment = {
         name= "2.Division Comonfort"
-        type = artillery
+        type = engineer
         home = 2302
+    }
+}
+
+army = {
+    name = "Ejército del Sur"
+    location = 513
+    regiment = {
+        name= "6.Division Comonfort"
+        type = hussar
+        home = 512
+    }
+	
+    regiment = {
+        name= "1.Division Comonfort"
+        type = infantry
+        home = 503
+    }
+
+    regiment = {
+        name= "2.Division Comonfort"
+        type = infantry
+        home = 381
+    }
+	
+	regiment = {
+        name= "3.Division Comonfort"
+        type = infantry
+        home = 492
+    }
+	
+    regiment = {
+        name= "4.Division Comonfort"
+        type = engineer
+        home = 498
+    }
+
+    regiment = {
+        name= "5.Division Comonfort"
+        type = engineer
+        home = 474
     }
 }
 

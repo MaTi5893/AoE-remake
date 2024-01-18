@@ -215,7 +215,7 @@ regimental_mustering = {
         mobilisation_size = 0.01
     }
 }
-#deep_defense_system - Proffesional Army
+#deep_defense_system - Professional Army
 goose_step = {
     limit = { deep_defense_system = 1 }
     chance = {
@@ -254,6 +254,11 @@ goose_step = {
             attack = 3
             defence = 3
         }
+		engineer = {
+            default_organisation = 7.5
+            attack = 1.5
+            defence = 1.5
+        }
         cuirassier = {
             default_organisation = 7.5
             attack = 1.5
@@ -273,11 +278,6 @@ goose_step = {
             default_organisation = 7.5
             attack = 1.5
             defence = 1.5
-        }
-        engineer = {
-            default_organisation = 7.5
-            attack = 3
-            defence = 3
         }
 
     }
@@ -573,14 +573,17 @@ flintlock_musket_armament = {
 }
 engineer_support_companies = {
     limit = {
-        muzzle_loaded_rifles = 1
+        iron_muzzle_loaded_artillery = 1
     }
     chance = {
         base = 5
     }
     effect = {
         engineer = {
-            attack = 2
+            attack = 1.5
+			defence = 0.5
+			support = 0.2
+			supply_consumption = 0.1
         }
     }
 }
@@ -636,8 +639,8 @@ elite_troops = {
             supply_consumption = 0.20
         }
         engineer = {
-            attack = 2
-            defence = 2
+            attack = 0.5
+            defence = 0.5
         }
     }
 }
@@ -663,8 +666,8 @@ socket_bayonet_armnament = {
             defence = 1
         }
         engineer = {
-            attack = 2
-            defence = 2
+            attack = 0.5
+            defence = 0.5
         }
         irregular = {
             attack = 1
@@ -694,8 +697,8 @@ new_model_musket_armnament = {
             defence = 1
         }
         engineer = {
-            attack = 2
-            defence = 2
+            attack = 0.5
+            defence = 0.5
         }
         irregular = {
             attack = 1
@@ -722,7 +725,7 @@ rifled_guns_armnament = {
             attack = 1
         }
         engineer = {
-            attack = 1
+            attack = 0.5
         }
         irregular = {
             attack = 1
@@ -798,7 +801,7 @@ cast_bronze_cannons = {
 trunnions = {
     limit = { iron_muzzle_loaded_artillery = 1 }
     chance = {
-        base = 2
+        base = 4
     }
     effect = {
         artillery = {
@@ -810,6 +813,36 @@ trunnions = {
             attack = 1.75
             defence = 0.5
             support = 0.1
+        }
+    }
+}
+#iron_muzzle_loaded_artillery - cannons
+integrated_artillery_corps = {
+    limit = { iron_muzzle_loaded_artillery = 1 }
+    chance = {
+        base = -10
+		modifier = {
+            factor = 5
+            muzzle_loaded_rifles = 1 
+        }
+		modifier = {
+            factor = 5
+            invention = trunnions
+        }
+        modifier = {
+            factor = 5
+            invention = engineer_support_companies
+        }
+		modifier = {
+            factor = 110
+            year = 1715
+        }
+    }
+    effect = {
+		activate_unit = artillery
+		artillery = {
+            attack = 0.5
+            defence = 0.5
         }
     }
 }
@@ -827,7 +860,7 @@ arching_fire_calculation = {
             # default_organisation = 5
         }
         tank = {
-            attack = 0.25
+            attack = 0.75
             defence = 0.5
             support = 0.1
             # default_organisation = 5
@@ -845,6 +878,9 @@ artillery_supply_depot = {
         }
         tank = {
             support = 0.3
+        }
+		engineer = {
+            support = 0.2
         }
     }
 }
@@ -864,6 +900,10 @@ sakers = {
             attack = 2
             support = 0.3
         }
+		engineer = {
+            siege = 0.5
+            support = 0.1
+        }
     }
 }
 #indirect_artillery_fire - Field Hotwizer
@@ -880,6 +920,10 @@ rocket_artillery = {
         tank = {
             attack = 0.5
             defence = 0.5
+        }
+		engineer = {
+            siege = 0.5
+            support = 0.1
         }
     }
 }

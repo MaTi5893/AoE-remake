@@ -5,9 +5,9 @@ LUC = {
     influence_value = 0
 }
 LOR = {
-    value = 125
+    value = 75
     level = 2
-    influence_value = 25
+    influence_value = 0
 }
 MIA = {
     value = 125
@@ -209,55 +209,55 @@ army = {
 
     regiment = {
         name= "2.Garde Royale"
-        type = infantry
+        type = cuirassier
         home = 434
     }
 
     regiment = {
         name= "3.Garde Royale"
-        type = infantry
+        type = cuirassier
         home = 438
     }
 
     regiment = {
-        name= "4.Garde Royale"
-        type = infantry
+        name= "1.Infanterie de la Garde"
+        type = guard
         home = 425
     }
 
     regiment = {
-        name= "1.Infanterie de la Garde"
-        type = infantry
+        name= "2.Infanterie de la Garde"
+        type = guard
         home = 458
     }
 
     regiment = {
-        name= "2.Artillerie de la Garde"
-        type = artillery
+        name= "3.Infanterie de la Garde"
+        type = guard
         home = 420
     }
 
     regiment = {
-        name= "3.Artillerie de la Garde"
-        type = artillery
+        name= "1.Artillerie de la Garde"
+        type = engineer
         home = 428
     }
 
     regiment = {
-        name= "4.Artillerie de la Garde"
-        type = artillery
+        name= "1.Bombardiers Royale"
+        type = tank
         home = 432
     }
 
     regiment = {
-        name= "1.2ème Division"
-        type = artillery
+        name= "2.Bombardiers Royale"
+        type = tank
         home = 451
     }
 
     regiment = {
-        name= "1.3ème Division"
-        type = artillery
+        name= "3.Bombardiers Royale"
+        type = tank
         home = 438
     }
 }
@@ -265,62 +265,62 @@ army = {
     name = "1ère Armée"
     location = 438
     regiment = {
-        name= "1.1ère Division d'Infanterie"
+        name= "1.Verseilles Hussards"
         type = hussar
         home = 438
     }
 
     regiment = {
-        name= "2.1ère Division d'Infanterie"
+        name= "1.Durfort-Boissière Infanterie"
         type = infantry
         home = 418
     }
 
     regiment = {
-        name= "3.1ère Division d'Infanterie"
+        name= "2.Limousin Infanterie"
         type = infantry
         home = 418
     }
 
     regiment = {
-        name= "1.2ème Division d'Infanterie"
+        name= "3.La Sarre Infanterie"
         type = infantry
         home = 420
     }
 
     regiment = {
-        name= "2.2ème Division d'Infanterie"
+        name= "4.Champagne Infanterie"
         type = infantry
         home = 420
     }
 
     regiment = {
         name= "3.2ème Division d'Infanterie"
-        type = artillery
+        type = engineer
         home = 418
     }
 
     regiment = {
         name= "1.3ème Division d'Infanterie"
-        type = artillery
+        type = engineer
         home = 442
     }
 
     regiment = {
         name= "2.3ème Division d'Infanterie"
-        type = artillery
+        type = engineer
         home = 445
     }
 
     regiment = {
-        name= "3.3ème Division d'Infanterie"
-        type = artillery
+        name= "2.Cuirassiers du Roy"
+        type = cuirassier
         home = 399
     }
 
     regiment = {
-        name= "1.10ème Division d'Infanterie"
-        type = artillery
+        name= "1.Grignan Cavalerie"
+        type = cuirassier
         home = 448
     }
 }
@@ -359,31 +359,31 @@ army = {
     }
 
     regiment = {
-        name= "3.5ème Division d'Infanterie"
-        type = artillery
+        name= "3.5ème Artillerie Royale"
+        type = engineer
         home = 418
     }
 
     regiment = {
-        name= "1.6ème Division d'Infanterie"
-        type = artillery
+        name= "1.6ème Artillerie Royalee"
+        type = engineer
         home = 418
     }
 
     regiment = {
-        name= "2.6ème Division d'Infanterie"
+        name= "2.6ème Artillerie Royale"
+        type = engineer
+        home = 434
+    }
+
+    regiment = {
+        name= "3.6ème Artillerie Royale"
         type = artillery
         home = 434
     }
 
     regiment = {
-        name= "3.6ème Division d'Infanterie"
-        type = artillery
-        home = 434
-    }
-
-    regiment = {
-        name= "1.1ème Division"
+        name= "1.1ème Artillerie Royale"
         type = artillery
         home = 438
     }
@@ -411,43 +411,43 @@ army = {
 
     regiment = {
         name= "1.1ère Division de cavalerie"
-        type = infantry
+        type = cuirassier
         home = 455
     }
 
     regiment = {
         name= "2.1ère Division de cavalerie"
-        type = infantry
+        type = cuirassier
         home = 455
     }
 
     regiment = {
-        name= "3.1ère Division de cavalerie"
-        type = artillery
+        name= "3.1ère Division de artillerie"
+        type = engineer
         home = 445
     }
 
     regiment = {
-        name= "3.10ème Division d'Infanterie"
-        type = artillery
+        name= "3.10ème Division de artillerie"
+        type = engineer
         home = 458
     }
 
     regiment = {
-        name= "1.11ème Division d'Infanterie"
-        type = artillery
+        name= "1.11ème Division de artillerie"
+        type = engineer
         home = 467
     }
 
     regiment = {
-        name= "2.11ème Division d'Infanterie"
+        name= "2.11ème Division de artillerie"
         type = artillery
         home = 448
     }
 
     regiment = {
         name= "3.11ème Division d'Infanterie"
-        type = artillery
+        type = infantry
         home = 428
     }
 
@@ -487,32 +487,32 @@ army = {
     }
 
     regiment = {
-        name= "3.9ème Division d'Infanterie"
-        type = artillery
+        name= "3.9ème Division d'Artillerie"
+        type = engineer
         home = 434
     }
 
     regiment = {
-        name= "1.2ème Division de cavalerie"
-        type = artillery
+        name= "1.2ème Division d'Artillerie"
+        type = engineer
         home = 461
     }
 
     regiment = {
-        name= "2.2ème Division de cavalerie"
-        type = artillery
+        name= "2.2ème Division d'Artillerie"
+        type = engineer
         home = 451
     }
 
     regiment = {
-        name= "3.2ème Division de cavalerie"
+        name= "3.2ème Division d'Artillerie"
         type = artillery
         home = 467
     }
 
     regiment = {
-        name= "2.10ème Division d'Infanterie"
-        type = artillery
+        name= "2.Barentin Cavalerie"
+        type = cuirassier
         home = 451
     }
 
@@ -528,8 +528,8 @@ army = {
     }
 
     regiment = {
-        name= "2.8ème Division d'Infanterie"
-        type = infantry
+        name= "3.Maine Cavalerie"
+        type = cuirassier
         home = 409
     }
 
@@ -552,32 +552,32 @@ army = {
     }
 
     regiment = {
-        name= "3.9ème Division d'Infanterie"
-        type = artillery
+        name= "3.9ème Division de artillerie"
+        type = engineer
         home = 413
     }
 
     regiment = {
-        name= "1.2ème Division de cavalerie"
+        name= "1.2ème Division de artillerie"
+        type = engineer
+        home = 403
+    }
+
+    regiment = {
+        name= "2.2ème Division de artillerie"
+        type = engineer
+        home = 403
+    }
+
+    regiment = {
+        name= "3.2ème Division de artillerie"
         type = artillery
         home = 403
     }
 
     regiment = {
-        name= "2.2ème Division de cavalerie"
-        type = artillery
-        home = 403
-    }
-
-    regiment = {
-        name= "3.2ème Division de cavalerie"
-        type = artillery
-        home = 403
-    }
-
-    regiment = {
-        name= "2.10ème Division d'Infanterie"
-        type = artillery
+        name= "2.Esclainvilliers Cavalerie"
+        type = cuirassier
         home = 403
     }
 
@@ -593,45 +593,45 @@ army = {
     }
 	
     regiment = {
-        name= "3.9ème Division d'Infanterie"
+        name= "3.9ème Division de artillerie"
         type = artillery
         home = 403
     }
 
     regiment = {
-        name= "1.2ème Division de cavalerie"
-        type = artillery
-        home = 403
+        name= "1.2ème Division de artillerie"
+        type = engineer
+        home = 413
     }
 
     regiment = {
-        name= "2.2ème Division de cavalerie"
-        type = artillery
-        home = 418
+        name= "2.2ème Division de artillerie"
+        type = engineer
+        home = 413
     }
 
     regiment = {
-        name= "3.2ème Division de cavalerie"
-        type = artillery
+        name= "3.2ème Division de artillerie"
+        type = engineer
         home = 399
     }
 
     regiment = {
-        name= "2.10ème Division d'Infanterie"
-        type = artillery
+        name= "2.Dauphin Dragons"
+        type = dragoon
         home = 399
     }
 
 	 regiment = {
         name= "5.9ème Division d'Infanterie"
         type = infantry
-        home = 399
+        home = 425
     }
 
 	regiment = {
         name= "6.9ème Division d'Infanterie"
         type = infantry
-        home = 438
+        home = 413
     }
 	
 	regiment = {
@@ -665,131 +665,49 @@ army = {
     regiment = {
         name= "6.8ème Division d'Infanterie"
         type = infantry
-        home = 434
+        home = 448
     }
 
     regiment = {
         name= "7.9ème Division d'Infanterie"
         type = infantry
-        home = 451
+        home = 420
     }
 
     regiment = {
         name= "8.9ème Division d'Infanterie"
         type = infantry
-        home = 445
+        home = 425
     }
 
     regiment = {
-        name= "11.9ème Division d'Infanterie"
-        type = artillery
-        home = 442
+        name= "11.9ème Division de artillerie"
+        type = engineer
+        home = 467
     }
 
     regiment = {
         name= "12.2ème Division de artillerie"
-        type = artillery
-        home = 461
+        type = engineer
+        home = 467
     }
 
     regiment = {
         name= "21.2ème Division de artillerie"
         type = artillery
+        home = 451
+    }
+
+    regiment = {
+        name= "13.Listenois Dragons"
+        type = dragoon
         home = 399
     }
 
     regiment = {
-        name= "13.2ème Division de artillerie"
-        type = artillery
-        home = 399
-    }
-
-    regiment = {
-        name= "14.10ème Division artillerie"
-        type = artillery
+        name= "14.La Reine Dragons"
+        type = dragoon
         home = 448
-    }
-
-}
-
-army = {
-    name = "Armée de Bretagne"
-    location = 420
-    regiment = {
-        name= "1.8ème Division de Hussar"
-        type = hussar
-        home = 420
-    }
-	
-    regiment = {
-        name= "5.8ème Division de artillerie"
-        type = artillery
-        home = 425
-    }
-
-	regiment = {
-        name= "3.8ème Division de artillerie"
-        type = artillery
-        home = 420
-    }
-	
-    regiment = {
-        name= "1.6ème Division de artillerie"
-        type = artillery
-        home = 425
-    }
-
-    regiment = {
-        name= "2.3ème Division de artillerie"
-        type = artillery
-        home = 448
-    }
-
-    regiment = {
-        name= "1.8ème Division de artillerie"
-        type = artillery
-        home = 448
-    }
-
-}
-
-army = {
-    name = "Armée de Picard"
-    location = 401
-	regiment = {
-        name= "1.8ème Division de Hussar"
-        type = hussar
-        home = 413
-    }
-
-    regiment = {
-        name= "5.9ème Division de artillerie"
-        type = artillery
-        home = 420
-    }
-
-    regiment = {
-        name= "4.2ème Division de artillerie"
-        type = artillery
-        home = 428
-    }
-
-    regiment = {
-        name= "1.2ème Division de artillerie"
-        type = artillery
-        home = 467
-    }
-
-    regiment = {
-        name= "3.2ème Division de artillerie"
-        type = artillery
-        home = 467
-    }
-
-    regiment = {
-        name= "4.1ème Division artillerie"
-        type = artillery
-        home = 428
     }
 
 }
@@ -801,7 +719,7 @@ army = {
     regiment = {
         name= "1.9ème Division d'Infanterie"
         type = infantry
-        home = 455
+        home = 428
     }
 
 	regiment = {
@@ -830,7 +748,7 @@ army = {
 
     regiment = {
         name= "1.2ème Division d'Artillerie"
-        type = artillery
+        type = engineer
         home = 428
     }
 	
@@ -853,9 +771,9 @@ army = {
     }
 
     regiment = {
-        name= "3.9ème Division de artillerie"
-        type = artillery
-        home = 451
+        name= "3.9ème Division de Guards"
+        type = hussar
+        home = 399
     }
 }
 

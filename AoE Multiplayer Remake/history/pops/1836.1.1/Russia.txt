@@ -297,7 +297,7 @@
     soldiers = {
         culture = cossack
         religion = orthodox
-        size = 1500
+        size = 4500
     }
 
     farmers = {
@@ -2003,16 +2003,16 @@
         size = 8662
     }
 
-    soldiers = {
+    farmers = {
         culture = russian
         religion = orthodox
-        size = 8000
+        size = 11800
     }
 
     farmers = {
         culture = russian
         religion = orthodox
-        size = 16533
+        size = 15533
     }
 
     aristocrats = {
@@ -2045,7 +2045,7 @@
         size = 6781
     }
 
-    soldiers = {
+    farmers = {
         culture = north_german
         religion = protestant
         size = 2200
@@ -2066,7 +2066,7 @@
     soldiers = {
         culture = finnish
         religion = protestant
-        size = 6225
+        size = 28525
     }
 
     farmers = {
@@ -2087,35 +2087,6 @@
         size = 733
     }
 
-    soldiers = {
-        culture = russian
-        religion = orthodox
-        size = 1167
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
-        size = 2840
-    }
-
-    soldiers = {
-        culture = finnish
-        religion = protestant
-        size = 3136
-    }
-
-    soldiers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 0
-    }
-
-    soldiers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 7
-    }
 }
 #Petrozavorsk (104000/26000 POPS)
 995 = {
@@ -2930,13 +2901,13 @@
     soldiers = {
         culture = russian
         religion = orthodox
-        size = 5450
+        size = 9450
     }
 
     farmers = {
         culture = russian
         religion = orthodox
-        size = 130500
+        size = 134500
     }
 }
 #Kaluga (876000/219000 POPS)

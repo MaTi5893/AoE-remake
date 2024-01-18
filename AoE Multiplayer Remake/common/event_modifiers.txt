@@ -4301,14 +4301,14 @@ swedish_caroleans = {
 charles_xii = {
     mobilisation_economy_impact = -0.15
     supply_consumption = -0.15
-    mobilisation_size = 0.04
+    mobilisation_size = 0.025
     min_military_spending = 0.1
     icon = 15
 }
 great_northern_war = {
     mobilisation_economy_impact = -0.1
     supply_consumption = -0.05
-    mobilisation_size = 0.03
+    mobilisation_size = 0.02
     min_military_spending = 0.1
     icon = 15
 }
@@ -4358,7 +4358,7 @@ table_of_ranks = {
 	icon = 15
 }
 peter_the_great = {
-	mobilisation_size = 0.01
+	mobilisation_size = 0.005
 	navy_tech_research_bonus = 0.1
 	research_points = 0.25
 	icon = 13
@@ -7116,4 +7116,14 @@ parlement_resistance = {
 	local_non_accepted_pop_consciousness_modifier = 0.2
 	local_ruling_party_support = -0.5
 	icon = 20
+}
+###new stuff
+dutch_military_tradition = {
+    org_regain = 0.1
+    land_organisation = 0.02
+    mobilisation_economy_impact = -0.25
+    land_unit_start_experience = 5
+    supply_consumption = -0.05
+    mobilisation_size = 0.02
+    icon = 15
 }

@@ -24,6 +24,7 @@ engineer = {
         canned_food = 10
         liquor = 10
         explosives = 5
+		artillery = 3
     }
 
     supply_consumption = 1.0
@@ -31,16 +32,17 @@ engineer = {
         small_arms = 0.012 #0.01
         ammunition = 0.1 # 0
         canned_food = 0.06 # 0.02
-        explosives = 0.05
+		artillery = 0.03 #0.004
+        explosives = 0.02
     }
 
 
     #Land Abilties
     reconnaissance = 0
-    attack = 2
-    defence = 4
-    discipline = 1.0
-    support = 0.5
+    attack = 3
+    defence = 2
+    discipline = 0.75
+    support = 0.8
     maneuver = 2
     siege = 1
 }

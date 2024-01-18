@@ -17,11 +17,11 @@ regiment = { name = "2. brygada" type = infantry home = 704 }
 regiment = { name = "3. brygada" type = infantry home = 704 } 
 regiment = { name = "4. brygada" type = dragoon  home = 704 } 
 regiment = { name = "5. brygada" type = infantry home = 713 } 
-regiment = { name = "6. brygada" type = artillery home = 713 } 
-regiment = { name = "7. brygada" type = artillery home = 713 } 
-regiment = { name = "8. brygada" type = artillery home = 713 } 
+regiment = { name = "6. brygada" type = engineer home = 713 } 
+regiment = { name = "7. brygada" type = engineer home = 713 } 
+regiment = { name = "8. brygada" type = engineer home = 713 } 
 regiment = { name = "9. brygada" type = artillery home = 706 } 
-regiment = { name = "10. brygada" type = artillery home = 706 }
+regiment = { name = "10. brygada" type = artillery home = 959 }
 }
 
 army = { 
@@ -34,26 +34,26 @@ regiment = { name = "3. brygada" type = infantry home = 936 }
 regiment = { name = "4. brygada" type = dragoon home = 936 } 
 regiment = { name = "5. brygada" type = infantry home = 936 } 
 regiment = { name = "6. brygada" type = artillery home = 936 } 
-regiment = { name = "7. brygada" type = artillery home = 936 } 
-regiment = { name = "8. brygada" type = artillery home = 936 } 
-regiment = { name = "9. brygada" type = artillery home = 360 } 
-regiment = { name = "10. brygada" type = artillery home = 360 }
+regiment = { name = "7. brygada" type = engineer home = 936 } 
+regiment = { name = "8. brygada" type = engineer home = 360 } 
+regiment = { name = "9. brygada" type = cuirassier home = 699 } 
+regiment = { name = "10. brygada" type = cuirassier home = 699 }
 }
 
 army = { 
 
 name = "3. Armia Ksiestwa Litewskiego" location = 718
 
-regiment = { name = "1. brygada" type = infantry home = 360 } 
+regiment = { name = "1. brygada" type = infantry home = 702 } 
 regiment = { name = "2. brygada" type = infantry home = 702 } 
 regiment = { name = "3. brygada" type = infantry home = 718 } 
 regiment = { name = "4. brygada" type = dragoon home = 718 } 
 regiment = { name = "5. brygada" type = infantry home = 718 } 
-regiment = { name = "6. brygada" type = artillery home = 718 } 
-regiment = { name = "7. brygada" type = artillery home = 718 } 
-regiment = { name = "8. brygada" type = artillery home = 944 } 
-regiment = { name = "9. brygada" type = artillery home = 944 } 
-regiment = { name = "10. brygada" type = artillery home = 944 }
+regiment = { name = "6. brygada" type = engineer home = 718 } 
+regiment = { name = "7. brygada" type = engineer home = 360 } 
+regiment = { name = "8. brygada" type = engineer home = 944 } 
+regiment = { name = "9. brygada" type = cuirassier home = 944 } 
+regiment = { name = "10. brygada" type = cuirassier home = 944 }
 }
 
 army = { 
@@ -65,39 +65,23 @@ regiment = { name = "2. brygada" type = infantry home = 944 }
 regiment = { name = "3. brygada" type = infantry home = 690 } 
 regiment = { name = "4. brygada" type = dragoon home = 690 } 
 regiment = { name = "5. brygada" type = infantry home = 690 } 
-regiment = { name = "6. brygada" type = artillery home = 690 } 
-regiment = { name = "7. brygada" type = artillery home = 690 } 
-regiment = { name = "8. brygada" type = artillery home = 699 } 
+regiment = { name = "6. brygada" type = engineer home = 690 } 
+regiment = { name = "7. brygada" type = engineer home = 690 } 
+regiment = { name = "8. brygada" type = cuirassier home = 699 } 
 regiment = { name = "9. brygada" type = artillery home = 699 } 
-regiment = { name = "10. brygada" type = artillery home = 699 }
+regiment = { name = "10. brygada" type = cuirassier home = 699 }
 }
 
 army = { 
 
-name = "5.Armia Koronna" location = 706
+name = "5.Armia Koronna" location = 955
 
-regiment = { name = "1. brygada" type = artillery home = 699 } 
-regiment = { name = "2. brygada" type = artillery home = 713 } 
-regiment = { name = "3. brygada" type = artillery home = 702 } 
-regiment = { name = "4. brygada" type = artillery home = 702 } 
-regiment = { name = "5. brygada" type = artillery home = 702 }
-regiment = { name = "1. Dragonia" type = dragoon home = 706 }
-regiment = { name = "7. brygada" type = infantry home = 702 } 
-regiment = { name = "8. brygada" type = infantry home = 959 } 
+regiment = { name = "4. brygada" type = engineer home = 702 } 
+regiment = { name = "5. brygada" type = engineer home = 702 }
+regiment = { name = "1. Dragonia" type = dragoon home = 959 }
 regiment = { name = "9. brygada" type = infantry home = 959 } 
 regiment = { name = "10. brygada" type = infantry home = 959 } 
-}
-
-army = { 
-
-name = "6.Armia Koronna" location = 955
-
-regiment = { name = "1. brygada" type = artillery home = 959 } 
-regiment = { name = "2. brygada" type = artillery home = 959 } 
-regiment = { name = "3. brygada" type = artillery home = 959 } 
-regiment = { name = "4. brygada" type = artillery home = 959 } 
-regiment = { name = "5. brygada" type = artillery home = 706 }
-regiment = { name = "1. Dragonia" type = dragoon home = 944 }
+regiment = { name = "8. brygada" type = infantry home = 959 } 
 }
 
 leader = {
