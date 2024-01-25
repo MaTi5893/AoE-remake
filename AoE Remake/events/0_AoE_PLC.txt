@@ -437,6 +437,185 @@ country_event = {
 	}
 }
 country_event = {
+	id = 156903
+	title = "Pro-French Ciricles Strenghtened!"
+	desc = "EVTDESC156903"
+	picture = sejm
+	is_triggered_only = yes
+	
+	option = {
+		name = "Try to change army leadership."	
+		election = yes
+		prestige = -10
+		random_owned = {
+            limit = {
+                owner = {
+                    pensions = acceptable_pensions
+                }
+            }
+            owner = {
+               any_pop = { limit = { type = soldiers } reduce_pop = 1.1 }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = low_pensions
+                }
+            }
+            owner = {
+                any_pop = { limit = { type = soldiers } reduce_pop = 1.05 }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = trinket_pensions
+                }
+            }
+            owner = {
+                social_reform = low_pensions
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    pensions = no_pensions
+                }
+            }
+            owner = {
+                social_reform = trinket_pensions
+            }
+        }
+	}
+	
+	option = {
+		name = "Recruit more nobles to Pro-french malcontents."	
+		election = yes
+		prestige = -10
+		random_owned = {
+            limit = {
+                owner = {
+                    work_hours = ten_hours
+                }
+            }
+            owner = {
+                prestige = 15
+				any_pop = { militancy = -2 }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = twelve_hours
+                }
+            }
+            owner = {
+                prestige = 5
+				any_pop = { militancy = -1 }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = fourteen_hours
+                }
+            }
+            owner = {
+                social_reform = twelve_hours
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    work_hours = no_work_hour_limit
+                }
+            }
+            owner = {
+                social_reform = fourteen_hours
+            }
+        }
+	}
+
+	option = {
+		name = "Appoint their members as goverment officials!"	
+		election = yes
+		prestige = -10
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = acceptable_safety
+                }
+            }
+            owner = {
+                social_reform = low_safety
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    safety_regulations = good_safety
+                }
+            }
+            owner = {
+                social_reform = acceptable_safety
+            }
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    health_care = acceptable_health_care
+                }
+            }
+            owner = {
+				money = 50000
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = low_health_care
+                }
+            }
+            owner = {
+                money = 25000
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = trinket_health_care
+                }
+            }
+            owner = {
+                social_reform = low_health_care
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    health_care = no_health_care
+                }
+            }
+            owner = {
+                social_reform = trinket_health_care
+            }
+        }
+	}
+}
+country_event = {
+	id = 156904
+	title = "Pro-French Faction Set Up"
+	desc = "EVTDESC156904"
+	picture = sejm
+	is_triggered_only = yes
+	
+	option = {
+		name = "Maybe not all foreign interference is bad..."
+		prestige = -5
+	}
+}
+country_event = {
 	id = 1569011
 	title = "Polish-Lithuanian policies vetoed"
 	desc = "EVTDESC156901"

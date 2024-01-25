@@ -3,6 +3,7 @@ political_decisions = {
         picture = 3rd_may_constitution
         potential = {
             primary_culture = polish
+			owns = 706
             OR = {
             government = elective_monarchy_oligarchy
             government = hms_government
@@ -119,6 +120,7 @@ political_decisions = {
         picture = sejm
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = great_sejm }
         }
         allow = {
@@ -151,6 +153,7 @@ political_decisions = {
         picture = kosynierzy
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = polaniecki_universal }
             is_ideology_enabled = communist
         }
@@ -178,6 +181,7 @@ political_decisions = {
         picture = revise_andrusovo
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = revise_the_treaty_of_andrusovo }
             exists = yes
 			owns = 946
@@ -263,6 +267,7 @@ political_decisions = {
         picture = ducal_prussia
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = vassalize_ducal_prussia }
             exists = yes
         }
@@ -386,6 +391,7 @@ political_decisions = {
         picture = plr
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = second_union_of_hadiach }
             exists = yes
         }
@@ -418,6 +424,7 @@ political_decisions = {
         picture = polish_partitions
         potential = {
             primary_culture = polish
+			owns = 706
             has_global_flag = polish_partition
         }
         allow = {
@@ -441,6 +448,7 @@ political_decisions = {
         picture = agriculture_rev
         potential = {
             primary_culture = polish
+
             has_country_modifier = folwark_serf_economy
             exists = yes
         }
@@ -494,6 +502,7 @@ political_decisions = {
         picture = livonia_plc
         potential = {
             primary_culture = polish
+			owns = 706
             NOT = { has_country_flag = recover_inflanty }
             exists = yes
 			SWE = { owns = 354 }
@@ -541,6 +550,7 @@ political_decisions = {
 		picture = become_poland
 		potential = {
             primary_culture = polish
+			owns = 706
             NOT = { exists = POL }
             exists = yes
 			NOT = { owns = 360 }
@@ -565,6 +575,7 @@ political_decisions = {
         picture = become_poland_lithuania
 
         potential = {
+			owns = 706
             OR = {
                 primary_culture = polish
                 primary_culture = lithuanian

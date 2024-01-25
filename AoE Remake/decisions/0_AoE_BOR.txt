@@ -66,7 +66,7 @@ political_decisions = {
 	reign_in_the_paris_parlement = {
 		picture = paris_parlement_resistance
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -119,7 +119,7 @@ political_decisions = {
 	pacify_rebelling_parlement = {
 		picture = parlement_resistance
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -171,7 +171,7 @@ political_decisions = {
 	first_governemnt_louis_xv = {
 		picture = little_louis
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -193,7 +193,7 @@ political_decisions = {
 	second_governemnt_louis_xv = {
 		picture = big_louis
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -213,9 +213,9 @@ political_decisions = {
 	}
 	
 	bastion_of_reaction = {
-		picture = big_louis
+		picture = bastion_of_reactionism
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
@@ -246,29 +246,47 @@ political_decisions = {
 		}
 		effect = {
 			remove_country_modifier = clergy_and_nobility_domination
-			set_country_flag = bastion_of_reaction
+			clr_country_flag = clergy_and_nobility_domination
+			any_pop = {
+				ideology = {
+					factor = 0.1
+					value = reactionary
+				}
+			}
+			add_accepted_culture = arpitan
+			add_accepted_culture = breton
+			add_accepted_culture = occitan
+			set_country_flag = bastion_of_reactionism
+			prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_global_flag = railroad_napoleon
+			}
 		}
 	}
 	
 	pax_bourbona = {
-		picture = france
+		picture = pax_bourbona
 		potential = {
-			tag = BOR
+			primary_culture = french
 			OR = {
 				government = hms_government
 				government = prussian_constitutionalism
 				government = absolute_monarchy
 			}
-			has_country_flag = first_governemnt_louis_xv
-			NOT = { has_country_flag = second_governemnt_louis_xv }
+			political_thought_7 = 1
+			NOT = { has_country_flag = pax_bourbona }
 			exists = yes
 		}
 		allow = {
-			political_thought_7 = 1
+			political_thought_8 = 1
 		}
 		effect = {
-			country_event = 171110
-			set_country_flag = second_governemnt_louis_xv
+			country_event = 171150
+			set_country_flag = pax_bourbona
 		}
 	}
 
@@ -357,7 +375,6 @@ political_decisions = {
 		}
 		allow = {
 			war_policy = jingoism
-			NOT = { has_country_modifier = no_more_war }
 		}
 		effect = {
 			badboy = 15
@@ -492,6 +509,51 @@ political_decisions = {
 				factor = 0
 				badboy = 5
 			}
+		}
+	}
+	
+	fund_pro_french_factions_plc = {
+		picture = russia_poland
+		potential = {
+			primary_culture = french
+			NOT = { has_country_flag = fund_pro_french_factions_plc }
+			PLC = { exists = yes government = elective_monarchy_oligarchy }
+		}
+		allow = {
+			PLC = {
+				in_sphere = THIS
+				has_country_flag = lesczynski_rule
+			}		
+		}
+		effect = {
+			PLC = { country_event = 156904 }
+			relation = {
+				who = PLC
+				value = 20
+			}
+			set_country_flag = fund_pro_french_factions_plc
+		}
+	}
+	
+	push_french_agenda_in_plc = {
+		picture = russia_poland
+		potential = {
+			exists = yes
+			primary_culture = french
+			has_country_flag = fund_pro_french_factions_plc
+			exists = PLC
+		}
+		allow = {
+			money = 500000
+			NOT = { has_country_modifier = french_agenda }
+		}
+		effect = {
+			money = -500000
+			add_country_modifier = {
+				name = french_agenda
+				duration = 730
+			}
+			PLC = { country_event = 156903 }
 		}
 	}
 	
@@ -638,21 +700,10 @@ political_decisions = {
 			393 = {
 				add_core = THIS
 			}
-			393 = {	add_core = THIS }
 			388 = {	add_core = THIS }
 			389 = {	add_core = THIS }
 			387 = {	add_core = THIS }
 			390 = {	add_core = THIS }
-			random_country = {
-				limit = {
-					tag = LOR
-					in_sphere = THIS
-					ai = yes
-				}
-				THIS = {
-					create_vassal = LOR
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -841,14 +892,7 @@ political_decisions = {
 		potential = {
 			tag = BOR
 			NOT = { has_country_flag = french_const_made }
-			OR = {
-				AND = {
-					has_country_modifier = poor_tax_laws
-					has_country_modifier = poor_conscript_laws
-					has_country_modifier = peasant_in_government
-				}
-				government = hms_government
-			}
+			government = hms_government
 		}
 		allow = {
 			exists = yes
@@ -861,6 +905,9 @@ political_decisions = {
 				militancy = -6
 				consciousness = -3
 			}
+			add_accepted_culture = arpitan
+			add_accepted_culture = breton
+			add_accepted_culture = occitan
 			prestige = 15
 			set_country_flag = french_const_made
 			remove_country_modifier = clergy_and_nobility_domination
@@ -868,6 +915,13 @@ political_decisions = {
 			add_country_modifier = {
 				name = new_constitution
 				duration = 365
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_global_flag = railroad_napoleon
 			}
 		}
 	}
