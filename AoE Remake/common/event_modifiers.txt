@@ -4315,18 +4315,37 @@ swedish_military_tradition = {
     org_regain = 0.25
     mobilisation_size = 0.02
     supply_consumption = -0.15
+	army_tech_research_bonus = -0.2
     icon = 15
+}
+swedish_military_tradition_2 = {
+    org_regain = 0.25
+    mobilisation_size = 0.02
+    supply_consumption = -0.15
+    icon = 15
+}
+arvid_horn = {
+	core_pop_militancy_modifier = -0.4
+	non_accepted_pop_militancy_modifier = -0.2
+	icon = 13
+}
+succession_crisis = {
+	diplomatic_points_modifier = -0.25
+	influence_modifier = -0.5
+	icon = 15
 }
 riksdaler = {
     administrative_efficiency_modifier = 0.025
     tax_efficiency = 0.05
 }
-gustav_iii = {
-    army_tech_research_bonus = 0.05
-    ruling_party_support = 0.35
-    influence_modifier = 0.2
-    global_pop_consciousness_modifier = 0.03
-    icon = 13
+privlaged_territory = {
+	local_ruling_party_support = 1
+	local_factory_input = 0.5
+	icon = 2
+}
+local_resistance = {
+	pop_militancy_modifier = 0.9
+	icon = 2
 }
 swedish_absolutism = {
     ruling_party_support = 0.35

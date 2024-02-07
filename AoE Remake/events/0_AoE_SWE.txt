@@ -21,15 +21,10 @@ country_event = {
             }
             government = hms_government
         }
-        NOT = {
-            has_country_modifier = gustav_iii
-        }
-        NOT = {
-            has_country_flag = gustav_assasinated
-        }
     }
 
     option = {
+		set_country_flag = age_of_liberty
         name = "Let our nation be guided towards prosperity!"
         prestige = 15
         government = hms_government
@@ -64,37 +59,10 @@ country_event = {
     }
 }
 country_event = {
-    id = 1721003
-    title = "Gustav III Holestein-Gottorp"
-    desc = "EVTDESC1721003"
-    major = yes
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    trigger = {
-        war = no
-        year = 1772
-		primary_culture = swedish
-        NOT = { has_country_modifier = gustav_iii }
-    }
-
-    option = {
-        name = "Long live the king!"
-        prestige = 15
-        add_country_modifier = {
-            name = gustav_iii
-            duration = -1
-        }
-    }
-}
-country_event = {
     id = 1721002
     title = "Our King Assasinated!"
     desc = "EVTDESC1721002"
-    picture = assasination
+    picture = gustav_assassination
     fire_only_once = yes
 
     mean_time_to_happen = {
@@ -102,19 +70,18 @@ country_event = {
     }
 
     trigger = {
-        owns = 322
-        322 = { is_capital = yes }
+        has_country_flag = gustav_iii_reforms
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
 		OR = {
 			average_militancy = 6
+			war_exhaustion = 50
+			NOT = { owns = 345 }
 			year = 1792
-			AND = {
-				NOT = { government = hms_government }
-				NOT = { government = prussian_constitutionalism }
-				NOT = { government = absolute_monarchy }
-			}
 		}
-        has_country_flag = gustav_iii_reforms
-        has_country_modifier = gustav_iii
     }
 
     option = {
@@ -132,17 +99,28 @@ country_event = {
             name = new_constitution
             duration = 1825
         }
-        remove_country_modifier = gustav_iii
     }
     option = {
         name = "Continue Gustav's Autocracy"
-        remove_country_modifier = gustav_iii
         add_country_modifier = {
             name = liberal_agitation
             duration = 1825
         }
         prestige = -15
     }
+	option = {
+		name = "Proclaim A Revolutionary Republic!"
+		government = proletarian_dictatorship
+		political_reform = wealth_voting
+        political_reform = state_equal_weight
+        political_reform = yes_meeting
+        political_reform = state_press
+        political_reform = all_trade_unions
+        political_reform = non_secret_ballots
+        political_reform = no_slavery
+		political_reform = legislative_parliment
+		country_event = 800052
+	}
 }
 country_event = {
     id = 1721005
@@ -179,7 +157,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					ai = no
+					ai = yes
 				}
 			}
 			owner = {
@@ -326,7 +304,7 @@ country_event = {
     id = 1721009
     title = "The Young Reign Of Charles XII"
     desc = "EVTDESC1721009"
-	picture = poltavas_battle
+	picture = sweden_fire
     is_triggered_only = yes	
 	
 	option = {
@@ -355,5 +333,348 @@ country_event = {
 			militancy = 1
 			consciousness =1
 		}
+	}
+}
+
+country_event = {
+    id = 1721011
+    title = "The Swedish Embassy"
+    desc = "EVTDESC1721011"
+	picture = sweden_ottomans
+    is_triggered_only = yes
+	
+	option = {
+		name = "We will gladly join their war effort"
+		war = {
+			target = TOR
+			attacker_goal = { casus_belli = acquire_state state_province_id = 979 }
+		}
+	}
+	
+	option = {
+		name = "Imprison these foolish agitators"
+		prestige = 5
+		relation = {
+			who = SWE
+			value = -75
+		}
+	}
+}
+
+country_event = {
+    id = 1721012
+    title = "Johan Patkul Delievered"
+    desc = "EVTDESC1721012"
+	picture = johan_patkul
+	fire_only_once = yes
+    trigger = {
+		tag = SWE
+		NOT = { year = 1710 }
+		truce_with = SAX
+		owns = 354
+	}
+	
+	option = {
+		name = "Draw and quarter him."
+		any_pop = { consciousness = 2 }
+		any_pop = { limit = { culture = latvian } militancy = -4 }
+		prestige = 15
+	}
+	
+	option = {
+		name = "Break him alive at the wheel."
+		any_pop = { consciousness = 1 }
+		any_pop = { limit = { culture = latvian } militancy = -3 }
+		prestige = 5
+	}
+	
+	option = {
+		name = "Show Mercy"
+		any_pop = { consciousness = 3 militancy = -1 }
+		prestige = -5
+	}
+}
+
+country_event = {
+    id = 1721013
+    title = "The Rise Of Hats And Caps"
+    desc = "EVTDESC1721013"
+	picture = sweden_riksdag
+	fire_only_once = yes
+    trigger = {
+		year = 1710
+		tag = SWE
+	}
+	
+	option = {
+		name = "Let's hope they won't squabble too much"
+		any_pop = { consciousness = 1 }
+	}
+}
+
+country_event = {
+    id = 1721014
+    title = "Arvid Horn & A New Privy Council"
+    desc = "EVTDESC1721014"
+	picture = arvid_horn
+	fire_only_once = yes
+	
+    trigger = {
+		has_country_flag = age_of_liberty
+		tag = SWE
+		NOT = { year = 1730 }
+		trade_unions = non_socialist_allowed
+		NOT = { has_country_flag = appointed_arvid_horn }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 16
+			war = yes
+		}
+	}
+	option = {
+		name = "Appoint Arvid Horn."
+		nationalvalue = pm_gentry
+		add_country_modifier = {
+			name = arvid_horn
+			duration = -1
+		}
+		set_country_flag = permanent_minister
+	}
+	
+	option = {
+		name = "Choose someone else."
+		any_pop = { consciousness = 1 militancy = 1 }
+		prestige = -5
+	}
+}
+
+country_event = {
+    id = 1721015
+    title = "Arvid Horn forced to resign!"
+    desc = "EVTDESC1721015"
+	picture = arvid_horn
+	fire_only_once = yes
+	
+    trigger = {
+		has_country_modifier = arvid_horn
+		year = 1738
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "His statesmenship will be remembered."
+		clr_country_flag = permanent_minister
+		remove_country_modifier = arvid_horn
+		nationalvalue = pm_no_minister
+	}
+}
+
+country_event = {
+	id = 1721016
+    title = "The Declining Role Of The Monarchy"
+    desc = "EVTDESC1721016"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWE
+		year = 1740
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 4
+			war = yes
+		}
+		modifier = {
+			factor = 12
+			NOT = { has_country_flag = age_of_liberty }
+		}
+		
+	}
+	
+	option = {
+		name = "We should find an heir quickly."
+		add_country_modifier = {
+			name = succession_crisis
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 1721017
+    title = "Chaos In The Riksdag"
+    desc = "EVTDESC1721017"
+	is_triggered_only = yes
+	picture = sweden_riksdag
+
+	option = {
+		name = "Another futile session..."
+		election = yes
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = trinket_safety }
+			}
+			owner = { social_reform = no_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = low_safety }
+			}
+			owner = { social_reform = trinket_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = acceptable_safety }
+			}
+			owner = { social_reform = low_safety }
+		}
+		random_owned = {
+			limit = {
+				owner = { safety_regulations = good_safety }
+			}
+			owner = { social_reform = acceptable_safety }
+		}
+	}
+}
+
+country_event = {
+    id = 1721018
+    title = "Adolf Frederick Installed As King"
+    desc = "EVTDESC1721018"
+	picture = frederick_adolf
+	is_triggered_only = yes
+	
+	option = {
+		name = "I hope he knows he's just a figurehead"
+		set_country_flag = permanent_minister
+		nationalvalue = pm_nobleman
+		any_pop = { consciousness = 2 }
+	}
+}
+
+country_event = {
+    id = 1721019
+    title = "The Great Dalecarlian Dance"
+    desc = "EVTDESC1721019"
+	picture = traitor
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWE
+		owns = 323
+		year = 1739
+	}
+	
+	option = {
+		name = "Put the mob down"
+		323 = { change_controller = REB any_pop = { militancy = 6 } }
+	}
+}
+
+country_event = {
+    id = 1721020
+    title = "The Anjala League"
+    desc = "EVTDESC1721020"
+	picture = traitor
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWE
+		owns = 323
+		year = 1788
+	}
+	
+	option = {
+		name = "Worrying."
+		random_owned = {
+			limit = {
+				owner = {
+					exists = RUS
+				}
+			}
+			owner = {
+				RUS = { country_event = 1721021 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TOR
+				}
+			}
+			owner = {
+				TOR = { country_event = 1721021 }
+			}
+		}
+	}
+}
+
+country_event = {
+    id = 1721021
+    title = "The Anjala League"
+    desc = "EVTDESC1721021"
+	picture = traitor
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fund them!"
+		SWE = { any_pop = { limit = { culture = finnish } militancy = 5 consciousness = 3 } }
+	}
+	
+	option = {
+		name = "We have better uses for our money."
+		323 = { change_controller = REB any_pop = { militancy = 6 } }
+	}
+}
+
+country_event = {
+    id = 1721022
+    title = "The Elbian League Created"
+    desc = "EVTDESC1721022"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dominium Terra Germania!"
+		prestige = 25
+	}
+}
+
+country_event = {
+    id = 1721023
+    title = "Join the Elbian Leauge?"
+    desc = "EVTDESC1721023"
+	
+	trigger = {
+		SWE = { has_country_flag = elbian_league }
+		in_sphere = SWE
+		is_vassal = no
+		primary_culture = north_german
+		ai = yes
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 2
+			war = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+	}
+	option = {
+		name = "We should be protected now."
+		SWE = { inherit = THIS }
 	}
 }

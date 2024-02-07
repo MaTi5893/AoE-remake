@@ -506,6 +506,8 @@ political_decisions = {
             NOT = { has_country_flag = recover_inflanty }
             exists = yes
 			SWE = { owns = 354 }
+			NOT = { tag = KRA }
+			NOT = { has_country_flag = warsaw_conf }
         }
         allow = {
 			SWE = { war = yes }
@@ -582,6 +584,7 @@ political_decisions = {
             }
             NOT = { exists = PLC }
             NOT = { exists = PLR }
+			NOT = { tag = KRA }
             exists = yes
         }
 
@@ -709,6 +712,7 @@ political_decisions = {
 			war = no
 		}
 		effect = {
+			set_country_flag = warsaw_conf
 			change_tag = PLC
 			government = hms_government
 			add_country_modifier = {
@@ -797,13 +801,13 @@ political_decisions = {
 				limit = {
 					owner = { exists = TOR }
 				}
-				owner = { TOR = { country_event = 170033 } }
+				owner = { TOR = { country_event = 170034 } }
 			}
 			random_owned = {
 				limit = {
 					owner = { exists = RUS }
 				}
-				owner = { RUS = { country_event = 170033 } }
+				owner = { RUS = { country_event = 170034 } }
 			}
 		}
 	}

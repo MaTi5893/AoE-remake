@@ -5,6 +5,7 @@ political_decisions = {
 			NOT = { nationalvalue = pm_no_minister }
 		}
 		allow = {
+			NOT = { has_country_flag = permanent_minister }
 			exists = yes
 		}
 		effect = {
@@ -118,6 +119,7 @@ political_decisions = {
 			NOT = { has_country_flag = choosing_minister }
 		}
 		allow = {
+			NOT = { has_country_flag = permanent_minister }
 			exists = yes
 		}
 		effect = {

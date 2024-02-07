@@ -387,6 +387,45 @@ political_decisions = {
 		}
 	}
 	
+	control_the_swedish_riksdag = {
+		picture = russia_sweden
+		potential = {
+			exists = yes
+			tag = RUS
+			NOT = { has_country_flag = control_the_swedish_riksdag }
+			SWE = { exists = yes has_country_modifier = succession_crisis}
+		}
+		allow = {
+			SWE = { in_sphere = THIS has_country_modifier = succession_crisis }
+		}
+		effect = {
+			set_country_flag = control_the_swedish_riksdag
+			SWE = { country_event = 1721018 }
+		}
+	}
+	
+	push_russian_agenda_in_swe = {
+		picture = russia_sweden
+		potential = {
+			exists = yes
+			primary_culture = russian
+			has_country_flag = control_the_swedish_riksdag
+			SWE = { centralization = legislative_parliment }
+		}
+		allow = {
+			money = 500000
+			NOT = { has_country_modifier = russian_agenda }
+		}
+		effect = {
+			money = -500000
+			add_country_modifier = {
+				name = russian_agenda
+				duration = 730
+			}
+			SWE = { country_event = 1721017 }
+		}
+	}
+	
 	consolidate_central_asia = {
 		picture = central_asia
 		potential = {

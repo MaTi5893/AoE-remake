@@ -149,33 +149,17 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Invest in bribes"
-		diplomatic_influence = {
-			who = PLC
-			value = 5
-		}
-		treasury = -250000
-		set_country_flag = plc_bribes
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		name = "We don't need that to control them"
-		RUS = {
+		name = "A worrying prescedent"
+		FROM = {
 			diplomatic_influence = {
 				who = PLC
-				value = -5
+				value = 100
 			}
 		}
-		RUS = {
-			relation = {
-				who = PLC
-				value = -5
-			}
-		}
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 100 }
 	}
 }
+
 country_event = {
 	id = 1573031
 	title = "Pact of the 3 Black Eagles"
@@ -192,7 +176,6 @@ country_event = {
 			is_greater_power = yes
 		}
 		year = 1730
-		NOT = { year = 1789 }
 	}
 	
 	option = {
@@ -1141,7 +1124,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = 170033
+	id = 170034
 	title = "Augustus asks for intervention"
 	desc = "EVTDESC170033"
 	picture = "peter_the_sexy"

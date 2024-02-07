@@ -267,6 +267,7 @@ country_event = {
 		exists = yes
 		trade_unions = all_trade_unions
 		NOT = { has_country_flag = minister_elect_evt_1 }
+		NOT = { has_country_flag = permanent_minister }
 	}
 	mean_time_to_happen = {
 		months = 60
@@ -1581,6 +1582,7 @@ country_event = {
 		exists = yes
 		trade_unions = all_trade_unions
 		has_country_flag = minister_elect_evt_1
+		NOT = { has_country_flag = permanent_minister }
 	}
 	mean_time_to_happen = {
 		months = 60
