@@ -94,20 +94,9 @@ political_decisions = {
 	
 		effect = {
 			994 = {
-				life_rating = 5
 				change_province_name = "St.Petersburg"
 			}
 			country_event = 1700251
-			random_owned = {
-				limit = {
-					owner = {
-						has_country_modifier = peter_the_great
-					}
-				}
-				owner = {
-					tech_school = pogonya_za_zapadom
-				}
-			}
 			prestige = 5
 			set_country_flag = begun_construction_sp
 		}
@@ -184,7 +173,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0		
-				NOT = { year = 1701 }
+				NOT = { war_exhaustion = 1 }
 			}
 		}
 	}
@@ -443,9 +432,13 @@ political_decisions = {
 			1044 = { secede_province = THIS }
 			1996 = { secede_province = THIS }
 			2611 = { secede_province = THIS }
+			1071 = { secede_province = THIS }
+			1050 = { secede_province = THIS }
+			2041 = { secede_province = THIS }
+			2681 = { secede_province = THIS }
 		}
 	}
-	
+
 	enact_nakaz = {
 		picture = nakaz
 		potential = {
@@ -579,11 +572,18 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	##########################
+	###Catherine The Great ###
+	##########################
+	
 	catharine_the_greats_reforms = {
 		picture = catherine_the_great
 		potential = {
 			tag = RUS
+			OR = {
 			has_country_modifier = catharine_the_great
+			NOT = { year = 1770 }
+			}
 			NOT = { has_country_flag = catharine_the_great_reforms }
 		}
 		allow = {

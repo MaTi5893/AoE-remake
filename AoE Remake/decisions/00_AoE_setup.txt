@@ -1222,8 +1222,13 @@ political_decisions = {
 		}
 		effect = {
 			TOR = {
+				war_exhaustion = 10
 				add_country_modifier = {
 					name = streltsi_rebellion
+					duration = 7300
+				}
+				add_country_modifier = {
+					name = total_serfdom
 					duration = 7300
 				}
 				country_event = 170000
@@ -1277,9 +1282,6 @@ political_decisions = {
 	tur_setup = {
 		potential = {
 			tag = TUR
-			NOT = {
-				has_country_modifier = janisseries_influence
-			}
 			always = no
 		}
 		allow = {
@@ -1302,6 +1304,9 @@ political_decisions = {
 					}
 					reduce_pop = 1.66
 				}
+			}
+			TUR = {
+				war_exhaustion = 33
 			}
 		}
 	}

@@ -19,14 +19,6 @@ folders = {
         naval_leadership
     }
 
-    commerce_tech = {
-        financial_institutions
-        monetary_system
-        economic_thought_and_critique
-        market_functionality
-        tech_organization
-    }
-
     culture_tech = {
         aesthetics
         philosophy
@@ -34,13 +26,21 @@ folders = {
         political_thought
         psychology
     }
+	
+	commerce_tech = {
+		financial_institutions
+        monetary_system
+		tech_power
+		metallurgy
+		chemistry_and_electricity
+    }
 
     industry_tech = {
-        tech_power
-        mechanization
-        metallurgy
-        tech_infrastructure
-        chemistry_and_electricity
+		market_functionality
+		economic_thought_and_critique
+		mechanization
+        tech_organization
+		tech_infrastructure
     }
 
 
@@ -158,6 +158,13 @@ schools ={
         navy_tech_research_bonus = -0.3
         unciv_economic_modifier = -0.05
         unciv_military_modifier = -0.15
+    }
+	
+	russian_tech_school = {
+        commerce_tech_research_bonus = -0.1
+        culture_tech_research_bonus = -0.15
+        industry_tech_research_bonus = -0.15
+        navy_tech_research_bonus = -0.05
     }
 
     pogonya_za_zapadom = {

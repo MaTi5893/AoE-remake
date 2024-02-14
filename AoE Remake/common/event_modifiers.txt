@@ -4368,7 +4368,6 @@ table_of_ranks = {
 	icon = 15
 }
 peter_the_great = {
-	navy_tech_research_bonus = 0.1
 	research_points = 0.25
 	icon = 19
 }
@@ -4388,23 +4387,13 @@ nakaz = {
     tax_efficiency = 0.05
     icon = 5
 }
-petes_conscription = {
-    mobilisation_economy_impact = -0.15
-    supply_consumption = -0.15
-    mobilisation_size = 0.01
-    min_military_spending = 0.1
-    icon = 15
-}
-russian_vaccination = {
-    global_population_growth = 0.002
-    icon = 17
+total_serfdom = {
+    mobilisation_economy_impact = 0.15
+    mobilisation_size = 0.02
+    icon = 16
 }
 kamchatka_wars = {
     pop_militancy_modifier = 0.05
-    assimilation_rate = 0.3
-    local_factory_throughput = -0.8
-    immigrant_attract = 0.1
-    immigrant_push = 0.2
     icon = 18
 }
 ####Austria stuff####

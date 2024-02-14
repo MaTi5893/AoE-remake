@@ -1,36 +1,36 @@
 #Sphere of Influence
 
 #Europe
-MON = {
-	value = 25
-	level = 3
-	influence_value = 0
-}
 
 PLC = {
 	value = 100
 	level = 4
 	influence_value = 4
+	military_access = yes
 }
 TRK = {
 	value = 25
 	level = 5
 	influence_value = 5
+	military_access = yes
 }
 KMK = {
 	value = 25
 	level = 5
 	influence_value = 5
+	military_access = yes
 }
 DON = {
 	value = 25
 	level = 5
 	influence_value = 5
+	military_access = yes
 }
 ZZH = {
 	value = 25
 	level = 5
 	influence_value = 5
+	military_access = yes
 }
 HET = {
 	value = 25
@@ -50,11 +50,6 @@ MOL = {
 	level = 4
 	influence_value = 0
 }
-WAL = {
-	value = 45
-	level = 3
-	influence_value = 0
-}
 
 #Asia
 MGL = {
@@ -65,11 +60,6 @@ PER = {
 	value = -50
 	level = 0
 	influence_value = 0
-}
-CIR = {
-	value = -200
-	level = 1
-	influence_value = 1
 }
 
 #Other GP's
