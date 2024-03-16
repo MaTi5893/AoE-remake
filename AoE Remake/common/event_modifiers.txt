@@ -4362,15 +4362,75 @@ improved_administration = {
     tax_efficiency = 0.05
     icon = 5
 }
-table_of_ranks = {
-	leadership_modifier = 0.2
-	supply_consumption = -0.05
-	icon = 15
-}
 peter_the_great = {
 	research_points = 0.25
 	icon = 19
 }
+menshikov = {
+	core_pop_militancy_modifier = -0.5
+	icon = 14
+}
+dolgorukov_influence_1 = {
+	research_points_modifier = -0.25
+	icon = 13
+}
+dolgorukov_influence_2 = {
+	research_points_modifier = -0.3
+	icon = 13
+}
+dolgorukov_influence_3 = {
+	research_points_modifier = -0.4
+	icon = 13
+}
+dolgorukov_army_1 = {
+	army_tech_research_bonus = -0.05
+	icon = 13
+}
+dolgorukov_army_2 = {
+	army_tech_research_bonus = -0.1
+	icon = 13
+}
+dolgorukov_army_3 = {
+	army_tech_research_bonus = -0.15
+	icon = 13
+}
+dolgorukov_industry_1 = {
+	industry_tech_research_bonus = -0.05
+	icon = 13
+}
+dolgorukov_industry_2 = {
+	industry_tech_research_bonus = -0.1
+	icon = 13
+}
+dolgorukov_industry_3 = {
+	industry_tech_research_bonus = -0.15
+	icon = 13
+}
+dolgorukov_culture_1 = {
+	culture_tech_research_bonus = -0.05
+	icon = 13
+}
+dolgorukov_culture_2 = {
+	culture_tech_research_bonus = -0.1
+	icon = 13
+}
+dolgorukov_culture_3 = {
+	culture_tech_research_bonus = -0.15
+	icon = 13
+}
+dolgorukov_navy_1 = {
+	navy_tech_research_bonus = -0.05
+	icon = 13
+}
+dolgorukov_navy_2 = {
+	navy_tech_research_bonus = -0.1
+	icon = 13
+}
+dolgorukov_navy_3 = {
+	navy_tech_research_bonus = -0.15
+	icon = 13
+}
+
 peter_iii= {
     ruling_party_support = -0.15
     prestige = -0.01
@@ -7131,3 +7191,9 @@ russian_agenda = {
 french_agenda = {
 	icon = 8
 }
+#KUR
+middling_colonial_endevour = {
+	tax_efficiency = -0.15
+	icon = 8
+}
+

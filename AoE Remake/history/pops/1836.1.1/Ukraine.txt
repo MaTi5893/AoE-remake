@@ -1148,8 +1148,8 @@
         size = 850
     }
 }
-#Rovne (460000/115000 POPS)
-956 = {
+#Rowne (1000/250 POPS)
+2671 = {
     clergymen = {
         culture = ukrainian
         religion = orthodox
@@ -1171,7 +1171,7 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 83775
+        size = 43775
     }
 
     aristocrats = {
@@ -1201,7 +1201,123 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 10375
+        size = 5375
+    }
+
+    clergymen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 125
+    }
+
+    artisans = {
+        culture = ashkenazi
+        religion = jewish
+        size = 2600
+    }
+
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 125
+    }
+
+    farmers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 10250
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 75
+    }
+
+    bureaucrats = {
+        culture = north_german
+        religion = catholic
+        size = 12
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 4125
+    }
+
+    labourers = {
+        culture = north_german
+        religion = catholic
+        size = 3264
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 250
+    }
+
+    aristocrats = {
+        culture = north_german
+        religion = catholic
+        size = 475
+    }
+}
+#Rovne (460000/115000 POPS)
+956 = {
+    clergymen = {
+        culture = ukrainian
+        religion = orthodox
+        size = 825
+    }
+
+    artisans = {
+        culture = ukrainian
+        religion = orthodox
+        size = 2400
+    }
+
+    soldiers = {
+        culture = cossack
+        religion = orthodox
+        size = 1100
+    }
+
+    farmers = {
+        culture = ukrainian
+        religion = orthodox
+        size = 43775
+    }
+
+    aristocrats = {
+        culture = polish
+        religion = catholic
+        size = 2600
+    }
+
+    clergymen = {
+        culture = polish
+        religion = catholic
+        size = 125
+    }
+
+    artisans = {
+        culture = polish
+        religion = catholic
+        size = 750
+    }
+
+    soldiers = {
+        culture = polish
+        religion = catholic
+        size = 150
+    }
+
+    farmers = {
+        culture = polish
+        religion = catholic
+        size = 5375
     }
 
     clergymen = {

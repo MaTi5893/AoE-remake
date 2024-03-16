@@ -1,0 +1,26 @@
+PLC = { value = 75 }
+RUS = { value = 50 }
+SWE = { value = -25 }
+
+navy = {
+    name = "Kurlandische Marine"
+    location = 357
+    ship = {
+        name= "1. Frigateflottille"
+        type = frigate
+    }
+
+    ship = {
+        name= "2. Frigateflottille"
+        type = frigate
+    }
+}
+leader = {
+    name = "Ferdynand Kettler"
+    picture = european_admiral_2
+    type = land
+    date = 1700.1.1
+    background = defence_minus_0.3
+    personality = attack_1.2
+    prestige = 0.1
+ }

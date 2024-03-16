@@ -684,6 +684,20 @@ political_decisions = {
                 has_country_flag = hre_member
                 has_country_flag = hre_emperor
             }
+			OR = {
+				AND = {
+					tag = KUR
+					has_country_flag = absolutist_reform
+				}
+				AND = {
+					tag = LAT
+					has_country_flag = absolutist_reform
+				}
+				AND = {
+					NOT = { tag = LAT }
+					NOT = { tag = KUR }
+				}
+			}
             exists = yes
         }
 

@@ -1,0 +1,90 @@
+political_decisions = {
+	
+	form_livonia = {
+		picture = form_livonia
+		potential = {
+			tag = KUR
+			NOT = { exists = LAT }
+		}
+		allow = {
+			owns = 354
+		}
+		effect = {
+			all_core = {
+				add_core = LAT
+				remove_core = KUR
+			}
+			change_tag = LAT
+			prestige = 20
+		}
+	}
+	
+	kurland_succession = {
+		picture = courland
+		potential = {
+			tag = KUR
+			NOT = { has_country_flag = kurland_succession }
+		}
+		allow = {
+			part_of_sphere = yes
+		}
+		effect = {
+			overlord = {
+				release_vassal = KUR
+			}
+			sphere_owner = {
+				country_event = 169800
+			}
+			set_country_flag = kurland_succession
+		}
+	}
+	
+	revive_courlandish_colonization = {
+		picture = dreams_of_empire
+		potential = {
+			NOT = { has_country_flag = revived_courlandish_colonization }
+			OR = { tag = KUR tag = LAT }
+		}
+		allow = {
+			is_vassal = no
+			money = 200000
+			total_amount_of_ships = 20
+		}
+		effect = {
+			set_country_flag = revived_courlandish_colonization
+			country_event = 169801
+			political_reform = yes_slavery
+		}
+	}
+	
+	estland_model = {
+		picture = nobles
+		potential = {
+		exists = yes
+			OR = { tag = KUR tag = LAT }
+			NOT = { accepted_culture = estonian }
+		}
+		allow = {
+			is_vassal = no
+            OR = {
+                AND = {
+                    upper_house = {
+                        ideology = socialist
+                        value = 0.3
+                    }
+                    average_consciousness = 3
+                }
+                AND = {
+                    ruling_party_ideology = socialist
+                    average_consciousness = 4
+                }
+            }
+		}
+		effect = {
+			political_reform = abolished #serfdom
+			add_accepted_culture = estonian
+			years_of_research = 1
+		}
+	}
+	
+}

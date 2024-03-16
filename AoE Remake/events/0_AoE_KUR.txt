@@ -1,0 +1,97 @@
+country_event = {
+	id = 169800
+	title = "The Kurland Succession of $YEAR$"
+	desc = "EVTDESC170031" #old event
+	picture = "courland"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Prepare an invasion!"
+		diplomatic_influence = {
+			who = KUR
+			value = -400
+		}
+		casus_belli = {
+			target = KUR
+			type = conquest
+			months = 12
+		}
+		badboy = 4
+	}
+	
+	option = {
+		name = "Leave them be."
+		prestige = 5
+		badboy = -1
+		relation = {
+			who = KUR
+			value = 50
+		}
+	}
+}
+country_event = {
+	id = 169801
+	title = "A New Expedition!"
+	desc = "EVTDESC169801"
+	picture = "new_world"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We shall try and meddle in West Africa"
+		1914 = { secede_province = THIS }
+		treasury = -150000
+		add_country_modifier = {
+			name = middling_colonial_endevour
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = "The Congo has great potential"
+		2000 = { secede_province = THIS }
+		treasury = -100000
+		add_country_modifier = {
+			name = middling_colonial_endevour
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = "Only India can make us truly prosperous"
+		2128 = { secede_province = THIS }
+		treasury = -200000
+		add_country_modifier = {
+			name = middling_colonial_endevour
+			duration = 3650
+		}
+	}
+}
+country_event = {
+	id = 169802
+	title = "Our colony flurishes!"
+	desc = "EVTDESC169802"
+	picture = "new_world"
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = revived_courlandish_colonization
+		NOT = { has_country_modifier = middling_colonial_endevour }
+	}
+	
+	option = {
+		name = "Finally!"
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1914
+					province_id = 2000
+					province_id - 2128
+				}
+			}
+			add_province_modifier = {
+				name = recently_built_city
+				duration = 1825
+			}
+		}
+	}
+}

@@ -1,12 +1,12 @@
 country_event = {
 	id = 170000
-	title = "The Grand Embassy"
+	title = "Fruits Of The Grand Embassy"
 	desc = "EVTDESC170000"
 	picture = peter_the_great
 	is_triggered_only = yes
 	
 	option = {
-		name = "It's time to reform this backwards state"
+		name = "Intresting."
 		add_country_modifier = {
 			name = peter_the_great
 			duration = -1
@@ -88,44 +88,14 @@ country_event = {
 }
 #coup d'etat#
 country_event = {
-	id = 1700004
-	title = "Possible coup d'etat?"
-	desc = "EVTDESC1700004"
-	picture = palace_rus
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		has_country_modifier = peter_iii
-		NOT = { year = 1789 }
-	}
-	mean_time_to_happen = {
-		months = 7
-	}
-	
-	option = {
-		name = "It's nothing..."
-		set_country_flag = ignore_coup
-	}
-	
-	option = {
-		name = "Bring Cathrine to me."
-		set_country_flag = cathrine_coup
-	}
-}
-country_event = {
 	id = 1700005
 	title = "Cathrine's coup d'etat "
 	desc = "EVTDESC1700005"
 	major = yes
-	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		tag = RUS
-		OR = {
-			has_country_flag = ignore_coup
-			has_country_flag = cathrine_coup
-		}
 		NOT = { year = 1789 }
 	}
 	mean_time_to_happen = {
@@ -149,7 +119,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "A worrying prescedent"
+		name = "A worrying prescedent."
 		FROM = {
 			diplomatic_influence = {
 				who = PLC
@@ -165,19 +135,7 @@ country_event = {
 	title = "Pact of the 3 Black Eagles"
 	desc = "EVTDESC157303"
 	picture = glos
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		PLC = {
-			government = elective_monarchy_oligarchy
-		}
-		RUS = {
-			is_greater_power = yes
-		}
-		year = 1730
-	}
-	
+	is_triggered_only = yes
 	option = {
 		name = "They must never rise to a great power status again"
 		AUS = {
@@ -200,67 +158,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Agree"
+		name = "Agreed!"
 		set_country_flag = black_eagle_pact
-		FROM = {
-			country_event = 157304
-		}
-		prestige = 5
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 10
-				relation = {
-					who = RUS
-					value = 25
-				}
-			}
-			modifier = {
-				factor = 15
-				NOT = {
-					relation = {
-						who = PLC
-						value = 0
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "We would never do such a thing!"
-		relation = {
-			who = RUS
-			value = -50
-		}
-		prestige = -5
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 20
-				alliance_with = PLC
-			}
-			modifier = {
-				factor = 9
-				NOT = {
-					relation = {
-						who = RUS
-						value = 25
-					}
-				}
-			}
-		}
-	}
-}
-country_event = {
-	id = 157304
-	title = "$FROMCOUNTRY$ agrees!"
-	desc = "$FROMCOUNTRY$ Agreed to our proposal"
-	picture = glos
-	is_triggered_only = yes
-	
-	option = {
-		name = "Great!"
 		prestige = 5
 	}
 }
@@ -273,10 +172,9 @@ country_event = {
 	
 	trigger = {
 		tag = RUS
-		#has_global_flag = great_northern_war
-		war_exhaustion = 10
+		war_exhaustion = 15
 		war_with = SWE
-		NOT = { year = 1789 }
+		NOT = { year = 1720 }
 	}
 	
 	mean_time_to_happen = {
@@ -285,7 +183,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPT170014"
-		set_country_flag = russian_bad_times
 		any_pop = {
 			limit = {
 				type = farmers
@@ -303,35 +200,17 @@ country_event = {
 	title = "EVTNAME170015"
 	desc = "EVTDESC170015"
 	picture = cossacks
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		has_country_flag = russian_bad_times
-		DON = {
-			exists = yes
-			vassal_of = RUS
-		}
-	}
-	immediate = {
-		clr_country_flag = russian_bad_times
-	}
-	
+	is_triggered_only = yes
+
 	mean_time_to_happen = {
 		months = 1
 	}
 	
 	option = {
 		name = "EVTOPT170015"
-		set_country_flag = don_rebellion
-		release_vassal = DON
-		DON = {
-			country_event = 170016
-		}
 		war = {
 			target = DON
-			attacker_goal = { casus_belli = make_puppet }
+			attacker_goal = { casus_belli = annex_core_country }
 			defender_goal = { casus_belli = status_quo }
 		}
 		ai_chance = {
@@ -374,48 +253,13 @@ country_event = {
 		name = "Claim Some Qing Lands"
 		RUS_1469 = { add_core = THIS }
 		RUS_1079 = { add_core = THIS }
-		1469 = {
-			add_core = RUS
+		prestige = 5
+		casus_belli = {
+			target = QNG
+			type = demand_concession
+			months = 12
 		}
-		1081 = {
-			add_core = RUS
-		}
-		2697 = {
-			add_core = RUS
-		}
-		add_core = 2698
-		badboy = 5
-		relation = {
-			who = QNG
-			value = -100
-		}
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 5
-				QNG = {
-					war_exhaustion = 50
-				}
-			}
-		}
-	}
-	option = {
-		name = "Add in Manchuria as well!"
-		RUS_1469 = { add_core = THIS }
-		RUS_1079 = { add_core = THIS }
-		1081 = {
-			add_core = RUS
-		}
-		2697 = {
-			add_core = RUS
-		}
-		CHI_1082 = {
-			add_core = RUS
-		}
-		CHI_1553 = {
-			add_core = RUS
-		}
-		badboy = 15
+		badboy = 2
 		relation = {
 			who = QNG
 			value = -100
@@ -499,155 +343,6 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-	}
-}
-
-province_event = {
-	id = 170024
-	title = "EVTNAME170024"
-	desc = "EVTDESC170024"
-	picture = siberian_attack
-	
-	trigger = {
-		
-		1074 = {
-			owner = {
-				primary_culture = russian
-				has_country_flag = kamchatka_war
-				any_owned_province = {
-					has_province_modifier = kamchatka_wars
-				}
-			}
-		}
-		owner = {
-			tag = RUS
-			has_country_flag = kamchatka_war
-		}
-		any_neighbor_province = {
-			has_province_modifier = kamchatka_wars
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			average_militancy = 7
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 8
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 9
-		}
-		modifier = {
-			factor = 0.8
-			owner = { revolt_percentage = 0.20 }
-		}
-		modifier = {
-			factor = 0.7
-			owner = { revolt_percentage = 0.30 }
-		}
-		modifier = {
-			factor = 0.6
-			owner = { revolt_percentage = 0.40 }
-		}
-	}
-	
-	option = {
-		name = "EVT170024OPT1"
-			any_pop = {
-				limit = {
-					NOT = {
-						has_pop_religion = orthodox
-					}
-				}
-				militancy = 9
-				reduce_pop = 0.85
-			}
-			any_pop = {
-				limit = {
-					has_pop_religion = orthodox
-				}
-				consciousness = 1
-				reduce_pop = 0.95
-			}
-			random_neighbor_province = {
-				limit = {
-					owned_by = THIS
-					any_neighbor_province = {
-						has_country_modifier = kamchatka_wars
-					}
-				}
-				add_province_modifier = {
-					name = kamchatka_wars 
-					duration = 365
-				}
-			}
-		ai_chance = {
-			factor = 5
-		}
-	}
-	option = {
-		name = "EVT170024OPT2"
-		owner = {
-			prestige = -1
-			war_exhaustion = 1
-		}
-			any_pop = {
-				limit = {
-					NOT = {
-						has_pop_religion = orthodox
-					}
-				}
-				militancy = -5
-				reduce_pop = 0.95
-			}
-			any_pop = {
-				limit = {
-					has_pop_religion = orthodox
-				}
-				consciousness = 1
-				reduce_pop = 0.85
-			}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-country_event = {
-	id = 170033
-	title = "EVTNAME170025"
-	desc = "EVTDESC170025"
-	picture = kamchatka_wars
-	fire_only_once = yes
-	
-	trigger = {
-		primary_culture = russian
-		has_country_flag = kamchatka_war
-		OR = {
-			all_core = {
-				NOT = {	has_province_modifier = kamchatka_wars }
-			}
-			year = 1732
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	option = {
-		name = "nice"
-		clr_country_flag = kamchatka_war
-		any_owned = {
-			remove_province_modifier = kamchatka_wars
-		}
-		prestige = 1
-		war_exhaustion = -5
 	}
 }
 ######Construction of St. Petersburg ######
@@ -825,7 +520,7 @@ country_event = {
 }
 country_event = {
 	id = 170028
-	title = "Chasing the Sunset"
+	title = "Creation Of The Baltic Navy"
 	desc = "EVTDESC170028"
 	picture = "peter_the_sexy"
 	
@@ -1015,66 +710,6 @@ country_event = {
 	}
 }
 country_event = {
-	id = 170031
-	title = "The Kurland Succession of 1726"
-	desc = "EVTDESC170031"
-	picture = "courland"
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		exists = KUR
-		neighbour = KUR
-		year = 1726
-		NOT = { year = 1789 }
-	}
-	
-	option = {
-		name = "Prepare to grab Kurland"
-		prestige = 5
-		relation = {
-			who = PLC
-			value = -100
-		}
-		relation = {
-			who = KUR
-			value = -100
-		}
-		diplomatic_influence = {
-			who = PLC
-			value = -200
-		}
-		KUR = {
-			all_core = {
-				add_core = THIS
-			}
-		}
-		casus_belli = {
-			type = conquest
-			target = KUR
-			months = 12
-		}
-		casus_belli = {
-			type = humiliate
-			target = PLC
-			months = 12
-		}
-	}
-	
-	option = {
-		name = "Ignore this petty matter"
-		prestige = -5
-		relation = {
-			who = PLC
-			value = 100
-		}
-		relation = {
-			who = KUR
-			value = 100
-		}
-	}
-}
-country_event = {
 	id = 170032
 	title = "Persian Campaign of $YEAR$"
 	desc = "EVTDESC170032"
@@ -1083,8 +718,6 @@ country_event = {
 	
 	trigger = {
 		tag = RUS
-		has_country_modifier = peter_the_great
-		exists = PER
 		neighbour = PER
 		year = 1722
 		NOT = { year = 1789 }
@@ -1094,7 +727,7 @@ country_event = {
 		name = "Russia MUST expand!"
 		casus_belli = {
 			target = PER
-			type = acquire_state
+			type = demand_concession
 			months = 12
 		}
 		badboy = 2.2
@@ -1136,5 +769,168 @@ country_event = {
 	option = {
 		name = "Russia has other matters to attend to."
 		prestige = -5
+	}
+}
+country_event = {
+	id = 170035
+	title = "The Petrine Reforms"
+	desc = "EVTDESC170035"
+	picture = "peter_the_sexy"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Begin with The Russian Military"
+		remove_country_modifier = streltsi_rebellion
+		activate_technology = naval_design_bureaus
+		activate_technology = alphabetic_flag_signaling
+		activate_technology = the_command_principle
+		activate_technology = battleship_column_doctrine
+		activate_technology = army_command_principle
+	}
+	
+	option = {
+		name = "Restructure The State first"
+		political_reform = admin_parliment
+		add_country_modifier = {
+			name = improved_administration
+			duration = -1
+		}
+		years_of_research = 1
+	}
+}
+
+############################
+####Dologrukov Influence####
+############################
+
+country_event = {
+	id = 170036
+	title = "Palace Revolutions"
+	desc = "EVTDESC170036"
+	picture = "peter_the_sexy"
+	is_triggered_only = yes
+	
+	option = {
+		name = "The court politics can get confusing."
+		random_owned = {
+			limit = {
+				has_country_modifier = dolgorukov_influence_2
+			}
+			owner = {
+				add_country_modifier = {
+					name = dolgorukov_influence_3
+					duration = -1
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				has_country_modifier = dolgorukov_influence_1
+			}
+			owner = {
+				add_country_modifier = {
+					name = dolgorukov_influence_2
+					duration = -1
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 170037
+	title = "Dolgorukov Opposition"
+	desc = "EVTDESC170037"
+	picture = "dolgorukovs"
+	
+	trigger = {
+		OR = {
+			has_country_modifier = dolgorukov_influence_1
+			has_country_modifier = dolgorukov_influence_2
+			has_country_modifier = dolgorukov_influence_3
+		}
+		NOT = { has_country_modifier = dolgorukov_army_1 }
+		NOT = { has_country_modifier = dolgorukov_army_2 }
+		NOT = { has_country_modifier = dolgorukov_army_3 }
+		NOT = { has_country_modifier = dolgorukov_industry_1 }
+		NOT = { has_country_modifier = dolgorukov_industry_2 }
+		NOT = { has_country_modifier = dolgorukov_industry_3 }
+		NOT = { has_country_modifier = dolgorukov_culture_1 }
+		NOT = { has_country_modifier = dolgorukov_culture_2 }
+		NOT = { has_country_modifier = dolgorukov_culture_3 }
+		NOT = { has_country_modifier = dolgorukov_navy_1 }
+		NOT = { has_country_modifier = dolgorukov_navy_2 }
+		NOT = { has_country_modifier = dolgorukov_navy_3 }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 3
+			war = no
+		}
+		modifier = {
+			factor = 3
+			safety_regulations = good_safety
+		}
+		modifier = {
+			factor = 2
+			safety_regulations = acceptable_safety
+		}
+		modifier = {
+			factor = 1.5
+			safety_regulations = low_safety
+		}
+		modifier = {
+			factor = 0.66
+			safety_regulations = no_safety
+		}
+	}
+	option = {
+		name = "They're a plauge to this nation."
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = dolgorukov_influence_1
+				}
+			}
+			owner = {
+				random_list = {
+					25 = { add_country_modifier = { name = dolgorukov_army_1 duration = 730 } } 
+					25 = { add_country_modifier = { name = dolgorukov_industry_1 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_culture_1 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_navy_1 duration = 730 } }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = dolgorukov_influence_2
+				}
+			}
+			owner = {
+				random_list = {
+					25 = { add_country_modifier = { name = dolgorukov_army_2 duration = 730 } } 
+					25 = { add_country_modifier = { name = dolgorukov_industry_2 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_culture_2 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_navy_2 duration = 730 } }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = dolgorukov_influence_3
+				}
+			}
+			owner = {
+				random_list = {
+					25 = { add_country_modifier = { name = dolgorukov_army_3 duration = 730 } } 
+					25 = { add_country_modifier = { name = dolgorukov_industry_3 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_culture_3 duration = 730 } }
+					25 = { add_country_modifier = { name = dolgorukov_navy_3 duration = 730 } }
+				}
+			}
+		}
 	}
 }

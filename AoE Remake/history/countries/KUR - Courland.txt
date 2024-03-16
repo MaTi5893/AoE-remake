@@ -2,9 +2,9 @@ capital = 357
 primary_culture = north_german
 culture = latvian
 religion = protestant
-government = absolute_monarchy
+government = prussian_constitutionalism
 plurality = 0.2
-nationalvalue = pm_no_minister
+nationalvalue = pm_nobleman
 literacy = 0.6
 civilized = yes
 
@@ -12,12 +12,12 @@ civilized = yes
 # Political reforms
 slavery = no_slavery
 upper_house_composition = party_appointed
-vote_franschise = none_voting
+vote_franschise = landed_voting
 public_meetings = yes_meeting
 press_rights = state_press
-trade_unions = no_trade_unions
+trade_unions = state_controlled
 voting_system = first_past_the_post
-political_parties = underground_parties
+political_parties = harassment
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -35,20 +35,24 @@ penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
 
-centralization = unitary
-colonial_policy = no_colonies
-
+centralization = legislative_parliment
 set_country_flag = protestant_country
 
-ruling_party = "Nobility Faction"
+ruling_party = "Duke's Council"
 upper_house = {
     fascist = 0
-    liberal = 25
+    liberal = 30
     conservative = 60
     reactionary = 10
-    anarcho_liberal = 5
+    anarcho_liberal = 0
     socialist = 0
     communist = 0
+}
+oob = "KUR_oob.txt"
+
+govt_flag = {
+    government = absolute_monarchy
+    flag = colonial_company
 }
 
 #tech

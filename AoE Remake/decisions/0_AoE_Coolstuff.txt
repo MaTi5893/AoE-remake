@@ -183,47 +183,47 @@ political_decisions = {
         }
     }
 
-    teutonic_prusa = {
-        picture = west_prussia
-        potential = {
-            tag = DPR
-            NOT = {
-                government = theocracy
-            }
-            NOT = {
-                has_country_flag = teutonic_order_moment
-            }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-            OR = {
-                is_vassal = no
-                vassal_of = PAP
-                vassal_of = UBD
-            }
-            NOT = {
-                in_sphere = DNN
-                in_sphere = RUS
-                in_sphere = SWE
-                in_sphere = TUR
-                in_sphere = ENG
-            }
-        }
-        effect = {
-            PRU_690 = {
-                add_core = THIS
-            }
-            government = theocracy
-            religion = catholic
-            set_country_flag = teutonic_order_moment
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+    #teutonic_prusa = {
+    #    picture = west_prussia
+    #    potential = {
+    #        tag = DPR
+    #        NOT = {
+    #            government = theocracy
+    #        }
+    #        NOT = {
+    #            has_country_flag = teutonic_order_moment
+    #        }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        all_core = {
+    #            owned_by = THIS
+    #        }
+    #        OR = {
+    #            is_vassal = no
+    #            vassal_of = PAP
+    #            vassal_of = UBD
+    #        }
+    #        NOT = {
+    #            in_sphere = DNN
+    #            in_sphere = RUS
+    #            in_sphere = SWE
+    #            in_sphere = TUR
+    #            in_sphere = ENG
+    #        }
+    #    }
+    #    effect = {
+    #        PRU_690 = {
+    #            add_core = THIS
+    #        }
+    #        government = theocracy
+    #        religion = catholic
+    #        set_country_flag = teutonic_order_moment
+    #    }
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
 
     acquire_liv = {
         picture = baltic
@@ -295,55 +295,55 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    form_livonia = {
-        picture = baltic
-        potential = {
-            OR = {
-                tag = KUR
-                tag = UBD
-            }
-            NOT = {
-                government = theocracy
-            }
-            NOT = {
-                has_country_flag = livonian_order_moment
-            }
-            exists = yes
-        }
-        allow = {
-            all_core = {
-                owned_by = THIS
-            }
-            OR = {
-                is_vassal = no
-                vassal_of = PAP
-                vassal_of = DPR
-            }
-            NOT = {
-                in_sphere = DNN
-                in_sphere = RUS
-                in_sphere = SWE
-                in_sphere = TUR
-                in_sphere = ENG
-            }
-        }
-        effect = {
-            change_tag_no_core_switch = UBD
-            government = theocracy
-            RUS_354 = {
-                add_core = THIS
-            }
-            RUS_349 = {
-                add_core = THIS
-            }
-            add_accepted_culture = estonian
-            religion = catholic
-            set_country_flag = livonian_order_moment
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+    #form_livonia = {
+    #    picture = baltic
+    #    potential = {
+    #        OR = {
+    #            tag = KUR
+    #            tag = UBD
+    #        }
+    #        NOT = {
+    #            government = theocracy
+    #        }
+    #        NOT = {
+    #            has_country_flag = livonian_order_moment
+    #        }
+    #        exists = yes
+    #    }
+    #    allow = {
+    #        all_core = {
+    #            owned_by = THIS
+    #        }
+    #        OR = {
+    #            is_vassal = no
+    #            vassal_of = PAP
+    #            vassal_of = DPR
+    #        }
+    #        NOT = {
+    #            in_sphere = DNN
+    #            in_sphere = RUS
+    #            in_sphere = SWE
+    #            in_sphere = TUR
+    #            in_sphere = ENG
+    #        }
+    #    }
+    #    effect = {
+    #        change_tag_no_core_switch = UBD
+    #        government = theocracy
+    #        RUS_354 = {
+    #            add_core = THIS
+    #        }
+    #        RUS_349 = {
+    #            add_core = THIS
+    #        }
+    #        add_accepted_culture = estonian
+    #        religion = catholic
+    #        set_country_flag = livonian_order_moment
+    #    }
+    #    ai_will_do = {
+    #        factor = 1
+    #    }
+    #}
 
     grand_duchy_of_lithuania = {
         picture = greater_ukraine

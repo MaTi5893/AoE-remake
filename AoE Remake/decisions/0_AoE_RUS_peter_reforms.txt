@@ -45,6 +45,10 @@ political_decisions = {
 			factor = 1
         }
     }
+	
+	#######################################
+	###Peter The Great, Anne & Elizabeth###
+	#######################################
 
 	peter_the_greats_reforms = {
 		picture = peter_the_great
@@ -60,21 +64,53 @@ political_decisions = {
 			ruling_party_ideology = reactionary
 		}
 		effect = {
-			add_country_modifier = {
-				name = improved_administration
-				duration = -1
-			}
-			years_of_research = 1
-			political_reform = admin_parliment
-			remove_country_modifier = streltsi_rebellion
-			activate_technology = naval_design_bureaus
-			activate_technology = alphabetic_flag_signaling
-			activate_technology = the_command_principle
-			activate_technology = battleship_column_doctrine
-			activate_technology = army_command_principle
+			country_event = 170035
 			any_pop = {
 				militancy = 3
 			}
+		}
+	}
+	
+	enact_the_table_of_ranks = {
+		picture = table_of_ranks
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = enacted_the_table_of_ranks
+			}
+			exists = yes
+		}
+		allow = {
+			OR = {
+				AND = {
+					NOT = { safety_regulations = no_safety }
+					NOT = { safety_regulations = trinket_safety }
+				}
+				state_n_government = 1
+			}
+		}
+		effect = {
+			random_owned = {
+				limit = { owner = { pensions = acceptable_pensions has_country_flag = skill_and_merit_allowed } }
+				owner = { social_reform = good_pensions }
+			}
+			random_owned = {
+				limit = { owner = { pensions = low_pensions } }
+				owner = { social_reform = acceptable_pensions }
+			}
+			random_owned = {
+				limit = { owner = { pensions = trinket_pensions } }
+				owner = { social_reform = low_pensions }
+			}
+			random_owned = {
+				limit = { owner = { pensions = no_pensions } }
+				owner = { social_reform = trinket_pensions }
+			}
+			set_country_flag = enacted_the_table_of_ranks
+			set_country_flag = nepotism_allowed
+		}
+		ai_will_do = {					
+			factor = 1
 		}
 	}
 
@@ -104,6 +140,68 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	exile_menshikov = {
+		picture = menshikov
+		potential = {
+			has_country_modifier = menshikov
+		}
+		allow = {
+			OR = {
+				absolutism = yes_absolutism
+				NOT = {
+					upper_house = {
+						ideology = conservatvie
+						value = 0.45
+					}
+				}
+			}
+		}
+		effect = {
+			remove_country_modifier = menshikov
+			country_event = 
+			clr_country_flag = permanent_minister
+		}
+	}
+	
+	germanize_the_russian_court = {
+		picture = german_court
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = germanized_the_russian_court }
+		}
+		allow = {
+			ruling_party = czars_faction
+		}
+		effect = {
+			set_country_flag = germanized_the_russian_court
+			country_event = 170036
+			years_of_research = 0.5
+		}
+	}
+	
+	remove_dolgorukov_influnece = {
+		picture = elizabeth
+		potential = {
+			OR = {
+				has_country_modifier = dolgorukov_influence_1
+				has_country_modifier = dolgorukov_influence_2
+				has_country_modifier = dolgorukov_influence_3
+			}
+		}
+		allow = {
+			ruling_party = czars_faction
+		}
+		effect = {
+			remove_country_modifier = dolgorukov_influence_1
+			remove_country_modifier = dolgorukov_influence_2
+			remove_country_modifier = dolgorukov_influence_3
+		}
+	}
+	
+	###############
+	###Expansion###
+	###############
 	
 	claim_the_baltics = {
 		picture = baltic_russia
@@ -227,72 +325,106 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }	
 	}
-	enact_the_table_of_ranks = {
-		picture = table_of_ranks
+	
+	consolidate_central_asia = {
+		picture = fortress
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = consolidated_central_asia }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			
+		}
+		effect = {
+			set_country_flag = consolidated_central_asia
+			1043 = { secede_province = THIS }
+			1044 = { secede_province = THIS }
+			1996 = { secede_province = THIS }
+			2611 = { secede_province = THIS }
+			1071 = { secede_province = THIS }
+			1050 = { secede_province = THIS }
+			2041 = { secede_province = THIS }
+			2681 = { secede_province = THIS }
+		}
+	}
+	
+	revoke_cossack_rights = {
+		picture = cossacks
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = revoked_cossack_rights }
+		}
+		allow = {
+			health_care = health_care
+			tag = RUS
+		}
+		effect = {
+			set_country_flag = revoked_cossack_rights
+			create_vassal = HET
+			create_vassal = ZZH
+			create_vassal = DON
+			create_vassal = TRK
+			create_vassal = KMK
+		}
+	}
+	
+	claim_ruthenia = {
+		picture = ruthenia
 		potential = {
 			tag = RUS
-			NOT = {
-				has_country_flag = enacted_the_table_of_ranks
-			}
+			NOT = { has_country_flag = claimed_ruthenia }
 			exists = yes
 		}
 		allow = {
+			is_greater_power = yes
 			OR = {
 				AND = {
-					NOT = { safety_regulations = no_safety }
-					NOT = { safety_regulations = trinket_safety }
+					owns = 718
+					owns = 958
+					owns = 360
 				}
-				nationalism_n_imperialism = 1
+				AND = {
+					year = 1790
+					ai = yes
+				}
 			}
 		}
 		effect = {
+			set_country_flag = claimed_ruthenia
+			RUS_958 = { add_core = THIS }
+			RUS_707 = { add_core = THIS }
+			RUS_718 = { add_core = THIS }
+			RUS_947 = { add_core = THIS }
+			RUS_959 = { add_core = THIS }
 			random_owned = {
-				limit = {
-					owner = {
-						pensions = acceptable_pensions
-						has_country_flag = skill_and_merit_allowed
-					}
-				}
-				owner = {
-					social_reform = good_pensions
-				}
+				limit = { owner = { RUS_958 = { NOT = { owned_by = THIS } } } }
+				owner = { badboy = 2.5 }
 			}
 			random_owned = {
-				limit = {
-					owner = {
-						pensions = low_pensions
-					}
-				}
-				owner = {
-					social_reform = acceptable_pensions
-				}
+				limit = { owner = { RUS_707 = { NOT = { owned_by = THIS } } } }
+				owner = { badboy = 2.5 }
 			}
 			random_owned = {
-				limit = {
-					owner = {
-						pensions = trinket_pensions
-					}
-				}
-				owner = {
-					social_reform = low_pensions
-				}
+				limit = { owner = { RUS_718 = { NOT = { owned_by = THIS } } } }
+				owner = { badboy = 2.5 }
 			}
 			random_owned = {
-				limit = {
-					owner = {
-						pensions = no_pensions
-					}
-				}
-				owner = {
-					social_reform = trinket_pensions
-				}
+				limit = { owner = { RUS_947 = { NOT = { owned_by = THIS } } } }
+				owner = { badboy = 2.5 }
 			}
-			set_country_flag = enacted_the_table_of_ranks
+			random_owned = {
+				limit = { owner = { RUS_959 = { NOT = { owned_by = THIS } } } }
+				owner = { badboy = 2.5 }
+			}
 		}
-		ai_will_do = {					
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }	
 	}
+	#######################
+	###Foreign Influence###
+	#######################
 	
 	control_the_polish_parliment = {
 		picture = russia_poland
@@ -415,161 +547,75 @@ political_decisions = {
 		}
 	}
 	
-	consolidate_central_asia = {
-		picture = central_asia
+	treaty_of_lutsk = {
+		picture = russian_moldavia
 		potential = {
 			exists = yes
 			primary_culture = russian
-			NOT = { has_country_flag = consolidated_central_asia }
+			exists = MOL
+			war_with = TUR
+			NOT = { year = 1750 }
+			NOT = { has_country_flag = treaty_of_lutsk }
 		}
 		allow = {
-			nationalism_n_imperialism = 1
-			
+			MOL = { capital_scope = { controlled_by = THIS } }
 		}
 		effect = {
-			set_country_flag = consolidated_central_asia
-			1043 = { secede_province = THIS }
-			1044 = { secede_province = THIS }
-			1996 = { secede_province = THIS }
-			2611 = { secede_province = THIS }
-			1071 = { secede_province = THIS }
-			1050 = { secede_province = THIS }
-			2041 = { secede_province = THIS }
-			2681 = { secede_province = THIS }
+			create_vassal = MOL
+			diplomatic_influence = {
+				who = MOL
+				value = 400
+			}
+			TUR = {
+				diplomatic_influence = {
+					who = MOL
+					value = -400
+				}
+			}
+			set_country_flag = treaty_of_lutsk
 		}
 	}
-
-	enact_nakaz = {
-		picture = nakaz
+	
+	treaty_of_the_three_black_eagles = {
+		picture = three_black_eagles
 		potential = {
-			tag = RUS
-			NOT = {
-				has_country_flag = enacted_nakaz
-			}
 			exists = yes
+			primary_culture = russian
+			has_country_flag = control_the_polish_parliment
+			exists = PLC
+			NOT = { has_country_flag = three_black_eagles }
 		}
 		allow = {
-			has_country_modifier = catharine_the_great
+			PLC = { in_sphere = THIS }
 		}
 		effect = {
-			political_reform = party_appointed
-			political_reform = yes_absolutism
-			political_reform = admin_parliment
-			nationalvalue = pm_militarist
-			add_country_modifier = {
-				name = nakaz
-				duration = -1
-			}
-			set_country_flag = enacted_nakaz
-		}
-		ai_will_do = {					
-		factor = 1
+			country_event = 1573031
+			set_country_flag = three_black_eagles
 		}
 	}
-	claim_ruthenia = {
-		picture = ruthenia
+	
+	institute_cardinal_laws_plc = {
 		potential = {
-			tag = RUS
-			NOT = { has_country_flag = claimed_ruthenia }
-			NOT = { has_country_flag = perpetual_peace_PLC }
 			exists = yes
+			tag = RUS
+			has_country_flag = control_the_polish_parliment
+			exists = PLC
+			NOT = { has_global_flag = cardinal_laws_PLC }
+			PLC = { is_vassal = no }
+			mass_politics = 1
 		}
 		allow = {
-			is_greater_power = yes
-			OR = {
-				AND = {
-					owns = 718
-					owns = 958
-					owns = 360
-				}
-				AND = {
-					year = 1790
-					ai = yes
-				}
+			PLC = {
+				in_sphere = THIS
+				safety_regulations = no_safety
+				pensions = no_pensions
+				health_care = no_health_care
 			}
 		}
 		effect = {
-			set_country_flag = claimed_ruthenia
-			RUS_958 = { add_core = THIS }
-			RUS_707 = { add_core = THIS }
-			RUS_718 = { add_core = THIS }
-			RUS_947 = { add_core = THIS }
-			RUS_959 = { add_core = THIS }
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_958 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_707 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_718 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_947 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						RUS_959 = { NOT = { owned_by = THIS } }
-					}
-				}
-				owner = {
-					badboy = 2.5
-				}
-			}
+			set_global_flag = cardinal_laws_PLC
+			create_vassal = PLC
 		}
-		ai_will_do = { factor = 1 }	
-	}
-	conquer_east_prussia = {
-		picture = ducal_prussia
-		potential = {
-			tag = RUS
-			NOT = { has_country_flag = conquer_east_prussia }
-			exists = yes
-			owns = 695
-		}
-		allow = {
-			PRU_695 = { owned_by = THIS }
-		}
-		effect = {
-			set_country_flag = conquer_east_prussia
-			PRU_695 = {
-				add_core = RUS
-				add_province_modifier = {
-					name = population_resettlement
-					duration = 7300
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
 	}
 	
 	##########################
@@ -591,22 +637,6 @@ political_decisions = {
 			has_country_modifier = catharine_the_great
 		}
 		effect = {
-			random_owned = {
-				limit = {
-					owner = { HET = { exists = yes  in_sphere = THIS ai = yes } }
-				}
-				owner = {
-					inherit = HET
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { ZZH = { exists = yes  in_sphere = THIS ai = yes } }
-				}
-				owner = {
-					inherit = ZZH
-				}
-			}
 			years_of_research = 1
 			tech_school = pogonya_za_zapadom
 			set_country_flag = catharine_the_great_reforms
@@ -680,7 +710,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						TUR = { exists = yes ai = yes }
+						TUR = { exists = yes }
 						ai = yes
 					}
 				}
@@ -795,6 +825,42 @@ political_decisions = {
 		effect = {
 			release_vassal = FIN
 			prestige = 20
+		}
+	}
+	
+	create_congress_poland = {
+		picture = congress_poland
+		potential = {
+			tag = RUS
+			owns = 706
+			NOT = { 706 = { is_core = PLC } }
+			NOT = { 706 = { is_core = PLR } }
+			NOT = { exists = CPL }
+			NOT = { exists = POL }
+			NOT = { exists = PLC }
+			NOT = { exists = PLR }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			release_vassal = CPL
+			prestige = 20
+		}
+	}
+	
+	issue_of_serfdom = {
+		picture = serfdom
+		potential = {
+			primary_culture = russian
+			debt_law = serfdom
+			NOT = { has_country_flag = decided_serfodm }
+		}
+		allow = {
+		
+		}
+		effect = {
+			set_country_flag = decided_serfodm
 		}
 	}
 }

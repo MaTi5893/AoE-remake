@@ -150,21 +150,6 @@ vassal = {  #substate
 }
 
 
-#English North America
-
-substate = {  #substate
-	first = ENL
-	second = THC 
-	start_date = 1700.1.2
-	end_date = 1707.1.1
-}
-substate = {  #substate
-	first = GBR
-	second = THC 
-	start_date = 1707.1.1
-	end_date = 2000.1.1
-}
-
 vassal = {  #substate
 	first = PER
 	second = KAK
@@ -190,14 +175,6 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-
-#Portugese Brazil
-substate = {  #substate
-	first = POR
-	second = PBZ  
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
 
 #Saxo-polish union
 vassal = {  #substate
@@ -214,48 +191,6 @@ vassal = {  #substate
 	start_date = 1700.1.2
 	end_date = 1763.1.1
 }
-
-
-#Netherlands-Tidore Sultanate
-vassal = {
-	first = NET
-	second = MAL
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-#Netherlands-Yogyakarta/Surakarta Sultanate
-vassal = {
-	first = NET
-	second = JAV
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-#Netherlands-Siak Sultanate
-vassal = {
-	first = NET
-	second = SAK
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-#Netherlands-Siak Sultanate
-vassal = {
-	first = NET
-	second = DJA
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
-#Netherlands-Banjar Sultanate
-vassal = {
-	first = NET
-	second = KLM
-	start_date = 1836.1.1
-	end_date = 1936.1.1
-}
-
 ##Bornu - Baguirmi
 vassal = {
 	first = KBO
@@ -266,19 +201,11 @@ vassal = {
 
 # United Kingdom-Hanover
 vassal = {
-	first = ENL
+	first = ENG
 	second = HAN
 	start_date = 1814.10.1
 	end_date = 1837.1.1
 }
-
-# England-Scotland
-#substate = {  #substate
-#	first = ENL
-#	second = SCO
-#	start_date = 1699.1.12
-#	end_date = 2000.1.12
-#}
 
 # United Kingdom-Ionian Islands
 vassal = {
