@@ -1,9 +1,11 @@
-color = { 137 132 151 }
+color = {153 61 0 }
+democracy = { 137 132 151 }
+proletarian_dictatorship = { 137 132 151 }
 colonial_company = { 129  191  98 }
 graphical_culture = GenericEasternGC
 
 party = {
-    name = "Sich Rada"
+    name = "Cossack Elders"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
@@ -18,13 +20,13 @@ party = {
 }
 
 party = {
-    name = "Gentry Faction"
+    name = "Rada Generalna"
     start_date = 1600.1.1
     end_date = 1936.1.1
 
     ideology = liberal
 
-    estate_affiliation = no_affiliation
+    estate_affiliation = gentry_army
     economic_policy = interventionism
     trade_policy = protectionism
     religious_policy = pluralism
@@ -39,7 +41,7 @@ party = {
 
     ideology = reactionary
 
-    estate_affiliation = no_affiliation
+    estate_affiliation = nobility_church
     economic_policy = state_capitalism
     trade_policy = protectionism
     religious_policy = pluralism
@@ -48,22 +50,7 @@ party = {
 }
 
 party = {
-    name = "Nutcase Faction"
-    start_date = 1900.1.1
-    end_date = 2000.1.1
-
-    ideology = anarcho_liberal
-
-    estate_affiliation = absolutist
-    economic_policy = laissez_faire
-    trade_policy = free_trade
-    religious_policy = pro_atheism
-    citizenship_policy = full_citizenship
-    war_policy = pro_military
-}
-
-party = {
-    name = "Reformists"
+    name = "Left Rada"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
@@ -78,7 +65,7 @@ party = {
 }
 
 party = {
-    name = "Radical Faction"
+    name = "Cossack Republicans"
     start_date = 1600.1.1
     end_date = 2000.1.1
 
@@ -90,20 +77,6 @@ party = {
     war_policy = pro_military
 }
 
-party = {
-    name = "DON_fascist"
-    start_date = 1900.1.1
-    end_date = 2000.1.1
-
-    ideology = fascist
-
-    estate_affiliation = nobility_gentry
-    economic_policy = state_capitalism
-    trade_policy = protectionism
-    religious_policy = pluralism
-    citizenship_policy = residency
-    war_policy = jingoism
-}
 
 unit_names = {
     dreadnought = {

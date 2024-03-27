@@ -15,14 +15,6 @@ political_decisions = {
         }
 
         allow = {
-			OR = {
-				RUS = {
-					war = yes
-				}
-				TOR = {
-					war = yes
-				}
-			}
             OR = {
                 is_secondary_power = yes
                 any_greater_power = {
@@ -41,20 +33,11 @@ political_decisions = {
             }
             create_alliance = SWE
             set_country_flag = masepa_revolt
-            any_pop = {
-                limit = {
-                    type = soldiers
-                }
-                reduce_pop = 2
-            }
-            government = democracy
-            treasury = 300000
-            ammunition = 300
-            small_arms = 100
+            government = hms_government
 			random_owned = {
 				limit = {
 					owner = {
-						ai = no
+						ai = yes
 					}
 				}
 				owner = {
@@ -89,49 +72,36 @@ political_decisions = {
             }
         }
     }
-
-    fate_of_the_sich = {
-        picture = zapizzha
-
-        potential = {
-            tag = RUS
-            HET = {
-                has_country_flag = masepa_revolt
-                exists = yes
-            }
-            NOT = {
-                has_country_flag = fate_of_the_sich
-                has_country_flag = sich
-            }
-            exists = yes
-        }
-
-        allow = {
-            HET = {
-                vassal_of = RUS
-            }
-            ZZH = {
-                OR = {
-                    exists = no
-                    vassal_of = RUS
-                }
-            }
-        }
-
-        effect = {
-            country_event = 91241544
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+	
+	hetmanate_constitution = {
+		picture = cossack_state
+		potential = {
+			tag = HET
+			NOT = { has_country_flag = hetmanate_constitution }
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = hetmanate_constitution
+			prestige = 15
+			create_vassal = ZZH
+			relation = {
+				who = ZZH
+				value = 100
+			}
+			create_alliance = ZZH
+		}
+	}
 
     form_ruthenia = {
-        picture = cossak_state
+        picture = ruthenia
         potential = {
-            OR = { primary_culture = ukrainian primary_culture = cossack }
+            tag = HET
             NOT = { exists = RUT }
         }
         allow = {
+			exists = no
             HET = {
                 all_core = {
                     owned_by = THIS
@@ -152,18 +122,67 @@ political_decisions = {
             }
             add_accepted_culture = ukrainian
             change_tag = RUT
-            government = absolute_monarchy
         }
     }
+	
+	cross_into_the_right_bank = {
+		picture = the_right_bank
+		potential = {
+			tag = HET
+			NOT = { has_country_flag = hetmanate_constitution }
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = hetmanate_constitution
+			prestige = 15
+			secede_province = 954
+			secede_province = 959
+			secede_province = 960
+		}
+	}
+	
+	mission_to_the_tatar_khan = {
+		picture = tatar
+		potential = {
+			tag = HET
+			NOT = { has_country_flag = mission_to_the_tatar_khan }
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = mission_to_the_tatar_khan
+			prestige = 15
+			create_vassal = CRI
+			relation = {
+				who = CRI
+				value = 100
+			}
+			create_alliance = CRI
+		}
+	}
+	matter_of_uniate_church = {
+		picture = orthodoxy
+		potential = {
+			OR = { primary_culture = ukrainian primary_culture = cossack }
+			NOT = { has_country_flag = matter_of_uniate_church }
+		}
+		allow = {
+			owns = 2671
+		}
+		effect = {
+			set_country_flag = matter_of_uniate_church
+		}
+	}
+
     mazepa_culture = {
-        picture = masepa
+        picture = ukrainian_baroque
 
         potential = {
             tag = HET
             NOT = {
-                RUS = {
-                    has_country_flag = destroy_the_sich
-                }
                 has_country_flag = mazepa_culture
             }
             exists = yes
@@ -189,23 +208,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
-	become_hetmanate = {
-		picture = khmelnytsky_uprising
-		potential = {
-			tag = ZZH
-		}
-		allow = {
-			NOT = { exists = HET }
-			owns = 958
-		}
-		effect = {
-			all_core = {
-				add_core = HET
-				remove_core = THIS
-			}
-			change_tag = HET
-			prestige = 15
-		}
-	}
+	
 
 }

@@ -33,7 +33,7 @@ political_decisions = {
 				release_vassal = KUR
 			}
 			sphere_owner = {
-				country_event = 169800
+				country_event = 169600
 			}
 			set_country_flag = kurland_succession
 		}
@@ -52,7 +52,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = revived_courlandish_colonization
-			country_event = 169801
+			country_event = 169601
 			political_reform = yes_slavery
 		}
 	}

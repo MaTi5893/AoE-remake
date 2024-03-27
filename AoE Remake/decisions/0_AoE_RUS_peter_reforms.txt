@@ -70,7 +70,7 @@ political_decisions = {
 			}
 		}
 	}
-	
+
 	enact_the_table_of_ranks = {
 		picture = table_of_ranks
 		potential = {
@@ -351,7 +351,7 @@ political_decisions = {
 	}
 	
 	revoke_cossack_rights = {
-		picture = cossacks
+		picture = cossack_state
 		potential = {
 			exists = yes
 			primary_culture = russian

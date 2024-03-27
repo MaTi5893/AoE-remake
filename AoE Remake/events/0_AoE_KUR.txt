@@ -1,5 +1,5 @@
 country_event = {
-	id = 169800
+	id = 169600
 	title = "The Kurland Succession of $YEAR$"
 	desc = "EVTDESC170031" #old event
 	picture = "courland"
@@ -30,9 +30,9 @@ country_event = {
 	}
 }
 country_event = {
-	id = 169801
+	id = 169601
 	title = "A New Expedition!"
-	desc = "EVTDESC169801"
+	desc = "EVTDESC169601"
 	picture = "new_world"
 	is_triggered_only = yes
 	
@@ -67,16 +67,17 @@ country_event = {
 	}
 }
 country_event = {
-	id = 169802
+	id = 169602
 	title = "Our colony flurishes!"
-	desc = "EVTDESC169802"
-	picture = "new_world"
+	desc = "EVTDESC169602"
+	picture = "australia2nd"
 	fire_only_once = yes
 	
 	trigger = {
 		has_country_flag = revived_courlandish_colonization
 		NOT = { has_country_modifier = middling_colonial_endevour }
 	}
+	
 	
 	option = {
 		name = "Finally!"
@@ -85,13 +86,203 @@ country_event = {
 				OR = {
 					province_id = 1914
 					province_id = 2000
-					province_id - 2128
+					province_id = 2128
 				}
 			}
 			add_province_modifier = {
 				name = recently_built_city
 				duration = 1825
 			}
+		}
+	}
+}
+country_event = {
+	id = 169603
+	title = "$COUNTRY_ADJ$ time of turmoil"
+	desc = "EVTDESC169603"
+	picture = "new_world"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = KUR tag = LAT }
+		accepted_culture = estonian
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "We should side with the German Landowners"
+		set_variable = {
+			which = absolutism
+			value = 2
+		}
+	}
+	
+	option = {
+		name = "Perhaps the bourgeoisie has some poitns"
+		set_variable = {
+			which = absolutism
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = 169604
+	title = "Neo-serfdom?"
+	desc = "EVTDESC169604"
+	picture = "peasants"
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = {
+			which = absolutism
+			value = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 12
+	}
+	
+	option = {
+		name = "Let them do what they want"
+		change_variable = {
+			which = absolutism
+			value = 2
+		}
+		any_pop = {
+			militancy = 2
+		}
+	}
+	
+	option = {
+		name = "Extend state protection to peasants"
+		change_variable = {
+			which = absolutism
+			value = 1
+		}
+		any_pop = {
+			consciousness = 2
+		}
+	}
+}
+country_event = {
+	id = 169605
+	title = "Demands for representation!"
+	desc = "EVTDESC169605"
+	picture = "mad_noble"
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = {
+			which = absolutism
+			value = 2
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 12
+	}
+	
+	option = {
+		name = "Ban the assemblies!"
+		change_variable = {
+			which = absolutism
+			value = 2
+		}
+		any_pop = {
+			militancy = 2
+		}
+		set_country_flag = final_turmoil
+	}
+	
+	option = {
+		name = "We shall grant the gentry and bourgeoisie voting rights"
+		set_variable = {
+			which = absolutism
+			value = 1
+		}
+		any_pop = {
+			consciousness = 2
+		}
+		set_country_flag = final_turmoil
+	}
+}
+country_event = {
+	id = 169606
+	title = "The Landtag dissolved!"
+	desc = "EVTDESC169606"
+	picture = "throne"
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = {
+			which = absolutism
+			value = 6
+		}
+		has_country_flag = final_turmoil
+	}
+
+	mean_time_to_happen = {
+		days = 12
+	}
+	
+	option = {
+		name = "Long live The Duke!"
+		government = absolute_monarchy
+		all_core = {
+			add_core = UBD
+			remove_core = THIS
+		}
+		political_reform = no_trade_unions
+		political_reform = party_appointed
+		political_reform = admin_parliment
+		political_reform = yes_absolutism
+		political_reform = censored_press
+		political_reform = none_voting
+		change_tag = UBD
+		prestige = 25
+		any_pop = {
+			consciousness = 3
+		}
+	}
+}
+
+country_event = {
+	id = 169607
+	title = "The $COUNTRY_ADJ$ Instrument Of Government"
+	desc = "EVTDESC169607"
+	picture = "sejm"
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = absolutism
+				value = 6
+			}
+		}
+		has_country_flag = final_turmoil
+	}
+
+	mean_time_to_happen = {
+		days = 12
+	}
+
+	option = {
+		name = "Long live The Constitution!"
+		government = hms_government
+		political_reform = all_trade_unions
+		political_reform = state_equal_weight
+		political_reform = legislative_parliment
+		political_reform = no_absolutism
+		political_reform = wealth_voting
+		political_reform = free_press
+		prestige = 25
+		any_pop = {
+			consciousness = 3
 		}
 	}
 }

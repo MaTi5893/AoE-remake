@@ -7,11 +7,10 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "EVT91241542OPT1"
-        release_vassal = HET
+        name = "To War!"
         war = {
             target = HET
-            attacker_goal = { casus_belli = annex_core_country }
+            attacker_goal = { casus_belli = make_puppet }
             defender_goal = { casus_belli = status_quo }
         }
         ai_chance = {
@@ -20,49 +19,25 @@ country_event = {
     }
 
     option = {
-        name = "To War!"
-        release_vassal = HET
+        name = "Leave them be."
         prestige = -20
-        badboy = -5
+        badboy = -2
         ai_chance = {
             factor = 0.1
         }
     }
 }
-
 country_event = {
-    id = 178303
-    title = "EVTDESC178303"
-    desc = "EVTDESC178303"
+    id = 178301
+    title = "Collegium Of Little Russia"
+    desc = "EVTDESC178301"
     picture = cossacks
 
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        months = 3
-    }
-
-    trigger = {
-        tag = RUS
-        HET = {
-            has_country_flag = ukrainian_reunification
-            NOT = {
-                has_country_flag = end_of_paliy
-            }
-        }
-        NOT = {
-            has_country_flag = destroy_paliy
-        }
-    }
-
-    option = {
-        name = "EVT178303OPT"
-        prestige = 5
-        set_country_flag = destroy_paliy
-        ai_chance = {
-            factor = 10
-        }
-    }
+    is_triggered_only = yes
+	
+	option = {
+		name = "babingus"
+	}
 }
 
 country_event = {
@@ -83,7 +58,7 @@ country_event = {
     }
 
     option = {
-        name = "Horrible!"
+        name = "We must act quickly!"
 
         any_pop = {
             limit = {
@@ -91,7 +66,7 @@ country_event = {
             }
             militancy = 1
         }
-        969 = {
+        959 = {
             any_pop = {
                 limit = {
                     OR = {
@@ -101,6 +76,10 @@ country_event = {
                 }
                 reduce_pop = 0.8
             }
+			add_province_modifier = {
+				name = palay_rebellion
+				duration = 730
+			}
         }
         960 = {
             any_pop = {
@@ -112,6 +91,10 @@ country_event = {
                 }
                 reduce_pop = 0.8
             }
+			add_province_modifier = {
+				name = palay_rebellion
+				duration = 730
+			}
         }
         954 = {
             any_pop = {
@@ -123,6 +106,10 @@ country_event = {
                 }
                 reduce_pop = 0.8
             }
+			add_province_modifier = {
+				name = palay_rebellion
+				duration = 730
+			}
         }
         ai_chance = {
             factor = 1
