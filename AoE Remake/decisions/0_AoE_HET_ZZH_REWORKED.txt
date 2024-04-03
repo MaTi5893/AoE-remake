@@ -165,7 +165,7 @@ political_decisions = {
 		}
 	}
 	
-	##########################
+	#
 	
 	cross_into_the_right_bank = {
 		picture = the_right_bank
@@ -205,7 +205,6 @@ political_decisions = {
 			create_alliance = CRI
 		}
 	}
-	
 	matter_of_uniate_church = {
 		picture = orthodoxy
 		potential = {
@@ -239,60 +238,18 @@ political_decisions = {
         effect = {
             prestige = 10
             years_of_research = 0.7
+            any_pop = {
+                limit = {
+                    type = clergymen
+                }
+                money = 10
+            }
             set_country_flag = mazepa_culture
             treasury = -50000
         }
         ai_will_do = { factor = 1 }
     }
 	
-	#########################
-	###### Zhaphorizia ######
-	#########################
 	
-	raid_neighbours_zzh = {
-		potential = {
-            tag = ZZH
-            NOT = {
-                has_country_modifier = raid_cooldown
-            }
-            exists = yes
-        }
 
-        allow = {
-			war = no
-        }
-
-        effect = {
-			random_neighbour_country = {
-				country_event = 178302
-			}
-            add_country_modifier = {
-				name = raid_cooldown
-				duration = 730
-			}
-        }
-        ai_will_do = { factor = 1 }
-	}
-	
-	ottoman_gurantee = {
-		potential = {
-            tag = ZZH
-            NOT = {
-                has_country_flag = ottoman_gurantee
-            }
-            exists = yes
-			is_vassal = no
-			NOT = { war_with = TUR }
-        }
-
-        allow = {
-			war = yes
-        }
-
-        effect = {
-			set_country_flag = ottoman_gurantee
-            country_event = 178303
-        }
-        ai_will_do = { factor = 1 }
-	}
 }

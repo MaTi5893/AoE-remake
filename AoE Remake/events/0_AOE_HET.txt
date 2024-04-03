@@ -41,6 +41,36 @@ country_event = {
 }
 
 country_event = {
+    id = 178302
+    title = "$FROMCOUNTRY$ raids out territory!"
+    desc = "EVTDESC178302"
+    picture = cossacks
+
+    is_triggered_only = yes
+	
+	option = {
+		name = "awful"
+	}
+}
+
+country_event = {
+    id = 178303
+    title = "A plead to the Sultan"
+    desc = "EVTDESC178303"
+    picture = cossacks
+
+    is_triggered_only = yes
+	
+	option = {
+		name = "We shall bend our knee to the Turks"
+	}
+	
+	option = {
+		name = "Beg for help, but do not give up our independence"
+	}
+}
+
+country_event = {
     id = 178307
     title = "EVTNAME178307"
     desc = "EVTDESC178307"
