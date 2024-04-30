@@ -42,7 +42,7 @@ country_event = {
 
 country_event = {
     id = 178302
-    title = "$FROMCOUNTRY$ raids out territory!"
+    title = "The Sich raids out territory!"
     desc = "EVTDESC178302"
     picture = cossacks
 
@@ -63,16 +63,72 @@ country_event = {
 	
 	option = {
 		name = "We shall bend our knee to the Turks"
+		TUR = { country_event = 178304 }
 	}
 	
 	option = {
 		name = "Beg for help, but do not give up our independence"
+		TUR = { country_event = 178305 }
 	}
 }
+country_event = {
+    id = 178304
+    title = "The Cossacks ask for help!"
+    desc = "EVTDESC178304"
+    picture = cossacks
 
+    is_triggered_only = yes
+	
+	option = {
+		name = "We will anwser their call"
+		create_alliance = ZZH
+		set_country_flag = zzh_subject
+	}
+	
+	option = {
+		name = "Let them suffer - at least the raids might stop"
+		prestige = -5
+	}
+}
+country_event = {
+    id = 178305
+    title = "The Cossacks ask for help!"
+    desc = "EVTDESC178305"
+    picture = cossacks
+
+    is_triggered_only = yes
+	
+	option = {
+		name = "We will anwser their call"
+		create_alliance = ZZH
+	}
+	
+	option = {
+		name = "Let them suffer - at least the raids might stop"
+		prestige = -5
+	}
+}
+country_event = {
+    id = 178306
+    title = "The Sich's first tribute"
+    desc = "EVTDESC178306"
+    picture = cossacks
+
+    fire_only_once = yes
+
+    trigger = {
+        has_country_flag = zzh_subject
+        ZZH = { war = no is_vassal = no }
+    }
+	
+	option = {
+		name = "We will anwser their call"
+		create_vassal = ZZH
+	}
+}
 country_event = {
     id = 178307
-    title = "EVTNAME178307"
+    title = "The Paliy Uprising"
     desc = "EVTDESC178307"
     picture = cossacks
 
@@ -89,60 +145,198 @@ country_event = {
 
     option = {
         name = "We must act quickly!"
-
+		set_country_flag = palay_rebellion
         any_pop = {
             limit = {
                 has_pop_religion = orthodox
             }
             militancy = 1
         }
-        959 = {
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = polish
-                        has_pop_culture = ashkenazi
-                    }
-                }
-                reduce_pop = 0.8
-            }
-			add_province_modifier = {
+		960 = {	add_core = UKR }
+		959 = {	add_core = UKR }
+		954 = {	add_core = UKR }
+		create_vassal = UKR
+		UKR = {
+			all_core = { secede_province = THIS }
+			government = colonial_company
+			add_country_modifier = {
 				name = palay_rebellion
-				duration = 730
+				duration = 1825
 			}
-        }
-        960 = {
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = polish
-                        has_pop_culture = ashkenazi
-                    }
-                }
-                reduce_pop = 0.8
+			define_general = {
+                name = "Semen Paliy"
+                personality = defence_4.1
+                background = attack_4.1
             }
-			add_province_modifier = {
-				name = palay_rebellion
-				duration = 730
-			}
-        }
-        954 = {
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = polish
-                        has_pop_culture = ashkenazi
-                    }
-                }
-                reduce_pop = 0.8
+			define_general = {
+                name = "Samuel Samus"
+                personality = defence_2.1
+                background = attack_1.1
             }
-			add_province_modifier = {
-				name = palay_rebellion
-				duration = 730
-			}
+		}
+		954 = {
+           sub_unit = { type = cavalry value = current }
+           sub_unit = { type = dragoon value = current }
+           sub_unit = { type = cuirassier value = current }
+           sub_unit = { type = cuirassier value = current }
+           sub_unit = { type = cavalry value = current }
         }
+		create_vassal = UKR
         ai_chance = {
             factor = 1
         }
     }
+}
+country_event = {
+    id = 178308
+    title = "The Matter Of The Unite Church"
+    desc = "EVTDESC178308"
+    picture = orthodox_priests
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Seek to destroy the church."
+		any_pop = {
+			militancy = 1
+		}
+		prestige = 15
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = acceptable_pensions
+				}
+			}
+			owner = {
+				social_reform = good_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = low_pensions
+				}
+			}
+			owner = {
+				social_reform = acceptable_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = trinket_pensions
+				}
+			}
+			owner = {
+				social_reform = low_pensions
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					pensions = no_pensions
+				}
+			}
+			owner = {
+				social_reform = trinket_pensions
+			}
+		}
+	}
+	
+	option = {
+		name = "We shall leave them alone."
+		any_pop = {
+			militancy = -1
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					religious_minoritys = no_rights
+				}
+			}
+			owner = { political_reforms = no_political_rights }
+		
+		}
+	}
+}
+country_event = {
+    id = 178309
+    title = "Cossacks propose a union!"
+    desc = "EVTDESC178309"
+    picture = cossacks
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Together - we'll be stronger for it."
+		FROM = {
+			create_vassal = CRI
+			create_alliance = CRI
+		}
+		relation = {
+			who = FROM
+			value = 100
+		}
+		ai_chance = {
+			factor = 1
+		}
+		
+	}
+	
+	option = {
+		name = "No way!"
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+    id = 178310
+    title = "The Cossacks seize our lands!"
+    desc = "EVTDESC178310"
+    picture = cossacks
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn them!"
+		prestige = -15
+		
+	}
+}
+country_event = {
+    id = 178311
+    title = "Integrating Tatars"
+    desc = "EVTDESC178311"
+    picture = cossacks
+
+    fire_only_once = yes
+
+    trigger = {
+		has_country_flag = ceded_lands_to_cri
+        is_our_vassal = CRI
+    }
+
+    mean_time_to_happen = {
+        years = 50
+		modifier = {
+			factor = 0.8
+			NOT = { religious_minoritys = no_rights }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { citizens_rights = all_voting_pops }
+		}
+    }
+	
+	option = {
+		name = "Welcome!"
+		add_accepted_culture = tatar
+		CRI = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		inherit = CRI
+	}
 }

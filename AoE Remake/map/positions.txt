@@ -109558,6 +109558,15 @@
             y = 1711.950000
         }
 
+        naval_base = {
+            x = 2985.350000
+            y = 1714.600000
+        }
+
+    }
+
+    building_rotation = {
+        railroad = 2.063389
     }
 
 } # Pevek
@@ -110368,6 +110377,18 @@
     military_construction = {
         x = 2988.183333
         y = 1701.020000
+    }
+
+    building_position = {
+        naval_base = {
+            x = 2981.363333
+            y = 1714.350000
+        }
+
+    }
+
+    building_rotation = {
+        naval_base = 0.941266
     }
 
 } # Vorgovo

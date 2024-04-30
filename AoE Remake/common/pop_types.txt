@@ -917,6 +917,15 @@ assimilation_chance = {
         is_state_religion = no
 		NOT = { strata = poor }
     }
+	
+	modifier = {
+		factor = 50
+		OR = {
+			has_pop_culture = ruthenian
+			has_pop_culture = russian
+		}
+		country = { primary_culture = ukrainian }
+	}
 
 #BASELINE ASSIMILATION    - averages to 0.000396 rate. (averages 39.6 people assimilating per month in a 100k province)
 #IMPORTANT NOTE - If a pop has_culture_core = no, it must have its bonuses scaled down to a 100th less magnitude. (if base is factor 10, has_culture_core = no must be 0.1) This must be reflected in all future modifiers.

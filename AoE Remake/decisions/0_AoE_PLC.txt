@@ -79,27 +79,6 @@ political_decisions = {
                     social_reform = fourteen_hours
                 }
             }
-            random_owned = {
-                limit = {
-                    owner = { debt_law = serfdom }
-                }
-                owner = {
-                    
-                }
-            }
-
-            random_owned = {
-                limit = {
-                    owner = { ai = yes }
-                }
-                owner = {
-                    treasury = 150000
-                }
-            }
-            add_country_modifier = {
-                name = new_constitution
-                duration = 3650
-            }
             government = hms_government
 			random_owned = {
                 limit = {
@@ -185,51 +164,28 @@ political_decisions = {
             NOT = { has_country_flag = revise_the_treaty_of_andrusovo }
             exists = yes
 			owns = 946
+			1008 = {
+				owner = {
+					NOT = { is_sphere_leader_of = THIS }
+				}
+			}
         }
         allow = {
             is_greater_power = yes
             state_n_government = 1
-			1008 = {
-				owner = {
-					NOT = { is_sphere_leader_of = THIS }
-					NOT = { alliance_with = THIS }
-				}
-			}
         }
         effect = {
             set_country_flag = revise_the_treaty_of_andrusovo
             RUS_943 = { add_core = THIS }
             RUS_958 = { add_core = THIS }
 			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							owns = 961
-							owns = 943
-						}
-						NOT = {
-							AND = {
-								owns = 961
-								owns = 943
-							}
-						}
-					}
-				}
+				limit = { owner = { OR = { owns = 961 owns = 943 } NOT = { AND = { owns = 961 owns = 943 } } } }
 				owner = {
 					badboy = 7.5
 				}
 			}
 			random_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							AND = {
-								owns = 961
-								owns = 943
-							}
-						}
-					}
-				}
+				limit = { owner = { NOT = { AND = { owns = 961 owns = 943 } } } }
 				owner = {
 					badboy = 15
 				}
@@ -413,7 +369,7 @@ political_decisions = {
             }
             change_tag = PLR
             PLR = {
-                add_accepted_culture = ukrainian
+                add_accepted_culture = ruthenian
             }
             prestige = 15
         }

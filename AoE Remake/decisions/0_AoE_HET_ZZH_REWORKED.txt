@@ -80,12 +80,15 @@ political_decisions = {
 			NOT = { has_country_flag = hetmanate_constitution }
 		}
 		allow = {
-			state_n_government = 1
+			is_vassal = no
 		}
 		effect = {
 			set_country_flag = hetmanate_constitution
 			prestige = 15
 			create_vassal = ZZH
+			political_reforms = legislative_parliment
+			political_reforms = appointed
+			political_reforms = harassment
 			relation = {
 				who = ZZH
 				value = 100
@@ -116,7 +119,7 @@ political_decisions = {
                 add_core = RUT
                 remove_core = THIS
             }
-            add_accepted_culture = ukrainian
+            add_accepted_culture = ruthenian
             change_tag = RUT
         }
     }
@@ -159,29 +162,37 @@ political_decisions = {
 		}
 		allow = {
 			mass_politics = 1
+			has_country_flag = matter_of_uniate_church
 		}
 		effect = {
+			primary_culture = ukrainian
+			remove_accepted_culture = ruthenian
 			set_country_flag = language_reform_ukr
 		}
 	}
 	
-	#
+	##########################
 	
 	cross_into_the_right_bank = {
 		picture = the_right_bank
 		potential = {
 			tag = HET
-			NOT = { has_country_flag = hetmanate_constitution }
+			NOT = { has_country_flag = crossed_into_the_right_bank }
+			UKR = { exists = yes }
 		}
 		allow = {
-			state_n_government = 1
+			UKR = {
+				brigades_compare = 0.5
+			}
 		}
 		effect = {
-			set_country_flag = hetmanate_constitution
+			set_country_flag = crossed_into_the_right_bank
+			badboy = 5
 			prestige = 15
-			secede_province = 954
-			secede_province = 959
-			secede_province = 960
+			inherit = UKR
+			PLC = {
+				country_event = 178310
+			}
 		}
 	}
 	
@@ -197,24 +208,58 @@ political_decisions = {
 		effect = {
 			set_country_flag = mission_to_the_tatar_khan
 			prestige = 15
-			create_vassal = CRI
-			relation = {
-				who = CRI
-				value = 100
+			CRI = { country_event = 178309 }
+		}
+	}
+	
+	cede_lands_to_cri = {
+		picture = tatar
+		potential = {
+			tag = HET
+			has_country_flag = mission_to_the_tatar_khan
+			NOT = { has_country_flag = ceded_lands_to_cri }
+		}
+		allow = {
+			CRI = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owned_by = CRI
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = ceded_lands_to_cri
+			prestige = 15
+			any_owned = {
+				limit = {
+					is_core = CRI
+				}
+				secede_province = CRI
 			}
 			create_alliance = CRI
 		}
 	}
+	
 	matter_of_uniate_church = {
 		picture = orthodoxy
 		potential = {
-			OR = { primary_culture = ukrainian primary_culture = cossack }
+			OR = { primary_culture = ruthenian primary_culture = cossack }
 			NOT = { has_country_flag = matter_of_uniate_church }
 		}
 		allow = {
-			owns = 2671
+			NOT = {
+				PLC = {
+					any_owned_province = {
+						is_core = RUT
+					}
+				}
+			}
 		}
 		effect = {
+			country_event = 178308
 			set_country_flag = matter_of_uniate_church
 		}
 	}
@@ -238,18 +283,60 @@ political_decisions = {
         effect = {
             prestige = 10
             years_of_research = 0.7
-            any_pop = {
-                limit = {
-                    type = clergymen
-                }
-                money = 10
-            }
             set_country_flag = mazepa_culture
             treasury = -50000
         }
         ai_will_do = { factor = 1 }
     }
 	
+	#########################
+	###### Zhaphorizia ######
+	#########################
 	
+	raid_neighbours_zzh = {
+		potential = {
+            tag = ZZH
+            NOT = {
+                has_country_modifier = raid_cooldown
+            }
+            exists = yes
+        }
 
+        allow = {
+			war = no
+        }
+
+        effect = {
+			random_neighbour_country = {
+				country_event = 178302
+			}
+            add_country_modifier = {
+				name = raid_cooldown
+				duration = 730
+			}
+        }
+        ai_will_do = { factor = 1 }
+	}
+	
+	ottoman_gurantee = {
+		potential = {
+            tag = ZZH
+            NOT = {
+                has_country_flag = ottoman_gurantee
+            }
+            exists = yes
+			is_vassal = no
+			NOT = { war_with = TUR }
+        }
+
+        allow = {
+			war = yes
+        }
+
+        effect = {
+			set_country_flag = ottoman_gurantee
+            country_event = 178303
+        }
+        ai_will_do = { factor = 1 }
+	}
 }

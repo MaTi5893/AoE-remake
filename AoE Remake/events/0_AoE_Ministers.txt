@@ -278,7 +278,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Make Townes Proud"
+		name = "Congratutations on the election!"
 		set_country_flag = minister_elect_evt_1
 		random_owned = { #Traditionalist Majority
 			limit = {

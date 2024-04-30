@@ -906,26 +906,39 @@ east_slavic = {
 #                           Nebogatov Nikolaevich Pavlov Putyatin Rozhestvensky Skobelev Sukhoi
 #                           Tukhachevsky Yegorov Vorontsov Zhauryd }
 #        }
-#    rusyn = {
-#        color = {170 100 100}
-#            first_names = { Alaksandr Alexei Andrei Anton Boris Cyril Danya Dz'mitry Giorgi
-#                            Ivan Janka Jury Lavr Leonid Leu Mikalai Paval Piotr Roman Ryhor
-#                            Stanislaw Sergey Valery Vasily Viktar Uladzimir Vladislav }#
-#
-#            last_names = { Alexseyev "Bulak-Balachowicz" Chibisov Denikin Dragomirov Golivin Gurko
-#                           Ivanov Kalinowski Kornilov Kolchak Kuropatkin Lukashenka Menshikov Nakhimov
-#                           Nebogatov Nikolaevich Pavlov Putyatin Rozhestvensky Skobelev Sukhoi
-#                           Tukhachevsky Yegorov Vorontsov Zhauryd }
-#        }
-    ukrainian = { #ruthenian
+    ruthenian = {
         color = { 119  181  88 }
+            first_names = { Alexei Andrei Anton Arkadiy Borys Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev
+                             Mikhail Mykola Nikita  Oleksandr Pavel Petro Roman Semyon Sergiy Valeriy
+                             Viktor Volodimir Vladislav Yuriy }#
+
+            last_names = { Davydova Sydorenko Lysenko Babko Shchukarev 
+							Trfimenko Tyutyunnikov Hlushkov Filitov Kondratyuk 
+							Antonovych Horbachov Doroshenko Drahomanov Maksymovych 
+							Ohloblyn Stojko Yavornytsky Bogolyubov Bunyakovskii 
+							Chebotaryov Cholesky Hnedenko Kravchuk Fomenko Korolyuk
+							Mytropolsky Oleinik Ostrogradsky Petryshyn Pogorelov
+							Poretsky Potapow Samoilenko Shafarevich Sharkovsky
+							Shatunovsky Skorokhod Shtokalo Sleszynski Urysohn Vashchenko
+							Voronoy Avramenko Chuperchuk Dmytrenko Krivokhyzha Pryma
+							Shekera Vantukh Vasylenko Verkhovynets }
+        }
+    ukrainian = { 
+        color = { 153  61  0  }
             first_names = { Alexei Andrei Anton Arkadiy Borys Dmitro Fyodor Hryhoriy Ivan Lavr Leonid Lev
                              Mikhail Mykola Nikita  Oleksandr Pavel Petro Roman Semyon Sergiy Valeriy
                              Viktor Volodimir Vladislav Yuriy }
 
-            last_names = { Bezruchko Chernyakhovsky Dyachenko Gamula Grigoriev Hrekov Ivanenko Ivanov
-                            Kapustiansky Kondratenko Leshchenko Leshchinskiy "Omelianovych-Pavlenko"
-                            Paskevich Petliura Radchenko Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky }
+            last_names = { Davydova Sydorenko Lysenko Babko Shchukarev 
+						Trfimenko Tyutyunnikov Hlushkov Filitov Kondratyuk 
+						Antonovych Horbachov Doroshenko Drahomanov Maksymovych 
+						Ohloblyn Stojko Yavornytsky Bogolyubov Bunyakovskii 
+						Chebotaryov Cholesky Hnedenko Kravchuk Fomenko Korolyuk
+						Mytropolsky Oleinik Ostrogradsky Petryshyn Pogorelov
+						Poretsky Potapow Samoilenko Shafarevich Sharkovsky
+						Shatunovsky Skorokhod Shtokalo Sleszynski Urysohn Vashchenko
+						Voronoy Avramenko Chuperchuk Dmytrenko Krivokhyzha Pryma
+						Shekera Vantukh Vasylenko Verkhovynets }
             radicalism = 10
         }
     cossack = {
@@ -934,9 +947,10 @@ east_slavic = {
                              Mikhail Mykola Nikita  Oleksandr Pavel Petro Roman Semyon Sergiy Valeriy
                              Viktor Volodimir Vladislav Yuriy }
 
-            last_names = { Bezruchko Chernyakhovsky Dyachenko Gamula Grigoriev Hrekov Ivanenko Ivanov
-                            Kapustiansky Kondratenko Leshchenko Leshchinskiy "Omelianovych-Pavlenko"
-                            Paskevich Petliura Radchenko Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky }
+            last_names = { Andrukhovych Cheremshyna Dukhnovych Holovatskyi Hutsalo 
+						Khvylovy Kobylyanska Korniychuk Kostomarov Kulish Kvitka Marinina 
+						Palahniuk Pokalchuk Shashkevych Stefanyk Stelmakh Tobilevich Vovchok 
+						Vyshnia Zabara }
             radicalism = 5
     }
 }
