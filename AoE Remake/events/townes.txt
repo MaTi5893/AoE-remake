@@ -6,6 +6,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_country_flag = executive_activated }
+		NOT = { has_country_modifier = magnate_oligarchy }
 		centralization = legislative_parliment 
 	}
 	

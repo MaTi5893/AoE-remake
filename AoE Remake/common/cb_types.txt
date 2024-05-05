@@ -2120,8 +2120,6 @@ annex_india = {
         number_of_states = 2
         THIS = {
             capital_scope = { continent = europe }
-            NOT = { tag = RUS }
-            NOT = { tag = TUR }
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
@@ -2230,8 +2228,6 @@ annex_india_full = {
         NOT = { number_of_states = 2 }
         THIS = {
             capital_scope = { continent = europe }
-            NOT = { tag = RUS }
-            NOT = { tag = TUR }
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
@@ -2326,8 +2322,6 @@ annex_na = {
         number_of_states = 2
         THIS = {
             capital_scope = { continent = europe }
-            NOT = { tag = RUS }
-            NOT = { tag = TUR }
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes
@@ -2435,8 +2429,6 @@ annex_na_full = {
         NOT = { number_of_states = 2 }
         THIS = {
             capital_scope = { continent = europe }
-            NOT = { tag = RUS }
-            NOT = { tag = TUR }
             OR = {
                 is_greater_power = yes
                 is_secondary_power = yes

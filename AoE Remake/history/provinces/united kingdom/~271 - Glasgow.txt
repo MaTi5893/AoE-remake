@@ -1,0 +1,21 @@
+owner = SCO
+controller = SCO
+add_core = SCO
+trade_goods = coal
+naval_base = 2
+life_rating = 35
+state_building = {
+    level = 1
+    building = steamer_shipyard
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = steel_factory
+    upgrade = yes
+}
+1756.01.01 = {
+owner = GBR
+controller = GBR
+add_core = GBR
+}

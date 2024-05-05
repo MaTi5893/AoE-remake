@@ -1,0 +1,18 @@
+owner = KOL
+controller = KOL
+add_core = KOL
+add_core = WES
+add_core = GER
+add_core = NNN
+trade_goods = coal
+life_rating = 40
+state_building = {
+    level = 1
+    building = fabric_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = steel_factory
+    upgrade = yes
+}

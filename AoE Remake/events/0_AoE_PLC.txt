@@ -3,28 +3,17 @@ country_event = {
 	title = "Integration of Ducal Prussia"
 	desc = "EVTDESC156900"
 	picture = szlachta
-	fire_only_once = yes
-	
-	trigger = {
-		primary_culture = polish
-		is_our_vassal = DPR
-	}
-	
-	mean_time_to_happen = {
-		months = 20
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = "Integrate them"	
+		name = "Integrate them directly."	
 		DPR = {
 			all_core = { add_core = PLC }
 		}
-		inherit = DPR
-		badboy = 7
 		prestige = 20
 	}	
 	option = {
-		name = "Let them be"
+		name = "Restore Ducal Prussia"
 		prestige = 5
 		ai_chance = {
 			factor = 1

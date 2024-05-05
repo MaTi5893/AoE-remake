@@ -140,7 +140,8 @@ political_decisions = {
 			NOT = { exists = RUT }
         }
         allow = {
-			exists = no
+			num_of_cities = 20
+			owns = 958
             is_greater_power = yes
             war = no
         }
@@ -151,6 +152,14 @@ political_decisions = {
                 remove_core = THIS
             }
             change_tag = UKR
+			RUS_958 = { add_core = UKR }
+			1016 = { add_core = UKR }
+			962 = { add_core = UKR }
+			RUS_959 = { add_core = UKR }
+			RUS_957 = { add_core = UKR }
+			AUS_662 = { add_core = UKR }
+			RUS_965 = { add_core = UKR }
+			RUS_980 = { add_core = UKR }
         }
 	}
 	
@@ -178,18 +187,16 @@ political_decisions = {
 		potential = {
 			tag = HET
 			NOT = { has_country_flag = crossed_into_the_right_bank }
-			UKR = { exists = yes }
+			KOS = { exists = yes }
 		}
 		allow = {
-			UKR = {
-				brigades_compare = 0.5
-			}
+			NOT = { KOS = { brigades_compare = 0.2 } }
 		}
 		effect = {
 			set_country_flag = crossed_into_the_right_bank
 			badboy = 5
 			prestige = 15
-			inherit = UKR
+			inherit = KOS
 			PLC = {
 				country_event = 178310
 			}
@@ -294,12 +301,15 @@ political_decisions = {
 	#########################
 	
 	raid_neighbours_zzh = {
+		picture = cossacks
 		potential = {
             tag = ZZH
             NOT = {
                 has_country_modifier = raid_cooldown
             }
             exists = yes
+			is_vassal = no
+			any_neighbor_country = { NOT = { has_country_modifier = raid_cooldown } }
         }
 
         allow = {
@@ -308,7 +318,14 @@ political_decisions = {
 
         effect = {
 			random_neighbour_country = {
+				limit = {
+					NOT = { has_country_modifier = raid_cooldown }
+				}
 				country_event = 178302
+				add_country_modifier = {
+					name = raid_cooldown
+					duration = 1460
+				}
 			}
             add_country_modifier = {
 				name = raid_cooldown
@@ -319,6 +336,7 @@ political_decisions = {
 	}
 	
 	ottoman_gurantee = {
+		picture = the_sich
 		potential = {
             tag = ZZH
             NOT = {

@@ -31,7 +31,7 @@ country_event = {
     id = 178301
     title = "Collegium Of Little Russia"
     desc = "EVTDESC178301"
-    picture = cossacks
+    picture = cossack_rada
 
     is_triggered_only = yes
 	
@@ -44,20 +44,41 @@ country_event = {
     id = 178302
     title = "The Sich raids out territory!"
     desc = "EVTDESC178302"
-    picture = cossacks
+    picture = cossack_raid
 
     is_triggered_only = yes
 	
 	option = {
 		name = "awful"
+		random_owned = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ZZH
+				}
+			}
+			any_pop = {
+				reduce_pop = 0.99
+				militancy = 1
+				consciousness = 2
+			}
+		}
+		relations = {
+			who = ZZH
+			value = -50
+		}
+		casus_belli = {
+			target = ZZH
+			type = cut_down_to_size
+			months = 3
+		}
 	}
 }
 
 country_event = {
     id = 178303
-    title = "A plead to the Sultan"
+    title = "A Plead To The Sultan"
     desc = "EVTDESC178303"
-    picture = cossacks
+    picture = cossack_rada
 
     is_triggered_only = yes
 	
@@ -75,7 +96,7 @@ country_event = {
     id = 178304
     title = "The Cossacks ask for help!"
     desc = "EVTDESC178304"
-    picture = cossacks
+    picture = cossack_rada
 
     is_triggered_only = yes
 	
@@ -94,7 +115,7 @@ country_event = {
     id = 178305
     title = "The Cossacks ask for help!"
     desc = "EVTDESC178305"
-    picture = cossacks
+    picture = cossack_rada
 
     is_triggered_only = yes
 	
@@ -104,7 +125,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Let them suffer - at least the raids might stop"
+		name = "Charity is not in our intrest."
 		prestige = -5
 	}
 }
@@ -112,7 +133,7 @@ country_event = {
     id = 178306
     title = "The Sich's first tribute"
     desc = "EVTDESC178306"
-    picture = cossacks
+    picture = cossack_rada
 
     fire_only_once = yes
 
@@ -122,8 +143,9 @@ country_event = {
     }
 	
 	option = {
-		name = "We will anwser their call"
+		name = "No need to thank us."
 		create_vassal = ZZH
+		money = 50000
 	}
 }
 country_event = {
@@ -145,43 +167,36 @@ country_event = {
 
     option = {
         name = "We must act quickly!"
-		set_country_flag = palay_rebellion
-        any_pop = {
-            limit = {
-                has_pop_religion = orthodox
-            }
-            militancy = 1
-        }
-		960 = {	add_core = UKR }
-		959 = {	add_core = UKR }
-		954 = {	add_core = UKR }
-		create_vassal = UKR
-		UKR = {
-			all_core = { secede_province = THIS }
+		KOS = {
+			all_core = {
+				secede_province = KOS
+			}
 			government = colonial_company
 			add_country_modifier = {
 				name = palay_rebellion
 				duration = 1825
 			}
 			define_general = {
-                name = "Semen Paliy"
-                personality = defence_4.1
-                background = attack_4.1
-            }
+				   name = "Semen Paliy"
+				   personality = defence_4.1
+				   background = attack_4.1
+			   }
 			define_general = {
-                name = "Samuel Samus"
-                personality = defence_2.1
-                background = attack_1.1
-            }
+				   name = "Samuel Samus"
+				   personality = defence_2.1
+				   background = attack_1.1
+			   }
+			954 = {
+			   sub_unit = { type = cavalry value = current }
+			   sub_unit = { type = dragoon value = current }
+			   sub_unit = { type = cuirassier value = current }
+			   sub_unit = { type = cuirassier value = current }
+			   sub_unit = { type = cavalry value = current }
+			   sub_unit = { type = cavalry value = current }
+			   
+			}
 		}
-		954 = {
-           sub_unit = { type = cavalry value = current }
-           sub_unit = { type = dragoon value = current }
-           sub_unit = { type = cuirassier value = current }
-           sub_unit = { type = cuirassier value = current }
-           sub_unit = { type = cavalry value = current }
-        }
-		create_vassal = UKR
+		set_country_flag = palay_rebellion	
         ai_chance = {
             factor = 1
         }
@@ -254,7 +269,7 @@ country_event = {
 					religious_minoritys = no_rights
 				}
 			}
-			owner = { political_reforms = no_political_rights }
+			owner = { political_reform = no_political_rights }
 		
 		}
 	}
@@ -263,7 +278,7 @@ country_event = {
     id = 178309
     title = "Cossacks propose a union!"
     desc = "EVTDESC178309"
-    picture = cossacks
+    picture = cossack_raid
 
 	is_triggered_only = yes
 	
@@ -294,21 +309,20 @@ country_event = {
     id = 178310
     title = "The Cossacks seize our lands!"
     desc = "EVTDESC178310"
-    picture = cossacks
+    picture = cossack_raid
 
 	is_triggered_only = yes
 	
 	option = {
 		name = "Damn them!"
-		prestige = -15
-		
+		prestige = -15	
 	}
 }
 country_event = {
     id = 178311
-    title = "Integrating Tatars"
+    title = "The $COUNTRY_ADJ$ - Tatar Union"
     desc = "EVTDESC178311"
-    picture = cossacks
+    picture = cossack_rada
 
     fire_only_once = yes
 
@@ -324,7 +338,7 @@ country_event = {
 			NOT = { religious_minoritys = no_rights }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.7
 			NOT = { citizens_rights = all_voting_pops }
 		}
     }
