@@ -1,195 +1,93 @@
-#tech_power
-piston_steam_engine = {
-    area = tech_power
-    year = 1650
+
+#economic_thought_and_critique
+early_classical_theory_and_critique = {
+    area = economic_thought_and_critique
+    year = 1700
     cost = 3600
 
-    activate_building =  fabric_factory
-    mine_rgo_eff = 0.05
-    farm_rgo_eff = 0.15
-
+    activate_building = lumber_mill
+    factory_input = -0.01
     ai_chance = {
-        factor = 1.1
+        factor = 25
     }
 }
-high_pressure_steam_engine = {
-    area = tech_power
+late_classical_theory = {
+    area = economic_thought_and_critique
     year = 1700
     cost = 7200
 
-    mine_rgo_eff = 0.05
-    farm_rgo_eff = 0.15
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.1
+        factor = 1.01
     }
 }
-compound_steam_engines = {
-    area = tech_power
+collectivist_theory = {
+    area = economic_thought_and_critique
     year = 1700
     cost = 10800
 
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.1
+        factor = 1.01
     }
 }
-steam_turbine = {
-    area = tech_power
+the_historical_theory = {
+    area = economic_thought_and_critique
     year = 1720
     cost = 14400
 
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.1
+        factor = 1.01
     }
 }
-combustion_engine = {
-    area = tech_power
-    year = 1755
+neoclassical_theory = {
+    area = economic_thought_and_critique
+    year = 1740
     cost = 18000
 
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 2
+        factor = 1
     }
 }
-electrical_power_generation = {
-    area = tech_power
-    year = 1775
-    cost = 21600
-
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
-    factory_throughput = 0.1
-    ai_chance = {
-        factor = 1.1
-    }
-}
-tech_power_7 = {
-    area = tech_power
-    year = 1790
-    cost = 25200
-
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
-    factory_throughput = 0.1
-    ai_chance = {
-        factor = 2
-    }
-}
-tech_power_8 = {
-    area = tech_power
-    year = 1805
-    cost = 30200
-
-    mine_rgo_eff = 0.15
-    farm_rgo_eff = 0.15
-    factory_throughput = 0.1
-    ai_chance = {
-        factor = 1.1
-    }
-}
-
-#mechanization
-mechanical_production = {
-    area = mechanization
-    year = 1650
-    cost = 3600
-	factory_cost = 3
-    activate_building = regular_clothes_factory
-    ai_chance = {
-        factor = 2
-    }
-}
-
-interchangeable_parts = {
-    area = mechanization
-    year = 1700
-    cost = 7200
-
-    factory_throughput = 0.05
-
-    ai_chance = {
-        factor = 2
-    }
-}
-semi_automatization = {
-    area = mechanization
-    year = 1700
-    cost = 10800
-
-    factory_throughput = 0.05
-
-    factory_goods_output = {
-        coal = 0.05
-    }
-
-    factory_goods_output = {
-        machine_parts = 0.05
-    }
-
-    ai_chance = {
-        factor = 2
-    }
-}
-pneumatic_and_hydraulics = {
-    area = mechanization
-    year = 1730
-    cost = 14400
-    factory_throughput = 0.05
-    factory_cost = -0.1
-    ai_chance = {
-        factor = 1.1
-    }
-}
-assembly_line = {
-    area = mechanization
+keynesian_economics = {
+    area = economic_thought_and_critique
     year = 1755
-    cost = 18000
-    factory_throughput = 0.05
-    factory_cost = -0.1
-    ai_chance = {
-        factor = 1.05
-    }
-}
-shift_work = {
-    area = mechanization
-    year = 1775
     cost = 21600
 
-
-    rgo_output = 0.05
-    factory_throughput = 0.075
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.1
+        factor = 1.01
     }
 }
-mechanization_7 = {
-    area = mechanization
-    year = 1790
+economic_thought_and_critique_7 = {
+    area = economic_thought_and_critique
+    year = 1770
     cost = 25200
-    factory_throughput = 0.1
-    factory_cost = -0.1
+
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.05
+        factor = 1
     }
 }
-mechanization_8 = {
-    area = mechanization
-    year = 1805
+economic_thought_and_critique_8 = {
+    area = economic_thought_and_critique
+    year = 1795
     cost = 30200
 
-
-    rgo_output = 0.05
-    factory_throughput = 0.1
+    factory_input = -0.01
+    rgo_size = { precious_metal = 0.05 }
     ai_chance = {
-        factor = 1.1
+        factor = 1.01
     }
 }
-
 
 #metallurgy
 mechanized_mining = {
@@ -369,17 +267,204 @@ metallurgy_8 = {
     }
 }
 
+#mechanization
+mechanical_production = {
+    area = mechanization
+    year = 1650
+    cost = 3600
+	factory_cost = 3
+    activate_building = regular_clothes_factory
+    ai_chance = {
+        factor = 2
+    }
+}
 
-#tech_infrastructure
-experimental_railroad = {
+interchangeable_parts = {
+    area = mechanization
+    year = 1700
+    cost = 7200
+
+    factory_throughput = 0.05
+
+    ai_chance = {
+        factor = 2
+    }
+}
+semi_automatization = {
+    area = mechanization
+    year = 1700
+    cost = 10800
+
+    factory_throughput = 0.05
+
+    factory_goods_output = {
+        coal = 0.05
+    }
+
+    factory_goods_output = {
+        machine_parts = 0.05
+    }
+
+    ai_chance = {
+        factor = 2
+    }
+}
+pneumatic_and_hydraulics = {
+    area = mechanization
+    year = 1730
+    cost = 14400
+    factory_throughput = 0.05
+    factory_cost = -0.1
+    ai_chance = {
+        factor = 1.1
+    }
+}
+assembly_line = {
+    area = mechanization
+    year = 1755
+    cost = 18000
+    factory_throughput = 0.05
+    factory_cost = -0.1
+    ai_chance = {
+        factor = 1.05
+    }
+}
+shift_work = {
+    area = mechanization
+    year = 1775
+    cost = 21600
+
+
+    rgo_output = 0.05
+    factory_throughput = 0.075
+    ai_chance = {
+        factor = 1.1
+    }
+}
+mechanization_7 = {
+    area = mechanization
+    year = 1790
+    cost = 25200
+    factory_throughput = 0.1
+    factory_cost = -0.1
+    ai_chance = {
+        factor = 1.05
+    }
+}
+mechanization_8 = {
+    area = mechanization
+    year = 1805
+    cost = 30200
+
+
+    rgo_output = 0.05
+    factory_throughput = 0.1
+    ai_chance = {
+        factor = 1.1
+    }
+}
+
+
+#tech_organization
+guild_based_production = {
+    area = tech_organization
+    year = 1650
+    cost = 3600
+    activate_building = canned_food_factory
+    factory_output = 0.01
+    ai_chance = {
+        factor = 1.03
+    }
+}
+organized_factories = {
+    area = tech_organization
+    year = 1700
+    cost = 7200
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+        ai_chance = {
+        factor = 1.03
+    }
+}
+scientific_management = {
+    area = tech_organization
+    year = 1700
+    cost = 10800
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+time_saving_measures = {
+    area = tech_organization
+    year = 1720
+    cost = 14400
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+management_strategy = {
+    area = tech_organization
+    year = 1740
+    cost = 18000
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+organizational_development = {
+    area = tech_organization
+    year = 1755
+    cost = 21600
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+tech_organization_7 = {
+    area = tech_organization
+    year = 1770
+    cost = 25200
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+tech_organization_8 = {
+    area = tech_organization
+    year = 1790
+    cost = 30200
+
+    factory_output = 0.01
+    rgo_size = { precious_metal = 0.05 }
+    ai_chance = {
+        factor = 1.03
+    }
+}
+
+
+#tech_infrastructure urbanization
+experimental_railroad = { 
     area = tech_infrastructure
     year = 1700
-    cost = 3600
+    cost = 10800
 
     army_base = {
         maximum_speed = 1
     }
-    factory_throughput = 0.05
+    RGO_throughput = 0.05
     ai_chance = {
         factor = 5
     }
@@ -387,20 +472,20 @@ experimental_railroad = {
 early_railroad = {
     area = tech_infrastructure
     year = 1700
-    cost = 7200
+    cost = 10800
 
     army_base = {
         maximum_speed = 1
     }
-    factory_throughput = 0.05
+    RGO_throughput = 0.05
     ai_chance = {
         factor = 5
     }
 }
 iron_railroad = {
     area = tech_infrastructure
-    year = 1715
-    cost = 10800
+    year = 1700
+    cost = 12800
 
     activate_building = railroad
     ai_chance = {
@@ -457,103 +542,5 @@ tech_infrastructure_8 = {
 
     ai_chance = {
         factor = 2
-    }
-}
-
-
-#chemistry_and_electricity
-basic_chemistry = {
-    area = chemistry_and_electricity
-    year = 1650
-    cost = 3600
-
-    activate_building = fertilizer_factory
-#    activate_building = steamer_shipyard
-    pop_growth = 0.0001
-
-    ai_chance = {
-        factor = 10
-    }
-}
-
-medicine = {
-    area = chemistry_and_electricity
-    year = 1660
-    cost = 7200
-
-    supply_limit = 0.25
-
-    ai_chance = {
-        factor = 10
-    }
-}
-inorganic_chemistry = {
-    area = chemistry_and_electricity
-    year = 1715
-    cost = 10800
-
-    supply_limit = 0.25
-    pop_growth = 0.0001
-
-    ai_chance = {
-        factor = 5
-    }
-}
-organic_chemistry = {
-    area = chemistry_and_electricity
-    year = 1725
-    cost = 14400
-
-    supply_limit = 0.25
-
-    ai_chance = {
-        factor = 5
-    }
-
-}
-electricity = {
-    area = chemistry_and_electricity
-    year = 1735
-    cost = 18000
-
-    supply_limit = 0.05
-
-    ai_chance = {
-        factor = 5
-    }
-
-}
-
-synthetic_polymers = {
-    area = chemistry_and_electricity
-    year = 1750
-    cost = 21600
-
-    supply_limit = 0.25
-    ai_chance = {
-        factor = 1.1
-    }
-
-}
-chemistry_and_electricity_7 = {
-    area = chemistry_and_electricity
-    year = 1775
-    cost = 25200
-
-    supply_limit = 0.05
-
-    ai_chance = {
-        factor = 5
-    }
-
-}
-chemistry_and_electricity_8 = {
-    area = chemistry_and_electricity
-    year = 1795
-    cost = 30200
-
-    supply_limit = 0.50
-    ai_chance = {
-        factor = 1.1
     }
 }

@@ -1751,8 +1751,9 @@ political_decisions = {
 				any_pop = {
 					limit = {
 						is_culture_group = germanic
+						literacy = 35
 					}
-					literacy = -0.3
+					literacy = -0.45
 				}
 			}
 			PLC = {
@@ -1760,7 +1761,7 @@ political_decisions = {
 					limit = {
 						is_culture_group = germanic
 					}
-					literacy = 0.3
+					literacy = 0.20
 				}
 			}
 		}

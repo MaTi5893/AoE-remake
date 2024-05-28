@@ -20,9 +20,12 @@ everyday_needs = {
     paper = 10
     luxury_clothes = 3
     luxury_furniture = 3
+	chinaware = 3
     wine = 10
     tobacco = 10
     coffee = 5
+	sugar = 5
+	spices = 5
 }
 
 life_needs = {
@@ -36,13 +39,12 @@ life_needs = {
 
 luxury_needs = {
     opium = 10
-    telephones = 10
-    automobiles = 10
-    #aeroplanes = 5
-    #radio = 10
-    #fuel = 10
+    chinaware = 10
+	sugar = 10
+	spices = 10
     ammunition = 1
     small_arms = 1
+	fur = 1
     clipper_convoy = 2
     steamer_convoy = 2
 }

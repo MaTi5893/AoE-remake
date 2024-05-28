@@ -20,16 +20,10 @@ military_goods = {
         cost = 10.00
         color = { 255 39 12 }
     }
-    barrels = {
-        cost = 70.00
-        color = { 55 41 9 }
-        available_from_start = no
-    }
-    aeroplanes = {
-        cost = 70.00
-        color = { 221 213 182 }
-        available_from_start = no
-    }
+	naval_supplies = {
+		cost = 25.00
+        color = { 20 20 225 }
+	}
 }
 
 raw_material_goods = {
@@ -52,6 +46,7 @@ raw_material_goods = {
     coal = {
         cost = 2.3
         color = { 11 29 77 }
+		available_from_start = no
     }
     sulphur = {
         cost = 6.0
@@ -69,15 +64,13 @@ raw_material_goods = {
         cost = 5.4
         color = { 213 177 118 }
     }
-    rubber = {
-        cost = 7.0
-        color = { 123 110 86 }
-		available_from_start = no
+	hardwood = {
+        cost = 4.6
+        color = { 196 122 67 }
     }
-    oil = {
-        cost = 12.0
-        color = { 0 0 0 }
-		available_from_start = no
+    salt = {
+        cost = 7.0
+        color = { 240 240 240 }
     }
     precious_metal = {
         cost = 10
@@ -106,11 +99,6 @@ industrial_goods = {
         cost = 2.9
         color = { 201 200 199 }
     }
-    fuel = {
-        cost = 15.00
-        available_from_start = no
-        color = { 145 110 89 }
-    }
     fertilizer = {
         cost = 10.0
         color = { 133 101 35 }
@@ -131,11 +119,6 @@ industrial_goods = {
         available_from_start = no
         overseas_penalty = yes
         color = { 76 18 0 }
-    }
-    electric_gear = {
-        cost = 14.00
-        available_from_start = no
-        color = { 255 255 0 }
     }
     fabric = {
         cost = 1.8
@@ -185,16 +168,6 @@ consumer_goods = {
         cost = 3.2
         color = { 114 162 47 }
     }
-    automobiles = {
-        cost = 30.00
-        available_from_start = no
-        color = { 61 67 64 }
-    }
-    telephones = {
-        cost = 16.00
-        available_from_start = no
-        color = { 123 112 54 }
-    }
     wine = {
         cost = 9.7
         color = { 123 0 54 }
@@ -219,9 +192,20 @@ consumer_goods = {
         cost = 30.00
         color = { 255 140 184 }
     }
-    radio = {
-        cost = 16.00
-        available_from_start = no
-        color = { 129 63 6 }
+	sugar = {
+        cost = 15.2
+        color = { 153 255 153 }
+    }
+    spices = {
+        cost = 16.1
+        color = { 255 153 153 }
+    }
+    fur = {
+        cost = 21.3
+        color = { 27 19 7 }
+    }
+	chinaware = {
+        cost = 60
+        color = { 200 200 255 }
     }
 }

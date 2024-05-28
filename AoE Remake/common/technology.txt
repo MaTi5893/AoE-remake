@@ -27,17 +27,17 @@ folders = {
         psychology
     }
 	
-	commerce_tech = {
+	commerce_tech = { #Agriculture
 		financial_institutions
         monetary_system
 		tech_power
-		metallurgy
+		market_functionality
 		chemistry_and_electricity
     }
 
     industry_tech = {
-		market_functionality
 		economic_thought_and_critique
+		metallurgy
 		mechanization
         tech_organization
 		tech_infrastructure
@@ -122,16 +122,6 @@ schools ={
         unciv_military_modifier = -0.15
     }
 
-    czech_tech_school = {
-        army_tech_research_bonus = 0.1
-        commerce_tech_research_bonus = 0
-        culture_tech_research_bonus = -0.05
-        industry_tech_research_bonus = 0.1
-        navy_tech_research_bonus = -0.1
-        unciv_economic_modifier = -0.05
-        unciv_military_modifier = -0.15
-    }
-
     japanese_tech_school = {
         army_tech_research_bonus = 0.1
         commerce_tech_research_bonus = -0.15
@@ -167,7 +157,7 @@ schools ={
         navy_tech_research_bonus = -0.05
     }
 
-    pogonya_za_zapadom = {
+    pogonya_za_zapadom = { #Russian Empire Tech Sy
 		army_tech_research_bonus = 0.15
         commerce_tech_research_bonus = -0.1
         culture_tech_research_bonus = 0.0

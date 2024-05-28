@@ -134,341 +134,6 @@ province_event = {
         # life_rating = 5
     }
 }
-
-#Witwatersrand Gold Rush
-province_event = {
-    id = 1139
-
-    trigger = {
-        year = 1886
-        province_id = 2106
-        NOT = {
-            trade_goods = precious_metal
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 12
-    }
-
-    title = "EVTNAME1139"
-    desc = "EVTDESC1139"
-
-    option = {
-        name = "EVTOPTA1139"
-        trade_goods = precious_metal
-        add_province_modifier = {
-            name = gold_rush
-            duration = 5475
-        }
-        change_province_name = "Johannesburg"
-        owner = {
-            add_country_modifier = {
-                name = witwatersrand_gold_rush
-                duration = 1460
-            }
-        }
-    }
-}
-
-# Gold in The Black Hills
-country_event = {
-    id = 1140
-    title = "EVTNAME1140"
-    desc = "EVTDESC1140"
-    news = yes
-    news_desc_long = "EVTDESC1140_NEWS_LONG"
-    news_desc_medium = "EVTDESC1140_NEWS_MEDIUM"
-    news_desc_short = "EVTDESC1140_NEWS_SHORT"
-    picture = "goldrush"
-
-    fire_only_once = yes
-
-    trigger = {
-        year = 1874
-        has_country_flag = custers_expedition_sent
-    }
-
-    mean_time_to_happen = {
-        months = 5
-    }
-
-    option  ={
-        name = "EVTOPTA1140"
-        122 = {
-            trade_goods = precious_metal
-            add_province_modifier = {
-                name = gold_rush
-                duration = 3650
-            }
-        }
-    }
-}
-
-province_event = {
-
-    id = 1141
-
-    trigger = {
-        year = 1864
-        province_id = 2514            # Hokitika
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1105"
-    desc = "EVTDESC1105"
-
-    option = {
-        name = "EVTOPTA1105"
-        trade_goods = precious_metal
-    }
-}
-
-province_event = {
-
-    id = 1104
-
-    trigger = {
-        year = 1896
-        or = {
-            province_id = 6            # Whitehorse
-            province_id = 7            # Dawson
-            province_id = 2599        # Fairbanks
-            province_id = 2630        # Cordova
-        }
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1100"
-    desc = "EVTDESC1100"
-    picture = ""
-
-    option = {
-        name = "EVTOPTA1100"
-        trade_goods = precious_metal
-        # life_rating = 5
-    }
-}
-
-province_event = {
-
-    id = 1000002
-
-    trigger = {
-        year = 1850
-        province_id = 2478            # Ballarat
-        not = { trade_goods = precious_metal }
-        not = { year = 1880 }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1100"
-    desc = "EVTDESC1100"
-
-    option = {
-        name = "EVTOPTA1100"
-        trade_goods = precious_metal
-        add_province_modifier = {
-                name = gold_rush
-                duration = 3650
-        }
-    }
-}
-
-province_event = {
-
-    id = 1000003
-
-    trigger = {
-        year = 1850
-        province_id = 2476            # Melbourne
-        not = { trade_goods = precious_metal }
-        not = { year = 1880 }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1100"
-    desc = "EVTDESC1100"
-
-    option = {
-        name = "EVTOPTA1100"
-        trade_goods = precious_metal
-        add_province_modifier = {
-                name = gold_rush
-                duration = 3650
-        }
-    }
-}
-
-province_event = {
-
-    id = 1000004
-
-    trigger = {
-        year = 1890
-        or = {
-            province_id = 2500            # Kalgoorlie
-            province_id = 2503            # Wiluna
-            province_id = 2601            # Sandy Desert
-            province_id = 2605            # Gibson's Desert
-        }
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1100"
-    desc = "EVTDESC1100"
-
-    option = {
-        name = "EVTOPTA1100"
-        trade_goods = precious_metal
-        add_province_modifier = {
-            name = gold_rush
-            duration = 730
-        }
-    }
-}
-################################
-#        DIAMOND EVENTS        #
-################################
-province_event = {
-
-    id = 1105
-
-    trigger = {
-        year = 1700
-        or = {
-            province_id = 2084            # Angra Pequeña
-            province_id = 2091            # Mossel Bay
-            province_id = 2092            # Beaufort
-            province_id = 1697            # Figuig
-               #province_id = 2108            # Mosega
-            province_id = 2107            # Klerksdorp
-            province_id = 2068            # Salisbury
-        }
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1105"
-    desc = "EVTDESC1105"
-    picture = ""
-
-    option = {
-        name = "EVTOPTA1105"
-        trade_goods = precious_metal
-        # life_rating = 5
-    }
-}
-
-province_event = {
-
-    id = 1106
-
-    trigger = {
-        year = 1867
-        or = {
-            province_id = 2097            # Graaf Reinet
-            province_id = 1849            # Massawa
-        }
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1105"
-    desc = "EVTDESC1105"
-
-    option = {
-        name = "EVTOPTA1105"
-        trade_goods = precious_metal
-        # life_rating = 5
-    }
-}
-
-province_event = {
-
-    id = 1000001
-
-    trigger = {
-        year = 1871
-        province_id = 2094            # Kimberley
-        not = { trade_goods = precious_metal }
-    }
-
-    mean_time_to_happen =  {
-        months = 12
-
-    }
-
-    title = "EVTNAME1105"
-    desc = "EVTDESC1105"
-
-    option = {
-        name = "EVTOPTA1105"
-        trade_goods = precious_metal
-        life_rating = 15
-    }
-}
-
-
-#Dye to Fish
-#province_event = {
-#
-#    id = 999997 #new
-#
-#    trigger = {
-#        year = 1890
-#        province_id = 1257        # Chittagong
-#        not = { trade_goods = fish }
-#        owner = {
-#            invention = synthetic_dye
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 8
-#    }
-#
-#    title = "EVTNAME999997"
-#    desc = "EVTDESC999997"
-#
-#    option = {
-#        name = "EVTOPTA999997"
-#        trade_goods = fish
-#        # life_rate = 5
-#    }
-#}
-
 #Change Wool back to Tobacco
 province_event = {
 
@@ -496,30 +161,221 @@ province_event = {
     }
 }
 
-#Change Gold back to Wool
 province_event = {
 
-    id = 999995 #new
+	id = 1170
 
-    trigger = {
-        province_id = 2476        # Melbourne
-        not = { trade_goods = wool }
-        year = 1910
-        owner = {
-            civilized = yes
-        }
-    }
+	trigger = {
+		OR = {
+		province_id = 273
+		province_id = 301
+		province_id = 284
+		province_id = 288
+		province_id = 283
+		province_id = 281
+		province_id = 282
+		province_id = 278
+		province_id = 280
+		province_id = 272
+		province_id = 271
+		province_id = 269
+		province_id = 270
+		province_id = 475
+		province_id = 477
+		province_id = 514
+		province_id = 448
+		province_id = 430
+		province_id = 431
+		province_id = 405
+		province_id = 404
+		province_id = 401
+		province_id = 432
+		province_id = 465
+		province_id = 394
+		province_id = 393
+		province_id = 391
+		province_id = 609
+		province_id = 322
+		province_id = 608
+		province_id = 573
+		province_id = 396
+		province_id = 689
+		province_id = 684
+		province_id = 688
+		province_id = 632
+		province_id = 631
+		province_id = 630
+		province_id = 629
+		province_id = 626
+		province_id = 628
+		province_id = 599
+		province_id = 602
+		province_id = 620
+		province_id = 618
+		province_id = 687
+		province_id = 559
+		province_id = 558
+		province_id = 532
+		province_id = 2656
+		province_id = 581
+		province_id = 2691
+		province_id = 541
+		province_id = 585
+		province_id = 566
+		province_id = 580
+		province_id = 578
+		province_id = 577
+		province_id = 575
+		province_id = 381
+		province_id = 576
+		province_id = 703
+		province_id = 2584
+		province_id = 705
+		province_id = 951
+		province_id = 713
+		province_id = 638
+		province_id = 637
+		province_id = 963
+		province_id = 3275
+		province_id = 978
+		province_id = 971
+		province_id = 972
+		province_id = 974
+		province_id = 3256
+		province_id = 973
+		province_id = 976
+		province_id = 975
+		province_id = 979
+		province_id = 1046
+		province_id = 666
+		province_id = 668
+		province_id = 669
+		province_id = 675
+		province_id = 787
+		province_id = 849
+		province_id = 819
+		province_id = 824
+		province_id = 872
+		province_id = 873
+		province_id = 881
+		province_id = 863
+		province_id = 871
+		province_id = 880
+		province_id = 1997
+		province_id = 1181
+		province_id = 2612
+		province_id = 1058
+		province_id = 1193
+		province_id = 1067
+		province_id = 2698
+		province_id = 1068
+		province_id = 1469
+		province_id = 1108
+		province_id = 1126
+		province_id = 1149
+		province_id = 1147
+		province_id = 1150
+		province_id = 1249
+		province_id = 1149
+		province_id = 2683
+		province_id = 1063
+		province_id = 1070
+		province_id = 2646
+		province_id = 1075
+		province_id = 1076
+		province_id = 2677
+		province_id = 2645
+		province_id = 1084
+		province_id = 1083
+		province_id = 1082
+		province_id = 2617
+		province_id = 1087
+		province_id = 1553
+		province_id = 1554
+		province_id = 1552
+		province_id = 1622
+		province_id = 1623
+		province_id = 1619
+		province_id = 1634
+		province_id = 1664
+		province_id = 1661
+		province_id = 1642
+		province_id = 1550
+		province_id = 1532
+		province_id = 1561
+		province_id = 1575
+		province_id = 1574
+		province_id = 1573
+		province_id = 1572
+		province_id = 2062
+		province_id = 1559
+		province_id = 1562
+		province_id = 1557
+		province_id = 1490
+		province_id = 1582
+		province_id = 2469
+		province_id = 2102
+		province_id = 2104
+		province_id = 2116
+		province_id = 1934
+		province_id = 1933
+		province_id = 1949
+		province_id = 2251
+		province_id = 2292
+		province_id = 218
+		province_id = 217
+		province_id = 226
+		province_id = 227
+		province_id = 225
+		province_id = 178
+		province_id = 73
+		province_id = 205
+		province_id = 185
+		province_id = 190
+		province_id = 191
+		province_id = 165
+		province_id = 163
+		province_id = 164
+		province_id = 162
+		province_id = 156
+		province_id = 118
+		province_id = 117
+		province_id = 121
+		province_id = 149
+		province_id = 150
+		province_id = 147
+		province_id = 111
+		province_id = 97
+		province_id = 2147
+		province_id = 2148
+		province_id = 2251
+		}
+		not = { trade_goods = coal }
+		OR = {
+			owner = {
+				part_of_sphere = yes
+				sphere_owner = {
+					pneumatic_and_hydraulics = 1
+					bessemer_process = 1
+				}
+			}
+			owner = {
+				pneumatic_and_hydraulics = 1
+				bessemer_process = 1
+			}
+		}
+	}
 
-    mean_time_to_happen = {
-        months = 8
-    }
+	mean_time_to_happen = {
+		months = 8
+	}
 
-    title = "EVTNAME999997"
-    desc = "EVTDESC999997"
+	title = "EVTNAME1109"
+	desc = "EVTDESC1109"
 
-    option = {
-        name = "EVTOPTA999997"
-        trade_goods = wool
-        # life_rate = 5
-    }
+	option = {
+		name = "EVTOPTA1109"
+		trade_goods = coal
+		# life_rate = 5
+	}
 }

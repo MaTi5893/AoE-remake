@@ -1,0 +1,23 @@
+owner = BOR
+controller = BOR
+add_core = FCA
+colonial = 2
+add_core = FOX
+trade_goods = coal
+life_rating = 35
+1700.01.02 = {
+owner = FCA
+controller = FCA
+colonial = 0
+}
+1776.01.01 = {
+owner = GBR
+controller = GBR
+colonial = 2
+}
+1783.01.01 = {
+owner = USA
+controller = USA
+add_core = USA
+remove_core = THC
+}

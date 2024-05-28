@@ -2,8 +2,8 @@ sprite = 3
 color = { 234 227 40 }
 strata = middle
 
-research_points = 3    #if max %, then 2 extra research points.
-research_optimum = 0.02    #2%
+research_points = 6    #if max %, then 2 extra research points.
+research_optimum = 0.04    #2%
 
 rebel =
 {
@@ -34,15 +34,19 @@ luxury_needs = {
     opium = 1.0
     luxury_clothes = 1
     luxury_furniture = 1
-    automobiles = 1.0
+    chinaware = 1.0
     wine = 10
     coffee = 2
+	salt = 5
+	sugar = 5
 }
 
 everyday_needs = {
     coal = 1
     liquor = 5
     regular_clothes = 5
+	salt = 1
+	sugar = 1
     furniture = 4
     paper = 5
     glass = 1

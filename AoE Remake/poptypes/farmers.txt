@@ -7,6 +7,8 @@ equivalent = labourers
 
 everyday_needs = {
     tea = 4
+	salt = 1
+	sugar = 1
     coal = 1
     liquor = 3
     regular_clothes = 1.2
@@ -25,16 +27,13 @@ life_needs = {
 
 luxury_needs = {
     regular_clothes = 3
+	salt = 2
+	sugar = 2
     furniture = 3
     liquor = 1.5
     paper = 1.0
-    #telephones = 1.0
-    automobiles = 0.5
-    #radio = 1.0
-    #fuel = 0.1
     coffee = 0.45
     tobacco = 0.95
-    #dye = 0.5
 }
 
 country_migration_target =
@@ -598,21 +597,47 @@ promote_to =
             factor = 16
             health_care = good_health_care
         }
-        modifier = {
-            factor = 4
-            safety_regulations = trinket_safety
-        }
-        modifier = {
-            factor = 8
-            safety_regulations = low_safety
-        }
-        modifier = {
-            factor = 12
-            safety_regulations = acceptable_safety
-        }
-        modifier = {
-            factor = 16
-            safety_regulations = good_safety
+		group = {
+            modifier = {
+                factor = 2
+                social_spending = 0.1
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.2
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.3
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.4
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.5
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.6
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.7
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.8
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.9
+            }
+            modifier = {
+                factor = 2
+                social_spending = 0.99
+            }
         }
         group = {
             modifier = {
@@ -853,7 +878,7 @@ promote_to =
             }
 		modifier = {
             factor = -8
-            debt_law = serfdom
+            country = { debt_law = serfdom }
         }
         group = {
             modifier = {
@@ -892,35 +917,55 @@ promote_to =
 		group = { #Noblity Influence
             modifier = {
                 factor = -3
-                safety_regulations = no_safety
-				NOT = { has_country_flag = no_craftsmen_nobility_malus }
+				country = {
+					safety_regulations = no_safety
+					NOT = { has_country_flag = no_craftsmen_nobility_malus }
+				}
             }
             modifier = {
                 factor = -1
-                safety_regulations = trinket_safety
-				NOT = { has_country_flag = no_craftsmen_nobility_malus }
+				country = {
+					safety_regulations = trinket_safety
+					NOT = { has_country_flag = no_craftsmen_nobility_malus }
+				}
             }
             modifier = {
                 factor = 0
-                safety_regulations = low_safety
+				country = {
+					safety_regulations = low_safety
+				}
             }
             modifier = {
                 factor = 1
-                safety_regulations = acceptable_safety
+				country = {
+					safety_regulations = acceptable_safety
+				}
             }
             modifier = {
                 factor = 3
-                safety_regulations = good_safety
+				country = {
+					safety_regulations = good_safety
+				}
             }
         }
 		modifier = {
 			factor = 4
-			has_country_flag = urban_army_works
+			country = {
+				has_country_flag = urban_army_works
+			}
 		}
         modifier = {
             factor = 10
             state_scope = {
                 has_factories = yes
+            }
+        }
+		modifier = {
+            factor = -10
+            NOT = {
+                location = {
+                    has_building = railroad #inf necessery
+                }
             }
         }
         modifier = {

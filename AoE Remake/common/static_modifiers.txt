@@ -119,9 +119,10 @@ nationalism = {
 }
 
 infrastructure = {
-    local_factory_throughput = 1        #each % of infra boost throughput 1%
-    local_rgo_output = 1            #each % of infra boost throughput 1%
-    supply_limit = 4
+    local_factory_throughput = 16        #each % of infra boost throughput 1%
+    local_rgo_output = 16            #each % of infra boost throughput 1%
+	life_rating = 3
+    supply_limit = 64
 }
 
 

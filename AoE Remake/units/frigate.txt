@@ -22,8 +22,9 @@ frigate = {
     build_time = 180
     build_cost = {
         clipper_convoy = 15
-        artillery = 10
-        explosives = 5
+        artillery = 5
+        explosives = 1
+		naval_supplies = 5
     }
     min_port_level = 0
     limit_per_port = -1

@@ -12,138 +12,7 @@
 
 ############# LATE GAME FACTORIES
 
-aeroplane_factory = {
-    type = factory
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        electric_gear = 600
-        steel = 600
-        cement = 600
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = aeroplane_factory
-    pop_build_factory = yes
-    advanced_factory = yes
-}
-
-barrel_factory = {
-    type = factory
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        electric_gear = 500
-        steel = 500
-        cement = 500
-    }
-
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = barrel_factory
-    pop_build_factory = yes
-    advanced_factory = yes
-}
-
-automobile_factory = {
-    type = factory
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        #electric_gear = 200
-        steel = 400
-        cement = 400
-        #livestock = 400
-        #lumber = 400
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = automobile_factory
-    pop_build_factory = yes
-    advanced_factory = yes
-}
-
-radio_factory = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        electric_gear = 200
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = radio_factory
-    pop_build_factory = yes
-    advanced_factory = yes
-}
-
-telephone_factory = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        electric_gear = 200
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = telephone_factory
-    pop_build_factory = yes
-    advanced_factory = yes
-}
-
 ############# STRATEGIC FACTORIES
-
-electric_gear_factory = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 300
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = electric_gear_factory
-    pop_build_factory = yes
-    strategic_factory = yes
-}
 
 machine_parts_factory = {
     type = factory
@@ -162,48 +31,6 @@ machine_parts_factory = {
     onmap = no
 
     production_type = machine_parts_factory
-    pop_build_factory = yes
-    strategic_factory = yes
-}
-
-synthetic_oil_factory = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 800
-        steel = 1000
-        cement = 1000
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = synthetic_oil_factory
-    pop_build_factory = yes
-    strategic_factory = yes
-}
-
-fuel_refinery = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = fuel_refinery
     pop_build_factory = yes
     strategic_factory = yes
 }
@@ -269,6 +96,26 @@ luxury_clothes_factory = {
     onmap = no
 
     production_type = luxury_clothes_factory
+    pop_build_factory = yes
+}
+
+fur_clothes_factory = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = fur_clothes_factory 
     pop_build_factory = yes
 }
 
@@ -514,6 +361,27 @@ liquor_distillery = {
     pop_build_factory = yes
 }
 
+rum_distillery = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 80
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    default_enabled = yes
+    production_type = rum_distillery 
+    pop_build_factory = yes
+}
+
 winery = {
     type = factory
     on_completion = factory
@@ -552,6 +420,25 @@ lumber_mill = {
     onmap = no
 
     production_type = lumber_mill
+    pop_build_factory = yes
+}
+
+hardwood_mill = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 20
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = hardwood_mill
     pop_build_factory = yes
 }
 
@@ -711,8 +598,8 @@ railroad = {
     max_level = 6
     province = yes
 
-    infrastructure = 0.16
-    movement_cost = -0.05
+    infrastructure = 0.01
+    movement_cost = -0.1
 
     pop_build_factory = yes
     spawn_railway_track = yes

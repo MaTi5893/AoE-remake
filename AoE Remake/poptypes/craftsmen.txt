@@ -12,6 +12,8 @@ everyday_needs = {
     coal = 1
     liquor = 3
     regular_clothes = 3
+	salt = 3
+	sugar = 1
     furniture = 3
 }
 
@@ -26,16 +28,13 @@ life_needs = {
 
 luxury_needs = {
     regular_clothes = 3
+	salt = 3
+	sugar = 3
     furniture = 3
     liquor = 1.5
     paper = 1.0
-    #telephones = 1.0
-    automobiles = 0.5
-    #radio = 1.0
-    #fuel = 0.1
     coffee = 0.45
     tobacco = 0.95
-    #dye = 0.5
 }
 
 
