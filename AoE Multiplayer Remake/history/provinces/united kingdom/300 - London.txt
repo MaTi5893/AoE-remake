@@ -10,12 +10,22 @@ fort = 1
 #}
 state_building = {
     level = 2
-    building = furniture_factory
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = machine_parts_factory
     upgrade = yes
 }
 state_building = {
     level = 1
     building = hardwood_mill
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = clipper_shipyard
     upgrade = yes
 }
 state_building = {
@@ -30,17 +40,7 @@ state_building = {
 }
 state_building = {
     level = 2
-    building = clipper_shipyard
-    upgrade = yes
-}
-state_building = {
-    level = 1
-    building = artillery_factory
-    upgrade = yes
-}
-state_building = {
-    level = 2
-    building = machine_parts_factory
+    building = furniture_factory
     upgrade = yes
 }
 1756.01.01 = {

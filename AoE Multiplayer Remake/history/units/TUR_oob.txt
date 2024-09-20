@@ -116,7 +116,7 @@ army = {
 
 	regiment = {
 		name = "2. Sipahis"
-		type = infantry
+		type = hussar
 		home = 814
 	}
 
@@ -130,30 +130,6 @@ army = {
 		name = "4. Sipahis"
 		type = infantry
 		home = 674
-	}
-
-	regiment = {
-		name = "5. Sipahis"
-		type = infantry
-		home = 674
-	}
-
-	regiment = {
-		name = "1. Piyade Tümeni"
-		type = engineer
-		home = 809
-	}
-
-	regiment = {
-		name = "2. Piyade Tümeni"
-		type = engineer
-		home = 809
-	}
-
-	regiment = {
-		name = "3. Redif Izmir"
-		type = engineer
-		home = 809
 	}
 
 	regiment = {
@@ -201,18 +177,6 @@ army = {
 		type = engineer
 		home = 889
 	}
-
-	regiment = {
-		name = "2. Redif Kars"
-		type = engineer
-		home = 880
-	}
-
-	regiment = {
-		name = "3. Redif Trabzon"
-		type = engineer
-		home = 888
-	}
 	
 	regiment = {
 		name = "4. Redif Trabzon"
@@ -256,7 +220,7 @@ army = {
 	
 	regiment = {
 		name = "2. Janissary Tümeni"
-		type = engineer
+		type = artillery
 		home = 834
 	}
 
@@ -273,7 +237,7 @@ army = {
 
 	regiment = {
 		name = "5. Sipahis"
-		type = infantry
+		type = hussar
 		home = 798
 	}
 
@@ -299,18 +263,6 @@ army = {
 		name = "11. Piyade Tümeni"
 		type = engineer
 		home = 849
-	}
-
-	regiment = {
-		name = "1. Redif Diyarbakir"
-		type = engineer
-		home = 849
-	}
-
-	regiment = {
-		name = "2. Redif Diyarbakir"
-		type = engineer
-		home = 794
 	}
 
 	regiment = {
@@ -402,33 +354,9 @@ army = {
 	}
 
 	regiment = {
-		name = "10. Piyade Tümeni"
-		type = infantry
-		home = 1762
-	}
-
-	regiment = {
 		name = "11. Piyade Tümeni"
 		type = engineer
 		home = 1745
-	}
-
-	regiment = {
-		name = "1. Redif Diyarbakir"
-		type = engineer
-		home = 1861
-	}
-
-	regiment = {
-		name = "2. Redif Diyarbakir"
-		type = engineer
-		home = 1151
-	}
-
-	regiment = {
-		name = "3. Redif Diyarbakir"
-		type = engineer
-		home = 882
 	}
 
 	regiment = {
@@ -458,12 +386,6 @@ army = {
 		name = "6. Sipahis"
 		type = cuirassier
 		home = 834
-	}
-
-	regiment = {
-		name = "9. Piyade Tümeni"
-		type = infantry
-		home = 876
 	}
 
 	regiment = {

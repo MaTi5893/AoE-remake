@@ -112,7 +112,7 @@ army = {
     regiment = {
         name= "1. Granaderos del Rey"
         type = infantry
-        home = 477
+        home = 492
     }
 
     regiment = {
@@ -166,7 +166,7 @@ army = {
     regiment = {
         name= "5. Artilleria del Rey"
         type = artillery
-        home = 487
+        home = 503
     }
 }
 
@@ -194,7 +194,7 @@ army = {
     regiment = {
         name= "4. Granaderos del Rey"
         type = infantry
-        home = 387
+        home = 1455
     }
 	
 	regiment = {
@@ -218,7 +218,7 @@ army = {
     regiment = {
         name= "3. Artilleria del Rey"
         type = engineer
-        home = 1463
+        home = 1460
     }
 
     regiment = {
@@ -300,7 +300,7 @@ army = {
 
 army = {
     name = "Ejército del Ciudad Mejico"
-    location = 2172
+    location = 2162
     regiment = {
         name= "1.Oajaca y Tlaxcala"
         type = hussar
@@ -325,30 +325,6 @@ army = {
         home = 2146
     }
 
-    regiment = {
-        name= "2.Division Comonfort"
-        type = infantry
-        home = 2183
-    }
-	
-	regiment = {
-        name= "1.Oajaca y Tlaxcala"
-        type = engineer
-        home = 2166
-    }
-
-    regiment = {
-        name= "2.Oajaca y Tlaxcala"
-        type = engineer
-        home = 2173
-    }
-
-    regiment = {
-        name= "3.Oajaca y Tlaxcala"
-        type = engineer
-        home = 1460
-    }
-	
     regiment = {
         name= "1.Division Comonfort"
         type = engineer
@@ -390,18 +366,6 @@ army = {
     }
 
     regiment = {
-        name= "2.Division Comonfort"
-        type = infantry
-        home = 2264
-    }
-	
-	regiment = {
-        name= "1.Oajaca y Tlaxcala"
-        type = engineer
-        home = 1455
-    }
-
-    regiment = {
         name= "2.Oajaca y Tlaxcala"
         type = engineer
         home = 1455
@@ -412,18 +376,7 @@ army = {
         type = engineer
         home = 2348
     }
-	
-    regiment = {
-        name= "1.Division Comonfort"
-        type = engineer
-        home = 2324
-    }
 
-    regiment = {
-        name= "2.Division Comonfort"
-        type = engineer
-        home = 512
-    }
 }
 
 army = {
@@ -450,37 +403,13 @@ army = {
     regiment = {
         name= "1.Division Comonfort"
         type = infantry
-        home = 2310
-    }
-
-    regiment = {
-        name= "2.Division Comonfort"
-        type = infantry
         home = 2369
-    }
-	
-	regiment = {
-        name= "1.Oajaca y Tlaxcala"
-        type = engineer
-        home = 492
-    }
-
-    regiment = {
-        name= "2.Oajaca y Tlaxcala"
-        type = engineer
-        home = 492
     }
 
     regiment = {
         name= "3.Oajaca y Tlaxcala"
         type = engineer
         home = 2344
-    }
-	
-    regiment = {
-        name= "1.Division Comonfort"
-        type = engineer
-        home = 503
     }
 
     regiment = {
@@ -508,7 +437,7 @@ army = {
     regiment = {
         name= "2.Division Comonfort"
         type = infantry
-        home = 381
+        home = 498
     }
 	
 	regiment = {

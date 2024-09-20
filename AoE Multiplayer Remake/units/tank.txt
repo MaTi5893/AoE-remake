@@ -10,7 +10,7 @@ tank = {    # Heavy Artillery
 
     #Core Abilities
     priority = 50
-    max_strength = 2
+    max_strength = 3
     default_organisation = 175
     maximum_speed = 2.0
     weighted_value = 12.0
@@ -37,8 +37,8 @@ tank = {    # Heavy Artillery
     attack = 4
     defence = 3
     discipline = 1
-    support = 1.5
+    support = 2
     maneuver = 2
-    siege = 1.2
+    siege = 1.25
 
 }

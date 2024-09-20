@@ -28,15 +28,15 @@ ironclad = { #Three-decker
 		explosives = 4
     }
     min_port_level = 3
-    limit_per_port = 6
-    supply_consumption_score = 0
+    limit_per_port = 8
+    supply_consumption_score = 5
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 0.45  #24 warship
-		clipper_convoy = 0.35
-        artillery = 0.4
-		canned_food = 0.8
+        steamer_convoy = 0.35  #24 warship
+	clipper_convoy = 0.24
+        artillery = 0.32
+	canned_food = 0.8
     }
 
     #Naval Abilties

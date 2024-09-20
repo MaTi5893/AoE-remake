@@ -8,7 +8,7 @@ engineer = {
 
     #Core Abilities
     priority = 15
-    max_strength = 2
+    max_strength = 3
     default_organisation = 250
     maximum_speed = 4.00
     weighted_value = 3.0
@@ -30,19 +30,19 @@ engineer = {
     supply_consumption = 1.0
     supply_cost = {
         small_arms = 0.012 #0.01
-        ammunition = 0.1 # 0
-        canned_food = 0.06 # 0.02
-		artillery = 0.03 #0.004
+        ammunition = 0.06 # 0
+        canned_food = 0.04 # 0.02
+	artillery = 0.03 #0.004
         explosives = 0.02
     }
 
 
     #Land Abilties
     reconnaissance = 0
-    attack = 3
-    defence = 2
+    attack = 1.5
+    defence = 1.5
     discipline = 0.75
-    support = 0.8
+    support = 1.25
     maneuver = 2
     siege = 1
 }

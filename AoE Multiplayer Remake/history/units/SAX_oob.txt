@@ -30,12 +30,6 @@ army = {
     }
 
     regiment = {
-        name= "4th Artillery"
-        type = engineer
-        home = 558
-    }
-
-    regiment = {
         name= "5th Artillery"
         type = artillery
         home = 558
@@ -64,47 +58,6 @@ army = {
         type = infantry
         home = 556
     }
-}
-
-army = {
-    name = "2nd Army"
-    location = 556
-    regiment = {
-        name= "1st hussar"
-        type = hussar
-        home = 556
-    }
-
-    regiment = {
-        name= "1st Artillery"
-        type = engineer
-        home = 556
-    }
-
-    regiment = {
-        name= "2nd Artillery"
-        type = engineer
-        home = 558
-    }
-
-    regiment = {
-        name= "3rd Artillery"
-        type = engineer
-        home = 556
-    }
-
-    regiment = {
-        name= "4th Infantry"
-        type = infantry
-        home = 556
-    }
-
-    regiment = {
-        name= "1st Infantry"
-        type = infantry
-        home = 556
-    }
-
 }
 
 leader = {

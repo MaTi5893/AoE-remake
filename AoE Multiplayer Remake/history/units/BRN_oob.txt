@@ -242,11 +242,6 @@ army = {
 army = {
     name = "II. Armee-Korps"
     location = 680
-    regiment = {
-        name= "III. Artilleriebrigade"
-        type = engineer
-        home = 553
-    }
 
     regiment = {
         name= "I. Artilleriebrigade"
@@ -257,13 +252,13 @@ army = {
     regiment = {
         name= "II. Artilleriebrigade"
         type = artillery
-        home = 582
+        home = 553
     }
 	
 	regiment = {
         name= "IV. Artilleriebrigade"
         type = artillery
-        home = 582
+        home = 553
     }
 	
 	regiment = {
@@ -293,49 +288,9 @@ army = {
 	regiment = {
         name= "III. Infantry"
         type = infantry
-        home = 695
-    }
-	
-	regiment = {
-        name= "IV. Infantry"
-        type = infantry
-        home = 695
-    }
-
-}
-
-army = {
-    name = "III Army"
-    location = 553
-    regiment = {
-        name= "1. Artilleriebrigade"
-        type = artillery
         home = 553
     }
 
-    regiment = {
-        name= "2. Artilleriebrigade"
-        type = artillery
-        home = 553
-    }
-
-	regiment = {
-        name= "I. Infantry"
-        type = infantry
-        home = 553
-    }
-	
-	regiment = {
-        name= "II. Infantry"
-        type = infantry
-        home = 553
-    }
-	
-    regiment = {
-        name= "1. Cruissier"
-        type = cuirassier
-        home = 549
-    }
 }
 
 navy = {

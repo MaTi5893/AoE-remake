@@ -26,13 +26,13 @@ monitor = { #Razee
         explosives = 2
     }
     min_port_level = 3
-    limit_per_port = -1
-    supply_consumption_score = 0
+    limit_per_port = 10
+    supply_consumption_score = 4
 
     supply_consumption = 1.0
     supply_cost = {
         steamer_convoy = 0.25 #21
-		clipper_convoy = 0.75 #21
+	clipper_convoy = 0.4 #21
         artillery = 0.2      #10
         canned_food = 0.4     #2  total 33
     }

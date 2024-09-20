@@ -27,12 +27,12 @@ frigate = {
     }
     min_port_level = 0
     limit_per_port = -1
-    supply_consumption_score = 0
+    supply_consumption_score = 1
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.26 #0.16
-        artillery = 0.06 #0.08
+        clipper_convoy = 0.16 #0.16
+        artillery = 0.08 #0.08
     }
 
     #Naval Abilties

@@ -144,60 +144,8 @@ army = {
 }
 
 army = {
-    name = "Army of Marrakesh"
-    location = 1715
-	
-	regiment = {
-        name= "7. Infantry Brigade 'Dawi Mani'"
-        type = infantry
-        home = 1693
-    }
-
-    regiment = {
-        name= "8. Infantry Brigade 'Sahrawi'"
-        type = infantry
-        home = 1685
-    }
-	
-	regiment = {
-        name= "2. Sphahi Brigade"
-        type = cuirassier
-        home = 1688
-    }
-	
-	regiment = {
-        name= "10. Infantry Brigade"
-        type = infantry
-        home = 1688
-    }
-
-    regiment = {
-        name= "11. Infantry Brigade"
-        type = infantry
-        home = 1693
-    }
-
-    regiment = {
-        name= "12. Artillery Brigade"
-        type = engineer
-        home = 1693
-    }
-}
-
-army = {
     name = "Army of Timbuktu"
     location = 1802
-    regiment = {
-        name= "1. Infantry Brigade"
-        type = irregular
-        home = 1802
-    }
-
-    regiment = {
-        name= "2. Infantry Brigade"
-        type = irregular
-        home = 1802
-    }
 
     regiment = {
         name= "3. Infantry Brigade"

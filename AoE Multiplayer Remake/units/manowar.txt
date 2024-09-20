@@ -30,11 +30,11 @@ manowar = { #Two-Decker
     }
     min_port_level = 2
     limit_per_port = -1
-    supply_consumption_score = 0
+    supply_consumption_score = 2
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.32 #0.24
+        clipper_convoy = 0.24 #0.24
         artillery = 0.1 #0.16
     }
 

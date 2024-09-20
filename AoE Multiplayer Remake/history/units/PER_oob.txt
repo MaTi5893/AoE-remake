@@ -37,17 +37,6 @@ leader = {
 army = {
     name = "Army of Isfahan"
     location = 1127
-    regiment = {
-        name= "1. Artillery Brigade"
-        type = engineer
-        home = 1127
-    }
-
-    regiment = {
-        name= "2. Artillery Brigade"
-        type = engineer
-        home = 1127
-    }
 
     regiment = {
         name= "3. Artillery Brigade"
@@ -111,24 +100,6 @@ army = {
         name= "5. Bakhsh-i Piyadenizam"
         type = engineer
         home = 1214
-    }
-
-    regiment = {
-        name= "6. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1214
-    }
-
-    regiment = {
-        name= "7. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1214
-    }
-
-    regiment = {
-        name= "8. Bakhsh-i Piyadenizam"
-        type = artillery
-        home = 1147
     }
 
     regiment = {
@@ -207,24 +178,6 @@ army = {
         home = 1108
     }
 
-    regiment = {
-        name= "13. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1108
-    }
-
-    regiment = {
-        name= "14. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1121
-    }
-
-    regiment = {
-        name= "15 Bakhsh-i Piyadenizam"
-        type = artillery
-        home = 1121
-    }
-
 }
 
 army = {
@@ -239,24 +192,6 @@ army = {
     regiment = {
         name= "5. Bakhsh-i Piyadenizam"
         type = engineer
-        home = 1221
-    }
-
-    regiment = {
-        name= "6. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1221
-    }
-
-    regiment = {
-        name= "7. Bakhsh-i Piyadenizam"
-        type = engineer
-        home = 1221
-    }
-
-    regiment = {
-        name= "8. Bakhsh-i Piyadenizam"
-        type = artillery
         home = 1221
     }
 
@@ -278,15 +213,4 @@ army = {
         home = 1142
     }
 
-    regiment = {
-        name= "18. Bakhsh-i Piyadenizam"
-        type = infantry
-        home = 1142
-    }
-	
-	regiment = {
-        name= "19. Bakhsh-i Piyadenizam"
-        type = infantry
-        home = 1127
-    }
 }

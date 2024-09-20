@@ -184,8 +184,21 @@ promotion_chance =
 			OR = {
 				slavery = yes_slavery 
 				slavery = recompensation_period
-				debt_law = serfdom
 			}
+		}
+	}
+	modifier = {
+		factor = -0.15
+		country = { 
+			NOT = { primary_culture = russian }
+			debt_law = serfdom
+		}
+	}
+	modifier = {
+		factor = -0.3
+		country = { 
+			primary_culture = russian
+			debt_law = serfdom
 		}
 	}
     modifier = {
@@ -491,6 +504,11 @@ migration_chance =
 		}
     }
 
+	modifier = {
+        factor = -0.5
+		NOT = { location = { continent = asia } }
+    }
+	
     group = {
         modifier = {
             factor = 0.1
@@ -565,7 +583,7 @@ colonialmigration_chance =
             NOT = { location = { controlled_by = owner } }
         }
     }
-
+	
     modifier = {
         factor = 0.02
         country = { penal_system = colonial_transportation }
@@ -1725,11 +1743,11 @@ conversion_chance =
     }
 	group = {
 		modifier = {
-			factor = 1
+			factor = 2
 			country = { wage_reform = no_minimum_wage }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 1.5
 			country = { wage_reform = trinket_wage }
 		}
 	}

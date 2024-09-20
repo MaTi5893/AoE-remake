@@ -193,35 +193,38 @@ party_issues = {
     }
     estate_affiliation = {
         absolutist = {
-            max_social_spending = 0.5
+            max_social_spending = 1
             core_pop_consciousness_modifier = -0.1
             core_pop_militancy_modifier = -0.16
         }
         nobility_church = {
-			max_social_spending = 0.5
+			max_social_spending = 1
         }
 		nobility_gentry = {
-			max_social_spending = 0.75
+			max_social_spending = 1
 			min_social_spending = 0.2
         }
 		gentry_burghers = {
+			max_social_spending = 1
 			min_social_spending = 0.5
         }
 		nobility_army = {
-			max_social_spending = 0.5
+			max_social_spending = 1
 			min_military_spending = 0.25
         }
 		gentry_army= {
+			max_social_spending = 1
 			min_social_spending = 0.25
 			min_military_spending = 0.25
         }
 		church_army = {
+			max_social_spending = 1
 			min_social_spending = 0.25
 			min_military_spending = 0.25
 		}
         no_affiliation = {
-		
-        }
+			max_social_spending = 1
+        }	
 
     }
 }
