@@ -1,0 +1,18 @@
+owner = ENL
+controller = ENL
+add_core = THC
+#add_core = CHE
+trade_goods = tobacco
+life_rating = 35
+1756.01.01 = {
+owner = THC
+controller = THC
+add_core = THC
+colonial = 0
+}
+1783.01.01 = {
+owner = USA
+controller = USA
+add_core = USA
+remove_core = THC
+}

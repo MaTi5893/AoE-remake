@@ -1,0 +1,27 @@
+owner = ENL
+controller = ENL
+add_core = ENL
+trade_goods = fish
+life_rating = 40
+railroad = 1
+state_building = {
+    level = 2
+    building = fabric_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = steel_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = regular_clothes_factory
+    upgrade = yes
+}
+naval_base = 2
+1756.01.01 = {
+owner = GBR
+controller = GBR
+add_core = GBR
+}

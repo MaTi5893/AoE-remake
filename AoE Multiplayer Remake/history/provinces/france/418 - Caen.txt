@@ -4,11 +4,21 @@ add_core = BOR
 trade_goods = cotton
 life_rating = 35
 naval_base = 2
-#state_building = {
-#    level = 1
-#    building = regular_clothes_factory
-#    upgrade = yes
-#}
+state_building = {
+    level = 2
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = regular_clothes_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = ammunition_factory
+    upgrade = yes
+}
 1700.1.1 = {
     state_building = {
         level = 1

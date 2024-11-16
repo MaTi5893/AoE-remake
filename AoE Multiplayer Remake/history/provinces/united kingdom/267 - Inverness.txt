@@ -4,6 +4,11 @@ add_core = SCO
 trade_goods = sulphur
 life_rating = 35
 naval_base = 1
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
 1756.01.01 = {
 owner = GBR
 controller = GBR

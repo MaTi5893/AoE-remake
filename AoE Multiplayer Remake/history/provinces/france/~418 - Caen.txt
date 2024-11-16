@@ -1,0 +1,29 @@
+owner = BOR
+controller = BOR
+add_core = BOR
+trade_goods = cotton
+life_rating = 35
+naval_base = 2
+#state_building = {
+#    level = 1
+#    building = regular_clothes_factory
+#    upgrade = yes
+#}
+1700.1.1 = {
+    state_building = {
+        level = 1
+        building = clipper_shipyard
+        upgrade = yes
+    }
+    state_building = {
+    level = 1
+    building = hardwood_mill
+    upgrade = yes
+    }
+}
+1792.01.01 = {
+owner = FRA
+controller = FRA
+add_core = FRA
+remove_core = BOR
+}

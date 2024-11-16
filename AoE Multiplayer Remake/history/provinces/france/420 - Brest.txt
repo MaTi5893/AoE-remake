@@ -5,11 +5,26 @@ add_core = BRT
 trade_goods = grain
 life_rating = 35
 naval_base = 2
-#state_building = {
-#    level = 1
-#    building = lumber_mill
-#    upgrade = yes
-#}
+state_building = {
+    level = 1
+    building = luxury_clothes_factory
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = small_arms_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
 1792.01.01 = {
 owner = FRA
 controller = FRA

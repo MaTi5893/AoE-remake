@@ -5,6 +5,16 @@ add_core = GER
 trade_goods = precious_metal
 life_rating = 40
 fort = 1
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = steel_factory
+    upgrade = yes
+}
 1756.01.01 = {
 owner = PRU
 controller = PRU

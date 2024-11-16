@@ -1,0 +1,17 @@
+owner = PRU
+controller = PRU
+add_core = PRU
+add_core = GER
+trade_goods = precious_metal
+life_rating = 40
+fort = 1
+1756.01.01 = {
+owner = PRU
+controller = PRU
+add_core = PRU
+}
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}

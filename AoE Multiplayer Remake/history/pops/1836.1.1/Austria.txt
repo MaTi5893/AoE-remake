@@ -287,7 +287,7 @@
     bureaucrats = {
         culture = south_german
         religion = catholic
-        size = 1400
+        size = 2400
     }
 
     officers = {
@@ -302,6 +302,12 @@
         size = 2750
     }
 
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 56000
+	}
+	
     artisans = {
         culture = south_german
         religion = catholic

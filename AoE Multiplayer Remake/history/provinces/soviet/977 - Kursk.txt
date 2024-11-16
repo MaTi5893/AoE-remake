@@ -1,5 +1,23 @@
-owner = TOR controller = TOR add_core = TOR trade_goods = grain
+owner = TOR 
+controller = TOR 
+add_core = TOR 
+trade_goods = grain
 life_rating = 35
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = regular_clothes_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
 1756.01.01 = {
 owner = RUS
 controller = RUS

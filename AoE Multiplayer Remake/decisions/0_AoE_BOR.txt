@@ -73,7 +73,7 @@ political_decisions = {
 			NOT = { has_country_flag = reigned_in_the_paris_parlement }
 		}
 		allow = {
-			money = 1000000
+			money = 750000
 			nationalism_n_imperialism = 1
 			FRA_461 = { NOT = { has_province_modifier = parlement_resistance } } #Languedoc
 			FRA_451 = { NOT = { has_province_modifier = parlement_resistance } } #Rhone
@@ -96,7 +96,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = reigned_in_the_paris_parlement
-			money = -1000000
+			money = -750000
 			FRA_425 = { any_owned_province = { remove_province_modifier = parlement_resistance } }
 			random_owned = {
 				limit = {
@@ -481,7 +481,7 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			money = 2000000
+			money = 1000000
 			owns = 139
 			owns = 142
 			owns = 65
@@ -493,7 +493,7 @@ political_decisions = {
 				name = investing_in_new_france
 				duration = 3650
 			}
-			money = -500000
+			money = -750000
 			set_country_flag = secured_fr_na
 		}
 	}

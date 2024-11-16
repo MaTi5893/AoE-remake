@@ -3,6 +3,16 @@ controller = SPA
 add_core = NAP
 add_core = ITA
 trade_goods = fruit
+state_building = {
+    level = 1
+    building = clipper_shipyard
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = explosives_factory
+    upgrade = yes
+}
 life_rating = 35
 1756.01.01 = {
 owner = SPC

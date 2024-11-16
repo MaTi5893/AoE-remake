@@ -19,4 +19,14 @@ state_building = {
     building = canned_food_factory
     upgrade = yes
 }
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = liquor_distillery
+    upgrade = yes
+}
 fort = 2

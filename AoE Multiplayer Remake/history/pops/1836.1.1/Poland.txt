@@ -278,11 +278,17 @@
     }
 
     bureaucrats = {
-        culture = north_german
-        religion = protestant
-        size = 3200
+        culture = south_german
+        religion = catholic
+        size = 2300
     }
 
+	bureaucrats = {
+        culture = north_german
+        religion = protestant
+        size = 1200
+    }
+	
     officers = {
         culture = north_german
         religion = protestant
@@ -310,7 +316,7 @@
     craftsmen = {
         culture = north_german
         religion = protestant
-        size = 15000
+        size = 38000
     }
 
     artisans = {
@@ -1831,6 +1837,12 @@
         size = 925
     }
 
+	craftsmen = {
+        culture = polish
+        religion = catholic
+        size = 33000
+    }
+	
     artisans = {
         culture = polish
         religion = catholic
@@ -2481,6 +2493,12 @@
         size = 1500
     }
 
+	craftsmen = {
+        culture = polish
+        religion = catholic
+        size = 31000
+    }
+	
     artisans = {
         culture = polish
         religion = catholic
@@ -2893,6 +2911,12 @@
         size = 1100
     }
 
+	craftsmen = {
+        culture = polish
+        religion = catholic
+        size = 8250
+    }
+	
     artisans = {
         culture = polish
         religion = catholic

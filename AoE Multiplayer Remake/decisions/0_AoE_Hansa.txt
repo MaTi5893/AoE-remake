@@ -10,7 +10,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            money = 250000
+            money = 120000
         }
         effect = {
             set_country_flag = leader_of_hansa
@@ -19,7 +19,7 @@ political_decisions = {
             all_core = {
                 add_core = NGF
             }
-            treasury = -200000
+            treasury = -100000
             prestige = 15
         }
         ai_will_do = { factor = 1 }
@@ -457,6 +457,7 @@ political_decisions = {
             create_alliance = THU
             badboy = 5
             prestige = 25
+			money = -100000
             set_country_flag = big_sorbia
         }
         ai_will_do = {

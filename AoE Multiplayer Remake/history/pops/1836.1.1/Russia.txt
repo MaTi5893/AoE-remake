@@ -288,6 +288,12 @@
         size = 50
     }
 
+	craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 29000
+    }
+	
     artisans = {
         culture = ukrainian
         religion = orthodox
@@ -1932,11 +1938,17 @@
     }
 
     bureaucrats = {
-        culture = russian
+        culture = finnish
         religion = orthodox
-        size = 1732
+        size = 1132
     }
 
+	bureaucrats = {
+        culture = russian
+        religion = orthodox
+        size = 832
+    }
+	
     officers = {
         culture = russian
         religion = orthodox
@@ -1949,6 +1961,12 @@
         size = 1188
     }
 
+	craftsmen = {
+        culture = finnish
+        religion = orthodox
+        size = 39900
+    }
+	
     artisans = {
         culture = russian
         religion = orthodox
@@ -2504,7 +2522,7 @@
 }
 #Novgorod Region (1532000)
 #under the rule of Russia in 1836
-#Novgorod (240000/60000 POPS)
+#Kholm (240000/60000 POPS)
 1003 = {
     aristocrats = {
         culture = russian
@@ -2558,6 +2576,68 @@
         culture = ashkenazi
         religion = jewish
         size = 490
+    }
+}
+#Novgorod (16000/4000 POPS)
+1739 = {
+    aristocrats = {
+        culture = russian
+        religion = orthodox
+        size = 475
+    }
+
+    clergymen = {
+        culture = russian
+        religion = orthodox
+        size = 275
+    }
+
+	craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 29000
+    }
+	
+    artisans = {
+        culture = russian
+        religion = orthodox
+        size = 1400
+    }
+
+    soldiers = {
+        culture = russian
+        religion = orthodox
+        size = 1100
+    }
+
+    farmers = {
+        culture = russian
+        religion = orthodox
+        size = 45850
+    }
+
+    clergymen = {
+        culture = ugrian
+        religion = orthodox
+        size = 25
+    }
+
+    artisans = {
+        culture = ugrian
+        religion = orthodox
+        size = 100
+    }
+
+    soldiers = {
+        culture = ugrian
+        religion = orthodox
+        size = 25
+    }
+
+    farmers = {
+        culture = ugrian
+        religion = orthodox
+        size = 1850
     }
 }
 #Tikhvin (156000/44000 POPS)
@@ -2800,6 +2880,12 @@
         size = 1550
     }
 
+	craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 82000
+    }
+	
     artisans = {
         culture = russian
         religion = orthodox
@@ -2892,6 +2978,12 @@
         size = 1400
     }
 
+	craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 29000
+    }
+	
     artisans = {
         culture = russian
         religion = orthodox
@@ -4736,6 +4828,12 @@
         size = 300
     }
 
+	craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 14900
+    }
+	
     artisans = {
         culture = russian
         religion = orthodox

@@ -4,6 +4,21 @@ add_core = BOR
 trade_goods = fish
 life_rating = 35
 naval_base = 2
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = winery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = regular_clothes_factory
+    upgrade = yes
+}
 1792.01.01 = {
 owner = FRA
 controller = FRA

@@ -45,6 +45,12 @@
         size = 260
     }
 
+	craftsmen = {
+        culture = scottish
+        religion = protestant
+        size = 7500
+    }
+	
     clergymen = {
         culture = scottish
         religion = protestant
@@ -280,7 +286,7 @@
     craftsmen = {
         culture = scottish
         religion = protestant
-        size = 11500
+        size = 37500
     }
 
     artisans = {
@@ -416,9 +422,9 @@
     }
 
     craftsmen = {
-        culture = british
+        culture = welsh
         religion = protestant
-        size = 1100
+        size = 18100
     }
 
     artisans = {
@@ -602,13 +608,13 @@
     clerks = {
         culture = british
         religion = protestant
-        size = 1750
+        size = 4750
     }
 
     craftsmen = {
         culture = british
         religion = protestant
-        size = 30000
+        size = 62000
     }
 
     artisans = {
@@ -880,7 +886,12 @@
         size = 750
     }
 
-
+	craftsmen = {
+        culture = british
+        religion = protestant
+        size = 12750
+    }
+	
     artisans = {
         culture = british
         religion = protestant
@@ -1269,7 +1280,7 @@
     craftsmen = {
         culture = british
         religion = protestant
-        size = 5000
+        size = 38000
     }
 
     artisans = {
@@ -1385,7 +1396,7 @@
     craftsmen = {
         culture = british
         religion = protestant
-        size = 3200
+        size = 18200
     }
 
     clergymen = {
@@ -1435,7 +1446,7 @@
     craftsmen = {
         culture = british
         religion = protestant
-        size = 6500
+        size = 16500
     }
 
     soldiers = {
@@ -1609,7 +1620,7 @@
     craftsmen = {
         culture = british
         religion = protestant
-        size = 7000
+        size = 36000
     }
 
     artisans = {
@@ -1787,19 +1798,19 @@
     capitalists = {
         culture = british
         religion = protestant
-        size = 2500
+        size = 3500
     }
 
     clerks = {
         culture = british
         religion = protestant
-        size = 6000
+        size = 9000
     }
 
     craftsmen = {
         culture = british
         religion = protestant
-        size = 119000
+        size = 159000
     }
 
     artisans = {

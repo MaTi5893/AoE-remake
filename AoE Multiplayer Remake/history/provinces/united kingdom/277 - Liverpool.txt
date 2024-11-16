@@ -19,6 +19,11 @@ state_building = {
     building = regular_clothes_factory
     upgrade = yes
 }
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
 naval_base = 2
 1756.01.01 = {
 owner = GBR

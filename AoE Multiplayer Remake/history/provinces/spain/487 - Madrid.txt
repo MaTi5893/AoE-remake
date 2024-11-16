@@ -3,16 +3,36 @@ controller = SPA
 add_core = SPA
 trade_goods = cattle
 life_rating = 40
-#state_building = {
-#    level = 1
-#    building = ammunition_factory
-#    upgrade = yes
-#}
-#state_building = {
-#    level = 1
-#    building = small_arms_factory
-#    upgrade = yes
-#}
+state_building = {
+    level = 1
+    building = ammunition_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = small_arms_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = steel_factory
+    upgrade = yes
+}
 1756.01.01 = {
 owner = SPC
 controller = SPC

@@ -8,6 +8,16 @@ state_building = {
     building = artillery_factory
     upgrade = yes
 }
+state_building = {
+    level = 1
+    building = winery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = regular_clothes_factory
+    upgrade = yes
+}
 1792.01.01 = {
 owner = FRA
 controller = FRA
