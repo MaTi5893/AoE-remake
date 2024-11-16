@@ -21,34 +21,34 @@ country_event = {
         set_global_flag = money_setup
 
         BOR = {
-            treasury = 150000
+            treasury = 350000
         }
         SPA = {
-            treasury = 120000
+            treasury = 220000
         }
         ENL = {
-            treasury = 150000
+            treasury = 350000
         }
         AUS = {
-            treasury = 120000
+            treasury = 220000
         }
         SWE = {
-            treasury = 100000
+            treasury = 200000
         }
         TOR = {
-            treasury = 100000
+            treasury = 200000
         }
         TUR = {
-            treasury = 100000
+            treasury = 200000
         }
         PRU = {
-            treasury = 100000
+            treasury = 200000
         }
         PLC = {
-            treasury = 100000
+            treasury = 200000
         }
 		NET = {
-            treasury = 100000
+            treasury = 200000
         }
         any_country = {
             limit = {
@@ -66,7 +66,7 @@ country_event = {
                 is_secondary_power = no
                 is_greater_power = no
             }
-            treasury = 50000
+            treasury = 80000
         }
     }
 }

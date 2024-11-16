@@ -4,7 +4,7 @@ guiTypes = {
 		name = "topbar"
 		backGround=""
 		position = { x=0 y=0 }	
-		size = { x=2048 y=100 }
+		size = { x=2048 y=170 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -913,7 +913,7 @@ guiTypes = {
 			#allwaystransparent = yes
 		}
 		instantTextBoxType = {
-			position = { x = 924 y = 6055 }
+			position = { x = 924 y = 55 }
 			name = "military_navy_value"
 			font = "Arial12"
 			borderSize = { x = 0 y = 0 }

@@ -719,9 +719,9 @@ fort = {
     {
         lumber = 600
         cement = 400
-        explosives = 200
-        small_arms = 200
-        artillery = 180
+        explosives = 300
+        small_arms = 300
+        artillery = 280
     }
     time = 365
     visibility = yes
@@ -739,9 +739,9 @@ naval_base = {
     {
         timber = 800
         lumber = 600
-        cement = 500
-        steel = 400
-        machine_parts = 50
+        cement = 800
+        steel = 800
+        machine_parts = 250
     }
     time = 400
     naval_capacity = 1
@@ -753,7 +753,7 @@ naval_base = {
     colonial_points = { 30 50 70 90 95 100 } #points at levels 1-6
     province = yes
     one_per_state = yes
-    colonial_range = 50
+    colonial_range = 20
     local_ship_build = -0.05
 }
 
@@ -761,9 +761,9 @@ railroad = {
     type = infrastructure
     goods_cost =
     {
-        timber = 100
-        cement = 100
-        steel = 100
+        timber = 300
+        cement = 200
+        steel = 200
     }
     time = 365
     visibility = yes
