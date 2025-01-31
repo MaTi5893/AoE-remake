@@ -798,6 +798,13 @@ coffee_plantation = {
     farm = yes
 }
 
+sugar_plantation = {
+    template = RGO_template_farmers
+    output_goods = sugar
+    value = 2.8
+    farm = yes
+}
+
 cotton_plantation = {
     template = RGO_template_farmers
     output_goods = cotton
