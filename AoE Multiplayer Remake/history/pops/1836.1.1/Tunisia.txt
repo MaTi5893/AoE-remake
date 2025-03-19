@@ -47,18 +47,24 @@
     soldiers = {
         culture = maghrebi
         religion = sunni
-        size = 8000
+        size = 3000
+    }
+
+    soldiers = {
+        culture = maghrebi
+        religion = sunni
+        size = 1000
     }
 
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 76425
+        size = 71425
     }
 
     slaves = {
-        culture = bantu
-        religion = animist
+        culture = berber
+        religion = sunni
         size = 5000
     }
 
@@ -75,9 +81,15 @@
     }
 
     artisans = {
-        culture = maltese
+        culture = south_italian
         religion = catholic
-        size = 500
+        size = 450
+    }
+
+	artisans = {
+        culture = catalan
+        religion = catholic
+        size = 50
     }
 
     artisans = {
@@ -115,25 +127,19 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 58575
+        size = 50575
     }
 
     slaves = {
-        culture = bantu
-        religion = animist
+        culture = berber
+        religion = sunni
         size = 2000
-    }
-
-    clergymen = {
-        culture = sephardic
-        religion = jewish
-        size = 5
     }
 
     artisans = {
         culture = sephardic
         religion = jewish
-        size = 245
+        size = 250
     }
 }
 #Gafsa (112000/28000 POPS)
@@ -165,12 +171,18 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 22025
+        size = 20000
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 12025
     }
 
     slaves = {
-        culture = bantu
-        religion = animist
+        culture = berber
+        religion = sunni
         size = 3000
     }
 }
@@ -203,12 +215,12 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 40225
+        size = 36225
     }
 
     slaves = {
-        culture = bantu
-        religion = animist
+        culture = berber
+        religion = sunni
         size = 12000
     }
 
@@ -226,6 +238,48 @@
 }
 #Tozeur (96000/24000 POPS)
 1729 = {
+    aristocrats = {
+        culture = bedouin
+        religion = sunni
+        size = 350
+    }
+
+    clergymen = {
+        culture = bedouin
+        religion = sunni
+        size = 200
+    }
+
+    artisans = {
+        culture = bedouin
+        religion = sunni
+        size = 950
+    }
+
+    soldiers = {
+        culture = bedouin
+        religion = sunni
+        size = 200
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 6000
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = shiite
+        size = 1300
+    }
+
+    slaves = {
+        culture = berber
+        religion = sunni
+        size = 3000
+    }
+
     aristocrats = {
         culture = maghrebi
         religion = sunni
@@ -253,13 +307,13 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 17300
+        size = 1300
     }
 
-    slaves = {
-        culture = bantu
-        religion = animist
-        size = 5000
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 8000
     }
 }
 #Gabes (200000/50000 POPS)
@@ -291,25 +345,64 @@
     farmers = {
         culture = maghrebi
         religion = sunni
-        size = 40825
+        size = 29000
     }
 
     slaves = {
-        culture = bantu
-        religion = animist
-        size = 4000
-    }
-
-    clergymen = {
-        culture = sephardic
-        religion = jewish
-        size = 10
+        culture = berber
+        religion = sunni
+        size = 1000
     }
 
     artisans = {
         culture = sephardic
         religion = jewish
-        size = 490
+        size = 450
+    }
+
+}
+#Zarzis (200000/50000 POPS)
+1730 = {
+    aristocrats = {
+        culture = maghrebi
+        religion = sunni
+        size = 900
+    }
+
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 400
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 2275
+    }
+
+    soldiers = {
+        culture = maghrebi
+        religion = sunni
+        size = 1100
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 11150
+    }
+
+    slaves = {
+        culture = berber
+        religion = sunni
+        size = 3000
+    }
+
+    artisans = {
+        culture = sephardic
+        religion = jewish
+        size = 50
     }
 
 }

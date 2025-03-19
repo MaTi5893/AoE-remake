@@ -214,6 +214,17 @@ political_decisions = {
     draft_a_constitution = {
         picture = constitution
         potential = {
+			NOT = { 
+				capital_scope = {
+					is_core = HND
+				} 
+			}
+			NOT = {
+				OR = {
+					in_sphere = RUS
+					in_sphere = TOR
+				}
+			}
             is_vassal = no
             NOT = { tag = ORI }
             OR = {

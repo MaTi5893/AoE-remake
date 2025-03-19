@@ -7,7 +7,11 @@ country_event = {
     fire_only_once = yes
     trigger = {
         tag = MUG
-        year = 1707
+		OR = {
+			year = 1707
+			NOT = { has_leader = "Aurangzeb" }
+			has_global_flag = mah_victory_deccan
+		}
     }
 
     mean_time_to_happen = {
@@ -17,6 +21,8 @@ country_event = {
     option = {
         set_global_flag = death_of_aurangzeb
         name = "A great loss"
+		kill_leader = 158    #"Aurangzeb"
+		end_war = MAH
         TRA = { all_core = { limit = { owned_by = THIS } secede_province = TRA } }
         MAH = { all_core = { limit = { owned_by = THIS } secede_province = MAH } }
         NAG = { all_core = { limit = { owned_by = THIS } secede_province = NAG } }
@@ -50,39 +56,140 @@ country_event = {
         ai_chance = { factor = 1 }
     }
 }
-#country_event = {
-#    id = 170779
-#    title = "Dissolution of our Empire"
-#    desc = "EVTDESC170779"
-#    major = yes
-#    fire_only_once = yes
-#    trigger = {
-#        tag = MUG
-#        war = no
-#        MUG = {
-#            OR = {
-#                AND = {
-#                    NOT = { is_greater_power = yes }
-#                    has_recently_lost_war = yes
-#                }
-#                AND = {
-#                    NOT = { owns = 1270 }
-#                    NOT = { owns = 1277 }
-#                    NOT = { owns = 1305 }
-#                    NOT = { owns = 1277 }
-#                    NOT = { owns = 1261 }
-#                }
-#            }
-#        }
-#    }
-#    mean_time_to_happen = {
-#        months = 1
-#    }
-#    option = {
-#        name = "We will not rest until we rebuild it..."
-#        all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
-#    }
-#}
+country_event = {
+    id = 170779
+    title = "Dissolution of our Empire"
+    desc = "EVTDESC170779"
+    major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+        war = no
+		NOT = { is_greater_power = yes }
+        MUG = {
+            OR = {
+				AND = {
+                    NOT = { owns = 1270 }
+                    NOT = { owns = 1241 }
+					NOT = { owns = 1240 }
+                    has_recently_lost_war = yes
+                }
+                AND = {
+					NOT = { owns = 1227 }
+                    NOT = { owns = 1270 }
+                    NOT = { owns = 1277 }
+                    NOT = { owns = 1305 }
+                    NOT = { owns = 1241 }
+                    NOT = { owns = 1261 }
+					NOT = { owns = 1268 }
+					NOT = { owns = 1244 }
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "We will not rest until we rebuild it..."
+		any_country = {
+				limit = {
+					vassal_of = THIS
+					OR = {
+						capital_scope = {
+							is_core = HND
+						}
+						capital_scope = {
+							is_core = MUG
+						}
+					}
+				}
+				country_event = 170780
+			}
+		set_global_flag = mughal_empire_dissolution
+        all_core = { limit = { NOT = { owned_by = THIS } } remove_core = THIS }
+    }
+}
+country_event = {
+    id = 170780
+    title = "Mughal Empire Dissolved"
+    desc = "We have acquired independence from our Mughal overlord."
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+    option = {
+        name = "Those Mughals will control our lands no longer."
+        overlord = { release_vassal = THIS }
+		random_owned = {
+				limit = {
+					owner = {
+						is_independant = yes
+						tag = THIS
+						OR = {
+							government = colonial_company
+							government = dominion
+						}
+					}
+				}
+				owner = {
+					government = absolute_monarchy 
+				}				
+			}
+    }
+}
+country_event = {
+    id = 170781
+    title = "Marathan Victory in the Deccan"
+    desc = "EVTDESC170781"
+	major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = MAH
+		OR = {
+			has_global_flag = death_of_aurangzeb
+			NOT = { war_with = MUG }
+			AND = {
+				owns = 1291
+				owns = 1278
+				owns = 1300
+				owns = 1272
+			}
+		}
+		MAH = { exists = yes }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "The Marathas are now the dominant power in the Deccan."
+        prestige = 15
+		money = 100000
+		end_war = MUG
+		set_global_flag = mah_victory_deccan
+    }
+}
+country_event = {
+    id = 170782
+    title = "Aurangzeb's Conquest of the Deccan"
+    desc = "EVTDESC170782"
+	major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		NOT = { has_global_flag = death_of_aurangzeb }
+        MAH = { exists = no }
+		1297 = { owned_by = THIS }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "All those years of fighting, for this."
+		set_country_flag = mug_conquest_deccan
+        MAH = { all_core = { add_core = THIS }}
+		prestige = 15
+		money = 100000
+    }
+}
 country_event = {
     id = 175002
     title = "The Indian Realms"

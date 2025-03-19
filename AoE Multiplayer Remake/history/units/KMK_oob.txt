@@ -1,0 +1,37 @@
+leader = {
+	name = "Ayuka Khan"
+	picture = rus_gen_berg
+	date = 1700.1.1
+	type = land
+	personality = attack__1.2
+	background = defence_2.1
+	prestige = 0.1
+}
+
+army = {
+    name = "Kalmyk Host"
+    location = 1182
+	regiment = {
+        name = "4. Khan's Guard"
+        type = cuirassier
+        home = 2669
+    }
+	
+    regiment = {
+        name = "1. Cavalry"
+        type = cavalry
+        home = 2669
+    }
+	
+	regiment = {
+        name = "2. Cavalry"
+        type = cavalry
+        home = 2669
+    }
+	
+	regiment = {
+        name = "3. Cavalry"
+        type = cavalry
+        home = 2669
+    }
+}

@@ -219,10 +219,16 @@ army = {
         home = 372
     }
 
+	regiment = {
+        name= "4.1. Infanteridivision"
+        type = infantry
+        home = 540
+    }
+	
     regiment = {
         name= "2.2. Artelleridivision"
         type = artillery
-        home = 369
+        home = 367
     }
 	
     regiment = {
@@ -234,13 +240,19 @@ army = {
     regiment = {
         name= "2.1. Artelleridivision"
         type = engineer
-        home = 309
+        home = 367
     }
 
     regiment = {
         name= "3.1. Artelleridivision"
         type = engineer
-        home = 369
+        home = 367
+    }
+	
+	regiment = {
+        name= "4.1. Artelleridivision"
+        type = engineer
+        home = 370
     }
 }
 
@@ -252,19 +264,25 @@ army = {
     regiment = {
         name= "1.1. Kavalleridivision"
         type = dragoon
-        home = 367
+        home = 313
     }
 
     regiment = {
         name= "1.1. Artelleridivision"
         type = infantry
-        home = 367
+        home = 309
     }
 
+	regiment = {
+        name= "2.1. Artelleridivision"
+        type = engineer
+        home = 308
+    }
+	
     regiment = {
         name= "2.1. Artelleridivision"
         type = engineer
-        home = 367
+        home = 309
     }
 }
 

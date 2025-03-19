@@ -74,6 +74,38 @@
         size = 490
     }
 }
+#Montferrato (16000/4000 POPS)
+2574 = {
+    aristocrats = {
+        culture = north_italian
+        religion = catholic
+        size = 675
+    }
+
+    clergymen = {
+        culture = north_italian
+        religion = catholic
+        size = 350
+    }
+
+    artisans = {
+        culture = north_italian
+        religion = catholic
+        size = 6775
+    }
+
+    soldiers = {
+        culture = north_italian
+        religion = catholic
+        size = 2150
+    }
+
+    farmers = {
+        culture = north_italian
+        religion = catholic
+        size = 54250
+    }
+}
 #Aosta (156000/39000 POPS)
 721 = {
     aristocrats = {
@@ -2248,11 +2280,50 @@
     }
 
 }
+#Cuneo
 1960 = {
     aristocrats = {
         culture = north_italian
         religion = catholic
-        size = 310
+        size = 610
+    }
+
+    clergymen = {
+        culture = north_italian
+        religion = catholic
+        size = 350
+    }
+
+    artisans = {
+        culture = north_italian
+        religion = catholic
+        size = 6650
+    }
+
+    soldiers = {
+        culture = north_italian
+        religion = catholic
+        size = 2130
+    }
+
+    farmers = {
+        culture = north_italian
+        religion = catholic
+        size = 46802
+    }
+
+    farmers = {
+        culture = occitan
+        religion = catholic
+        size = 6850
+    }
+}
+#Susa (16000/4000 POPS)
+2691 = {
+    aristocrats = {
+        culture = north_italian
+        religion = catholic
+        size = 275
     }
 
     clergymen = {
@@ -2264,23 +2335,22 @@
     artisans = {
         culture = north_italian
         religion = catholic
-        size = 3650
+        size = 3775
     }
 
     soldiers = {
         culture = north_italian
         religion = catholic
-        size = 330
+        size = 1150
     }
 
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 23802
+        size = 34250
     }
-
-    farmers = {
-        culture = french
+	farmers = {
+        culture = occitan
         religion = catholic
         size = 4850
     }

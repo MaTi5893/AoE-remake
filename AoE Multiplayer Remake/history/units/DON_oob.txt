@@ -1,0 +1,56 @@
+leader = {
+	name = "Kondratu Bulavin"
+	picture = rus_gen_berg
+	date = 1700.1.1
+	type = land
+	personality = attack__1.2
+	background = defence_2.1
+	prestige = 0.1
+}
+
+army = {
+    name = "Don Host"
+	location = 1046
+
+    regiment = {
+        name= "1.1. Infanteridivision"
+        type = infantry
+        home = 1046
+    }
+
+    regiment = {
+        name= "2.1. Infanteridivision"
+        type = infantry
+        home = 1046
+    }
+
+    regiment = {
+        name= "3.1. Infanteridivision"
+        type = infantry
+        home = 1046
+    }
+	
+    regiment = {
+        name= "1.1. Kavalleridivision"
+        type = dragoon
+        home = 1046
+    }
+
+	regiment = {
+        name= "1.1. Artelleridivision"
+        type = artillery
+        home = 1046
+    }
+	
+    regiment = {
+        name= "2.1. Artelleridivision"
+        type = engineer
+        home = 1046
+    }
+
+    regiment = {
+        name= "3.1. Artelleridivision"
+        type = engineer
+        home = 1046
+    }
+}

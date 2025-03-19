@@ -99,6 +99,12 @@ BRE = {
     influence_value = 0
 }
 
+HOL = {
+    value = 80
+    level = 5
+    influence_value = 5
+}
+
 HAM = {
     value = 35
     level = 4
@@ -318,7 +324,7 @@ army = {
 
 army = {
     name = "Ingriya Armén"
-    location = 3253
+    location = 339
     regiment = {
         name= "Svea Livgarde"
         type = infantry

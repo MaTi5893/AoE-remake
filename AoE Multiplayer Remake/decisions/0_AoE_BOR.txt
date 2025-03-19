@@ -19,7 +19,7 @@ political_decisions = {
 			remove_country_modifier = clergy_and_nobility_domination
 			clr_country_flag = clergy_and_nobility_domination
 			add_accepted_culture = arpitan
-			add_accepted_culture = breton
+			add_accepted_culture = picard
 			add_accepted_culture = occitan
             country_event = 171136
 			any_pop = {
@@ -96,6 +96,8 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = reigned_in_the_paris_parlement
+			add_accepted_culture = picard
+			add_accepted_culture = arpitan
 			money = -750000
 			FRA_425 = { any_owned_province = { remove_province_modifier = parlement_resistance } }
 			random_owned = {
@@ -184,6 +186,7 @@ political_decisions = {
 		}
 		effect = {
 			country_event = 171109
+			add_accepted_culture = picard
 			set_country_flag = first_governemnt_louis_xv
 		}
 	}
@@ -319,6 +322,7 @@ political_decisions = {
 			396 = {	add_core = THIS }
 			381 = {	add_core = THIS }
 			LIG = {	all_core = { add_core = THIS } }
+			add_accepted_culture = wallonian
 		}
 		ai_will_do = {
 			factor = 1
@@ -365,6 +369,7 @@ political_decisions = {
 			add_core = 1980
 			add_core = 2023
 			add_core = 570
+			add_accepted_culture = wallonian
 		}
 		ai_will_do = {
 			factor = 1

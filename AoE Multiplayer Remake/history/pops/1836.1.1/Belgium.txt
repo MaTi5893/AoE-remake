@@ -445,8 +445,76 @@
         size = 3925
     }
 }
-#Maastricht/Tournai (292000/73000 POPS)
+#Tournai (292000/73000 POPS)
 393 = {
+    clergymen = {
+        culture = flemish
+        religion = catholic
+        size = 100
+    }
+
+    artisans = {
+        culture = flemish
+        religion = catholic
+        size = 1100
+    }
+
+    soldiers = {
+        culture = flemish
+        religion = catholic
+        size = 100
+    }
+
+    farmers = {
+        culture = flemish
+        religion = catholic
+        size = 8800
+    }
+
+    aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 700
+    }
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 625
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 100
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 2000
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 2500
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 1100
+    }
+
+    farmers = {
+        culture = wallonian
+        religion = catholic
+        size = 66075
+    }
+}
+#Maastricht (292000/73000 POPS)
+2077 = {
     clergymen = {
         culture = flemish
         religion = catholic

@@ -1,3 +1,12 @@
+leader = {
+	name = "Khan Giray I"
+	date = 1700.1.1
+	type = land
+	personality = defence_0.1
+	background = attack_2.3
+	prestige = 0.0
+}
+
 army = {
     name = "Army of the Khan of Crimea"
     location = 964
@@ -8,8 +17,8 @@ army = {
     }
 
     regiment = {
-        name= " 1st Crimean Infantry"
-        type = infantry
+        name= " 1st Crimean Cavalry"
+        type = cavalry
         home = 976
     }
 
@@ -41,5 +50,97 @@ army = {
         name= "Khan's Cavalry"
         type = hussar
         home = 964
+    }
+}
+
+army = {
+    name = "Kuban Raiders"
+    location = 1048
+    regiment = {
+        name= "Crimean Cavalry"
+        type = cavalry
+        home = 1048
+    }
+
+    regiment = {
+        name= " 1st Crimean Infantry"
+        type = cavalry
+        home = 1048
+    }
+
+    regiment = {
+        name= "2nd Crimean Infantry"
+        type = cavalry
+        home = 1048
+    }
+
+    regiment = {
+        name= "3rd Crimean Infantry"
+        type = infantry
+        home = 1048
+    }
+
+    regiment = {
+        name= "4th Crimean Infantry"
+        type = infantry
+        home = 973
+    }
+
+    regiment = {
+        name= "5th Crimean Infantry"
+        type = infantry
+        home = 973
+    }
+
+    regiment = {
+        name= "Khan's Cavalry"
+        type = hussar
+        home = 1048
+    }
+}
+
+army = {
+    name = "Tatar Raiders"
+    location = 973
+    regiment = {
+        name= "Crimean Cavalry"
+        type = cavalry
+        home = 973
+    }
+
+    regiment = {
+        name= " 1st Crimean Infantry"
+        type = cavalry
+        home = 973
+    }
+
+    regiment = {
+        name= "2nd Crimean Infantry"
+        type = cavalry
+        home = 973
+    }
+
+    regiment = {
+        name= "3rd Crimean Infantry"
+        type = infantry
+        home = 973
+    }
+
+    regiment = {
+        name= "4th Crimean Infantry"
+        type = infantry
+        home = 973
+    }
+
+    regiment = {
+        name= "5th Crimean Infantry"
+        type = infantry
+        home = 973
+    }
+
+    regiment = {
+        name= "Khan's Cavalry"
+        type = hussar
+        home = 973
     }
 }

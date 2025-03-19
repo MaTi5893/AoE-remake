@@ -1,5 +1,13 @@
-owner = ALD
-controller = MOR
+owner = SPA
+controller = SPA
+add_core = SPA
 add_core = ALD
 trade_goods = grain
 life_rating = 35
+colonial = 2
+1756.01.01 = {
+owner = SPC
+controller = SPC
+add_core = SPC
+remove_core = SPA
+}

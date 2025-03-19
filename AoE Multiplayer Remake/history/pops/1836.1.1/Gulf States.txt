@@ -5,7 +5,19 @@
     aristocrats = {
         culture = bedouin
         religion = sunni
-        size = 50
+        size = 200
+    }
+
+    bureaucrats = {
+        culture = bedouin
+        religion = sunni
+        size = 10
+    }
+
+    officers = {
+        culture = bedouin
+        religion = sunni
+        size = 10
     }
 
     clergymen = {
@@ -23,29 +35,29 @@
     soldiers = {
         culture = bedouin
         religion = sunni
-        size = 25
+        size = 100
     }
 
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 2725
+        size = 3725
     }
 }
 #Bahrain Region (28000) #see Saudi Arabia.txt for balance of region
 #under the rule of Trucial States in 1836
-#Bahrain (20000/5000 POPS) #now part of Bahrein
+#Bahrain (20000/5000 POPS) #now part of Bahrain
 1162 = {
     aristocrats = {
         culture = bedouin
         religion = sunni
-        size = 25
+        size = 150
     }
 
     bureaucrats = {
         culture = bedouin
         religion = sunni
-        size = 15
+        size = 25
     }
 
     officers = {
@@ -69,13 +81,13 @@
     soldiers = {
         culture = bedouin
         religion = sunni
-        size = 50
+        size = 1050
     }
 
     farmers = {
         culture = bedouin
         religion = sunni
-        size = 1850
+        size = 500
     }
 
     clergymen = {
@@ -93,7 +105,37 @@
     farmers = {
         culture = bedouin
         religion = shiite
-        size = 2800
+        size = 3000
+    }
+
+    farmers = {
+        culture = mashriqi
+        religion = jewish
+        size = 50
+    }
+
+    slaves = {
+        culture = nilotic
+        religion = animist
+        size = 400
+    }
+
+	 artisans = {
+        culture = persian
+        religion = shiite
+        size = 150
+    }
+
+    farmers = {
+        culture = persian
+        religion = shiite
+        size = 1100
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = orthodox
+        size = 250
     }
 }
 #Doha (8000/2000 POPS) #now part of Qatar
@@ -174,6 +216,38 @@
         size = 3650
     }
 }
+#al-Mirfa (20000/5000 POPS) #now part of UAE
+3286 = {
+    aristocrats = {
+        culture = bedouin
+        religion = sunni
+        size = 175
+    }
+
+    clergymen = {
+        culture = bedouin
+        religion = sunni
+        size = 150
+    }
+
+    artisans = {
+        culture = bedouin
+        religion = sunni
+        size = 225
+    }
+
+    soldiers = {
+        culture = bedouin
+        religion = sunni
+        size = 300
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 3800
+    }
+}
 #Dubai (16000/4000 POPS)   #now part of UAE
 1168 = {
     aristocrats = {
@@ -206,4 +280,42 @@
         size = 3625
     }
 
+}
+#Sharjah (16000/4000 POPS)   
+3287 = {
+    aristocrats = {
+        culture = bedouin
+        religion = sunni
+        size = 50
+    }
+
+    clergymen = {
+        culture = bedouin
+        religion = sunni
+        size = 75
+    }
+
+    artisans = {
+        culture = bedouin
+        religion = sunni
+        size = 200
+    }
+
+    soldiers = {
+        culture = bedouin
+        religion = sunni
+        size = 1000
+    }
+
+    farmers = {
+        culture = bedouin
+        religion = sunni
+        size = 2625
+    }
+
+    farmers = {
+        culture = persian
+        religion = shiite
+        size = 300
+    }
 }

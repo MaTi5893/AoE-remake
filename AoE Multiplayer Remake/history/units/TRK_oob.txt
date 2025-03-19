@@ -1,0 +1,25 @@
+leader = {
+	name = "Graf Apraskin"
+	date = 1700.1.1
+	type = land
+	personality = attack__1.2
+	background = defence_2.1
+	prestige = 0.1
+}
+
+army = {
+    name = "Terek Host"
+	location = 1057
+
+    regiment = {
+        name= "3.1. Infanteridivision"
+        type = dragoon
+        home = 1057
+    }
+	
+    regiment = {
+        name= "1.1. Kavalleridivision"
+        type = dragoon
+        home = 1057
+    }
+}

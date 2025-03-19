@@ -1,34 +1,33 @@
 capital = 1236
 primary_culture = panjabi
-culture = telegu
-culture = rajput
-culture = gujarati
-culture = avadhi
+culture = braj
+culture = haryanvi
 religion = sunni
-civilized = no
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = pm_no_minister
 literacy = 0.03
-prestige = 10
+prestige = 15
+civilized = yes
 
 ruling_party = "Durbar Faction"
 upper_house = {
     fascist = 0
-    liberal = 0
-    conservative = 0
-    reactionary = 100
+    liberal = 8
+    conservative = 37
+    reactionary = 55
     anarcho_liberal = 0
     socialist = 0
     communist = 0
 }
-set_country_flag = unciv
+
+#set_country_flag = unciv
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
 
 oob = "MUG_oob.txt"
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = party_appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
@@ -45,6 +44,7 @@ pensions = trinket_pensions #marginally relevant army
 health_care = low_health_care #slightly influential bureaucracy
 
 school_reforms = no_schools
+schools = indian_tech_school
 
 foreign_weapons = yes_foreign_weapons
 admin_reform = yes_admin_reform

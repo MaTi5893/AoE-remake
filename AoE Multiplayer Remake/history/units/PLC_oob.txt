@@ -64,17 +64,17 @@ regiment = { name = "9. brygada" type = artillery home = 699 }
 regiment = { name = "10. brygada" type = cuirassier home = 699 }
 }
 
-army = { 
-
-name = "5.Armia Koronna" location = 955
-
-regiment = { name = "4. brygada" type = engineer home = 702 } 
-regiment = { name = "5. brygada" type = engineer home = 702 }
-regiment = { name = "1. Dragonia" type = dragoon home = 959 }
-regiment = { name = "9. brygada" type = infantry home = 959 } 
-regiment = { name = "10. brygada" type = infantry home = 959 } 
-regiment = { name = "8. brygada" type = infantry home = 959 } 
-}
+#army = { 
+#
+#name = "5.Armia Koronna" location = 955
+#
+#regiment = { name = "4. brygada" type = engineer home = 702 } 
+#regiment = { name = "5. brygada" type = engineer home = 702 }
+#regiment = { name = "1. Dragonia" type = dragoon home = 959 }
+#regiment = { name = "9. brygada" type = infantry home = 959 } 
+#regiment = { name = "10. brygada" type = infantry home = 959 } 
+#regiment = { name = "8. brygada" type = infantry home = 959 } 
+#}
 
 leader = {
 	name = "Augustus II Von Wettin"

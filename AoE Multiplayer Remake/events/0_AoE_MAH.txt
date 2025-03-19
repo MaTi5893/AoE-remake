@@ -6,7 +6,7 @@ country_event = {
 	picture = tarabai
 	
 	option = {
-		name = "Intresting"
+		name = "May she vanquish the tyrant Aurangzeb."
 		add_country_modifier = {
 			name = tarabai
 			duration = -1
@@ -24,6 +24,7 @@ country_event = {
 	trigger = {
 		tag = MAH
 		is_vassal = no
+		has_country_flag = return_of_shahu_bhosale
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -41,7 +42,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "A Women cannot lead us!"
+		name = "A Woman cannot lead us!"
+		kill_leader = 67    #"Tarabai"
 		prestige = 15
 		any_pop = {
 			militancy = -3
@@ -65,6 +67,7 @@ country_event = {
 	}
 	option = {
 		name = "May she rest in peace"
+		kill_leader = 67    #"Tarabai"
 		remove_country_modifier = tarabai
 	}
 }

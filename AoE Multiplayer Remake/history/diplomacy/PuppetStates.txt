@@ -1,3 +1,28 @@
+## Russia
+# Russia - Hetmanate
+vassal = {
+	first = TOR
+	second = HET
+	start_date = 1660.1.1
+	end_date = 1756.1.1
+}
+
+# Russia - Don Host
+vassal = {
+	first = TOR
+	second = DON
+	start_date = 1660.1.1
+	end_date = 1756.1.1
+}
+
+##Denmark
+# Denmark - Holstein-Gottorp
+vassal = {
+	first = DNN
+	second = HOL
+	start_date = 1554.1.1
+	end_date = 1720.1.1
+}
 
 ##Ottoman - Acre
 #vassal = {  #substate
@@ -23,13 +48,13 @@
 #	end_date = 2000.1.1
 #}
 
-#Mughal - Jodhpur
-vassal = {  #substate
-	first = MUG
-	second = JOD
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
+##Mughal - Jodhpur
+#vassal = {  #substate
+#	first = MUG
+#	second = JOD
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
 
 ##Qing - Kobdo
 #vassal = {  #substate
@@ -47,13 +72,13 @@ vassal = {  #substate
 #	end_date = 1756.1.1
 #}
 
-#Bukhara - Bandakhshan
-vassal = {  #substate
-	first = BUK
-	second = BDK
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
+##Bukhara - Bandakhshan
+#vassal = {  #substate
+#	first = BUK
+#	second = BDK
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
 
 
 #Papal State - Jesuits
@@ -64,20 +89,20 @@ vassal = {  #substate
 	end_date = 2000.1.1
 }
 
-#Mughal - Nagpur
-vassal = {  #substate
-	first = MUG
-	second = NAG
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
-#Mughal - Ladakh
-vassal = {  #substate
-	first = MUG
-	second = LAD
-	start_date = 1700.1.1
-	end_date = 2000.1.1
-}
+##Mughal - Garha/Nagpur
+#vassal = {  #substate
+#	first = MUG
+#	second = NAG
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
+##Mughal - Ladakh
+#vassal = {  #substate
+#	first = MUG
+#	second = LAD
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}
 
 #Mughal - Shimla
 vassal = {  #substate
@@ -149,7 +174,12 @@ substate = {  #substate
 	start_date = 1707.1.1
 	end_date = 2000.1.1
 }
-
+substate = {  #substate
+	first = ENL
+	second = NET 
+	start_date = 1688.1.2
+	end_date = 1702.3.8
+}
 #vassal = {  #substate
 #	first = PER
 #	second = KAK
@@ -412,13 +442,26 @@ vassal = {
 #}
 #
 ##China/Korea
-#vassal = {
-#	first = QNG
-#	second = KOR
-#	start_date = 1636.1.1
-#	end_date = 1876.1.1
-#}
-#
+vassal = {
+	first = QNG
+	second = KOR
+	start_date = 1636.1.1
+	end_date = 1876.1.1
+}
+#China - Mongolia
+substate = {
+	first = QNG
+	second = MGL
+	start_date = 1691.1.1
+	end_date = 1937.1.1
+}
+#China - Kashgaria
+substate = {
+	first = QNG
+	second = KML
+	start_date = 1636.1.1
+	end_date = 1937.1.1
+}
 ##China/Lanfang
 #vassal = {
 #	first = QNG

@@ -25,6 +25,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = starting_goods_war
+			country_event = 700700
 			SWE = { country_event = 98002 }
 			TOR = { country_event = 98002 }
 			DNN = { country_event = 98002 }
@@ -260,22 +261,8 @@ political_decisions = {
 				limit = { 
 					exists = yes 
 					OR = {
-						primary_culture = panjabi
-						primary_culture = sindi
-						primary_culture = rajput
+						is_culture_group = indian
 						primary_culture = pashtun
-						primary_culture = kashmiri
-						primary_culture = gujarati
-						primary_culture = marathi
-						primary_culture = kannada
-						primary_culture = avadhi
-						primary_culture = oriya
-						primary_culture = tamil
-						primary_culture = malayalam
-						primary_culture = telegu
-						primary_culture = sinhala
-						primary_culture = kanauji
-						primary_culture = bengali
 						primary_culture = french
 						primary_culture = british
 						primary_culture = dutch
@@ -285,21 +272,21 @@ political_decisions = {
 				any_pop = {
 					limit = {	
 						OR = {
-							has_pop_culture = panjabi
+							##has_pop_culture = panjabi
 							has_pop_culture = sindi 
-							has_pop_culture = rajput
+							#has_pop_culture = rajput
 							has_pop_culture = pashtun
 							has_pop_culture = kashmiri 
-							has_pop_culture = gujarati 
-							has_pop_culture = marathi 
-							has_pop_culture = kannada 
-							has_pop_culture = avadhi
-							has_pop_culture = oriya 
-							has_pop_culture = tamil
-							has_pop_culture = malayalam
-							has_pop_culture = telegu 
+							##has_pop_culture = gujarati 
+							##has_pop_culture = marathi 
+							#has_pop_culture = kannada 
+							##has_pop_culture = avadhi
+							#has_pop_culture = oriya 
+							#has_pop_culture = tamil
+							#has_pop_culture = malayalam
+							#has_pop_culture = telegu 
 							has_pop_culture = sinhala 
-							has_pop_culture = kanauji 
+							#has_pop_culture = kanauji 
 							has_pop_culture = asian_minor 
 							has_pop_culture = manipuri 
 							has_pop_culture = tibetan 
@@ -328,6 +315,12 @@ political_decisions = {
 						}
 					}
 					reduce_pop = 0.864
+				}
+			}
+			#Delhi
+			1236 = {
+				any_pop = {
+					reduce_pop = 1.9
 				}
 			}
 			#Japanese Pop Change
@@ -833,19 +826,16 @@ political_decisions = {
 			}
 			ALD = {
 				any_pop = {
-					limit = {	
-						OR = {
-							has_pop_culture = maghrebi
-							has_pop_culture = berber 
-						}
+					limit = {
+						NOT = { type = soldiers }
 					}
 					reduce_pop = 1.3
 				}
 				any_pop = {
-					limit = {	
+					limit = {
 						type = soldiers 
 					}
-					reduce_pop = 1.2
+					reduce_pop = 1.15
 				}
 			}
 			SAX = {
@@ -1110,12 +1100,13 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 						OR = {
-							has_pop_culture = slovene
 							has_pop_culture = south_german
+							has_pop_culture = slovene
+							has_pop_culture = croat	
 							has_pop_culture = north_italian
 						}
 					}
-					reduce_pop = 0.73
+					reduce_pop = 0.79
 				}
 				any_pop = {
 					limit = {	
@@ -1123,13 +1114,12 @@ political_decisions = {
 						OR = {
 							has_pop_culture = slovak
 							has_pop_culture = hungarian
+							has_pop_culture = romanian
 							has_pop_culture = serbian
 							has_pop_culture = ukrainian
-							has_pop_culture = croat	
-							has_pop_culture = romanian
 						}
 					}
-					reduce_pop = 0.62
+					reduce_pop = 0.69
 				}
 				any_pop = {
 					limit = {	
@@ -1146,7 +1136,7 @@ political_decisions = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 0.69
+					reduce_pop = 0.76
 				}
 			}
 			#Western Transylvania
@@ -1155,7 +1145,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.42
+					reduce_pop = 0.72
 				}
 			}
 			#Eastern Transylvania
@@ -1164,7 +1154,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.41
+					reduce_pop = 0.71
 				}
 			}
 			#Bohemia
@@ -1182,7 +1172,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.45
+					reduce_pop = 0.75
 				}
 			}
 		}
@@ -1318,20 +1308,15 @@ political_decisions = {
 			MOR = {
 				any_pop = {
 					limit = {
-						OR = {
-							has_pop_culture = maghrebi
-							has_pop_culture = berber
-							has_pop_culture = western_african
-						}
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 2.6
+					reduce_pop = 1.3
 				}
 				any_pop = {
 					limit = {
-						type = soldiers
+						type = soldiers 
 					}
-					reduce_pop = 1.4
+					reduce_pop = 1.15
 				}
 			}
 		}
@@ -1420,7 +1405,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.256
+					reduce_pop = 0.756
 				}
 				any_pop = {
 					limit = {	
@@ -1434,7 +1419,22 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.66
+					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 1.13
+				}
+			}
+			CRI = {
+				any_pop = {
+					limit = {
+						NOT = { type = soldiers }
+						culture = tatar
+					}
+					reduce_pop = 2.7
 				}
 				any_pop = {
 					limit = {	
@@ -1464,47 +1464,33 @@ political_decisions = {
 					reduce_pop = 1.2
 				}
 				any_pop = {
-					limit = {	
-						NOT = { type = soldiers }
-						OR = {
-							culture = turkish
-							culture = greek
-							culture = bulgarian
-							culture = romanian
-							culture = albanian
-							culture = ukrainian
-							culture = serbian
-							culture = bosniak
-							culture = croat
-							culture = ethiopian
-							culture = somali
-							culture = berber
-							culture = maghrebi
-							culture = kurdish
-							culture = armenian
-							culture = mashriqi
-							culture = georgian
-							culture = circassian
-							culture = south_german
-						}
-					}
-					reduce_pop = 0.89
-				}
-				any_pop = {
-					limit = {	
+					limit = {
 						OR = {
 							culture = misri
 							culture = nilotic
 						}
 					}
-					reduce_pop = 1.52
+					reduce_pop = 1.1
+				}
+				any_pop = {
+					limit = {	
+						NOT = { type = soldiers }
+						NOT = {
+							culture = misri
+							culture = nilotic
+							culture = tatar
+							culture = maghrebi
+							culture = berber
+							culture = bosniak
+						}
+					}
+					reduce_pop = 0.9
 				}
 				any_pop = {
 					limit = {
-						#NOT = { is_accepted_culture = yes }
 						type = soldiers
 					}
-					reduce_pop = 0.73
+					reduce_pop = 0.48
 				}
 			}
 		}

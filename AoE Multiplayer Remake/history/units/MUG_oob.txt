@@ -31,40 +31,40 @@ MAH = {
 }
 army = {
     name = "Aurangzeb's Expedition Army"
-    location = 1236
+    location = 1300
     regiment = {
         name= "1st Irregular Infantry Brigade"
         type = irregular
-        home = 1273
+        home = 1236
     }
     regiment = {
         name= "2nd Irregular Infantry Brigade"
         type = irregular
-        home = 1270
+        home = 1236
     }
 
     regiment = {
         name= "3rd Irregular Infantry Brigade"
         type = irregular
-        home = 1270
+        home = 1236
     }
 
     regiment = {
         name= "1st Regular Infantry Brigade"
         type = infantry
-        home = 1270
+        home = 1236
     }
 
     regiment = {
         name= "2nd Regular Infantry Brigade"
         type = infantry
-        home = 1236
+        home = 1240
     }
 
     regiment = {
         name= "1st Light Cavalry"
         type = cavalry
-        home = 1237
+        home = 1240
     }
 
     regiment = {
@@ -76,26 +76,73 @@ army = {
     regiment = {
         name= "3st Light Cavalry"
         type = cavalry
-        home = 1241
+        home = 1240
     }
 
     regiment = {
         name= "1st Artillery Corps"
         type = artillery
-        home = 1238
+        home = 1240
     }
 
     regiment = {
         name= "2nd Artillery Corps"
         type = artillery
+        home = 1240
+    }
+
+}
+
+army = {
+    name = "Army of Delhi"
+    location = 1236
+    regiment = {
+        name= "1st Irregular Infantry Brigade"
+        type = irregular
+        home = 1240
+    }
+    regiment = {
+        name= "2nd Irregular Infantry Brigade"
+        type = irregular
+        home = 1240
+    }
+
+    regiment = {
+        name= "3rd Irregular Infantry Brigade"
+        type = irregular
         home = 1241
+    }
+
+    regiment = {
+        name= "1st Light Cavalry"
+        type = cavalry
+        home = 1241
+    }
+
+    regiment = {
+        name= "2th Light Cavalry"
+        type = cavalry
+        home = 1240
+    }
+
+    regiment = {
+        name= "2nd Artillery Corps"
+        type = artillery
+        home = 1270
     }
 
 }
 leader = {
     name = "Aurangzeb"
+    date = 1678.1.1
+    type = land
+    personality = defence_3.1
+    background = attack_3.1
+}
+leader = {
+    name = "Muhammad Azam Shah"
     date = 1700.1.1
     type = land
-    personality = defence_3.5
-    background = attack_3.1
+    personality = defence_2.1
+    background = attack_2.1
 }

@@ -17,6 +17,26 @@ ZZH = {
 	level = 5
 	influence_value = 5
 }
+DON = {
+	value = 45
+	level = 5
+	influence_value = 5
+}
+HET = {
+	value = 35
+	level = 5
+	influence_value = 5
+}
+TRK = {
+	value = 45
+	level = 5
+	influence_value = 5
+}
+KMK = {
+	value = 55
+	level = 5
+	influence_value = 5
+}
 SWE = {
 	value = -75
 }
@@ -71,6 +91,9 @@ USA = { value = 0 }
 PRU = { value = 100 }
 TUR = { value = -125 }
 SPA = { value = 0 }
+TUR = {
+	truce_until = 1703.1.1
+}
 army = {
 	name = "2-i Armeiskii Korpus"
 	location = 1011
@@ -196,7 +219,7 @@ army = {
 	regiment = {
 		name= "6.2-ya Pekhotnaya Diviziya"
 		type = infantry
-		home = 977
+		home = 3275
 	}
 
 	regiment = {
@@ -392,7 +415,7 @@ army = {
 
 army = {
     name = "Army of the Hetmanat"
-    location = 963
+    location = 977
     regiment = {
         name= "Poltava Polk"
         type = hussar
@@ -426,7 +449,7 @@ army = {
     regiment = {
         name= "Bryansk Polk"
         type = infantry
-        home = 978
+        home = 3275
     }
 }
 
@@ -587,16 +610,6 @@ leader = {
 	type = land
 	personality = attack_minus_1.2
 	background = defence_minus_1.2
-	prestige = 0.1
-}
-
-leader = {
-	name = "Ayuka Khan"
-	picture = rus_gen_berg
-	date = 1700.1.1
-	type = land
-	personality = attack_minus_1.2
-	background = defence_2.1
 	prestige = 0.1
 }
 

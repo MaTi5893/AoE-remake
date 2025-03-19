@@ -11,9 +11,21 @@
     bureaucrats = {
         culture = north_german
         religion = protestant
-        size = 1287
+        size = 887
     }
 
+	bureaucrats = {
+        culture = swedish
+        religion = protestant
+        size = 425
+    }
+
+	farmers = {
+        culture = swedish
+        religion = protestant
+        size = 6800
+    }
+	
     officers = {
         culture = north_german
         religion = protestant

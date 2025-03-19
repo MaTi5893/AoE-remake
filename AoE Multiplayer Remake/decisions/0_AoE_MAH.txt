@@ -8,7 +8,10 @@ political_decisions = {
         }
         allow = {
 			war = no
-            civilization_progress = 0.75
+			OR = {
+				civilized = yes
+				civilization_progress = 0.75
+			}
             owns = 1291
         }
         effect = {
@@ -52,11 +55,21 @@ political_decisions = {
 		allow = {
 			OR = {
 				has_global_flag = death_of_aurangzeb 
-				is_independant = yes
+				AND = {
+					war = no
+					is_independant = yes
+				}
 			}
 		}
 		effect = {
 			set_country_flag = return_of_shahu_bhosale
+			MUG = {
+				casus_belli = {
+					target = THIS
+					type = conquest
+					months = 62 #5 years for truce running out + 2 months
+				}
+			}
 			random_owned = {
 				limit = {
 					owner = {
@@ -98,6 +111,118 @@ political_decisions = {
 			any_owned = {
 				remove_core = MUG
 			}
+		}
+	}
+	
+	mah_conquer_deccan = {
+		potential = {
+			tag = MAH
+			NOT = { has_global_flag = mah_victory_deccan }
+		}
+		allow = {
+			war_with = MUG
+			OR = {
+				AND = {
+					BIJ = {
+						all_core = { controlled_by = THIS } 
+					}
+					NOT = { owns = 1300 }
+				}
+				AND = {
+					BRR = {
+						all_core = { controlled_by = THIS } 
+					}
+					NOT = { owns = 1278 }
+				}
+				AND = {
+					GUJ = {
+						all_core = { controlled_by = THIS } 
+					}
+					NOT = { owns = 1291 }
+				}
+				AND = {
+					MAW = {
+						all_core = { controlled_by = THIS } 
+					}
+					NOT = { owns = 1272 }
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					tag = BIJ
+					war_with = MAH
+					all_core = { controlled_by = THIS } 
+				}
+				annex_to = THIS
+				BIJ = { all_core = { add_core = THIS } }
+				research_points = 3000
+			}
+			random_country = {
+				limit = {
+					tag = BRR
+					war_with = MAH
+					all_core = { controlled_by = THIS } 
+				}
+				annex_to = THIS
+				BRR = { all_core = { add_core = THIS } }
+				research_points = 3000
+			}
+			random_country = {
+				limit = {
+					tag = GUJ
+					war_with = MAH
+					all_core = { controlled_by = THIS } 
+				}
+				annex_to = THIS
+				GUJ = { all_core = { add_core = THIS } }
+				research_points = 3000
+			}
+			random_country = {
+				limit = {
+					tag = MAW
+					war_with = MAH
+					all_core = { controlled_by = THIS } 
+				}
+				annex_to = THIS
+				MAW = { all_core = { add_core = THIS } }
+				research_points = 3000
+			}
+		}
+	}
+	
+	master_of_the_deccan = {
+		potential = {
+			tag = MAH
+			NOT = { has_country_flag = mah_victory_deccan }
+		}
+		allow = {
+			war = no
+			AND = {
+				BIJ = {
+					all_core = { owned_by = THIS } 
+				}
+				BRR = {
+					all_core = { owned_by = THIS } 
+				}
+				GUJ = {
+					all_core = { owned_by = THIS } 
+				}
+				MAW = {
+					all_core = { owned_by = THIS } 
+				}
+			}
+		}
+		effect = {
+			prestige = 15
+			BIJ = { all_core = { add_core = THIS } }
+			BRR = { all_core = { add_core = THIS } }
+			GUJ = { all_core = { add_core = THIS } }
+			MAW = { all_core = { add_core = THIS } }
+			add_accepted_culture = gujarati
+			research_points = 9000
+			set_country_flag = mastered_the_deccan
 		}
 	}
 	

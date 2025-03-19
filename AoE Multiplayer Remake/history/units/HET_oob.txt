@@ -8,37 +8,61 @@ army = {
     regiment = {
         name= "Poltava Polk"
         type = hussar
-        home = 963
+        home = 958
     }
 
     regiment = {
         name= "Chernigov Polk"
-        type = artillery
-        home = 962
+        type = engineer
+        home = 958
     }
 
     regiment = {
         name= "Kiev Polk"
-        type = artillery
-        home = 963
+        type = engineer
+        home = 958
     }
 
     regiment = {
         name= "3nd Chernigov Polk"
         type = artillery
-        home = 962
+        home = 958
     }
 
     regiment = {
         name= "2nd Chernigov Polk"
         type = artillery
-        home = 962
+        home = 958
     }
 
     regiment = {
         name= "Bryansk Polk"
         type = artillery
-        home = 1016
+        home = 958
+    }
+	
+	regiment = {
+        name= "Kiev Polk"
+        type = infantry
+        home = 958
+    }
+
+    regiment = {
+        name= "3nd Chernigov Polk"
+        type = infantry
+        home = 962
+    }
+
+    regiment = {
+        name= "2nd Chernigov Polk"
+        type = infantry
+        home = 962
+    }
+
+    regiment = {
+        name= "Bryansk Polk"
+        type = infantry
+        home = 962
     }
 }
 

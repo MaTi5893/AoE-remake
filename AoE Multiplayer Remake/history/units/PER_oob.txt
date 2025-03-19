@@ -20,7 +20,7 @@ leader = {
     name = "Allahverdi Khan"
     date = 1699.1.1
     type = land
-    personality = defence_1.1
+    personality = defence_2.1
     background = attack_2.2
     prestige = 0.1
 }
@@ -36,7 +36,7 @@ leader = {
 
 army = {
     name = "Army of Isfahan"
-    location = 1127
+    location = 1129
 
     regiment = {
         name= "3. Artillery Brigade"
@@ -182,35 +182,105 @@ army = {
 
 army = {
     name = "Army of Balochistan"
-    location = 1221
+    location = 1220
     regiment = {
         name= "4. Bakhsh-i Piyadenizam"
         type = engineer
-        home = 1221
+        home = 1214
     }
 
     regiment = {
         name= "5. Bakhsh-i Piyadenizam"
         type = engineer
-        home = 1221
+        home = 1214
     }
 
     regiment = {
         name= "9. Bakhsh-i Piyadenizam"
         type = cavalry
-        home = 1221
+        home = 1214
     }
 
 	regiment = {
         name= "16. Bakhsh-i Piyadenizam"
         type = infantry
-        home = 1135
+        home = 1214
     }
 
     regiment = {
         name= "17. Bakhsh-i Piyadenizam"
         type = infantry
+        home = 1214
+    }
+
+}
+
+army = {
+    name = "Army of Balochistan"
+    location = 1121
+    regiment = {
+        name= "4. Bakhsh-i Piyadenizam"
+        type = engineer
+        home = 1121
+    }
+
+    regiment = {
+        name= "5. Bakhsh-i Piyadenizam"
+        type = engineer
+        home = 1121
+    }
+
+    regiment = {
+        name= "9. Bakhsh-i Piyadenizam"
+        type = cavalry
+        home = 1108
+    }
+
+	regiment = {
+        name= "16. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1108
+    }
+
+    regiment = {
+        name= "17. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1108
+    }
+
+}
+
+army = {
+    name = "Army of Shiraz"
+    location = 1135
+    regiment = {
+        name= "4. Bakhsh-i Piyadenizam"
+        type = engineer
+        home = 1135
+    }
+
+    regiment = {
+        name= "5. Bakhsh-i Piyadenizam"
+        type = engineer
         home = 1142
+    }
+
+    regiment = {
+        name= "9. Bakhsh-i Piyadenizam"
+        type = cavalry
+        home = 1127
+    }
+
+	regiment = {
+        name= "16. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1127
+    }
+
+    regiment = {
+        name= "17. Bakhsh-i Piyadenizam"
+        type = infantry
+        home = 1127
     }
 
 }

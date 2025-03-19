@@ -1,0 +1,28 @@
+name = "The Deccan War"
+
+1700.1.1 = {
+    add_attacker = MUG
+	add_attacker = GUJ
+	add_attacker = BIJ
+	add_attacker = MAW
+	add_attacker = BRR
+	add_attacker = VIJ
+    add_defender = MAH
+
+    # actor
+    # receiver
+    # casus_belli - cb type
+    # country - 3rd party
+    # state_province_id - target state capital
+    war_goal = {
+        casus_belli = establish_protectorate_casus_belli
+        actor = MUG
+        receiver = MAH
+    }
+	war_goal = {
+        casus_belli = humiliate
+        actor = MAH
+        receiver = MUG
+    }
+
+}

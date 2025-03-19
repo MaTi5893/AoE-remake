@@ -1,13 +1,14 @@
-capital = 1047
+capital = 1046
 primary_culture = cossack
 culture = ukrainian
 culture = tatar
 religion = orthodox
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.02
 nationalvalue = pm_no_minister
 literacy = 0.15
 civilized = yes
+prestige = 5
 
 # Political reforms
 slavery = no_slavery
@@ -36,7 +37,7 @@ penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
 
-
+centralization = unitary
 colonial_policy = no_colonies
 
 set_country_flag = orthodox_country
@@ -51,3 +52,26 @@ upper_house = {
     socialist = 0
     communist = 0
 }
+
+#tech
+post_napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+army_command_principle = 1
+clipper_design = 1
+post_nelsonian_thought = 1
+naval_design_bureaus = 1
+alphabetic_flag_signaling = 1
+the_command_principle = 1
+private_banks = 1
+no_standard = 1
+guild_based_production = 1
+classicism_n_early_romanticism = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+piston_steam_engine = 1
+mechanical_production = 1
+
+
+
+oob = "DON_oob.txt"

@@ -1,5 +1,24 @@
 political_decisions = {
 
+	i_love_mazepa = {
+		picture = concede_finland
+		potential = {
+			ai = no
+			tag = SWE
+		}
+		
+		allow = {
+			prestige = 2
+		}
+		
+		effect = {
+			inherit = HET
+			release = HET
+			create_vassal = HET
+			set_country_flag = Conceded_Finland
+		}
+	}
+	
 	concede_finland = {
 		picture = concede_finland
 		potential = {

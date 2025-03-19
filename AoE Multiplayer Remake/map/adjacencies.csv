@@ -39,7 +39,7 @@
 759;763;sea;2760;0;Strait of Messina
 759;763;sea;2757;0;Strait of Messina
 837;827;sea;2765;0;Ionian Islands Strait
-1687;2384;sea;2746;0;Strait of Gibraltar
+2590;2384;sea;2746;0;Strait of Gibraltar
 369;533;sea;2721;0;Kiel-Helegoland Strait
 418;419;sea;2725;0;France-Channel Islands Strait
 780;782;land;2762;0;Mostar Bay
@@ -169,8 +169,10 @@
 727;734;impassable;0;0;scary mountain
 
 #caucases
-1055;1091;impassable;0;0;scary mountain
-1053;1091;impassable;0;0;scary mountain
+2619;1095;impassable;0;0;scary mountain
+2619;2640;impassable;0;0;scary mountain
+1056;1092;impassable;0;0;scary mountain
+1056;2640;impassable;0;0;scary mountain
 1090;1052;impassable;0;0;scary mountain
 1090;1053;impassable;0;0;scary mountain
 1090;1055;impassable;0;0;scary mountain
@@ -226,7 +228,7 @@
 #Giblartar
 2746;3272;canal;2384;7;Giblartar Strait
 2746;3273;canal;512;8;Giblartar Strait
-2746;3274;canal;1687;9;Giblartar Strait
+2746;3274;canal;2590;9;Giblartar Strait
 #Don
 2776;3266;canal;979;12;Strait of Azov
 

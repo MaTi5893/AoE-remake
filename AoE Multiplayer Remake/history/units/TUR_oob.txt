@@ -54,6 +54,16 @@ TUN = {
 	level = 4		#3=cordial, 4 = friendly, 5 sphere
 	influence_value = 0
 }
+CIR = {
+	value = 60
+	level = 5
+	influence_value = 0
+}
+CRI = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
 MOR = {
 	value = 40
 }
@@ -103,7 +113,9 @@ PLC = {
 TOR = { value = -100 }
 ENG = { value = -25 }
 BOR = { value = 35 }
-
+TOR = {
+	truce_until = 1703.1.1
+}
 
 army = {
 	name = "Army of the Danube"
@@ -699,7 +711,7 @@ leader = {
 	name = "Abdi Pasha"
 	date = 1700.1.1
 	type = land
-	personality = defence_3.1
+	personality = defence_2.1
 	background = attack_3.1
 	prestige = 0.0
 }
@@ -724,15 +736,6 @@ leader = {
 
 leader = {
 	name = "Abdülkerim Pasha"
-	date = 1700.1.1
-	type = land
-	personality = defence_0.1
-	background = attack_2.3
-	prestige = 0.0
-}
-
-leader = {
-	name = "Khan Giray I"
 	date = 1700.1.1
 	type = land
 	personality = defence_0.1

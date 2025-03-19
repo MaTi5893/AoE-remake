@@ -1,0 +1,988 @@
+country_event = {
+	id = 700700
+	title = "State Sizing Early Game"
+
+	trigger = {
+		tag = CLN
+		NOT = { has_country_modifier = sizing_cooldown }
+		NOT = { year = 1740 }
+	}
+	
+	immediate = {
+		add_country_modifier = {
+			name = sizing_cooldown
+			duration = 365
+		}
+	}
+
+	option = {
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						NOT = { total_pops = 50000 }
+						NOT = { continent = north_america}
+						NOT = { continent = south_america}
+					}
+				}
+				add_core = TIN
+				remove_core = SMA
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						NOT = { total_pops = 20000 }
+						continent = north_america
+					}
+				}
+				add_core = TIN
+				remove_core = SMA
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						NOT = { total_pops = 20000 }
+						continent = south_america
+					}
+				}
+				add_core = TIN
+				remove_core = SMA
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 50000
+						NOT = { total_pops = 150000 }
+						NOT = { continent = north_america}
+						NOT = { continent = south_america}
+					}
+				}
+				add_core = SMA 
+				remove_core = TIN
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 20000
+						NOT = { total_pops = 100000 }
+						continent = north_america
+					}
+				}
+				add_core = SMA 
+				remove_core = TIN
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 20000
+						NOT = { total_pops = 100000 }
+						continent = south_america
+					}
+				}
+				add_core = SMA 
+				remove_core = TIN
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 150000 
+						NOT = { total_pops = 400000 }
+						NOT = { continent = north_america}
+						NOT = { continent = south_america}
+					} 
+				} 
+				add_core = MED
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = LRG 
+				remove_core = HUG 
+			} 
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 100000 
+						NOT = { total_pops = 250000 }
+						continent = north_america
+					} 
+				} 
+				add_core = MED
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = LRG 
+				remove_core = HUG 
+			} 
+		}	
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 100000 
+						NOT = { total_pops = 250000 }
+						continent = south_america
+					} 
+				} 
+				add_core = MED
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = LRG 
+				remove_core = HUG 
+			} 
+		}			
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = {
+				limit = {
+					state_scope = { 
+						total_pops = 400000 
+						NOT = { total_pops = 700000 }
+						NOT = { continent = north_america}
+						NOT = { continent = south_america}
+					} 
+				} 
+			add_core = LRG
+			remove_core = TIN
+			remove_core = SMA 
+			remove_core = MED 
+			remove_core = HUG 
+			} 
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = {
+				limit = {
+					state_scope = { 
+						total_pops = 250000 
+						NOT = { total_pops = 400000 }
+						continent = north_america
+					} 
+				} 
+			add_core = LRG
+			remove_core = TIN
+			remove_core = SMA 
+			remove_core = MED 
+			remove_core = HUG 
+			} 
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = {
+				limit = {
+					state_scope = { 
+						total_pops = 250000 
+						NOT = { total_pops = 400000 }
+						continent = south_america
+					} 
+				} 
+			add_core = LRG
+			remove_core = TIN
+			remove_core = SMA 
+			remove_core = MED 
+			remove_core = HUG 
+			} 
+		}
+		any_country = {
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 700000
+						NOT = { continent = north_america}
+						NOT = { continent = south_america}
+					}
+				}
+				add_core = HUG 
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = MED 
+				remove_core = LRG 
+			} 
+		}
+		any_country = {
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 400000
+						continent = north_america
+					}
+				}
+				add_core = HUG 
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = MED 
+				remove_core = LRG 
+			} 
+		}
+		any_country = {
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = MOR
+							tag = TUN
+							tag = ALD
+							tag = OMA
+							tag = ZAN
+							tag = DZN
+							tag = XIN
+							tag = MAH
+							tag = MUG
+							vassal_of = MUG 
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 400000
+						continent = south_america
+					}
+				}
+				add_core = HUG 
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = MED 
+				remove_core = LRG 
+			} 
+		}
+	}
+}	
+
+country_event = {
+	id = 700701
+	title = "State Sizing Mid Game"
+
+	trigger = {
+		tag = CLN
+		NOT = { has_country_modifier = sizing_cooldown }
+		year = 1740
+		NOT = { year = 1780 }
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = sizing_cooldown
+			duration = 365
+		}
+	}
+
+	option = {
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						NOT = { total_pops = 75000 }
+					}
+				}
+				add_core = TIN
+				remove_core = SMA
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 75000
+						NOT = { total_pops = 200000 }
+					}
+				}
+				add_core = SMA 
+				remove_core = TIN
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 200000 
+						NOT = { total_pops = 500000 }
+					} 
+				} 
+				add_core = MED
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = LRG 
+				remove_core = HUG 
+			} 
+		}		
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = {
+				limit = {
+					state_scope = { 
+						total_pops = 500000 
+						NOT = { total_pops = 8500000 }
+					} 
+				} 
+			add_core = LRG
+			remove_core = TIN
+			remove_core = SMA 
+			remove_core = MED 
+			remove_core = HUG 
+			} 
+		}
+		any_country = {
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 850000
+					}
+				}
+				add_core = HUG 
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = MED 
+				remove_core = LRG 
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = 700702
+	title = "State Sizing Late Game"
+
+	trigger = {
+		tag = CLN
+		NOT = { has_country_modifier = sizing_cooldown }
+		year = 1780
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = sizing_cooldown
+			duration = 365
+		}
+	}
+
+	option = {
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						NOT = { total_pops = 100000 }
+					}
+				}
+				add_core = TIN
+				remove_core = SMA
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 100000
+						NOT = { total_pops = 250000 }
+					}
+				}
+				add_core = SMA 
+				remove_core = TIN
+				remove_core = MED 
+				remove_core = LRG 
+				remove_core = HUG 
+			}
+		}
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 250000 
+						NOT = { total_pops = 600000 }
+					} 
+				} 
+				add_core = MED
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = LRG 
+				remove_core = HUG 
+			} 
+		}		
+		any_country = { 
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = {
+				limit = {
+					state_scope = { 
+						total_pops = 600000 
+						NOT = { total_pops = 1200000 }
+					} 
+				} 
+			add_core = LRG
+			remove_core = TIN
+			remove_core = SMA 
+			remove_core = MED 
+			remove_core = HUG 
+			} 
+		}
+		any_country = {
+			limit = {
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						OR = {
+							tag = TUR
+							tag = TRI
+							tag = TEX
+							tag = MEX
+						}
+						NOT = { 
+							year = 1701 
+						}
+					}
+				}
+				
+			}
+			any_owned = { 
+				limit = {
+					state_scope = { 
+						total_pops = 1200000
+					}
+				}
+				add_core = HUG 
+				remove_core = TIN
+				remove_core = SMA 
+				remove_core = MED 
+				remove_core = LRG 
+			} 
+		}
+	}
+}

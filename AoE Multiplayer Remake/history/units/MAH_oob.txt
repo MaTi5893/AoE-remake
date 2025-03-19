@@ -1,5 +1,9 @@
+MUG = {
+    value = -200
+}
+
 army = {
-    name = "Marathan army"
+    name = "Marathan Army"
     location = 1297
     regiment = {
         name= "1. Maratha infantry unit"
@@ -17,13 +21,13 @@ army = {
         home = 1297
     }
     regiment = {
-        name= "4. Maratha infantry unit"
-        type = infantry
+        name= "4. Maratha cavalry unit"
+        type = cavalry
         home = 1297
     }
     regiment = {
-        name= "5. Maratha infantry unit"
-        type = infantry
+        name= "5. Maratha artillery unit"
+        type = engineer
         home = 1297
     }
     regiment = {
@@ -47,6 +51,57 @@ army = {
         home = 1297
     }
 }
+
+army = {
+    name = "2nd Marathan Army"
+    location = 1301
+    regiment = {
+        name= "1. Maratha infantry unit"
+        type = infantry
+        home = 1297
+    }
+    regiment = {
+        name= "2. Maratha infantry unit"
+        type = infantry
+        home = 1297
+    }
+    regiment = {
+        name= "3. Maratha infantry unit"
+        type = infantry
+        home = 1297
+    }
+    regiment = {
+        name= "4. Maratha cavalry unit"
+        type = cavalry
+        home = 1297
+    }
+    regiment = {
+        name= "5. Maratha artillery unit"
+        type = engineer
+        home = 1297
+    }
+    regiment = {
+        name= "1. Maratha artillery unit"
+        type = artillery
+        home = 1297
+    }
+    regiment = {
+        name= "2. Maratha artillery unit"
+        type = artillery
+        home = 1297
+    }
+    regiment = {
+        name= "1. Maratha cuirassier unit"
+        type = cuirassier
+        home = 1309
+    }
+    regiment = {
+        name= "2. Maratha cuirassier unit"
+        type = cuirassier
+        home = 1309
+    }
+}
+
 leader = {
     name = "Tarabai"
     date = 1700.1.1
@@ -56,3 +111,22 @@ leader = {
     picture = mah_tarabai
     prestige = 0.3
 }
+
+leader = {
+    name = "Dhanaji Jadhav"
+    date = 1700.1.1
+    type = land
+    personality = defence_3.1
+    background = attack_3.1
+    prestige = 0.15
+}
+
+leader = {
+    name = "Santaji Ghorpade"
+    date = 1700.1.1
+    type = land
+    personality = defence_3.1
+    background = attack_3.1
+    prestige = 0.15
+}
+
