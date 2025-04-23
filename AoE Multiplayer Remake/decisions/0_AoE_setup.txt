@@ -1392,6 +1392,7 @@ political_decisions = {
 			always = no
 		}
 		effect = {
+			TUR = { war_exhaustion = 30 }
 			add_country_modifier = {
 				name = janisseries_influence
 				duration = -1

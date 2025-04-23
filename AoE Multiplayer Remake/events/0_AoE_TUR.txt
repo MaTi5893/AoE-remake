@@ -980,7 +980,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		months = 5
 	}
 	
 	option = {
@@ -1088,7 +1088,8 @@ country_event = {
 	
 	trigger = {
 		tag = TUR
-		NOT = { war_with = MOR truce_with = MOR war_with = TUN truce_with = TUN }
+		NOT = { war_with = MOR truce_with = MOR }
+		#NOT = { war_with = TUN truce_with = TUN }
 		NOT = { 
 		has_global_flag = turk_intervenes_maghreb 
 		has_global_flag = turk_maghreb_war_victor 
@@ -1115,45 +1116,54 @@ country_event = {
 	}
 	
 	option = {
-		name = "The Tunisian and Moroccan invaders shall taste the might of our Janissaries."
+		name = "The Moroccan invaders shall taste the might of our Janissaries."
 		relation = { who = MOR value = -100 }
 		relation = { who = ALD value = 100 }
-		relation = { who = TUN value = -100 }
+		#relation = { who = TUN value = -100 }
 		ALD = { country_event = 173629 }
 		TUR = {
-			create_vassal = ALD
+			#create_vassal = ALD
 			create_alliance = ALD
+			diplomatic_influence = {
+				who = ALD
+				value = 200
+			}
+			casus_belli = {
+                target = MOR
+                type = liberate_country
+                months = 60
+            }
 			war = {
 				target = MOR
 				attacker_goal = { casus_belli = liberate_country country = ALD }
-				defender_goal = { casus_belli = release_puppet country = ALD }
+				#defender_goal = { casus_belli = release_puppet country = ALD }
 				call_ally = yes
 			}
-			war = {
-				target = TUN
-				attacker_goal = { casus_belli = make_puppet }
-				call_ally = yes
-			}
+			#war = {
+			#	target = TUN
+			#	attacker_goal = { casus_belli = make_puppet }
+			#	call_ally = yes
+			#}
 		}
 		set_global_flag = turk_intervenes_maghreb 
 	}
 	
-	option = {
-		name = "Crushing the Beylik of Tunis is of more importance than aiding the Algerians."
-		ALD = { all_core = { add_core = MOR } }
-		relation = { who = MOR value = 20 }
-		relation = { who = ALD value = -40 }
-		relation = { who = TUN value = -100 }
-		TUR = {
-			war = {
-				target = TUN
-				attacker_goal = { casus_belli = make_puppet }
-				call_ally = no
-			}
-		}
-		prestige = -5
-		set_global_flag = turk_maghreb_war_defeat
-	}
+	#option = {
+	#	name = "Crushing the Beylik of Tunis is of more importance than aiding the Algerians."
+	#	ALD = { all_core = { add_core = MOR } }
+	#	relation = { who = MOR value = 20 }
+	#	relation = { who = ALD value = -40 }
+	#	relation = { who = TUN value = -100 }
+	#	TUR = {
+	#		war = {
+	#			target = TUN
+	#			attacker_goal = { casus_belli = make_puppet }
+	#			call_ally = no
+	#		}
+	#	}
+	#	prestige = -5
+	#	set_global_flag = turk_maghreb_war_defeat
+	#}
 	
 	option = {
 		name = "The Sultan has little resources to spare for the trite affairs of Maghrebis."
@@ -1161,7 +1171,7 @@ country_event = {
 		release_vassal = TUN
 		relation = { who = MOR value = 40 }
 		relation = { who = ALD value = -60 }
-		relation = { who = IRQ value = -20 }
+		relation = { who = TUN value = -20 }
 		prestige = -10
 		set_global_flag = turk_maghreb_war_defeat
 	}
@@ -1179,13 +1189,13 @@ country_event = {
             limit = { is_primary_culture = yes }
             militancy = -6
         }
-		any_owned = {
-			limit = {
-                    is_core = ALD
-					controlled_by = MOR
-                }
-                secede_province = MOR
-		}
+		#any_owned = {
+		#	limit = {
+        #            is_core = ALD
+		#			controlled_by = MOR
+        #        }
+        #        secede_province = MOR
+		#}
 		capital = 1700
 		create_alliance = TUR
 	}
@@ -1205,10 +1215,13 @@ country_event = {
 		tag = TUR
 		NOT = { has_global_flag = turk_maghreb_war_defeat }
 		NOT = { war_with = MOR war_with = ALD }
+		NOT = { ALD = { any_core = { owned_by = MOR }} }
 		ALD = {
             exists = yes
-			ALD = { all_core = { owned_by = ALD } }
-            NOT = { war_with = MOR }
+			AND = {
+				NOT = { war_with = MOR }
+				war = no
+			}
 			OR = {
 				is_vassal = no
 				vassal_of = TUR
@@ -1217,12 +1230,12 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 5
 	}
 	
 	option = {
 		name = "And the Sultan graciously accepts their vassalage."
-		relation = { who = MOR value = -50 }
+		relation = { who = MOR value = -80 }
 		relation = { who = ALD value = 200 }
 		TUR = {
 			create_vassal = ALD
@@ -1231,8 +1244,8 @@ country_event = {
 				who = ALD
 				value = 400
 			}
-			set_global_flag = turk_maghreb_war_victor
 		}
+		set_global_flag = turk_maghreb_war_victor
 	}
 }
 country_event = {
@@ -1254,11 +1267,12 @@ country_event = {
 			OR = { 
 				AND = {
 					exists = yes
-					is_vassal = no
-					NOT = { 
-						war_with = MOR 
-						ALD = { all_core = { owned_by = ALD } } 
+					OR = {
+						is_vassal = no
+						vassal_of = THIS 
 					}
+					ALD = { any_core = { owned_by = MOR }}
+					NOT = { war_with = MOR }
 				}
 				exists = no	
 			}
@@ -1266,7 +1280,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 6
 	}
 	
 	option = {
