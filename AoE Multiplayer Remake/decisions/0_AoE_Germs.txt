@@ -242,6 +242,7 @@ political_decisions = {
 			war = no
 			OR = {
 				KOL = {
+					war = no
 					relation = {
 						who = THIS
 						value = 120
@@ -253,6 +254,7 @@ political_decisions = {
 					}
 				}
 				LIG = {
+					war = no
 					relation = {
 						who = THIS
 						value = 120
@@ -264,6 +266,7 @@ political_decisions = {
 					}
 				}
 				PAL = {
+					war = no
 					relation = {
 						who = THIS
 						value = 150

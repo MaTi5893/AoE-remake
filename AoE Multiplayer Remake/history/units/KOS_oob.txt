@@ -1,0 +1,50 @@
+leader = {
+    name = "Semyon Paliy"
+    type = land
+    date = 1700.1.1
+    background = defence_2.2
+    personality = attack_4.2
+}
+
+leader = {
+    name = "Andrii Abazyn"
+    type = land
+    date = 1700.1.1
+    background = defence_3.2
+    personality = attack_1.2
+}
+
+army = {
+	name = "Right-bank Host"
+	location = 960
+	regiment = {
+	name = "Dykopoltsi"
+	type = hussar
+	home = 959
+	}
+	regiment = {
+	name = "Sich Polk"
+	type = hussar
+	home = 959
+	}
+	regiment = {
+	name = "Lysychansk Polk"
+	type = hussar
+	home = 959
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = infantry
+	home = 959
+	}
+	regiment = {
+	name = "Poltava Polk"
+	type = infantry
+	home = 959
+	}
+	regiment = {
+	name = "Dykopoltsi"
+	type = engineer
+	home = 959
+	}
+}

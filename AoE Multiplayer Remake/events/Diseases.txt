@@ -28,11 +28,11 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            vaccination = public_vaccination
+            electricity = 1
         }
         modifier = {
             factor = 1.25
-            vaccination = military_vaccination
+            inorganic_chemistry = 1
         }
     }
 
@@ -125,11 +125,11 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            vaccination = public_vaccination
+            electricity = 1
         }
         modifier = {
             factor = 1.25
-            vaccination = military_vaccination
+            inorganic_chemistry = 1
         }
         modifier = {
             factor = 1.5
@@ -214,11 +214,11 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            vaccination = public_vaccination
+            electricity = 1
         }
         modifier = {
             factor = 1.25
-            vaccination = military_vaccination
+            inorganic_chemistry = 1
         }
         modifier = {
             factor = 0.01
@@ -285,11 +285,11 @@ country_event = {
 #        }
         modifier = {
             factor = 1.5
-            vaccination = public_vaccination
+            electricity = 1
         }
         modifier = {
             factor = 1.25
-            vaccination = military_vaccination
+            inorganic_chemistry = 1
         }
     }
 

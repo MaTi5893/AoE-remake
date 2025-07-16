@@ -6,7 +6,13 @@ ENG = { value = 25 }
 NET = { value = 100 }
 HET = { value = -200 }
 SWE = { value = -200 }
-ZZH = { value = 150 }
+ZZH = { value = 80 }
+
+KOS = {
+	value = -40
+	level = 3
+	influence_value = 20
+}
 
 army = {
 
@@ -21,7 +27,7 @@ regiment = { name = "6. brygada" type = engineer home = 713 }
 regiment = { name = "7. brygada" type = engineer home = 713 } 
 regiment = { name = "8. brygada" type = engineer home = 706 } 
 regiment = { name = "9. brygada" type = artillery home = 706 } 
-regiment = { name = "10. brygada" type = artillery home = 959 }
+regiment = { name = "10. brygada" type = artillery home = 955 }
 }
 
 army = { 

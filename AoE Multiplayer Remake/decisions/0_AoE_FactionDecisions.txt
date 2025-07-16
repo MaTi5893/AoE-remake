@@ -222,16 +222,12 @@ political_decisions = {
         }
         allow = {
             war = yes
-			any_owned_province = {
-				is_capital = yes
-				country_units_in_province = THIS
-			}
             OR = {
                 safety_regulations = no_safety
                 safety_regulations = trinket_safety
                 safety_regulations = low_safety
             }
-            capital_scope = { controlled_by = THIS }
+            capital_scope = { controlled_by = THIS country_units_in_province = THIS }
             money = 100000
         }
         effect = {

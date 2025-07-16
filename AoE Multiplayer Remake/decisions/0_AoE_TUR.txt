@@ -793,7 +793,15 @@ political_decisions = {
 				}
 			}
 			TUN = { all_core = { owned_by = THIS } }
-			ALD = { all_core = { owned_by = THIS } }
+			OR = {
+				ALD = { all_core = { owned_by = THIS } }
+				AND = {
+					owns = 1707
+					owns = 1713
+					owns = 1700
+					owns = 1708
+				}			
+			}
 			TRI = { all_core = { owned_by = THIS } }
 			FZN = { all_core = { owned_by = THIS } }
 		}
@@ -987,6 +995,7 @@ political_decisions = {
 	#		NOT = { has_country_flag = anti_russo_persian_hugbox }
 	#		926 = {
 	#			owned_by = THIS
+	#			country_units_in_province = THI
 	#		}
 	#		NOT = { year = 1710 }
 	#	}

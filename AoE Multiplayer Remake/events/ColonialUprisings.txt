@@ -685,7 +685,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB14600"
-		prestige = -15
+		prestige = -10
 	}
 }
 
@@ -777,7 +777,7 @@ province_event = {
 		name = "EVTOPTA14620"
 		state_scope = {
 			any_pop = {
-				reduce_pop = 0.95
+				reduce_pop = 0.99
 				militancy = -1
 				consciousness = 1
 			}
@@ -788,7 +788,7 @@ province_event = {
 		name = "EVTOPTB14620"
 		state_scope = {
 			any_pop = {
-				reduce_pop = 0.80
+				reduce_pop = 0.95
 				militancy = -2
 			}
 		}
@@ -1167,7 +1167,7 @@ country_event = {
 			any_owned = {
 				add_province_modifier = {
 					name = colonial_recruitment
-					duration = 7300
+					duration = 3515
 				}
 			}
 		}
@@ -1182,7 +1182,7 @@ country_event = {
 			any_owned = {
 				add_province_modifier = {
 					name = baby_boom
-					duration = 1825
+					duration = 912
 				}
 			}
 		}
@@ -1244,7 +1244,7 @@ country_event = {
 			}
 			add_province_modifier = {
 				name = loyal_askaris
-				duration = 10950
+				duration = 5475
 			}
 		}
 	}

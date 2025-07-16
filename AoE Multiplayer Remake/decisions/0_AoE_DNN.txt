@@ -142,14 +142,58 @@ political_decisions = {
 	push_the_swedish_claims = {
 		picture = petersburg
 		potential = {
-			tag = SCA
+			AND = {
+				primary_culture = danish
+				tag = SCA 
+			}
 			NOT = { has_country_flag = push_the_swedish_claims }
 		}
 		allow = {
+			owns = 354
+			owns = 343
 			nationalism_n_imperialism = 1
 		}
 		effect = {
 			set_country_flag = push_the_swedish_claims
+			PRU_690 = {
+				add_core = THIS
+			}
+			PRU_695 = {
+				add_core = THIS
+			}
+			679 = {
+				add_core = THIS
+			}
+			680 = {
+				add_core = THIS
+			}
+			708 = {
+				add_core = THIS
+			}
+			709 = {
+				add_core = THIS
+			}
+			707 = {
+				add_core = THIS
+			}
+			362 = {
+				add_core = THIS
+			}
+			364 = {
+				add_core = THIS
+			}
+			365 = {
+				add_core = THIS
+			}
+			356 = {
+				add_core = THIS
+			}
+			2414 = {
+				add_core = THIS
+			}
+			FIN = { all_core = { add_core = THIS } }
+			LAT = { all_core = { add_core = THIS } }
+			KUR = { all_core = { add_core = THIS } }
 			add_accepted_culture = finnish
 			add_accepted_culture = latvian
 			add_accepted_culture = estonian

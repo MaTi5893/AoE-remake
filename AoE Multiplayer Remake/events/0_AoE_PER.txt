@@ -1,24 +1,24 @@
 country_event = {
 	id = 173202
-	title = "Rise of Nader Shah"
+	title = "Nader Shah Appointed Chief of Army"
 	desc = "EVTDESC173202"
 	fire_only_once = yes
 	picture = nader_shah
 	
 	trigger = {
-		year = 1729
+		year = 1726
 		tag = PER
-		OR = {
-		war_exhaustion = 15
-		year = 1732
-		}
 		NOT = { government = democracy }
 		NOT = { government = presidential_dictatorship }
 		NOT = { government = proletarian_dictatorship }
 	}
 	
+	mean_time_to_happen = {
+        months = 3
+    }
+	
 	option = {
-		name = "A great military mind!"
+		name = "He will expel all enemies of Iran."
 		define_general = {
 			name = "Nader Shah"
 			personality = defence_3.1
@@ -28,7 +28,7 @@ country_event = {
 }
 country_event = {
 	id = 173207
-	title = "Rise of Nader Shah"
+	title = "Nader Shah Proclaimed Shah"
 	desc = "EVTDESC173202"
 	is_triggered_only = yes
 	picture = nader_shah
@@ -71,7 +71,7 @@ country_event = {
 	picture = persian_embassy
 	
 	option = {
-		name = "Fruitfull negotiations."
+		name = "Fruitful negotiations."
 		FROM = {
 			years_of_research = 0.3
 			money = 100000
@@ -111,16 +111,7 @@ country_event = {
 	desc = "EVTDESC173204"
 	fire_only_once = yes
 	picture = sack_of_delhi
-	
-	trigger = {
-		has_leader = "Nader Shah"
-		1236 = {
-			controlled_by = THIS
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "Glory!"
@@ -200,5 +191,96 @@ country_event = {
 			remove_core = THIS
 		}
 		change_tag = PRZ
+	}
+}
+country_event = {
+	id = 173210
+	title = "New Governor of Kandahar"
+	desc = "EVTDESC173210"
+	fire_only_once = yes
+	picture = nader_shah
+	
+	trigger = {
+		year = 1704
+		tag = PER
+	}
+	
+	mean_time_to_happen = {
+        months = 3
+    }
+	
+	option = {
+		name = "Let him crush any rebels on his way there."
+		any_pop = {
+			limit = { culture = pashtun }
+			militancy = 6
+		}
+		define_general = {
+			name = "Gurgin Khan"
+			personality = defence_1.1
+			background = attack_3.1
+		}
+	}
+}
+country_event = {
+	id = 173211
+	title = "Rebellion in Kandahar"
+	desc = "EVTDESC173211"
+	fire_only_once = yes
+	picture = nader_shah
+	
+	trigger = {
+		year = 1709
+		tag = PER
+	}
+	
+	mean_time_to_happen = {
+        months = 3
+    }
+	
+	option = {
+		name = "This is getting out of hand."
+		any_pop = {
+			militancy = 3
+		}
+		AFG_1214 = {
+			secede_province = HTK
+			add_core = HTK
+		}
+		HTK = {
+			government = absolute_monarchy
+			capital = 1215
+			badboy = 5
+			add_country_modifier = {
+				name = rise_of_hotaki
+				duration = 1825
+			}
+			any_pop = {
+				limit = {
+					type = soldiers
+					culture = pashtun
+				}
+				reduce_pop = 1.85
+			}
+			social_reform = good_pensions
+			money = 1000000
+		}
+		war = {
+			target = HTK
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = annex_core_country }
+		}
+		HTK = {
+			define_general = {
+				name = "Mirwais Hotak"
+				personality = defence_4.1
+				background = attack_2.1
+			}
+			define_general = {
+				name = "Mahmud Hotak"
+				personality = defence_2.1
+				background = attack_4.1
+			}
+		}
 	}
 }

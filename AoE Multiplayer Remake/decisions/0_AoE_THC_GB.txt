@@ -48,6 +48,7 @@ political_decisions = {
 		allow = {
 			war = yes
 			money = 5000
+			capital_scope = { controlled_by = THIS country_units_in_province = THIS }
 		}
 		effect = {
 			set_country_flag = usa_mobilized_militia

@@ -5,6 +5,9 @@ political_decisions = {
 		potential = {
 			tag = AFG
 			NOT = { exists = HTK }
+			NOT = {
+				has_country_flag = afghan_formed_hotak
+			}
 		}
 		allow = {
 			is_independant = yes
@@ -16,7 +19,6 @@ political_decisions = {
 		effect = {
 			all_core = {
 				add_core = HTK
-				remove_core = THIS
 			}
 			change_tag = HTK
 			prestige = 15
@@ -69,6 +71,15 @@ political_decisions = {
 						reduce_pop = 1.33
 					}
 					money = 100000
+					war = {
+						target = PER
+						attacker_goal = {
+							casus_belli = annex_core_country
+						}
+						defender_goal = {
+							casus_belli = annex_core_country
+						}
+					}
 				}
 			}
 			government = absolute_monarchy
@@ -77,6 +88,7 @@ political_decisions = {
 				name = rise_of_hotaki
 				duration = 1825
 			}
+			set_country_flag = afghan_formed_hotak
 		}
 	}
 	
@@ -87,6 +99,51 @@ political_decisions = {
 			NOT = {
 				has_country_flag = spread_hotaki_conquest
 			}
+		}
+		allow = {
+			1142 = {
+				controlled_by = THIS
+				owner = { war_with = THIS }
+			}
+			1140 = {
+				controlled_by = THIS
+				owner = { war_with = THIS }
+			}
+			1147 = {
+				controlled_by = THIS
+				owner = { war_with = THIS }
+			}
+			1149 = {
+				controlled_by = THIS
+				owner = { war_with = THIS }
+			}
+			
+		}
+		effect = {
+			PER_1135 = {
+				secede_province = HTK
+				add_core = HTK
+			}
+			PER_1139 = {
+				secede_province = HTK
+				add_core = HTK
+			}
+			PER_1148 = {
+				secede_province = HTK
+				add_core = HTK
+			}
+			set_country_flag = spread_hotaki_conquest
+		}
+	}
+	
+	spread_hotaki_conquest_afg = {
+		picture = hotak_empire
+		potential = {
+			tag = HTK
+			NOT = {
+				has_country_flag = spread_hotaki_conquest2
+			}
+			has_country_flag = afghan_formed_hotak
 		}
 		allow = {
 			1215 = {
@@ -124,7 +181,7 @@ political_decisions = {
 				add_core = HTK
 			}
 			capital = 1215
-			set_country_flag = spread_hotaki_conquest
+			set_country_flag = spread_hotaki_conquest2
 		}
 	}
 	

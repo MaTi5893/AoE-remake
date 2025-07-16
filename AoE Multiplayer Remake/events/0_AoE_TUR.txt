@@ -1079,228 +1079,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-country_event = {
-	id = 173628
-	title = "Crisis in the Maghreb"
-	desc = "EVTDESC173628"
-	picture = janisseries_tur
-	fire_only_once = yes
-	
-	trigger = {
-		tag = TUR
-		NOT = { war_with = MOR truce_with = MOR }
-		#NOT = { war_with = TUN truce_with = TUN }
-		NOT = { 
-		has_global_flag = turk_intervenes_maghreb 
-		has_global_flag = turk_maghreb_war_victor 
-		has_global_flag = turk_maghreb_war_defeat 
-		}
-		year = 1700
-		month = 6
-		MOR = { exists = yes is_vassal = no }
-		TUN = { exists = yes is_vassal = no }
-		OR = {
-			ALD = {
-				AND = {
-					exists = yes	
-					war_with = MOR
-				}
-			}
-			1707 = { owned_by = MOR } 
-		} 
-		exists = yes
-	}
-
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	option = {
-		name = "The Moroccan invaders shall taste the might of our Janissaries."
-		relation = { who = MOR value = -100 }
-		relation = { who = ALD value = 100 }
-		#relation = { who = TUN value = -100 }
-		ALD = { country_event = 173629 }
-		TUR = {
-			#create_vassal = ALD
-			create_alliance = ALD
-			diplomatic_influence = {
-				who = ALD
-				value = 200
-			}
-			casus_belli = {
-                target = MOR
-                type = liberate_country
-                months = 60
-            }
-			war = {
-				target = MOR
-				attacker_goal = { casus_belli = liberate_country country = ALD }
-				#defender_goal = { casus_belli = release_puppet country = ALD }
-				call_ally = yes
-			}
-			#war = {
-			#	target = TUN
-			#	attacker_goal = { casus_belli = make_puppet }
-			#	call_ally = yes
-			#}
-		}
-		set_global_flag = turk_intervenes_maghreb 
-	}
-	
-	#option = {
-	#	name = "Crushing the Beylik of Tunis is of more importance than aiding the Algerians."
-	#	ALD = { all_core = { add_core = MOR } }
-	#	relation = { who = MOR value = 20 }
-	#	relation = { who = ALD value = -40 }
-	#	relation = { who = TUN value = -100 }
-	#	TUR = {
-	#		war = {
-	#			target = TUN
-	#			attacker_goal = { casus_belli = make_puppet }
-	#			call_ally = no
-	#		}
-	#	}
-	#	prestige = -5
-	#	set_global_flag = turk_maghreb_war_defeat
-	#}
-	
-	option = {
-		name = "The Sultan has little resources to spare for the trite affairs of Maghrebis."
-		ALD = { all_core = { add_core = MOR } }
-		release_vassal = TUN
-		relation = { who = MOR value = 40 }
-		relation = { who = ALD value = -60 }
-		relation = { who = TUN value = -20 }
-		prestige = -10
-		set_global_flag = turk_maghreb_war_defeat
-	}
-}
-country_event = {
-	id = 173629
-	title = "The Sultan Sends Janissaries"
-	desc = "EVTDESC173629"
-	picture = janisseries_tur
-	is_triggered_only = yes
-	
-	option = {
-		name = "With these reinforcements, the Moroccans are sure to flee our country."
-        any_pop = {
-            limit = { is_primary_culture = yes }
-            militancy = -6
-        }
-		#any_owned = {
-		#	limit = {
-        #            is_core = ALD
-		#			controlled_by = MOR
-        #        }
-        #        secede_province = MOR
-		#}
-		capital = 1700
-		create_alliance = TUR
-	}
-}
-country_event = {
-	id = 173630
-	title = "Algiers Protectorate"
-	desc = "EVTDESC173630"
-	picture = janisseries_tur
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			has_global_flag = turk_intervenes_maghreb 
-			ALD = { truce_with = MOR }
-		}
-		tag = TUR
-		NOT = { has_global_flag = turk_maghreb_war_defeat }
-		NOT = { war_with = MOR war_with = ALD }
-		NOT = { ALD = { any_core = { owned_by = MOR }} }
-		ALD = {
-            exists = yes
-			AND = {
-				NOT = { war_with = MOR }
-				war = no
-			}
-			OR = {
-				is_vassal = no
-				vassal_of = TUR
-			}
-        }
-	}
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	option = {
-		name = "And the Sultan graciously accepts their vassalage."
-		relation = { who = MOR value = -80 }
-		relation = { who = ALD value = 200 }
-		TUR = {
-			create_vassal = ALD
-			create_alliance = ALD
-			diplomatic_influence = {
-				who = ALD
-				value = 400
-			}
-		}
-		set_global_flag = turk_maghreb_war_victor
-	}
-}
-country_event = {
-	id = 173631
-	title = "Algiers Submits"
-	desc = "EVTDESC173631"
-	picture = janisseries_tur
-	fire_only_once = yes
-	
-	trigger = {
-		tag = MOR
-		NOT = { 
-			has_global_flag = turk_maghreb_war_victor 
-			has_global_flag = turk_maghreb_war_defeat 
-		}
-		NOT = { war_with = TUR }
-		has_global_flag = turk_intervenes_maghreb 
-		ALD = {
-			OR = { 
-				AND = {
-					exists = yes
-					OR = {
-						is_vassal = no
-						vassal_of = THIS 
-					}
-					ALD = { any_core = { owned_by = MOR }}
-					NOT = { war_with = MOR }
-				}
-				exists = no	
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 6
-	}
-	
-	option = {
-		name = "The true Sultan of the Maghreb should dominate Maghrebi affairs."
-		relation = { who = TUR value = -60 }
-		relation = { who = ALD value = 80 }
-		ALD = { all_core = { add_core = MOR } }
-		MOR = {
-			create_vassal = ALD
-			inherit = ALD
-		}
-		TUR = {
-			diplomatic_influence = {
-				who = ALD
-				value = -400
-			}
-			set_global_flag = turk_maghreb_war_defeat
-		}
-	}
-}
+### 173628-173631 moved to Maghreb events 
 country_event = {
 	id = 173632
 	title = "Edirne Vak'asi"
@@ -1433,119 +1212,78 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
+## 173634 - 173636 moved to Maghreb events ##
 country_event = {
-	id = 173634
-	title = "Pasha Expelled from Tunis!"
-	desc = "EVTDESC173634"
+	id = 173637
+	title = "Safavid Occupation of Basra"
+	desc = "EVTDESC173637"
 	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		year = 1700
+		OR = {
+			932 = { owned_by = PER }
+			932 = { owned_by = THIS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "Order the Safavids to vacate Basra."
+		relation = { who = PER value = -20 }
+		932 = { add_core = THIS }
+		PER = { country_event = 173638 months = 3 }
+	}
+}
+country_event = {
+	id = 173638
+	title = "Ottomans Demand Surrender of Basra"
+	desc = "EVTDESC173638"
+	picture = janisseries_tur
+	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = "Husayn ibn Ali shall rule the Beylik. Our Janissaries will ensure that."
-		war = {
-				target = MOR
-				attacker_goal = { casus_belli = release_puppet country = TUN }
-				call_ally = yes
-			}
-		prestige = 10
+		name = "We will comply with the Ottoman governor."
+		932 = { 
+			add_core = FROM
+			secede_province = FROM 
+			remove_core = THIS
+		}
+		885 = { 
+			add_core = THIS
+		}
+		relation = { who = TUR value = 60 }
+		prestige = -5
 	}
 	
 	option = {
-		name = "The Maghreb is a damned place with a damned people."
-        any_pop = {
-            limit = { is_primary_culture = yes }
-            militancy = -3
+		name = "Basra is a rightful Safavid holding."
+		932 = { 
+			add_core = THIS 
+			add_core = FROM
+		}
+		885 = { 
+			add_core = THIS
+		}
+		casus_belli = {
+            target = TUR
+            type = acquire_state_small
+            months = 60
         }
-		prestige = -10
-	}
-}
-country_event = {
-	id = 173635
-	title = "Husayn Installed in Tunis"
-	desc = "EVTDESC173635"
-	picture = janisseries_tur
-	fire_only_once = yes
-	
-	trigger = {
-		OR = { 
-			has_global_flag = turk_maghreb_war_victor 
-			has_global_flag = turk_maghreb_war_defeat 
+		FROM = {
+			casus_belli = {
+                target = PER
+                type = acquire_state_small
+                months = 60
+            }
 		}
-		has_global_flag = morocco_intervened_tunis
-		tag = TUR
-		NOT = { war_with = MOR war_with = TUN }
-		TUN = {
-            exists = yes
-			TUN = { all_core = { owned_by = TUN } }
-            NOT = { war_with = TUR }
-			OR = {
-				is_vassal = no
-				vassal_of = TUR
-			}
-        }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "Our candidate in the civil war has prevailed."
-		relation = { who = MOR value = -120 }
-		relation = { who = TUN value = 200 }
-		TUR = {
-			create_vassal = TUN
-			create_alliance = TUN
-			diplomatic_influence = {
-				who = TUN
-				value = 400
-			}
-		}
-	}
-}
-country_event = {
-	id = 173636
-	title = "Husayn Expelled from Tunis"
-	desc = "EVTDESC173636"
-	picture = janisseries_tur
-	fire_only_once = yes
-	
-	trigger = {
-		tag = MOR
-		OR = { 
-			has_global_flag = turk_maghreb_war_victor 
-			has_global_flag = turk_maghreb_war_defeat 
-		}
-		NOT = { war_with = TUR }
-		OR = {
-			TUN = { all_core = { owned_by = THIS } }
-			AND = {
-				has_global_flag = morocco_intervened_tunis
-				TUN = {
-					exists = yes
-					vassal_of = MOR
-					NOT = { war_with = TUR }	
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "The Deys of Tunis shall enjoy freedom their from Turkish opressors."
-		relation = { who = TUR value = -80 }
-		relation = { who = TUN value = 200 }
-		TUN = { all_core = { add_core = MOR } }
-		MOR = { inherit = TUN }
-		TUR = {
-			diplomatic_influence = {
-				who = TUN
-				value = -400
-			}
-			prestige = -10
-		}
+		relation = { who = TUR value = -60 }
+		prestige = 5
 	}
 }

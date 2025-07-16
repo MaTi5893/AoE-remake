@@ -1,81 +1,7 @@
 political_decisions = {
 
-	i_love_mazepa = {
-		picture = concede_finland
-		potential = {
-			ai = no
-			tag = SWE
-		}
-		
-		allow = {
-			prestige = 2
-		}
-		
-		effect = {
-			inherit = HET
-			release = HET
-			create_vassal = HET
-			set_country_flag = Conceded_Finland
-		}
-	}
-	
-	concede_finland = {
-		picture = concede_finland
-		potential = {
-			NOT = { has_country_flag = Conceded_Finland }
-			owns = 322
-			322 = { is_capital = yes }
-			NOT = { tag = FIN }
-			#RUS_345 = {
-			#	NOT = {
-			#		owned_by = THIS
-			#	}
-			#}
-			exists = yes
-			#RUS_345 = {
-			#	NOT = {
-			#		owned_by = THIS
-			#	}
-			#}
-			RUS_336 = {
-				NOT = {
-					owned_by = THIS
-				}
-			}
-			NOT = {
-				owns = 345
-			}
-		}
-		
-		allow = {
-			NOT = { is_greater_power = yes }
-			average_consciousness = 4
-		}
-		
-		effect = {
-			badboy = -4
-			prestige = -2
-			remove_accepted_culture = finnish
-			FIN = { remove_accepted_culture = swedish all_core = { remove_core = THIS } }
-			any_pop = { militancy = -1 }
-			set_country_flag = Conceded_Finland
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { average_militancy = 1 }
-			}
-			modifier = {
-				factor = 0
-				any_owned_province = { is_core = FIN }
-			}
-		}
-	}
-
 	remove_russian_claims = {
-		picture = baltic_russia
+		picture = swedish_baltic
 		potential = {	
 			primary_culture = swedish
 			NOT = { has_country_flag = removed_russian_claims }
@@ -83,6 +9,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
 			OR = {
 				has_global_flag = peter_the_great_dethroned
 				AND = {
@@ -113,25 +40,18 @@ political_decisions = {
 					owned_by = THIS
 				}
 			}
-			owns = 349
-			owns = 350
-			owns = 351
-			owns = 352
-			owns = 353
 			owns = 994
+			owns = 350
 			owns = 354
-			owns = 996
-			owns = 355
 		}
 		
 		effect = {
 			set_country_flag = removed_russian_claims
-			all_core = {
-				remove_core = RUS
-			}
-			all_core = {
-				remove_core = TOR
-			}
+			add_accepted_culture = estonian
+			add_accepted_culture = latvian
+			all_core = { remove_core = RUS }
+			all_core = { remove_core = TOR }
+			all_core = { remove_core = DNN }
 			prestige = 20
 		}
 		
@@ -140,16 +60,470 @@ political_decisions = {
 		}
 	}
 
-	mobilzie_the_caroleans = {
+	remove_danish_claims = {
+		picture = swedish_baltic
+		potential = {	
+			tag = SWE
+			NOT = { has_country_flag = removed_danish_claims }
+			exists = yes
+			exists = DNN
+		}
+		
+		allow = {
+			war = no
+			owns = 334
+			owns = 319
+			owns = 305
+		}
+		
+		effect = {
+			set_country_flag = removed_danish_claims
+			all_core = { remove_core = DNN }
+			add_core = 305
+			prestige = 10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	remove_livionian_rights = {
+		picture = baltic
+		potential = {
+			any_owned_province = {
+				has_province_modifier = privileged_territory
+			}
+		}
+		allow = {
+			any_owned_province = {
+				has_province_modifier = privileged_territory
+				has_building = railroad
+			}
+		}
+		effect = {
+			any_owned = { limit = { has_province_modifier = privileged_territory } add_province_modifier = { name = local_resistance duration = 1825 } remove_province_modifier = privileged_territory }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	intervene_in_the_empire = {
+		picture = swedish_germany
+		potential = {	
+			OR = {
+				primary_culture = swedish
+				tag = SCA 
+			}
+			NOT = { has_country_flag = ignore_hre }
+			NOT = { has_country_flag = swedish_hre_intervention }
+			exists = yes
+		}
+	
+		allow = {
+			owns = 546
+			owns = 369
+			OR = {
+				owns = 680
+				has_global_flag = peter_dethroned
+			}
+		}
+		
+		effect = {
+			set_country_flag = ignore_hre
+			set_country_flag = swedish_hre_intervention
+			badboy = 5
+			prestige = 20
+			add_core = 679
+			add_core = 680
+			add_core = 2414
+			add_core = 546
+			add_core = 547
+			add_core = 548
+			add_core = 531
+			add_core = 539
+			add_core = 532
+			MEC = { all_core = { add_core = THIS }}
+			LUB = { all_core = { add_core = THIS }}
+			LAU = { all_core = { add_core = THIS }}
+			HAM = { all_core = { add_core = THIS }}
+			HOL = { all_core = { add_core = THIS }}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	challenge_the_emperor = {
+		picture = swedish_germany
+		potential = {	
+			exists = yes
+			primary_culture = swedish
+			NOT = { has_country_flag = challenged_the_emperor }
+			has_country_flag = ignore_hre
+			NOT = { has_global_flag = hre_dismantled }
+		}
+		
+		allow = {
+			war = no
+			owns = 532
+			owns = 544
+			owns = 369
+			owns = 530
+			owns = 546
+			OR = {
+				AND = {
+					owns = 680
+					owns = 549
+				}
+				any_neighbor_country = { has_country_flag = hre_emperor }
+			}
+		}
+		
+		effect = {
+			set_country_flag = challenged_the_emperor
+			any_country = {
+				limit = {
+					has_country_flag = hre_emperor
+				}
+				add_casus_belli = {
+					target = SWE
+					type = dismantle_hre
+					months = 12
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#elbian_league = { 
+	#	picture = elbian_leauge
+	#	potential = {
+	#		tag = SWE
+	#		NOT = { has_country_flag = elbian_league }
+	#		has_country_flag = challenged_the_emperor
+	#		has_global_flag = hre_dismantled
+	#	}
+	#	allow = {
+	#		war = no
+	#	}
+	#	effect = {
+	#		country_event = 1721022
+	#		set_country_flag = elbian_league
+	#	}
+	#}
+	
+	#####################################################
+	#### Swedish Militarism Vs. Agricultural Reforms ####
+	#####################################################
+	
+	sign_the_instrument_of_government = {
+		picture = instrument_of_government
+		potential = {
+			primary_culture = swedish
+			NOT = { has_country_flag = instrument_of_government } 
+			exists = yes
+		}
+		allow = {
+			government = hms_government
+		}
+		effect = {
+			any_pop = {
+				militancy = -2
+			}
+			remove_country_modifier = swedish_military_tradition
+			random_owned = {
+				limit = {
+					owner = {
+						promotion_laws = privlage_benefits
+					}
+				}
+				owner = {
+					social_reform = nepotism
+				}
+			}
+			set_country_flag = instrument_of_government
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	begin_agricultural_reforms = {
+		picture = encolsure
+		potential = {
+			primary_culture = swedish
+			NOT = { has_country_flag = agricultural_revolution } 
+			exists = yes
+		}
+		allow = {
+			government = hms_government
+			NOT = { has_country_modifier = swedish_military_tradition }
+			iron_railroad = 1
+		}
+		effect = {
+			set_country_flag = agricultural_revolution
+			set_country_flag = no_craftsmen_nobility_malus
+			add_country_modifier = {
+				name = agriculture_reform
+				duration = -1
+			}
+			add_country_modifier = {
+				name = baby_boom
+				duration = 1825
+			}
+			tech_school = commerce_tech_school
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	gustav_iii_reforms = { #gustav coup
+		picture = gustav_iii
+		potential = {
+			primary_culture = swedish
+			NOT = { has_country_flag = gustav_iii_reforms } 
+			exists = yes
+		}
+		allow = {
+			mass_politics = 1
+			OR = {
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		effect = {
+			clr_country_flag = no_craftsmen_nobility_malus
+			remove_country_modifier = agriculture_reform
+			remove_country_modifier = swedish_military_tradition
+			add_country_modifier = { name = swedish_military_tradition_2 duration = -1 }
+			prestige = 30
+			set_country_flag = gustav_iii_reforms
+			country_event = 1721001
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#########################
+	#### Arvid Horn Stuff ####
+	#########################
+	
+	appoint_arvid_horn = {
+		picture = arvid_horn
+		potential = {
+			tag = SWE
+			NOT = { trade_unions = no_trade_unions }
+			NOT = { has_country_flag = appointed_arvid_horn }
+			NOT = { year = 1730 }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			war_exhaustion = -10
+			nationalvalue = pm_gentry
+			add_country_modifier = {
+				name = arvid_horn
+				duration = -1
+			}
+			ruling_party_ideology = liberal
+			set_country_flag = permanent_minister
+			set_country_flag = appointed_arvid_horn
+		}
+	}
+
+	force_arvid_horn_resignation = {
+		picture = arvid_horn
+		potential = {
+			has_country_modifier = arvid_horn
+			nationalism_n_imperialism = 1
+		}
+		allow = {
+			OR = {
+				upper_house = {
+					ideology = conservative
+					value = 0.8
+				}
+				government = absolute_monarchy
+			}
+		}
+		effect = {
+			clr_country_flag = permanent_minister
+			remove_country_modifier = arvid_horn
+		}
+	}
+	
+	####################################
+	#### Charles XII Foreign Policy ####
+	####################################
+	
+	foster_relations_with_hetmanate = {
+		picture = sweden_ukraine
+		potential = {
+			tag = SWE
+			NOT = { has_country_flag = fostered_relations_with_hemanate }
+			exists = HET
+			HET = { vassal_of = TOR }
+		}
+		allow = {
+			OR = {
+				AND = {
+					is_sphere_leader_of = HET
+					963 = { NOT = { controlled_by = TOR } }
+				}
+				AND = {
+					963 = { NOT = { controlled_by = HET } }
+					963 = { NOT = { controlled_by = PLC } }
+					961 = { NOT = { controlled_by = HET } }
+					961 = { NOT = { controlled_by = PLC } }
+					958 = { NOT = { controlled_by = HET } }
+					958 = { NOT = { controlled_by = PLC } }
+					962 = { NOT = { controlled_by = HET } }
+					962 = { NOT = { controlled_by = PLC } }
+					1016 = { NOT = { controlled_by = HET } }
+					1016 = { NOT = { controlled_by = PLC } }
+				}
+			}
+			OR = {
+				has_leader = "Karl XII Wittelsbach"
+				ideological_thought = 1
+			}
+		}
+		effect = {
+			set_country_flag = fostered_relations_with_hemanate
+			country_event = 1721027 
+		}
+	}
+	
+	bring_in_the_ottomans = {
+		picture = sweden_ottomans
+		potential = {
+			tag = SWE
+			NOT = { has_country_flag = bring_in_the_ottomans }
+			has_leader = "Karl XII Wittelsbach"
+			exists = TOR
+		}
+		allow = {
+			OR = {
+				has_leader = "Karl XII Wittelsbach"
+				ideological_thought = 1
+			}
+			TUR = { any_owned_province = { any_neighbor_province = { controlled_by = SWE } } }
+		}
+		effect = {
+			TUR = { country_event = 1721011 }
+			set_country_flag = bring_in_the_ottomans
+		}
+	}
+	
+	#install_leszczynski = {
+	#	picture = install_leszczynski
+	#	potential = {
+	#		primary_culture = swedish
+	#		NOT = { has_country_flag = installed_leszczynski }
+	#	}
+	#	allow = {
+	#		war_with = PLC
+	#		OR = {
+	#		706 = { controlled_by = THIS }
+	#		PLC = { capital_scope = { controlled_by = THIS } }
+	#		}
+	#	}
+	#	effect = {
+	#		war_exhaustion = -5
+	#		set_country_flag = installed_leszczynski
+	#		PLC = { country_event = 1721006 }
+	#	}
+	#}
+	
+	support_gottorp_rebellion = {
+		picture = swedish_germany
+		potential = {
+			tag = SWE
+			NOT = { has_country_flag = supported_gottorp_rebellion }
+			HOL = { vassal_of = DNN }
+			HOL = { ai = yes }
+		}
+		allow = {
+			HOL = { in_sphere = THIS }
+			OR = {
+				war_with = DNN
+				war_with = DEN
+				ideological_thought = 1
+			}
+		}
+		effect = {
+			set_country_flag = supported_gottorp_rebellion
+			DNN = { country_event = 1721026 }
+		}
+	}
+	
+	vassalize_holstein_gottorp = {
+		picture = swedish_germany
+		potential = {
+			tag = SWE
+			NOT = { has_country_flag = vassalized_holstein_gottorp }
+			HOL = { ai = yes }
+			OR = {
+				has_country_flag = supported_gottorp_rebellion
+				ideological_thought = 1
+			}
+		}
+		allow = {
+			OR = {
+				HOL = { in_sphere = THIS war = no }
+				HOL = { all_core = { owned_by = THIS }}
+			}
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = vassalized_holstein_gottorp
+			inherit = HOL
+			HOL = { all_core = { add_core = THIS }}
+		}
+	}
+	
+	integrate_holstein_gottorp = {
+		picture = swedish_germany
+		potential = {
+			tag = DNN
+			NOT = { has_country_flag = integrated_holstein_gottorp }
+			HOL = { ai = yes }
+		}
+		allow = {
+			OR = {
+				HOL = { vassal_of = THIS war = no }
+				HOL = { all_core = { owned_by = THIS }}
+			}
+			state_n_government = 1
+		}
+		effect = {
+			set_country_flag = integrated_holstein_gottorp
+			inherit = HOL
+			HOL = { all_core = { add_core = THIS }}
+		}
+	}
+	
+	mobilize_the_caroleans = {
 		picture = caroleans
 		
 		potential = {
 			primary_culture = swedish
-			NOT = { has_country_flag = mobilzied_the_caroleans } 
+			NOT = { has_country_flag = mobilized_the_caroleans } 
 			exists = yes
 		}
 		
 		allow = {
+			322 = { controlled_by = THIS }
 			OR = {
 				war = yes
 				year = 1701
@@ -157,12 +531,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = mobilzied_the_caroleans
+			set_country_flag = mobilized_the_caroleans
 			set_country_flag = allow_6_procent_soldiers
-			add_country_modifier = {
-				name =  swedish_caroleans
-				duration = 7300
-			}
 			random_owned = {
 				limit = {
 					owner = {
@@ -229,98 +599,109 @@ political_decisions = {
 		}
 	}
 	
-	gustav_iii_reforms = { #gustav coup
-		picture = gustav_iii
+	destroy_st_petersburg = {
+		picture = petersburg
 		potential = {
-			owns = 322
-			322 = { is_capital = yes }
-			NOT = { has_country_flag = gustav_iii_reforms } 
-			exists = yes
+			primary_culture = swedish
+			owns = 994
+			has_global_flag = st_petersburg_construction
 		}
 		allow = {
-			has_country_modifier = gustav_iii
 			war = no
-			OR = {
-				government = prussian_constitutionalism
-				government = hms_government
-			}
+			owns = 994
 		}
 		effect = {
-			prestige = 30
-			set_country_flag = gustav_iii_reforms
-			country_event = 1721001
-			
-		}
-		ai_will_do = {
-			factor = 1
+			994 = {
+				remove_province_modifier = st_petersburg_construction
+				any_pop = {
+					limit = {
+						culture = russian
+					}
+					reduce_pop = 0.99
+				}
+				change_province_name = "Nyen"
+			}
+			prestige = 15
+			clr_global_flag = st_petersburg_construction
 		}
 	}
 	
-	begin_agricilture_reforms = {
-		picture = encolsure
+	#####################
+	#### Scandinavia ####
+	#####################
+	
+	create_sweden_norway = {
+		picture = sweden_norway
 		potential = {
-			owns = 322
-			322 = { is_capital = yes }
-			NOT = { has_country_flag = agricilture_reforms } 
-			exists = yes
+			tag = SWE
+			NOT = { accepted_culture = norwegian }
+			NOT = { exists = NOR }
+			OR = {
+			owns = 329
+			owns = 328
+			}
 		}
 		allow = {
+			owns = 313
+			owns = 310
+			owns = 305
 			war = no
 			OR = {
-				unemployment_subsidies = acceptable_subsidies
-				unemployment_subsidies = good_subsidies
-				ruling_party_ideology = liberal
+				vote_franschise = wealth_voting
+				ideological_thought = 1
 			}
-			OR = {
-				steam_turbine = 1
-				semi_automatization = 1
-				government = hms_government
-			}
-			iron_railroad = 1
 		}
 		effect = {
-			set_country_flag = agricilture_reforms
-			social_reform = good_safety
-			add_country_modifier = {
-				name = agriculture_reform
-				duration = 1825
+			prestige = 25
+			add_accepted_culture = norwegian
+			NOR = { all_core = { add_core = THIS } }
+			random_country = {
+				limit = {
+					tag = NOR
+					in_sphere = THIS
+				}
+				annex_to = THIS
 			}
-			tech_school = industrial_tech_school
 			any_pop = {
 				limit = {
-					culture = swedish
+					culture = norwegian
 				}
-				money = 2500
+				militancy = -2
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
 	}
-
+	
 	renovate_the_baltic = {
 		picture = baltic
 		potential = {
+			OR = {
+				primary_culture = swedish
+				tag = SCA 
+			}
 			owns = 322
-			322 = { is_capital = yes }
 			NOT = { has_country_flag = renovated_the_baltic }
 			owns = 349
-			owns = 350
-			owns = 351
-			owns = 352
-			owns = 353
-			owns = 994
 			owns = 354
+			owns = 994
 			owns = 996
-			owns = 355
 			exists = yes
 		}
 		allow = {
 			war = no
+			NOT = { career_progress = privlage_benefits }
+			debt_law = abolished
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = privileged_territory
+				}
+			}
 			NOT = {
 				health_care = no_health_care
 			}
-			has_country_modifier = agriculture_reform
+			OR = {
+				nationalism_n_imperialism = 1
+				has_country_modifier = agriculture_reform
+			}
 			OR = {
 				steam_turbine = 1
 				has_global_flag = peter_the_great_dethroned
@@ -350,6 +731,14 @@ political_decisions = {
 				life_rating = 5
 				fort = 2
 			}
+			KUR = { all_core = { add_core = THIS } }
+			random_country = {
+				limit = {
+					tag = KUR
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
 			add_accepted_culture = latvian
 			add_accepted_culture = estonian
 		}
@@ -358,32 +747,6 @@ political_decisions = {
 		}
 	}
 	
-	destroy_st_petersburg = {
-		picture = petersburg
-		potential = {
-			primary_culture = swedish
-			owns = 994
-			has_global_flag = st_petersburg_construction
-		}
-		allow = {
-			war = no
-			owns = 994
-		}
-		effect = {
-			994 = {
-				remove_province_modifier = st_petersburg_construction
-				any_pop = {
-					limit = {
-						culture = russian
-					}
-					reduce_pop = 0.99
-				}
-				change_province_name = "Nyen"
-			}
-			prestige = 15
-			clr_global_flag = st_petersburg_construction
-		}
-	}
 	
 	attempt_dethrone_peter = {
 		picture = peter_the_great
@@ -475,32 +838,30 @@ political_decisions = {
 	}
 	
 	
-#	claim_trongheim = {
-#		picture = army_training
-#		potential = {
-#			owns = 322
-#			322 = { is_capital = yes }
-#			NOT = { has_country_flag = claimed_trongheim }
-#			exists = yes
-#		}
-#		allow = {
-#			war = no
-#			government = absolute_monarchy
-#			military_score = 50
-#			war_policy = jingoism
-#			nationalism_n_imperialism = 1
-#		}
-#		effect = {
-#			badboy = 5
-#			set_country_flag = claimed_trongheim
-#			305 = {
-#				add_core = THIS
-#			}
-#		}
-#		ai_will_do = {
-#			factor = 1
-#		}
-#	}
+	claim_trongheim = {
+		picture = army_training
+		potential = {
+			owns = 322
+			primary_culture = swedish
+			NOT = { has_country_flag = claimed_trongheim }
+			exists = yes
+		}
+		allow = {
+			305 = { controlled_by = THIS }
+			military_score = 10
+			war_policy = jingoism
+		}
+		effect = {
+			badboy = 3
+			set_country_flag = claimed_trongheim
+			305 = {
+				add_core = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	#dominus_mari_baltici = {
 	#	picture = baltic_sea
@@ -636,16 +997,42 @@ political_decisions = {
 			exists = yes
 		}
 		allow = {
-			prestige = 45
+			prestige = 25
 			war = no
 			ideological_thought = 1
-			SCA = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						vassal_of = THIS
-						owner = {
-							in_sphere = THIS
+			OR = {
+				SCA = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							vassal_of = THIS
+							owner = {
+								in_sphere = THIS
+							}
+						}
+					}
+				}
+				AND = {
+					DNN = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								vassal_of = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+					SWE = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								vassal_of = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
 						}
 					}
 				}

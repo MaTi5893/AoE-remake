@@ -73,6 +73,7 @@ political_decisions = {
 			}
 			research_points = 2500
 			political_reform = admin_parliment
+			social_reform = trinket_health_care
 			remove_country_modifier = streltsi_rebellion
 			activate_technology = naval_design_bureaus
 			activate_technology = alphabetic_flag_signaling
@@ -370,17 +371,37 @@ political_decisions = {
 				mass_politics = 1
 				has_country_modifier = catharine_the_great
 			}
-			owns = 1052
-			owns = 1102
-			owns = 1051
+			owns = 1041
+			owns = 1047
+			owns = 1048
 		}
 		effect = {
+			inherit = KMK
+			inherit = TRK
+			inherit = DON
+			1071 = { secede_province = THIS }
+			1050 = { secede_province = THIS }
 			DON = {
 				all_core = {
 					add_core = THIS
 				}
 			}
+			TRK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
 			DAG = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KBR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			GZK = {
 				all_core = {
 					add_core = THIS
 				}
@@ -427,6 +448,8 @@ political_decisions = {
 			owns = 1090
 			owns = 1102
 			owns = 1098
+			owns = 1052
+			owns = 1051
 		}
 		effect = {
 			add_accepted_culture = georgian
@@ -1049,13 +1072,30 @@ political_decisions = {
 	asian_expedition = {
 		picture = map_caspian
 		potential = {
-			tag = TOR
-			has_country_flag = menshikov_coup_and_westernization
-			NOT = { has_country_flag = asian_expedition }
+			OR = {
+				AND = {
+					tag = TOR
+					has_country_flag = menshikov_coup_and_westernization
+				}
+				tag = RUS
+			}
+			NOT = { has_country_flag = asian_expedition }	
 		}
 		allow = {
 			war = no
-			state_n_government = 1
+			OR = {
+				AND = {
+					tag = TOR
+					state_n_government = 1
+				}
+				AND = {
+					tag = RUS
+					OR = {
+						has_country_modifier = peter_the_great
+						nationalism_n_imperialism = 1
+					}
+				}
+			}
 		}
 		effect = {
 			set_country_flag = asian_expedition
@@ -1075,13 +1115,33 @@ political_decisions = {
 	russo_chinese_border_treaty = {
 		picture = the_eight_banners
 		potential = {
-			tag = TOR
-			has_country_flag = menshikov_coup_and_westernization
+			OR = {
+				AND = {
+					tag = TOR
+					has_country_flag = menshikov_coup_and_westernization
+				}
+				tag = RUS
+			}
 			NOT = { has_country_flag = russo_chinese_border_treaty }
 		}
 		allow = {
 			war = no
-			nationalism_n_imperialism = 1
+			OR = {
+				AND = {
+					tag = TOR
+					nationalism_n_imperialism = 1
+				}
+				AND = {
+					tag = RUS
+					OR = {
+						AND = {
+							has_country_modifier = peter_the_great
+							year = 1725
+						}
+						nationalism_n_imperialism = 1
+					}
+				}
+			}
 		}
 		effect = {
 			country_event = 170018
@@ -1089,4 +1149,86 @@ political_decisions = {
 		}
 	}
 	
+	consolidate_central_asia = {
+		picture = fortress
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = consolidated_central_asia }
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+		}
+		effect = {
+			set_country_flag = consolidated_central_asia
+			1043 = { secede_province = THIS }
+			1044 = { secede_province = THIS }
+			1996 = { secede_province = THIS }
+			2611 = { secede_province = THIS }
+			1041 = { secede_province = THIS }
+			2681 = { secede_province = THIS }
+		}
+	}
+	
+	revoke_cossack_rights = {
+		picture = cossack_state
+		potential = {
+			exists = yes
+			primary_culture = russian
+			NOT = { has_country_flag = revoked_cossack_rights }
+		}
+		allow = {
+			war = no
+			owns = 1036
+			OR = {
+				state_n_government = 1
+				AND = {
+					ideological_thought = 1
+					owns = 1047
+					owns = 1046
+				}
+			}
+			health_care = trinket_health_care
+		}
+		effect = {
+			set_country_flag = revoked_cossack_rights
+			random_country = {
+				limit = {
+					tag = DON
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			DON = { all_core = { add_core = THIS } }
+			random_country = {
+				limit = {
+					tag = KMK
+					in_sphere = THIS
+				}
+				create_vassal = KMK
+			}
+			random_country = {
+				limit = {
+					tag = TRK
+					in_sphere = THIS
+				}
+				create_vassal = TRK
+			}
+			random_country = {
+				limit = {
+					tag = ZZH
+					in_sphere = THIS
+				}
+				create_vassal = ZZH
+			}
+			random_country = {
+				limit = {
+					tag = HET
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+		}
+	}
 }

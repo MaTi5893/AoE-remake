@@ -344,7 +344,7 @@ political_decisions = {
             1053 = { add_core = THIS }
             1055 = { add_core = THIS }
             886 = { add_core = THIS }
-	    885 = { add_core = THIS }
+			885 = { add_core = THIS }
             set_country_flag = persian_caucases
         }
         ai_will_do = { factor = 1 }
@@ -377,11 +377,11 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
-    asfharid_ambition = {
+    afsharid_ambition = {
         picture = afsharid
         potential = {
             tag = PRA
-            NOT = { has_country_flag = asfharid_ambition }
+            NOT = { has_country_flag = afsharid_ambition }
             exists = yes
         }
         allow = {
@@ -417,8 +417,39 @@ political_decisions = {
             1192 = { add_core = THIS }
             1191 = { add_core = THIS }
             badboy = 12
-            set_country_flag = asfharid_ambition
+            set_country_flag = afsharid_ambition
         }
+        ai_will_do = { factor = 1 }
+    }
+	
+	sack_mughal_delhi = {
+        picture = map_caucases
+        potential = {
+            OR = {
+				tag = PER
+				tag = PRQ
+				tag = PRA
+				tag = PRZ
+				tag = HTK
+            }
+            NOT = { has_global_flag = sack_of_delhi }
+            exists = yes
+        }
+        allow = {
+			OR = {
+				AND = {
+					war_policy = jingoism
+					nationalism_n_imperialism = 1
+				}
+				has_leader = "Nader Shah"
+			}
+			1236 = {
+				controlled_by = THIS
+			}
+        }
+        effect = {
+            country_event = 173204
+		}
         ai_will_do = { factor = 1 }
     }
 }

@@ -1,3 +1,370 @@
+## Ottoman Maghreb War events ##
+country_event = {
+	id = 173628
+	title = "Crisis in the Maghreb"
+	desc = "EVTDESC173628"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		NOT = { war_with = MOR truce_with = MOR }
+		#NOT = { war_with = TUN truce_with = TUN }
+		NOT = { 
+			has_global_flag = turk_intervenes_maghreb 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		year = 1700
+		MOR = { exists = yes is_vassal = no }
+		#TUN = { exists = yes is_vassal = no }
+		OR = {
+			ALD = {
+				AND = {
+					exists = yes	
+					war_with = MOR
+				}
+			}
+			1707 = { owned_by = MOR } 
+		} 
+		exists = yes
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "The Moroccan invaders shall taste the might of our Janissaries."
+		relation = { who = MOR value = -100 }
+		relation = { who = ALD value = 100 }
+		#relation = { who = TUN value = -100 }
+		ALD = { country_event = 173629 }
+		TUR = {
+			#create_vassal = ALD
+			create_alliance = ALD
+			diplomatic_influence = {
+				who = ALD
+				value = 200
+			}
+			casus_belli = {
+                target = MOR
+                type = liberate_country
+                months = 60
+            }
+			war = {
+				target = MOR
+				attacker_goal = { casus_belli = liberate_country country = ALD }
+				attacker_goal = { casus_belli = release_puppet country = ALD }
+				#defender_goal = { casus_belli = release_puppet country = ALD }
+				call_ally = yes
+			}
+			#war = {
+			#	target = TUN
+			#	attacker_goal = { casus_belli = make_puppet }
+			#	call_ally = yes
+			#}
+		}
+		set_global_flag = turk_intervenes_maghreb 
+	}
+	
+	#option = {
+	#	name = "Crushing the Beylik of Tunis is of more importance than aiding the Algerians."
+	#	ALD = { all_core = { add_core = MOR } }
+	#	relation = { who = MOR value = 20 }
+	#	relation = { who = ALD value = -40 }
+	#	relation = { who = TUN value = -100 }
+	#	TUR = {
+	#		war = {
+	#			target = TUN
+	#			attacker_goal = { casus_belli = make_puppet }
+	#			call_ally = no
+	#		}
+	#	}
+	#	prestige = -5
+	#	set_global_flag = turk_maghreb_war_defeat
+	#}
+	
+	option = {
+		name = "The Sultan has little resources to spare for the trite affairs of Maghrebis."
+		ALD = { all_core = { add_core = MOR } }
+		release_vassal = TUN
+		relation = { who = MOR value = 40 }
+		relation = { who = ALD value = -60 }
+		relation = { who = TUN value = -20 }
+		TUR = {
+			diplomatic_influence = {
+				who = ALD
+				value = -400
+			}
+		}
+		prestige = -10
+		set_global_flag = turk_maghreb_war_defeat
+	}
+}
+country_event = {
+	id = 173629
+	title = "The Sultan Sends Janissaries"
+	desc = "EVTDESC173629"
+	picture = janisseries_tur
+	is_triggered_only = yes
+	
+	option = {
+		name = "With these reinforcements, the Moroccans are sure to flee our country."
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -6
+        }
+		#any_owned = {
+		#	limit = {
+        #            is_core = ALD
+		#			controlled_by = MOR
+        #        }
+        #        secede_province = MOR
+		#}
+		capital = 1700
+		create_alliance = TUR
+	}
+}
+country_event = {
+	id = 173630
+	title = "Algiers Protectorate"
+	desc = "EVTDESC173630"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_global_flag = turk_intervenes_maghreb 
+			ALD = { truce_with = MOR }
+		}
+		tag = TUR
+		NOT = { has_global_flag = turk_maghreb_war_defeat }
+		NOT = { war_with = MOR war_with = ALD }
+		NOT = { ALD = { any_core = { owned_by = MOR }} }
+		ALD = {
+            exists = yes
+			AND = {
+				NOT = { war_with = MOR }
+				war = no
+			}
+			OR = {
+				is_vassal = no
+				vassal_of = TUR
+			}
+        }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = "And the Sultan graciously accepts their vassalage."
+		relation = { who = MOR value = -80 }
+		relation = { who = ALD value = 200 }
+		TUR = {
+			create_vassal = ALD
+			create_alliance = ALD
+			diplomatic_influence = {
+				who = ALD
+				value = 400
+			}
+		}
+		set_global_flag = turk_maghreb_war_victor
+	}
+}
+country_event = {
+	id = 173631
+	title = "Algiers Submits"
+	desc = "EVTDESC173631"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		NOT = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		NOT = { war_with = TUR }
+		has_global_flag = turk_intervenes_maghreb 
+		ALD = {
+			OR = { 
+				AND = {
+					exists = yes
+					OR = {
+						is_vassal = no
+						vassal_of = THIS 
+					}
+					ALD = { any_core = { owned_by = MOR }}
+					NOT = { war_with = MOR }
+				}
+				exists = no	
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "The true Sultan of the Maghreb should dominate Maghrebi affairs."
+		relation = { who = TUR value = -60 }
+		relation = { who = ALD value = 80 }
+		ALD = { all_core = { add_core = MOR } }
+		MOR = {
+			create_vassal = ALD
+			inherit = ALD
+		}
+		TUR = {
+			diplomatic_influence = {
+				who = ALD
+				value = -400
+			}
+			set_global_flag = turk_maghreb_war_defeat
+		}
+	}
+}
+country_event = {
+	id = 173634
+	title = "Pasha Expelled from Tunis!"
+	desc = "EVTDESC173634"
+	picture = janisseries_tur
+	is_triggered_only = yes
+	
+	option = {
+		name = "Husayn ibn Ali shall rule the Beylik. Our Janissaries will ensure that."
+		any_owned = {
+			limit = {
+                is_core = TUN
+				owned_by = THIS
+            }
+            secede_province = MOR
+		}
+		casus_belli = {
+               target = MOR
+               type = liberate_country
+               months = 60
+           }
+		war = {
+			target = MOR
+			attacker_goal = { casus_belli = liberate_country country = TUN }
+			attacker_goal = { casus_belli = release_puppet country = TUN }
+			call_ally = yes
+		}
+		prestige = 10
+	}
+	
+	option = {
+		name = "The Maghreb is a damned place with a damned people."
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = -3
+        }
+		prestige = -10
+	}
+}
+country_event = {
+	id = 173635
+	title = "Husayn Installed in Tunis"
+	desc = "EVTDESC173635"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		has_global_flag = morocco_intervened_tunis
+		tag = TUR
+		NOT = { war_with = MOR war_with = TUN }
+		OR = { 
+			AND = {
+				TUN = { all_core = { owned_by = THIS }}
+				NOT = { TUN = { any_core = { owned_by = MOR }}}
+			}
+			TUN = {
+				exists = yes
+				TUN = { all_core = { owned_by = TUN } }
+				NOT = { war_with = TUR war_with = MOR }
+				OR = {
+					is_vassal = no
+					vassal_of = TUR
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = "Our candidate in the civil war has prevailed."
+		relation = { who = MOR value = -120 }
+		relation = { who = TUN value = 200 }
+		inherit = TUN
+		TUN = { all_core = { add_core = THIS }}
+		#TUR = {
+		#	create_vassal = TUN
+		#	create_alliance = TUN
+		#	diplomatic_influence = {
+		#		who = TUN
+		#		value = 400
+		#	}
+		#}
+	}
+}
+country_event = {
+	id = 173636
+	title = "Husayn Expelled from Tunis"
+	desc = "EVTDESC173636"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		OR = { 
+			has_global_flag = turk_maghreb_war_victor 
+			has_global_flag = turk_maghreb_war_defeat 
+		}
+		NOT = { war_with = TUR }
+		OR = {
+			TUN = { all_core = { owned_by = THIS } }
+			AND = {
+				has_global_flag = morocco_intervened_tunis
+				TUN = {
+					exists = yes
+					vassal_of = MOR
+					NOT = { war_with = TUR }	
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 16
+	}
+	
+	option = {
+		name = "The Deys of Tunis shall enjoy freedom their from Turkish opressors."
+		relation = { who = TUR value = -80 }
+		relation = { who = TUN value = 200 }
+		TUN = { all_core = { add_core = MOR } }
+		MOR = { inherit = TUN }
+		TUR = {
+			diplomatic_influence = {
+				who = TUN
+				value = -400
+			}
+			prestige = -10
+		}
+	}
+}
+## Regular Maghreb events ##
 country_event = {
 	id = 175000
 	title = "Siege of Ceuta"
@@ -6,39 +373,134 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		owns = 2450
-		exists = yes
+		owns = 2590
+		primary_culture = spanish
+		year = 1700
+	}
+	
+	mean_time_to_happen = {
+		months = 3
 	}
 	
 	option = {
 		name = "Ceuta will not fall."
 		relation = { who = MOR value = -80 }
 		any_pop = {
-			consciousness = 2
+			consciousness = -2
 			militancy = -2
+		}
+		money = -10000
+	}
+	
+	option = {
+		name = "We cannot afford to defend Ceuta."
+		relation = { who = MOR value = -40 }
+		any_pop = {
+			consciousness = 2
+			militancy = 2
+		}
+		2590 = {
+			remove_core = THIS
+			secede_province = MOR
 		}
 	}
 }
-#country_event = {
-#	id = 170101
-#	title = "$YEAR$ Border Treaty"
-#	desc = "EVTDESC170100"
-#	picture = goldrush_brazil
-#	fire_only_once = yes
-#	
-#	trigger = {
-#		has_country_flag = agreed_to_1750_border_treaty
-#		NOT = {
-#			any_neighbor_country = {
-#				has_country_flag = disagreed_to_1750_border_treaty
-#			}
-#		}
-#		any_neighbor_country = {
-#			has_country_flag = disagreed_to_1750_border_treaty
-#		}
-#	}
-#	
-#	option = {
-#		name = "Nice"
-#	}
-#}
+country_event = {
+	id = 175001
+	title = "Fall of Oran"
+	desc = "EVTDESC175001"
+	picture = goldrush_brazil
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will be back."
+		relation = { who = FROM value = -80 }
+		any_pop = {
+			consciousness = -2
+			militancy = -2
+		}
+		1704 = {
+			secede_province = FROM
+		}
+	}
+	
+	option = {
+		name = "We cannot afford to defend Oran."
+		relation = { who = FROM value = -40 }
+		any_pop = {
+			consciousness = 2
+			militancy = 2
+		}
+		1704 = {
+			remove_core = THIS
+			secede_province = FROM
+		}
+	}
+}
+country_event = {
+	id = 175002
+	title = "Siege of Oran"
+	desc = "EVTDESC175002"
+	picture = goldrush_brazil
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			primary_culture = maghrebi
+			primary_culture = berber
+			primary_culture = turkish
+		}
+		owns = 1707
+		OR = {
+			1704 = { owned_by = SPA }
+			1704 = { owned_by = SPC }
+		}
+		year = 1707
+	}
+	
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = {
+		name = "Oran will be restored to Muslim hands."
+		any_pop = {
+			consciousness = -2
+			militancy = -2
+		}
+		1704 = {
+            country_event = 175001
+		}
+	}
+	
+	option = {
+		name = "We cannot afford conflict with the Spaniards."
+		relation = { who = SPC value = -20 }
+		ALD = {
+			any_pop = {
+				consciousness = 2
+				militancy = 2
+			}
+		}
+	}
+}
+country_event = {
+	id = 175003
+	title = "Capture of Oran"
+	desc = "EVTDESC175003"
+	major = yes
+	picture = goldrush_brazil
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is a great victory for the Maghreb."
+		any_pop = {
+			consciousness = -2
+			militancy = -2
+		}
+		prestige = 10
+		plurality = 2
+	}
+}

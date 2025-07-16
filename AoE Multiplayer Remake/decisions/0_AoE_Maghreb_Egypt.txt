@@ -23,7 +23,13 @@ political_decisions = {
 			}
 			OR = {
 				ALD = { vassal_of = THIS }
-				ALD = { all_core = { owned_by = THIS } }
+				AND = {
+					owns = 1707
+					owns = 1713
+					owns = 1700
+					owns = 1708
+				}
+				
 			}
             OR = {
 				TIM = { vassal_of = THIS }
@@ -67,10 +73,12 @@ political_decisions = {
 				all_core = { owned_by = THIS } 
 			}
 			TUN = {
-				exists = yes
-				OR = { 
-					vassal_of = TUR
-					is_vassal = no
+				OR = {
+					AND = {
+						exists = yes
+						vassal_of = TUR
+					}
+					exists = no
 				}
 			}
 			OR = {
@@ -86,30 +94,27 @@ political_decisions = {
 				war_with = TUR 
 				truce_with = TUR 
 				war_with = TUN 
+				truce_with = TUN
 			}
 			OR = {
 				AND = {
 					neighbour = TUN
 					TUN = {
 						exists = yes
-						OR = { 
 						vassal_of = TUR
-						is_vassal = no
-						}
 					}
 				}
 				THIS = { any_owned_province = { is_core = TUN } }
+				owns = 1708
 			}
         }
         effect = {
 			TUR = { 
 				release_vassal = TUN
+				inherit = TUN
 				country_event = 173634 
 			}
-			MOR = { 
-				create_vassal = TUN
-				create_alliance = TUN
-			}
+			#TUN = { all_core = { add_core = THIS } }
 			set_global_flag = morocco_intervened_tunis
         }
 		

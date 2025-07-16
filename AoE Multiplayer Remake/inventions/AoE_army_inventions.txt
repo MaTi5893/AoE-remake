@@ -256,8 +256,8 @@ goose_step = {
         }
 		engineer = {
             default_organisation = 7.5
-            attack = 1.5
-            defence = 1.5
+            attack = 0.75
+            defence = 0.75
         }
         cuirassier = {
             default_organisation = 7.5
@@ -350,7 +350,7 @@ the_carbine = {
             defence = 1
         }
         engineer = {
-            defence = 1
+            defence = 0.5
         }
         irregular = {
             defence = 1
@@ -580,7 +580,7 @@ engineer_support_companies = {
     }
     effect = {
         engineer = {
-            attack = 1.5
+            attack = 0.75
 			defence = 0.5
 			support = 0.2
 			supply_consumption = 0.1
@@ -787,13 +787,13 @@ cast_bronze_cannons = {
     effect = {
         artillery = {
             default_organisation = 5
-            attack = 0.5
-            defence = 0.5
+            attack = 0.25
+            defence = 0.25
         }
         tank = {
             default_organisation = 5
             attack = 0.25
-            defence = 0.5
+            defence = 0.25
         }
     }
 }
@@ -805,12 +805,12 @@ trunnions = {
     }
     effect = {
         artillery = {
-            attack = 1.25
-            defence = 0.5
+            attack = 0.5
+            defence = 0.25
             support = 0.1
         }
         tank = {
-            attack = 1.75
+            attack = 0.75
             defence = 0.5
             support = 0.1
         }
@@ -841,8 +841,8 @@ integrated_artillery_corps = {
     effect = {
 		activate_unit = artillery
 		artillery = {
-            attack = 0.5
-            defence = 0.5
+            attack = 0.25
+            defence = 0.25
         }
     }
 }
@@ -892,12 +892,12 @@ sakers = {
     }
     effect = {
         artillery = {
-            attack = 1
-            defence = 1.5
+            attack = 0.5
+            defence = 1
             support = 0.3
         }
         tank = {
-            attack = 2
+            attack = 1
             support = 0.3
         }
 		engineer = {

@@ -376,9 +376,7 @@ country_event = {
         year = 1702
         NOT = {
             has_country_flag = polish_paliy
-        }
-		NOT = {
-            has_global_flag = end_of_paliy
+			has_global_flag = end_of_paliy
 			has_global_flag = paliy_rebellion
         }
     }

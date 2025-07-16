@@ -1,0 +1,157 @@
+third_party_transfer;Negotiated State Transfer (3rd Party);;;;;;;;;;;;;
+third_party_transfer_desc;Transfer a state or colonial region from the 1st country to the 2nd country with no effect on infamy, prestige, or jingoism and without a truce at the end;;;;;;;;;;;;;
+third_party_transfer_short;Transfer $STATE$ to an ally;;;;;;;;;;;;;
+third_party_transfer_setup;Transfer $STATE$ from $RECIPIENT$ to an ally;;;;;;;;;;;;;
+#############################################;;;;;;;;;;;;;;x
+#State Sized CBs (Thanks Reno);;;;;;;;;;;;;;x
+#############################################;;;;;;;;;;;;;;x
+acquire_core_state_tiny;Acquire Tiny Core;;;;;;;;;;;
+acquire_core_state_tiny_short;Acquire $STATE$;;;;;;;;;;;
+acquire_core_state_tiny_desc;Aquire an enemy §Ytiny state§W where we have §Ycore provinces.§W;;;;;;;;;;;
+acquire_core_state_tiny_setup;Acquire tiny core $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+acquire_core_state_small;Acquire Small Core;;;;;;;;;;;
+acquire_core_state_small_short;Acquire $STATE$;;;;;;;;;;;
+acquire_core_state_small_desc;Aquire an enemy §Ysmall state§W where we have §Ycore provinces.§W;;;;;;;;;;;
+acquire_core_state_small_setup;Acquire small core $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+acquire_core_state_medium;Acquire Medium Core;;;;;;;;;;;
+acquire_core_state_medium_short;Acquire $STATE$;;;;;;;;;;;
+acquire_core_state_medium_desc;Aquire an enemy §Ymedium state§W where we have §Ycore provinces.§W;;;;;;;;;;;
+acquire_core_state_medium_setup;Acquire medium core $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+acquire_core_state_large;Acquire Large Core;;;;;;;;;;;
+acquire_core_state_large_short;Acquire $STATE$;;;;;;;;;;;
+acquire_core_state_large_desc;Aquire an enemy §Ylarge state§W where we have §Ycore provinces.§W;;;;;;;;;;;
+acquire_core_state_large_setup;Acquire large core $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+acquire_core_state_huge;Acquire Huge Core;;;;;;;;;;;
+acquire_core_state_huge_short;Acquire $STATE$;;;;;;;;;;;
+acquire_core_state_huge_desc;Aquire an enemy §Yhuge state§W where we have §Ycore provinces.§W;;;;;;;;;;;
+acquire_core_state_huge_setup;Acquire huge core $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+acquire_state_tiny;Acquire Tiny State;;;;;;;;;;;
+acquire_state_tiny_short;Acquire Tiny State $STATE$.;;;;;;;;;;;
+acquire_state_tiny_desc;Aquire an enemy §Ytiny state§W.;;;;;;;;;;;
+acquire_state_tiny_setup;Demand that $RECIPIENT$ cede its tiny state.;;;;;;;;;;;
+acquire_state_small;Acquire Small State;;;;;;;;;;;
+acquire_state_small_short;Acquire Small State $STATE$.;;;;;;;;;;;
+acquire_state_small_desc;Aquire an enemy §Ysmall state§W.;;;;;;;;;;;
+acquire_state_small_setup;Demand that $RECIPIENT$ cede its small state.;;;;;;;;;;;
+acquire_state_small_americas;Acquire Small State;;;;;;;;;;;
+acquire_state_small_americas_short;Acquire Small State $STATE$.;;;;;;;;;;;
+acquire_state_small_americas_desc;Aquire an enemy §Ysmall state§W.;;;;;;;;;;;
+acquire_state_small_americas_setup;Demand that $RECIPIENT$ cede its small state.;;;;;;;;;;;
+acquire_state_medium;Acquire Medium State;;;;;;;;;;;
+acquire_state_medium_short;Acquire Medium State $STATE$.;;;;;;;;;;;
+acquire_state_medium_desc;Aquire an enemy §Ymedium state§W.;;;;;;;;;;;
+acquire_state_medium_setup;Demand that $RECIPIENT$ cede its medium state.;;;;;;;;;;;
+acquire_state_large;Acquire Large State;;;;;;;;;;;
+acquire_state_large_short;Acquire Large State $STATE$.;;;;;;;;;;;
+acquire_state_large_desc;Aquire an enemy §Ylarge state§W.;;;;;;;;;;;
+acquire_state_large_setup;Demand that $RECIPIENT$ cede its large state.;;;;;;;;;;;
+acquire_state_huge;Acquire Huge State;;;;;;;;;;;
+acquire_state_huge_short;Acquire Huge State $STATE$.;;;;;;;;;;;
+acquire_state_huge_desc;Aquire an enemy §Yhuge state§W.;;;;;;;;;;;
+acquire_state_huge_setup;Demand that $RECIPIENT$ cede its huge state.;;;;;;;;;;;
+demand_concession_casus_belli_tiny;Tiny State Concession;;;;;;;;;;;
+demand_concession_casus_belli_tiny_short;Demand Tiny State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_tiny_desc;Demand a §Ytiny state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_tiny_setup;Demand that $RECIPIENT$ cede its tiny state.;;;;;;;;;;;
+demand_concession_casus_belli_small;Small State Concession;;;;;;;;;;;
+demand_concession_casus_belli_small_short;Demand Small State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_small_desc;Demand a §Ysmall state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_small_setup;Demand that $RECIPIENT$ cede its small state.;;;;;;;;;;;
+demand_concession_casus_belli_small_exception;Small State Concession;;;;;;;;;;;
+demand_concession_casus_belli_small_exception_short;Demand Small State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_small_exception_desc;Demand a §Ysmall state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_small_exception_setup;Demand that $RECIPIENT$ cede its small state.;;;;;;;;;;;
+demand_concession_casus_belli_medium;Medium State Concession;;;;;;;;;;;
+demand_concession_casus_belli_medium_short;Demand Medium State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_medium_desc;Demand a §Ymedium state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_medium_setup;Demand that $RECIPIENT$ cede its medium state.;;;;;;;;;;;
+demand_concession_casus_belli_medium_exception;Medium State Concession;;;;;;;;;;;
+demand_concession_casus_belli_medium_exception_short;Demand Medium State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_medium_exception_desc;Demand a §Ymedium state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_medium_exception_setup;Demand that $RECIPIENT$ cede its medium state.;;;;;;;;;;;
+demand_concession_casus_belli_large;Large State Concession;;;;;;;;;;;
+demand_concession_casus_belli_large_short;Demand Large State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_large_desc;Demand a §Ylarge state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_large_setup;Demand that $RECIPIENT$ cede its large state.;;;;;;;;;;;
+demand_concession_casus_belli_large_exception;Large State Concession;;;;;;;;;;;
+demand_concession_casus_belli_large_exception_short;Demand Large State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_large_exception_desc;Demand a §Ylarge state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_large_exception_setup;Demand that $RECIPIENT$ cede its large state.;;;;;;;;;;;
+demand_concession_casus_belli_huge;Huge State Concession;;;;;;;;;;;
+demand_concession_casus_belli_huge_short;Demand Huge State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_huge_desc;Demand a §Yhuge state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_huge_setup;Demand that $RECIPIENT$ cede its huge state.;;;;;;;;;;;
+demand_concession_casus_belli_huge_exception;Huge State Concession;;;;;;;;;;;
+demand_concession_casus_belli_huge_exception_short;Demand Huge State $STATE$.;;;;;;;;;;;
+demand_concession_casus_belli_huge_exception_desc;Demand a §Yhuge state§W concession.;;;;;;;;;;;
+demand_concession_casus_belli_huge_exception_setup;Demand that $RECIPIENT$ cede its huge state.;;;;;;;;;;;
+place_in_the_sun_tiny;Tiny Place in the Sun;;;;;;;;;;;
+place_in_the_sun_tiny_short;Acquire Tiny State $STATE$.;;;;;;;;;;;
+place_in_the_sun_tiny_desc;Demand a §Ytiny state§W colony.;;;;;;;;;;;
+place_in_the_sun_tiny_setup;Acquire Tiny State $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+place_in_the_sun_small;Small Place in the Sun;;;;;;;;;;;
+place_in_the_sun_small_short;Acquire Small State $STATE$.;;;;;;;;;;;
+place_in_the_sun_small_desc;Demand a §Ysmall state§W colony.;;;;;;;;;;;
+place_in_the_sun_small_setup;Acquire Small State $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+place_in_the_sun_medium;Medium Place in the Sun;;;;;;;;;;;
+place_in_the_sun_medium_short;Acquire Medium State $STATE$.;;;;;;;;;;;
+place_in_the_sun_medium_desc;Demand a §Ymedium state§W colony.;;;;;;;;;;;
+place_in_the_sun_medium_setup;Acquire Medium State $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+place_in_the_sun_large;Large Place in the Sun;;;;;;;;;;;
+place_in_the_sun_large_short;Acquire Large State $STATE$.;;;;;;;;;;;
+place_in_the_sun_large_desc;Demand a §Ylarge state§W colony.;;;;;;;;;;;
+place_in_the_sun_large_setup;Acquire Large State $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+place_in_the_sun_huge;Huge Place in the Sun;;;;;;;;;;;
+place_in_the_sun_huge_short;Acquire Huge State $STATE$.;;;;;;;;;;;
+place_in_the_sun_huge_desc;Demand a §Yhuge state§W colony.;;;;;;;;;;;
+place_in_the_sun_huge_setup;Acquire Huge State $STATE$ from $RECIPIENT$.;;;;;;;;;;;
+free_peoples_tiny;Free People Tiny State;;;;;;;;;;;
+free_peoples_tiny_short;$THIRD$ acquires $STATE$.;;;;;;;;;;;
+free_peoples_tiny_desc;Liberate a §Ycountry§W's state from its oppressors.;;;;;;;;;;;
+free_peoples_tiny_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$.;;;;;;;;;;;
+free_peoples_small;Free People Small State;;;;;;;;;;;
+free_peoples_small_short;$THIRD$ acquires $STATE$.;;;;;;;;;;;
+free_peoples_small_desc;Liberate a §Ycountry§W's state from its oppressors.;;;;;;;;;;;
+free_peoples_small_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$.;;;;;;;;;;;
+free_peoples_medium;Free People Medium State;;;;;;;;;;;
+free_peoples_medium_short;$THIRD$ acquires $STATE$.;;;;;;;;;;;
+free_peoples_medium_desc;Liberate a §Ycountry§W's state from its oppressors.;;;;;;;;;;;
+free_peoples_medium_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$.;;;;;;;;;;;
+free_peoples_large;Free People Large State;;;;;;;;;;;
+free_peoples_large_short;$THIRD$ acquires $STATE$.;;;;;;;;;;;
+free_peoples_large_desc;Liberate a §Ycountry§W's state from its oppressors.;;;;;;;;;;;
+free_peoples_large_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$.;;;;;;;;;;;
+free_peoples_huge;Free People Huge State;;;;;;;;;;;
+free_peoples_huge_short;$THIRD$ acquires $STATE$.;;;;;;;;;;;
+free_peoples_huge_desc;Liberate a §Ycountry§W's state from its oppressors.;;;;;;;;;;;
+free_peoples_huge_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$.;;;;;;;;;;;
+take_capital;Take Capital;;;;;;;;;;;;;x
+take_capital_desc;Take the Capital region of a 即country劬 and force them to move their capital elsewhere;;;;;;;;;;;;;x
+take_capital_setup;Take Capital region $STATE$ of $RECIPIENT$;;;;;;;;;;;;;x
+take_capital_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
+take_capital_midgame;Take Capital Midgame;;;;;;;;;;;;;x
+take_capital_midgame_desc;Take the Capital region of a 即country劬 and force them to move their capital elsewhere for 33% less warscore.;;;;;;;;;;;;;x
+take_capital_midgame_setup;Take Capital region $STATE$ of $RECIPIENT$;;;;;;;;;;;;;x
+take_capital_midgame_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
+take_capital_late;Take Capital Lategame;;;;;;;;;;;;;x
+take_capital_late_desc;Take the Capital region of a 即country劬 and force them to move their capital elsewhere for 55% less warscore.;;;;;;;;;;;;;x
+take_capital_late_setup;Take Capital region $STATE$ of $RECIPIENT$;;;;;;;;;;;;;x
+take_capital_late_short;Takes Capital from $RECIPIENT$;;;;;;;;;;;;;x
+minor_conquest;Minor Conquest;;;;;;;;;;;;;x
+minor_conquest_desc;Annex a 即country劬 of small size and population by conquest;;;;;;;;;;;;;x
+minor_conquest_setup;Annex minor nation of $RECIPIENT$;;;;;;;;;;;;;x
+minor_conquest_short;Annex $RECIPIENT$;;;;;;;;;;;;;x
+make_puppet_small;Make Small Puppet;;;;;;;;;;;;;x
+make_puppet_small_desc;Puppet a 即country劬 of small size and population by aggression;;;;;;;;;;;;;x
+make_puppet_small_setup;Puppet the minor nation of $RECIPIENT$;;;;;;;;;;;;;x
+make_puppet_small_short;Puppet $RECIPIENT$;;;;;;;;;;;;;x
+make_puppet_large;Make Large Puppet;;;;;;;;;;;;;x
+make_puppet_large_desc;Puppet a 即country劬 of respectable size and population by aggression;;;;;;;;;;;;;x
+make_puppet_large_setup;Puppet the nation of $RECIPIENT$;;;;;;;;;;;;;x
+make_puppet_large_short;Puppet $RECIPIENT$;;;;;;;;;;;;;x
+#############State Nations (Pero Credit)##############;;;;;;;;;;;;;;x
+TIN;佈Tiny State Flag\n劬This province is in a state that meets the following criteria:\n即1836 - 1870 劬Less than 100k POPs\n即1870 - 1900 劬Less than 150k POPs\n即1900+ 劬Less than 200k POPs\n\n刪Warscore Costs (0.5x For Great Wars)\n劬This province is in a state that has the following costs:\n即Acquire Core: 劬4% Warscore\n即Acquire State: 劬12% Warscore\n即Demand Concession: 劬8% Warscore\n即Place in the Sun: 劬4% Warscore\n即Free Peoples: 劬12% Warscore\n即Take Capital: 劬66% Warscore;;;;;;;;;;;;;x
+SMA;佈Small State Flag\n劬This province is in a state that meets the following criteria:\n即1836 - 1870 劬100k to 400k POPs\n即1870 - 1900 劬150k to 600k POPs\n即1900+ 劬200k to 800k POPs\n\n刪Warscore Costs (0.5x For Great Wars)\n劬This province is in a state that has the following costs:\n即Acquire Core: 劬12% Warscore\n即Acquire State: 劬24% Warscore\n即Demand Concession: 劬16% Warscore\n即Place in the Sun: 劬8% Warscore\n即Free Peoples: 劬24% Warscore\n即Take Capital: 劬66% Warscore;;;;;;;;;;;;;x
+MED;佈Medium State Flag\n劬This province is in a state that meets the following criteria:\n即1836 - 1870 劬400k to 700k POPs\n即1870 - 1900 劬600k to 1M POPs\n即1900+ 劬800k to 1.4M POPs\n\n刪Warscore Costs (0.5x For Great Wars)\n劬This province is in a state that has the following costs:\n即Acquire Core: 劬16% Warscore\n即Acquire State: 劬32% Warscore\n即Demand Concession: 劬24% Warscore\n即Place in the Sun: 劬12% Warscore\n即Free Peoples: 劬32% Warscore\n即Take Capital: 劬66% Warscore;;;;;;;;;;;;;x
+LRG;佈Large State Flag\n劬This province is in a state that meets the following criteria:\n即1836 - 1870 劬700k to 1M POPs\n即1870 - 1900 劬1M to 1.5M POPs\n即1900+ 劬1.4M to 2M POPs\n\n刪Warscore Costs (0.5x For Great Wars)\n劬This province is in a state that has the following costs:\n即Acquire Core: 劬24% Warscore\n即Acquire State: 劬48% Warscore\n即Demand Concession: 劬32% Warscore\n即Place in the Sun: 劬16% Warscore\n即Free Peoples: 劬48% Warscore\n即Take Capital: 劬66% Warscore;;;;;;;;;;;;;x
+HUG;佈Huge State Flag\n劬This province is in a state that meets the following criteria:\n即1836 - 1870 劬Greater than 1M POPs\n即1870 - 1900 劬Greater than 1.5M POPs\n即1900+ 劬Greater than 2M POPs\n\n刪Warscore Costs (0.5x For Great Wars)\n劬This province is in a state that has the following costs:\n即Acquire Core: 劬32% Warscore\n即Acquire State: 劬64% Warscore\n即Demand Concession: 劬40% Warscore\n即Place in the Sun: 劬20% Warscore\n即Free Peoples: 劬64% Warscore\n即Take Capital: 劬66% Warscore;;;;;;;;;;;;;x

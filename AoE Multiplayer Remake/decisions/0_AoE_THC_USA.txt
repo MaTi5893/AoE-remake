@@ -316,9 +316,7 @@ political_decisions = {
             }
             is_vassal = no
             }
-            capital_scope = {
-                controlled_by = THIS
-            }
+            capital_scope = { controlled_by = THIS country_units_in_province = THIS }
         }
         effect = {
             set_country_flag = created_the_continental_army
