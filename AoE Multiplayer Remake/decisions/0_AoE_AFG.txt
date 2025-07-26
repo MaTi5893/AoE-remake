@@ -11,6 +11,7 @@ political_decisions = {
 		}
 		allow = {
 			is_independant = yes
+			owns = 1215
 			OR = {
 				year = 1709
 				ai = no
@@ -98,6 +99,9 @@ political_decisions = {
 			tag = HTK
 			NOT = {
 				has_country_flag = spread_hotaki_conquest
+			}
+			NOT = {
+				has_country_flag = persia_hotak_formation
 			}
 		}
 		allow = {
@@ -203,6 +207,7 @@ political_decisions = {
 		effect = {
 			add_accepted_culture = persian
 			set_country_flag = conquest_of_persia
+			capital = 1127
 			random_owned = {
 				limit = {
 					owner = {
@@ -268,6 +273,146 @@ political_decisions = {
 				}
 			}
 			prestige = 15
+		}
+	}
+	
+	hotak_conquer_india = {
+		picture = hotak_empire
+		potential = {
+			tag = HTK
+			NOT = {
+				has_country_flag = hotak_conquest_india
+			}
+			has_country_flag = conquest_of_persia
+		}
+		allow = {
+			1218 = {
+				controlled_by = THIS
+			}
+			1221 = {
+				controlled_by = THIS
+			}
+			1288 = {
+				controlled_by = THIS
+			}
+			1228 = {
+				controlled_by = THIS
+			}
+			1227 = {
+				controlled_by = THIS
+			}
+		}
+		effect = {
+			badboy = 12
+			PNJ = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            SIN = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+            MUL = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			set_country_flag = hotak_conquest_india
+		}
+	}
+	
+	found_durrani_empire = {
+		picture = hotak_empire
+		potential = {
+			primary_culture = pashtun
+			NOT = {
+				has_country_flag = durrani_empire_founded
+			}
+			DUR = { exists = no }
+		}
+		allow = {
+			OR = {
+				revolution_n_counterrevolution = 1
+				AND = {
+					nationalism_n_imperialism = 1
+					owns = 1127
+					owns = 1236
+				}
+			}
+			1218 = {
+				owned_by = THIS
+			}
+			1221 = {
+				owned_by = THIS
+			}
+			1288 = {
+				owned_by = THIS
+			}
+			1228 = {
+				owned_by = THIS
+			}
+			1227 = {
+				owned_by = THIS
+			}
+			1147 = {
+				owned_by = THIS
+			}
+			AFG = {
+                all_core = {
+                    owned_by = THIS
+                }
+            }
+		}
+		effect = {
+			HTK = {
+                all_core = {
+                    add_core = DUR
+					remove_core = HTK
+                }
+            }
+			PNJ = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+            SIN = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+            MUL = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+			RAJ = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+			JOD = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+			MEW = {
+                all_core = {
+                    add_core = DUR
+                }
+            }
+			1236 = { add_core = DUR }
+			1237 = { add_core = DUR }
+			change_tag = DUR
+			prestige = 15
+			add_accepted_culture = pashtun
+			add_accepted_culture = baluchi
+			add_accepted_culture = panjabi
+			add_accepted_culture = sindi
+			add_accepted_culture = tajik
+			add_accepted_culture = persian
+			set_country_flag = hotak_conquest_india
 		}
 	}
 }

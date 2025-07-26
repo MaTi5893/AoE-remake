@@ -583,4 +583,41 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	dominate_the_hetmanate = {
+		picture = sweden_ukraine
+		potential = {
+			tag = PLC
+			NOT = { has_country_flag = dominated_the_hetmanate }
+			exists = HET
+			HET = { vassal_of = TOR }
+		}
+		allow = {
+			959 = { owned_by = THIS }
+			OR = {
+				AND = {
+					is_sphere_leader_of = HET
+					963 = { NOT = { controlled_by = TOR } }
+				}
+				AND = {
+					963 = { NOT = { controlled_by = HET } }
+					963 = { controlled_by = PLC } 
+					961 = { NOT = { controlled_by = HET } }
+					961 = { controlled_by = PLC } 
+					958 = { NOT = { controlled_by = HET } }
+					958 = { controlled_by = PLC } 
+					962 = { NOT = { controlled_by = HET } }
+					962 = { controlled_by = PLC } 
+					1016 = { NOT = { controlled_by = HET } }
+					1016 = { controlled_by = PLC } 
+				}
+			}		
+			ideological_thought = 1
+		}
+		effect = {
+			set_country_flag = dominated_the_hetmanate
+			inherit = HET
+			badboy = 6
+		}
+	}
 }

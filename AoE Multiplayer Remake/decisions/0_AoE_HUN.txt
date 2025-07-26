@@ -150,6 +150,52 @@ political_decisions = {
         }
     }
 
+	establish_serbian_frontier = {
+        picture = passarowitz
+        potential = {
+            tag = AUS
+            has_country_flag = down_the_danube_aus
+            NOT = { has_country_flag = established_serbian_frontier }
+        }
+        allow = {
+			NOT = { citizens_rights = primary_culture_only }
+            war_policy = jingoism
+			biologism = 1
+			794 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            653 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+            792 = {
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        vassal_of = THIS
+                    }
+                }
+            }
+        }
+        effect = {
+            set_country_flag = established_serbian_frontier
+			prestige = -10
+            add_accepted_culture = serb
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
     proclaim_ind_hun = {
         picture = become_hungary
         potential = {
@@ -560,61 +606,46 @@ political_decisions = {
 	
 	treaty_of_lutsk = {
 		picture = map_moldavia
-        potential = {         
-            tag = MOL
-			vassal_of = TUR
+        potential = {   
+			OR = {
+				tag = TOR
+				tag = RUS
+			}
+			is_greater_power = yes
+			MOL = { NOT = { has_country_flag = anti_ottoman_conspiracy }}
 			NOT = { has_global_flag = pruth_river_campaign }
 			NOT = { has_global_flag = rus_pruth_defeat }
 			NOT = { has_global_flag = rus_pruth_victory }
+			MOL = { exists = yes }
         }
 
         allow = {
+			ideological_thought = 1
 			OR = {
-				AND = {
-					OR = {
-						TUR = { war_with = TOR }
-						TUR = { war_with = RUS }
-						war_with = TOR
-						war_with = RUS
-					}
-					OR = {
-						678 = { controlled_by = TOR }
-						678 = { controlled_by = RUS }
-						670 = { controlled_by = TOR }
-						670 = { controlled_by = RUS }
-					}
-					OR = {
-						in_sphere = TUR
-						part_of_sphere = no
-					}
-					vassal_of = TUR
-				}
 				MOL = {
-					vassal_of = TUR
+					in_sphere = THIS
+					is_vassal = no
+				}
+				AND = {
 					OR = {
-						in_sphere = TOR
-						in_sphere = RUS	
-					}	
+						war_with = TUR
+						war_with = MOL
+					}
+					OR = {
+						678 = { controlled_by = THIS }
+						670 = { controlled_by = THIS }
+					}
+					MOL = {
+						vassal_of = TUR
+					}
 				}
 			} 
         }
 
         effect = {
             prestige = 5
-			random_country = {
-				limit = {
-					tag = TOR
-					exists = yes
-				}
-				country_event = 173100
-			}
-			random_country = {
-				limit = {
-					tag = RUS
-					exists = yes
-				}
-				country_event = 173100
-			}
+			MOL = { set_country_flag = anti_ottoman_conspiracy }
+			country_event = 173100
         }
 
         ai_will_do = {
@@ -622,64 +653,49 @@ political_decisions = {
         }
     }
 	
-	negotiate_russian_alliance = {
+	negotiate_wallachian_alliance_rus = {
 		picture = map_wallachia
         potential = {         
-            tag = WAL
-			vassal_of = TUR
-			NOT = { has_country_flag = anti_ottoman_conspiracy }
-			NOT = { has_global_flag = pruth_river_campaign }
+            OR = {
+				tag = TOR
+				tag = RUS
+			}
+			is_greater_power = yes
+			WAL = { NOT = { has_country_flag = anti_ottoman_conspiracy }}
+			NOT = { has_global_flag = wal_independence_victory }
+			NOT = { has_global_flag = wal_independence_defeat }
+			NOT = { has_global_flag = wal_independence_war }
 			NOT = { has_global_flag = rus_pruth_defeat }
-			NOT = { has_global_flag = rus_pruth_victory }
+			WAL = { exists = yes }
         }
 
         allow = {
+			ideological_thought = 1
 			OR = {
+				WAL = {
+					in_sphere = THIS
+					is_vassal = no
+				}
 				AND = {
 					OR = {
-						TUR = { war_with = TOR }
-						TUR = { war_with = RUS }
-						war_with = TOR
-						war_with = RUS
+						war_with = TUR
+						war_with = WAL
 					}
 					OR = {
-						668 = { controlled_by = RUS }
-						668 = { controlled_by = RUS }
-						675 = { controlled_by = TOR }
-						675 = { controlled_by = RUS }
+						668 = { controlled_by = THIS }
+						675 = { controlled_by = THIS }
 					}
-					OR = {
-						in_sphere = TUR
-						part_of_sphere = no
+					WAL = {
+						vassal_of = TUR
 					}
-					vassal_of = TUR
-				}
-				WAL = {
-					vassal_of = TUR
-					OR = {
-						in_sphere = TOR
-						in_sphere = RUS	
-					}	
 				}
 			} 
         }
 
         effect = {
             prestige = 5
-			random_country = {
-				limit = {
-					tag = TOR
-					exists = yes
-				}
-				country_event = 173104
-			}
-			random_country = {
-				limit = {
-					tag = RUS
-					exists = yes
-				}
-				country_event = 173104
-			}
+			WAL = { set_country_flag = anti_ottoman_conspiracy }
+			country_event = 173104
         }
 
         ai_will_do = {
@@ -687,51 +703,45 @@ political_decisions = {
         }
     }
 	
-	negotiate_habsburg_alliance = {
+	negotiate_wallachian_alliance_aus = {
 		picture = map_wallachia
         potential = {         
-            tag = WAL
-			vassal_of = TUR
-			NOT = { has_country_flag = anti_ottoman_conspiracy }
-			NOT = { has_global_flag = pruth_river_campaign }
-			NOT = { has_global_flag = rus_pruth_defeat }
-			NOT = { has_global_flag = rus_pruth_victory }
+            tag = AUS
+			is_greater_power = yes
+			WAL = { NOT = { has_country_flag = anti_ottoman_conspiracy }}
+			NOT = { has_global_flag = wal_independence_victory }
+			NOT = { has_global_flag = wal_independence_defeat }
+			NOT = { has_global_flag = wal_independence_war }
+			WAL = { exists = yes }
         }
 
         allow = {
+			ideological_thought = 1
 			OR = {
+				WAL = {
+					in_sphere = THIS
+					is_vassal = no
+				}
 				AND = {
 					OR = {
-						TUR = { war_with = AUS }
-						war_with = AUS
+						war_with = TUR
+						war_with = WAL
 					}
 					OR = {
-						665 = { controlled_by = AUS }
-						795 = { controlled_by = AUS }
+						665 = { controlled_by = THIS }
+						795 = { controlled_by = THIS }
 					}
-					OR = {
-						in_sphere = TUR
-						part_of_sphere = no
+					WAL = {
+						vassal_of = TUR
 					}
-					vassal_of = TUR
-				}
-				WAL = {
-					vassal_of = TUR
-					in_sphere = AUS
 				}
 			} 
         }
 
         effect = {
             prestige = 5
-			set_country_flag = anti_ottoman_conspiracy
-			random_country = {
-				limit = {
-					tag = RUS
-					exists = yes
-				}
-				country_event = 173104
-			}
+			WAL = { set_country_flag = anti_ottoman_conspiracy }
+			country_event = 173104
         }
 
         ai_will_do = {

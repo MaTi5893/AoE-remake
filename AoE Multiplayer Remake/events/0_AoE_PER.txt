@@ -28,7 +28,7 @@ country_event = {
 }
 country_event = {
 	id = 173207
-	title = "Nader Shah Proclaimed Shah"
+	title = "Nader Shah Afshar Proclaimed Shah"
 	desc = "EVTDESC173202"
 	is_triggered_only = yes
 	picture = nader_shah
@@ -45,7 +45,16 @@ country_event = {
 				remove_core = PER
 			}
 		}
+		AFG = {
+			all_core = {
+				add_core = PRA
+				remove_core = HTK
+			}
+		}
 		change_tag = PRA
+		add_accepted_culture = turkmen
+		add_accepted_culture = kurdish
+		prestige = 15
 	}
 }
 country_event = {
@@ -122,7 +131,7 @@ country_event = {
 			fort = -2
 			infrastructure = -2
 		}
-		treasury = 500000
+		treasury = 2500000
 		add_country_modifier = {
 			name = mughal_treasury
 			duration = 1825
@@ -198,7 +207,7 @@ country_event = {
 	title = "New Governor of Kandahar"
 	desc = "EVTDESC173210"
 	fire_only_once = yes
-	picture = nader_shah
+	picture = persia_map
 	
 	trigger = {
 		year = 1704
@@ -227,7 +236,7 @@ country_event = {
 	title = "Rebellion in Kandahar"
 	desc = "EVTDESC173211"
 	fire_only_once = yes
-	picture = nader_shah
+	picture = persia_map
 	
 	trigger = {
 		year = 1709
@@ -282,5 +291,264 @@ country_event = {
 				background = attack_4.1
 			}
 		}
+	}
+}
+country_event = {
+	id = 173212
+	title = "Submission to the Hotaks?"
+	desc = "EVTDESC173212"
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = sultan_husayn
+	
+	option = {
+		name = "We must rally behind Shah Tahmasp II and repel the Afghans invaders."
+		any_pop = {
+				limit = {
+					culture = persian
+				}
+				militancy = -2
+			}
+		1127 = {
+				any_pop = {
+					reduce_pop = 0.97
+				}
+			}
+		any_pop = {
+				limit = {
+					type = soldiers
+					culture = persian
+				}
+				reduce_pop = 1.06
+		}
+		define_general = {
+			name = "Tahmasp II"
+			personality = defence_3.1
+			background = attack_3.1
+		}
+		set_country_flag = persia_resist_hotaks
+	}
+	
+	option = {
+		name = "Only the Hotaks can control the throne of Persia."
+		any_pop = {
+				limit = {
+					culture = persian
+				}
+				militancy = 8
+			}
+		any_pop = {
+				limit = {
+					type = soldiers
+					culture = pashtun
+				}
+				reduce_pop = 1.25
+			}
+		capital = 1127
+		1127 = {
+				any_pop = {
+					reduce_pop = 0.92
+				}
+			}
+		PER = {
+			all_core = {
+				add_core = HTK
+			}
+		}
+		AFG = {
+			all_core = {
+				add_core = HTK
+			}
+		}
+		KAL = {
+			all_core = {
+				add_core = HTK
+			}
+		}
+		MAK = {
+			all_core = {
+				add_core = HTK
+			}
+		}
+		inherit = HTK
+		change_tag = HTK
+		primary_culture = pashtun
+		add_accepted_culture = baluchi
+		add_accepted_culture = pashtun
+		add_accepted_culture = persian
+		define_general = {
+			name = "Ashraf Hotak"
+			personality = defence_3.1
+			background = attack_3.1
+		}
+		set_country_flag = persia_hotak_formation
+	}
+}
+country_event = {
+	id = 173213
+	title = "Repulsion of the Hotaks"
+	desc = "EVTDESC173213"
+	fire_only_once = yes
+	picture = nader_shah
+	
+	trigger = {
+		year = 1729
+		NOT = { war_with = AFG war_with = HTK }
+		HTK = { exists = no }
+		primary_culture = persian
+		has_country_flag = persia_resist_hotaks
+	}
+	
+	mean_time_to_happen = {
+        months = 3
+    }
+	
+	option = {
+		name = "He will expel all enemies of Iran."
+		PER = {
+			all_core = {
+				add_core = THIS
+				remove_core = HTK
+			}
+		}
+		AFG = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		set_global_flag = repulsion_of_hotaks
+	}
+}
+country_event = {
+	id = 173214
+	title = "Treaty of Constantinople"
+	desc = "EVTDESC173214"
+	fire_only_once = yes
+	picture = nader_shah
+	is_triggered_only = yes
+	
+	option = {
+		name = "These lands are, and always will be, Persian. But never Turk."
+		PER_1122 = { remove_core = TUR }
+		1108 = { remove_core = TUR }
+		1110 = { remove_core = TUR }
+		1111 = { remove_core = TUR }
+		1123 = { remove_core = TUR }
+		1109 = { remove_core = TUR }
+		1112 = { remove_core = TUR }
+		1133 = { remove_core = TUR }
+		1054 = { remove_core = TUR }
+		1131 = { remove_core = TUR }
+		1132 = { remove_core = TUR }
+		1120 = { remove_core = TUR }
+		1122 = { remove_core = TUR }
+		1128 = { remove_core = TUR }
+		1090 = { remove_core = TUR }
+		RUS_1102 = { remove_core = TUR }
+		RUS_1098 = { remove_core = TUR }
+		TUR = {
+			any_owned = {
+				limit = {
+					is_core = THIS
+					NOT = { is_core = TUR }
+				}
+			}
+			secede_province = THIS
+		}
+		set_global_flag = afsharid_constantinople_treaty
+	}
+}
+country_event = {
+	id = 173215
+	title = "Treaty of Resht"
+	desc = "EVTDESC173215"
+	fire_only_once = yes
+	picture = nader_shah
+	is_triggered_only = yes
+	
+	option = {
+		name = "An alliance with the Persians is more than the land is worth."
+		create_alliance = FROM
+		RUS_1052 = { remove_core = THIS }
+		RUS_1102 = { remove_core = THIS }
+		PER_1116 = { remove_core = THIS }
+		RUS_1469 = { remove_core = THIS }
+		1116 = { remove_core = THIS }
+		1205 = { remove_core = THIS }
+		1194 = { remove_core = THIS }
+		1183 = { remove_core = THIS }
+		2611 = { remove_core = THIS }
+		1184 = { remove_core = THIS }
+		any_owned = {
+			limit = {
+				is_core = THIS
+				NOT = { is_core = FROM }
+			}
+			secede_province = FROM
+		}
+		set_global_flag = afsharid_resht_treaty
+	}
+	
+	option = {
+		name = "These Persian dogs dare beg for their scraps back."
+		prestige = 10
+		FROM = {
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+	}
+}
+country_event = {
+	id = 173216
+	title = "Reclamation of the Caspian"
+	desc = "EVTDESC173216"
+	fire_only_once = yes
+	picture = nader_shah
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have the Russians retreating across the Caspian."
+		RUS_1052 = { remove_core = RUS }
+		RUS_1102 = { remove_core = RUS }
+		PER_1116 = { remove_core = RUS }
+		RUS_1469 = { remove_core = RUS }
+		1116 = { remove_core = RUS }
+		1205 = { remove_core = RUS }
+		1194 = { remove_core = RUS }
+		1183 = { remove_core = RUS }
+		2611 = { remove_core = RUS }
+		1184 = { remove_core = RUS }
+		RUS_1052 = { remove_core = TOR }
+		RUS_1102 = { remove_core = TOR }
+		PER_1116 = { remove_core = TOR }
+		RUS_1469 = { remove_core = TOR }
+		1116 = { remove_core = TOR }
+		1205 = { remove_core = TOR }
+		1194 = { remove_core = TOR }
+		1183 = { remove_core = TOR }
+		2611 = { remove_core = TOR }
+		1184 = { remove_core = TOR }
+		RUS = {
+		any_owned = {
+			limit = {
+				is_core = THIS
+				NOT = { is_core = THIS }
+			}
+			secede_province = THIS
+		}
+		}
+		TOR = {
+		any_owned = {
+			limit = {
+				is_core = THIS
+				NOT = { is_core = THIS }
+			}
+			secede_province = THIS
+		}
+		}
+		set_global_flag = afsharid_resht_treaty
 	}
 }

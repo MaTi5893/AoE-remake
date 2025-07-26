@@ -1256,7 +1256,7 @@ country_event = {
 			remove_core = THIS
 		}
 		885 = { 
-			add_core = THIS
+			add_core = THIS 
 		}
 		relation = { who = TUR value = 60 }
 		prestige = -5
@@ -1269,7 +1269,7 @@ country_event = {
 			add_core = FROM
 		}
 		885 = { 
-			add_core = THIS
+			add_core = THIS 
 		}
 		casus_belli = {
             target = TUR
@@ -1285,5 +1285,52 @@ country_event = {
 		}
 		relation = { who = TUR value = -60 }
 		prestige = 5
+	}
+}
+country_event = {
+	id = 173639
+	title = "Battle of Kanzhal"
+	desc = "EVTDESC173639"
+	picture = janisseries_tur
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		year = 1708
+		owns = 1049
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "Their disrespect of the Sultan will not go unchecked."
+		1051 = { secede_province = THIS }
+		2619 = { secede_province = THIS }
+		1051 = { secede_province = CIR }
+		2619 = { secede_province = CIR }
+		relation = { who = CIR value = -120 }
+		casus_belli = {
+            target = CIR
+            type = establish_protectorate_casus_belli
+            months = 60
+        }
+		war = {
+            target = CIR
+            attacker_goal = { casus_belli = establish_protectorate_casus_belli }
+            call_ally = no
+        }
+		prestige = -5
+	}
+	
+	option = {
+		name = "The Circassians aren't worth a damn."
+		1051 = { secede_province = THIS }
+		2619 = { secede_province = THIS }
+		1051 = { secede_province = CIR }
+		2619 = { secede_province = CIR }
+		relation = { who = CIR value = -60 }
+		prestige = -10
 	}
 }

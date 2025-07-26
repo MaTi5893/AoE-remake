@@ -233,3 +233,25 @@ country_event = {
 			money = 25000
 	}
 }
+country_event = {
+    id = 98004
+    title = "Legacy of the Great Turkish War"
+    desc = "EVTDESC98004"
+	picture = cavallery
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The future of the Ottoman Empire is uncertain."
+			war_exhaustion = 33
+			artillery = 300
+			canned_food = 300
+			ammunition = 300
+			small_arms = 300
+			wine = 300
+			liquor = 300
+			regular_clothes = 250
+			luxury_clothes = 250
+			money = 50000
+	}
+}

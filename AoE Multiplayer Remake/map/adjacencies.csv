@@ -190,12 +190,9 @@
 950;705;impassable;0;0;scary mountain
 950;953;impassable;0;0;scary mountain
 661;953;impassable;0;0;scary mountain
-661;662;impassable;0;0;scary mountain
-661;663;impassable;0;0;scary mountain
 660;672;impassable;0;0;scary mountain
 660;668;impassable;0;0;scary mountain
 660;667;impassable;0;0;scary mountain
-660;663;impassable;0;0;scary mountain
 659;667;impassable;0;0;scary mountain
 314;319;impassable;0;0;scary mountain
 
@@ -246,7 +243,8 @@
 #334;372;canal;2711;20;Öresund
 
 #Danube Canal
-675;678;canal;3267;21;Over Danube
+#675;678;canal;3267;21;Over Danube
+#2775;3267;canal;675;21;Over Danube
 
 #Deltas to Oceans/Seas blockage
 
@@ -255,6 +253,7 @@
 # Navigable Rivers
 
 #Danube
+675;678;land;2773;16;Over Danube
 675;673;sea;3267;0;Over Danube
 675;668;sea;3267;0;Over Danube
 674;668;sea;3267;0;Over Danube

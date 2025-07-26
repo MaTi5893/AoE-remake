@@ -88,7 +88,7 @@ country_event = {
 	option = {
 		name = "The Sultan has little resources to spare for the trite affairs of Maghrebis."
 		ALD = { all_core = { add_core = MOR } }
-		release_vassal = TUN
+		#release_vassal = TUN
 		relation = { who = MOR value = 40 }
 		relation = { who = ALD value = -60 }
 		relation = { who = TUN value = -20 }

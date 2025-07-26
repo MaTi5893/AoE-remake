@@ -376,29 +376,13 @@ country_event = {
 	desc = "EVTDESC174512"
 	picture = conscription_marching
 	fire_only_once = yes
-	
-	trigger = {
-		tag = AUS
-		OR = {
-		war_with = BOR
-		war_with = SPC
-		}
-		is_greater_power = yes
-		KOL = {
-			in_sphere = BOR
-			any_owned_province = {
-					province_id = 575
-					country_units_in_province = AUS
-					}
-			}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = "Deprive him of his lands and place an Imperial ban."
+		AUS = { 
+			end_war = KOL 
+		}
 		 AUS = {
 				diplomatic_influence = {
 					who = KOL
@@ -419,6 +403,122 @@ country_event = {
 					value = -120
 				}
 			}
+	}
+}
+country_event = {
+	id = 174513
+	title = "Death of Samuel Oppenheimer"
+	desc = "EVTDESC174513"
+	picture = oppenheimer
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1703
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "That fraudulent financier owes US money."
+		prestige = -10
+		money = 250000
+		add_country_modifier = {
+			name = austrian_financial_crisis
+			duration = 3650
+		}
+		remove_country_modifier = samuel_oppenheimer_reforms
+		ai_chance = {
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "Pay his estate what it is owed."
+		prestige = 10
+		money = -300000
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+country_event = {
+	id = 174514
+	title = "Treaty of Ilbesheim"
+	desc = "EVTDESC174514"
+	picture = conscription_marching
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Place Bavaria under military occupation until there situation is sorted."
+		AUS = { 
+			end_war = BAV 
+			create_vassal = BAV
+		}
+		AUS = {
+			diplomatic_influence = {
+				who = BAV
+				value = 400
+			}
+			relation = {
+				who = BAV
+				value = 40
+			}
+		}
+		OR = {
+			diplomatic_influence = {
+				who = BAV
+				value = -400
+			}
+			relation = {
+				who = BAV
+				value = -30
+			}
+		}
+	}
+}
+country_event = {
+	id = 174515
+	title = "End Bavarian Military Occupation?"
+	desc = "EVTDESC174515"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		has_global_flag = spanish_succesion_crisis
+		has_country_flag = repulsed_french_bavaria
+		NOT = { 
+			war_with = BOR 
+			war_with = SPC
+		}
+		BAV = { vassal_of = THIS }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Bavaria will stay under Habsburg occupation."
+		prestige = -10
+		badboy = 10
+		ai_chance = {
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "Reinstate the elector with his territories."
+		prestige = 5
+		release_vassal = BAV
+		create_alliance = BAV
+		ai_chance = {
+			factor = 25
+		}
 	}
 }
 #####################

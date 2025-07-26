@@ -328,9 +328,6 @@ country_event = {
             954 = {
                 secede_province = PLC
             }
-			955 = {
-                secede_province = PLC
-            }
         }
         ai_chance = {
             factor = 10
@@ -357,6 +354,7 @@ country_event = {
             }
             militancy = -5
         }
+		KOS = { all_core = { remove_core = KOS }}
         ai_chance = {
             factor = 10
         }
@@ -365,7 +363,7 @@ country_event = {
 
 country_event = {
     id = 178307
-    title = "EVTNAME178307"
+    title = "The Paliy Uprising"
     desc = "EVTDESC178307"
     picture = cossacks
 
@@ -374,11 +372,6 @@ country_event = {
     trigger = {
         tag = PLC
         year = 1702
-        NOT = {
-            has_country_flag = polish_paliy
-			has_global_flag = end_of_paliy
-			has_global_flag = paliy_rebellion
-        }
     }
 
     mean_time_to_happen = {
@@ -386,9 +379,28 @@ country_event = {
     }
 
     option = {
-        name = "EVT178307OPT"
-        set_global_flag = paliy_rebellion
-        prestige = -5
+        name = "We must act quickly!"
+		KOS = {
+			all_core = {
+				secede_province = KOS
+			}
+			government = colonial_company
+			add_country_modifier = {
+				name = paliy_rebellion
+				duration = 1825
+			}
+			define_general = {
+				   name = "Semen Paliy"
+				   personality = defence_4.1
+				   background = attack_4.1
+			   }
+			define_general = {
+				   name = "Samuel Samus"
+				   personality = defence_2.1
+				   background = attack_1.1
+			   }
+		}
+		prestige = -5
         any_pop = {
             limit = {
                 has_pop_religion = orthodox
@@ -428,17 +440,7 @@ country_event = {
                 reduce_pop = 0.8
             }
         }
-		955 = {
-            any_pop = {
-                limit = {
-                    OR = {
-                        has_pop_culture = polish
-                        has_pop_culture = ashkenazi
-                    }
-                }
-                reduce_pop = 0.8
-            }
-        }
+		set_global_flag = paliy_rebellion
         ai_chance = {
             factor = 1
         }
@@ -464,9 +466,6 @@ country_event = {
         954 = {
             secede_province = FROM
             
-        }
-		955 = {
-            secede_province = FROM
         }
         ai_chance = {
             factor = 1

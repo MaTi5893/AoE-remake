@@ -10,7 +10,10 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            has_country_modifier = maria_theresa
+			OR = {
+				revolution_n_counterrevolution = 1
+				has_country_modifier = maria_theresa
+			}
             health_care = good_health_care
         }
         effect = {
@@ -39,6 +42,7 @@ political_decisions = {
 					duration = 1825
 				}
 			}
+			add_accepted_culture = slovak
 			add_accepted_culture = hungarian
             random_country = {
                 limit = {
@@ -64,7 +68,10 @@ political_decisions = {
         }
         allow = {
             army_nco_training = 1
-            has_country_modifier = maria_theresa
+            OR = {
+				revolution_n_counterrevolution = 1
+				has_country_modifier = maria_theresa
+			}
             NOT = { pensions = no_pensions }
         }
         effect = {
@@ -163,7 +170,7 @@ political_decisions = {
                 }
                 militancy = -2
             }
-			add_accepted_culture = slovak
+			add_accepted_culture = croat
 			years_of_research = 0.5
             prestige = 5
             social_reform = acceptable_health_care
@@ -194,6 +201,8 @@ political_decisions = {
             prestige = 5
             social_reform = good_health_care
             set_country_flag = financial_reform
+			remove_country_modifier = austrian_financial_crisis
+			remove_country_modifier = samuel_oppenheimer_reforms
             add_country_modifier = {
                 name = habsburg_finances
                 duration = -1
@@ -248,7 +257,19 @@ political_decisions = {
             exists = yes
         }
         allow = {
-            mass_politics = 1
+			OR = {
+				mass_politics = 1
+				OR = {
+					AND = {
+						revolution_n_counterrevolution = 1
+						BAV = { all_core = { owned_by = THIS } }
+					}
+					AND = {
+						revolution_n_counterrevolution = 1
+						BAV = { vassal_of = THIS }
+					}
+				}
+			}
 			is_greater_power = yes
             BAV = {
 				OR = {
@@ -269,7 +290,7 @@ political_decisions = {
 					}
 				}
 				owner = {
-					badboy = 20
+					badboy = 15
 				}
 			}
 			random_owned = {
@@ -288,9 +309,16 @@ political_decisions = {
 					}
 				}
 				owner = {
-					badboy = 10
+					badboy = 8
 				}
 			}
+			random_country = {
+                limit = {
+                    tag = BAV
+                    vassal_of = THIS
+                }
+                annex_to = THIS
+            }
             BAV = {
                 all_core = {
                     add_core = AUS
@@ -434,6 +462,82 @@ political_decisions = {
 				value = -300
 			}
 			leave_alliance = VEN
+		}
+	}
+	repulse_french_cologne = {
+		picture = austria_coa
+		potential = {
+			tag = AUS
+			is_greater_power = yes
+			NOT = { year = 1710 }
+			NOT = { KOL = { vassal_of = THIS }}
+			NOT = { KOL = { in_sphere = THIS }}
+			NOT = { has_country_flag = repulsed_french_cologne }
+		}
+		allow = {
+			OR = {
+				war_with = BOR
+				war_with = SPC
+			}
+			OR = {
+				KOL = {
+					in_sphere = BOR
+				}
+				war_with = KOL
+			}
+			OR = {
+				AND = {
+					575 = { country_units_in_province = THIS }
+					575 = { controlled_by = THIS }
+				}
+				AND = {
+					NOT = { war_with = KOL }
+					KOL = { in_sphere = BOR }
+					575 = { country_units_in_province = THIS }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = repulsed_french_cologne
+			country_event = 174512
+		}
+	}
+	repulse_french_bavaria = {
+		picture = austria_coa
+		potential = {
+			tag = AUS
+			is_greater_power = yes
+			NOT = { year = 1710 }
+			NOT = { BAV = { vassal_of = THIS }}
+			NOT = { BAV = { in_sphere = THIS }}
+			NOT = { has_country_flag = repulsed_french_bavaria }
+		}
+		allow = {
+			OR = {
+				war_with = BOR
+				war_with = SPC
+			}
+			OR = {
+				BAV = {
+					in_sphere = BOR
+				}
+				war_with = BAV
+			}
+			OR = {
+				AND = {
+					599 = { country_units_in_province = THIS }
+					BAV = { all_core = { controlled_by = THIS }}
+				}
+				AND = {
+					NOT = { war_with = BAV }
+					BAV = { in_sphere = BOR }
+					599 = { country_units_in_province = THIS }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = repulsed_french_bavaria
+			country_event = 174514
 		}
 	}
 }

@@ -2,21 +2,20 @@ political_decisions = {
     annex_west_bank = {
         picture = steppes_cossack
         potential = {
-			OR = {
-				tag = HET
-				tag = ZZH
+			tag = TOR
+			HET = {
+				OR = {
+					in_sphere = THIS
+					vassal_of = THIS
+				}
 			}
-			OR = {
-				in_sphere = TOR
-				vassal_of = TOR
-				in_sphere = RUS
-				vassal_of = RUS
-			}
-            NOT = {
-                has_country_flag = ukrainian_reunification
-            }
+            NOT = { HET = { has_country_flag = ukrainian_reunification }}
             NOT = { has_global_flag = end_of_paliy }
-            exists = yes
+			NOT = { has_country_flag = intervention_paliy_rebellion }
+			OR = {
+				KOS = { exists = yes }
+				KOS = { any_core = { controlled_by = THIS }}
+			}
         }
     
         allow = {
@@ -24,17 +23,31 @@ political_decisions = {
             NOT = {
                 war_exhaustion = 20
             }
-			war_with = PLC
-			959 = { NOT = { controlled_by = PLC } }
-			960 = { NOT = { controlled_by = PLC } }
-			954 = { NOT = { controlled_by = PLC } }
-			955 = { NOT = { controlled_by = PLC } }
+			OR = {
+				KOS = { war_with = PLC }
+				war_with = PLC
+			}
+			NOT = { KOS = { all_core = { controlled_by = PLC }} }
+			OR = {
+				KOS = { in_sphere = THIS }
+				KOS = { part_of_sphere = no }
+				KOS = { any_core = { controlled_by = THIS }}
+			}
         }
         effect = {
             PLC = {
                 country_event = 178308
             }
-            set_country_flag = ukrainian_reunification
+			random_country = {
+                limit = {
+                    tag = KOS
+					exists = yes
+					NOT = { KOS = { all_core = { controlled_by = PLC }} }
+                }
+                annex_to = HET
+            }
+            HET = { set_country_flag = ukrainian_reunification }
+			set_country_flag = intervention_paliy_rebellion
             badboy = 3
         }
     
@@ -50,6 +63,7 @@ political_decisions = {
 			OR = {
 				HET = { has_country_flag = ukrainian_reunification }
 				ZZH = { has_country_flag = ukrainian_reunification }
+				TOR = { has_country_flag = intervention_paliy_rebellion }
 				AND = {
 					959 = { NOT = { owned_by = PLC } }
 					960 = { NOT = { owned_by = PLC } }
@@ -68,6 +82,7 @@ political_decisions = {
 			OR = {
 				war_with = ZZH
 				war_with = HET
+				war_with = TOR
 				war = no
 			}
 			959 = { controlled_by = PLC } 
@@ -78,6 +93,7 @@ political_decisions = {
         effect = {
             960 = { owner = { country_event = 178305 } }
 			PLC = { country_event = 178306 }
+			KOS = { all_core = { remove_core = KOS }}
             set_global_flag = end_of_paliy
         }
     
@@ -100,7 +116,6 @@ political_decisions = {
 					959 = { NOT = { owned_by = PLC } }
 					960 = { NOT = { owned_by = PLC } }
 					954 = { NOT = { owned_by = PLC } }
-					955 = { NOT = { owned_by = PLC } }	
 				}
 			}
             exists = yes
@@ -125,102 +140,103 @@ political_decisions = {
 			960 = { add_core = THIS }
 			954 = { add_core = THIS }
 			955 = { add_core = THIS }
+			KOS = { all_core = { remove_core = KOS }}
             set_global_flag = end_of_paliy
         }
     
         ai_will_do = { factor = 1 }
     }
 	
-    masepa_revolt = {
-        picture = cossak_state
-        potential = {
-			tag = HET
-			HET = {
-				vassal_of = TOR
-			}
-            NOT = {
-                has_global_flag = masepa_revolt
-            }
-            exists = yes
-        }
-
-        allow = {
-            TOR = {
-                war = yes
-            }
-            OR = {
-                is_secondary_power = yes
-                any_greater_power = {
-                    war_with = TOR
-                }
-            }
-        }
-
-        effect = {
-            prestige = 10
-            TOR = {
-                country_event = 91241542
-            }
-            create_alliance = SWE
-            set_global_flag = masepa_revolt
-            ZZH = {
-                country_event = 91241543
-            }
-            any_pop = {
-                limit = {
-                    type = soldiers
-                }
-                reduce_pop = 2
-            }
-            government = democracy
-            treasury = 300000
-            ammunition = 300
-            small_arms = 100
-			random_owned = {
-				limit = {
-					owner = {
-						ai = no
-					}
-				}
-				owner = {
-					capital_scope = {
-						sub_unit = { type = infantry value = current }
-						sub_unit = { type = infantry value = current }
-						sub_unit = { type = infantry value = current }
-						sub_unit = { type = infantry value = current }
-						sub_unit = { type = cavalry value = current }
-						sub_unit = { type = artillery value = current }
-						sub_unit = { type = artillery value = current }
-						sub_unit = { type = artillery value = current }
-						sub_unit = { type = artillery value = current }
-						sub_unit = { type = artillery value = current }
-					}
-				}
-			}
-			end_war = SWE
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                TOR = {
-                    NOT = { war_with = SWE }
-					NOT = { war_exhaustion = 25 }
-                }
-            }
-			modifier = {
-                factor = 0
-                TOR = {
-                    ai = no
-                }
-            }
-			modifier = {
-                factor = 0
-                NOT = { year = 1706 }
-            }
-        }
-    }
+#masepa_revolt = {
+#    picture = cossak_state
+#    potential = {
+#		tag = HET
+#		HET = {
+#			vassal_of = TOR
+#		}
+#        NOT = {
+#            has_global_flag = masepa_revolt
+#        }
+#        exists = yes
+#    }
+#
+#    allow = {
+#        TOR = {
+#            war = yes
+#        }
+#        OR = {
+#            is_secondary_power = yes
+#            any_greater_power = {
+#                war_with = TOR
+#            }
+#        }
+#    }
+#
+#    effect = {
+#        prestige = 10
+#        TOR = {
+#            country_event = 91241542
+#        }
+#        create_alliance = SWE
+#        set_global_flag = masepa_revolt
+#        ZZH = {
+#            country_event = 91241543
+#        }
+#        any_pop = {
+#            limit = {
+#                type = soldiers
+#            }
+#            reduce_pop = 2
+#        }
+#        government = democracy
+#        treasury = 300000
+#        ammunition = 300
+#        small_arms = 100
+#		random_owned = {
+#			limit = {
+#				owner = {
+#					ai = no
+#				}
+#			}
+#			owner = {
+#				capital_scope = {
+#					sub_unit = { type = infantry value = current }
+#					sub_unit = { type = infantry value = current }
+#					sub_unit = { type = infantry value = current }
+#					sub_unit = { type = infantry value = current }
+#					sub_unit = { type = cavalry value = current }
+#					sub_unit = { type = artillery value = current }
+#					sub_unit = { type = artillery value = current }
+#					sub_unit = { type = artillery value = current }
+#					sub_unit = { type = artillery value = current }
+#					sub_unit = { type = artillery value = current }
+#				}
+#			}
+#		}
+#		end_war = SWE
+#    }
+#
+#    ai_will_do = {
+#        factor = 1
+#        modifier = {
+#            factor = 0
+#            TOR = {
+#                NOT = { war_with = SWE }
+#				NOT = { war_exhaustion = 25 }
+#            }
+#        }
+#		modifier = {
+#            factor = 0
+#            TOR = {
+#                ai = no
+#            }
+#        }
+#		modifier = {
+#            factor = 0
+#            NOT = { year = 1706 }
+#        }
+#    }
+#}
 
 	masepa_revolt_zaporizhia = {
         picture = cossacks

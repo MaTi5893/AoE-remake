@@ -8,6 +8,15 @@ country_event = {
 
     option = {
         name = "The Moldavian princes shall become loyal vassals of our new empire."
+		random_country = {
+                limit = {
+                    tag = TUR
+                    exists = yes
+					is_vassal = no
+					MOL = { vassal_of = TUR }
+                }
+                country_event = 173101
+        }
         TUR = { release_vassal = MOL }
         prestige = 10
 		end_war = MOL
@@ -49,21 +58,28 @@ country_event = {
     desc = "EVTDESC173101"
     picture = janisseries_tur
 	fire_only_once = yes
+	is_triggered_only = yes
 	
-	trigger = {
-        tag = TUR
-		MOL = { exists = yes }
-        has_global_flag = pruth_river_campaign 
-		NOT = { has_global_flag = rus_pruth_victory }
-    }
-
-    mean_time_to_happen = {
-        days = 1
-    }
+	#trigger = {
+    #    tag = TUR
+	#	MOL = { exists = yes }
+    #    has_global_flag = pruth_river_campaign 
+	#	NOT = { has_global_flag = rus_pruth_victory }
+    #}
+	#
+    #mean_time_to_happen = {
+    #    days = 1
+    #}
 
     option = {
         name = "Exile the Cantemir traitors and give the princedom to the Phanariots."
 		end_alliance =  MOL
+		release_vassal =  MOL
+		casus_belli = {
+            target = MOL
+            type = make_puppet
+            months = 60
+        }
         war = {
             target = MOL
             attacker_goal = { casus_belli = make_puppet }
@@ -77,6 +93,7 @@ country_event = {
 	option = {
         name = "The principality will be ruled directly from Constantinople."
 		end_alliance =  MOL
+		release_vassal =  MOL
 		badboy = 8
         war = {
             target = MOL
@@ -92,6 +109,7 @@ country_event = {
         name = "Let the savages enjoy their own company."
         prestige = -10
 		end_alliance =  MOL
+		release_vassal =  MOL
 		set_global_flag = rus_pruth_victory  
         ai_chance = {
             factor = 1
@@ -185,14 +203,6 @@ country_event = {
                 }
                 THIS = { create_vassal = MOL }
         }
-		random_country = {
-                limit = {
-                    tag = MOL
-                    exists = yes
-					is_vassal = no
-                }
-                THIS = { create_vassal = MOL }
-        }
 		badboy = 4
 		prestige = 5
 		set_global_flag = rus_pruth_victory  
@@ -215,6 +225,15 @@ country_event = {
 
     option = {
         name = "The Wallachian princes will serve greatly as vanguards on the Ottoman frontier."
+		random_country = {
+                limit = {
+                    tag = TUR
+                    exists = yes
+					is_vassal = no
+					WAL = { vassal_of = TUR }
+                }
+                country_event = 173105
+        }
         TUR = { release_vassal = WAL }
         prestige = 10
 		end_war = WAL
@@ -257,21 +276,29 @@ country_event = {
     desc = "EVTDESC173105"
     picture = janisseries_tur
 	fire_only_once = yes
+	is_triggered_only = yes
 	
-	trigger = {
-        tag = TUR
-		WAL = { exists = yes }
-        has_global_flag = wal_independence_conspiracy 
-		NOT = { has_global_flag = rus_pruth_victory }
-    }
-
-    mean_time_to_happen = {
-        days = 1
-    }
-
+	#trigger = {
+    #    tag = TUR
+	#	WAL = { exists = yes }
+    #    has_global_flag = wal_independence_conspiracy 
+	#	NOT = { has_global_flag = rus_pruth_victory }
+    #}
+	#
+    #mean_time_to_happen = {
+    #    days = 1
+    #}
+	#
+	
     option = {
         name = "Execute that Wallachian traitor and give the princedom to the Phanariots."
 		end_alliance =  WAL
+		release_vassal =  WAL
+		casus_belli = {
+            target = WAL
+            type = make_puppet
+            months = 60
+        }
         war = {
             target = WAL
             attacker_goal = { casus_belli = make_puppet }
@@ -285,6 +312,7 @@ country_event = {
 	option = {
         name = "The principality will be ruled directly from Constantinople."
 		end_alliance =  WAL
+		release_vassal =  WAL
 		badboy = 8
         war = {
             target = WAL
@@ -300,6 +328,7 @@ country_event = {
         name = "That backwater is the least of our problems right now."
         prestige = -10
 		end_alliance =  WAL
+		release_vassal =  WAL
 		set_global_flag = wal_independence_victory  
         ai_chance = {
             factor = 1
@@ -388,15 +417,6 @@ country_event = {
 
     option = {
         name = "The Wallachian princes will prosper under our firm guidance."
-		random_country = {
-                limit = {
-                    tag = WAL
-                    exists = yes
-					is_vassal = no
-					ai = yes
-                }
-                THIS = { create_vassal = WAL }
-        }
 		random_country = {
                 limit = {
                     tag = WAL
