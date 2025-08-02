@@ -1189,7 +1189,7 @@ political_decisions = {
 					owns = 1046
 				}
 			}
-			health_care = trinket_health_care
+			NOT = { health_care = no_health_care }
 		}
 		effect = {
 			set_country_flag = revoked_cossack_rights
@@ -1198,7 +1198,7 @@ political_decisions = {
 					tag = DON
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				DON = { annex_to = THIS }
 			}
 			DON = { all_core = { add_core = THIS } }
 			random_country = {
@@ -1206,28 +1206,28 @@ political_decisions = {
 					tag = KMK
 					in_sphere = THIS
 				}
-				create_vassal = KMK
+				THIS = { create_vassal = KMK }
 			}
 			random_country = {
 				limit = {
 					tag = TRK
 					in_sphere = THIS
 				}
-				create_vassal = TRK
+				THIS = { create_vassal = TRK }
 			}
 			random_country = {
 				limit = {
 					tag = ZZH
 					in_sphere = THIS
 				}
-				create_vassal = ZZH
+				THIS = { create_vassal = ZZH }
 			}
 			random_country = {
 				limit = {
 					tag = HET
 					in_sphere = THIS
 				}
-				annex_to = THIS
+				HET = { annex_to = THIS }
 			}
 		}
 	}

@@ -284,6 +284,7 @@ political_decisions = {
             exists = yes
         }
         allow = {
+			owns = 354
             all_core = {
                 owned_by = THIS
             }
@@ -293,6 +294,7 @@ political_decisions = {
                 vassal_of = DPR
             }
             NOT = {
+				in_sphere = SCA
                 in_sphere = DNN
                 in_sphere = RUS
                 in_sphere = SWE

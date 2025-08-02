@@ -9,9 +9,12 @@ political_decisions = {
 			OR = {
 				state_n_government = 1
 				year = 1722
+			}
+			OR = {
 				capital_scope = {
 					NOT = { controlled_by = THIS }
 				}
+				militancy = 5
 				NOT = { tag = PER }
 			}
 		}

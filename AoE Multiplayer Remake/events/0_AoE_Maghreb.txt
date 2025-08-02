@@ -52,13 +52,13 @@ country_event = {
                 type = liberate_country
                 months = 60
             }
-			war = {
-				target = MOR
-				attacker_goal = { casus_belli = liberate_country country = ALD }
-				attacker_goal = { casus_belli = release_puppet country = ALD }
-				#defender_goal = { casus_belli = release_puppet country = ALD }
-				call_ally = yes
-			}
+			#war = {
+			#	target = MOR
+			#	attacker_goal = { casus_belli = liberate_country country = ALD }
+			#	attacker_goal = { casus_belli = release_puppet country = ALD }
+			#	#defender_goal = { casus_belli = release_puppet country = ALD }
+			#	call_ally = yes
+			#}
 			#war = {
 			#	target = TUN
 			#	attacker_goal = { casus_belli = make_puppet }

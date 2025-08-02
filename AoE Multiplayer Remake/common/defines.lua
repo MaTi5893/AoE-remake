@@ -150,7 +150,7 @@ military = {
     LEADER_AGE_DEATH_FACTOR = 4, -- higher value means leaders live longer
     LEADER_PRESTIGE_TO_MORALE_FACTOR = 1, -- f.ex. 100% of prestige = +20% morale
     LEADER_PRESTIGE_TO_MAX_ORG_FACTOR = 1.2, -- f.ex. 100% of prestige = +20 max org
-    LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.05, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
+    LEADER_TRANSFER_PENALTY_ON_COUNTRY_PRESTIGE = 0.00, -- country prestige penalty on unassign leader (f.ex if leader has 100% prestige, the country loose 4% of its prestige)
     LEADER_PRESTIGE_LAND_GAIN =0.4, -- extra speed gain on prestige for land combat
     LEADER_PRESTIGE_NAVAL_GAIN =0.4, -- extra speed gain on prestige for naval combat
     NAVAL_COMBAT_SEEKING_CHANCE = 0.5, -- base chance of picking a target (increased by leader reconaissance)
@@ -462,7 +462,7 @@ diplomacy = {
 
     REMOVEFROMSPHERE_RELATION_ON_ACCEPT = -10,
     REMOVEFROMSPHERE_INFLUENCE_COST = 100,
-    REMOVEFROMSPHERE_PRESTIGE_COST = 10, -- only applied if removing country is sphere leader
+    REMOVEFROMSPHERE_PRESTIGE_COST = 0, -- only applied if removing country is sphere leader
     REMOVEFROMSPHERE_INFAMY_COST = 0, -- only applied if removing country is sphere leader
 
     INCREASEOPINION_RELATION_ON_ACCEPT = 20,

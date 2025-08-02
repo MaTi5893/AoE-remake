@@ -284,7 +284,11 @@ political_decisions = {
 		}
 		allow = {
 			state_n_government = 1
-			alliance_with = SWE
+			OR = {
+				alliance_with = SWE
+				alliance_with = SCA
+				militancy = 5
+			}
 		}
 		effect = {
 			add_accepted_culture = ukrainian

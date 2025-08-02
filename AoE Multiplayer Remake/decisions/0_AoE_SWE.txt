@@ -997,7 +997,13 @@ political_decisions = {
 		allow = {
 			prestige = 25
 			war = no
-			ideological_thought = 1
+			OR = {
+				AND = {
+					ideological_thought = 1
+					SCA = { all_core = { owned_by = THIS }}
+				}
+				state_n_government = 1
+			}	
 			OR = {
 				SCA = {
 					all_core = {
