@@ -1,15 +1,15 @@
-capital = 703 #Krakow
-primary_culture = polish
-culture = lithuanian
-religion = catholic
+capital = 558
+primary_culture = north_german
+culture = south_german
+religion = protestant
 government = elective_monarchy_oligarchy
-plurality = 0.55
+plurality = 0.45
 nationalvalue = pm_no_minister
-literacy = 0.6
+literacy = 0.64
 civilized = yes
-#is_releasable_vassal = no
+prestige = 43
 
-prestige = 75
+is_releasable_vassal = no
 
 # Political reforms
 slavery = no_slavery
@@ -30,21 +30,16 @@ safety_regulations = no_safety #very influential nobility
 unemployment_subsidies = no_subsidies #irrelevant burghers
 pensions = no_pensions #irrelevant army
 health_care = no_health_care #irrelevant bureaucracy
-
 school_reforms = no_schools
 
-
 #New Reforms
-
 debt_law = serfdom
 penal_system = capital_punishment
-
 citizens_rights = culture_voting_only
-
 colonial_policy = no_colonies
 
-set_country_flag = catholic_country
-set_country_flag = the_elective_monarchy
+set_country_flag = protestant_country
+set_country_flag = hre_member
 
 decision = east_galicia_rename_polish
 decision = polish_renamed_galicia
@@ -53,46 +48,50 @@ decision = mazovia_rename_polish
 decision = west_prussia_rename_polish
 decision = posen_rename_polish
 
-schools = culture_tech_school
+decision = plc_setup
+
 ruling_party = "Stronnictwo Magnackie"
 upper_house = {
     fascist = 0
-    liberal = 40
-    conservative = 55
-    reactionary = 5
+    liberal = 33
+    conservative = 57
+    reactionary = 10
     anarcho_liberal = 0
     socialist = 0
     communist = 0
 }
-oob = "PLC_oob.txt"
 
-consciousness = 3
-nonstate_consciousness = 1
-decision = plc_setup
 
-govt_flag = {
-    government = proletarian_dictatorship
-    flag = theocracy
-}
-
-#tech
+# Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 military_staff_system = 1
 army_command_principle = 1
-clipper_design = 1
 post_nelsonian_thought = 1
+clipper_design = 1
 naval_design_bureaus = 1
 alphabetic_flag_signaling = 1
 the_command_principle = 1
-private_banks = 1
-no_standard = 1
-guild_based_production = 1
 classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
+malthusian_thought = 1
 enlightenment_thought = 1
+introspectionism = 1
+private_banks = 1
+no_standard = 1
+early_classical_theory_and_critique = 1
+freedom_of_trade = 1
+guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-basic_chemistry = 1
 mechanized_mining = 1
+basic_chemistry = 1
+
+#Inventions
+
+# Starting Consciousness
+consciousness = 3
+nonstate_consciousness = 1
+
+oob = "SPL_oob.txt"

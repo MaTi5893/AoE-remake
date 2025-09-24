@@ -1,0 +1,199 @@
+TOR = { value = 90 }
+AUS = { value = 50 }
+PRU = { value = 20 }
+BOR = { value = 35 }
+ENL = { value = 25 }
+NET = { value = 60 }
+HET = { value = -200 }
+SWE = { value = -80 }
+ZZH = { value = 40 }
+
+AUS = { military_access = yes }
+
+KOS = {
+	value = -40
+	level = 3
+	influence_value = 20
+}
+
+army = {
+    name = "Saxon Army"
+    location = 558
+    regiment = {
+        name= "1st hussar"
+        type = hussar
+        home = 558
+    }
+
+    regiment = {
+        name= "1st Artillery"
+        type = engineer
+        home = 558
+    }
+
+    regiment = {
+        name= "2nd Artillery"
+        type = artillery
+        home = 558
+    }
+
+    regiment = {
+        name= "3rd Artillery"
+        type = artillery
+        home = 558
+    }
+
+	regiment = {
+        name= "4th Artillery"
+        type = artillery
+        home = 558
+    }
+	
+    regiment = {
+        name= "5th Artillery"
+        type = artillery
+        home = 556
+    }
+
+    regiment = {
+        name= "4th Infantry"
+        type = infantry
+        home = 556
+    }
+
+    regiment = {
+        name= "1st Infantry"
+        type = infantry
+        home = 556
+    }
+
+    regiment = {
+        name= "2nd Infantry"
+        type = infantry
+        home = 556
+    }
+
+    regiment = {
+        name= "3rd Infantry"
+        type = infantry
+        home = 556
+    }
+}
+
+army = {
+
+name = "1. Armia Korony Polskiej" location = 706
+
+regiment = { name = "1. brygada" type = infantry home = 704 } 
+regiment = { name = "2. brygada" type = infantry home = 704 } 
+regiment = { name = "3. brygada" type = infantry home = 704 } 
+regiment = { name = "4. brygada" type = dragoon  home = 713 }   
+regiment = { name = "7. brygada" type = engineer home = 713 } 
+regiment = { name = "8. brygada" type = artillery home = 706 } 
+regiment = { name = "9. brygada" type = artillery home = 706 } 
+}
+
+army = { 
+
+name = "2. Armia Ksiestwa Litewskiego" location = 360
+
+regiment = { name = "3. brygada" type = infantry home = 718 } 
+regiment = { name = "4. brygada" type = dragoon home = 718 } 
+regiment = { name = "5. brygada" type = infantry home = 718 } 
+regiment = { name = "6. brygada" type = artillery home = 936 } 
+regiment = { name = "8. brygada" type = artillery home = 936 } 
+regiment = { name = "9. brygada" type = cuirassier home = 360 } 
+}
+
+leader = {
+	name = "Augustus II Von Wettin"
+	date = "1699.1.1"
+    prestige = 0.320
+    picture ="augustus_the_stronk"
+	type = land
+	personality = defence_0.4
+	background = attack_minus_1.2
+}
+
+leader = {
+    name = "Jacob Flemming"
+    date = 1700.1.1
+    type = land
+    personality = defence_0.1
+    background = attack_3.1
+    prestige = 0.3
+}
+
+leader = {
+    name = "Adam Heinrich von Steinau"
+    date = 1700.1.1
+    type = land
+    personality = defence_1.1
+    background = attack_3.1
+    prestige = 0.3
+}
+
+leader = {
+	name = "Adam Mikolaj Sieniawski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_minus_1.2
+	background = attack_0.3
+}
+leader = {
+	name = "Stanislaw Chometowski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_minus_1.3
+	background = attack_0.2
+}
+leader = {
+	name = "Michal Serwacy Wisniwiecki"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_3.1
+	background = attack_3.1
+}
+leader = {
+	name = "Grzegorz Antoni Oginski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_0.3
+	background = attack_1.4
+}
+leader = {
+	name = "Hiernim Augystyn Lubomirski"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_0.7
+	background = attack_0.1
+}
+leader = {
+	name = "Jozef Potocki"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_0.1
+	background = attack_2.3
+}
+leader = {
+	name = "Jan Kazimierz Sapiecha the Younger"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_minus_1.1
+	background = attack_1.5
+}
+leader = {
+	name = "Jan Kazimierz Sapiecha the Elder"
+	date = "1699.1.1"
+	prestige = 0.500
+	type = land
+	personality = defence_1.2
+	background = attack_0.4
+}

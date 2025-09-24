@@ -238,12 +238,28 @@ substate = {  #substate
 	end_date = 2000.1.1
 }
 
+##PLC - Right-bank Ukraine
+vassal = {  
+	first = SPL
+	second = KOS
+	start_date = 1678.1.1
+	end_date = 1705.1.1
+}
+
 #Saxo-polish union
 vassal = {  #substate
-	first = PLC
-	second = SAX
+	first = SAX
+	second = PLC
 	start_date = 1699.1.1
 	end_date = 1763.1.1
+}
+
+#PLC- Courland
+substate = {  #substate
+	first = SPL
+	second = KUR
+	start_date = 1700.1.1
+	end_date = 2000.1.1
 }
 
 #FCA / NZL / AST / MRU / NEW / RHO / JAM
