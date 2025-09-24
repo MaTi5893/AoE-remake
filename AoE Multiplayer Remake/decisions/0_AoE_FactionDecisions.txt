@@ -560,4 +560,116 @@ political_decisions = {
 			set_country_flag = army_works
 		}
 	}
+	establish_constitutional_parliament = {
+        picture = crown
+        potential = {
+            NOT = { government = theocracy }
+			NOT = { has_country_flag = established_parliament }
+            NOT = { upper_house_composition = party_appointed }
+			NOT = { trade_unions = no_trade_unions }
+			NOT = { centralization = no_parliment }
+            NOT = { has_country_modifier = law_changed_by_force }
+            exists = yes
+        }
+        allow = {
+            upper_house_composition = state_equal_weight
+			trade_unions = all_trade_unions
+			centralization = legislative_parliment
+        }
+        effect = {
+            prestige = 15
+			set_country_flag = established_parliament
+        }
+        ai_will_do = { factor = 1 }
+    }
+	abolish_slavery_officially = {
+        picture = crown
+        potential = {
+            NOT = { has_country_modifier = law_changed_by_force }
+			ideological_thought = 1
+            exists = yes
+        }
+        allow = {
+			OR = {
+				slavery = recompensation_period
+				slavery = no_slavery
+				invention = enlightenment_republicanism
+			}
+			NOT = { estate_affiliation = nobility_army }
+			NOT = { estate_affiliation = nobility_church }
+			NOT = { estate_affiliation = nobility_gentry }
+			AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = party_appointed } }
+			AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = appointed } }
+        }
+        effect = {
+            prestige = 10
+			random_owned = {
+                limit = {
+                    owner = {
+                        slavery = yes_slavery
+                    }
+                }
+                owner = {
+                    political_reform = recompensation_period
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        slavery = recompensation_period
+                    }
+                }
+                owner = {
+                    political_reform = no_slavery
+                }
+            }
+			set_country_flag = abolished_slavery_officially
+        }
+        ai_will_do = { factor = 1 }
+    }
+	abolish_serfdom_officially = {
+        picture = crown
+        potential = {
+            NOT = { has_country_modifier = law_changed_by_force }
+			ideological_thought = 1
+            exists = yes
+        }
+        allow = {
+            OR = {
+				debt_law = peonage
+				debt_law = abolished
+				invention = enlightenment_republicanism
+			}
+			NOT = { estate_affiliation = nobility_army }
+			NOT = { estate_affiliation = nobility_church }
+			NOT = { estate_affiliation = nobility_gentry }
+			AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = party_appointed } }
+			AND = { NOT = { estate_affiliation = absolutist } NOT = { upper_house_composition = appointed } }
+        }
+        effect = {
+            prestige = 10
+			random_owned = {
+                limit = {
+                    owner = {
+                        debt_law = serfdom
+                    }
+                }
+                owner = {
+                    political_reform = peonage
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        debt_law = peonage
+                    }
+                }
+                owner = {
+                    political_reform = abolished
+                }
+            }
+			set_country_flag = abolished_serfdom_officially
+        }
+        ai_will_do = { factor = 1 }
+    }
 }

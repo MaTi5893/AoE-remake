@@ -77,10 +77,11 @@ country_event = {
         NOT = {
             is_ideology_enabled = communist
         }
-        year = 1740
+        year = 1755
         civilized = yes
         literacy = 0.6
         revolution_n_counterrevolution = 1    #Republicanism is researched
+		invention = revolutionary_republicanism
 
         # OR = {
             # unemployment = 0.2

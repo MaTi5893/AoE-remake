@@ -1168,11 +1168,11 @@ forced_colonial_migration = {
     chance = {
         base = 2
         modifier = {
-            factor = 4
+            factor = 18
             is_greater_power = yes
         }
         modifier = {
-            factor = 2
+            factor = 8
             is_secondary_power = yes
         }
     }
@@ -1264,6 +1264,66 @@ rational_lawgiver = {
         plurality = 0.05
 	}
 }
+enlightenment_republicanism = {
+	limit = {
+        revolution_n_counterrevolution = 1
+    }
+	   chance = {
+        base = 2
+        modifier = {
+            factor = 8
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 4
+            is_secondary_power = yes
+        }
+    }
+	effect = {
+        rebel_org_gain = {
+			faction = nationalist_rebels 
+			value = 0.35
+		}
+		rebel_org_gain = {
+            faction = liberal_rebels
+            value = 0.25
+        }
+	}
+}
+revolutionary_republicanism = {
+	limit = {
+        revolution_n_counterrevolution = 1
+    }
+	   chance = {
+        base = -5
+		modifier = {
+            factor = 15
+            year = 1755
+        }
+        modifier = {
+            factor = 5
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 2
+            is_secondary_power = yes
+        }
+    }
+	effect = {
+		rebel_org_gain = {
+			faction = nationalist_rebels 
+			value = 0.4
+		}
+		rebel_org_gain = {
+            faction = liberal_rebels
+            value = 0.25
+        }
+        rebel_org_gain = {
+			faction = communist_rebels 
+			value = 0.75
+		}
+	}
+}
 the_dark_continent = { #colonial companys
     limit = {
         revolution_n_counterrevolution = 1
@@ -1308,8 +1368,12 @@ constitutionalism = {
         suppression_points_modifier = -0.05
         rebel_org_gain = {
             faction = liberal_rebels
-            value = 0.75
+            value = 0.5
         }
+		rebel_org_gain = {
+			faction = communist_rebels 
+			value = 0.25
+		}
     }
 }
 secularization = {

@@ -179,7 +179,7 @@ promotion_chance =
         not = { culture = this }
     }
 	modifier = {
-		factor = -0.15
+		factor = -0.1
 		country = { 
 			OR = {
 				slavery = yes_slavery 
@@ -188,14 +188,14 @@ promotion_chance =
 		}
 	}
 	modifier = {
-		factor = -0.15
+		factor = -0.1
 		country = { 
 			NOT = { primary_culture = russian }
 			debt_law = serfdom
 		}
 	}
 	modifier = {
-		factor = -0.24
+		factor = -0.175
 		country = { 
 			primary_culture = russian
 			debt_law = serfdom
