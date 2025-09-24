@@ -162,7 +162,7 @@ country_event = {
     desc = "EVTDESC1516004"
     picture = "new_world"
 	mean_time_to_happen = {
-		months = 12
+		months = 60
 	}
 	
 	trigger = {
@@ -171,12 +171,12 @@ country_event = {
 			tag = SPC
 			tag = FSU
 		}
-		NOT = { money = 1000000 }
+		NOT = { money = 200000 }
 	}
 	
 	option = {
 		name = "Accept the treasury fleet."
-		money = 500000
+		money = 200000
 		any_pop = {
 				limit = {	
 					culture = spanish_american	

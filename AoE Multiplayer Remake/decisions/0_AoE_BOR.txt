@@ -16,7 +16,7 @@ political_decisions = {
         }
         effect = {
             set_country_flag = estates_general_summoned
-			remove_country_modifier = clergy_and_nobility_domination
+			#remove_country_modifier = clergy_and_nobility_domination
 			clr_country_flag = clergy_and_nobility_domination
 			add_accepted_culture = arpitan
 			add_accepted_culture = picard
