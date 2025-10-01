@@ -586,6 +586,7 @@ political_decisions = {
         picture = crown
         potential = {
             NOT = { has_country_modifier = law_changed_by_force }
+			NOT = { has_country_flag = abolished_slavery_officially }
 			ideological_thought = 1
             exists = yes
         }
@@ -631,6 +632,7 @@ political_decisions = {
         picture = crown
         potential = {
             NOT = { has_country_modifier = law_changed_by_force }
+			NOT = { has_country_flag = abolished_serfdom_officially }
 			ideological_thought = 1
             exists = yes
         }

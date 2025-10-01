@@ -174,7 +174,10 @@ country_event = {
     trigger = {
         tag = MUG
 		NOT = { has_global_flag = death_of_aurangzeb }
-        MAH = { exists = no }
+		OR = {
+			MAH = { exists = no }
+			MAH = { vassal_of = THIS }
+		}
 		1297 = { owned_by = THIS }
     }
     mean_time_to_happen = {
@@ -186,6 +189,99 @@ country_event = {
         MAH = { all_core = { add_core = THIS }}
 		prestige = 15
 		money = 100000
+    }
+}
+country_event = {
+    id = 170783
+    title = "The Mughal War of Succession"
+    desc = "EVTDESC170783"
+
+    major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = death_of_aurangzeb
+		#year = 1707
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Bahadur Shah will crush all rebels and usurpers."
+		set_global_flag = mughal_civil_war
+        release_vassal = NAG
+        release_vassal = MAH
+        release_vassal = LAD
+        release_vassal = JOD
+        any_pop = { militancy = 2 }
+    }
+}
+country_event = {
+    id = 170784
+    title = "Domination of the Rajput Kingdoms"
+    desc = "EVTDESC170784"
+
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		OR = {
+			JOD = { all_core = { owned_by = THIS }}
+			JOD = { vassal_of = THIS }
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "The Rajput kingdoms will be ours."
+		set_country_flag = rajput_domination
+        JOD = { all_core = { add_core = THIS }}
+        create_vassal = JOD
+    }
+}
+country_event = {
+    id = 170785
+    title = "Rajput Rebellion"
+    desc = "EVTDESC170785"
+
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		has_country_flag = kam_baksh_uprising
+		OR = {
+			JOD = { all_core = { owned_by = THIS }}
+			JOD = { vassal_of = THIS }
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Their rebellion will be crushed at once."
+		release = JOD
+		release_vassal = JOD
+		war = {
+            target = JOD
+            attacker_goal = { casus_belli = annex_core_country   }
+			call_ally = yes
+        }
+        set_country_flag = fight_rajput_rebellion
+    }
+	
+	option = {
+        name = "Appease the Rajputs. We have larger threats to contend with."
+		release = JOD
+		release_vassal = JOD
+        JOD = { all_core = { remove_core = THIS }}
+		set_country_flag = rajput_rebellion_victorious
     }
 }
 country_event = {
