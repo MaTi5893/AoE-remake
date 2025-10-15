@@ -7,6 +7,11 @@ PRU = { value = 125 }
 TUR = { value = 45 }
 SPA = { value = -75 }
 
+THC = {
+    value = 125
+    level = 5
+    influence_value = 25
+}
 SCO = {
     value = 25
     level = 4
@@ -204,14 +209,14 @@ army = {
     }
 
     regiment = {
-        name= "2.Sapper Corps"
-        type = engineer
+        name= "2.Artillery Corps"
+        type = artillery
         home = 300
     }
 
     regiment = {
         name= "1.1st Division"
-        type = engineer
+        type = artillery
         home = 300
     }
 
@@ -269,14 +274,14 @@ army = {
     }
 
     regiment = {
-        name= "Sapper Brigade"
-        type = engineer
+        name= "Artillery Brigade"
+        type = artillery
         home = 291
     }
 
     regiment = {
         name= "1.1st Division"
-        type = engineer
+        type = artillery
         home = 291
     }
 
@@ -359,13 +364,13 @@ army = {
 
     regiment = {
         name= "1.5th Division"
-        type = engineer
+        type = artillery
         home = 280
     }
 
     regiment = {
         name= "2.5th Division"
-        type = engineer
+        type = artillery
         home = 280
     }
 
@@ -424,13 +429,13 @@ army = {
 
     regiment = {
         name= "1.5th Division"
-        type = engineer
+        type = artillery
         home = 263
     }
 
     regiment = {
         name= "2.5th Division"
-        type = engineer
+        type = artillery
         home = 263
     }
 

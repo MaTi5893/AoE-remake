@@ -89,3 +89,56 @@ substate = {
     start_date = 1690.1.1
     end_date = 1707.1.1
 }
+substate = {
+    first = MUG
+    second = DLT
+    start_date = 1690.1.1
+    end_date = 1707.1.1
+}
+substate = {
+    first = MUG
+    second = KRN
+    start_date = 1690.1.1
+    end_date = 1707.1.1
+}
+substate = {
+    first = MUG
+    second = BIH
+    start_date = 1690.1.1
+    end_date = 1707.1.1
+}
+substate = {
+    first = MUG
+    second = KAS
+    start_date = 1690.1.1
+    end_date = 1707.1.1
+}
+
+## Mughal Vassals
+vassal = {
+    first = MUG
+    second = DGH
+    start_date = 1690.1.1
+    end_date = 1707.1.1
+}
+##Mughal - Ladakh
+vassal = {  #substate
+	first = MUG
+	second = LAD
+	start_date = 1700.1.1
+	end_date = 2000.1.1
+}
+##Mughal - Garha/Nagpur
+vassal = {  #substate
+	first = MUG
+	second = GRH
+	start_date = 1700.1.1
+	end_date = 2000.1.1
+}
+#Mughal - Shimla
+#vassal = {  #substate
+#	first = MUG
+#	second = SHI
+#	start_date = 1700.1.1
+#	end_date = 2000.1.1
+#}

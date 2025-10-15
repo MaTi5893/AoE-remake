@@ -3,7 +3,7 @@ primary_culture = yankee
 culture = british
 religion = protestant
 government = colonial_company
-plurality = 0.0
+plurality = 5.0
 nationalvalue = pm_no_minister
 literacy = 0.50
 civilized = yes
@@ -19,25 +19,25 @@ voting_system = first_past_the_post
 political_parties = underground_parties
 
 # Social Reforms
-wage_reform = no_minimum_wage
-work_hours = no_work_hour_limit
-safety_regulations = no_safety
-health_care = no_health_care
-unemployment_subsidies = no_subsidies
-pensions = no_pensions
+wage_reform = low_minimum_wage #slightly influential church
+work_hours = eight_hours #very influential gentry
+safety_regulations = low_safety #slightly relevant nobility
+unemployment_subsidies = acceptable_subsidies #influential burghers
+pensions = no_pensions #irrelevant army
+health_care = trinket_health_care #marginally relevant bureaucracy
 school_reforms = no_schools
-
 
 debt_law = peonage
 penal_system = capital_punishment
-
 citizens_rights = culture_voting_only
-
-c
 colonial_policy = settlement
 
 set_country_flag = new_world_nation
 set_country_flag = dynamic_colony
+
+set_country_flag = protestant_country
+decision = thc_setup
+
 ruling_party = "Nobility Faction"
 upper_house = {
     fascist = 0

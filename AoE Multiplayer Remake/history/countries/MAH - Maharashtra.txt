@@ -1,11 +1,11 @@
 capital = 1301
-civilized = no
+civilized = yes
 primary_culture = marathi
 culture = gujarati
 culture = kannada
 religion = hindu
 government = absolute_monarchy
-plurality = 0.0
+plurality = 1.0
 nationalvalue = pm_no_minister
 literacy = 0.15  non_state_culture_literacy = 0.01
 #non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01  ##non_state_culture_literacy = 0.01  non_state_culture_literacy = 0.01
@@ -36,7 +36,6 @@ penal_system = capital_punishment
 
 citizens_rights = primary_culture_only
 
-c
 colonial_policy = no_colonies
 
 set_country_flag = unciv

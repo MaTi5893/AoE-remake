@@ -624,4 +624,26 @@ political_decisions = {
 			badboy = 6
 		}
 	}
+	
+	move_court_to_warsaw = {
+		picture = sweden_ukraine
+		potential = {
+			tag = SPL
+			NOT = { has_country_flag = moved_court_to_warsaw }
+			NOT = { exists = PLC }
+		}
+		allow = {
+			prestige = 90
+		}
+		effect = {
+			set_country_flag = moved_court_to_warsaw
+			capital = 706
+			inherit = KOS
+			LIT = { all_core = { add_core = THIS }}
+			698 = { remove_core = THIS }
+			add_accepted_culture = polish
+			add_accepted_culture = lithuanian
+			release = SAX
+		}
+	}
 }

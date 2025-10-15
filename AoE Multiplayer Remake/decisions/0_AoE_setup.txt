@@ -29,8 +29,8 @@ political_decisions = {
 			SWE = { country_event = 98002 }
 			TOR = { country_event = 98002 }
 			DNN = { country_event = 98002 }
-			PLC = { country_event = 98002 }
-			SAX = { country_event = 98002 }
+			SPL = { country_event = 98002 }
+			#SAX = { country_event = 98002 }
 			TUR = { country_event = 98004 }
 			ZZH = { country_event = 98002 }
 			MOL = { country_event = 98002 }
@@ -97,6 +97,7 @@ political_decisions = {
 					}
 					NOT = { 
 					tag = AUS 
+					tag = SPL
 					tag = SAX
 					tag = PRU
 					tag = BAV
@@ -331,14 +332,14 @@ political_decisions = {
 							has_pop_culture = japanese 
 						}
 					}
-					reduce_pop = 1.256
+					reduce_pop = 1.156
 				}
 				any_pop = {
 					limit = {	
 						culture = japanese
 						type = soldiers 
 					}
-					reduce_pop = 1.12
+					reduce_pop = 1.09
 				}
 			}
 			#Okinawa
@@ -354,6 +355,28 @@ political_decisions = {
 				}
 			}
 			#Spanish Pop Change
+			VOP = {
+				any_pop = {
+					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 0.46
+				}
+			}
+			VNS = {
+				any_pop = {
+					reduce_pop = 0.76
+				}
+				any_pop = {
+					limit = {	
+						type = soldiers 
+					}
+					reduce_pop = 0.46
+				}
+			}
 			SPA = {
 				any_pop = {
 					limit = {	
@@ -779,13 +802,13 @@ political_decisions = {
 							has_pop_culture = japanese 
 						}
 					}
-					reduce_pop = 1.73
+					reduce_pop = 1.43
 				}
 				any_pop = {
 					limit = {	
 						type = soldiers 
 					}
-					reduce_pop = 2.2
+					reduce_pop = 1.75
 				}
 			}
 			TUS = {
@@ -838,21 +861,28 @@ political_decisions = {
 					reduce_pop = 1.15
 				}
 			}
-			SAX = {
-				any_pop = {
-					limit = {	
-						OR = {
-							has_pop_culture = north_german
-							has_pop_culture = western_slavic 
+			SPL = {
+				any_owned = {
+					limit = {
+						is_core = SAX
+					}
+					any_pop = {
+						limit = {
+							NOT = { type = soldiers }
 						}
+						reduce_pop = 1.14
 					}
-					reduce_pop = 1.14
 				}
-				any_pop = {
-					limit = {	
-						type = soldiers 
+				any_owned = {
+					limit = {
+						is_core = SAX
 					}
-					reduce_pop = 0.51
+					any_pop = {
+						limit = {
+							type = soldiers 
+						}
+						reduce_pop = 0.62
+					}
 				}
 			}
 			MLT = {
@@ -1006,17 +1036,17 @@ political_decisions = {
 					}
 					reduce_pop = 0.72
 				}
-				any_pop = {
-					limit = {	
-						NOT = { type = soldiers }
-						OR = {
-							has_pop_culture = yankee
-							has_pop_culture = native_american_minor 
-							has_pop_culture = afro_american 
-						}
-					}
-					reduce_pop = 0.05
-				}
+				#any_pop = {
+				#	limit = {	
+				#		NOT = { type = soldiers }
+				#		OR = {
+				#			has_pop_culture = yankee
+				#			has_pop_culture = native_american_minor 
+				#			has_pop_culture = afro_american 
+				#		}
+				#	}
+				#	reduce_pop = 0.05
+				#}
 				any_pop = {
 					limit = {	
 						type = soldiers 
@@ -1359,7 +1389,7 @@ political_decisions = {
 					limit = {
 						NOT = { type = soldiers }
 					}
-					reduce_pop = 0.68
+					reduce_pop = 0.725
 				}
 				any_pop = {
 					limit = {
@@ -1461,7 +1491,7 @@ political_decisions = {
 						is_accepted_culture = yes
 						type = soldiers
 					}
-					reduce_pop = 0.55
+					reduce_pop = 0.41
 				}
 				any_pop = {
 					limit = {
@@ -1491,43 +1521,51 @@ political_decisions = {
 							culture = misri
 							culture = nilotic
 							culture = tatar
-							culture = maghrebi
-							culture = berber
-							culture = bosniak
+							culture = bedouin
 						}
 					}
-					reduce_pop = 0.9
+					reduce_pop = 0.88
 				}
 				any_pop = {
 					limit = {
 						type = soldiers
 						is_accepted_culture = no
 					}
-					reduce_pop = 0.51
+					reduce_pop = 0.53
 				}
 			}
 		}
 	}
 	
-	#thc_setup = {
-	#	potential = {
-	#		tag = ENL
-	#		always = no
-	#	}
-	#	allow = {
-	#		always = no
-	#	}
-	#	effect = {
-	#		any_owned = {
-	#			limit = {
-	#				is_core = THC
-	#			}
-	#			any_pop = {
-	#			reduce_pop = 0.6
-	#			}
-	#		}
-	#	}
-	#}
+	thc_setup = {
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			any_owned = { ### Thirteen colonies pop buffed from 65k to 140k
+					limit = {
+						is_core = THC
+					}
+					any_pop = {
+						reduce_pop = 0.11
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = THC
+					}
+					any_pop = {
+						limit = {
+							type = soldiers 
+						}
+						reduce_pop = 2.48
+					}
+				}
+		}
+	}
 
 	navigation_acts_setup = {
 		potential = {
@@ -1789,7 +1827,7 @@ political_decisions = {
 					name = great_northern_war
 					duration = 5480
 				}
-			PLC = {
+			SPL = {
 				any_pop = {
 					limit = {
 						culture = ukrainian
@@ -1797,18 +1835,39 @@ political_decisions = {
 					literacy = 0.15
 				}
 			}
-			any_pop = {
-				limit = {
-					type = soldiers
-				}
-				reduce_pop = 0.71
-			}
-			PLC = {
-				any_pop = {
+			SPL = {
+				any_owned = {
 					limit = {
-						NOT = { type = soldiers }
+						is_core = PLC
 					}
-					reduce_pop = 0.752
+					any_pop = {
+						limit = {
+							culture = lithuanian
+						}
+						reduce_pop = 1.4
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = PLC
+					}
+					any_pop = {
+						limit = {
+							NOT = { type = soldiers }
+						}
+						reduce_pop = 0.71
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = PLC
+					}
+					any_pop = {
+						limit = {
+							type = soldiers 
+						}
+						reduce_pop = 0.58
+					}
 				}
 			}
 		}
@@ -2014,7 +2073,7 @@ political_decisions = {
 					literacy = -0.3
 				}
 			}
-			PLC = {
+			SPL = {
 				any_pop = {
 					limit = {
 						is_culture_group = germanic
