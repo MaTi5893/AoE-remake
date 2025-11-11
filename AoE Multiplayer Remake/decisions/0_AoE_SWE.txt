@@ -378,16 +378,9 @@ political_decisions = {
 					963 = { NOT = { controlled_by = TOR } }
 				}
 				AND = {
-					963 = { NOT = { controlled_by = HET } }
-					963 = { NOT = { controlled_by = PLC } }
-					961 = { NOT = { controlled_by = HET } }
-					961 = { NOT = { controlled_by = PLC } }
-					958 = { NOT = { controlled_by = HET } }
-					958 = { NOT = { controlled_by = PLC } }
-					962 = { NOT = { controlled_by = HET } }
-					962 = { NOT = { controlled_by = PLC } }
-					1016 = { NOT = { controlled_by = HET } }
-					1016 = { NOT = { controlled_by = PLC } }
+					NOT = { HET = { all_core = { controlled_by = SPL }}}
+					NOT = { HET = { all_core = { controlled_by = PLC }}}
+					NOT = { HET = { any_core = { controlled_by = HET }}}
 				}
 			}
 			OR = {
@@ -396,6 +389,7 @@ political_decisions = {
 			}
 		}
 		effect = {
+			war_exhaustion = -10
 			set_country_flag = fostered_relations_with_hemanate
 			country_event = 1721027 
 		}
@@ -422,25 +416,25 @@ political_decisions = {
 		}
 	}
 	
-	#install_leszczynski = {
-	#	picture = install_leszczynski
-	#	potential = {
-	#		primary_culture = swedish
-	#		NOT = { has_country_flag = installed_leszczynski }
-	#	}
-	#	allow = {
-	#		war_with = PLC
-	#		OR = {
-	#		706 = { controlled_by = THIS }
-	#		PLC = { capital_scope = { controlled_by = THIS } }
-	#		}
-	#	}
-	#	effect = {
-	#		war_exhaustion = -5
-	#		set_country_flag = installed_leszczynski
-	#		PLC = { country_event = 1721006 }
-	#	}
-	#}
+	install_leszczynski = {
+		picture = install_leszczynski
+		potential = {
+			primary_culture = swedish
+			NOT = { has_country_flag = installed_leszczynski }
+		}
+		allow = {
+			war_with = SPL
+			OR = {
+				706 = { controlled_by = THIS }
+				SPL = { capital_scope = { controlled_by = THIS } }
+			}
+		}
+		effect = {
+			war_exhaustion = -15
+			set_country_flag = installed_leszczynski
+			SPL = { country_event = 1721006 }
+		}
+	}
 	
 	support_gottorp_rebellion = {
 		picture = swedish_germany

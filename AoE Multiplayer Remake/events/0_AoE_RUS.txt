@@ -1119,6 +1119,10 @@ country_event = {
 		name = "Prepare to grab Kurland"
 		prestige = 5
 		relation = {
+			who = SPL
+			value = -75
+		}
+		relation = {
 			who = PLC
 			value = -100
 		}
@@ -1127,12 +1131,21 @@ country_event = {
 			value = -100
 		}
 		diplomatic_influence = {
+			who = SPL
+			value = -200
+		}
+		diplomatic_influence = {
 			who = PLC
 			value = -200
 		}
 		casus_belli = {
 			type = conquest
 			target = KUR
+			months = 12
+		}
+		casus_belli = {
+			type = humiliate
+			target = SPL
 			months = 12
 		}
 		casus_belli = {
@@ -1147,6 +1160,10 @@ country_event = {
 		prestige = -5
 		relation = {
 			who = PLC
+			value = 100
+		}
+		relation = {
+			who = SPL
 			value = 100
 		}
 		relation = {

@@ -250,6 +250,7 @@ country_event = {
 				factor = 6
 				OR = {
 					tag = PLC
+					tag = SPL
 					tag = RUS
 				}
 			}
@@ -296,7 +297,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "We are thankfull for their serivce"
+		name = "We are thankful for their serivce"
 		random_list = {
 			50 = {
 				add_accepted_culture = croat

@@ -741,6 +741,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { exists = PLC }
+		NOT = { exists = SPL }
 		NOT = { exists = POL }
 		any_owned_province = {
 			is_core = PLC
@@ -1031,7 +1032,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "begin implementing it immedietly!"
+		name = "Begin implementing it immediately!"
 		random_owned = {
 			limit = {
 				owner = {

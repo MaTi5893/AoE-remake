@@ -613,9 +613,14 @@ political_decisions = {
 					NOT = { is_greater_power = yes }
 					exists = yes
 				}
+				SPL = {
+					NOT = { is_greater_power = yes }
+					exists = yes
+				}
 				AND = {
 					POL = { NOT = { exists = yes } }
 					PLC = { NOT = { exists = yes } }
+					SPL = { NOT = { exists = yes } }
 				}
 				AND = {
 					year = 1790

@@ -170,11 +170,13 @@ country_event = {
                 OR = {
                     war_with = DNN
                     war_with = PLC
+					war_with = SPL
                 }
             }
             AND = {
                 war_with = DNN
                 war_with = PLC
+				war_with = SPL
             }
         }
     }
@@ -220,6 +222,7 @@ country_event = {
         }
     }
 }
+
 country_event = {
     id = 1721007
     title = "The Dethroning of Peter I"
@@ -764,6 +767,6 @@ country_event = {
 			}
 		TOR = { release_vassal = HET leave_alliance = HET }
 		HET = { government = absolute_monarchy }
-		PLC = { inherit = HET }
+		SPL = { inherit = HET }
     }
 }

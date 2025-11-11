@@ -24,10 +24,10 @@ political_decisions = {
                 war_exhaustion = 20
             }
 			OR = {
-				KOS = { war_with = PLC }
-				war_with = PLC
+				KOS = { war_with = SPL }
+				war_with = SPL
 			}
-			NOT = { KOS = { all_core = { controlled_by = PLC }} }
+			NOT = { KOS = { all_core = { controlled_by = SPL }} }
 			OR = {
 				KOS = { in_sphere = THIS }
 				KOS = { part_of_sphere = no }
@@ -35,14 +35,14 @@ political_decisions = {
 			}
         }
         effect = {
-            PLC = {
+            SPL = {
                 country_event = 178308
             }
 			random_country = {
                 limit = {
                     tag = KOS
 					exists = yes
-					NOT = { KOS = { all_core = { controlled_by = PLC }} }
+					NOT = { KOS = { all_core = { controlled_by = SPL }} }
                 }
                 annex_to = HET
             }
@@ -57,7 +57,7 @@ political_decisions = {
 	crush_paliy_rebellion = {
         picture = steppes_cossack
         potential = {
-			tag = PLC
+			tag = SPL
             has_global_flag = paliy_rebellion
             NOT = { has_global_flag = end_of_paliy }
 			OR = {
@@ -65,10 +65,10 @@ political_decisions = {
 				ZZH = { has_country_flag = ukrainian_reunification }
 				TOR = { has_country_flag = intervention_paliy_rebellion }
 				AND = {
-					959 = { NOT = { owned_by = PLC } }
-					960 = { NOT = { owned_by = PLC } }
-					954 = { NOT = { owned_by = PLC } }
-					955 = { NOT = { owned_by = PLC } }	
+					959 = { NOT = { owned_by = SPL } }
+					960 = { NOT = { owned_by = SPL } }
+					954 = { NOT = { owned_by = SPL } }
+					955 = { NOT = { owned_by = SPL } }	
 				}
 				year = 1704
 			}
@@ -85,14 +85,14 @@ political_decisions = {
 				war_with = TOR
 				war = no
 			}
-			959 = { controlled_by = PLC } 
-			960 = { controlled_by = PLC } 
-			954 = { controlled_by = PLC }
-			955 = { controlled_by = PLC } 
+			959 = { controlled_by = SPL } 
+			960 = { controlled_by = SPL } 
+			954 = { controlled_by = SPL }
+			955 = { controlled_by = SPL } 
         }
         effect = {
             960 = { owner = { country_event = 178305 } }
-			PLC = { country_event = 178306 }
+			SPL = { country_event = 178306 }
 			KOS = { all_core = { remove_core = KOS }}
             set_global_flag = end_of_paliy
         }
@@ -113,9 +113,9 @@ political_decisions = {
 				HET = { has_country_flag = ukrainian_reunification }
 				ZZH = { has_country_flag = ukrainian_reunification }
 				AND = {
-					959 = { NOT = { owned_by = PLC } }
-					960 = { NOT = { owned_by = PLC } }
-					954 = { NOT = { owned_by = PLC } }
+					959 = { NOT = { owned_by = SPL } }
+					960 = { NOT = { owned_by = SPL } }
+					954 = { NOT = { owned_by = SPL } }
 				}
 			}
             exists = yes
@@ -127,7 +127,7 @@ political_decisions = {
             }
 			OR = {
 				war = no
-				truce_with = PLC
+				truce_with = SPL
 			}
 			959 = { owned_by = THIS } 
 			960 = { owned_by = THIS } 
@@ -387,7 +387,7 @@ political_decisions = {
         potential = {
             tag = HET
             #vassal_of = TOR
-            PLC = {
+            SPL = {
                 average_militancy = 3
             }
             exists = yes
@@ -395,7 +395,7 @@ political_decisions = {
         }
 
         allow = {
-            PLC = {
+            SPL = {
                 OR = {
                     war = yes
                     AND = {
@@ -410,7 +410,7 @@ political_decisions = {
 
         effect = {
             treasury = -10000
-            PLC = {
+            SPL = {
                 any_pop = {
                     limit = {
                         has_pop_culture = ukrainian

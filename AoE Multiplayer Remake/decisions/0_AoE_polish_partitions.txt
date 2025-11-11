@@ -10,6 +10,9 @@ political_decisions = {
                 PLC = {
                     exists = yes
                 }
+				SPL = {
+                    exists = yes
+                }
                 PLR = {
                     exists = yes
                 }
@@ -19,13 +22,21 @@ political_decisions = {
             exists = yes
         }
         allow = {
+			OR = {
+                PLC = {
+                    exists = yes
+                }
+                PLR = {
+                    exists = yes
+                }
+            }
             OR = {
-            PLC = {
-                in_sphere = THIS
-            }
-            PLR = {
-                in_sphere = THIS
-            }
+				PLC = {
+					in_sphere = THIS
+				}
+				PLR = {
+					in_sphere = THIS
+				}
             }
             war = no
             nationalism_n_imperialism = 1
