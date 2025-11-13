@@ -403,3 +403,57 @@ country_event = {
 		set_global_flag = tupac_amaru_rebellion_crushed
 	}
 }
+country_event = {
+	id = 1516008
+	title = "The First Government Of Philip"
+	desc = "EVTDESC171109"
+	picture = louis_xv_gov
+	is_triggered_only = yes
+	
+	option = {
+		name = "Giulio Alberoni"
+		prestige = 5
+		add_country_modifier = {
+			name = louis_henri_gov
+			duration = 10950
+		}
+		nationalvalue = pm_nobleman
+	}
+	
+	option = {
+		name = "Zenon de Somodevilla"
+		prestige = 5
+		add_country_modifier = {
+			name = de_fleury_gov
+			duration = 3650
+		}
+		nationalvalue = pm_clergyman
+	}
+}
+country_event = {
+	id = 1516009
+	title = "Jose de Carvajal y Lancaster"
+	desc = "EVTDESC171110"
+	picture = louis_xv_gov
+	is_triggered_only = yes
+	
+	option = {
+		name = "Leopoldo de Gregorio"
+		prestige = 5
+		add_country_modifier = {
+			name = louis_xv
+			duration = 3650
+		}
+		nationalvalue = pm_no_minister
+	}
+	
+	option = {
+		name = "Ricardo Wall y Devereux"
+		prestige = 5
+		add_country_modifier = {
+			name = de_choiseul_gov
+			duration = 3650
+		}
+		nationalvalue = pm_militarist
+	}
+}

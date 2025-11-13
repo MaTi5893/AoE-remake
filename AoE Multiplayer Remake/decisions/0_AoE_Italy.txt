@@ -339,17 +339,15 @@ political_decisions = {
 				728 = {
 					OR = {
 						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
 					}
 				}
 				726 = {
 					OR = {
 						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
 					}
 				}
 			}
@@ -357,17 +355,15 @@ political_decisions = {
 				741 = {
 					OR = {
 						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
 					}
 				}
 				744 = {
 					OR = {
 						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-						}
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
 					}
 				}
 			}
@@ -430,6 +426,135 @@ political_decisions = {
 			prestige = 35
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	form_imperial_italy = {
+		potential = {
+			is_culture_group = italian
+			NOT = {
+				tag = GOD
+				exists = ITA
+				exists = CIS
+				has_country_flag = our_sea
+			}
+			NOT = { has_country_flag = no_ita }
+			NOT = { has_country_flag = perpetual_peace_spa }
+			exists = yes
+		}
+		
+		allow = {
+			prestige = 15
+			war = no
+			state_n_government = 1
+			720 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			724 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			729 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			754 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			755 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			LOM = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+                    }
+                }
+            }
+			PAR = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+                    }
+                }
+            }
+			MOD = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+                    }
+                }
+            }
+			TUS = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+                    }
+                }
+            }
+			ITA = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+                    }
+                }
+            }
+		}
+		
+		effect = {
+			prestige = 15
+			random_owned = { owner = { limit = { tag = TUS } set_country_flag = ita_tus } }
+			random_owned = { owner = { limit = { tag = CRS } set_country_flag = ita_cor } }
+			random_owned = { owner = { limit = { tag = NAP } set_country_flag = ita_nap } }
+			random_owned = { owner = { limit = { tag = SVY } set_country_flag = ita_svy } }
+			random_owned = { owner = { limit = { tag = SAR } set_country_flag = ita_sar } }
+			random_owned = { owner = { limit = { tag = GEN } set_country_flag = ita_gen } }
+			random_owned = { owner = { limit = { tag = LOM } set_country_flag = ita_lom } }
+			random_owned = { owner = { limit = { tag = VEN } set_country_flag = ita_ven } }
+			change_tag = ITA
+			capital = 724
+			add_accepted_culture = north_italian
+			any_country = {
+				limit = {
+						primary_culture = north_italian
+						OR = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+				}
+				annex_to = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	
 	unify_eastern_claims = {
