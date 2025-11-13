@@ -7,7 +7,7 @@ political_decisions = {
             NOT = { has_country_flag = bourbon_claims_on_italy }
         }
         allow = {
-			has_country_flag = centralised_spanish_empire
+			has_country_flag = charles_iii_italian_reign
 			nationalism_n_imperialism = 1
             owns = 754
             owns = 762
@@ -133,6 +133,7 @@ political_decisions = {
         factor = 1
         }
 	}
+	
     reforms_of_giullo_alberoni = {
         picture = giulio_alberoni
         potential = {
@@ -141,10 +142,6 @@ political_decisions = {
             OR = {
                 has_global_flag = support_bourbon_heir_spa
                 has_global_flag = support_habsburg_heir_spa
-            }
-            NOT = {
-                owns = 387
-                owns = 753
             }
         }
         allow = {
@@ -199,20 +196,19 @@ political_decisions = {
 				year = 1707
 			}
             NOT = { safety_regulations = no_safety }
-			NOT = { safety_regulations = trinket_safety }
-			NOT = { safety_regulations = low_safety }
+			#NOT = { safety_regulations = trinket_safety }
+			#NOT = { safety_regulations = low_safety }
         }
         effect = {
 			add_country_modifier = {
 				name = nueva_planta_decrees
-				duration = 1825
+				duration = 2920
 			}
 			upper_house = {
 				ideology = reactionary
 				value = 0.30
 			}
 			political_reform = party_appointed
-			add_accepted_culture = catalan
             set_country_flag = nueva_planta_decrees
             prestige = 25
         }
@@ -221,19 +217,80 @@ political_decisions = {
         }
     }
 
+	extend_nueva_planta_decrees = {
+        picture = nueva_planta
+        potential = {
+            OR = {
+                tag = SPA
+                tag = SPC
+            }
+			has_country_flag = nueva_planta_decrees
+            NOT = { has_country_flag = extended_nueva_planta_decrees }
+        }
+        allow = {
+			OR = {
+				state_n_government = 1
+				has_country_flag = won_bourbon_succession
+			}
+            NOT = { safety_regulations = no_safety }
+			NOT = { safety_regulations = trinket_safety }
+        }
+        effect = {
+			add_country_modifier = {
+				name = nueva_planta_decrees
+				duration = 1095
+			}
+			add_accepted_culture = catalan
+            set_country_flag = extended_nueva_planta_decrees
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
 	reforms_of_charles_iii = {
+		picture = charles_iii
+		potential = {
+			primary_culture = spanish
+            NOT = { has_country_flag = charles_iii_reforms }
+		}
+		allow = {
+			OR = {
+				invention = revolutionary_republicanism
+				mass_politics = 1
+				has_country_flag = charles_iii_gov
+			}
+            is_greater_power = yes
+		}
+		effect = {
+			money = 100000
+			years_of_research = 0.3
+			any_pop = {
+				limit = {
+					OR = {
+						culture = spanish
+						culture = south_italian
+					}
+				}
+				militancy = -4
+			}
+			## reduction of clergy rights
+			## modernize spanish school system
+			set_country_flag = charles_iii_reforms
+		}
+	}
+
+	centralization_of_spanish_empire = {
 		picture = charles_iii
 		potential = {
 			primary_culture = spanish
             NOT = { has_country_flag = centralised_spanish_empire }
 		}
 		allow = {
-		    nationalism_n_imperialism = 1
+		    revolution_n_counterrevolution = 1
             is_greater_power = yes
 		}
 		effect = {
-			money = 100000
-			years_of_research = 0.3
 			any_pop = {
 				limit = {
 					OR = {
@@ -295,7 +352,66 @@ political_decisions = {
             set_country_flag = centralised_spanish_empire
 		}
 	}
-
+	
+	reign_of_charles_iii_italy = {
+		picture = charles_iii
+		potential = {
+			primary_culture = spanish
+            NOT = { has_country_flag = charles_iii_italian_reign }
+		}
+		allow = {
+		    nationalism_n_imperialism = 1
+            owns = 754
+			owns = 755
+		}
+		effect = {
+			any_pop = {
+				limit = { culture = south_italian }
+				militancy = -3
+			}
+			any_country = {
+                limit = {
+                    exists = yes
+                    vassal_of = THIS
+                    tag = PAR
+                }
+                THIS = { inherit = PAR }
+            }
+			any_country = {
+                limit = {
+                    exists = yes
+                    vassal_of = THIS
+                    tag = TUS
+                }
+                THIS = { inherit = TUS }
+            }
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 754
+						owns = 755
+					}
+				}
+				owner = {
+						any_owned = {
+						limit = {
+							OR = {
+								is_core = NAP
+								is_core = SYC
+								is_core = SRD
+								is_core = LOM
+								is_core = TUS
+								is_core = PAR
+							}
+						}
+						add_core = THIS
+					}	
+				}
+			}
+            set_country_flag = charles_iii_italian_reign
+		}
+	}
+	
 	initiate_bourbon_reforms = {
 		picture = charles_iii
 		potential = {
@@ -416,6 +532,181 @@ political_decisions = {
             add_core = 2214
             add_core = 2222
             add_core = 2217
+        }
+    }
+	
+	sponsor_jacobite_landings = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = sponsored_jacobite_landings }
+			has_country_modifier = giulio_alberoni
+        }
+        allow = {
+            war_with = GBR
+			has_country_modifier = giulio_alberoni
+			money = 50000
+        }
+        effect = {
+			money = -50000
+			GBR = { country_event = 1516014 }
+            set_country_flag = sponsored_jacobite_landings
+        }
+    }
+	
+	support_cellamare_conspiracy = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = supported_cellamare_conspiracy }
+			BOR = { exists = yes }
+			has_country_modifier = giulio_alberoni
+        }
+        allow = {
+            BOR = { alliance_with = GBR }
+			has_country_modifier = giulio_alberoni
+			money = 50000
+        }
+        effect = {
+            money = -50000
+            BOR = { country_event = 1516015 }
+            set_country_flag = supported_cellamare_conspiracy
+        }
+    }
+	
+	revive_spanish_ambitions_italy = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = revived_spanish_ambitions_italy }
+			OR = {
+				NOT = { owns = 762 }
+				NOT = { owns = 765 }
+			}
+        }
+        allow = {
+			war = no
+			OR = {
+				has_country_modifier = giulio_alberoni
+				state_n_government = 1
+			}
+			OR = {
+				NOT = { owns = 762 }
+				NOT = { owns = 765 }
+			}
+        }
+        effect = {
+            badboy = 5
+			casus_belli = {
+				target = SVY
+				type = restore_spanish_empire
+				months = 120
+			}
+			casus_belli = {
+				target = SAR
+				type = restore_spanish_empire
+				months = 120
+			}
+			casus_belli = {
+				target = AUS
+				type = restore_spanish_empire
+				months = 120
+			}
+			casus_belli = {
+				target = VEN
+				type = restore_spanish_empire
+				months = 120
+			}
+            set_country_flag = revived_spanish_ambitions_italy
+        }
+    }
+	
+	move_casa_de_contratacion_cadiz = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = moved_casa_de_contratacion }
+        }
+        allow = {
+            state_n_government = 1
+        }
+        effect = {
+            money = 50000
+            set_country_flag = moved_casa_de_contratacion
+        }
+    }
+	
+	abolish_casa_de_contratacion = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+			has_country_flag = moved_casa_de_contratacion
+            NOT = { has_country_flag = abolished_casa_de_contratacion }
+        }
+        allow = {
+            revolution_n_counterrevolution = 1
+        }
+        effect = {
+            money = 50000
+            set_country_flag = abolished_casa_de_contratacion
+        }
+    }
+	
+	reforms_of_zenon_de_somodevilla = {
+		picture = big_louis
+		potential = {
+			tag = SPC
+			NOT = { has_country_flag = zenon_de_somodevilla_reforms }
+			exists = yes
+		}
+		allow = {
+			OR = {
+				has_country_flag = zenon_de_somodevilla_gov
+				revolution_n_counterrevolution = 1
+			}
+		}
+		effect = {
+			money = 100000
+			add_country_modifier = {
+				name = zenon_de_somodevilla_reforms
+				duration = 5475
+			}
+			## decrease clergy influence too
+			set_country_flag = zenon_de_somodevilla_reforms
+		}
+	}
+	
+	sign_treaty_of_vienna = {
+		picture = big_louis
+		potential = {
+			tag = SPC
+			NOT = { has_country_flag = signed_treaty_of_vienna }
+			AUS = { exists = yes }
+		}
+		allow = {
+			OR = {
+				year = 1725
+				nationalism_n_imperialism = 1
+			}
+		}
+		effect = {
+			AUS = { country_event = 1516020 }
+			set_country_flag = signed_treaty_of_vienna
+		}
+	}
+	
+	expand_comercio_libre = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = expanded_comercio_libre }
+        }
+        allow = {
+            revolution_n_counterrevolution = 1
+        }
+        effect = {
+            money = 50000
+            set_country_flag = expanded_comercio_libre
         }
     }
 }

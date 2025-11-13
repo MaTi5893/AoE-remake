@@ -162,39 +162,190 @@ country_event = {
     desc = "EVTDESC1516004"
     picture = "new_world"
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 	}
 	
 	trigger = {
 		OR = {
 			tag = SPA
 			tag = SPC
-			tag = FSU
 		}
-		NOT = { money = 200000 }
+		OR = {
+			owns = 2209
+			owns = 2214
+		}
+		OR = {
+			2255 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			2172 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			2295 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+			2314 = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+					owner = { vassal_of = THIS }
+				}
+			}
+		}
+		NOT = { has_country_modifier = spanish_treasury_cooldown }
 	}
 	
 	option = {
-		name = "Accept the treasury fleet."
-		money = 200000
-		any_pop = {
-				limit = {	
-					culture = spanish_american	
+		name = "Pay off the creditors and take the remainder."
+		random_owned = {
+			limit = {
+				2255 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
 				}
-				militancy = 3
 			}
+			owner = {
+				money = 100000
+			}
+		}
+		random_owned = {
+			limit = {
+				2172 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 100000
+			}
+		}
+		random_owned = {
+			limit = {
+				2295 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 100000
+			}
+		}
+		random_owned = {
+			limit = {
+				2314 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 100000
+			}
+		}
+		add_country_modifier = {
+			name = spanish_treasury_cooldown
+			duration = 730
+		}
 		ai_chance = {
 			factor = 0.6
 		}
 	}
 	
 	option = {
-		name = "Distribute the funds among the Viceroyalties."
-		any_pop = {
-				limit = {	
-					culture = spanish_american	
+		name = "This gold is needed for the Crown."
+		random_owned = {
+			limit = {
+				2255 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
 				}
-				militancy = -3
+			}
+			owner = {
+				money = 300000
+			}
+		}
+		random_owned = {
+			limit = {
+				2172 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 300000
+			}
+		}
+		random_owned = {
+			limit = {
+				2295 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 300000
+			}
+		}
+		random_owned = {
+			limit = {
+				2314 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
+			owner = {
+				money = 300000
+			}
+		}
+		prestige = -15
+		add_country_modifier = {
+			name = spanish_treasury_cooldown
+			duration = 1460
+		}
+		add_country_modifier = {
+			name = spanish_creditors_unpaid
+			duration = 1825
+		}
+		any_pop = {
+			limit = {	
+				strata = rich	
+			}
+			militancy = 9
 			}
 		ai_chance = {
 			factor = 0.4
@@ -405,55 +556,442 @@ country_event = {
 }
 country_event = {
 	id = 1516008
-	title = "The First Government Of Philip"
-	desc = "EVTDESC171109"
+	title = "Zenon de Somodevilla, Marquess of Ensenada"
+	desc = "EVTDESC151608"
 	picture = louis_xv_gov
-	is_triggered_only = yes
+	fire_only_once = yes	
 	
-	option = {
-		name = "Giulio Alberoni"
-		prestige = 5
-		add_country_modifier = {
-			name = louis_henri_gov
-			duration = 10950
-		}
-		nationalvalue = pm_nobleman
+	trigger = {
+		tag = SPC
+        year = 1742
+	}
+	
+	mean_time_to_happen = {
+		months = 3
 	}
 	
 	option = {
-		name = "Zenon de Somodevilla"
+		name = "May he bring the empire to greatness."
 		prestige = 5
-		add_country_modifier = {
-			name = de_fleury_gov
-			duration = 3650
-		}
-		nationalvalue = pm_clergyman
 	}
 }
 country_event = {
 	id = 1516009
-	title = "Jose de Carvajal y Lancaster"
-	desc = "EVTDESC171110"
+	title = "Establishment of the Bourbon Intendencias"
+	desc = "EVTDESC151609"
 	picture = louis_xv_gov
 	is_triggered_only = yes
 	
 	option = {
-		name = "Leopoldo de Gregorio"
+		name = "It is time to bring Spain into the modern age."
 		prestige = 5
-		add_country_modifier = {
-			name = louis_xv
-			duration = 3650
+	}
+}
+country_event = {
+    id = 1516010
+    title = "Maria Luisa Gabriella of Savoy"
+    desc = "EVTDESC151610"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1702
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+        name = "A fantastic queen!"
+		relation = { who = SVY value = 100 }
+		diplomatic_influence = { who = SVY value = 100 }	
+		money = 150000
+    }
+}
+country_event = {
+    id = 1516011
+    title = "Queen Elisabeth Farnese of Parma"
+    desc = "EVTDESC151611"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1714
+    }
+
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+    option = {
+        name = "Is it the queen who rules, or Philip?"
+		any_country = {
+           limit = {
+               exists = yes
+               is_vassal = no
+               tag = PAR
+           }
+           THIS = { create_vassal = PAR }
 		}
-		nationalvalue = pm_no_minister
+		relation = { who = PAR value = 100 }
+		diplomatic_influence = { who = PAR value = 200 }	
+    }
+}
+country_event = {
+    id = 1516012
+    title = "Dominance of Giulio Alberoni"
+    desc = "EVTDESC151612"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1715
+    }
+
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+    option = {
+        name = "He will revive the fortunes of Spain."
+		add_country_modifier = {
+			name = giulio_alberoni
+			duration = -1
+		}
+    }
+}
+country_event = {
+    id = 1516013
+    title = "Dismissal of Alberoni"
+    desc = "EVTDESC151612"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1752
+    }
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+    option = {
+        name = "His ambitions were beyond his ability."
+		prestige = -5
+		remove_country_modifier = giulio_alberoni
+    }
+}
+country_event = {
+	id = 1516014
+	title = "Jacobite Uprising of $YEAR$"
+	desc = "EVTDESC151613"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn these Spaniards!"
+		any_owned = {
+			limit = {
+				is_core = SCO
+			}
+			add_province_modifier = {
+				name = jacobite_pretender
+				duration = 365
+			}
+		}
+		war_exhaustion = 5
+		any_pop = {
+			limit = {
+				culture = scottish
+			}
+			militancy = 7
+		}
+		relation = { who = FROM value = -100 }
+	}
+}
+country_event = {
+	id = 1516015
+	title = "Cellamare Conspiracy Foiled"
+	desc = "EVTDESC151613"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "This fool Alberoni!"
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = 2
+		}
+		relation = { who = FROM value = -100 }
+	}
+}
+country_event = {
+	id = 1516016
+	title = "Cellamare Conspiracy Succeeds"
+	desc = "EVTDESC151613"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good to know the French can see reason."
+		prestige = 10
+		create_alliance = FROM
+		relation = { who = FROM value = 100 }
+		diplomatic_influence = { who = FROM value = 100 }
+	}
+}
+country_event = {
+	id = 1516017
+	title = "Leopoldo de Gregorio, Marquess of Esquilache"
+	desc = "EVTDESC151617"
+	picture = jacobites
+	fire_only_once = yes	
+	
+	trigger = {
+		tag = SPC
+        year = 1759
+	}
+	
+	mean_time_to_happen = {
+		months = 3
 	}
 	
 	option = {
-		name = "Ricardo Wall y Devereux"
+		name = "He will advise the King well."
+		prestige = 10
+		create_alliance = FROM
+		relation = { who = FROM value = 100 }
+		diplomatic_influence = { who = FROM value = 100 }
+	}
+}
+country_event = {
+    id = 1516018
+    title = "Esquilache Riots"
+    desc = "EVTDESC151618"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1766
+    }
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+    option = {
+        name = "A lamentable loss for Spain."
+		prestige = -5
+		remove_country_modifier = leopoldo_de_gregorio
+    }
+}
+country_event = {
+    id = 1516019
+    title = "Arrest of Zenon de Somodevilla"
+    desc = "EVTDESC151619"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1754
+    }
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+    option = {
+        name = "He should learn when to bow his head."
+		prestige = -5
+		clr_country_flag = zenon_de_somodevilla_gov
+    }
+}
+country_event = {
+	id = 1516020
+	title = "Treaty of Vienna"
+	desc = "EVTDESC151620"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Austro-Spanish alliance has dominated Europe for centuries."
+		relation = { who = TUS value = 100 }
+		diplomatic_influence = { who = TUS value = 200 }	
+		SPC = { country_event = 1516021 }
+	}
+	
+	option = {
+		name = "As if we'd align with these lazy Spaniards."
+		relation = { who = FROM value = -100 }
+	}
+}
+country_event = {
+	id = 1516021
+	title = "Austria Agrees to Alliance"
+	desc = "EVTDESC151621"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our position in Italy grows stronger."
+		relation = { who = PAR value = 100 }
+		diplomatic_influence = { who = PAR value = 200 }	
+		create_alliance = FROM
+		relation = { who = FROM value = 200 }
+		set_country_flag = signed_pragmatic_sanction
+		set_country_flag = austrian_netherlands_claim_renunciated
+		## this will disable spanish empire cb on austrian-owned netherlands 
+	}
+}
+country_event = {
+	id = 1516022
+	title = "Pacte de Familie"
+	desc = "EVTDESC151622"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "An alliance between France and Spain would rival all of Europe."
 		prestige = 5
-		add_country_modifier = {
-			name = de_choiseul_gov
-			duration = 3650
+		BOR = { country_event = 1516021 }
+	}
+	
+	option = {
+		name = "An alliance with France only comes with domination by France."
+		relation = { who = FROM value = -100 }
+	}
+}
+country_event = {
+	id = 1516023
+	title = "Spain Agrees to Alliance"
+	desc = "EVTDESC151623"
+	picture = jacobites
+	is_triggered_only = yes
+	
+	option = {
+		name = "All of Europe will bend to Bourbon domination."
+		prestige = 10
+		leave_alliance = GBR
+		create_alliance = SPC
+		relation = { who = SPC value = 200 }
+		diplomatic_influence = { who = SPC value = 200 }
+		set_country_flag = pacte_de_famille
+		## this will disable french decisions for catalonia
+	}
+}
+country_event = {
+    id = 1516024
+    title = "Ascension of Ferdinand VI"
+    desc = "EVTDESC151624"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1746
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "Ensenada has shown his competency already."
+		relation = { who = POR value = 100 }
+		relation = { who = BOR value = 100 }
+		set_country_flag = zenon_de_somodevilla_gov
+	}
+	
+	option = {
+		name = "Jose de Carvajal will bring us closer to the British."
+		relation = { who = POR value = 100 }
+		relation = { who = GBR value = 100 }
+		set_country_flag = jose_de_carvajal_gov
+	}
+	
+	option = {
+		name = "Ricardo Wall is right to advocate neutrality."
+		relation = { who = POR value = 100 }
+		relation = { who = BOR value = 40 }
+		relation = { who = GBR value = 40 }
+		set_country_flag = ricardo_wall_gov
+	}
+}
+country_event = {
+    id = 1516025
+    title = "Charles III Becomes Duke of Parma"
+    desc = "EVTDESC151625"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1732
+    }
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+    option = {
+		name = "May he rule it effectively."
+		inherit = PAR
+		casus_belli = {
+			target = TUS
+			type = make_puppet
+			months = 60
 		}
-		nationalvalue = pm_militarist
+	}
+}
+country_event = {
+    id = 1516026
+    title = "Ascension of Charles III"
+    desc = "EVTDESC151626"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1759
+    }
+
+	mean_time_to_happen = {
+		months = 7
+	}
+	
+    option = {
+		name = "Spain will soon enter its own Age of Enlightenment."
+		set_country_flag = charles_iii_gov
+		prestige = 10
+	}
+}
+country_event = {
+    id = 1516028
+    title = "Charter of Royal Company of Caracas"
+    desc = "EVTDESC151628"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        tag = SPC
+        year = 1728
+    }
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+    option = {
+		name = "The charter will reinvigorate trade in Venezuela.."
+		money = 100000
 	}
 }

@@ -484,7 +484,7 @@ country_event = {
 		remove_country_modifier = louis_grande
 		add_country_modifier = {
 			name = louis_xv_regency
-			duration = 1825
+			duration = -1
 		}
 		nationalvalue = pm_nobleman
 	}
@@ -504,6 +504,7 @@ country_event = {
 			name = louis_henri_gov
 			duration = 10950
 		}
+		set_country_flag = louis_henri_gov
 		nationalvalue = pm_nobleman
 	}
 	
@@ -514,6 +515,7 @@ country_event = {
 			name = de_fleury_gov
 			duration = 3650
 		}
+		set_country_flag = de_fleury_gov
 		nationalvalue = pm_clergyman
 	}
 }
@@ -1825,5 +1827,124 @@ country_event = {
 		name = "Excellent."
 		any_pop = { militancy = -2 }
 		prestige = 30
+	}
+}
+
+country_event = {
+	id = 171150
+	title = "Regency of Philippe, duc d'Orleans"
+	desc = "EVTDESC171150"
+	picture = louis_xiv_ded
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = louis_xv_regency
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "May he guide Louis and France ever so wisely."
+		
+		relation = { who = GBR value = 100 }
+		relation = { who = AUS value = 60 }
+		relation = { who = NET value = 60 }
+		relation = { who = TOR value = 60 }	
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = 2
+		}
+	}
+}
+
+country_event = {
+	id = 171151
+	title = "Pontcallec Conspiracy"
+	desc = "EVTDESC171151"
+	fire_only_once = yes
+	picture = rights_of_man
+	
+	trigger = {
+		tag = BOR
+		year = 1718
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}
+	
+	option = {
+		name = "Excellent."
+		any_pop = {
+			limit = {
+				culture = breton
+			}
+			militancy = 6
+		}
+	}
+}
+
+country_event = {
+	id = 171152
+	title = "The Cellamare Conspiracy Exposed" 
+	desc = "EVTDESC171152"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Alberoni will pay for this."
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = 4
+		}
+		relation = { who = SPC value = -100 }
+		leave_alliance = SPC
+		country_event = 1516015
+		
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "France is better off with Philip than with this Anglophile."
+		relation = { who = GBR value = -100 }
+		leave_alliance = GBR
+		add_country_modifier = {
+			name = regency_of_philip_v
+			duration = -1
+		}
+		remove_country_modifier = name = louis_xv_regency
+		set_global_flag = regency_of_philip_v
+		country_event = 1516016
+		
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 171153
+	title = "Majority of Louis XV"
+	desc = "EVTDESC171153"
+	fire_only_once = yes
+	picture = rights_of_man
+	
+	trigger = {
+		tag = BOR
+		year = 1723
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "May he lead France to glory."
+		prestige = 5
+		remove_country_modifier = name = louis_xv_regency
+		remove_country_modifier = name = regency_of_philip_v
 	}
 }

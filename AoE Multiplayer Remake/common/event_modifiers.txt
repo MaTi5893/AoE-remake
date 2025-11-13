@@ -7136,6 +7136,7 @@ austrian_financial_crisis = {
     max_military_spending = -0.2
     factory_output = -0.1
     tax_efficiency = -0.1
+	loan_interest = 0.15
 	max_loan_modifier = -0.25
     icon = 18
 }
@@ -7152,4 +7153,41 @@ paliy_rebellion = {
 	mobilisation_size = 0.1
 	org_regain = 1
 	icon = 8
+}
+#####Bourbon Spain####
+giulio_alberoni = {
+    ruling_party_support = 0.35
+    global_pop_militancy_modifier = -0.03
+    prestige = 0.05
+    icon = 13
+}
+regency_of_philip_v  = {
+	influence_modifier = -0.2
+    ruling_party_support = -0.15
+    loan_interest = 0.15
+    icon = 18
+}
+de_fleury_reforms = {
+    loan_interest = 0.05
+    tax_efficiency = 0.05
+    icon = 10
+}
+zenon_de_somodevilla_reforms = {
+    tax_efficiency = 0.05
+    admin_efficiency = 0.05
+	navy_tech_research_bonus = 0.1
+    icon = 16
+}
+leopoldo_de_gregorio = {
+    mobilisation_economy_impact = -0.1
+	supply_consumption = -0.1
+    icon = 18
+}
+spanish_treasury_cooldown = {
+    icon = 18
+}
+spanish_creditors_unpaid = {
+	loan_interest = 0.5
+	max_loan_modifier = -0.4
+    icon = 18
 }
