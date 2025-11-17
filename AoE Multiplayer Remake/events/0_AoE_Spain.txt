@@ -265,6 +265,10 @@ country_event = {
 				money = 100000
 			}
 		}
+		change_variable = {
+			which = Spanish_Credit_Debt
+			value = 3
+		}
 		add_country_modifier = {
 			name = spanish_treasury_cooldown
 			duration = 730
@@ -331,6 +335,10 @@ country_event = {
 			owner = {
 				money = 300000
 			}
+		}
+		change_variable = {
+			which = Spanish_Credit_Debt
+			value = -3
 		}
 		prestige = -15
 		add_country_modifier = {
@@ -557,7 +565,7 @@ country_event = {
 country_event = {
 	id = 1516008
 	title = "Zenon de Somodevilla, Marquess of Ensenada"
-	desc = "EVTDESC151608"
+	desc = "EVTDESC1516008"
 	picture = louis_xv_gov
 	fire_only_once = yes	
 	
@@ -578,7 +586,7 @@ country_event = {
 country_event = {
 	id = 1516009
 	title = "Establishment of the Bourbon Intendencias"
-	desc = "EVTDESC151609"
+	desc = "EVTDESC1516009"
 	picture = louis_xv_gov
 	is_triggered_only = yes
 	
@@ -590,7 +598,7 @@ country_event = {
 country_event = {
     id = 1516010
     title = "Maria Luisa Gabriella of Savoy"
-    desc = "EVTDESC151610"
+    desc = "EVTDESC1516010"
     picture = "harbour"
     fire_only_once = yes
 
@@ -613,7 +621,7 @@ country_event = {
 country_event = {
     id = 1516011
     title = "Queen Elisabeth Farnese of Parma"
-    desc = "EVTDESC151611"
+    desc = "EVTDESC1516011"
     picture = "harbour"
     fire_only_once = yes
 
@@ -643,7 +651,7 @@ country_event = {
 country_event = {
     id = 1516012
     title = "Dominance of Giulio Alberoni"
-    desc = "EVTDESC151612"
+    desc = "EVTDESC1516012"
     picture = "harbour"
     fire_only_once = yes
 
@@ -667,7 +675,7 @@ country_event = {
 country_event = {
     id = 1516013
     title = "Dismissal of Alberoni"
-    desc = "EVTDESC151612"
+    desc = "EVTDESC1516013"
     picture = "harbour"
     fire_only_once = yes
 
@@ -689,7 +697,7 @@ country_event = {
 country_event = {
 	id = 1516014
 	title = "Jacobite Uprising of $YEAR$"
-	desc = "EVTDESC151613"
+	desc = "EVTDESC1516014"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -717,7 +725,7 @@ country_event = {
 country_event = {
 	id = 1516015
 	title = "Cellamare Conspiracy Foiled"
-	desc = "EVTDESC151613"
+	desc = "EVTDESC1516015"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -735,7 +743,7 @@ country_event = {
 country_event = {
 	id = 1516016
 	title = "Cellamare Conspiracy Succeeds"
-	desc = "EVTDESC151613"
+	desc = "EVTDESC1516016"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -750,7 +758,7 @@ country_event = {
 country_event = {
 	id = 1516017
 	title = "Leopoldo de Gregorio, Marquess of Esquilache"
-	desc = "EVTDESC151617"
+	desc = "EVTDESC1516017"
 	picture = jacobites
 	fire_only_once = yes	
 	
@@ -774,7 +782,7 @@ country_event = {
 country_event = {
     id = 1516018
     title = "Esquilache Riots"
-    desc = "EVTDESC151618"
+    desc = "EVTDESC1516018"
     picture = "harbour"
     fire_only_once = yes
 
@@ -796,7 +804,7 @@ country_event = {
 country_event = {
     id = 1516019
     title = "Arrest of Zenon de Somodevilla"
-    desc = "EVTDESC151619"
+    desc = "EVTDESC1516019"
     picture = "harbour"
     fire_only_once = yes
 
@@ -818,7 +826,7 @@ country_event = {
 country_event = {
 	id = 1516020
 	title = "Treaty of Vienna"
-	desc = "EVTDESC151620"
+	desc = "EVTDESC1516020"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -837,7 +845,7 @@ country_event = {
 country_event = {
 	id = 1516021
 	title = "Austria Agrees to Alliance"
-	desc = "EVTDESC151621"
+	desc = "EVTDESC1516021"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -855,7 +863,7 @@ country_event = {
 country_event = {
 	id = 1516022
 	title = "Pacte de Familie"
-	desc = "EVTDESC151622"
+	desc = "EVTDESC1516022"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -873,7 +881,7 @@ country_event = {
 country_event = {
 	id = 1516023
 	title = "Spain Agrees to Alliance"
-	desc = "EVTDESC151623"
+	desc = "EVTDESC1516023"
 	picture = jacobites
 	is_triggered_only = yes
 	
@@ -891,7 +899,7 @@ country_event = {
 country_event = {
     id = 1516024
     title = "Ascension of Ferdinand VI"
-    desc = "EVTDESC151624"
+    desc = "EVTDESC1516024"
     picture = "harbour"
     fire_only_once = yes
 
@@ -929,7 +937,7 @@ country_event = {
 country_event = {
     id = 1516025
     title = "Charles III Becomes Duke of Parma"
-    desc = "EVTDESC151625"
+    desc = "EVTDESC1516025"
     picture = "harbour"
     fire_only_once = yes
 
@@ -955,7 +963,7 @@ country_event = {
 country_event = {
     id = 1516026
     title = "Ascension of Charles III"
-    desc = "EVTDESC151626"
+    desc = "EVTDESC1516026"
     picture = "harbour"
     fire_only_once = yes
 
@@ -977,7 +985,7 @@ country_event = {
 country_event = {
     id = 1516028
     title = "Charter of Royal Company of Caracas"
-    desc = "EVTDESC151628"
+    desc = "EVTDESC1516028"
     picture = "harbour"
     fire_only_once = yes
 
@@ -991,7 +999,387 @@ country_event = {
 	}
 	
     option = {
-		name = "The charter will reinvigorate trade in Venezuela.."
+		name = "The charter will reinvigorate trade in Venezuela."
 		money = 100000
+	}
+}
+country_event = {
+    id = 1516029
+    title = "State of the Spanish Empire"
+    desc = "EVTDESC1516029"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+    option = {
+		name = "This debt is the greatest burden of the Empire."
+		any_country = { 
+			limit = { 
+				vassal_of = THIS
+				OR = {
+					tag = VOP
+					tag = VNS
+				}
+			} 
+			country_event = 1516038
+		}
+		set_variable = {
+            which = Spanish_Credit_Debt
+            value = 0
+        }
+	}
+}
+country_event = {
+    id = 1516030
+    title = "Paying off Spanish Creditors"
+    desc = "EVTDESC1516030"
+    picture = "harbour"
+	is_triggered_only = yes
+	
+    option = {
+		name = "The creditors must be repaid within reason."
+		any_country = { 
+			limit = { 
+				tag = THIS 
+				money = 200000 
+			} 
+			treasury = -200000
+		}
+		change_variable = {
+			which = Spanish_Credit_Debt
+			value = 1
+		}
+		add_country_modifier = {
+			name = creditor_paid_cooldown
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "Our debt is too massive to ignore."
+		any_country = { 
+			limit = { 
+				tag = THIS 
+				money = 400000 
+			} 
+			treasury = -400000
+		}
+		change_variable = {
+			which = Spanish_Credit_Debt
+			value = 2
+		}
+		add_country_modifier = {
+			name = creditor_paid_cooldown
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "The state has no greater burden than to repay its debts."
+		any_country = { 
+			limit = { 
+				tag = THIS 
+				money = 600000 
+			} 
+			treasury = -600000
+		}
+		change_variable = {
+			which = Spanish_Credit_Debt
+			value = 3
+		}
+		add_country_modifier = {
+			name = creditor_paid_cooldown
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "We do not have the facilities to pay this off right now."
+	}
+}
+country_event = {
+    id = 1516031
+    title = "Foreign Creditors Barely Paid Off"
+    desc = "EVTDESC1516031"
+    picture = "harbour"
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		check_variable = {
+            which = Spanish_Credit_Debt
+            value = 7
+        }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "We can not be relieved just yet."
+		remove_country_modifier = span_credit_prog_2
+		add_country_modifier = {
+			name = span_credit_prog_1
+			duration = -1
+		}
+	}
+}
+country_event = {
+    id = 1516032
+    title = "Foreign Creditors Partially Paid Off"
+    desc = "EVTDESC1516032"
+    picture = "harbour"
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		check_variable = {
+            which = Spanish_Credit_Debt
+            value = 14
+        }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "Progress is slow but achievable."
+		remove_country_modifier = span_credit_prog_1
+		remove_country_modifier = span_credit_prog_3
+		add_country_modifier = {
+			name = span_credit_prog_2
+			duration = -1
+		}
+	}
+}
+country_event = {
+    id = 1516033
+    title = "Foreign Creditors Moderately Paid Off"
+    desc = "EVTDESC1516033"
+    picture = "harbour"
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		check_variable = {
+            which = Spanish_Credit_Debt
+            value = 21
+        }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "Keep our purses tight."
+		remove_country_modifier = span_credit_prog_2
+		remove_country_modifier = span_credit_prog_4
+		add_country_modifier = {
+			name = span_credit_prog_3
+			duration = -1
+		}
+	}
+}
+country_event = {
+    id = 1516034
+    title = "Foreign Creditors Mostly Paid Off"
+    desc = "EVTDESC1516034"
+    picture = "harbour"
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		check_variable = {
+            which = Spanish_Credit_Debt
+            value = 28
+        }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "We are close to greatness."
+		remove_country_modifier = span_credit_prog_3
+		add_country_modifier = {
+			name = span_credit_prog_4
+			duration = -1
+		}
+	}
+}
+country_event = {
+    id = 1516035
+    title = "Foreign Creditors Fully Paid Off"
+    desc = "EVTDESC1516035"
+	fire_only_once = yes
+    picture = "harbour"
+
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		check_variable = {
+            which = Spanish_Credit_Debt
+            value = 35
+        }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "Our debts have been fully paid off. Glory to Spain."
+		remove_country_modifier = massive_foreign_credit_debt
+		set_country_flag = spanish_debt_repaid
+	}
+}
+country_event = {
+    id = 1516036
+    title = "Suspension of the Spanish Debt"
+    desc = "EVTDESC1516036"
+    picture = "harbour"
+	fire_only_once = yes
+	major = yes
+	
+    trigger = {
+        OR = {
+			tag = SPA 
+			tag = SPC
+		}
+		has_country_modifier = massive_foreign_credit_debt
+		OR = {
+			AND = {
+				year = 1739
+				has_country_modifier = massive_foreign_credit_debt
+			}
+			NOT = {
+				check_variable = {
+					which = Spanish_Credit_Debt
+					value = -15
+				}
+			}		
+		}
+    }
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+    option = {
+		name = "This debt can no longer be sustainably paid off."
+		remove_country_modifier = massive_foreign_credit_debt
+		add_country_modifier = {
+			name = spanish_debt_suspension
+			duration = 5475
+		}
+		set_country_flag = spanish_debt_suspended
+	}
+}
+country_event = {
+    id = 1516037
+    title = "Just checking the progress"
+    desc = "EVTDESC1516037"
+    picture = "harbour"
+	is_triggered_only = yes
+	
+    option = {
+		name = "We can not be relieved just yet."
+	}
+}
+country_event = {
+    id = 1516038
+    title = "Spanish Mercantilist Policies"
+    desc = "EVTDESC1516038"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+			tag = VNS 
+			tag = VOP
+			tag = VLP
+			tag = CGC
+		}
+		OR = {
+			in_sphere = SPA 
+			vassal_of = SPA 
+			in_sphere = SPC 
+			vassal_of = SPC 
+		}		
+		NOT = { has_country_modifier = spanish_trade_restrictions }
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "These peninsulares always take and never give."
+		add_country_modifier = {
+			name = spanish_trade_restrictions
+			duration = -1
+		}	
+	}
+}
+country_event = {
+    id = 1516039
+    title = "Freedom from Spanish Restrictions"
+    desc = "EVTDESC1516039"
+    picture = "harbour"
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+			tag = VNS 
+			tag = VOP
+			tag = VLP
+			tag = CGC
+		}
+		NOT = {
+			in_sphere = SPA 
+			vassal_of = SPA 
+			in_sphere = SPC 
+			vassal_of = SPC 
+		}		
+		has_country_modifier = spanish_trade_restrictions 
+    }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    option = {
+		name = "The trade of our country should be determined by us."
+		prestige = 5
+		remove_country_modifier = spanish_trade_restrictions
 	}
 }

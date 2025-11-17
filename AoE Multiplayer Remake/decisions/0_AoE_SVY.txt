@@ -104,8 +104,8 @@ political_decisions = {
 		picture = crown
 		potential = {
 			OR = {
-			tag = SVY
-			tag = SAR
+				tag = SVY
+				tag = SAR
 			}
 			NOT = { has_country_flag = kingdom_title_troll }
 		}
@@ -171,6 +171,9 @@ political_decisions = {
 				AND = {
 					tag = ITA
 					has_country_flag = ita_svy
+				}
+				AND = {
+					tag = ITA
 					has_country_flag = ita_sar
 				}
 			}
@@ -209,6 +212,9 @@ political_decisions = {
 				AND = {
 					tag = ITA
 					has_country_flag = ita_svy
+				}
+				AND = {
+					tag = ITA
 					has_country_flag = ita_sar
 				}
 			}

@@ -212,6 +212,41 @@ political_decisions = {
         factor = 1
         }
     }
+	treaty_of_szatmar = {
+        picture = jospeh_i
+            potential = {
+            tag = AUS
+            NOT = {
+                has_country_flag = treaty_of_szatmar
+            }
+        }
+        allow = {
+			ideological_thought = 1
+            NOT = { war_with = SIE }
+			SIE = { exists = no }
+			owns = 647
+			owns = 651
+			owns = 657
+        }
+        effect = {
+            any_pop = {
+                limit = {
+                    OR = {
+						culture = slovak
+						culture = hungarian
+						culture = romanian
+					}
+                }
+                militancy = -4
+            }
+			add_accepted_culture = slovak
+            prestige = 10
+            set_country_flag = treaty_of_szatmar
+        }
+        ai_will_do = {
+        factor = 1
+        }
+    }
     charles_vi_court = {
         picture = academy
             potential = {

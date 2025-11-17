@@ -366,6 +366,13 @@ political_decisions = {
 						owner = { vassal_of = THIS }
 					}
 				}
+				739 = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+						owner = { vassal_of = THIS }
+					}
+				}
 			}
 			OR = {
 				AND = {
@@ -438,85 +445,21 @@ political_decisions = {
 				has_country_flag = our_sea
 			}
 			NOT = { has_country_flag = no_ita }
-			NOT = { has_country_flag = perpetual_peace_spa }
 			exists = yes
 		}
 		
 		allow = {
 			prestige = 15
+			is_vassal = no
 			war = no
 			state_n_government = 1
-			720 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-					owner = { vassal_of = THIS }
-				}
+			OR = { 
+				is_greater_power = yes
+				in_sphere = BOR
+				in_sphere = AUS
+				in_sphere = SPC
 			}
-			724 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-					owner = { vassal_of = THIS }
-				}
 			}
-			729 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-					owner = { vassal_of = THIS }
-				}
-			}
-			754 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-					owner = { vassal_of = THIS }
-				}
-			}
-			755 = {
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-					owner = { vassal_of = THIS }
-				}
-			}
-			LOM = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-                    }
-                }
-            }
-			PAR = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-                    }
-                }
-            }
-			MOD = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-                    }
-                }
-            }
-			TUS = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-                    }
-                }
-            }
 			ITA = {
                 all_core = {
                     OR = {
@@ -539,7 +482,6 @@ political_decisions = {
 			random_owned = { owner = { limit = { tag = LOM } set_country_flag = ita_lom } }
 			random_owned = { owner = { limit = { tag = VEN } set_country_flag = ita_ven } }
 			change_tag = ITA
-			capital = 724
 			add_accepted_culture = north_italian
 			any_country = {
 				limit = {
@@ -551,6 +493,53 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
+			set_country_flag = formed_imperial_italy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	extend_italian_claims = {
+		potential = {
+			tag = ITA
+			has_country_flag = formed_imperial_italy 
+			NOT = { has_country_flag = extended_italian_claims }
+			exists = yes
+		}
+		
+		allow = {
+			prestige = 30
+			is_vassal = no
+			war = no
+			nationalism_n_imperialism = 1
+			owns = 744
+			owns = 742
+			owns = 749
+		}
+		
+		effect = {
+			prestige = 15
+			capital = 749
+			add_accepted_culture = south_italian
+			any_country = {
+				limit = {
+						is_culture_group = italian
+						OR = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+				}
+				annex_to = THIS
+				add_core = THIS
+			}
+			NAP = { all_core = { add_core = THIS }}
+			SRD = { all_core = { add_core = THIS }}
+			SYC = { all_core = { add_core = THIS }}
+			PAP = { all_core = { add_core = THIS }}
+			468 = { remove_core = PAP remove_core = ITA }
+			random_owned = { owner = { limit = { has_country_flag = perpetual_peace_spa } badboy = 10 } }
+			set_country_flag = extended_italian_claims
 		}
 		ai_will_do = {
 			factor = 1
@@ -569,7 +558,7 @@ political_decisions = {
         allow = {
 		    war = no
 		    all_core = { owned_by = THIS }
-			
+			nationalism_n_imperialism = 1
         }
 		
         effect = {
@@ -579,7 +568,7 @@ political_decisions = {
 			AUS_736 = { add_core = THIS }
 			AUS_780 = { add_core = THIS }
 			854 = { add_core = THIS }
-			badboy = 10
+			badboy = 6
         }
     }
 	
@@ -596,7 +585,7 @@ political_decisions = {
 		    allow = {
 		    war = no
 		    all_core = { owned_by = THIS }
-			
+			nationalism_n_imperialism = 1
         }
 		
 		
@@ -611,7 +600,7 @@ political_decisions = {
 			EGY_843 = { add_core = THIS }
 			TUR_855 = { add_core = THIS }
 			800 = { add_core = THIS }
-			badboy = 15
+			badboy = 12
 		
 		}
 	

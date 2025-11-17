@@ -3920,6 +3920,12 @@ become_independent = {
 
     can_use = {
 		NOT = { has_country_modifier = neutrality }
+		THIS = {
+			NOT = {
+				has_country_modifier = william_of_orange
+				has_country_flag = william_of_orange
+			}
+		}
 		THIS = { NOT = { has_country_modifier = neutrality } }
         is_our_vassal = THIS
     }

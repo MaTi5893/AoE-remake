@@ -439,7 +439,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = 175002
+	id = 175004
 	title = "Siege of Oran"
 	desc = "EVTDESC175002"
 	picture = goldrush_brazil
@@ -449,7 +449,6 @@ country_event = {
 		OR = {
 			primary_culture = maghrebi
 			primary_culture = berber
-			primary_culture = turkish
 		}
 		owns = 1707
 		OR = {

@@ -283,3 +283,105 @@ country_event = {
 		clr_country_flag = allow_6_procent_soldiers
 	}
 }
+country_event = {
+    id = 1740016
+    title = "The Cabinet of the Three Counts"
+    desc = "EVTDESC1740016"
+    picture = nooo_frederick
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		year = 1702
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "How can the King permit this?"
+		add_country_modifier = {
+			name = cabinet_of_three_counts
+			duration = 5475
+		}	
+	}
+}
+country_event = {
+    id = 1740017
+    title = "The Cabinet of the Three Counts"
+    desc = "EVTDESC1740017"
+    picture = nooo_frederick
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		year = 1713
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "We are blessed by the diligence of Frederick William."
+		money = 50000
+		remove_country_modifier = cabinet_of_three_counts
+	}
+}
+country_event = {
+    id = 1740018
+    title = "The Cost of the Crown"
+    desc = "EVTDESC1740018"
+    picture = nooo_frederick
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		year = 1701
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "This crown is worth every ducat spent."
+		money = -100000
+		prestige = 15
+	}
+	
+	option = {
+		name = "Credit it to the state."
+		prestige = -20
+	}
+}
+country_event = {
+    id = 1740019
+    title = "The Cost of the Crown"
+    desc = "EVTDESC1740018"
+    picture = nooo_frederick
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		year = 1701
+		OR = {
+			TKL = { exists = yes is_vassal = no }
+			owns = 2656
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "It is our rightful inheritance."
+		inherit = TKL
+		2556 = { add_core = THIS }
+		ai_chance = {
+			factor = 75
+		}
+	}
+}

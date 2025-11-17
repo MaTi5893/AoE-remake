@@ -5,7 +5,13 @@ political_decisions = {
 	adriatic_dominion = {
 		picture = conquest_adriatic
 		potential = {
-			tag = VEN
+			OR = {
+				tag = VEN
+				AND = {
+					tag = ITA
+					has_country_flag = ita_ven
+				}
+			}
 			NOT = { has_country_flag = adriatic_dominion }
 		}
 		allow = {
@@ -46,7 +52,13 @@ political_decisions = {
 	last_expedition = {
 		picture = tunisia_map
 		potential = {
-			tag = VEN
+			OR = {
+				tag = VEN
+				AND = {
+					tag = ITA
+					has_country_flag = ita_ven
+				}
+			}
 			NOT = { has_country_flag = last_expedition }
 		}
 		allow = {
@@ -71,7 +83,13 @@ political_decisions = {
 	restore_to_glory = {
 		picture = venetian_ambition
 		potential = {
-			tag = VEN
+			OR = {
+				tag = VEN
+				AND = {
+					tag = ITA
+					has_country_flag = ita_ven
+				}
+			}
 			NOT = { has_country_flag = restore_to_glory }
 		}
 		allow = {
@@ -122,13 +140,15 @@ political_decisions = {
 			}
 			NOT = { has_country_flag = no_ita }
 			NOT = { has_country_flag = perpetual_peace_spa }
+			state_n_government = 1
 			exists = yes
 		}
 		
 		allow = {
 			prestige = 45
 			war = no
-			720 = {
+			nationalism_n_imperialism = 1
+			749 = {
 				OR = {
 					owned_by = THIS
 					owner = {
@@ -136,7 +156,7 @@ political_decisions = {
 					}
 				}
 			}
-			724 = {
+			720 = {
 				OR = {
 					owned_by = THIS
 					owner = {
@@ -152,7 +172,7 @@ political_decisions = {
 					}
 				}
 			}
-			754 = {
+			742 = {
 				OR = {
 					owned_by = THIS
 					owner = {
@@ -160,15 +180,7 @@ political_decisions = {
 					}
 				}
 			}
-			755 = {
-				OR = {
-					owned_by = THIS
-					owner = {
-						in_sphere = THIS
-					}
-				}
-			}
-			LOM = {
+			ITA = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -178,7 +190,7 @@ political_decisions = {
                     }
                 }
             }
-			PAR = {
+			SRD = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -188,7 +200,7 @@ political_decisions = {
                     }
                 }
             }
-			MOD = {
+			SYC = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -198,17 +210,7 @@ political_decisions = {
                     }
                 }
             }
-			TUS = {
-                all_core = {
-                    OR = {
-                        owned_by = THIS
-                        owner = {
-                            in_sphere = THIS
-                        }
-                    }
-                }
-            }
-			PAP = {
+			NAP = {
                 all_core = {
                     OR = {
                         owned_by = THIS
@@ -243,7 +245,13 @@ political_decisions = {
 						}
 				}
 				annex_to = THIS
+				add_core = THIS
 			}
+			NAP = { all_core = { add_core = THIS }}
+			SRD = { all_core = { add_core = THIS }}
+			SYC = { all_core = { add_core = THIS }}
+			PAP = { all_core = { add_core = THIS }}
+			468 = { remove_core = PAP remove_core = ITA }
 		}
 		ai_will_do = {
 			factor = 1

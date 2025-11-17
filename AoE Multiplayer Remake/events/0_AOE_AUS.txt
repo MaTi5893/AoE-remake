@@ -23,6 +23,16 @@ country_event = { #10225 Hungarian rebellion
 				limit = { is_primary_culture = yes }
 				militancy = -6
 			}
+			any_pop = {
+                limit = {
+                    OR = {
+						culture = slovak
+						culture = hungarian
+						culture = romanian
+					}
+                }
+                militancy = 6
+            }
 		}
 		AUS = {
 			casus_belli = {
@@ -454,31 +464,36 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Place Bavaria under military occupation until there situation is sorted."
-		AUS = { 
-			end_war = BAV 
-			create_vassal = BAV
+		name = "Place Bavaria under military occupation until the situation is sorted."
+		casus_belli = {
+			target = BAV
+			type = make_puppet
+			months = 120
 		}
-		AUS = {
-			diplomatic_influence = {
-				who = BAV
-				value = 400
-			}
-			relation = {
-				who = BAV
-				value = 40
-			}
-		}
-		OR = {
-			diplomatic_influence = {
-				who = BAV
-				value = -400
-			}
-			relation = {
-				who = BAV
-				value = -30
-			}
-		}
+		#AUS = {
+		#	diplomatic_influence = {
+		#		who = BAV
+		#		value = 400
+		#	}
+		#	relation = {
+		#		who = BAV
+		#		value = 40
+		#	}
+		#}
+		#AUS = { 
+		#	end_war = BAV 
+		#	create_vassal = BAV
+		#}
+		#BOR = {
+		#	diplomatic_influence = {
+		#		who = BAV
+		#		value = -400
+		#	}
+		#	relation = {
+		#		who = BAV
+		#		value = -30
+		#	}
+		#}
 	}
 }
 country_event = {
@@ -506,7 +521,7 @@ country_event = {
 	option = {
 		name = "Bavaria will stay under Habsburg occupation."
 		prestige = -10
-		badboy = 10
+		badboy = 6
 		ai_chance = {
 			factor = 75
 		}
@@ -517,8 +532,116 @@ country_event = {
 		prestige = 5
 		release_vassal = BAV
 		create_alliance = BAV
+		diplomatic_influence = {
+			who = BAV
+			value = 200
+		}
+		relation = {
+			who = BAV
+			value = 130
+		}
 		ai_chance = {
 			factor = 25
+		}
+	}
+}
+country_event = {
+	id = 174516
+	title = "End of the Gonzaga Line"
+	desc = "EVTDESC174515"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1708
+		OR = {
+			MNT = { exists = yes war = no }
+			owns = 1962
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Mantua shall become a Habsburg posession."
+		inherit = MNT
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+country_event = {
+	id = 174517
+	title = "Imperial Sovereignty in Parma"
+	desc = "EVTDESC174515"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1708
+		OR = {
+			MNT = { exists = yes war = no is_vassal = no }
+			owns = 738
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Parma shall become a Habsburg posession."
+		create_vassal = PAR
+		diplomatic_influence = {
+			who = PAR
+			value = 200
+		}
+		relation = {
+			who = PAR
+			value = 130
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+country_event = {
+	id = 174518
+	title = "End of the Medici Line"
+	desc = "EVTDESC174515"
+	picture = conscription_marching
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		year = 1737
+		OR = {
+			TUS = { exists = yes war = no is_vassal = no }
+			owns = 744
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "Tuscany shall become a Habsburg posession."
+		create_vassal = TUS
+		diplomatic_influence = {
+			who = TUS
+			value = 200
+		}
+		relation = {
+			who = TUS
+			value = 130
+		}
+		ai_chance = {
+			factor = 75
 		}
 	}
 }

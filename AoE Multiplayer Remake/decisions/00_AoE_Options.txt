@@ -430,6 +430,7 @@ political_decisions = {
 		alert = no
 		potential = {
 			NOT = { tech_school = traditional_academic }
+			NOT = { tech_school = indian_tech_school }
 			civilized = yes
 			ai = no
 			has_country_flag = showing_tech_school_changes
@@ -457,6 +458,7 @@ political_decisions = {
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
+			NOT = { tech_school = indian_tech_school }
 			ai = no
 			has_country_flag = showing_tech_school_changes
 		}
@@ -486,6 +488,7 @@ political_decisions = {
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
+			NOT = { tech_school = indian_tech_school }
 			ai = no
 			has_country_flag = showing_tech_school_changes
 		}
@@ -517,6 +520,7 @@ political_decisions = {
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
+			NOT = { tech_school = indian_tech_school }
 			ai = no
 			has_country_flag = showing_tech_school_changes
 		}
@@ -546,6 +550,7 @@ political_decisions = {
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
+			NOT = { tech_school = indian_tech_school }
 			ai = no
 			has_country_flag = showing_tech_school_changes
 		}
@@ -574,6 +579,7 @@ political_decisions = {
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
+			NOT = { tech_school = indian_tech_school }
 			ai = no
 			has_country_flag = showing_tech_school_changes
 		}

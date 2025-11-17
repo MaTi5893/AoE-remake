@@ -9,7 +9,6 @@ political_decisions = {
 		}
 		
 		allow = {
-			war = no
 			OR = {
 				has_global_flag = peter_the_great_dethroned
 				AND = {
@@ -60,6 +59,54 @@ political_decisions = {
 		}
 	}
 
+	repudiate_polish_livonian_claims = {
+		picture = swedish_baltic
+		potential = {	
+			primary_culture = swedish
+			NOT = { has_country_flag = removed_plc_livonian_claims }
+			exists = yes
+		}
+		
+		allow = {
+			OR = {
+				war = no
+				war_with = SPL
+				war_with = PLC
+			}
+			OR = {
+				has_leader = "Karl XII Wittelsbach"
+				ideological_thought = 1
+			}
+			AND = {
+				356 = {
+					controlled_by = THIS
+				}
+				360 = {
+					controlled_by = THIS
+				}
+				718 = {
+					owned_by = THIS
+				}
+			}
+			owns = 350
+			owns = 354
+		}
+		
+		effect = {
+			set_country_flag = removed_plc_livonian_claims
+			SPL = { set_country_flag = livonian_claims_repudiated }
+			351 = { remove_core = PLC }
+			352 = { remove_core = PLC }
+			354 = { remove_core = PLC }
+			355 = { remove_core = PLC }
+			prestige = 10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	remove_danish_claims = {
 		picture = swedish_baltic
 		potential = {	
@@ -125,6 +172,7 @@ political_decisions = {
 				owns = 680
 				has_global_flag = peter_the_great_dethroned
 			}
+			state_n_government = 1
 		}
 		
 		effect = {

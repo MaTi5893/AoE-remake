@@ -26,7 +26,9 @@
 348;345;sea;2706;0;Aland Strait #Aland to Turku 
 372;373;land;2711;0;Fyn-Sjaelland
 371;373;land;2711;0;Fyn-Jylland
-372;334;land;2711;0;Malmo-Sjaelland
+372;334;sea;3195;0;Malmo-Sjaelland
+3339;334;sea;3195;0;Malmo-Roskilde
+548;3340;sea;3269;0;Stralsund-Rugen
 353;349;sea;2709;0;Öselsund
 353;358;sea;2709;0;Strait of Riga
 375;385;sea;2722;0;Bay of Holland
@@ -239,8 +241,8 @@
 #Denmark
 2711;3269;canal;372;18;Copenhagen Strait
 2711;2712;canal;372;19;Copenhagen Strait
-
-#334;372;canal;2711;20;Öresund
+2711;3195;canal;372;20;Copenhagen Strait
+2712;3195;canal;3339;21;Copenhagen Strait
 
 #Danube Canal
 #675;678;canal;3267;21;Over Danube

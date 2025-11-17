@@ -40,6 +40,7 @@ political_decisions = {
         }
         effect = {
             set_country_flag = expeled_the_jesuits
+			remove_country_modifier = jesuit_society_influence
             treasury = 100000
             country_event = 114309
             any_country = {
@@ -707,6 +708,41 @@ political_decisions = {
         effect = {
             money = 50000
             set_country_flag = expanded_comercio_libre
+        }
+    }
+	
+	expand_comercio_libre = {
+        picture = giulio_alberoni
+        potential = {
+            tag = SPC
+            NOT = { has_country_flag = expanded_comercio_libre }
+        }
+        allow = {
+            revolution_n_counterrevolution = 1
+        }
+        effect = {
+            money = 50000
+            set_country_flag = expanded_comercio_libre
+        }
+    }
+	
+	repay_spanish_debt = {
+        picture = giulio_alberoni
+        potential = {
+           OR = {
+				tag = SPA 
+				tag = SPC
+			}
+			NOT = { has_country_modifier = creditor_paid_cooldown }
+			has_country_modifier = massive_foreign_credit_debt
+			NOT = { has_country_flag = spanish_debt_suspended }
+			NOT = { has_country_flag = spanish_debt_repaid }
+        }
+        allow = {
+            money = 200000
+        }
+        effect = {
+           country_event = 1516030
         }
     }
 }

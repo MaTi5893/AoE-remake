@@ -1948,3 +1948,60 @@ country_event = {
 		remove_country_modifier = name = regency_of_philip_v
 	}
 }
+country_event = {
+	id = 171154
+	title = "War of the Camisards"
+	desc = "EVTDESC171124"
+	picture = rights_of_man
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BOR
+		year = 1702
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "Damn those Camisards!"
+		any_owned = {
+			limit = {
+				has_pop_culture = occitan
+			}
+			add_province_modifier = {
+				name = camisard_resistance
+				duration = 2920
+			}
+		}
+		war_exhaustion = 5
+		any_pop = {
+			limit = {
+				culture = occitan
+			}
+			militancy = 8
+		}
+	}
+}
+country_event = {
+	id = 171155
+	title = "End of Papal Avignon"
+	desc = "EVTDESC171125"
+	picture = rights_of_man
+	fire_only_once = yes
+	
+	trigger = {
+		primary_culture = french
+		owns = 468
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "France has no need for antique medieval leftovers."
+		468 = { add_core = THIS remove_core = PAP }
+	}
+}

@@ -120,6 +120,35 @@ political_decisions = {
 		}
 	}
 	
+	reform_mughal_education = {
+		picture = mughal_emperor
+		potential = {
+			OR = {
+				tag = MUG
+				tech_school = indian_tech_school 
+			}
+			NOT = { has_country_flag = mughal_education_reformed } 
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+			year = 1720
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						tech_school = indian_tech_school
+					}
+				}
+				owner = {
+					tech_school = traditional_academic
+				}
+			}
+			set_country_flag = mughal_education_reformed
+		}
+	}
+	
 	###########################
 	###Mughal Substate Stuff###
 	###########################

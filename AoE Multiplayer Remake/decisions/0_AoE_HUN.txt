@@ -20,18 +20,17 @@ political_decisions = {
             tag = SIE
             NOT = { has_country_flag = rakoczi_tried }
 			NOT = { has_country_flag = embraced_transylvanian_identity }
-			ai = yes
             OR = {
                 NOT = { has_global_flag = spanish_succesion_resolved }
                 NOT = { year = 1711 }
             }
+			exists = yes
         }
         allow = {
-            exists = yes
             OR = {
                 has_global_flag = spanish_succesion_crisis
                 AND = {
-                    year = 1704
+                    year = 1703
                     is_secondary_power = yes
                 }
             }
@@ -51,16 +50,16 @@ political_decisions = {
             factor = 1
             modifier = {
                 factor = 0
-                NOT = { year = 1704 }
+                NOT = { year = 1703 }
             }
             modifier = {
-                factor = 0
+                factor = 0.2
                 AUS = {
                     war = yes
                 }
             }
 			modifier = {
-                factor = 0
+                factor = 0.2
                 AUS = {
                     ai = yes
                 }
