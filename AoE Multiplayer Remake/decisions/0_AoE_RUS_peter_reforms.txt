@@ -123,11 +123,11 @@ political_decisions = {
 		}
 	}
 	
-	claim_the_baltics = {
+	claim_ingria_rus = {
 		picture = baltic_russia
 		potential = {
 			primary_culture = russian
-			NOT = { has_country_flag = claimed_baltics }
+			NOT = { has_country_flag = claimed_ingria_rus }
 			exists = yes
 		}
 	
@@ -140,17 +140,8 @@ political_decisions = {
 		}
 	
 		effect = {
-			set_country_flag = claimed_baltics
-			RUS_349 = {
-				add_core = THIS 
-			}
+			set_country_flag = claimed_ingria_rus
 			994 = {
-				add_core = THIS
-			}
-			354 = {
-				add_core = THIS
-			}
-			355 = {
 				add_core = THIS
 			}
 			996 = {
@@ -159,12 +150,45 @@ political_decisions = {
 			339 = {
 				add_core = THIS
 			}
-			352 = { add_core = THIS }
-			351 = { add_core = THIS }
 			add_core = 3251
 			add_core = 3253
-			add_core = 994
-			add_core = 996
+		}
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0		
+			#	NOT = { year = 1701 }
+			#}
+		}
+	}
+	
+	claim_the_baltics = { 
+		picture = baltic_russia
+		potential = {
+			primary_culture = russian
+			NOT = { has_country_flag = claimed_baltics }
+			exists = yes
+		}
+	
+		allow = {
+			ideological_thought = 1
+			owns = 349
+			owns = 354
+		}
+	
+		effect = {
+			set_country_flag = claimed_baltics
+			RUS_349 = {
+				add_core = THIS 
+			}
+			354 = {
+				add_core = THIS
+			}
+			355 = {
+				add_core = THIS
+			}
+			352 = { add_core = THIS }
+			351 = { add_core = THIS }
 			random_owned = {
 				limit = {
 					owner = {
@@ -197,6 +221,40 @@ political_decisions = {
 					badboy = 10
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	factor = 0		
+			#	NOT = { year = 1701 }
+			#}
+		}
+	}
+	
+	regain_polish_throne_augustus = { 
+		picture = baltic_russia
+		potential = {
+			primary_culture = russian
+			NOT = { has_country_flag = regained_polish_throne_augustus }
+			PLC = { exists = yes }
+			SAX = { exists = yes }
+			has_global_flag = treaty_of_altranstadt 
+		}
+	
+		allow = {
+			ideological_thought = 1
+			owns = 349
+			owns = 354
+			OR = {
+				NOT = { PLC = { in_sphere = SWE }}
+				NOT = { PLC = { in_sphere = SCA }}
+				PLC = { in_sphere = THIS }
+			}
+		}
+	
+		effect = {
+			set_country_flag = regained_polish_throne_augustus
+			SAX = { inherit = PLC }
 		}
 		ai_will_do = {
 			factor = 1

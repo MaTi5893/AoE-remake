@@ -202,24 +202,88 @@ country_event = {
 }
 country_event = {
     id = 1721006
-    title = "A Swedish Pretender Installed!"
+    title = "The Warsaw Confederation"
     desc = "EVTDESC1721006"
     picture = leszczynski
     is_triggered_only = yes
 	major = yes
 
     option = {
-        name = "Long Live Stanislaw Leszczynski!"
-        release_vassal = SAX
+        name = "Long live Stanislaus Leszczynski!"
         set_country_flag = leszcynski_rule
-        war_exhaustion = -5
-        SAX = {
-            casus_belli = {
-                target = THIS
-                type = make_puppet
-                months = 12
-            }
-        }
+		any_owned = {
+			limit = {
+				controlled_by = SWE
+			}
+			secede_province = KRA
+		}
+		KRA = {
+			government = hms_government
+			military_access = SWE
+			create_alliance = SWE
+			set_country_flag = lesczynski_rule
+			relation = {
+				who = SWE
+				value = 100
+			}
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		SWE = {
+			diplomatic_influence = {
+				who = KRA
+				value = 400
+			}
+			relation = {
+				who = KRA
+				value = 100
+			}
+		}
+		any_pop = {
+			limit = {
+				NOT = { agree_with_ruling_party = 0.7 }
+			}
+			militancy = 3
+		}
+		change_tag_no_core_switch = KRA
+		clr_country_flag = elective_monarchy
+		prestige = -5
+    }
+
+    option = {
+        name = "We stay loyal to the Wettins!"
+		any_owned = {
+			limit = {
+				controlled_by = SWE
+			}
+			secede_province = KRA
+		}
+		KRA = {
+			government = hms_government
+			military_access = SWE
+			create_alliance = SWE
+			set_country_flag = lesczynski_rule
+			relation = {
+				who = SWE
+				value = 100
+			}
+		}
+		war = {
+			target = KRA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		any_pop = {
+			limit = {
+				NOT = { agree_with_ruling_party = 0.7 }
+			}
+			militancy = 3
+		}
+		clr_country_flag = elective_monarchy
+		prestige = -5
     }
 }
 
@@ -769,4 +833,91 @@ country_event = {
 		HET = { government = absolute_monarchy }
 		SPL = { inherit = HET }
     }
+}
+country_event = {
+    id = 1721028
+    title = "Treaty of Altranstadt"
+    desc = "EVTDESC1721028"
+    major = yes
+	news = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = "Augustus will return to Poland eventually."
+		any_owned = {
+			limit = {
+				is_core = PLC
+			}
+			secede_province = KRA
+		}
+		prestige = -15
+		change_tag_no_core_switch = SAX
+		leave_alliance = TOR
+		TOR = {
+			diplomatic_influence = {
+				who = SAX
+				value = -200
+			} 
+		}
+		any_pop = {
+			militancy = 3
+		}
+	}
+	
+	option = {
+		name = "We must reconcile with Leszczynski."
+		release = SAX
+		leave_alliance = TOR
+		any_owned = {
+			limit = {
+				is_core = SAX
+			}
+			secede_province = SAX
+		}
+		leave_alliance = TOR
+		TOR = {
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			} 
+		}
+		prestige = -15
+		any_pop = {
+			militancy = -2
+		}
+		change_tag_no_core_switch = KRA
+	}
+}
+country_event = {
+    id = 1721029
+    title = "Treaty of Warsaw"
+    desc = "EVTDESC1721029"
+    is_triggered_only = yes
+	
+	option = {
+		name = "Sweden is awesome #hellyes."
+		prestige = 15
+		KRA = {
+			government = hms_government
+			military_access = SWE
+			create_alliance = SWE
+			set_country_flag = lesczynski_rule
+			relation = {
+				who = SWE
+				value = 100
+			}
+			any_pop = {
+				militancy = -3
+			}
+		}
+		create_vassal = KRA
+		diplomatic_influence = {
+			who = KRA
+			value = 400
+		}
+		relation = {
+			who = KRA
+			value = 100
+		}
+	}
 }
