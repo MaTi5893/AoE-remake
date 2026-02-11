@@ -153,6 +153,7 @@ country_event = {
 			}
 		}
 		MAH = { exists = yes }
+		NOT = { has_country_flag = mughal_subjugation }
     }
     mean_time_to_happen = {
         months = 1
@@ -187,6 +188,10 @@ country_event = {
         name = "All those years of fighting, for this."
 		set_country_flag = mug_conquest_deccan
         MAH = { all_core = { add_core = THIS }}
+		MAH = { 
+			tech_school = indian_tech_school
+			set_country_flag = mughal_subjugation 
+		}
 		prestige = 15
 		money = 100000
     }
@@ -253,7 +258,7 @@ country_event = {
     trigger = {
         tag = MUG
 		has_global_flag = mughal_civil_war
-		has_country_flag = kam_baksh_uprising
+		has_country_flag = kam_bakhsh_uprising 
 		OR = {
 			JOD = { all_core = { owned_by = THIS }}
 			JOD = { vassal_of = THIS }
@@ -285,7 +290,277 @@ country_event = {
     }
 }
 country_event = {
-    id = 175002
+    id = 170786
+    title = "Azam Shah Marches on Delhi"
+    desc = "EVTDESC170786"
+
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		NOT = { has_global_flag = mughal_wars_ended }
+		year = 1707
+		AND = {
+			OR = {
+				AND = {
+					DLT = { any_core = { owned_by = THIS }}
+					DLT = { exists = no }				
+				}
+				DLT = { vassal_of = THIS }
+				DLT = { substate_of = THIS }
+				DLT = { in_sphere = THIS }
+			}
+			OR = {
+				AND = {
+					GUJ = { any_core = { owned_by = THIS }}
+					GUJ = { exists = no }	
+				}
+				GUJ = { vassal_of = THIS }
+				GUJ = { substate_of = THIS }
+				GUJ = { in_sphere = THIS }
+			}
+			OR = {
+				AND = {
+					BRR = { any_core = { owned_by = THIS }}
+					BRR = { exists = no }	
+				}
+				BRR = { vassal_of = THIS }
+				BRR = { substate_of = THIS }
+				BRR = { in_sphere = THIS }
+			}
+			OR = {
+				AND = {
+					MAW = { any_core = { owned_by = THIS }}
+					MAW = { exists = no }	
+				}
+				MAW = { vassal_of = THIS }
+				MAW = { substate_of = THIS }
+				MAW = { in_sphere = THIS }
+			}
+		}
+		NOT = { war_with = DLT }
+		NOT = { war_with = GUJ }
+		NOT = { war_with = BRR }
+		NOT = { war_with = MAW }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Azam Shah has no claim to my throne."
+		release = DLT
+		release_vassal = DLT
+		leave_alliance = DLT
+		release = GUJ
+		release_vassal = GUJ
+		leave_alliance = GUJ
+		release = BRR
+		release_vassal = BRR
+		leave_alliance = BRR
+		release = MAW
+		release_vassal = MAW
+		leave_alliance = MAW
+		diplomatic_influence = {
+			who = DLT
+			value = -200
+		}
+		diplomatic_influence = {
+			who = GUJ
+			value = -200
+		}
+		diplomatic_influence = {
+			who = BRR
+			value = -200
+		}
+		diplomatic_influence = {
+			who = MAW
+			value = -200
+		}
+		DLT = {
+			create_vassal = GUJ
+			create_vassal = BRR
+			create_vassal = MAW
+		}
+		war = {
+            target = DLT
+            attacker_goal = { casus_belli = annex_core_country }
+			call_ally = yes
+        }
+        set_country_flag = azam_shah_uprising
+    }
+	
+	option = {
+        name = "Vacate the throne to Azam Shah."
+		prestige = -20
+		any_pop = { militancy = 4 }
+		country_event = 170788 
+		set_country_flag = azam_shah_throne
+    }
+}
+country_event = {
+    id = 170787
+    title = "Battle of Jaujau"
+    desc = "EVTDESC170787"
+	major = yes
+	
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		NOT = { has_global_flag = mughal_wars_ended }
+		year = 1707
+		OR = {
+			AND = {
+				war_with = DLT
+				DLT = { NOT = { brigades_compare = 0.25 }}
+				GUJ = { NOT = { brigades_compare = 0.5 }}
+				BRR = { NOT = { brigades_compare = 0.5 }}
+				MAW = { NOT = { brigades_compare = 0.5 }}
+			}
+			DLT = { vassal_of = THIS }
+			DLT = { exists = no }
+		}
+		has_country_flag = azam_shah_uprising
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Our control of the Deccan is restored."
+		end_war = DLT
+		inherit = DLT
+		release = DLT
+		create_vassal = DLT
+		create_vassal = GUJ
+		create_vassal = BRR
+		create_vassal = MAW
+		prestige = 40
+        set_country_flag = azam_shah_crushed
+    }
+}
+country_event = {
+    id = 170788
+    title = "Succession of Azam Shah"
+    desc = "EVTDESC170788"
+	major = yes
+	
+    option = {
+        name = "The empire is shaken by this turn of events."
+		prestige = -30
+		any_pop = { militancy = 5 }
+        set_country_flag = azam_shah_throne
+    }
+}
+country_event = {
+    id = 170789
+    title = "Uprising of Kam Bakhsh"
+    desc = "EVTDESC170789"
+
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		NOT = { has_global_flag = mughal_wars_ended }
+		year = 1708
+		AND = {
+			OR = {
+				AND = {
+					BIJ = { any_core = { owned_by = THIS }}
+					BIJ = { exists = no }				
+				}
+				BIJ = { vassal_of = THIS }
+				BIJ = { substate_of = THIS }
+				BIJ = { in_sphere = THIS }
+			}
+		}
+		NOT = { war_with = BIJ }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = {
+        name = "Kam Bakhsh has overstepped his bounds."
+		release = BIJ
+		release_vassal = BIJ
+		leave_alliance = BIJ
+		diplomatic_influence = {
+			who = BIJ
+			value = -200
+		}
+		1283 = { add_core = BIJ }
+		war = {
+            target = BIJ
+            attacker_goal = { casus_belli = annex_core_country }
+			call_ally = yes
+        }
+        set_country_flag = kam_bakhsh_uprising
+    }
+	
+	option = {
+        name = "Let him sit as false emperor of the South."
+		prestige = -20
+		1283 = { add_core = BIJ }
+		release = BIJ
+		release_vassal = BIJ
+		leave_alliance = BIJ
+		diplomatic_influence = {
+			who = BIJ
+			value = -200
+		}
+		release = GOL
+		release_vassal = GOL
+		leave_alliance = GOL
+		diplomatic_influence = {
+			who = GOL
+			value = -200
+		}
+		set_country_flag = concede_bakhsh_south
+    }
+}
+country_event = {
+    id = 170790
+    title = "Battle of Jaujau"
+    desc = "EVTDESC170790"
+	
+    fire_only_once = yes
+    trigger = {
+        tag = MUG
+		has_global_flag = mughal_civil_war
+		NOT = { has_global_flag = mughal_wars_ended }
+		year = 1707
+		OR = {
+			AND = {
+				war_with = BIJ
+				BIJ = { NOT = { brigades_compare = 0.1 }}
+			}
+			BIJ = { vassal_of = THIS }
+			BIJ = { exists = no }
+		}
+		has_country_flag = kam_bakhsh_uprising
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Our control of the Deccan is restored."
+		end_war = BIJ
+		inherit = BIJ
+		release = BIJ
+		create_vassal = BIJ
+		prestige = 15
+        set_country_flag = kam_bakhsh_crushed
+    }
+}
+country_event = {
+    id = 170770
     title = "The Indian Realms"
     desc = "The time has come to seize their land!"
     major = yes
@@ -306,13 +581,13 @@ country_event = {
     }
 }
 country_event = {
-    id = 175013
+    id = 170771
     title = "Treaty Port Acquired"
     desc = "We have acquired a port in India!"
 	is_triggered_only = yes
 	allow_multiple_instances = yes
     option = {
-        name = "Riches of india will be only ours soon enough."
+        name = "The riches of India will be only ours soon enough."
         FROM = {
 			random_owned = {
 				limit = {
