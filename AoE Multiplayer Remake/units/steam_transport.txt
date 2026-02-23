@@ -14,15 +14,17 @@ steam_transport = { #East Indiamen
     priority = 10
     max_strength = 100
     default_organisation = 150
-    maximum_speed = 12
-    weighted_value = 1.0
+    maximum_speed = 10
+    weighted_value = 2.0
     can_build_overseas = yes
 
     #Building Costs
     build_time = 90
     build_cost = {
-        clipper_convoy = 15
+        clipper_convoy = 1
+		steamer_convoy = 5
         canned_food = 2
+		naval_supplies = 1
     }
     min_port_level = 2
     limit_per_port = -1
@@ -30,13 +32,14 @@ steam_transport = { #East Indiamen
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.08
-		steamer_convoy = 0.3
+        clipper_convoy = 0.05
+		steamer_convoy = 0.1
+		naval_supplies = 0.1
     }
 
     #Naval Abilties
-    hull = 4
+    hull = 5
     gun_power = 3
-    fire_range = 0.6
+    fire_range = 0.5
     evasion = 0
 }

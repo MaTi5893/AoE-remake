@@ -1,0 +1,244 @@
+political_decisions = {
+    assert_mughal_supremacy = {
+        picture = peacock_throne
+        potential = {
+            tag = MUG
+            NOT = { has_country_flag = asserted_mughal_supremacy }
+            exists = yes
+        }
+        allow = {
+            has_global_flag = death_of_aurangzeb 
+            civilized = yes
+			rank = 5
+        }
+        effect = {
+            set_country_flag = asserted_mughal_supremacy
+            HND = {
+                all_core = {
+                    add_core = THIS
+                }
+            }
+			any_country = {
+				limit = {
+					substate_of = THIS
+				}
+				annex_to = THIS
+			}
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					capital_scope = {
+						is_core = HND
+					}
+				}
+				annex_to = THIS
+			}
+            prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	restore_mughal_rule_deccan = {
+		picture = mughal_emperor
+		potential = {
+			tag = MUG
+			NOT = { has_country_flag = restored_mughal_deccan } 
+		}
+		allow = {
+			war = no
+			OR = {
+				nationalism_n_imperialism = 1
+				set_country_flag = mug_conquest_deccan
+			}
+			owns = 1272
+			owns = 1291
+		}
+		effect = {
+			MAH = { all_core = { add_core = THIS }}
+			BRR = { all_core = { add_core = THIS }}
+			set_country_flag = restored_mughal_deccan
+		}
+	}
+	
+	mughal_reforms = {
+		picture = mughal_emperor
+		potential = {
+			tag = MUG
+			NOT = { has_country_flag = mughal_reforms } 
+		}
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			#OR = {
+			#civilization_progress = 0.5
+			#civilized = yes
+			#}
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						AWA = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = AWA
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						PNJ = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = PNJ
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						RAJ = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = RAJ
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						BNG = { substate_of = THIS }
+					}
+				}
+				owner = {
+					inherit = BNG
+				}
+			}
+			add_accepted_culture = rajput
+			set_country_flag = mughal_reforms
+		}
+	}
+	
+	reform_mughal_education = {
+		picture = mughal_emperor
+		potential = {
+			OR = {
+				tag = MUG
+				tech_school = indian_tech_school 
+			}
+			NOT = { has_country_flag = mughal_education_reformed } 
+		}
+		allow = {
+			war = no
+			state_n_government = 1
+			year = 1720
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						tech_school = indian_tech_school
+					}
+				}
+				owner = {
+					tech_school = traditional_academic
+				}
+			}
+			set_country_flag = mughal_education_reformed
+		}
+	}
+	
+	###########################
+	###Mughal Substate Stuff###
+	###########################
+	
+	defy_the_peacock_throne = {
+		picture = peacock_throne
+		potential = {
+			is_substate = yes
+			overlord = {
+				tag = MUG
+			}
+			NOT = { tag = MAH }
+		}
+		allow = {
+			has_global_flag = death_of_aurangzeb
+			war = no
+			OR = {
+				AND = {
+					part_of_sphere = yes
+					sphere_owner = { NOT = { tag = MUG } }
+				}
+				AND = {
+					recruited_percentage = 0.9
+					civilization_progress = 0.30
+				}
+				AND = {
+					civilized = yes
+					MUG = { civilized = no }
+				}
+				has_global_flag = sack_of_delhi
+			}
+			NOT = { truce_with = MUG }
+		}
+		effect = {
+			overlord = {
+				release_vassal = THIS
+				casus_belli = {
+					target = THIS
+					type = annex_core_country
+					months = 12
+				}
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+			government = absolute_monarchy
+			prestige = 20
+			any_pop = {
+				consciousness = 2
+				militancy = -1
+			}
+			leave_alliance = MUG
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = yes
+					}
+				}
+				owner = {
+					sphere_owner = {
+						create_alliance = THIS
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = yes
+						OR = {
+							owns = 3249
+							owns = 3261
+							owns = 3264
+							owns = 3258
+							owns = 1312
+							owns = 3262
+							owns = 3260
+							owns = 3265
+							owns = 3263
+							owns = 3259
+						}
+					}
+				}
+				owner = {
+					sphere_owner = {
+						country_event = 175013
+					}
+					research_points = 1
+				}
+			}
+		}
+	}
+}

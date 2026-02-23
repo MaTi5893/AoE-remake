@@ -5,19 +5,19 @@
     officers = {
         culture = british
         religion = protestant
-        size = 5
+        size = 25
     }
 
     bureaucrats = {
         culture = british
         religion = protestant
-        size = 5
+        size = 25
     }
 
     clergymen = {
         culture = british
         religion = protestant
-        size = 5
+        size = 25
     }
 
     soldiers = {
@@ -29,7 +29,7 @@
     artisans = {
         culture = sephardic
         religion = jewish
-        size = 400
+        size = 71
     }
 
     clergymen = {
@@ -41,28 +41,21 @@
     artisans = {
         culture = spanish
         religion = catholic
-        size = 3000
-    }
-
-    soldiers = {
-        culture = spanish
-        religion = catholic
-        size = 50
+        size = 360
     }
 
     farmers = {
         culture = spanish
         religion = catholic
-        size = 800
+        size = 125
     }
-
 }
 #Mercedes (8000/2000 POPS)
 2384 = {
     clergymen = {
         culture = spanish
         religion = catholic
-        size = 25
+        size = 50
     }
 
     artisans = {
@@ -74,23 +67,23 @@
     soldiers = {
         culture = spanish
         religion = catholic
-        size = 25
+        size = -206
     }
 
     farmers = {
         culture = spanish
         religion = catholic
-        size = 1200
+        size = 300
     }
 
     aristocrats = {
-       culture = british
+        culture = british
         religion = protestant
-        size = 10
+        size = 25
     }
 
     clergymen = {
-       culture = british
+        culture = british
         religion = protestant
         size = 25
     }
@@ -98,18 +91,18 @@
     artisans = {
         culture = british
         religion = protestant
-        size = 50
+        size = 25
     }
 
     soldiers = {
-       culture = british
+        culture = british
         religion = protestant
-        size = 15
+        size = 25
     }
 
     farmers = {
-       culture = british
+        culture = british
         religion = protestant
-        size = 400
+        size = 25
     }
 }

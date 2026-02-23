@@ -14,32 +14,34 @@ monitor = { #Razee
     priority = 30
     max_strength = 100
     default_organisation = 175
-    maximum_speed = 15
+    maximum_speed = 11
     weighted_value = 10.0
 
     #Building Costs
-    build_time = 330
+    build_time = 300
     build_cost = {
-        steamer_convoy = 6
-		clipper_convoy = 18
-        artillery = 10
-        explosives = 2
+		steamer_convoy = 20
+		artillery = 6
+		canned_food = 10
+        clipper_convoy = 10
+		naval_supplies = 7.5
     }
     min_port_level = 3
-    limit_per_port = 10
-    supply_consumption_score = 4
+	limit_per_port = 8
+	supply_consumption_score = 8
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 0.25 #21
-	clipper_convoy = 0.4 #21
-        artillery = 0.2      #10
-        canned_food = 0.4     #2  total 33
+		steamer_convoy = 0.32
+		artillery = 0.096
+		canned_food = 0.8
+		clipper_convoy = 0.16
+		naval_supplies = 0.32
     }
 
     #Naval Abilties
-    hull = 12
-    gun_power = 9
+    hull = 14
+    gun_power = 14
     fire_range = 0.65
     evasion = 0
     torpedo_attack = 3.0

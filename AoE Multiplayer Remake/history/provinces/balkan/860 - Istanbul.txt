@@ -2,7 +2,7 @@ owner = TUR
 controller = TUR
 add_core = TUR
 add_core = BYZ
-trade_goods = precious_metal
+trade_goods = precious_goods
 life_rating = 35
 naval_base = 1
 fort = 1
@@ -18,17 +18,7 @@ state_building = {
 }
 state_building = {
     level = 1
-    building = canned_food_factory
-    upgrade = yes
-}
-state_building = {
-    level = 1
     building = artillery_factory
-    upgrade = yes
-}
-state_building = {
-    level = 1
-    building = liquor_distillery
     upgrade = yes
 }
 state_building = {

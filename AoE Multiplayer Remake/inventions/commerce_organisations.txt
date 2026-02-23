@@ -33,6 +33,91 @@ furriers = {
     }
 }
 
+horologist = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = clockworks_shop
+    }
+}
+printing_houses = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = printing_house
+    }
+}
+leather_tannery = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = leather_tannery
+    }
+}
+cordwainers = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = cordwainer_workshop
+    }
+}
+die_maker = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = dye_workshop
+    }
+}
+naval_stores = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = naval_supplies_workshop
+    }
+}
+charcoal_burner = {
+    limit = {
+        guild_based_production = 1
+    }
+    news = no
+    chance = {
+        base = 100
+    }
+    effect = {
+        activate_building = charcoal_burner
+    }
+}
+
 #organized_factories
 work_classification = {
     limit = { organized_factories = 1 }

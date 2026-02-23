@@ -1,12 +1,12 @@
 owner = NET
 controller = NET
 add_core = NET
-trade_goods = coal
-life_rating = 35
+trade_goods = salt
+life_rating = 40
+fort = 1
+railroad = 1
 state_building = {
     level = 1
     building = artillery_factory
     upgrade = yes
 }
-fort = 1
-railroad = 1

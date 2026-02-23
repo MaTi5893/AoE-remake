@@ -1,5 +1,9 @@
 # goods types, organized by category
 
+## 20 by 16
+## 28 by 29
+## 35 by 30
+
 military_goods = {
     ammunition = {
         cost = 5.00
@@ -20,16 +24,15 @@ military_goods = {
         cost = 10.00
         color = { 255 39 12 }
     }
-    barrels = {
-        cost = 70.00
-        color = { 55 41 9 }
-        available_from_start = no
-    }
-    aeroplanes = {
-        cost = 70.00
-        color = { 221 213 182 }
-        available_from_start = no
-    }
+    naval_supplies = { #barrels
+		cost = 18.00
+        color = { 20 20 225 }
+	}
+    naval_metalworks = { #aeroplanes
+		cost = 225
+		color = { 100 100 100 }
+		available_from_start = no
+	}
 }
 
 raw_material_goods = {
@@ -69,19 +72,13 @@ raw_material_goods = {
         cost = 5.4
         color = { 213 177 118 }
     }
-    rubber = {
-        cost = 7.0
-        color = { 123 110 86 }
-		available_from_start = no
-    }
     hardwood = {
-        cost = 4.6
+        cost = 2.9
         color = { 0 0 0 }
     }
-    oil = {
-        cost = 12.0
-        color = { 0 0 0 }
-		available_from_start = no
+	salt = { 
+        cost = 7.0
+        color = { 240 240 240 }
     }
     precious_metal = {
         cost = 10
@@ -110,10 +107,10 @@ industrial_goods = {
         cost = 2.9
         color = { 201 200 199 }
     }
-    fuel = {
-        cost = 15.00
+    electric_gear = { #precision machinery
+        cost = 14.00
         available_from_start = no
-        color = { 145 110 89 }
+        color = { 255 255 0 }
     }
     fertilizer = {
         cost = 10.0
@@ -125,21 +122,20 @@ industrial_goods = {
         available_from_start = no
     }
     clipper_convoy = {
-        cost = 45.0
+        cost = 40.0
         overseas_penalty = yes
         available_from_start = no
         color = { 21 65 30 }
     }
     steamer_convoy = {
-        cost = 50.00
+        cost = 60.00
         available_from_start = no
         overseas_penalty = yes
         color = { 76 18 0 }
     }
-    electric_gear = {
-        cost = 14.00
-        available_from_start = no
-        color = { 255 255 0 }
+	charcoal = { 
+        cost = 2.3
+        color = { 145 110 89 }
     }
     fabric = {
         cost = 1.8
@@ -194,7 +190,7 @@ consumer_goods = {
         available_from_start = no
         color = { 61 67 64 }
     }
-    telephones = {
+    telephones = { #mechanical clocks
         cost = 16.00
         available_from_start = no
         color = { 123 112 54 }
@@ -223,10 +219,9 @@ consumer_goods = {
         cost = 30.00
         color = { 255 140 184 }
     }
-    radio = {
+    radio = { #printed materials
         cost = 18
-        tradeable = no
-        money = yes
+		available_from_start = no
         color = { 129 63 6 }
     }
     sugar = {
@@ -240,5 +235,30 @@ consumer_goods = {
     fur = {
         cost = 21.3
         color = { 27 19 7 }
+    }
+	chinaware = { #fine porcelain
+        cost = 18
+        color = { 200 200 255 }
+    }
+	leather = { 
+		cost = 2.3
+		color = { 11 29 77 }
+	}
+	boots = {
+		cost = 4.4
+		color = { 253 199 110 }
+		available_from_start = no
+	}
+	slave_trading = {
+        cost = 13
+        tradeable = no
+        money = yes
+        color = { 40 50 60 }
+    }  
+    precious_goods = {
+        cost = 18
+        tradeable = no
+        money = yes
+        color = { 247 241 61 }
     }
 }

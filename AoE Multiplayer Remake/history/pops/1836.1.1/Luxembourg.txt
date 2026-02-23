@@ -5,7 +5,7 @@
     aristocrats = {
         culture = north_german
         religion = catholic
-        size = 175
+        size = 99
     }
 
     bureaucrats = {
@@ -17,67 +17,122 @@
     clergymen = {
         culture = north_german
         religion = catholic
-        size = 150
+        size = 85
     }
 
     artisans = {
         culture = north_german
         religion = catholic
-        size = 750
+        size = 426
     }
 
     soldiers = {
         culture = north_german
         religion = catholic
-        size = 2000
+        size = 1137
     }
 
     farmers = {
         culture = north_german
         religion = catholic
-        size = 14900
+        size = 8456
     }
 
     aristocrats = {
         culture = french
         religion = catholic
-        size = 250
+        size = 142
     }
 
     officers = {
         culture = french
         religion = catholic
-        size = 50
+        size = 28
     }
 
     bureaucrats = {
         culture = french
         religion = catholic
-        size = 50
+        size = 28
     }
 
     clergymen = {
         culture = french
         religion = catholic
-        size = 275
+        size = 156
     }
 
     artisans = {
         culture = french
         religion = catholic
-        size = 1750
+        size = 994
     }
 
     soldiers = {
         culture = french
         religion = catholic
-        size = 250
+        size = 142
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 23375
+        size = 13282
+    }
+}
+#Bitburg (144000/36000 POPS)
+3346 = {
+    aristocrats = {
+        culture = north_german
+        religion = catholic
+        size = 125
     }
 
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 137
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 648
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 548
+    }
+
+    farmers = {
+        culture = north_german
+        religion = catholic
+        size = 12005
+    }
+
+    clergymen = {
+        culture = wallonian
+        religion = protestant
+        size = 37
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = protestant
+        size = 224
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = protestant
+        size = 100
+    }
+
+    farmers = {
+        culture = wallonian
+        religion = protestant
+        size = 4176
+    }
 }

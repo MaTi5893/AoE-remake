@@ -6,6 +6,21 @@ trade_goods = grain
 life_rating = 35
 fort = 1
 naval_base = 2
+state_building = {
+    level = 1
+    building = naval_supplies_workshop
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = leather_tannery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = cordwainer_workshop
+    upgrade = yes
+}
 1756.01.01 = {
 owner = RUS
 controller = RUS

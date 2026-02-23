@@ -13,8 +13,8 @@ frigate = {
     #Core Abilities
     priority = 13
     max_strength = 100
-    default_organisation = 125
-    maximum_speed = 12
+    default_organisation = 100
+    maximum_speed = 8
     weighted_value = 2.0
     can_build_overseas = yes
 
@@ -22,8 +22,9 @@ frigate = {
     build_time = 180
     build_cost = {
         clipper_convoy = 10
-        artillery = 5
-        explosives = 3
+		artillery = 4 #5
+		canned_food = 5
+		naval_supplies = 1.5
     }
     min_port_level = 0
     limit_per_port = -1
@@ -31,14 +32,15 @@ frigate = {
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 0.16 #0.16
+        clipper_convoy = 0.1 #0.16
         artillery = 0.08 #0.08
+		naval_supplies = 0.1
     }
 
     #Naval Abilties
-    hull = 4
+    hull = 3
     gun_power = 4
-    fire_range = 0.50
+    fire_range = 0.4
     evasion = 0
     torpedo_attack = 0
 }

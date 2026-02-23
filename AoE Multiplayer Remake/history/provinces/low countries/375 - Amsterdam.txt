@@ -2,10 +2,10 @@ owner = NET
 controller = NET
 add_core = NET
 trade_goods = cattle
-life_rating = 35
+life_rating = 40
 railroad = 1
 state_building = {
-    level = 1
+    level = 2
     building = clipper_shipyard
     upgrade = yes
 }
@@ -15,12 +15,12 @@ state_building = {
     upgrade = yes
 }
 state_building = {
-    level = 1
-    building = canned_food_factory
+    level = 2
+    building = machine_parts_factory
     upgrade = yes
 }
 state_building = {
-    level = 1
+    level = 2
     building = artillery_factory
     upgrade = yes
 }

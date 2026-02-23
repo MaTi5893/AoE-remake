@@ -1,7 +1,7 @@
 owner = ENL
 controller = ENL
 add_core = ENL
-trade_goods = grain
+trade_goods = precious_goods
 life_rating = 45
 fort = 1
 #party_loyalty = {
@@ -35,7 +35,7 @@ state_building = {
 }
 state_building = {
     level = 1
-    building = small_arms_factory
+    building = naval_supplies_workshop
     upgrade = yes
 }
 state_building = {

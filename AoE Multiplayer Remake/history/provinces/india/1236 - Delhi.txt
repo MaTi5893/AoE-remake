@@ -4,3 +4,28 @@ add_core = MUG
 add_core = HND
 trade_goods = tea
 life_rating = 32
+state_building = {
+    level = 2
+    building = fabric_factory
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 2
+    building = charcoal_burner
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = cordwainer_workshop
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = leather_tannery
+    upgrade = yes
+}

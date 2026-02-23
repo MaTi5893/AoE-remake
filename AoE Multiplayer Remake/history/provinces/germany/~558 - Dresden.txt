@@ -1,0 +1,13 @@
+owner = SPL
+controller = SPL
+add_core = SPL
+add_core = SAX
+add_core = GER
+add_core = NNN
+trade_goods = coal
+life_rating = 40
+state_building = {
+    level = 1
+    building = fabric_factory
+    upgrade = yes
+}

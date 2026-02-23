@@ -2,10 +2,10 @@ owner = NET
 controller = NET
 add_core = NET
 trade_goods = iron
-life_rating = 35
+life_rating = 40
 state_building = {
-    level = 1
-    building = lumber_mill
+    level = 2
+    building = hardwood_mill
     upgrade = yes
 }
 state_building = {

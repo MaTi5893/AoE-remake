@@ -6,3 +6,18 @@ add_core = BOH
 add_core = CZH
 trade_goods = coal
 life_rating = 35
+state_building = {
+    level = 1
+    building = leather_tannery
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = charcoal_burner
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}

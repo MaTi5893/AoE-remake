@@ -5,6 +5,7 @@ commerce_raider = { #Steamboat
     type = naval
     sprite = Raider
     active = no
+	transport = yes
     unit_type = light_ship
     move_sound = steam_move
     select_sound = steam_selected
@@ -23,19 +24,23 @@ commerce_raider = { #Steamboat
     #Building Costs
     build_time = 340
     build_cost = {
-        artillery = 25
-        canned_food = 20
-        explosives = 5
-        clipper_convoy = 50
+		steamer_convoy = 80
+		artillery = 20
+		canned_food = 10
+		coal = 25
+		naval_metalworks = 45
     }
     min_port_level = 6
     limit_per_port = 1
-    supply_consumption_score = 60
+    supply_consumption_score = 45
 
     supply_consumption = 1.0
     supply_cost = {
-        clipper_convoy = 3.4 #origionally 12 steamers
-        artillery = 1.2     #6
+        steamer_convoy = 2.6
+		artillery = 0.6
+		canned_food = 0.6
+		coal = 2.5
+		naval_metalworks = 3
     }
 
     #Naval Abilties

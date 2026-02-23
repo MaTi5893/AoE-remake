@@ -1,5 +1,5 @@
 country_event = {
-    id = 17077
+    id = 170776
     title = "Death of Aurangzeb"
     desc = "EVTDESC17077"
 
@@ -345,7 +345,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        days = 20
     }
 
     option = {
@@ -410,7 +410,6 @@ country_event = {
         tag = MUG
 		has_global_flag = mughal_civil_war
 		NOT = { has_global_flag = mughal_wars_ended }
-		year = 1707
 		OR = {
 			AND = {
 				war_with = DLT
@@ -446,6 +445,7 @@ country_event = {
     id = 170788
     title = "Succession of Azam Shah"
     desc = "EVTDESC170788"
+	is_triggered_only = yes
 	major = yes
 	
     option = {
@@ -481,7 +481,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 3
+        months = 2
     }
 
     option = {
@@ -525,7 +525,7 @@ country_event = {
 }
 country_event = {
     id = 170790
-    title = "Battle of Jaujau"
+    title = "Battle of Hyderabad"
     desc = "EVTDESC170790"
 	
     fire_only_once = yes
@@ -546,7 +546,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        days = 1
+        days = 6
     }
 
     option = {

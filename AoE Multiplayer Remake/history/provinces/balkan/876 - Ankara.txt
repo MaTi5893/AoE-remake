@@ -5,17 +5,12 @@ trade_goods = iron
 life_rating = 35
 state_building = {
     level = 1
-    building = ammunition_factory
+    building = leather_tannery
     upgrade = yes
 }
 state_building = {
     level = 1
-    building = artillery_factory
-    upgrade = yes
-}
-state_building = {
-    level = 1
-    building = small_arms_factory
+    building = charcoal_burner
     upgrade = yes
 }
 state_building = {

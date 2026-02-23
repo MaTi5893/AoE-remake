@@ -3,7 +3,11 @@ controller = THC
 add_core = THC
 trade_goods = tobacco
 life_rating = 38
-
+state_building = {
+    level = 1
+    building = charcoal_burner
+    upgrade = yes
+}
 1700.01.02 = {
 owner = THC
 controller = THC

@@ -8,18 +8,8 @@ life_rating = 35
 naval_base = 1
 state_building = {
     level = 1
-    building = regular_clothes_factory
+    building = naval_supplies_workshop
     upgrade = yes
-}
-state_building = {
-    level = 1
-    building = explosives_factory
-    upgrade = yes
-}
-state_building = {
-	level = 1
-	building = canned_food_factory
-	upgrade = yes
 }
 state_building = {
     level = 1

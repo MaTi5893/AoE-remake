@@ -69,10 +69,10 @@ categories =  {
 
     mountain = {
         movement_cost = 1.4
-        defence = 2
+        defence = 3
         color = { 117 108 119 }
         farm_rgo_size = 0
-        farm_rgo_eff = -0.25
+        farm_rgo_eff = -0.2
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 2
@@ -92,7 +92,7 @@ categories =  {
         mine_rgo_eff = 0.0
         supply_limit = 2
 
-        combat_width = -0.9
+        combat_width = -0.6
 
         min_build_railroad = 3
     }
@@ -118,6 +118,20 @@ categories =  {
 
     }
 
+	boreal = {
+		movement_cost = 1.3
+		defence = 1
+		color = { 110 150 110 }
+
+		farm_rgo_size = 0.0
+		farm_rgo_eff = 0.0
+		mine_rgo_size = 0.0
+		mine_rgo_eff = 0.0
+
+		supply_limit = 4
+		combat_width = -0.20
+	}
+	
     jungle = {
         movement_cost = 1.3
         defence = 2

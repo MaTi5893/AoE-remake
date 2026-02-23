@@ -2,7 +2,7 @@ owner = SPL
 controller = SPL
 add_core = SPL
 add_core = PLC
-trade_goods = coal
+trade_goods = salt
 life_rating = 35
 state_building = {
     level = 1
@@ -29,8 +29,4 @@ state_building = {
     building = liquor_distillery
     upgrade = yes
 }
-state_building = {
-    level = 1
-    building = artillery_factory
-    upgrade = yes
-}
+

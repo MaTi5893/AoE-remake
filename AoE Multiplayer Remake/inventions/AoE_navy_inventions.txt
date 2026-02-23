@@ -200,25 +200,6 @@ three_deckers = {
         activate_unit = ironclad
     }
 }
-razees = {
-    limit = {
-        iron_steamers = 1
-    }
-    chance = {
-        base = 0
-	modifier = {
-		factor = 100
-		naval_statistics = 1
-	}
-	modifier = {
-		factor = 5
-		weapon_platforms = 1
-	}
-    }
-    effect = {
-        activate_unit = monitor
-    }
-}
 #steel_steamers - Seventy Four
 seventy_four = {
     limit = {
@@ -242,6 +223,25 @@ seventy_four = {
             maximum_speed = 1
         }
         activate_unit = battleship
+    }
+}
+razees = {
+    limit = {
+        iron_steamers = 1
+    }
+    chance = {
+        base = 0
+	modifier = {
+		factor = 100
+		naval_statistics = 1
+	}
+	modifier = {
+		factor = 5
+		weapon_platforms = 1
+	}
+    }
+    effect = {
+        activate_unit = monitor
     }
 }
 #steam_turbine_ships - Copper Bottoms

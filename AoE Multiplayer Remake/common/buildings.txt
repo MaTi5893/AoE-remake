@@ -12,28 +12,28 @@
 
 ############# LATE GAME FACTORIES
 
-aeroplane_factory = {
+mechanized_machine_parts_factory = {
     type = factory
     on_completion = factory
     completion_size = 0.2
     max_level = 99
     goods_cost =
     {
-        machine_parts = 200
-        electric_gear = 600
-        steel = 600
-        cement = 600
+        machine_parts = 100
+        electric_gear = 300
+        steel = 300
+        cement = 300
     }
     time = 100
     visibility = yes
     onmap = no
 
-    production_type = aeroplane_factory
+    production_type = mechanized_machine_parts_factory
     pop_build_factory = yes
     advanced_factory = yes
 }
 
-barrel_factory = {
+naval_metalworks_factory = {
     type = factory
     on_completion = factory
     completion_size = 0.2
@@ -50,7 +50,7 @@ barrel_factory = {
     visibility = yes
     onmap = no
 
-    production_type = barrel_factory
+    production_type = naval_metalworks_factory
     pop_build_factory = yes
     advanced_factory = yes
 }
@@ -78,7 +78,7 @@ automobile_factory = {
     advanced_factory = yes
 }
 
-radio_factory = {
+printing_house = {
     type = factory
 
     on_completion = factory
@@ -87,7 +87,6 @@ radio_factory = {
     goods_cost =
     {
         machine_parts = 200
-        electric_gear = 200
         steel = 200
         cement = 200
     }
@@ -95,12 +94,12 @@ radio_factory = {
     visibility = yes
     onmap = no
 
-    production_type = radio_factory
+    production_type = printing_house
     pop_build_factory = yes
     advanced_factory = yes
 }
 
-telephone_factory = {
+mechanized_printing_house = {
     type = factory
 
     on_completion = factory
@@ -117,7 +116,50 @@ telephone_factory = {
     visibility = yes
     onmap = no
 
-    production_type = telephone_factory
+    production_type = mechanized_printing_house
+    pop_build_factory = yes
+    advanced_factory = yes
+}
+
+clockworks_shop = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        steel = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = clockworks_shop
+    pop_build_factory = yes
+    advanced_factory = yes
+}
+
+mechanized_clockworks_shop = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        electric_gear = 200
+        steel = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = mechanized_clockworks_shop
     pop_build_factory = yes
     advanced_factory = yes
 }
@@ -166,7 +208,7 @@ machine_parts_factory = {
     strategic_factory = yes
 }
 
-synthetic_oil_factory = {
+charcoal_burner = {
     type = factory
 
     on_completion = factory
@@ -174,36 +216,15 @@ synthetic_oil_factory = {
     max_level = 99
     goods_cost =
     {
-        machine_parts = 800
-        steel = 1000
-        cement = 1000
+        machine_parts = 20
+        iron = 50
+        timber = 200
     }
     time = 100
     visibility = yes
     onmap = no
 
-    production_type = synthetic_oil_factory
-    pop_build_factory = yes
-    strategic_factory = yes
-}
-
-fuel_refinery = {
-    type = factory
-
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 99
-    goods_cost =
-    {
-        machine_parts = 200
-        steel = 200
-        cement = 200
-    }
-    time = 100
-    visibility = yes
-    onmap = no
-
-    production_type = fuel_refinery
+    production_type = charcoal_burner
     pop_build_factory = yes
     strategic_factory = yes
 }
@@ -248,6 +269,27 @@ clipper_shipyard = {
 
     production_type = clipper_shipyard
     pop_build_factory = yes
+}
+
+naval_supplies_workshop = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        steel = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = naval_supplies_workshop
+    pop_build_factory = yes
+    strategic_factory = yes
 }
 
 ############# LUXURY GOODS FACTORIES
@@ -309,6 +351,26 @@ luxury_furniture_factory = {
     onmap = no
 
     production_type = luxury_furniture_factory
+    pop_build_factory = yes
+}
+
+fine_porcelain_kiln = {
+    type = factory
+
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 200
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = fine_porcelain_kiln
     pop_build_factory = yes
 }
 
@@ -413,6 +475,25 @@ paper_mill = {
     pop_build_factory = yes
 }
 
+cordwainer_workshop = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 140
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = cordwainer_workshop
+    pop_build_factory = yes
+}
+
 regular_clothes_factory = {
     type = factory
     on_completion = factory
@@ -429,6 +510,44 @@ regular_clothes_factory = {
     onmap = no
 
     production_type = regular_clothes_factory
+    pop_build_factory = yes
+}
+
+wool_regular_clothes_factory = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 140
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = wool_regular_clothes_factory
+    pop_build_factory = yes
+}
+
+cotton_regular_clothes_factory = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 140
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = cotton_regular_clothes_factory
     pop_build_factory = yes
 }
 
@@ -654,6 +773,45 @@ wool_fabric_factory = {
     pop_build_factory = yes
 }
 
+leather_tannery = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        lumber = 400
+        machine_parts = 15
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = leather_tannery
+    pop_build_factory = yes
+}
+
+dye_workshop = {
+    type = factory
+    on_completion = factory
+    completion_size = 0.2
+    max_level = 99
+    goods_cost =
+    {
+        machine_parts = 20
+        iron = 200
+        cement = 200
+    }
+    time = 100
+    visibility = yes
+    onmap = no
+
+    production_type = dye_workshop
+    pop_build_factory = yes
+}
+
 cement_factory = {
     type = factory
     on_completion = factory
@@ -711,6 +869,8 @@ fertilizer_factory = {
     production_type = fertilizer_factory
     pop_build_factory = yes
 }
+
+### PROVINCE BUILDINGS
 
 fort = {
     type = fort

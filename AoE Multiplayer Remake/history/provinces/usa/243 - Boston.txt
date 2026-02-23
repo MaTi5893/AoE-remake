@@ -5,6 +5,7 @@ add_core = NEN
 trade_goods = grain
 life_rating = 38
 naval_base = 1
+
 state_building = {
     level = 1
     building = clipper_shipyard
@@ -17,7 +18,7 @@ state_building = {
 }
 state_building = {
     level = 1
-    building = glass_factory
+    building = naval_supplies_workshop
     upgrade = yes
 }
 

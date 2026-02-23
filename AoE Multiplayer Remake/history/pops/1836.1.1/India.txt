@@ -2312,7 +2312,13 @@
         religion = hindu
         size = 1125
     }
-
+	
+	craftsmen = {
+        culture = haryanvi
+        religion = hindu
+        size = 14300
+    }
+	
     artisans = {
         culture = haryanvi
         religion = hindu
@@ -3480,6 +3486,12 @@
         size = 1100
     }
 
+	craftsmen = {
+        culture = braj
+        religion = sunni
+        size = 11300
+    }
+	
     artisans = {
         culture = braj
         religion = sunni
@@ -3967,6 +3979,80 @@
         culture = kanauji
         religion = hindu
         size = 526250
+    }
+}
+#Shahabad (2476000/619000 POPS)
+3325 = {
+    aristocrats = {
+        culture = kanauji
+        religion = sunni
+        size = 500
+    }
+
+    clergymen = {
+        culture = kanauji
+        religion = sunni
+        size = 375
+    }
+
+    artisans = {
+        culture = kanauji
+        religion = sunni
+        size = 6000
+    }
+
+    soldiers = {
+        culture = kanauji
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = kanauji
+        religion = sunni
+        size = 41625
+    }
+
+    aristocrats = {
+        culture = kanauji
+        religion = hindu
+        size = 6500
+    }
+
+    clergymen = {
+        culture = kanauji
+        religion = hindu
+        size = 6250
+    }
+
+    artisans = {
+        culture = kanauji
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = kanauji
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = kanauji
+        religion = hindu
+        size = 5000
+    }
+
+    soldiers = {
+        culture = kanauji
+        religion = hindu
+        size = 6000
+    }
+
+    farmers = {
+        culture = kanauji
+        religion = hindu
+        size = 226250
     }
 }
 #Ruled by Awadh in 1836 (4820000)
@@ -4526,6 +4612,231 @@
     }
 
 }
+#Darbhanga (1900000/475000 POPS)
+3324 = {
+    aristocrats = {
+        culture = bihari
+        religion = hindu
+        size = 5000
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = hindu
+        size = 4250
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = hindu
+        size = 4500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = hindu
+        size = 275250
+    }
+
+    aristocrats = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = sunni
+        size = 625
+    }
+
+    artisans = {
+        culture = bihari
+        religion = sunni
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = sunni
+        size = 50375
+    }
+
+}
+#Daminkoh (1900000/475000 POPS)
+3326 = {
+    aristocrats = {
+        culture = bihari
+        religion = hindu
+        size = 5000
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = hindu
+        size = 4250
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = hindu
+        size = 4500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = hindu
+        size = 235250
+    }
+
+    aristocrats = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = sunni
+        size = 625
+    }
+
+    artisans = {
+        culture = bihari
+        religion = sunni
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = sunni
+        size = 50375
+    }
+
+}
+#Hazarabigh (1900000/475000 POPS)
+3327 = {
+    aristocrats = {
+        culture = bihari
+        religion = hindu
+        size = 5000
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = hindu
+        size = 4250
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 10000
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = hindu
+        size = 4500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = hindu
+        size = 185250
+    }
+
+    aristocrats = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = sunni
+        size = 625
+    }
+
+    artisans = {
+        culture = bihari
+        religion = sunni
+        size = 2000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = sunni
+        size = 50375
+    }
+
+}
 #Bengal Region : 28454000
 #under rule of Britain 1836
 #Calcutta (4872000/1218000 POPS)
@@ -4548,6 +4859,12 @@
         size = 12500
     }
 
+	craftsmen = {
+        culture = bengali
+        religion = sunni
+        size = 12500
+    }
+	
     artisans = {
         culture = bengali
         religion = hindu
@@ -4798,6 +5115,12 @@
         size = 10125
     }
 
+	craftsmen = {
+        culture = bengali
+        religion = sunni
+        size = 12500
+    }
+	
     artisans = {
         culture = bengali
         religion = hindu
@@ -5546,8 +5869,8 @@
     }
 
 }
-#Agartala
-2566 = {
+#Dimasa
+3330 = {
     aristocrats = {
         culture = asian_minor
         religion = animist
@@ -5605,6 +5928,120 @@
 }
 #Tripura
 1773 = {
+    aristocrats = {
+        culture = asian_minor
+        religion = animist
+        size = 1100
+    }
+
+    clergymen = {
+        culture = asian_minor
+        religion = animist
+        size = 875
+    }
+
+    artisans = {
+        culture = asian_minor
+        religion = animist
+        size = 5000
+    }
+
+    soldiers = {
+        culture = asian_minor
+        religion = animist
+        size = 1100
+    }
+
+    farmers = {
+        culture = asian_minor
+        religion = animist
+        size = 89125
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = sunni
+        size = 625
+    }
+
+    artisans = {
+        culture = bengali
+        religion = sunni
+        size = 2750
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 51125
+    }
+
+}
+#Khasi (608000/152000 POPS)
+3328 = {
+    aristocrats = {
+        culture = asian_minor
+        religion = animist
+        size = 1100
+    }
+
+    clergymen = {
+        culture = asian_minor
+        religion = animist
+        size = 875
+    }
+
+    artisans = {
+        culture = asian_minor
+        religion = animist
+        size = 5000
+    }
+
+    soldiers = {
+        culture = asian_minor
+        religion = animist
+        size = 1100
+    }
+
+    farmers = {
+        culture = asian_minor
+        religion = animist
+        size = 89125
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = sunni
+        size = 625
+    }
+
+    artisans = {
+        culture = bengali
+        religion = sunni
+        size = 2750
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 51125
+    }
+
+}
+#Sylhet (608000/152000 POPS)
+3329 = {
     aristocrats = {
         culture = asian_minor
         religion = animist

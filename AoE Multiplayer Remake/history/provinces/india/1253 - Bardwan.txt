@@ -5,6 +5,16 @@ add_core = BNG
 add_core = HND
 trade_goods = silk
 life_rating = 32
+state_building = {
+    level = 2
+    building = wool_fabric_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = hardwood_mill
+    upgrade = yes
+}
 1776.01.01 = {
 owner = GBR
 controller = GBR

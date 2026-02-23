@@ -14,34 +14,36 @@ battleship = { #Seventy-Four
     priority = 40
     max_strength = 100
     default_organisation = 200
-    maximum_speed = 14
-    weighted_value = 50.0
+    maximum_speed = 9
+    weighted_value = 20.0
     can_build_overseas = no
 
 
     #Building Costs
     build_time = 375
     build_cost = {
-        steamer_convoy = 35
-        artillery = 20
-        canned_food = 10
-        explosives = 6
+		steamer_convoy = 40
+		artillery = 20
+		canned_food = 10
+		clipper_convoy = 20
+		naval_supplies = 10
     }
     min_port_level = 4
     limit_per_port = 6
-    supply_consumption_score = 50
+    supply_consumption_score = 25
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 1.05
-		clipper_convoy = 0.75
-        artillery = 1
-        canned_food = 1.2
+     	steamer_convoy = 1.2
+		artillery = 0.6
+		canned_food = 0.6
+		clipper_convoy = 0.36
+		naval_supplies = 0.8
     }
 
     #Naval Abilties
-    hull = 30
+    hull = 25
     gun_power = 24
-    fire_range = 0.65
+    fire_range = 0.75
     evasion = 0
 }

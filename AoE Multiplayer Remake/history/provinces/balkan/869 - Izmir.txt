@@ -1,7 +1,7 @@
 owner = TUR
 controller = TUR
 add_core = TUR
-trade_goods = fish
+trade_goods = salt
 life_rating = 35
 state_building = {
     level = 1
@@ -10,16 +10,11 @@ state_building = {
 }
 state_building = {
     level = 1
-    building = artillery_factory
-    upgrade = yes
-}
-state_building = {
-    level = 1
     building = liquor_distillery
     upgrade = yes
 }
 state_building = {
-        level = 1
-        building = clipper_shipyard
-        upgrade = yes
-    }
+    level = 1
+    building = clipper_shipyard
+    upgrade = yes
+}

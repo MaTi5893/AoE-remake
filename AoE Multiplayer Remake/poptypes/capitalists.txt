@@ -20,7 +20,7 @@ rebel =
 can_build = yes
 
 everyday_needs = {
-    coal = 12
+    charcoal = 12
     paper = 15
     luxury_clothes = 15
 	regular_clothes = 10
@@ -43,14 +43,12 @@ life_needs = {
 
 luxury_needs = {
     opium = 15
+	chinaware = 12
     fur = 6
-    #oil = 10
-    #rubber = 10
-    #telephones = 20
+    telephones = 20
     automobiles = 15
-    #aeroplanes = 5
-    #radio = 20
-    #fuel = 30
+    radio = 20
+    coal = 15
     ammunition = 1
     small_arms = 1
     clipper_convoy = 2

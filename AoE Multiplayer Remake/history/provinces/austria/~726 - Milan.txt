@@ -1,0 +1,31 @@
+owner = SPA
+controller = SPA
+add_core = LOM
+add_core = ITA
+trade_goods = iron
+life_rating = 40
+fort = 1
+state_building = {
+    level = 1
+    building = fabric_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = liquor_distillery
+    upgrade = yes
+}
+1756.01.01 = {
+owner = AUS
+controller = AUS
+}

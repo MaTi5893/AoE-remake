@@ -4,7 +4,7 @@ USA_1 = { 1 2 3 4 5 2599 2630 2631 } #Alaska
 
 ENG_6 = { 6 7 8 }
 
-ENG_9 = { 9 10 11 12 2596 2598 }
+ENG_9 = { 9 11 12 2596 2598 }
 
 ENG_13 = { 13 14 15 16 17 18 19 20 21 2629 }
 
@@ -101,8 +101,6 @@ SCH_370 = { 370 371 533 } #Schleswig
 
 DEN_372 = { 372 373 374 3339 } #Sjaelland
 
-SWE_548 = { 3340 } #Rugen
-
 ### Swedish Empire
 
 SWE_329 = { 329 331 335 334 } #Goteborg
@@ -127,7 +125,7 @@ HAM_528 = { 528 531 532 539 } #Lower Elbe
 
 PRU_581 = { 538 581 580 582 583 584 585 } #Westfalen
 
-PRU_578 = { 578 579 2561 } #Eastern Rheinland
+PRU_578 = { 578 579 2561 } #Eastern Rhineland
 
 PRU_553 = { 553 555 557 } #Magdeburg
 
@@ -135,11 +133,13 @@ PRU_554 = { 561 562 563 } #Thuringia
 
 PRU_544 = { 544 545 2665 2690 } #Mecklenburg
 
-PRU_546 = { 546 547 548 679 680 2414 } #Pomerania
+PRU_546 = { 546 679 680 2414 3354 } #Pomerania
 
-PRU_572 = { 570 571 572 573 574 1980 } #Rheinland
+PRU_547 = { 547 548 3340 } #West Pomerania
 
-PRU_575 = { 575 576 2023 577 } #North Rheinland
+PRU_572 = { 570 571 572 573 574 1980 3341 3342 3343 } #Upper Rhineland
+
+PRU_575 = { 575 576 2023 577 3344 3345 } #Lower Rhineland
 
 PRU_682 = { 682 683 684 685 } #Lower Silesia
 
@@ -151,7 +151,7 @@ BAD_586 = { 586 587 588 569 } #Baden
 
 HAN_534 = { 534 535 536 537 538 } #Hannover
 
-HAN_540 = { 540 541 542 543 2656 } #East Friesland 
+HAN_540 = { 540 541 542 543 2656 3347 3348 } #East Friesland 
 
 HES_2560 = { 2560 564 565 566 567 568 1744 } #Hessen
 
@@ -570,19 +570,21 @@ ENG_263 = { 263 258 259 264 265 }
 
 ###Lowlands
 
-BEL_394 = { 395 391 392 381 2077 } #Liege
+BEL_381 = { 381 2077 } #Limburg
+
+BEL_394 = { 395 391 392 } #Liege
 
 BEL_387 = { 388 389 390 } #Vlaanderan
 
 BEL_393 = { 387 393 394 } #Brussels
 
-NET_375 = { 376 375 377 382 } #Holland
+NET_375 = { 376 375 377 382 3349 3350 3351 } #Holland
 
 NET_385 = { 385 383 384 386 } #Friesland
 
 NET_381 = { 379 380 378 } #Gelderland
 
-NET_397 = { 397 398 396 } #Luxembourg
+NET_397 = { 397 398 396 3346 } #Luxembourg
 
 ### Switzerland 
 
@@ -1097,13 +1099,13 @@ RUS_1079 = { 1079 1081 2697 1080 2696 2645 2644 } #Trans-Baikal
 
 RUS_1075 = { 1075 2676 1078 1076 2677 }
 
-RUS_1069 = { 1069 2671 2695 2650 2651 }
+RUS_1069 = { 1069 2695 2650 2651 }
 
 RUS_1469 = { 1063 1469 1077 1068 1067 2698 1995 } #Tomsk
 
 RUS_1064 = { 1064 2683 2686 1066 }
 
-RUS_2694 = { 2694 2656 2701 2655 }
+RUS_2694 = { 2694 2701 2655 }
 
 RUS_1070 = { 1070 2646 2692 }
 
@@ -1165,9 +1167,9 @@ SAR_725 = { 724 725 } #Liguria
 
 SAR_765 = { 765 766 473 } #Sardinia and Corsica
 
-SIC_754 = { 754 753 757 2567 } #Campania/Naples
+SIC_754 = { 754 753 757 2567 10 3353 } #Campania/Naples
 
-SIC_753 = { 755 756 758 761 760 759 } #Puglia/Salerno
+SIC_753 = { 755 756 758 761 760 759 3352 } #Puglia/Salerno
 
 #Habsburg Empire
 

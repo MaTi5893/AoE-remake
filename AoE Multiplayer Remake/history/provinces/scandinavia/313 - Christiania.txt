@@ -5,8 +5,13 @@ add_core = SCA
 add_core = NOR
 trade_goods = fish
 life_rating = 35
-#state_building = {
-#    level = 1
-#    building = lumber_mill
-#    upgrade = yes
-#}
+state_building = {
+    level = 1
+    building = lumber_mill
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = charcoal_burner
+    upgrade = yes
+}

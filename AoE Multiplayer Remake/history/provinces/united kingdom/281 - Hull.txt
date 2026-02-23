@@ -5,8 +5,13 @@ trade_goods = coal
 life_rating = 35
 naval_base = 2
 state_building = {
-    level = 2
-    building = small_arms_factory
+    level = 1
+    building = cordwainer_workshop
+    upgrade = yes
+}
+state_building = {
+    level = 1
+    building = charcoal_burner
     upgrade = yes
 }
 1756.01.01 = {
