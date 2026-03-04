@@ -713,7 +713,7 @@
 }
 #Kachin Region (868000)
 #Under rule of Burma 1836
-#Haka (288000/72000 POPS)
+#Kale (288000/72000 POPS)
 1339 = {
     aristocrats = {
         culture = burmese
@@ -798,6 +798,44 @@
         religion = animist
         size = 15575
     }
+}
+#Hakka/Chin State
+3338 = {
+	aristocrats = {
+		culture = asian_minor
+		religion = animist
+		size = 415
+	}
+
+	clergymen = {
+		culture = asian_minor
+		religion = animist
+		size = 421
+	}
+
+	artisans = {
+		culture = asian_minor
+		religion = animist
+		size = 960
+	}
+
+	soldiers = {
+		culture = asian_minor
+		religion = animist
+		size = 8400
+	}
+
+	farmers = {
+		culture = asian_minor
+		religion = animist
+		size = 8110
+	}
+	
+	serfs = {
+		culture = asian_minor
+		religion = animist
+		size = 40440
+	}
 }
 #Putao (216000/54000 POPS)
 1341 = {

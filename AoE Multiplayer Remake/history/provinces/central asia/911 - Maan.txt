@@ -1,7 +1,8 @@
-owner = SPA
-controller = SPA
-add_core = SPA
+owner = ARN
+controller = ARN
 add_core = CAT
+add_core = SPA
+add_core = ARN
 trade_goods = fish
 life_rating = 35
 1756.01.01 = {
@@ -10,4 +11,5 @@ controller = GBR
 add_core = GBR
 add_core = SPC
 remove_core = SPA
+remove_core = ARN
 }

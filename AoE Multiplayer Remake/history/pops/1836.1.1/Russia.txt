@@ -41,7 +41,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 33268
+        size = 6654
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 26614
     }
 
     clergymen = {
@@ -85,7 +91,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 37654
+        size = 7531
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 30123
     }
 
     clergymen = {
@@ -129,7 +141,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 36679
+        size = 7336
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 29343
     }
 
     clergymen = {
@@ -153,7 +171,13 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 14599
+        size = 2920
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 11679
     }
 
     soldiers = {
@@ -203,13 +227,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 55537
+        size = 11107
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 44430
     }
 
     farmers = {
         culture = cossack
         religion = orthodox
         size = 5970
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -239,7 +275,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3582
+        size = 716
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2866
     }
 
     clergymen = {
@@ -291,13 +333,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 9712
+        size = 971
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 8741
     }
 
     aristocrats = {
         culture = russian
         religion = orthodox
         size = 1533
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 590
     }
 
     bureaucrats = {
@@ -333,7 +387,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 59010
+        size = 5901
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 52519
     }
 }
 #Orel (656000/164000 POPS)
@@ -365,7 +425,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 59566
+        size = 5957
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 53609
     }
 }
 #Belgorod (748000/187000 POPS)
@@ -397,13 +463,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 50541
+        size = 5054
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 45487
     }
 
     farmers = {
         culture = cossack
         religion = orthodox
         size = 7960
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -433,7 +511,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 10716
+        size = 1072
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 9644
     }
 }
 #Voronets (1540000/385000 POPS)
@@ -465,13 +549,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 29515
+        size = 2951
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 26564
     }
 
     aristocrats = {
         culture = russian
         religion = orthodox
         size = 1533
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 400
     }
 
     clergymen = {
@@ -495,7 +591,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 106267
+        size = 10627
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 95240
     }
 }
 #Donbass Region (1188000) #see Ukraine.txt for balance of region
@@ -530,6 +632,12 @@
         culture = tatar
         religion = sunni
         size = 19345
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 
     aristocrats = {
@@ -621,13 +729,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 3458
+        size = 2939
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 519
     }
 
     farmers = {
         culture = cossack
         religion = orthodox
         size = 22003
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -660,10 +780,22 @@
         size = 4646
     }
 
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
+
     farmers = {
         culture = russian
         religion = orthodox
-        size = 2160
+        size = 1620
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 540
     }
 }
 #Chirskaya (92000/23000 POPS)  #mongol = kalmyk
@@ -698,10 +830,22 @@
         size = 19558
     }
 
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
+    }
+
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 1492
+        size = 1268
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 224
     }
 
     aristocrats = {
@@ -740,6 +884,12 @@
         size = 8159
     }
 
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = oirat
         religion = gelugpa
@@ -768,6 +918,12 @@
         culture = oirat
         religion = gelugpa
         size = 2442
+    }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
     }
 }
 #Azov (172000/43000 POPS)
@@ -799,13 +955,25 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 60
+        size = 51
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9
     }
 
     farmers = {
         culture = tatar
         religion = sunni
         size = 19018
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 
     aristocrats = {
@@ -835,7 +1003,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 65
+        size = 49
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 16
     }
 
     aristocrats = {
@@ -877,7 +1051,13 @@
     farmers = {
         culture = greek
         religion = orthodox
-        size = 9
+        size = 7
+    }
+
+    serfs = {
+        culture = greek
+        religion = orthodox
+        size = 2
     }
 }
 #Lyschank
@@ -912,10 +1092,22 @@
         size = 15894
     }
 
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
+    }
+
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 810
+        size = 688
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 122
     }
 
     aristocrats = {
@@ -954,6 +1146,12 @@
         size = 3516
     }
 
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = oirat
         religion = gelugpa
@@ -982,6 +1180,12 @@
         culture = oirat
         religion = gelugpa
         size = 2442
+    }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
     }
 }
 #Archangelsk Region (219300)
@@ -1027,7 +1231,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 11324
+        size = 6794
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 4530
     }
 
     clergymen = {
@@ -1053,13 +1263,25 @@
         religion = orthodox
         size = 1323
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Pestamo (2100/525 POPS)
 982 = {
     farmers = {
         culture = russian
         religion = orthodox
-        size = 6
+        size = 4
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2
     }
 
     clergymen = {
@@ -1072,6 +1294,12 @@
         culture = finnish
         religion = animist
         size = 193
+    }
+
+    serfs = {
+        culture = finnish
+        religion = animist
+        size = 0
     }
 
     soldiers = {
@@ -1109,7 +1337,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 266
+        size = 160
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 106
     }
 
     clergymen = {
@@ -1122,6 +1356,12 @@
         culture = ugrian
         religion = orthodox
         size = 115
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Kostomuksha (20000/5000 POPS)
@@ -1147,7 +1387,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 727
+        size = 436
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 291
     }
 
     clergymen = {
@@ -1173,6 +1419,12 @@
         religion = orthodox
         size = 1114
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Povyents (28000/7000 POPS)
 988 = {
@@ -1197,7 +1449,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1096
+        size = 658
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 438
     }
 
     clergymen = {
@@ -1223,6 +1481,12 @@
         religion = orthodox
         size = 1483
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Kola (2200/550 POPS)
 2587 = {
@@ -1235,7 +1499,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 118
+        size = 71
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 47
     }
 
     clergymen = {
@@ -1248,6 +1518,12 @@
         culture = finnish
         religion = animist
         size = 97
+    }
+
+    serfs = {
+        culture = finnish
+        religion = animist
+        size = 0
     }
 }
 #Onega (22000/5500 POPS)
@@ -1279,7 +1555,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1872
+        size = 1123
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 749
     }
 
     clergymen = {
@@ -1292,6 +1574,12 @@
         culture = ugrian
         religion = orthodox
         size = 195
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Mezen Region (54000)
@@ -1325,7 +1613,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1400
+        size = 980
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 420
     }
 
     clergymen = {
@@ -1351,6 +1645,12 @@
         religion = animist
         size = 636
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Ust Sysolsk (20000/5000 POPS)
 987 = {
@@ -1375,7 +1675,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1105
+        size = 773
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 332
     }
 
     clergymen = {
@@ -1401,6 +1707,12 @@
         religion = orthodox
         size = 737
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Usogorsk (10000/2500 POPS)
 2700 = {
@@ -1425,7 +1737,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 547
+        size = 383
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 164
     }
 
     clergymen = {
@@ -1451,6 +1769,12 @@
         religion = animist
         size = 364
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Naryan-Mar Region (16200)
 #under the rule of Russia in 1836
@@ -1471,7 +1795,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 233
+        size = 186
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 47
     }
 
     clergymen = {
@@ -1485,6 +1815,12 @@
         religion = animist
         size = 155
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Mulda (4000/1000 POPS)
 2689 = {
@@ -1497,7 +1833,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 195
+        size = 156
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 39
     }
 
     clergymen = {
@@ -1510,6 +1852,12 @@
         culture = ugrian
         religion = animist
         size = 195
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
     }
 }
 #Anderma (2800/700 POPS)
@@ -1523,7 +1871,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 38
+        size = 30
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 8
     }
 
     clergymen = {
@@ -1537,6 +1891,12 @@
         religion = animist
         size = 234
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Inta (3400/850 POPS)
 2688 = {
@@ -1549,7 +1909,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 78
+        size = 62
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 16
     }
 
     clergymen = {
@@ -1563,6 +1929,12 @@
         religion = animist
         size = 255
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Izhma (2000/500 POPS)
 2699 = {
@@ -1575,7 +1947,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 57
+        size = 46
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 11
     }
 
     clergymen = {
@@ -1588,6 +1966,12 @@
         culture = ugrian
         religion = animist
         size = 138
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
     }
 }
 #Vologda Region (1712000)
@@ -1633,7 +2017,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 66731
+        size = 30029
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 36702
     }
 
     clergymen = {
@@ -1659,6 +2049,12 @@
         religion = orthodox
         size = 3711
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Kotlas (20000/5000 POPS)
 990 = {
@@ -1683,7 +2079,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 359
+        size = 162
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 197
     }
 
     clergymen = {
@@ -1708,6 +2110,12 @@
         culture = ugrian
         religion = orthodox
         size = 1473
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Uglich (440000/110000 POPS)
@@ -1739,7 +2147,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 40153
+        size = 18069
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 22084
     }
 }
 #Belozersk (380000/95000 POPS)
@@ -1771,7 +2185,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 34809
+        size = 15664
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 19145
     }
 }
 #Vyterga (96000/24000 POPS)
@@ -1803,7 +2223,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 6906
+        size = 3108
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3798
     }
 
     clergymen = {
@@ -1829,6 +2255,12 @@
         religion = orthodox
         size = 1842
     }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
+    }
 }
 #Ingria Region (1155000)
 #under the rule of Russia in 1836
@@ -1838,6 +2270,12 @@
         culture = russian
         religion = orthodox
         size = 141
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 64
     }
 
     bureaucrats = {
@@ -1873,7 +2311,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 6435
+        size = 2574
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3797
     }
 
     aristocrats = {
@@ -1909,7 +2353,13 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 875
+        size = 350
+    }
+
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 525
     }
 
     clergymen = {
@@ -1940,6 +2390,12 @@
         culture = finnish
         religion = protestant
         size = 3369
+    }
+
+    serfs = {
+        culture = finnish
+        religion = protestant
+        size = 0
     }
 
     clergymen = {
@@ -1983,7 +2439,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3437
+        size = 1375
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2062
     }
 
     clergymen = {
@@ -2008,6 +2470,12 @@
         culture = ugrian
         religion = orthodox
         size = 2597
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Luga (132000/33000 POPS)
@@ -2039,7 +2507,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 5946
+        size = 2378
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3568
     }
 	
 	artisans = {
@@ -2058,6 +2532,12 @@
         culture = finnish
         religion = protestant
         size = 2369
+    }
+
+    serfs = {
+        culture = finnish
+        religion = protestant
+        size = 0
     }
 }
 #Gdov (120000/30000 POPS)
@@ -2089,7 +2569,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 5145
+        size = 2058
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3087
     }
 
     clergymen = {
@@ -2114,6 +2600,12 @@
         culture = ugrian
         religion = orthodox
         size = 737
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Stara Ladoga (64000/16000 POPS)
@@ -2145,7 +2637,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 5367
+        size = 2147
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3220
     }
 
     clergymen = {
@@ -2170,6 +2668,12 @@
         culture = ugrian
         religion = orthodox
         size = 3105
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Tver Region (1824000)
@@ -2215,7 +2719,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 64512
+        size = 12902
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 51610
     }
 }
 #Rzhev (432000/108000 POPS)
@@ -2247,7 +2757,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 35365
+        size = 7073
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 28292
     }
 
     clergymen = {
@@ -2272,6 +2788,12 @@
         culture = ugrian
         religion = orthodox
         size = 4080
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Staritsa (244000/61000 POPS)
@@ -2303,7 +2825,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 18498
+        size = 3700
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 14798
     }
 
     clergymen = {
@@ -2328,6 +2856,12 @@
         culture = ugrian
         religion = orthodox
         size = 3711
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Yaroslavl (440000/110000 POPS)
@@ -2359,7 +2893,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 39924
+        size = 7985
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 31939
     }
 }
 #Novgorod Region (1532000)
@@ -2405,7 +2945,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 21067
+        size = 6320
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 14747
     }
 
     clergymen = {
@@ -2426,6 +2972,12 @@
         culture = russian
         religion = orthodox
         size = 207
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 372
     }
 
     clergymen = {
@@ -2455,7 +3007,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 37250
+        size = 11175
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 25703
     }
 
     clergymen = {
@@ -2480,6 +3038,12 @@
         culture = ugrian
         religion = orthodox
         size = 737
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Tikhvin (156000/44000 POPS)
@@ -2511,7 +3075,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 15284
+        size = 4585
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 10699
     }
 
     clergymen = {
@@ -2536,6 +3106,12 @@
         culture = ugrian
         religion = orthodox
         size = 737
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Borovichi (344000/86000 POPS)
@@ -2567,7 +3143,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 31237
+        size = 9371
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 21866
     }
 }
 #Pskov (472000/118000 POPS)
@@ -2599,7 +3181,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 41595
+        size = 12479
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 29116
     }
 
     clergymen = {
@@ -2623,7 +3211,13 @@
     farmers = {
         culture = estonian
         religion = protestant
-        size = 368
+        size = 110
+    }
+
+    serfs = {
+        culture = estonian
+        religion = protestant
+        size = 258
     }
 
     clergymen = {
@@ -2647,7 +3241,13 @@
     farmers = {
         culture = latvian
         religion = protestant
-        size = 1105
+        size = 331
+    }
+
+    serfs = {
+        culture = latvian
+        religion = protestant
+        size = 774
     }
 
     clergymen = {
@@ -2691,7 +3291,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 29008
+        size = 8702
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 20306
     }
 }
 #Moscow Region (4960000)
@@ -2702,6 +3308,12 @@
         culture = russian
         religion = orthodox
         size = 701
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 582
     }
 
     bureaucrats = {
@@ -2743,7 +3355,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 58231
+        size = 6988
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 50661
     }
 
     clergymen = {
@@ -2764,6 +3382,12 @@
         culture = russian
         religion = orthodox
         size = 1096
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 268
     }
 
     clergymen = {
@@ -2793,7 +3417,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 53537
+        size = 6424
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 46845
     }
 }
 #Kaluga (876000/219000 POPS)
@@ -2802,6 +3432,12 @@
         culture = russian
         religion = orthodox
         size = 1905
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 397
     }
 
     clergymen = {
@@ -2825,7 +3461,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 79339
+        size = 9521
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 69421
     }
 }
 #Tula (1160000/290000 POPS)
@@ -2834,6 +3476,12 @@
         culture = russian
         religion = orthodox
         size = 2146
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 400
     }
 
     clergymen = {
@@ -2857,7 +3505,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 105372
+        size = 12645
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 92327
     }
 }
 #Riazan (1192000/298000 POPS)
@@ -2866,6 +3520,12 @@
         culture = russian
         religion = orthodox
         size = 1971
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 400
     }
 
     clergymen = {
@@ -2889,7 +3549,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 108665
+        size = 13040
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 95225
     }
 }
 #Vladimir (544000/136000 POPS)
@@ -2921,7 +3587,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 89457
+        size = 10735
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 78722
     }
 }
 #Nizhni Novgorod Region (4420000)
@@ -2967,7 +3639,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 56511
+        size = 14128
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 42383
     }
 
     clergymen = {
@@ -2993,6 +3671,12 @@
         religion = sunni
         size = 9463
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Penza (952000/238000 POPS)
 1021 = {
@@ -3000,6 +3684,12 @@
         culture = russian
         religion = orthodox
         size = 1708
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 290
     }
 
     clergymen = {
@@ -3023,7 +3713,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 57965
+        size = 14491
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 43184
     }
 
     clergymen = {
@@ -3048,6 +3744,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 15434
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 }
 #Ivanovo (540000/135000 POPS)
@@ -3079,7 +3781,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 49267
+        size = 12317
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 36950
     }
 }
 #Kostorma (312000/78000 POPS)
@@ -3111,7 +3819,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 28499
+        size = 7125
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 21374
     }
 }
 #Galich (304000/76000 POPS)
@@ -3143,7 +3857,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 27783
+        size = 6946
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 20837
     }
 }
 #Tambov (1244000/311000 POPS)
@@ -3152,6 +3872,12 @@
         culture = russian
         religion = orthodox
         size = 2562
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 255
     }
 
     clergymen = {
@@ -3175,7 +3901,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 50969
+        size = 12742
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 37972
     }
 
     clergymen = {
@@ -3201,6 +3933,12 @@
         religion = sunni
         size = 14639
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Perm Region (2224000)
 #under the rule of Russia in 1836
@@ -3210,6 +3948,12 @@
         culture = russian
         religion = orthodox
         size = 1664
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 251
     }
 
     bureaucrats = {
@@ -3245,7 +3989,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 50232
+        size = 22604
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 27377
     }
 
     clergymen = {
@@ -3270,6 +4020,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 8667
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 }
 #Vetluga (308000/77000 POPS)
@@ -3301,7 +4057,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 28125
+        size = 12656
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 15469
     }
 }
 #Vyatkha (504000/126000 POPS)
@@ -3333,7 +4095,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 44142
+        size = 19864
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 24278
     }
 
     clergymen = {
@@ -3358,6 +4126,12 @@
         culture = ugrian
         religion = orthodox
         size = 1842
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Glasov (452000/113000 POPS)
@@ -3389,7 +4163,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 41227
+        size = 18552
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 22675
     }
 }
 #Kazan Region (2848000)
@@ -3400,6 +4180,12 @@
         culture = russian
         religion = orthodox
         size = 175
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 44
     }
 
     bureaucrats = {
@@ -3435,7 +4221,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 8736
+        size = 3494
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 5198
     }
 
     aristocrats = {
@@ -3480,6 +4272,12 @@
         size = 38381
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = ugrian
         religion = orthodox
@@ -3502,6 +4300,12 @@
         culture = ugrian
         religion = orthodox
         size = 5393
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Sarapol (560000/140000 POPS)
@@ -3533,7 +4337,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 32581
+        size = 13032
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 19549
     }
 
     clergymen = {
@@ -3560,6 +4370,12 @@
         size = 17046
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = ugrian
         religion = orthodox
@@ -3582,6 +4398,12 @@
         culture = ugrian
         religion = orthodox
         size = 1860
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 }
 #Chistopol (608000/152000 POPS)
@@ -3613,7 +4435,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 12488
+        size = 4995
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 7493
     }
 
     aristocrats = {
@@ -3646,6 +4474,12 @@
         size = 35625
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = ugrian
         religion = orthodox
@@ -3668,6 +4502,12 @@
         culture = ugrian
         religion = orthodox
         size = 1860
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -3699,6 +4539,12 @@
         religion = orthodox
         size = 5474
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = orthodox
+        size = 0
+    }
 }
 #Simbirsk (340000/85000 POPS)
 1033 = {
@@ -3729,7 +4575,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 16997
+        size = 6799
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 10198
     }
 
     aristocrats = {
@@ -3762,6 +4614,12 @@
         size = 13245
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian_tatar
         religion = orthodox
@@ -3791,6 +4649,12 @@
         religion = orthodox
         size = 1811
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = orthodox
+        size = 0
+    }
 }
 #Samara (208000/52000 POPS)
 1034 = {
@@ -3798,6 +4662,12 @@
         culture = russian
         religion = orthodox
         size = 329
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 19
     }
 
     clergymen = {
@@ -3827,7 +4697,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3821
+        size = 1528
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2274
     }
 
     aristocrats = {
@@ -3858,6 +4734,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 14838
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 }
 #Ar-Chally (208000/52000 POPS)
@@ -3891,6 +4773,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Syzran (540000/135000 POPS)
 1035 = {
@@ -3921,13 +4809,25 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 26031
+        size = 10412
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 15619
     }
 
     farmers = {
         culture = siberian_tatar
         religion = sunni
         size = 22848
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 }
 #Astrakhan Region (1900000)
@@ -3973,7 +4873,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1274
+        size = 1019
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 255
     }
 
     aristocrats = {
@@ -4006,6 +4912,12 @@
         size = 78983
     }
 
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
+
     soldiers = {
         culture = oirat
         religion = gelugpa
@@ -4016,6 +4928,12 @@
         culture = circassian
         religion = sunni
         size = 318
+    }
+
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
     }
 }
 #Kuma (76000/19000 POPS)
@@ -4059,7 +4977,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 478
+        size = 382
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 96
     }
 
     aristocrats = {
@@ -4092,6 +5016,12 @@
         size = 53270
     }
 
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
+
     soldiers = {
         culture = oirat
         religion = gelugpa
@@ -4103,6 +5033,12 @@
         religion = sunni
         size = 318
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Saratov (252000/83000 POPS)
 1037 = {
@@ -4110,6 +5046,12 @@
         culture = russian
         religion = orthodox
         size = 263
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 62
     }
 
     clergymen = {
@@ -4133,7 +5075,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 12479
+        size = 9983
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2434
     }
 
     artisans = {
@@ -4151,7 +5099,13 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 2687
+        size = 2015
+    }
+
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 672
     }
 
     clergymen = {
@@ -4171,6 +5125,12 @@
         religion = sunni
         size = 3751
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Novo Usensk (340000/85000 POPS)
 1038 = {
@@ -4178,6 +5138,12 @@
         culture = russian
         religion = orthodox
         size = 591
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 41
     }
 
     clergymen = {
@@ -4201,7 +5167,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 8249
+        size = 6599
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1609
     }
 
     artisans = {
@@ -4220,6 +5192,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 15988
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 
     clergymen = {
@@ -4246,6 +5224,12 @@
         size = 11024
     }
 
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
+
     soldiers = {
         culture = oirat
         religion = gelugpa
@@ -4264,6 +5248,12 @@
         culture = russian
         religion = orthodox
         size = 1314
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 241
     }
 
     aristocrats = {
@@ -4305,13 +5295,25 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 48104
+        size = 38483
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 9380
     }
 
     farmers = {
         culture = cossack
         religion = orthodox
         size = 9155
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     clergymen = {
@@ -4329,7 +5331,13 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 7791
+        size = 6622
+    }
+
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1169
     }
 }
 #Zarevka (36000/9000 POPS)
@@ -4364,6 +5372,12 @@
         size = 12264
     }
 
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian_tatar
         religion = sunni
@@ -4393,6 +5407,12 @@
         religion = sunni
         size = 5792
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Elitsa (124000/31000 POPS)
 1041 = {
@@ -4417,7 +5437,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 120
+        size = 96
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 24
     }
 
     aristocrats = {
@@ -4450,6 +5476,12 @@
         size = 347
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = oirat
         religion = gelugpa
@@ -4479,6 +5511,12 @@
         religion = gelugpa
         size = 48358
     }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
 }
 #Orenburg Region (1500000)
 #under the rule of Russia in 1836
@@ -4488,6 +5526,12 @@
         culture = russian
         religion = orthodox
         size = 1183
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 176
     }
 
     bureaucrats = {
@@ -4523,7 +5567,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 35277
+        size = 28222
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 6879
     }
 
     aristocrats = {
@@ -4562,6 +5612,12 @@
         size = 20938
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian_tatar
         religion = orthodox
@@ -4597,6 +5653,12 @@
         religion = orthodox
         size = 5453
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = orthodox
+        size = 0
+    }
 }
 #Busuluk (164000/41000 POPS)
 1043 = {
@@ -4627,7 +5689,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 6915
+        size = 5532
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1383
     }
 }
 #Orenburg (124000/31000 POPS)
@@ -4636,6 +5704,12 @@
         culture = russian
         religion = orthodox
         size = 153
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 24
     }
 
     clergymen = {
@@ -4665,7 +5739,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 4895
+        size = 3916
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 955
     }
 }
 #Kuban Region (520000)
@@ -4702,6 +5782,12 @@
         size = 968
     }
 
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 0
+    }
+
     soldiers = {
         culture = tatar
         religion = sunni
@@ -4712,6 +5798,12 @@
         culture = tatar
         religion = sunni
         size = 51598
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 
     clergymen = {
@@ -4736,6 +5828,12 @@
         culture = greek
         religion = orthodox
         size = 932
+    }
+
+    serfs = {
+        culture = greek
+        religion = orthodox
+        size = 0
     }
 }
 #Susaco (60000/15000 POPS)
@@ -4764,6 +5862,12 @@
         size = 3782
     }
 
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = circassian
         religion = sunni
@@ -4788,10 +5892,22 @@
         size = 20678
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     farmers = {
         culture = greek
         religion = orthodox
         size = 1964
+    }
+
+    serfs = {
+        culture = greek
+        religion = orthodox
+        size = 0
     }
 }
 #Stavropol (188000/47000 POPS)
@@ -4820,10 +5936,22 @@
         size = 2391
     }
 
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 0
+    }
+
     farmers = {
         culture = cossack
         religion = orthodox
         size = 1741
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -4868,6 +5996,12 @@
         size = 8828
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = oirat
         religion = gelugpa
@@ -4897,6 +6031,12 @@
         religion = gelugpa
         size = 1422
     }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
 }
 #Kotel (188000/47000 POPS)
 2681 = {
@@ -4924,10 +6064,22 @@
         size = 2391
     }
 
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 0
+    }
+
     farmers = {
         culture = cossack
         religion = orthodox
         size = 1741
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -4972,6 +6124,12 @@
         size = 4806
     }
 
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
+
     aristocrats = {
         culture = oirat
         religion = gelugpa
@@ -5007,6 +6165,12 @@
         religion = gelugpa
         size = 19978
     }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
 }
 #Majar (188000/47000 POPS)
 1071 = {
@@ -5014,6 +6178,12 @@
         culture = cossack
         religion = orthodox
         size = 1741
+    }
+
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -5056,6 +6226,12 @@
         culture = tatar
         religion = sunni
         size = 8828
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 
     aristocrats = {
@@ -5117,6 +6293,12 @@
         religion = gelugpa
         size = 1422
     }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
+    }
 }
 #Adygei (136000/34000 POPS)
 1051 = {
@@ -5150,6 +6332,12 @@
         size = 32442
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = tatar
         religion = sunni
@@ -5172,6 +6360,12 @@
         culture = tatar
         religion = sunni
         size = 4158
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 }
 #Karachay (136000/34000 POPS)
@@ -5206,6 +6400,12 @@
         size = 23222
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = tatar
         religion = sunni
@@ -5228,6 +6428,12 @@
         culture = tatar
         religion = sunni
         size = 1085
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 }
 #Krasnodar
@@ -5262,6 +6468,12 @@
         size = 1162
     }
 
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 0
+    }
+
     clergymen = {
         culture = tatar
         religion = sunni
@@ -5278,6 +6490,12 @@
         culture = tatar
         religion = sunni
         size = 45135
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 
     clergymen = {
@@ -5302,6 +6520,12 @@
         culture = greek
         religion = orthodox
         size = 1118
+    }
+
+    serfs = {
+        culture = greek
+        religion = orthodox
+        size = 0
     }
 }
 #Azaraba
@@ -5336,6 +6560,12 @@
         size = 1654
     }
 
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 0
+    }
+
     clergymen = {
         culture = tatar
         religion = sunni
@@ -5352,6 +6582,12 @@
         culture = tatar
         religion = sunni
         size = 45625
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 }
 #Dagestan Region (324000)
@@ -5418,6 +6654,12 @@
         size = 13045
     }
 
+    serfs = {
+        culture = dagestani
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = sephardic
         religion = jewish
@@ -5433,7 +6675,13 @@
     farmers = {
         culture = sephardic
         religion = jewish
-        size = 225
+        size = 214
+    }
+
+    serfs = {
+        culture = sephardic
+        religion = jewish
+        size = 11
     }
 
     aristocrats = {
@@ -5464,6 +6712,12 @@
         culture = azerbaijani
         religion = shiite
         size = 1084
+    }
+
+    serfs = {
+        culture = azerbaijani
+        religion = shiite
+        size = 0
     }
 }
 #Gunib (164000/41000 POPS)
@@ -5498,6 +6752,12 @@
         size = 12817
     }
 
+    serfs = {
+        culture = dagestani
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = sephardic
         religion = jewish
@@ -5513,7 +6773,13 @@
     farmers = {
         culture = sephardic
         religion = jewish
-        size = 265
+        size = 252
+    }
+
+    serfs = {
+        culture = sephardic
+        religion = jewish
+        size = 13
     }
 
     aristocrats = {
@@ -5544,6 +6810,12 @@
         culture = tatar
         religion = sunni
         size = 1821
+    }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
     }
 }
 #Kavkaz Region (348000)
@@ -5592,10 +6864,22 @@
         size = 3184
     }
 
+    serfs = {
+        culture = chechen
+        religion = sunni
+        size = 0
+    }
+
     farmers = {
         culture = circassian
         religion = orthodox
         size = 3355
+    }
+
+    serfs = {
+        culture = circassian
+        religion = orthodox
+        size = 0
     }
 }
 #Grozny (68000/17000 POPS)
@@ -5628,6 +6912,12 @@
         culture = chechen
         religion = sunni
         size = 6160
+    }
+
+    serfs = {
+        culture = chechen
+        religion = sunni
+        size = 0
     }
 }
 #Pyatigorsk (136000/34000 POPS)
@@ -5668,6 +6958,12 @@
         size = 22241
     }
 
+    serfs = {
+        culture = circassian
+        religion = sunni
+        size = 0
+    }
+
     clergymen = {
         culture = tatar
         religion = sunni
@@ -5697,6 +6993,12 @@
         religion = sunni
         size = 1543
     }
+
+    serfs = {
+        culture = tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Kizylyar (68000/17000 POPS)
 1057 = {
@@ -5722,6 +7024,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 4049
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 
     aristocrats = {
@@ -5754,6 +7062,12 @@
         size = 2658
     }
 
+    serfs = {
+        culture = cossack
+        religion = orthodox
+        size = 0
+    }
+
     artisans = {
         culture = armenian
         religion = coptic
@@ -5764,6 +7078,12 @@
         culture = oirat
         religion = gelugpa
         size = 1847
+    }
+
+    serfs = {
+        culture = oirat
+        religion = gelugpa
+        size = 0
     }
 }
 #Urals Region (832000)
@@ -5809,7 +7129,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 36123
+        size = 21674
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 14449
     }
 }
 #Chelyabinsk (180000/45000 POPS)
@@ -5841,7 +7167,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 16478
+        size = 9887
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 6591
     }
 }
 #Orsk (180000/45000 POPS)
@@ -5875,6 +7207,12 @@
         religion = sunni
         size = 8299
     }
+
+    serfs = {
+        culture = kazak
+        religion = sunni
+        size = 0
+    }
 }
 #Tyumen (54000/13500 POPS)
 1061 = {
@@ -5899,7 +7237,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 4448
+        size = 2669
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1779
     }
 
     clergymen = {
@@ -5925,6 +7269,12 @@
         religion = sunni
         size = 547
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Ishim (22000/5500 POPS)
 2686 = {
@@ -5949,7 +7299,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1851
+        size = 1111
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 740
     }
 
     clergymen = {
@@ -5974,6 +7330,12 @@
         culture = siberian_tatar
         religion = sunni
         size = 190
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
     }
 }
 #Yugra Region (98500)
@@ -6001,7 +7363,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 697
+        size = 627
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 70
     }
 
     aristocrats = {
@@ -6033,6 +7401,12 @@
         religion = animist
         size = 289
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Berezov (60000/15000 POPS)
 1062 = {
@@ -6063,7 +7437,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 4802
+        size = 4322
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 480
     }
 
     aristocrats = {
@@ -6094,6 +7474,12 @@
         culture = ugrian
         religion = animist
         size = 716
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
     }
 }
 #Nizhnevartovsk (4000/1000 POPS)
@@ -6127,6 +7513,12 @@
         religion = animist
         size = 359
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Ases Igan (4000/1000 POPS)
 2646 = {
@@ -6159,6 +7551,12 @@
         religion = animist
         size = 359
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Bakchar (8500/2125 POPS)
 2683 = {
@@ -6177,7 +7575,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 43
+        size = 39
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 4
     }
 
     aristocrats = {
@@ -6210,6 +7614,12 @@
         size = 359
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     aristocrats = {
         culture = ugrian
         religion = animist
@@ -6238,6 +7648,12 @@
         culture = ugrian
         religion = animist
         size = 359
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
     }
 }
 #Muzhi (6000/1500 POPS)
@@ -6272,6 +7688,12 @@
         size = 498
     }
 
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = russian
         religion = orthodox
@@ -6287,7 +7709,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 43
+        size = 39
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 4
     }
 }
 #Kostino (2000/500 POPS)
@@ -6320,6 +7748,12 @@
         culture = siberian
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Yamalia Region (10400)
@@ -6355,6 +7789,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Aksarka (2200/550 POPS)
 2682 = {
@@ -6388,6 +7828,12 @@
         size = 178
     }
 
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = russian
         religion = orthodox
@@ -6403,7 +7849,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 17
+        size = 16
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1
     }
 }
 #Napalkovo (1000/250 POPS)
@@ -6437,6 +7889,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
 }
 #Nyda (1000/250 POPS)
 2613 = {
@@ -6468,6 +7926,12 @@
         culture = ugrian
         religion = animist
         size = 90
+    }
+
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
     }
 }
 #Krasnoselkup (2200/550 POPS)
@@ -6502,6 +7966,12 @@
         size = 178
     }
 
+    serfs = {
+        culture = ugrian
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = russian
         religion = orthodox
@@ -6517,7 +7987,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 17
+        size = 16
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1
     }
 }
 #Tomsk Region (1346700)
@@ -6533,13 +8009,25 @@
     farmers = {
         culture = gypsy
         religion = orthodox
-        size = 59
+        size = 52
+    }
+
+    serfs = {
+        culture = gypsy
+        religion = orthodox
+        size = 7
     }
 
     aristocrats = {
         culture = russian
         religion = orthodox
         size = 307
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 32
     }
 
     bureaucrats = {
@@ -6575,7 +8063,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 6468
+        size = 5692
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 744
     }
 
     clergymen = {
@@ -6602,10 +8096,22 @@
         size = 17027
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
+
     farmers = {
         culture = siberian
         religion = tengri
-        size = 279
+        size = 246
+    }
+
+    serfs = {
+        culture = siberian
+        religion = tengri
+        size = 33
     }
 }
 #Omsk (223500/55878 POPS)
@@ -6645,6 +8151,12 @@
         religion = sunni
         size = 11673
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Slavgorod (60000/15000 POPS)
 2698 = {
@@ -6669,7 +8181,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 1661
+        size = 1462
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 199
     }
 
     clergymen = {
@@ -6696,10 +8214,22 @@
         size = 4288
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = tengri
+        size = 0
+    }
+
     farmers = {
         culture = siberian
         religion = tengri
-        size = 529
+        size = 466
+    }
+
+    serfs = {
+        culture = siberian
+        religion = tengri
+        size = 63
     }
 }
 #Barnaul (116000/29000 POPS)
@@ -6734,6 +8264,12 @@
         size = 9593
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = tengri
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian_tatar
         religion = sunni
@@ -6763,6 +8299,12 @@
         religion = sunni
         size = 1084
     }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = sunni
+        size = 0
+    }
 }
 #Ulala (36000/9000 POPS)
 1068 = {
@@ -6788,6 +8330,12 @@
         culture = siberian_tatar
         religion = tengri
         size = 3285
+    }
+
+    serfs = {
+        culture = siberian_tatar
+        religion = tengri
+        size = 0
     }
 
     aristocrats = {
@@ -6827,7 +8375,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 706
+        size = 671
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 35
     }
 
     aristocrats = {
@@ -6860,6 +8414,12 @@
         size = 3285
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = yakut
         religion = orthodox
@@ -6889,6 +8449,12 @@
         religion = orthodox
         size = 1868
     }
+
+    serfs = {
+        culture = yakut
+        religion = orthodox
+        size = 0
+    }
 }
 #Vilyuysk (10000/2500 POPS)
 1069 = {
@@ -6913,7 +8479,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 359
+        size = 341
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 18
     }
 
     aristocrats = {
@@ -6946,6 +8518,12 @@
         size = 359
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = yakut
         religion = orthodox
@@ -6968,6 +8546,12 @@
         culture = yakut
         religion = orthodox
         size = 190
+    }
+
+    serfs = {
+        culture = yakut
+        religion = orthodox
+        size = 0
     }
 }
 #Mukhtuya (10000/2500 POPS)
@@ -6993,7 +8577,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 359
+        size = 341
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 18
     }
 
     aristocrats = {
@@ -7026,6 +8616,12 @@
         size = 359
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = yakut
         religion = orthodox
@@ -7048,6 +8644,12 @@
         culture = yakut
         religion = orthodox
         size = 190
+    }
+
+    serfs = {
+        culture = yakut
+        religion = orthodox
+        size = 0
     }
 }
 #Nyurba (12000/3000 POPS)
@@ -7073,7 +8675,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 359
+        size = 341
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 18
     }
 
     aristocrats = {
@@ -7106,6 +8714,12 @@
         size = 537
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = yakut
         religion = orthodox
@@ -7128,6 +8742,12 @@
         culture = yakut
         religion = orthodox
         size = 190
+    }
+
+    serfs = {
+        culture = yakut
+        religion = orthodox
+        size = 0
     }
 }
 #Zhigansk (4000/1000 POPS)
@@ -7161,6 +8781,12 @@
         religion = animist
         size = 359
     }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
 }
 #Pokrovsk (17000/4250 POPS)
 2672 = {
@@ -7185,7 +8811,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 359
+        size = 341
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 18
     }
 
     aristocrats = {
@@ -7218,6 +8850,12 @@
         size = 898
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = yakut
         religion = orthodox
@@ -7240,6 +8878,12 @@
         culture = yakut
         religion = orthodox
         size = 282
+    }
+
+    serfs = {
+        culture = yakut
+        religion = orthodox
+        size = 0
     }
 }
 #Evenkia Region (14000)
@@ -7275,6 +8919,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Svetlogorsk (2000/500 POPS)
 2657 = {
@@ -7308,6 +8958,12 @@
         size = 163
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = russian
         religion = orthodox
@@ -7323,7 +8979,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 17
+        size = 16
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 1
     }
 }
 #Khatanga (1000/250 POPS)
@@ -7357,6 +9019,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Saskylah (1000/250 POPS)
 2653 = {
@@ -7389,6 +9057,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Udachniy (2000/500 POPS)
 2651 = {
@@ -7414,6 +9088,12 @@
         culture = siberian
         religion = animist
         size = 72
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 
     aristocrats = {
@@ -7444,6 +9124,12 @@
         culture = yakut
         religion = animist
         size = 110
+    }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
     }
 }
 #Tura (1000/250 POPS)
@@ -7477,6 +9163,12 @@
         religion = animist
         size = 90
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Uchami (2000/500 POPS)
 2693 = {
@@ -7508,6 +9200,12 @@
         culture = siberian
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Indigirka Region (11000)
@@ -7543,6 +9241,12 @@
         religion = animist
         size = 178
     }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
 }
 #Ust Nera (2000/500 POPS)
 2642 = {
@@ -7574,6 +9278,12 @@
         culture = yakut
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
     }
 }
 #Olenyok Region (5000)
@@ -7610,6 +9320,12 @@
         size = 87
     }
 
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = russian
         religion = orthodox
@@ -7626,6 +9342,12 @@
         culture = russian
         religion = orthodox
         size = 2
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 0
     }
 }
 #Bulun (1000/250 POPS)
@@ -7659,6 +9381,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
+    }
 }
 
 #Kular (1000/250 POPS)
@@ -7691,6 +9419,12 @@
         culture = yakut
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
     }
 }
 #Kolyma Region (6000)
@@ -7727,6 +9461,12 @@
         size = 82
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = russian
         religion = orthodox
@@ -7743,6 +9483,12 @@
         culture = russian
         religion = orthodox
         size = 8
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 0
     }
 }
 #Oyotuni (1000/250 POPS)
@@ -7776,6 +9522,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Syasir (1000/250 POPS)
 2620 = {
@@ -7807,6 +9559,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Beryezovka (1000/250 POPS)
@@ -7840,6 +9598,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Cherskiy (1000/250 POPS)
 2662 = {
@@ -7871,6 +9635,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Aldanskiy Region (18000 POPS)
@@ -7905,6 +9675,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Chernomin (1000/250 POPS)
 1080 = {
@@ -7936,6 +9712,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Olyekminsk (6000/1500 POPS)
@@ -7970,6 +9752,12 @@
         size = 178
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     aristocrats = {
         culture = yakut
         religion = animist
@@ -7998,6 +9786,12 @@
         culture = yakut
         religion = animist
         size = 359
+    }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
     }
 }
 #Chilchi (4000/1000 POPS)
@@ -8032,6 +9826,12 @@
         size = 178
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     aristocrats = {
         culture = yakut
         religion = animist
@@ -8060,6 +9860,12 @@
         culture = yakut
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = yakut
+        religion = animist
+        size = 0
     }
 }
 #Okhotsk Region (11000)
@@ -8096,6 +9902,12 @@
         size = 91
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = russian
         religion = orthodox
@@ -8123,7 +9935,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 270
+        size = 265
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 5
     }
 }
 #Ayan (3000/750 POPS)
@@ -8158,6 +9976,12 @@
         size = 178
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     artisans = {
         culture = russian
         religion = orthodox
@@ -8173,7 +9997,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 94
+        size = 92
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 2
     }
 }
 #Ola (2000/500 POPS)
@@ -8207,6 +10037,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Kamchatka Region (10000)
 #under the rule of Russia in 1836
@@ -8236,6 +10072,12 @@
         size = 56
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     bureaucrats = {
         culture = russian
         religion = orthodox
@@ -8263,7 +10105,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 318
+        size = 315
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 3
     }
 }
 #Kamenskoye (1000/250 POPS)
@@ -8297,6 +10145,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Korf/Tilichiki (1000/250 POPS)
 2616 = {
@@ -8328,6 +10182,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Palana/Ossora (1000/250 POPS)
@@ -8361,6 +10221,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Yevensk (2000/500 POPS)
 1073 = {
@@ -8392,6 +10258,12 @@
         culture = siberian
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Chukotka Region (5800)
@@ -8427,6 +10299,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Novo Mariinsk (2000/500 POPS) #inuit = chukchi   }
 2637 = {
@@ -8458,6 +10336,12 @@
         culture = inuit
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = inuit
+        religion = animist
+        size = 0
     }
 }
 #Ugolniye (1000/250 POPS) #inuit = chukchi  }
@@ -8491,6 +10375,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = inuit
+        religion = animist
+        size = 0
+    }
 }
 #Nizhnekolymsk (600/150 POPS)
 2661 = {
@@ -8522,6 +10412,12 @@
         culture = siberian
         religion = animist
         size = 54
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Krasnoyarsk Region (232000)
@@ -8567,7 +10463,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3880
+        size = 3570
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 310
     }
 
     aristocrats = {
@@ -8600,6 +10502,12 @@
         size = 12549
     }
 
+    serfs = {
+        culture = siberian_tatar
+        religion = tengri
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian
         religion = tengri
@@ -8627,7 +10535,13 @@
     farmers = {
         culture = siberian
         religion = tengri
-        size = 178
+        size = 164
+    }
+
+    serfs = {
+        culture = siberian
+        religion = tengri
+        size = 14
     }
 }
 #Bryanka (2000/500 POPS)
@@ -8661,6 +10575,12 @@
         religion = animist
         size = 178
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Surinda (1000/250 POPS)
 2701 = {
@@ -8693,6 +10613,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Bratsk (2000/500 POPS)
 1076 = {
@@ -8724,6 +10650,12 @@
         culture = siberian
         religion = animist
         size = 178
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Irkutsk Region (292000)
@@ -8769,7 +10701,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 5875
+        size = 5405
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 470
     }
 
     aristocrats = {
@@ -8802,6 +10740,12 @@
         size = 20291
     }
 
+    serfs = {
+        culture = mongol
+        religion = gelugpa
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian
         religion = animist
@@ -8830,6 +10774,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Vanavara (1000/250 POPS)
@@ -8863,6 +10813,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Dotkon (1000/250 POPS)
 2677 = {
@@ -8895,6 +10851,12 @@
         religion = animist
         size = 91
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Kirensk (1000/250 POPS)
 2676 = {
@@ -8926,6 +10888,12 @@
         culture = siberian
         religion = animist
         size = 91
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Chita Region (472000)
@@ -8971,7 +10939,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 5517
+        size = 5186
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 331
     }
 
     aristocrats = {
@@ -9003,6 +10977,12 @@
         religion = gelugpa
         size = 14120
     }
+
+    serfs = {
+        culture = mongol
+        religion = gelugpa
+        size = 0
+    }
 }
 #Nerchinsk (160000/40000 POPS) #Mongol = Buryat
 1079 = {
@@ -9033,7 +11013,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3045
+        size = 2862
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 183
     }
 
     aristocrats = {
@@ -9066,6 +11052,12 @@
         size = 11225
     }
 
+    serfs = {
+        culture = mongol
+        religion = gelugpa
+        size = 0
+    }
+
     aristocrats = {
         culture = siberian
         religion = animist
@@ -9094,6 +11086,12 @@
         culture = siberian
         religion = animist
         size = 359
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #under the rule of China in 1836
@@ -9132,7 +11130,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 4209
+        size = 3956
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 253
     }
 
     clergymen = {
@@ -9156,7 +11160,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 183
+        size = 172
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 11
     }
 
     aristocrats = {
@@ -9187,6 +11197,12 @@
         culture = siberian
         religion = animist
         size = 368
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Magdagachi (44000/11000 POPS)
@@ -9218,7 +11234,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 3662
+        size = 3442
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 220
     }
 
     aristocrats = {
@@ -9249,6 +11271,12 @@
         culture = siberian
         religion = animist
         size = 368
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Amur-Ussuri Region (1348000)
@@ -9282,7 +11310,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 28290
+        size = 27724
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 566
     }
 
     aristocrats = {
@@ -9312,7 +11346,13 @@
     farmers = {
         culture = korean
         religion = mahayana
-        size = 1096
+        size = 1074
+    }
+
+    serfs = {
+        culture = korean
+        religion = mahayana
+        size = 22
     }
 
     aristocrats = {
@@ -9344,6 +11384,12 @@
         religion = animist
         size = 368
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Boli (328000/82000 POPS)
 1083 = {
@@ -9374,7 +11420,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 29048
+        size = 28467
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 581
     }
 
     aristocrats = {
@@ -9406,6 +11458,12 @@
         religion = animist
         size = 767
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Utchan (18000 POPS)
 1084 = {
@@ -9436,7 +11494,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 5801
+        size = 5685
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 116
     }
 
     aristocrats = {
@@ -9467,6 +11531,12 @@
         culture = siberian
         religion = animist
         size = 716
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Ulusamudan (372000/93000 POPS)
@@ -9504,7 +11574,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 32789
+        size = 32133
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 656
     }
 
     aristocrats = {
@@ -9536,6 +11612,12 @@
         religion = animist
         size = 767
     }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
 }
 #Saghalian Oula (62000 POPS)
 2617 = {
@@ -9566,7 +11648,13 @@
     farmers = {
         culture = manchu
         religion = mahayana
-        size = 22101
+        size = 21659
+    }
+
+    serfs = {
+        culture = manchu
+        religion = mahayana
+        size = 442
     }
 
     aristocrats = {
@@ -9597,6 +11685,12 @@
         culture = siberian
         religion = animist
         size = 359
+    }
+
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
     }
 }
 #Sakhalin-Kurile Region (16200)
@@ -9633,6 +11727,12 @@
         size = 359
     }
 
+    serfs = {
+        culture = siberian
+        religion = animist
+        size = 0
+    }
+
     clergymen = {
         culture = russian
         religion = orthodox
@@ -9643,6 +11743,12 @@
         culture = russian
         religion = orthodox
         size = 9
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 0
     }
 }
 #Ootomari (4100/1025 POPS)
@@ -9677,10 +11783,22 @@
         size = 368
     }
 
+    serfs = {
+        culture = ainu
+        religion = animist
+        size = 0
+    }
+
     farmers = {
         culture = japanese
         religion = mahayana
         size = 9
+    }
+
+    serfs = {
+        culture = japanese
+        religion = mahayana
+        size = 0
     }
 }
 #Shumshu (4000/1000 POPS)
@@ -9714,6 +11832,12 @@
         religion = animist
         size = 368
     }
+
+    serfs = {
+        culture = ainu
+        religion = animist
+        size = 0
+    }
 }
 #Etorofu (4000/1000 POPS)
 1089 = {
@@ -9746,6 +11870,12 @@
         religion = animist
         size = 368
     }
+
+    serfs = {
+        culture = ainu
+        religion = animist
+        size = 0
+    }
 }
 #Noteburg
 3253 = {
@@ -9753,6 +11883,12 @@
         culture = russian
         religion = orthodox
         size = 281
+    }
+
+    slaves = {
+        culture = russian
+        religion = orthodox
+        size = 36
     }
 
     bureaucrats = {
@@ -9782,7 +11918,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 3581
+        size = 3545
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 0
     }
 
     aristocrats = {
@@ -9843,6 +11985,12 @@
         culture = finnish
         religion = protestant
         size = 8359
+    }
+
+    serfs = {
+        culture = finnish
+        religion = protestant
+        size = 0
     }
 
     clergymen = {
@@ -9909,5 +12057,11 @@
         culture = russian
         religion = orthodox
         size = 4218
+    }
+
+    serfs = {
+        culture = russian
+        religion = orthodox
+        size = 0
     }
 }

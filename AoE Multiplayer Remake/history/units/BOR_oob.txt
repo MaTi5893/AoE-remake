@@ -689,32 +689,17 @@ navy = {
     location = 420
     ship = {
         name= "Zélandais"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
         name= "Superbe"
-        type = manowar
-    }
-
-    ship = {
-        name= "Austerlitz"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
         name= "Magnifique"
-        type = manowar
-    }
-
-    ship = {
-        name= "République Française"
-        type = manowar
-    }
-
-    ship = {
-        name= "Conquérant"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
@@ -864,41 +849,6 @@ navy = {
     }
 
     ship = {
-        name= "Erigone"
-        type = frigate
-    }
-
-    ship = {
-        name= "Nereide"
-        type = frigate
-    }
-
-    ship = {
-        name= "Gloire"
-        type = frigate
-    }
-
-    ship = {
-        name= "Reine Blanche"
-        type = frigate
-    }
-
-    ship = {
-        name= "4ème Flotille de Transport"
-        type = clipper_transport
-    }
-
-    ship = {
-        name= "5ème Flotille de Transport"
-        type = clipper_transport
-    }
-
-    ship = {
-        name= "6ème Flotille de Transport"
-        type = clipper_transport
-    }
-
-    ship = {
         name= "7ème Flotille de Transport"
         type = clipper_transport
     }
@@ -916,6 +866,197 @@ navy = {
     ship = {
         name= "10ème Flotille de Transport"
         type = clipper_transport
+    }
+
+}
+
+navy = {
+    name = "Escadre du Nord"
+    location = 470
+    ship = {
+        name= "Zélandais"
+        type = manowar
+    }
+
+    ship = {
+        name= "Superbe"
+        type = manowar
+    }
+
+    ship = {
+        name= "Magnifique"
+        type = manowar
+    }
+
+    ship = {
+        name= "Neptune"
+        type = manowar
+    }
+
+    ship = {
+        name= "Algesiras"
+        type = manowar
+    }
+
+    ship = {
+        name= "Nestor"
+        type = manowar
+    }
+
+    ship = {
+        name= "Duchesse de Berry"
+        type = manowar
+    }
+
+    ship = {
+        name= "Thétis"
+        type = manowar
+    }
+
+    ship = {
+        name= "Astrée"
+        type = frigate
+    }
+
+    ship = {
+        name= "Amazone"
+        type = frigate
+    }
+
+
+    ship = {
+        name= "Surveillante"
+        type = frigate
+    }
+
+    ship = {
+        name= "Iphigénie"
+        type = frigate
+    }
+
+    ship = {
+        name= "Sultane"
+        type = frigate
+    }
+
+    ship = {
+        name= "La Reale"
+        type = galley
+    }
+
+    ship = {
+        name= "2ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "3ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "4ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "5ème Galley"
+        type = galley
+    }
+
+	ship = {
+        name= "1ème Galley"
+        type = galley
+    }
+	
+	 ship = {
+        name= "La Reale"
+        type = galley
+    }
+
+    ship = {
+        name= "2ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "3ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "4ème Galley"
+        type = galley
+    }
+
+    ship = {
+        name= "5ème Galley"
+        type = galley
+    }
+
+	ship = {
+        name= "1ème Galley"
+        type = galley
+    }
+}
+
+navy = {
+    name = "Escadre du Indies"
+    location = 1312
+    ship = {
+        name= "Thétis"
+        type = frigate
+    }
+
+    ship = {
+        name= "Astrée"
+        type = frigate
+    }
+
+    ship = {
+        name= "Amazone"
+        type = frigate
+    }
+
+
+    ship = {
+        name= "Surveillante"
+        type = frigate
+    }
+
+    ship = {
+        name= "Iphigénie"
+        type = frigate
+    }
+
+    ship = {
+        name= "Sultane"
+        type = frigate
+    }
+
+    ship = {
+        name= "1ère Flotille de Transport"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "2ème Flotille de Transport"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "3ème Flotille de Transport"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "4ème Flotille de Transport"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "5ème Flotille de Transport"
+        type = steam_transport
     }
 
 }

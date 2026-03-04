@@ -6,62 +6,75 @@
     craftsmen   = { culture = latvian religion = protestant size = 7200 }
     artisans    = { culture = latvian religion = protestant size = 900 }
     soldiers    = { culture = latvian religion = protestant size = 4500 }
-    farmers     = { culture = latvian religion = protestant size = 23000 }
+    farmers     = { culture = latvian religion = protestant size = 5750 }
+    serfs       = { culture = latvian religion = protestant size = 17250 }
 
     aristocrats = { culture = north_german religion = protestant size = 420 }
     artisans    = { culture = north_german religion = protestant size = 3200 }
 
     artisans    = { culture = ashkenazi religion = jewish size = 1300 }
-    farmers     = { culture = ashkenazi religion = jewish size = 800 }
+    farmers     = { culture = ashkenazi religion = jewish size = 760 }
+    serfs       = { culture = ashkenazi religion = jewish size = 40 }
 }
 
 355 = {  # Valmiera
     clergymen = { culture = latvian religion = protestant size = 650 }
     artisans  = { culture = latvian religion = protestant size = 2000 }
     soldiers  = { culture = latvian religion = protestant size = 3000 }
-    farmers   = { culture = latvian religion = protestant size = 53000 }
+    farmers   = { culture = latvian religion = protestant size = 5300 }
+    serfs     = { culture = latvian religion = protestant size = 47700 }
 
     aristocrats = { culture = north_german religion = protestant size = 700 }
-    farmers     = { culture = polish religion = catholic size = 3000 }
+    farmers     = { culture = polish religion = catholic size = 450 }
+    serfs       = { culture = polish religion = catholic size = 2550 }
 }
 
 356 = {  # Daugavpils
     clergymen = { culture = latvian religion = protestant size = 100 }
     artisans  = { culture = latvian religion = protestant size = 400 }
     soldiers  = { culture = latvian religion = protestant size = 900 }
-    farmers   = { culture = latvian religion = protestant size = 15000 }
+    farmers   = { culture = latvian religion = protestant size = 1200 }
+    serfs     = { culture = latvian religion = protestant size = 13800 }
 
     aristocrats = { culture = north_german religion = protestant size = 450 }
-    farmers     = { culture = ashkenazi religion = jewish size = 1000 }
-    farmers     = { culture = russian religion = orthodox size = 700 }
+    farmers     = { culture = ashkenazi religion = jewish size = 950 }
+    serfs       = { culture = ashkenazi religion = jewish size = 50 }
+    farmers     = { culture = russian religion = orthodox size = 280 }
+    serfs       = { culture = russian religion = orthodox size = 420 }
 }
 
 357 = {  # Jelgava
     clergymen = { culture = latvian religion = protestant size = 140 }
     artisans  = { culture = latvian religion = protestant size = 180 }
     soldiers  = { culture = latvian religion = protestant size = 900 }
-    farmers   = { culture = latvian religion = protestant size = 16000 }
+    farmers   = { culture = latvian religion = protestant size = 2400 }
+    serfs     = { culture = latvian religion = protestant size = 13600 }
 
     aristocrats = { culture = north_german religion = protestant size = 900 }
-    farmers     = { culture = ashkenazi religion = jewish size = 1000 }
+    farmers     = { culture = ashkenazi religion = jewish size = 950 }
+    serfs       = { culture = ashkenazi religion = jewish size = 50 }
 }
 
 358 = {  # Ventspils
     clergymen = { culture = latvian religion = protestant size = 140 }
     artisans  = { culture = latvian religion = protestant size = 200 }
     soldiers  = { culture = latvian religion = protestant size = 800 }
-    farmers   = { culture = latvian religion = protestant size = 16000 }
+    farmers   = { culture = latvian religion = protestant size = 3200 }
+    serfs     = { culture = latvian religion = protestant size = 12800 }
 
     aristocrats = { culture = north_german religion = protestant size = 900 }
-    farmers     = { culture = estonian religion = protestant size = 800 }
+    farmers     = { culture = estonian religion = protestant size = 120 }
+    serfs       = { culture = estonian religion = protestant size = 680 }
 }
 
 359 = {  # Liepaja
     clergymen = { culture = latvian religion = protestant size = 100 }
     artisans  = { culture = latvian religion = protestant size = 150 }
     soldiers  = { culture = latvian religion = protestant size = 800 }
-    farmers   = { culture = latvian religion = protestant size = 14000 }
+    farmers   = { culture = latvian religion = protestant size = 3080 }
+    serfs     = { culture = latvian religion = protestant size = 10920 }
 
     aristocrats = { culture = north_german religion = protestant size = 600 }
-    farmers     = { culture = ashkenazi religion = jewish size = 350 }
+    farmers     = { culture = ashkenazi religion = jewish size = 332 }
+    serfs       = { culture = ashkenazi religion = jewish size = 18 }
 }

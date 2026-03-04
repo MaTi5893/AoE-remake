@@ -1,0 +1,67 @@
+#LATVIA ADJUSTED FOR 1700
+
+354 = {  # Riga
+    bureaucrats = { culture = latvian religion = protestant size = 500 }
+    clergymen   = { culture = latvian religion = protestant size = 180 }
+    craftsmen   = { culture = latvian religion = protestant size = 7200 }
+    artisans    = { culture = latvian religion = protestant size = 900 }
+    soldiers    = { culture = latvian religion = protestant size = 4500 }
+    farmers     = { culture = latvian religion = protestant size = 23000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 420 }
+    artisans    = { culture = north_german religion = protestant size = 3200 }
+
+    artisans    = { culture = ashkenazi religion = jewish size = 1300 }
+    farmers     = { culture = ashkenazi religion = jewish size = 800 }
+}
+
+355 = {  # Valmiera
+    clergymen = { culture = latvian religion = protestant size = 650 }
+    artisans  = { culture = latvian religion = protestant size = 2000 }
+    soldiers  = { culture = latvian religion = protestant size = 3000 }
+    farmers   = { culture = latvian religion = protestant size = 53000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 700 }
+    farmers     = { culture = polish religion = catholic size = 3000 }
+}
+
+356 = {  # Daugavpils
+    clergymen = { culture = latvian religion = protestant size = 100 }
+    artisans  = { culture = latvian religion = protestant size = 400 }
+    soldiers  = { culture = latvian religion = protestant size = 900 }
+    farmers   = { culture = latvian religion = protestant size = 15000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 450 }
+    farmers     = { culture = ashkenazi religion = jewish size = 1000 }
+    farmers     = { culture = russian religion = orthodox size = 700 }
+}
+
+357 = {  # Jelgava
+    clergymen = { culture = latvian religion = protestant size = 140 }
+    artisans  = { culture = latvian religion = protestant size = 180 }
+    soldiers  = { culture = latvian religion = protestant size = 900 }
+    farmers   = { culture = latvian religion = protestant size = 16000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 900 }
+    farmers     = { culture = ashkenazi religion = jewish size = 1000 }
+}
+
+358 = {  # Ventspils
+    clergymen = { culture = latvian religion = protestant size = 140 }
+    artisans  = { culture = latvian religion = protestant size = 200 }
+    soldiers  = { culture = latvian religion = protestant size = 800 }
+    farmers   = { culture = latvian religion = protestant size = 16000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 900 }
+    farmers     = { culture = estonian religion = protestant size = 800 }
+}
+
+359 = {  # Liepaja
+    clergymen = { culture = latvian religion = protestant size = 100 }
+    artisans  = { culture = latvian religion = protestant size = 150 }
+    soldiers  = { culture = latvian religion = protestant size = 800 }
+    farmers   = { culture = latvian religion = protestant size = 14000 }
+
+    aristocrats = { culture = north_german religion = protestant size = 600 }
+    farmers     = { culture = ashkenazi religion = jewish size = 350 }
+}

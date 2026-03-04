@@ -1,0 +1,63 @@
+#ESTONIA ADJUSTED FOR 1700
+
+349 = {  # Tallinn/Reval
+    bureaucrats = { culture = estonian religion = protestant size = 290 }
+    clergymen   = { culture = estonian religion = protestant size = 200 }
+    craftsmen   = { culture = latvian  religion = protestant size = 7200 }
+    artisans    = { culture = estonian religion = protestant size = 430 }
+    soldiers    = { culture = estonian religion = protestant size = 5600 }
+    farmers     = { culture = estonian religion = protestant size = 17500 }
+
+    aristocrats = { culture = north_german religion = protestant size = 220 }
+    bureaucrats = { culture = north_german religion = protestant size = 45 }
+    officers    = { culture = north_german religion = protestant size = 70 }
+    clergymen   = { culture = north_german religion = protestant size = 30 }
+    artisans    = { culture = north_german religion = protestant size = 470 }
+    farmers     = { culture = north_german religion = protestant size = 800 }
+
+    farmers     = { culture = swedish religion = protestant size = 1500 }
+}
+
+350 = {  # Narva
+    clergymen = { culture = estonian religion = protestant size = 240 }
+    artisans  = { culture = estonian religion = protestant size = 1300 }
+    soldiers  = { culture = estonian religion = protestant size = 900 }
+    farmers   = { culture = estonian religion = protestant size = 18000 }
+
+    aristocrats = { culture = swedish religion = protestant size = 450 }
+    artisans    = { culture = russian religion = orthodox size = 60 }
+    farmers     = { culture = swedish religion = protestant size = 1000 }
+}
+
+351 = {  # Parnu
+    aristocrats = { culture = north_german religion = protestant size = 200 }
+    artisans    = { culture = north_german religion = protestant size = 310 }
+
+    clergymen = { culture = estonian religion = protestant size = 240 }
+    artisans  = { culture = estonian religion = protestant size = 360 }
+    soldiers  = { culture = estonian religion = protestant size = 1200 }
+    farmers   = { culture = estonian religion = protestant size = 10800 }
+}
+
+352 = {  # Tartu/Dorpat
+    aristocrats = { culture = north_german religion = protestant size = 200 }
+    artisans    = { culture = north_german religion = protestant size = 320 }
+    soldiers    = { culture = north_german religion = protestant size = 700 }
+
+    clergymen = { culture = estonian religion = protestant size = 210 }
+    artisans  = { culture = estonian religion = protestant size = 720 }
+    soldiers  = { culture = estonian religion = protestant size = 1800 }
+    farmers   = { culture = estonian religion = protestant size = 19200 }
+
+    farmers   = { culture = swedish religion = protestant size = 800 }
+}
+
+353 = {  # Kuressaare
+    aristocrats = { culture = north_german religion = protestant size = 40 }
+    artisans    = { culture = north_german religion = protestant size = 30 }
+
+    clergymen = { culture = estonian religion = protestant size = 30 }
+    artisans  = { culture = estonian religion = protestant size = 120 }
+    soldiers  = { culture = estonian religion = protestant size = 100 }
+    farmers   = { culture = estonian religion = protestant size = 2680 }
+}

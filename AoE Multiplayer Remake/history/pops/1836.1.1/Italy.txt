@@ -686,9 +686,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 2388
+        size = 1552
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 836
+    }
+	
     clergymen = {
         culture = north_italian
         religion = catholic
@@ -710,7 +716,13 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 31119
+        size = 20227
+    }
+	
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 10892
     }
 }
 #Bozen (92000/23000 POPS) #now part of Italy
@@ -742,9 +754,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 7744
+        size = 5034
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 2710
+    }
+	
     clergymen = {
         culture = north_italian
         religion = catholic
@@ -766,7 +784,13 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 2797
+        size = 1818
+    }
+	
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 979
     }
 }
 #Friuli-Istria Region (292000) #see Croatia.txt for balance of region
@@ -819,9 +843,15 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 1230
+        size = 1100
     }
 
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 280
+    }
+	
     clergymen = {
         culture = slovene
         religion = catholic
@@ -843,7 +873,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 3263
+        size = 2621
+    }
+	
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 642
     }
 }
 #Gorizia (180000/45000 POPS)
@@ -875,9 +911,15 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 5594
+        size = 3636
     }
 
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 1958
+    }
+	
     clergymen = {
         culture = slovene
         religion = catholic
@@ -899,7 +941,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 15734
+        size = 10227
+    }
+	
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 5507
     }
 }
 #Emilia Region (1120000)
@@ -2160,7 +2208,13 @@
     farmers = {
         culture = south_italian
         religion = catholic
-        size = 36724
+        size = 30724
+    }
+	
+	serfs = {
+        culture = south_italian
+        religion = catholic
+        size = 6697
     }
 }
 #Sassari (188000/47000 POPS)
@@ -2192,9 +2246,14 @@
     farmers = {
         culture = south_italian
         religion = catholic
-        size = 19697
+        size = 16697
     }
 
+	serfs = {
+        culture = south_italian
+        religion = catholic
+        size = 3697
+    }
 }
 #Cuneo
 1960 = {
@@ -2263,8 +2322,15 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 17742
+        size = 15742
     }
+	
+	serfs = {
+        culture = north_italian
+        religion = catholic
+        size = 2242
+    }
+	
 	farmers = {
         culture = occitan
         religion = catholic

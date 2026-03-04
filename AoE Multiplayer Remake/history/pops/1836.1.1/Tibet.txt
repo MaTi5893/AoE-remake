@@ -314,96 +314,77 @@
         size = 69175
     }
 }
-#Tawang (836000/209000 POPS) #now NEFA in India  asian_minor = Chin
+#Tawang/Mishmi
 1593 = {
-    aristocrats = {
-        culture = tibetan
-        religion = gelugpa
-        size = 2625
-    }
+	aristocrats = {
+		culture = asian_minor
+		religion = animist
+		size = 645
+	}
 
-    clergymen = {
-        culture = tibetan
-        religion = gelugpa
-        size = 1350
-    }
+	clergymen = {
+		culture = asian_minor
+		religion = animist
+		size = 645
+	}
+	
+	artisans = {
+		culture = asian_minor
+		religion = animist
+		size = 500
+	}
+	
+	soldiers = {
+		culture = asian_minor
+		religion = animist
+		size = 2620
+	}
+	
+	farmers = {
+		culture = asian_minor
+		religion = animist
+		size = 8120
+	}
+	
+	serfs = {
+		culture = asian_minor
+		religion = animist
+		size = 28590
+	}
+	
+	aristocrats = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 10
+	}
 
-    artisans = {
-        culture = tibetan
-        religion = gelugpa
-        size = 6600
-    }
+	clergymen = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 10
+	}
 
-    soldiers = {
-        culture = tibetan
-        religion = gelugpa
-        size = 1325
-    }
+	artisans = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 25
+	}
 
-    farmers = {
-        culture = tibetan
-        religion = gelugpa
-        size = 120100
-    }
+	soldiers = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 10
+	}
 
-    aristocrats = {
-        culture = kachin
-        religion = animist
-        size = 750
-    }
-
-    clergymen = {
-        culture = kachin
-        religion = animist
-        size = 400
-    }
-
-    artisans = {
-        culture = kachin
-        religion = animist
-        size = 1950
-    }
-
-    soldiers = {
-        culture = kachin
-        religion = animist
-        size = 350
-    }
-
-    farmers = {
-        culture = kachin
-        religion = animist
-        size = 35550
-    }
-
-    aristocrats = {
-        culture = asian_minor
-        religion = animist
-        size = 750
-    }
-
-    clergymen = {
-        culture = asian_minor
-        religion = animist
-        size = 375
-    }
-
-    artisans = {
-        culture = asian_minor
-        religion = animist
-        size = 1900
-    }
-
-    soldiers = {
-        culture = asian_minor
-        religion = animist
-        size = 375
-    }
-
-    farmers = {
-        culture = asian_minor
-        religion = animist
-        size = 34600
-    }
-
+	farmers = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 300
+	}
+	
+	serfs = {
+		culture = asian_minor
+		religion = gelugpa
+		size = 1000
+	}
 }

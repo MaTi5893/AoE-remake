@@ -1,0 +1,587 @@
+sprite = 13
+color = { 63 80 62 }
+strata = poor
+unemployment = yes
+
+allowed_to_vote = yes
+
+rebel = {
+	cavalry = 0
+	artillery = 0
+	cuirassier = 0
+	dragoon = 0
+	guard = 0
+	hussar = 0
+	infantry = 0
+	irregular = 1
+}
+
+#Total 11.5
+life_needs = {
+	cattle = 0.5	  #2.0
+	wool = 0.4 	  #0.7
+	fish = 0.5 	  #1.5
+	fruit = 0.75 	  #1.8
+	grain = 3  #5.5
+}
+
+everyday_needs = {
+	coal = 0.25
+	tobacco = 1
+	tea = 0.5
+	liquor = 0.5
+	regular_clothes = 1
+	furniture = 0.5
+	opium = 2
+	fertilizer = 0.5 #0
+	cotton = 1
+	cattle = 2
+	grain = 5
+}
+
+
+luxury_needs = {
+	regular_clothes = 2
+	furniture = 2
+	liquor = 1
+	wine = 0.5
+	coffee = 1
+	tobacco = 2
+	paper = 0.25
+	opium = 2
+	telephones = 0.25
+	radio = 0.25
+	steamer_convoy = 0.25
+	fruit = 2
+	machine_parts = 1
+	electric_gear = 0.25
+}
+
+country_migration_target = { factor = 0 }
+
+migration_target = { factor = 0 }
+	
+promote_to = {
+	farmers = {
+		factor = 0.01
+		modifier = {
+			factor = 100
+			NOT = { literacy = 0.1 }
+			serfs = 0.95
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.1
+			NOT = { literacy = 0.2 }
+			#NOT = { farmers = 0.10 }
+			serfs = 0.90
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.2
+			NOT = { literacy = 0.3 }
+			#NOT = { farmers = 0.20 }
+			serfs = 0.80
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.3
+			NOT = { literacy = 0.4 }
+			#NOT = { farmers = 0.30 }
+			serfs = 0.70
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.4
+			NOT = { literacy = 0.5 }
+			#NOT = { farmers = 0.40 }
+			serfs = 0.60
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.5
+			NOT = { literacy = 0.6 }
+			#NOT = { farmers = 0.50 }
+			serfs = 0.50
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.6
+			NOT = { literacy = 0.7 }
+			#NOT = { farmers = 0.60 }
+			serfs = 0.40
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.7
+			NOT = { literacy = 0.8 }
+			#NOT = { farmers = 0.60 }
+			serfs = 0.30
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.8
+			NOT = { literacy = 0.9 }
+			#NOT = { farmers = 0.80 }
+			serfs = 0.20
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.9
+			NOT = { literacy = 0.99 }
+			#NOT = { farmers = 0.90 }
+			serfs = 0.10
+		}
+		modifier = {
+			factor = 100
+			literacy = 0.99
+			#NOT = { farmers = 0.95 }
+			serfs = 0.05
+		}
+	}
+	soldiers =
+	{
+		factor = 0.01
+		modifier = {
+			factor = 30
+			military_spending = 0.1
+			NOT = { military_spending = 0.2 }
+			NOT = { soldiers = 0.005 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.2
+			NOT = { military_spending = 0.3 }
+			NOT = { soldiers = 0.010 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.3
+			NOT = { military_spending = 0.4 }
+			NOT = { soldiers = 0.015 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.4
+			NOT = { military_spending = 0.5 }
+			NOT = { soldiers = 0.020 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.5
+			NOT = { military_spending = 0.6 }
+			NOT = { soldiers = 0.025 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.6
+			NOT = { military_spending = 0.7 }
+			NOT = { soldiers = 0.030 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.7
+			NOT = { military_spending = 0.8 }
+			NOT = { soldiers = 0.035 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.8
+			NOT = { military_spending = 0.9 }
+			NOT = { soldiers = 0.040 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.9
+			NOT = { military_spending = 0.99 }
+			NOT = { soldiers = 0.045 }
+		}
+		modifier = {
+			factor = 30
+			military_spending = 0.99
+			NOT = { soldiers = 0.050 }
+		} 
+		modifier = {
+			factor = -50 #-500
+			soldiers = 0.050
+		}
+	}
+	craftsmen = {
+		factor = 0.01
+		modifier = {
+			factor = 50
+			literacy = 0.1
+			NOT = { literacy = 0.2 }
+			NOT = { craftsmen = 0.015 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.2
+			NOT = { literacy = 0.3 }
+			NOT = { craftsmen = 0.030 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.3
+			NOT = { literacy = 0.4 }
+			NOT = { craftsmen = 0.045 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.4
+			NOT = { literacy = 0.5 }
+			NOT = { craftsmen = 0.060 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.5
+			NOT = { literacy = 0.6 }
+			NOT = { craftsmen = 0.075 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.6
+			NOT = { literacy = 0.7 }
+			NOT = { craftsmen = 0.09 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.7
+			NOT = { literacy = 0.8 }
+			NOT = { craftsmen = 0.105 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.8
+			NOT = { literacy = 0.9 }
+			NOT = { craftsmen = 0.120 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.9
+			NOT = { literacy = 0.99 }
+			NOT = { craftsmen = 0.135 }
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.99
+			NOT = { craftsmen = 0.150 }
+		}
+		modifier = {
+			factor = -100
+			location = { is_colonial = yes }
+		}
+		modifier = {
+			factor = -50 #-500
+			craftsmen = 0.150
+		}
+	}
+	#clergymen =
+	#{
+	#	factor = 0.01
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.1
+	#		NOT = { education_spending = 0.2 }
+	#		NOT = { clergymen = 0.004 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.2
+	#		NOT = { education_spending = 0.3 }
+	#		NOT = { clergymen = 0.008 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.3
+	#		NOT = { education_spending = 0.4 }
+	#		NOT = { clergymen = 0.012 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.4
+	#		NOT = { education_spending = 0.5 }
+	#		NOT = { clergymen = 0.016 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.5
+	#		NOT = { education_spending = 0.6 }
+	#		NOT = { clergymen = 0.020 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.7
+	#		NOT = { education_spending = 0.8 }
+	#		NOT = { clergymen = 0.024 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.8
+	#		NOT = { education_spending = 0.9 }
+	#		NOT = { clergymen = 0.028 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.9
+	#		NOT = { education_spending = 0.99 }
+	#		NOT = { clergymen = 0.032 }
+	#	}
+	#	modifier = {
+	#		factor = 5
+	#		education_spending = 0.99
+	#		NOT = { clergymen = 0.036 }
+	#	}
+	#}
+}
+
+
+ideologies = {
+
+	conservative = { factor = 3 }
+	
+	reactionary = { factor = 3 }
+	
+	socialist = { factor = 5 
+		modifier = {
+			factor = 1.2
+			literacy = 0.6
+			}
+			
+		modifier = {
+			factor = 1.3
+			literacy = 0.7
+		}
+	
+	modifier = {
+	factor = 0.6
+		AND = {
+			NOT = {
+				OR = {
+					vote_franschise = universal_weighted_voting
+					vote_franschise = universal_voting
+				}
+			}
+			is_ideology_enabled = socialist
+		}
+		}
+	}
+
+	communist = { factor = 10
+		modifier = {
+			factor = 1.2
+			literacy = 0.6
+			}
+			
+		modifier = {
+			factor = 1.3
+			literacy = 0.7
+			}
+			
+		modifier = {
+			factor = 0.01
+			NOT = {	positivism = 1	}
+		}
+		modifier = {
+			factor = 0.5
+			positivism = 1
+			NOT = {	nationalism_n_imperialism = 1}
+		}
+		
+		modifier = {
+			factor = 0.6
+			AND = {
+				NOT = {
+					OR = {
+						vote_franschise = universal_weighted_voting
+						vote_franschise = universal_voting
+					}
+				}
+				is_ideology_enabled = communist
+			}
+		}
+		
+		modifier = {
+			factor = 1.8
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+				}
+			}
+		
+		modifier = {
+			factor = 1.1
+			consciousness = 6
+			}
+		modifier = {
+			factor = 1.1
+			consciousness = 7
+			}
+		modifier = {
+			factor = 1.3
+			consciousness = 8
+			}
+		modifier = {
+			factor = 1.5
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.5
+			war_exhaustion = 0.7
+		}
+	}
+	
+	liberal = { 
+		factor = 5 
+		modifier = {
+			factor = 0.05
+			NOT = {	positivism = 1	}
+		}
+		modifier = {
+			factor = 0.5
+			positivism = 1
+			NOT = {	nationalism_n_imperialism = 1}
+		}
+		modifier = {
+			factor = 0.5
+			is_ideology_enabled = communist
+		}
+		
+		modifier = {
+			factor = 1.2
+			literacy = 0.6
+		}
+		
+		modifier = {
+			factor = 1.3
+			literacy = 0.7
+			}
+		
+		modifier = {
+			factor = 0.6
+			AND = {
+				NOT = {
+					OR = {
+						vote_franschise = universal_weighted_voting
+						vote_franschise = universal_voting
+					}
+				}
+				is_ideology_enabled = socialist
+			}
+		}
+		
+		modifier = {
+			factor = 1.8
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+				}
+			}
+		
+		modifier = {
+			factor = 1.1
+			consciousness = 6
+			}
+		modifier = {
+			factor = 1.1
+			consciousness = 7
+			}
+		modifier = {
+			factor = 1.3
+			consciousness = 8
+			}
+		modifier = {
+			factor = 1.5
+			consciousness = 9
+			}
+	}
+}
+
+issues = {
+
+	moralism = { 
+	factor = 2
+	
+	modifier = {
+		factor = 0
+		is_state_religion = no
+		}
+	}
+	
+	pluralism = {
+	factor = 1 
+	
+	modifier = {
+		factor = 0
+		is_state_religion = yes
+		}
+	}
+
+	interventionism = {
+	factor = 2
+	}
+	
+	protectionism = {
+	factor = 1
+	}
+	
+	anti_military = {
+	factor = 1.1
+	}
+	
+	peonage = {
+	factor = 1
+	
+	modifier = {
+		factor = 0
+		OR = {
+		NOT = { is_next_reform = peonage }
+		country = {	civilized = no }
+		}
+	}
+	
+	modifier = {
+		factor = 1.4
+		OR = {
+		pop_majority_ideology = liberal
+		pop_majority_ideology = socialist
+		pop_majority_ideology = communist
+			}
+		}
+	
+	modifier = {
+		factor = 1.4
+		literacy = 0.6
+		}
+	
+	modifier = {
+		factor = 1.4
+		literacy = 0.7
+		}
+	
+	modifier = {
+		factor = 1.8
+		OR = {
+			vote_franschise = universal_weighted_voting
+			vote_franschise = universal_voting
+		}
+	}
+	
+	modifier = {
+		factor = 1.1
+		consciousness = 6
+		}
+	modifier = {
+		factor = 1.1
+		consciousness = 7
+		}
+	modifier = {
+		factor = 1.3
+		consciousness = 8
+		}
+	modifier = {
+		factor = 2
+		consciousness = 9
+		}
+	}
+}

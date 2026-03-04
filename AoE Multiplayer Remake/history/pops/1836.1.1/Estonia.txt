@@ -6,27 +6,32 @@
     craftsmen   = { culture = latvian  religion = protestant size = 7200 }
     artisans    = { culture = estonian religion = protestant size = 430 }
     soldiers    = { culture = estonian religion = protestant size = 5600 }
-    farmers     = { culture = estonian religion = protestant size = 17500 }
+    farmers     = { culture = estonian religion = protestant size = 2625 }
+    serfs       = { culture = estonian religion = protestant size = 14875 }
 
     aristocrats = { culture = north_german religion = protestant size = 220 }
     bureaucrats = { culture = north_german religion = protestant size = 45 }
     officers    = { culture = north_german religion = protestant size = 70 }
     clergymen   = { culture = north_german religion = protestant size = 30 }
     artisans    = { culture = north_german religion = protestant size = 470 }
-    farmers     = { culture = north_german religion = protestant size = 800 }
+    farmers     = { culture = north_german religion = protestant size = 720 }
+    serfs       = { culture = north_german religion = protestant size = 80 }
 
-    farmers     = { culture = swedish religion = protestant size = 1500 }
+    farmers     = { culture = swedish religion = protestant size = 900 }
+    serfs       = { culture = swedish religion = protestant size = 600 }
 }
 
 350 = {  # Narva
     clergymen = { culture = estonian religion = protestant size = 240 }
     artisans  = { culture = estonian religion = protestant size = 1300 }
     soldiers  = { culture = estonian religion = protestant size = 900 }
-    farmers   = { culture = estonian religion = protestant size = 18000 }
+    farmers   = { culture = estonian religion = protestant size = 2700 }
+    serfs     = { culture = estonian religion = protestant size = 15300 }
 
     aristocrats = { culture = swedish religion = protestant size = 450 }
     artisans    = { culture = russian religion = orthodox size = 60 }
-    farmers     = { culture = swedish religion = protestant size = 1000 }
+    farmers     = { culture = swedish religion = protestant size = 550 }
+    serfs       = { culture = swedish religion = protestant size = 450 }
 }
 
 351 = {  # Parnu
@@ -36,7 +41,8 @@
     clergymen = { culture = estonian religion = protestant size = 240 }
     artisans  = { culture = estonian religion = protestant size = 360 }
     soldiers  = { culture = estonian religion = protestant size = 1200 }
-    farmers   = { culture = estonian religion = protestant size = 10800 }
+    farmers   = { culture = estonian religion = protestant size = 1296 }
+    serfs     = { culture = estonian religion = protestant size = 9504 }
 }
 
 352 = {  # Tartu/Dorpat
@@ -47,9 +53,11 @@
     clergymen = { culture = estonian religion = protestant size = 210 }
     artisans  = { culture = estonian religion = protestant size = 720 }
     soldiers  = { culture = estonian religion = protestant size = 1800 }
-    farmers   = { culture = estonian religion = protestant size = 19200 }
+    farmers   = { culture = estonian religion = protestant size = 2304 }
+    serfs     = { culture = estonian religion = protestant size = 16896 }
 
-    farmers   = { culture = swedish religion = protestant size = 800 }
+    farmers   = { culture = swedish religion = protestant size = 480 }
+    serfs     = { culture = swedish religion = protestant size = 320 }
 }
 
 353 = {  # Kuressaare
@@ -59,5 +67,6 @@
     clergymen = { culture = estonian religion = protestant size = 30 }
     artisans  = { culture = estonian religion = protestant size = 120 }
     soldiers  = { culture = estonian religion = protestant size = 100 }
-    farmers   = { culture = estonian religion = protestant size = 2680 }
+    farmers   = { culture = estonian religion = protestant size = 804 }
+    serfs     = { culture = estonian religion = protestant size = 1876 }
 }

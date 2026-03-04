@@ -493,82 +493,22 @@ navy = {
     location = 303
     ship = {
         name= "HMS Royal George"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
         name= "HMS Royal William"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
         name= "HMS Russell"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
         name= "HMS Talavera"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Thunderer"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Vanguard"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Vengeance"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Waterloo"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS America"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Castor"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Medway"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Mulgrave"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Pembroke"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Queen Charlotte"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Scarborough"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Stirling Castle"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
@@ -576,6 +516,11 @@ navy = {
         type = manowar
     }
 
+	ship = {
+        name= "HMS Vengeance"
+        type = manowar
+    }
+	
     ship = {
         name= "HMS Laurel"
         type = frigate
@@ -727,46 +672,6 @@ navy = {
     }
 
     ship = {
-        name= "HMS Proserpine"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Salamander"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Africaine"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Cerberus"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Nemesis"
-        type = frigate
-    }
-
-    ship = {
-        name= "HMS Saint Vincent"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Wellesley"
-        type = manowar
-    }
-
-    ship = {
-        name= "HMS Aeolus"
-        type = frigate
-    }
-
-    ship = {
         name= "1st Transport Flotilla"
         type = clipper_transport
     }
@@ -802,27 +707,87 @@ navy = {
     }
     ship = {
         name= "24th Transport Flotilla"
-        type = clipper_transport
+        type = steam_transport
     }
     ship = {
         name= "25th Transport Flotilla"
-        type = clipper_transport
+        type = steam_transport
     }
     ship = {
         name= "26th Transport Flotilla"
-        type = clipper_transport
+        type = steam_transport
     }
 
     ship = {
         name= "7th Transport Flotilla"
-        type = clipper_transport
+        type = steam_transport
     }
 
     ship = {
         name= "8th Transport Flotilla"
-        type = clipper_transport
+        type = steam_transport
     }
+}
+
+navy = {
+    name = "Mediterranean Squadron"
+    location = 299
+	ship = {
+        name= "HMS Thunderer"
+        type = manowar
+    }
+
     ship = {
+        name= "HMS Vanguard"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Vengeance"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS Waterloo"
+        type = manowar
+    }
+
+    ship = {
+        name= "HMS America"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Proserpine"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Salamander"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Africaine"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Cerberus"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Nemesis"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Saint Vincent"
+        type = manowar
+    }
+	
+	ship = {
         name= "9th Transport Flotilla"
         type = clipper_transport
     }
@@ -848,5 +813,77 @@ navy = {
     ship = {
         name= "22th Transport Flotilla"
         type = clipper_transport
+    }
+}
+
+navy = {
+    name = "East Indies Squadron"
+    location = 1251
+	ship = {
+        name= "HMS Castor"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Medway"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Mulgrave"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Castor"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Medway"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Mulgrave"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Castor"
+        type = frigate
+    }
+
+    ship = {
+        name= "HMS Medway"
+        type = frigate
+    }
+
+	ship = {
+        name= "9th Transport Flotilla"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "10th Transport Flotilla"
+        type = steam_transport
+    }
+    ship = {
+        name= "19th Transport Flotilla"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "20th Transport Flotilla"
+        type = steam_transport
+    }
+    ship = {
+        name= "21th Transport Flotilla"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "22th Transport Flotilla"
+        type = steam_transport
     }
 }

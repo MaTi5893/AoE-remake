@@ -1,7 +1,8 @@
-owner = SPA
-controller = SPA
-add_core = SPA
+owner = ARN
+controller = ARN
 add_core = CAT
+add_core = SPA
+add_core = ARN
 trade_goods = cattle
 life_rating = 35
 naval_base = 1
@@ -30,4 +31,5 @@ owner = SPC
 controller = SPC
 add_core = SPC
 remove_core = SPA
+remove_core = ARN
 }

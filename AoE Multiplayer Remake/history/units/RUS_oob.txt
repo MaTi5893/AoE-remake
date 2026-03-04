@@ -459,19 +459,29 @@ army = {
 }
 
 navy = {
-    name = "Azov Naval Flotilla"
-    location = 1047
+    name = "Baltic Fleet"
+    location = 995
    
+	ship = {
+        name = "Azov"
+        type = manowar
+    }
+
     ship = {
-        name = "Prints Gustav"
+        name = "Rossiya"
+        type = manowar
+    }
+	
+	ship = {
+        name = "Azov"
         type = frigate
     }
 
     ship = {
-        name = "Ne Tron Menya"
+        name = "Rossiya"
         type = frigate
     }
-
+	
     ship = {
         name = "Azov"
         type = frigate
@@ -484,14 +494,235 @@ navy = {
 
     ship = {
         name = "Saratov"
-        type = frigate
+        type = galley
     }
 
     ship = {
         name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+    ship = {
+		name= "1. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3. Transportnaya Flotiliya"
+		type = clipper_transport
+	}
+
+}
+
+navy = {
+    name = "Azov Naval Flotilla"
+    location = 1047
+   
+    ship = {
+        name = "Azov"
         type = frigate
     }
 
+    ship = {
+        name = "Rossiya"
+        type = frigate
+    }
+
+    ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
+	ship = {
+        name = "Saratov"
+        type = galley
+    }
+
+    ship = {
+        name = "Blagodat'"
+        type = galley
+    }
+
+	ship = {
+        name = "Prints Gustav"
+        type = galley
+    }
+
+    ship = {
+        name = "Ne Tron Menya"
+        type = galley
+    }
+	
     ship = {
 		name= "1. Transportnaya Flotiliya"
 		type = clipper_transport

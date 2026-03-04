@@ -41,9 +41,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 31240
+        size = 19190
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 12060
+    }
 }
 #Salzburg (136000/34000 POPS)
 613 = {
@@ -74,9 +79,26 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 23714
+        size = 15063
     }
 
+	farmers = {
+        culture = south_german
+        religion = protestant
+        size = 4680
+    }
+	
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 4690
+    }
+	
+	serfs = {
+        culture = south_german
+        religion = protestant
+        size = 2390
+    }
 }
 #Bregenz (132000/33000 POPS)
 614 = {
@@ -107,9 +129,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 19057
+        size = 12482
     }
-
+	
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 6575
+    }
 }
 #Lienz (52000/13000 POPS)
 615 = {
@@ -140,9 +167,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 11668
+        size = 8585
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 3084
+    }
 }
 #Carinthia-Styria Region (736000) #see Slovenia.txt for balance of Region
 #under the rule of Austria in 1836
@@ -187,9 +219,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 37893
+        size = 13845
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 24055
+    }
 }
 #Judenburg (168000/42000 POPS)
 617 = {
@@ -217,10 +254,16 @@
         size = 2470
     }
 
-    farmers = {
+	farmers = {
         culture = south_german
         religion = catholic
-        size = 27584
+        size = 11172
+    }
+	
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 16413
     }
 
 }
@@ -253,9 +296,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 22152
+        size = 9184
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 12968
+    }
+	
     clergymen = {
         culture = slovene
         religion = catholic
@@ -277,9 +326,14 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 7790
+        size = 2285
     }
 
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 5506
+    }
 }
 #Austria Region (2000000)
 #under the rule of Austria in 1836
@@ -330,9 +384,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 87350
+        size = 40043
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 47308
+    }
+	
     clergymen = {
         culture = czech
         religion = catholic
@@ -405,9 +465,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 18011
+        size = 7906
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 10105
+    }
 }
 #Krems (240000/60000 POPS)
 621 = {
@@ -438,9 +503,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 34470
+        size = 14959
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 19512
+    }
 }
 #Linz (588000/147000 POPS)
 622 = {
@@ -471,9 +541,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 60955
+        size = 27525
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 33430
+    }
+	
     craftsmen = {
         culture = south_german
         religion = catholic
@@ -512,9 +588,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 19583
+        size = 6771
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 12812
+    }
+	
     clergymen = {
         culture = hungarian
         religion = catholic
@@ -560,7 +642,12 @@
     farmers = {
         culture = hungarian
         religion = protestant
-        size = 662
+        size = 364
     }
 
+	serfs = {
+        culture = hungarian
+        religion = protestant
+        size = 298
+    }
 }

@@ -24,10 +24,15 @@
     farmers = {
         culture = swedish
         religion = protestant
-        size = 3249
+        size = 487
     }
 
-    officers = {
+    serfs = {
+        culture = swedish
+        religion = protestant
+        size = 2762
+    }
+officers = {
         culture = north_german
         religion = protestant
         size = 179
@@ -54,10 +59,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 55408
+        size = 8311
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 47097
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 12
@@ -90,9 +100,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 435
+        size = 65
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 370
+    }
 }
 #Stargard (8000/2000 POPS)
 2414 = {
@@ -124,9 +139,14 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 14609
+        size = 2191
     }
 
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 12418
+    }
 }
 #Kolberg (160000/40000 POPS) #Part of Poland since 1945
 679 = {
@@ -158,10 +178,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 11970
+        size = 1796
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 10174
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 17
@@ -182,9 +207,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 640
+        size = 96
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 544
+    }
 }
 #Koslin (160000/40000 POPS) #Part of Poland since 1945
 680 = {
@@ -216,10 +246,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 8207
+        size = 1231
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 6976
+    }
+clergymen = {
         culture = north_german
         religion = catholic
         size = 34
@@ -240,10 +275,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 3527
+        size = 529
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 2998
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 17
@@ -264,9 +304,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 628
+        size = 94
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 534
+    }
 }
 #Brandenburg Region (208000) #see Poland.txt for balance of region
 #under the rule of Prussia 1836
@@ -300,10 +345,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 22524
+        size = 5631
     }
 
-    artisans = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 16893
+    }
+artisans = {
         culture = north_german
         religion = jewish
         size = 62
@@ -384,10 +434,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 53704
+        size = 18796
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 34908
+    }
+clergymen = {
         culture = north_german
         religion = catholic
         size = 88
@@ -408,10 +463,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 8009
+        size = 2803
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 5206
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 13
@@ -444,10 +504,15 @@
     farmers = {
         culture = north_german
         religion = jewish
-        size = 230
+        size = 80
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = jewish
+        size = 150
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 175
@@ -468,9 +533,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 31572
+        size = 11050
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 20522
+    }
 }
 #Liegnitz (484000/121000 POPS)
 683 = {
@@ -502,10 +572,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 52025
+        size = 13006
     }
 
-    craftsmen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 39019
+    }
+craftsmen = {
         culture = north_german
         religion = protestant
         size = 428
@@ -532,10 +607,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 1917
+        size = 479
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 1438
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 44
@@ -556,10 +636,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 2408
+        size = 602
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 1806
+    }
+clergymen = {
         culture = czech
         religion = catholic
         size = 7
@@ -580,9 +665,14 @@
     farmers = {
         culture = czech
         religion = catholic
-        size = 483
+        size = 121
     }
 
+    serfs = {
+        culture = czech
+        religion = catholic
+        size = 362
+    }
 }
 #Oppeln (492000/123000 POPS)
 684 = {
@@ -614,10 +704,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 16731
+        size = 2510
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 14221
+    }
+clergymen = {
         culture = north_german
         religion = catholic
         size = 64
@@ -638,10 +733,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 6718
+        size = 1008
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 5710
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 13
@@ -662,10 +762,15 @@
     farmers = {
         culture = north_german
         religion = jewish
-        size = 440
+        size = 66
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = jewish
+        size = 374
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 316
@@ -686,10 +791,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 30013
+        size = 4502
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 25511
+    }
+clergymen = {
         culture = czech
         religion = catholic
         size = 26
@@ -710,9 +820,14 @@
     farmers = {
         culture = czech
         religion = catholic
-        size = 1925
+        size = 289
     }
 
+    serfs = {
+        culture = czech
+        religion = catholic
+        size = 1636
+    }
 }
 #Kattowitz (452000/113000 POPS)
 685 = {
@@ -744,10 +859,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 3928
+        size = 589
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 3339
+    }
+clergymen = {
         culture = north_german
         religion = catholic
         size = 89
@@ -768,10 +888,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 9092
+        size = 1364
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 7728
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 342
@@ -792,10 +917,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 35106
+        size = 5266
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 29840
+    }
+clergymen = {
         culture = czech
         religion = catholic
         size = 26
@@ -816,9 +946,14 @@
     farmers = {
         culture = czech
         religion = catholic
-        size = 4850
+        size = 728
     }
 
+    serfs = {
+        culture = czech
+        religion = catholic
+        size = 4122
+    }
 }
 #under the rule of Austria in 1836
 #Bielsko (204000/52000 POPS) #now part of Poland
@@ -857,10 +992,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 23792
+        size = 3569
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 20223
+    }
+clergymen = {
         culture = south_german
         religion = catholic
         size = 26
@@ -881,9 +1021,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 874
+        size = 131
     }
 
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 743
+    }
 }
 #West Prussia Region (688000)
 #under the rule of Prussia in 1836
@@ -929,10 +1074,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 4023
+        size = 603
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 3420
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 2
@@ -965,9 +1115,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 2370
+        size = 356
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 2014
+    }
 }
 #Tuchel (180000/45000 POPS)
 691 = {
@@ -999,10 +1154,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 12946
+        size = 1942
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 11004
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 33
@@ -1023,10 +1183,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 483
+        size = 72
     }
 
-    artisans = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 411
+    }
+artisans = {
         culture = polish
         religion = catholic
         size = 166
@@ -1041,9 +1206,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 8623
+        size = 1293
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 7330
+    }
 }
 #Deutsche Krone (128000/32000 POPS)
 692 = {
@@ -1075,10 +1245,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 8129
+        size = 1219
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 6910
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 25
@@ -1099,9 +1274,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 6557
+        size = 984
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 5573
+    }
 }
 #Elbing (148000/37000 POPS)
 693 = {
@@ -1133,10 +1313,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 9328
+        size = 1399
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 7929
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 38
@@ -1157,9 +1342,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 6934
+        size = 1040
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 5894
+    }
 }
 #Torun (156000/44000 POPS)
 694 = {
@@ -1191,10 +1381,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 7248
+        size = 1087
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 6161
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 2
@@ -1227,10 +1422,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 965
+        size = 145
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 820
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 115
@@ -1251,9 +1451,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 12585
+        size = 1888
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 10697
+    }
 }
 #East Prussia Region (396000) #see Russia.txt and Lithuania.txt for balance of region
 #under the rule of Prussia in 1836
@@ -1287,10 +1492,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 25985
+        size = 3898
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 22087
+    }
+clergymen = {
         culture = polish
         religion = protestant
         size = 165
@@ -1311,10 +1521,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 16846
+        size = 2527
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 14319
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 38
@@ -1335,9 +1550,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 2391
+        size = 359
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 2032
+    }
 }
 #Posen-Wielkopolska Region (1704000)
 #under the rule of Prussia in 1836
@@ -1383,10 +1603,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 14103
+        size = 2115
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 11988
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 419
@@ -1407,10 +1632,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 47633
+        size = 7145
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 40488
+    }
+clergymen = {
         culture = polish
         religion = jewish
         size = 12
@@ -1459,10 +1689,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 10634
+        size = 1595
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 9039
+    }
+clergymen = {
         culture = polish
         religion = catholic
         size = 132
@@ -1483,10 +1718,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 15366
+        size = 2305
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 13061
+    }
+clergymen = {
         culture = polish
         religion = jewish
         size = 10
@@ -1535,10 +1775,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 6380
+        size = 957
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 5423
+    }
+clergymen = {
         culture = north_german
         religion = catholic
         size = 48
@@ -1559,10 +1804,15 @@
     farmers = {
         culture = north_german
         religion = catholic
-        size = 4945
+        size = 742
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = catholic
+        size = 4203
+    }
+clergymen = {
         culture = north_german
         religion = jewish
         size = 12
@@ -1601,9 +1851,14 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 47492
+        size = 7124
     }
 
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 40368
+    }
 }
 #under the rule of Russia in 1836 (496000)
 #Lodz (244000/61000 POPS)
@@ -1648,10 +1903,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 19389
+        size = 2908
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 16481
+    }
+clergymen = {
         culture = polish
         religion = protestant
         size = 36
@@ -1672,10 +1932,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 4958
+        size = 744
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 4214
+    }
+clergymen = {
         culture = north_german
         religion = protestant
         size = 36
@@ -1696,10 +1961,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 1967
+        size = 295
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 1672
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 24
@@ -1754,10 +2024,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 24623
+        size = 3693
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 20930
+    }
+clergymen = {
         culture = polish
         religion = protestant
         size = 24
@@ -1778,10 +2053,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 1475
+        size = 221
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 1254
+    }
+clergymen = {
         culture = north_german
         religion = protestant
         size = 24
@@ -1802,10 +2082,15 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 1981
+        size = 297
     }
 
-    clergymen = {
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 1684
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 36
@@ -1880,10 +2165,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 44695
+        size = 15643
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 29052
+    }
+clergymen = {
         culture = ukrainian
         religion = orthodox
         size = 36
@@ -1904,10 +2194,15 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 1967
+        size = 688
     }
 
-    clergymen = {
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 1279
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 36
@@ -1952,9 +2247,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 489
+        size = 171
     }
 
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 318
+    }
 }
 #under the rule of Austria in 1836
 #Novy Sacz (596000/149000 POPS)
@@ -1999,10 +2299,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 54621
+        size = 8193
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 46428
+    }
+clergymen = {
         culture = ukrainian
         religion = orthodox
         size = 84
@@ -2023,10 +2328,15 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 9677
+        size = 1452
     }
 
-    clergymen = {
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 8225
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -2071,9 +2381,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 970
+        size = 146
     }
 
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 824
+    }
 }
 #Tarnow (616000/154000 POPS)
 714 = {
@@ -2105,10 +2420,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 69661
+        size = 10449
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 59212
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 36
@@ -2153,9 +2473,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 489
+        size = 73
     }
 
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 416
+    }
 }
 #under the rule of Russia in 1836 (1368000)
 #Radom (444000/111000 POPS)
@@ -2200,10 +2525,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 46602
+        size = 6990
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 39612
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -2258,10 +2588,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 39966
+        size = 5995
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 33971
+    }
+clergymen = {
         culture = ukrainian
         religion = orthodox
         size = 96
@@ -2282,10 +2617,15 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 10886
+        size = 1633
     }
 
-    clergymen = {
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 9253
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -2340,10 +2680,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 46982
+        size = 7047
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 39935
+    }
+clergymen = {
         culture = polish
         religion = protestant
         size = 7
@@ -2364,10 +2709,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 306
+        size = 46
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 260
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -2418,10 +2768,15 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 9411
+        size = 1412
     }
 
-    aristocrats = {
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 7999
+    }
+aristocrats = {
         culture = polish
         religion = catholic
         size = 1265
@@ -2448,10 +2803,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 60096
+        size = 9014
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 51082
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -2496,9 +2856,14 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 970
+        size = 146
     }
 
+    serfs = {
+        culture = south_german
+        religion = catholic
+        size = 824
+    }
 }
 #Mazovia Region (2224000)
 #under the rule of Russia in 1836
@@ -2550,10 +2915,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 79883
+        size = 27959
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 51924
+    }
+clergymen = {
         culture = polish
         religion = protestant
         size = 36
@@ -2574,10 +2944,15 @@
     farmers = {
         culture = polish
         religion = protestant
-        size = 1276
+        size = 447
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = protestant
+        size = 829
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 96
@@ -2622,9 +2997,14 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 1808
+        size = 633
     }
 
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 1175
+    }
 }
 #Suwalki (196000/49000 POPS)
 707 = {
@@ -2656,10 +3036,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 18674
+        size = 2801
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 15873
+    }
+clergymen = {
         culture = lithuanian
         religion = catholic
         size = 36
@@ -2680,10 +3065,15 @@
     farmers = {
         culture = lithuanian
         religion = catholic
-        size = 2459
+        size = 369
     }
 
-    clergymen = {
+    serfs = {
+        culture = lithuanian
+        religion = catholic
+        size = 2090
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 24
@@ -2738,10 +3128,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 42302
+        size = 6345
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 35957
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 36
@@ -2786,9 +3181,14 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 1430
+        size = 214
     }
 
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 1216
+    }
 }
 #Lomza (200000/50000 POPS)
 709 = {
@@ -2820,10 +3220,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 20590
+        size = 3088
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 17502
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 24
@@ -2878,10 +3283,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 45371
+        size = 6806
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 38565
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 48
@@ -2926,9 +3336,14 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 904
+        size = 136
     }
 
+    serfs = {
+        culture = north_german
+        religion = protestant
+        size = 768
+    }
 }
 #Dobrzyn (140000/35000 POPS)
 1845 = {
@@ -2960,10 +3375,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 12957
+        size = 1944
     }
 
-    slaves = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 11013
+    }
+slaves = {
         culture = polish
         religion = catholic
         size = 4253
@@ -3006,10 +3426,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 50336
+        size = 12584
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 37752
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 60
@@ -3060,10 +3485,15 @@
     farmers = {
         culture = ukrainian
         religion = orthodox
-        size = 15985
+        size = 2398
     }
 
-    aristocrats = {
+    serfs = {
+        culture = ukrainian
+        religion = orthodox
+        size = 13587
+    }
+aristocrats = {
         culture = polish
         religion = catholic
         size = 707
@@ -3090,10 +3520,15 @@
     farmers = {
         culture = polish
         religion = catholic
-        size = 2964
+        size = 445
     }
 
-    clergymen = {
+    serfs = {
+        culture = polish
+        religion = catholic
+        size = 2519
+    }
+clergymen = {
         culture = ukrainian
         religion = catholic
         size = 108
@@ -3114,10 +3549,15 @@
     farmers = {
         culture = ukrainian
         religion = catholic
-        size = 15007
+        size = 2251
     }
 
-    clergymen = {
+    serfs = {
+        culture = ukrainian
+        religion = catholic
+        size = 12756
+    }
+clergymen = {
         culture = ashkenazi
         religion = jewish
         size = 36

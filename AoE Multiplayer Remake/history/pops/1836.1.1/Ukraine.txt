@@ -21,10 +21,25 @@
         }
 
     farmers = {
-            culture = romanian
-            religion = orthodox
-            size = 3305
-        }
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 496
+
+    }
+
+
+    serfs = {
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 2809
+
+    }
 
     clergymen = {
             culture = ukrainian
@@ -45,16 +60,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 6839
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 1026
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 5813
+
+    }
 
     farmers = {
-            culture = armenian
-            religion = orthodox
-            size = 35
-        }
+
+        culture = armenian
+
+        religion = orthodox
+
+        size = 5
+
+    }
+
+
+    serfs = {
+
+        culture = armenian
+
+        religion = orthodox
+
+        size = 30
+
+    }
 
     aristocrats = {
             culture = polish
@@ -93,10 +138,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 1336
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 200
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1136
+
+    }
 
     bureaucrats = {
             culture = south_german
@@ -129,10 +189,25 @@
         }
 
     farmers = {
-            culture = south_german
-            religion = catholic
-            size = 929
-        }
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 139
+
+    }
+
+
+    serfs = {
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 790
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -153,10 +228,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 816
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 122
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 694
+
+    }
 
 }
 #Bessarabia Region (332000) #see Moldova.txt for balance of Region
@@ -164,10 +254,16 @@
 #Ismail (332000/83000 POPS)
 678 = {
     farmers = {
-            culture = gypsy
-            religion = orthodox
-            size = 40
-        }
+        culture = gypsy
+        religion = orthodox
+        size = 6
+    }
+
+    farmers = {
+        culture = gypsy
+        religion = orthodox
+        size = 34
+    }
 
     aristocrats = {
             culture = romanian
@@ -194,10 +290,25 @@
         }
 
     farmers = {
-            culture = romanian
-            religion = orthodox
-            size = 17517
-        }
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 2628
+
+    }
+
+
+    farmers = {
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 14889
+
+    }
 
     artisans = {
             culture = armenian
@@ -224,10 +335,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2174
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 326
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1848
+
+    }
 
     clergymen = {
             culture = bulgarian
@@ -248,16 +374,46 @@
         }
 
     farmers = {
-            culture = bulgarian
-            religion = orthodox
-            size = 7911
-        }
+
+        culture = bulgarian
+
+        religion = orthodox
+
+        size = 1187
+
+    }
+
 
     farmers = {
-            culture = albanian
-            religion = orthodox
-            size = 269
-        }
+
+        culture = bulgarian
+
+        religion = orthodox
+
+        size = 6724
+
+    }
+
+    farmers = {
+
+        culture = albanian
+
+        religion = orthodox
+
+        size = 40
+
+    }
+
+
+    farmers = {
+
+        culture = albanian
+
+        religion = orthodox
+
+        size = 229
+
+    }
 
     clergymen = {
             culture = ukrainian
@@ -278,10 +434,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 3591
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 539
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3052
+
+    }
 
     clergymen = {
             culture = tatar
@@ -302,10 +473,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 7581
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 1137
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 6444
+
+    }
 
     clergymen = {
             culture = turkish
@@ -326,10 +512,25 @@
         }
 
     farmers = {
-            culture = turkish
-            religion = orthodox
-            size = 1107
-        }
+
+        culture = turkish
+
+        religion = orthodox
+
+        size = 166
+
+    }
+
+
+    farmers = {
+
+        culture = turkish
+
+        religion = orthodox
+
+        size = 941
+
+    }
 
 }
 #Felvidek Region (856000) #see Hungary.txt and Slovakia.txt for balance of Region
@@ -355,10 +556,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 16948
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2542
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 14406
+
+    }
 
     clergymen = {
             culture = slovak
@@ -379,10 +595,25 @@
         }
 
     farmers = {
-            culture = slovak
-            religion = catholic
-            size = 3326
-        }
+
+        culture = slovak
+
+        religion = catholic
+
+        size = 499
+
+    }
+
+
+    serfs = {
+
+        culture = slovak
+
+        religion = catholic
+
+        size = 2827
+
+    }
 
     aristocrats = {
             culture = hungarian
@@ -409,10 +640,25 @@
         }
 
     farmers = {
-            culture = hungarian
-            religion = catholic
-            size = 7508
-        }
+
+        culture = hungarian
+
+        religion = catholic
+
+        size = 1126
+
+    }
+
+
+    serfs = {
+
+        culture = hungarian
+
+        religion = catholic
+
+        size = 6382
+
+    }
 
     clergymen = {
             culture = hungarian
@@ -433,10 +679,25 @@
         }
 
     farmers = {
-            culture = hungarian
-            religion = protestant
-            size = 8185
-        }
+
+        culture = hungarian
+
+        religion = protestant
+
+        size = 1228
+
+    }
+
+
+    serfs = {
+
+        culture = hungarian
+
+        religion = protestant
+
+        size = 6957
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -457,10 +718,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 646
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 97
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 549
+
+    }
 
     clergymen = {
             culture = north_german
@@ -481,10 +757,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = protestant
-            size = 183
-        }
+
+        culture = north_german
+
+        religion = protestant
+
+        size = 27
+
+    }
+
+
+    serfs = {
+
+        culture = north_german
+
+        religion = protestant
+
+        size = 156
+
+    }
 
     clergymen = {
             culture = romanian
@@ -499,10 +790,25 @@
         }
 
     farmers = {
-            culture = romanian
-            religion = orthodox
-            size = 2937
-        }
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 441
+
+    }
+
+
+    serfs = {
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 2496
+
+    }
 
 }
 #Galicia Region (2576000) #see Poland.txt for balance of region
@@ -528,16 +834,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 19690
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2954
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 16736
+
+    }
 
     farmers = {
-            culture = gypsy
-            religion = orthodox
-            size = 255
-        }
+
+        culture = gypsy
+
+        religion = orthodox
+
+        size = 38
+
+    }
+
+
+    serfs = {
+
+        culture = gypsy
+
+        religion = orthodox
+
+        size = 217
+
+    }
 
     aristocrats = {
             culture = polish
@@ -576,10 +912,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 13985
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 2098
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 11887
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -600,10 +951,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2798
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 420
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2378
+
+    }
 
     clergymen = {
             culture = south_german
@@ -624,10 +990,25 @@
         }
 
     farmers = {
-            culture = south_german
-            religion = catholic
-            size = 467
-        }
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 70
+
+    }
+
+
+    serfs = {
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 397
+
+    }
 
 }
 #Stryi (404000/101000 POPS) #now part of Ukraine
@@ -651,10 +1032,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 12301
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 1845
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 10456
+
+    }
 
     aristocrats = {
             culture = polish
@@ -681,10 +1077,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 8816
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1322
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 7494
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -705,10 +1116,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1418
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 213
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1205
+
+    }
 
     clergymen = {
             culture = south_german
@@ -729,10 +1155,25 @@
         }
 
     farmers = {
-            culture = south_german
-            religion = catholic
-            size = 238
-        }
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 36
+
+    }
+
+
+    serfs = {
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 202
+
+    }
 
 }
 #Ternopil (1136000/284000 POPS) #now part of Ukraine
@@ -756,16 +1197,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 41596
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 6239
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 35357
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 6291
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 944
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 5347
+
+    }
 
     aristocrats = {
             culture = polish
@@ -792,10 +1263,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 14740
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 2211
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 12529
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -816,10 +1302,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 3451
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 518
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2933
+
+    }
 
     clergymen = {
             culture = south_german
@@ -840,10 +1341,25 @@
         }
 
     farmers = {
-            culture = south_german
-            religion = catholic
-            size = 239
-        }
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 36
+
+    }
+
+
+    serfs = {
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 203
+
+    }
 
 }
 #Stanislavov (376000/94000 POPS) #now part of Ukraine
@@ -867,16 +1383,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 12303
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 1845
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 10458
+
+    }
 
     farmers = {
-            culture = gypsy
-            religion = orthodox
-            size = 520
-        }
+
+        culture = gypsy
+
+        religion = orthodox
+
+        size = 78
+
+    }
+
+
+    serfs = {
+
+        culture = gypsy
+
+        religion = orthodox
+
+        size = 442
+
+    }
 
     aristocrats = {
             culture = polish
@@ -903,10 +1449,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 7422
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1113
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 6309
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -927,10 +1488,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1423
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 213
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1210
+
+    }
 
     clergymen = {
             culture = south_german
@@ -951,10 +1527,25 @@
         }
 
     farmers = {
-            culture = south_german
-            religion = catholic
-            size = 239
-        }
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 36
+
+    }
+
+
+    serfs = {
+
+        culture = south_german
+
+        religion = catholic
+
+        size = 203
+
+    }
 
 }
 #Volhynia-Podolia Region (1892000)
@@ -979,17 +1570,47 @@
             size = 4752
         }
 
-    farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 12016
-        }
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 1802
+
+    }
+
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 31925
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 10214
+
+    }
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 4789
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 27136
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1027,11 +1648,26 @@
             size = 383
         }
 
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 29
+
+    }
+
+
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 194
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 165
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1051,11 +1687,26 @@
             size = 533
         }
 
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1051
+
+    }
+
+
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 7008
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 5957
+
+    }
 
     aristocrats = {
             culture = ukrainian
@@ -1097,16 +1748,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 42907
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 6436
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 36471
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 2773
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 416
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 2357
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1133,10 +1814,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 1775
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 266
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1509
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1157,10 +1853,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 3251
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 488
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2763
+
+    }
 
     clergymen = {
             culture = south_german
@@ -1181,10 +1892,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 235
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 35
+
+    }
+
+
+    serfs = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 200
+
+    }
 
 }
 #Rowne (1000/250 POPS)
@@ -1208,10 +1934,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 22097
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3315
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 18782
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1238,10 +1979,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 1486
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 223
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1263
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1262,10 +2018,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2833
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 425
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2408
+
+    }
 
     clergymen = {
             culture = north_german
@@ -1325,10 +2096,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 23251
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3488
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 19763
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1355,10 +2141,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 2880
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 432
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 2448
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1379,10 +2180,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2845
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 427
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2418
+
+    }
 
     clergymen = {
             culture = north_german
@@ -1442,10 +2258,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 22669
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3400
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 19269
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1472,10 +2303,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 2182
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 327
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1855
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1496,10 +2342,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2840
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 426
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2414
+
+    }
 
     clergymen = {
             culture = north_german
@@ -1585,16 +2446,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 38758
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 5814
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 32944
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 6520
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 978
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 5542
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1633,10 +2524,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 431
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 65
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 366
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1657,10 +2563,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1019
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 153
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 866
+
+    }
 
     aristocrats = {
             culture = russian
@@ -1719,17 +2640,47 @@
             size = 3613
         }
 
-    farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 5944
-        }
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 892
+
+    }
+
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 29835
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 5052
+
+    }
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 4475
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 25360
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1755,11 +2706,26 @@
             size = 1496
         }
 
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 256
+
+    }
+
+
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 1710
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1454
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1780,10 +2746,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1977
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 297
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1680
+
+    }
 
 }
 #Zhitomir (460000/115000 POPS)
@@ -1812,17 +2793,47 @@
             size = 5411
         }
 
-    farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 45097
-        }
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 6765
+
+    }
+
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 8379
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 38332
+
+    }
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 1257
+
+    }
+
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 7122
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1848,11 +2859,26 @@
             size = 361
         }
 
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 123
+
+    }
+
+
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 817
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 694
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1872,11 +2898,26 @@
             size = 365
         }
 
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1345
+
+    }
+
+
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 8968
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 7623
+
+    }
 
 }
 #Cherkassy (460000/115000 POPS)
@@ -1906,16 +2947,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 66925
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 10039
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 56886
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 15989
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 2398
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 13591
+
+    }
 
     aristocrats = {
             culture = polish
@@ -1942,10 +3013,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 1263
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 189
+
+    }
+
+
+    serfs = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1074
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -1966,10 +3052,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1431
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 215
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1216
+
+    }
 
 }
 #Chernigov (616000/154000 POPS)
@@ -1999,16 +3100,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 26259
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3939
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 22320
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 4683
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 702
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 3981
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -2029,10 +3160,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1481
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 222
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1259
+
+    }
 
     aristocrats = {
             culture = russian
@@ -2059,10 +3205,25 @@
         }
 
     farmers = {
-            culture = russian
-            religion = orthodox
-            size = 293
-        }
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 44
+
+    }
+
+
+    serfs = {
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 249
+
+    }
 
 }
 #Poltava (1552000/388000 POPS)
@@ -2092,16 +3253,46 @@
         }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 6565
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 985
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 5580
+
+    }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 50256
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 7538
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 42718
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -2122,10 +3313,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2802
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 420
+
+    }
+
+
+    serfs = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 2382
+
+    }
 
     aristocrats = {
             culture = russian
@@ -2152,10 +3358,25 @@
         }
 
     farmers = {
-            culture = russian
-            religion = orthodox
-            size = 64
-        }
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 10
+
+    }
+
+
+    serfs = {
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 54
+
+    }
 
 }
 #Taurida Region (360000)
@@ -2199,10 +3420,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 63795
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 9569
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 54226
+
+    }
 
     slaves = {
             culture = ukrainian
@@ -2229,10 +3465,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 1096
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 164
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 932
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -2253,10 +3504,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 780
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 117
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 663
+
+    }
 
     clergymen = {
             culture = north_german
@@ -2277,10 +3543,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 924
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 139
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 785
+
+    }
 
 }
 #Cherson (126000/29000 POPS)
@@ -2310,10 +3591,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 35248
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 5287
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 29961
+
+    }
 
     soldiers = {
             culture = cossack
@@ -2364,10 +3660,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1107
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 166
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 941
+
+    }
 
     clergymen = {
             culture = greek
@@ -2388,10 +3699,25 @@
         }
 
     farmers = {
-            culture = greek
-            religion = orthodox
-            size = 1034
-        }
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 155
+
+    }
+
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 879
+
+    }
 
     clergymen = {
             culture = bulgarian
@@ -2412,10 +3738,25 @@
         }
 
     farmers = {
-            culture = bulgarian
-            religion = orthodox
-            size = 924
-        }
+
+        culture = bulgarian
+
+        religion = orthodox
+
+        size = 139
+
+    }
+
+
+    farmers = {
+
+        culture = bulgarian
+
+        religion = orthodox
+
+        size = 785
+
+    }
 
     clergymen = {
             culture = north_german
@@ -2436,10 +3777,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 1182
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 177
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 1005
+
+    }
 
 }
 #Kerch (48000/12000 POPS)
@@ -2469,10 +3825,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 25020
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 3753
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 21267
+
+    }
 
     slaves = {
             culture = ukrainian
@@ -2493,10 +3864,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 400
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 60
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 340
+
+    }
 
     clergymen = {
             culture = greek
@@ -2517,10 +3903,25 @@
         }
 
     farmers = {
-            culture = greek
-            religion = orthodox
-            size = 918
-        }
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 138
+
+    }
+
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 780
+
+    }
 
 }
 #Sevastopol (60000/15000 POPS)
@@ -2550,10 +3951,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 77642
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 11646
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 65996
+
+    }
 
     slaves = {
             culture = ukrainian
@@ -2574,10 +3990,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 749
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 112
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 637
+
+    }
 
     clergymen = {
             culture = greek
@@ -2598,10 +4029,25 @@
         }
 
     farmers = {
-            culture = greek
-            religion = orthodox
-            size = 914
-        }
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 137
+
+    }
+
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 777
+
+    }
 
     clergymen = {
             culture = north_german
@@ -2622,10 +4068,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 348
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 52
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 296
+
+    }
 
     bureaucrats = {
             culture = turkish
@@ -2687,16 +4148,46 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 56345
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 8452
+
+    }
+
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 715
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 47893
+
+    }
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 107
+
+    }
+
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 608
+
+    }
 
     slaves = {
             culture = ukrainian
@@ -2705,10 +4196,25 @@
         }
 
     farmers = {
-            culture = romanian
-            religion = orthodox
-            size = 3560
-        }
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 534
+
+    }
+
+
+    farmers = {
+
+        culture = romanian
+
+        religion = orthodox
+
+        size = 3026
+
+    }
 
     aristocrats = {
             culture = polish
@@ -2741,10 +4247,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 2265
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 340
+
+    }
+
+
+    farmers = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 1925
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -2765,16 +4286,46 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 5058
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 759
+
+    }
+
 
     farmers = {
-            culture = greek
-            religion = orthodox
-            size = 1499
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 4299
+
+    }
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 225
+
+    }
+
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 1274
+
+    }
 
     clergymen = {
             culture = greek
@@ -2813,10 +4364,25 @@
         }
 
     farmers = {
-            culture = south_italian
-            religion = catholic
-            size = 545
-        }
+
+        culture = south_italian
+
+        religion = catholic
+
+        size = 82
+
+    }
+
+
+    farmers = {
+
+        culture = south_italian
+
+        religion = catholic
+
+        size = 463
+
+    }
 
     clergymen = {
             culture = north_german
@@ -2837,10 +4403,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 1567
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 235
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 1332
+
+    }
 
 }
 #Pervomaisk (496000/124000 POPS)
@@ -2870,10 +4451,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 35047
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 5257
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 29790
+
+    }
 
     slaves = {
             culture = ukrainian
@@ -2882,10 +4478,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 12172
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 1826
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 10346
+
+    }
 
     aristocrats = {
             culture = polish
@@ -2912,10 +4523,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 709
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 106
+
+    }
+
+
+    farmers = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 603
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -2936,10 +4562,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 2199
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 330
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1869
+
+    }
 
     soldiers = {
             culture = cossack
@@ -3005,10 +4646,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 36243
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 5436
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 30807
+
+    }
 
     aristocrats = {
             culture = tatar
@@ -3053,10 +4709,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1333
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 200
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1133
+
+    }
 
     clergymen = {
             culture = north_german
@@ -3077,10 +4748,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 2691
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 404
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 2287
+
+    }
 
 }
 #Krivoy Rog (244000/61000 POPS)
@@ -3116,10 +4802,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 17160
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2574
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 14586
+
+    }
 
     aristocrats = {
             culture = polish
@@ -3146,10 +4847,25 @@
         }
 
     farmers = {
-            culture = polish
-            religion = catholic
-            size = 224
-        }
+
+        culture = polish
+
+        religion = catholic
+
+        size = 34
+
+    }
+
+
+    farmers = {
+
+        culture = polish
+
+        religion = catholic
+
+        size = 190
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3170,10 +4886,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 450
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 68
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 382
+
+    }
 
 }
 #Kodak (252000/63000 POPS)
@@ -3221,16 +4952,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 13705
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2056
+
+    }
+
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 4927
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 11649
+
+    }
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 739
+
+    }
+
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 4188
+
+    }
 
     aristocrats = {
             culture = cossack
@@ -3269,10 +5030,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 569
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 85
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 484
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3293,10 +5069,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 342
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 51
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 291
+
+    }
 
 }
 #Zaporozhia Region (648000)
@@ -3352,10 +5143,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 6966
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 1045
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 5921
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3370,10 +5176,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 237
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 36
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 201
+
+    }
 
     bureaucrats = {
             culture = north_german
@@ -3439,10 +5260,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 31746
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 4762
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 26984
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3463,10 +5299,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 1673
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 251
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 1422
+
+    }
 
 }
 #Yuzovka (76000/19000 POPS)
@@ -3502,10 +5353,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 478
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 72
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 406
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3520,10 +5386,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 282
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 42
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 240
+
+    }
 
     aristocrats = {
             culture = tatar
@@ -3550,10 +5431,25 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 6098
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 915
+
+    }
+
+
+    farmers = {
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 5183
+
+    }
 
 }
 #Mariopol (248000/62000 POPS)
@@ -3589,16 +5485,46 @@
         }
 
     farmers = {
-            culture = tatar
-            religion = sunni
-            size = 26486
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 3973
+
+    }
+
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 1012
-        }
+
+        culture = tatar
+
+        religion = sunni
+
+        size = 22513
+
+    }
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 152
+
+    }
+
+
+    farmers = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 860
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3619,10 +5545,25 @@
         }
 
     farmers = {
-            culture = ashkenazi
-            religion = jewish
-            size = 554
-        }
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 83
+
+    }
+
+
+    farmers = {
+
+        culture = ashkenazi
+
+        religion = jewish
+
+        size = 471
+
+    }
 
     clergymen = {
             culture = greek
@@ -3643,10 +5584,25 @@
         }
 
     farmers = {
-            culture = greek
-            religion = orthodox
-            size = 1200
-        }
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 180
+
+    }
+
+
+    farmers = {
+
+        culture = greek
+
+        religion = orthodox
+
+        size = 1020
+
+    }
 
     clergymen = {
             culture = north_german
@@ -3667,10 +5623,25 @@
         }
 
     farmers = {
-            culture = north_german
-            religion = catholic
-            size = 554
-        }
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 83
+
+    }
+
+
+    farmers = {
+
+        culture = north_german
+
+        religion = catholic
+
+        size = 471
+
+    }
 
 }
 #Kursk Region (596000) #see Russia.txt for balance of region
@@ -3708,16 +5679,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 14394
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2159
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 12235
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 2641
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 396
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 2245
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3768,10 +5769,25 @@
         }
 
     farmers = {
-            culture = russian
-            religion = orthodox
-            size = 934
-        }
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 140
+
+    }
+
+
+    serfs = {
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 794
+
+    }
 
 }
 #Lysychansk
@@ -3813,16 +5829,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 12348
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 1852
+
+    }
+
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 4304
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 10496
+
+    }
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 646
+
+    }
+
+
+    farmers = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 3658
+
+    }
 
     clergymen = {
             culture = ashkenazi
@@ -3873,10 +5919,25 @@
         }
 
     farmers = {
-            culture = russian
-            religion = orthodox
-            size = 401
-        }
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 60
+
+    }
+
+
+    farmers = {
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 341
+
+    }
 
 }
 #Donbass Region (652000) #see Russia.txt for balance of region
@@ -3908,16 +5969,46 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 21035
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 3155
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 17880
+
+    }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 3883
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 582
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 3301
+
+    }
 
     aristocrats = {
             culture = russian
@@ -3944,10 +6035,25 @@
         }
 
     farmers = {
-            culture = russian
-            religion = orthodox
-            size = 3883
-        }
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 582
+
+    }
+
+
+    serfs = {
+
+        culture = russian
+
+        religion = orthodox
+
+        size = 3301
+
+    }
 
 }
 #Hadyach 
@@ -3971,10 +6077,25 @@
         }
 
     farmers = {
-            culture = ukrainian
-            religion = orthodox
-            size = 19369
-        }
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 2905
+
+    }
+
+
+    serfs = {
+
+        culture = ukrainian
+
+        religion = orthodox
+
+        size = 16464
+
+    }
 
     soldiers = {
             culture = cossack
@@ -3983,9 +6104,24 @@
         }
 
     farmers = {
-            culture = cossack
-            religion = orthodox
-            size = 5423
-        }
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 813
+
+    }
+
+
+    serfs = {
+
+        culture = cossack
+
+        religion = orthodox
+
+        size = 4610
+
+    }
 
 }

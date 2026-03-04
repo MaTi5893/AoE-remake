@@ -492,62 +492,12 @@ navy = {
 
     ship = {
         name = "Santiago"
-        type = manowar
+        type = ironclad
     }
 
     ship = {
-        name = "Santiago"
-        type = manowar
-    }
-
-    ship = {
-        name = "Hespérides"
-        type = manowar
-    }
-
-    ship = {
-        name = "Centinela"
-        type = manowar
-    }
-
-    ship = {
-        name = "Santiago"
-        type = manowar
-    }
-
-    ship = {
-        name = "Hespérides"
-        type = manowar
-    }
-
-    ship = {
-        name = "Centinela"
-        type = manowar
-    }
-
-    ship = {
-        name = "Centinela"
-        type = manowar
-    }
-
-    ship = {
-        name = "Santiago"
-        type = manowar
-    }
-
-    ship = {
-        name = "Hespérides"
-        type = manowar
-    }
-
-    ship = {
-        name = "Centinela"
-        type = manowar
-    }
-
-    ship = {
-        name = "Santiago"
-        type = manowar
+        name = "Don Quijote"
+        type = ironclad
     }
 
     ship = {
@@ -579,6 +529,27 @@ navy = {
         name = "Centinela"
         type = manowar
     }
+
+    ship = {
+        name = "Santiago"
+        type = manowar
+    }
+
+    ship = {
+        name = "Hespérides"
+        type = manowar
+    }
+
+    ship = {
+        name = "Centinela"
+        type = manowar
+    }
+
+    ship = {
+        name = "Santiago"
+        type = manowar
+    }
+
     ship = {
         name = "Isla de Cuba"
         type = frigate
@@ -638,15 +609,89 @@ navy = {
         name= "1a Flotilla de Transporte"
         type = clipper_transport
     }
+}
+
+navy = {
+    name = "Flota de Indias"
+    location = 2209
+	ship = {
+        name = "Isla de Cuba"
+        type = frigate
+    }
+
+    ship = {
+        name = "Cristóbal Colón"
+        type = frigate
+    }
+
+    ship = {
+        name = "Isla de Cuba"
+        type = frigate
+    }
+
+    ship = {
+        name = "Cristóbal Colón"
+        type = frigate
+    }
+
+    ship = {
+        name = "Isla de Cuba"
+        type = frigate
+    }
+
+    ship = {
+        name = "Cristóbal Colón"
+        type = frigate
+    }
+
+	ship = {
+        name= "1a Flotilla de Transporte"
+        type = steam_transport
+    }
 
     ship = {
         name= "2a Flotilla de Transporte"
-        type = clipper_transport
+        type = steam_transport
     }
 
     ship = {
         name= "3a Flotilla de Transporte"
-        type = clipper_transport
+        type = steam_transport
+    }
+
+    ship = {
+        name= "1a Flotilla de Transporte"
+        type = steam_transport
+    }
+	
+    ship = {
+        name= "1a Flotilla de Transporte"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "2a Flotilla de Transporte"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "3a Flotilla de Transporte"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "1a Flotilla de Transporte"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "2a Flotilla de Transporte"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "3a Flotilla de Transporte"
+        type = steam_transport
     }
 
     ship = {
@@ -689,6 +734,31 @@ navy = {
         type = clipper_transport
     }
 }
+
+navy = {
+    name = "Flota de Napoli"
+    location = 754
+	ship = {
+        name = "Isla de Cuba"
+        type = galley
+    }
+
+    ship = {
+        name = "Cristóbal Colón"
+        type = galley
+    }
+
+    ship = {
+        name = "Isla de Cuba"
+        type = galley
+    }
+
+    ship = {
+        name = "Cristóbal Colón"
+        type = galley
+    }
+}
+
 leader = {
     name = "Francisco Serrano"
     date = 1700.1.1

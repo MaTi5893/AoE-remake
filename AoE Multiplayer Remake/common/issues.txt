@@ -259,9 +259,22 @@ political_reforms = {
                 NOT = { has_country_flag = slave_revolution }    
 				NOT = { has_country_flag = parliment_discontent }					
 				NOT = { has_country_flag = abolished_slavery_officially }
+				has_country_flag = mainland_slavery_allowed 
             }
         }
 
+		colonial_slavery = {
+            rules = { slavery_allowed = yes }
+            allow = {
+                NOT = { has_country_flag = communist_gov }
+                NOT = { has_country_flag = fascist_gov }
+                NOT = { has_country_flag = slave_revolution }    
+				NOT = { has_country_flag = parliment_discontent }					
+				NOT = { has_country_flag = abolished_slavery_officially }
+				NOT = { has_country_flag = mainland_slavery_allowed }
+            }
+        }
+		
         recompensation_period = {
             rules = { slavery_allowed = no }
 			min_social_spending = 0.5
@@ -491,6 +504,17 @@ political_reforms = {
 			mobilisation_size = 0.02
 			allow = {
 				NOT = { has_country_flag = abolished_serfdom_officially }
+				has_country_flag = mainland_serfdom_allowed 
+			}
+        }
+		feudal_privileges = {
+            education_efficiency_modifier = -0.075
+            poor_savings_modifier = -0.15
+            global_immigrant_attract = -0.075
+			mobilisation_size = 0.01
+			allow = {
+				NOT = { has_country_flag = abolished_serfdom_officially }
+				NOT = { has_country_flag = mainland_serfdom_allowed }
 			}
         }
         peonage = {
@@ -500,7 +524,6 @@ political_reforms = {
             suppression_points_modifier = 0.1
             poor_everyday_needs = 0.1
             poor_savings_modifier = -0.25
-			mobilisation_size = 0.01
 			allow = {
 				NOT = { estate_affiliation = nobility_army }
 				NOT = { estate_affiliation = nobility_church }

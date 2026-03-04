@@ -188,6 +188,16 @@ navy = {
     location = 376 #Hague
     ship = {
         name= "Doggersbank"
+        type = ironclad
+    }
+
+    ship = {
+        name= "Amsterdam"
+        type = ironclad
+    }
+	
+	ship = {
+        name= "Doggersbank"
         type = manowar
     }
 
@@ -195,10 +205,30 @@ navy = {
         name= "Amsterdam"
         type = manowar
     }
+	
+	ship = {
+        name= "Doggersbank"
+        type = manowar
+    }
 
     ship = {
+        name= "Amsterdam"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Doggersbank"
+        type = manowar
+    }
+
+    ship = {
+        name= "Amsterdam"
+        type = manowar
+    }
+	
+    ship = {
         name= "Maria Regensbergen"
-        type = frigate
+        type = manowar
     }
 
     ship = {
@@ -296,6 +326,139 @@ navy = {
         type = clipper_transport
     }
 
+	ship = {
+        name= "Orpheus"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "1e Transport Eskader"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "Eendracht"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "2e Transport Eskader"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "3e Transport Eskader"
+        type = steam_transport
+    }
+	
+	 ship = {
+        name= "3e Transport Eskader"
+        type = steam_transport
+    }
+}
+
+navy = {
+    name = "VOC Fleet"
+    location = 1413 #Batavia
+    ship = {
+        name= "Pallas"
+        type = frigate
+    }
+
+    ship = {
+        name= "Proserpine"
+        type = frigate
+    }
+
+    ship = {
+        name= "Daphne"
+        type = frigate
+    }
+
+    ship = {
+        name= "Espion"
+        type = frigate
+    }
+
+    ship = {
+        name= "Zeepaard"
+        type = frigate
+    }
+
+	 ship = {
+        name= "Aurora"
+        type = frigate
+    }
+	
+    ship = {
+        name= "Irene"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "Orpheus"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "1e Transport Eskader"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "Eendracht"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "2e Transport Eskader"
+        type = clipper_transport
+    }
+
+    ship = {
+        name= "3e Transport Eskader"
+        type = clipper_transport
+    }
+
+	ship = {
+        name= "Irene"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "Orpheus"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "1e Transport Eskader"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "Eendracht"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "2e Transport Eskader"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "3e Transport Eskader"
+        type = steam_transport
+    }
+	
+	 ship = {
+        name= "3e Transport Eskader"
+        type = steam_transport
+    }
+	
+	ship = {
+        name= "Irene"
+        type = steam_transport
+    }
 }
 
 leader = {

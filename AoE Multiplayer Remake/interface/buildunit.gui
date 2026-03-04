@@ -614,52 +614,57 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "unit_folder_6"
-			position = { x= 23 y =31}
+			position = { x= 8 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_0_clipper_transport"
 		}
 		guiButtonType = {
 			name = "unit_folder_5"
-			position = { x= 60 y =31}
+			position = { x= 44 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_1_frigate"
 		}
 		guiButtonType = {
 			name = "unit_folder_4"
-			position = { x= 97 y =31}
+			position = { x= 80 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_2_manowar"
 		}
 		guiButtonType = {
+			name = "unit_folder_22"
+			position = { x= 116 y =31}
+			quadTextureSprite ="GFX_unit_folder_navy_10_galley"
+		}
+		guiButtonType = {
 			name = "unit_folder_7"
-			position = { x= 134 y =31}
+			position = { x= 152 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_3_steam_transport"
 		}
 		guiButtonType = {
 			name = "unit_folder_9"
-			position = { x= 171 y =31}
+			position = { x= 188 y =31} 
 			quadTextureSprite ="GFX_unit_folder_navy_5_ironclad"
 		}
 		guiButtonType = {
 			name = "unit_folder_10"
-			position = { x= 208 y =31}
+			position = { x= 224 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_6_monitor"
 		}
 		guiButtonType = {
 			name = "unit_folder_21"
-			position = { x= 245 y =31}
+			position = { x= 260 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_9_battleship"
 		}
 		guiButtonType = {
 			name = "unit_folder_11"
-			position = { x= 282  y =31}
+			position = { x= 296  y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_7_cruiser"
 		}
 		guiButtonType = {
 			name = "unit_folder_12"
-			position = { x= 319 y =31}
+			position = { x= 332 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_8_dreadnought"
 		}
 		guiButtonType = {
 			name = "unit_folder_8"
-			position = { x= 356 y =31}
+			position = { x= 368 y =31}
 			quadTextureSprite ="GFX_unit_folder_navy_4_commerce_raider"
 		}
 		listboxType = 	{

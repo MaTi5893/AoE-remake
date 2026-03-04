@@ -178,7 +178,27 @@ eastindiamen = {
         activate_unit = steam_transport
     }
 }
-
+##iron_steamers - Galleys
+#galleys = {
+#    limit = {
+#        iron_steamers = 1
+#
+#    }
+#    chance = {
+#        base = 0
+#	modifier = {
+#		factor = 100
+#		weapon_platforms = 1
+#	}
+#	modifier = {
+#		factor = 5
+#		naval_statistics = 1
+#	}
+#    }
+#    effect = {
+#        activate_unit = galley
+#    }
+#}
 #iron_steamers - Three Deckers
 three_deckers = {
     limit = {

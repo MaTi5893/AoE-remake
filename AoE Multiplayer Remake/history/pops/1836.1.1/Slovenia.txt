@@ -35,9 +35,15 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 2520
+        size = 430
     }
 
+	serfs = {
+        culture = south_german
+        religion = catholic
+        size = 232
+    }
+	
     clergymen = {
         culture = slovene
         religion = catholic
@@ -59,7 +65,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 34200
+        size = 22230
+    }
+	
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 11970
     }
 }
 #Carniola Region (460000)
@@ -105,7 +117,13 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 50520
+        size = 32838
+    }
+	
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 17682
     }
 }
 #Postojna (180000/45000 POPS)
@@ -137,9 +155,15 @@
     farmers = {
         culture = slovene
         religion = catholic
-        size = 31660
+        size = 20579
     }
 
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 11081
+    }
+	
     clergymen = {
         culture = south_german
         religion = catholic
@@ -149,6 +173,12 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 1580
+        size = 1027
+    }
+	
+	serfs = {
+        culture = slovene
+        religion = catholic
+        size = 553
     }
 }
